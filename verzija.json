@@ -1,8 +1,8 @@
 {
-  "verzija": "1.0.2",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.2.zip",
-  "sha256": "813395d544a69bf1614e820ab653e76e445b11173fd7c36f986a6cc27652bcca",
+  "verzija": "1.0.3",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.3.zip",
+  "sha256": "046ffa3af2cc346bf3c9945070a0a2dbc512de294cd240056bfeedd6302d9081",
   "obavezno": false,
-  "napomene": "OCR presjeka stanja na telefonu (slikaj pa potvrdi). Polja za PDV 15% u unosu pazara. Sitne ispravke.",
+  "napomene": "Renumeracija godine bez preskoka (Skenovi -> Provjeri niz brojeva). Stampa vise kalkulacija odjednom po marketu i periodu. OCR presjeka iz kase. Polja za PDV 15% u unosu pazara.",
   "datum": "2026-08-08"
 }
