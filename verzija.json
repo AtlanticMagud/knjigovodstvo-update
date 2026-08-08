@@ -1,0 +1,8 @@
+{
+  "verzija": "1.0.2",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.2.zip",
+  "sha256": "813395d544a69bf1614e820ab653e76e445b11173fd7c36f986a6cc27652bcca",
+  "obavezno": false,
+  "napomene": "OCR presjeka stanja na telefonu (slikaj pa potvrdi). Polja za PDV 15% u unosu pazara. Sitne ispravke.",
+  "datum": "2026-08-08"
+}
