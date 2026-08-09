@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.11",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.11.zip",
+  "verzija": "1.0.17",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.17.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "3781ab282dfec9a7bbb80ccc2c2a4f883a1bba5ef7054a7a5e660cac639c3692",
+  "sha256": "15c81ae5892230b881f4001ef6f9a9d5c9aaa43521e692ef8aa77f3df823a1c6",
   "obavezno": false,
-  "napomene": "NOVO: ucitavanje kartice (IOS) od dobavljaca - Dobavljaci > Ucitaj karticu dobavljaca. Prima Excel/CSV ili nalijepljen tekst, sam nadje zaglavlje i kolone (formati se razlikuju), upari sa nasim fakturama i placanjima i pokaze sta se ne poklapa + razliku salda. Radi na Windowsu i Androidu. Podaci osvjezeni iz Access baze od 09.08.",
+  "napomene": "Pocetni ekran: faktura danas + vrijednost robe, faktura ovaj mjesec + vrijednost robe, uplate dobavljacima ovaj mjesec (broj i iznos), ukupan dug. Telefon vise NE MOZE biti prebacen u rezim obrade - kalkulacije i brojeve dokumenata pravi iskljucivo racunar. Adresa za azuriranje se pamti uz aplikaciju i provjera ide pri pokretanju.",
   "datum": "2026-08-09"
 }
