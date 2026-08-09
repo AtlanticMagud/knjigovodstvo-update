@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.17",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.17.zip",
+  "verzija": "1.0.18",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.18.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "15c81ae5892230b881f4001ef6f9a9d5c9aaa43521e692ef8aa77f3df823a1c6",
+  "sha256": "b86e447965f12c21104ac6810b1e9d4ee8a10892262ba2599029211cafa5f1e4",
   "obavezno": false,
-  "napomene": "Pocetni ekran: faktura danas + vrijednost robe, faktura ovaj mjesec + vrijednost robe, uplate dobavljacima ovaj mjesec (broj i iznos), ukupan dug. Telefon vise NE MOZE biti prebacen u rezim obrade - kalkulacije i brojeve dokumenata pravi iskljucivo racunar. Adresa za azuriranje se pamti uz aplikaciju i provjera ide pri pokretanju.",
+  "napomene": "Izvodi Prve banke se sada citaju POTPUNO - uzrok je bio da banka zna spojiti dva naloga u isti blok; na sva 4 izvoda zaduzenje i odobrenje se sada poklapaju sa iznosima iz zaglavlja izvoda (8/8). Pocetni ekran sa vrijednostima robe i uplata, telefon zakljucan na skeniranje, adresa za azuriranje se pamti.",
   "datum": "2026-08-09"
 }
