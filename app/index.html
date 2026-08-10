@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="sr-Latn-ME">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- wasm-unsafe-eval je potreban za sql.js (SQLite u WebAssembly) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' blob:; connect-src 'self' ws: https://mapr.tax.gov.me https://localhost capacitor://localhost data: blob:; img-src 'self' data: blob:;" />
+    <title>Knjigovodstvo</title>
+
+    <!-- Web verzija (iPhone/iPad): „Podijeli → Dodaj na početni ekran".
+         Instalirana ovako, aplikacija radi u punom ekranu, ima svoju ikonu i —
+         što je najvažnije — Safari joj NE briše bazu poslije 7 dana nekorišćenja.
+         Ovi tagovi ne smetaju Electronu ni Androidu (tamo se ignorišu). -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#003F77" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Knjigovodstvo" />
+    <link rel="apple-touch-icon" href="ikone/ikona-180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="ikone/ikona-192.png" />
+    <script type="module" crossorigin src="./assets/index-DtmuRHGe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-woio0tyw.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
