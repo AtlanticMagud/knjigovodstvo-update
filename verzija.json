@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.19",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.19.zip",
+  "verzija": "1.0.20",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.20.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "3df991fa0b5d91334ef93702fd7200584056c4835844230267291a7c7b37988f",
+  "sha256": "98932ebf7adb3b86b7b095a0f9c8c145e5b67342c5d45a3dd562c7a8b31a4e06",
   "obavezno": false,
-  "napomene": "Zaglavlje kalkulacije preslikano sa Access reporta: firma i naslov lijevo, Broj dokumenta / Broj kalkulacije / Datum dok. gore desno, pa mreza polja u tri kolone (Br. racuna dob., Br. fakture dob., Datum fakture, Datum valute, Datum kalk. | Objekat, Otpremljeno u, Reg PDV, Adresa, Nacin placanja | Dobavljac, PIB, Globalna marza, Tel/Fax) - bez okvira, kao u Access-u. Tabela od 20 kolona i numeracija nepromijenjeni.",
-  "datum": "2026-08-09"
+  "napomene": "Knjiga izlaznih racuna (KIF) prepravljena na obrazac knjigovodje: 24 kolone, promet razdvojen na kupce obveznike PDV-a i krajnju potrosnju po svakoj stopi, kolona Obj sa nazivom marketa; u knjigu ulaze i fakture koje sami izdajemo. Svi PDF izvozi preslikani po Access rasporedu (sirine kolona i font iz Accessa, tabela se srazmjerno smanji da stane i centrira se) - ranije su KIF i knjiga primljenih racuna imali odsjecene kolone. Trgovacka knjiga: zaglavlje vise nije odsjeceno. Kalkulacija vise ne ispada van desne ivice. Novo: pregled kalkulacija po stavkama sa izvozom u Excel i PDF, dugme Pregled prije stampe, i slanje kalkulacija pravo na stampac (stampac se bira u Podesavanja - Stampac).",
+  "datum": "2026-08-10"
 }
