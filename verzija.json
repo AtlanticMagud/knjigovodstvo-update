@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.18",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.18.zip",
+  "verzija": "1.0.19",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.19.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "b86e447965f12c21104ac6810b1e9d4ee8a10892262ba2599029211cafa5f1e4",
+  "sha256": "3df991fa0b5d91334ef93702fd7200584056c4835844230267291a7c7b37988f",
   "obavezno": false,
-  "napomene": "Izvodi Prve banke se sada citaju POTPUNO - uzrok je bio da banka zna spojiti dva naloga u isti blok; na sva 4 izvoda zaduzenje i odobrenje se sada poklapaju sa iznosima iz zaglavlja izvoda (8/8). Pocetni ekran sa vrijednostima robe i uplata, telefon zakljucan na skeniranje, adresa za azuriranje se pamti.",
+  "napomene": "Zaglavlje kalkulacije preslikano sa Access reporta: firma i naslov lijevo, Broj dokumenta / Broj kalkulacije / Datum dok. gore desno, pa mreza polja u tri kolone (Br. racuna dob., Br. fakture dob., Datum fakture, Datum valute, Datum kalk. | Objekat, Otpremljeno u, Reg PDV, Adresa, Nacin placanja | Dobavljac, PIB, Globalna marza, Tel/Fax) - bez okvira, kao u Access-u. Tabela od 20 kolona i numeracija nepromijenjeni.",
   "datum": "2026-08-09"
 }
