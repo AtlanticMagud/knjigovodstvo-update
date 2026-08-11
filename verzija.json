@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.20",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.20.zip",
+  "verzija": "1.0.22",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.22.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "98932ebf7adb3b86b7b095a0f9c8c145e5b67342c5d45a3dd562c7a8b31a4e06",
+  "sha256": "f0815a9abe9c79c90cd7e4047c36fc796407decf35cd31da94b1609ad10fd0bf",
   "obavezno": false,
-  "napomene": "Knjiga izlaznih racuna (KIF) prepravljena na obrazac knjigovodje: 24 kolone, promet razdvojen na kupce obveznike PDV-a i krajnju potrosnju po svakoj stopi, kolona Obj sa nazivom marketa; u knjigu ulaze i fakture koje sami izdajemo. Svi PDF izvozi preslikani po Access rasporedu (sirine kolona i font iz Accessa, tabela se srazmjerno smanji da stane i centrira se) - ranije su KIF i knjiga primljenih racuna imali odsjecene kolone. Trgovacka knjiga: zaglavlje vise nije odsjeceno. Kalkulacija vise ne ispada van desne ivice. Novo: pregled kalkulacija po stavkama sa izvozom u Excel i PDF, dugme Pregled prije stampe, i slanje kalkulacija pravo na stampac (stampac se bira u Podesavanja - Stampac).",
-  "datum": "2026-08-10"
+  "napomene": "Adresa za azuriranje je UGRADJENA u aplikaciju — ne mora se unositi ni na novom uredjaju ni poslije azuriranja; polje je vec popunjeno, mijenja se samo ako se sajt preseli (dugme Podrazumijevana vraca ugradjenu). Rucno unesena adresa se cuva u trajnom skladistu uz aplikaciju koje azuriranje ne dira, pa se vise ne gubi.",
+  "datum": "2026-08-11"
 }
