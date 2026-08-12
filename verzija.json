@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.24",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.24.zip",
+  "verzija": "1.0.27",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.27.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "b6b561c87263424075a7b6c7109b2d70c429c3d3b74ee434321b47d420f17bbe",
+  "sha256": "7acd4457d7d584820f62cee1e5df05d24cf9f9f7e438347a39a6f72dec5f99ae",
   "obavezno": false,
-  "napomene": "Plate: neoporeziva primanja (dnevnice, terenski, otpremnina...) do zakonskog limita + vrsta Bonus; isplata pogadja ukupan iznos, na poresku ide samo oporezivi dio",
-  "datum": "2026-08-11"
+  "napomene": "Ugovoreni rabati dobavljaca: sifarnik po dobavljacu/artiklu sa periodom, upozorenje pri uvozu fakture ako je dat manji rabat od ugovorenog, izvjestaj Neobracunati rabati sa razlikom u EUR.",
+  "datum": "2026-08-12"
 }
