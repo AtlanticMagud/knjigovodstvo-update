@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.35",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.35.zip",
+  "verzija": "1.0.38",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.38.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9704e431dc3287fa40b2e7b59ce0756dfd91540994e585bc0a422ac9c385c72b",
+  "sha256": "943f9777cb09bc5fe699d68091d63297f1f678703723ec58555fab556f250407",
   "obavezno": false,
-  "napomene": "KPR (knjiga primljenih/ulaznih racuna): period se sada bira po DATUMU RACUNA (kad ga je dobavljac izdao), a ne po datumu prijema/zavodjenja - racun izdat u prethodnom a stigao u sljedecem mjesecu ulazi u mjesec izdavanja. Specifikacija dobavljaca uskladjena.",
+  "napomene": "Knjige se pune po DATUMU KNJIZENJA (zavodjenja), ne po datumu racuna - racuni ranijih mjeseci proknjizeni u tekucem ulaze u tekucu knjigu (kao u Accessu). Editabilni datum knjizenja po racunu + dugme 'Proknjizi na kraj mjeseca' (povuce zakasnjele). Zakljucan mjesec ne prima nove racune.",
   "datum": "2026-08-13"
 }
