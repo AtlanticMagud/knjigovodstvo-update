@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.27",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.27.zip",
+  "verzija": "1.0.31",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.31.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "7acd4457d7d584820f62cee1e5df05d24cf9f9f7e438347a39a6f72dec5f99ae",
+  "sha256": "539869db762e6d86eb739e17003f1e3a111829f445a28e9824fd63dc3116676e",
   "obavezno": false,
-  "napomene": "Ugovoreni rabati dobavljaca: sifarnik po dobavljacu/artiklu sa periodom, upozorenje pri uvozu fakture ako je dat manji rabat od ugovorenog, izvjestaj Neobracunati rabati sa razlikom u EUR.",
-  "datum": "2026-08-12"
+  "napomene": "Zahtjevi knjigovodje: KUF oznake stopa (snizena=15%, niza=7%); mjesecna specifikacija dobavljaca (kontrola KPR); konta 134 (roba u MP / razlika u cijeni / PDV u MP, saldo=nabavna); rashodovanje robe - Zapisnik o rashodovanju sa komisijom, normativ KRKL (u okviru bez PDV), uticaj na zalihe.",
+  "datum": "2026-08-13"
 }
