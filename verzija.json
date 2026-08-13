@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.31",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.31.zip",
+  "verzija": "1.0.33",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.33.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "539869db762e6d86eb739e17003f1e3a111829f445a28e9824fd63dc3116676e",
+  "sha256": "5753c9f9a68ad10cc5a16e957128e0c0d1e80549e7c170dcc87383a3221519d8",
   "obavezno": false,
-  "napomene": "Zahtjevi knjigovodje: KUF oznake stopa (snizena=15%, niza=7%); mjesecna specifikacija dobavljaca (kontrola KPR); konta 134 (roba u MP / razlika u cijeni / PDV u MP, saldo=nabavna); rashodovanje robe - Zapisnik o rashodovanju sa komisijom, normativ KRKL (u okviru bez PDV), uticaj na zalihe.",
+  "napomene": "Zapisnik o rashodovanju: dodat Excel izvoz; uklonjena automatska napomena (cист zapisnik); zasebne linije za potpis po unesenim clanovima komisije (redovi po 3).",
   "datum": "2026-08-13"
 }
