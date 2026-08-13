@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.33",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.33.zip",
+  "verzija": "1.0.35",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.35.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "5753c9f9a68ad10cc5a16e957128e0c0d1e80549e7c170dcc87383a3221519d8",
+  "sha256": "9704e431dc3287fa40b2e7b59ce0756dfd91540994e585bc0a422ac9c385c72b",
   "obavezno": false,
-  "napomene": "Zapisnik o rashodovanju: dodat Excel izvoz; uklonjena automatska napomena (cист zapisnik); zasebne linije za potpis po unesenim clanovima komisije (redovi po 3).",
+  "napomene": "KPR (knjiga primljenih/ulaznih racuna): period se sada bira po DATUMU RACUNA (kad ga je dobavljac izdao), a ne po datumu prijema/zavodjenja - racun izdat u prethodnom a stigao u sljedecem mjesecu ulazi u mjesec izdavanja. Specifikacija dobavljaca uskladjena.",
   "datum": "2026-08-13"
 }
