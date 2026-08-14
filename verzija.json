@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.38",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.38.zip",
+  "verzija": "1.0.39",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.39.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "943f9777cb09bc5fe699d68091d63297f1f678703723ec58555fab556f250407",
+  "sha256": "edba928fc14adced0197775fea7e86b18538c7641ea083a5b78ee72574bd05bf",
   "obavezno": false,
-  "napomene": "Knjige se pune po DATUMU KNJIZENJA (zavodjenja), ne po datumu racuna - racuni ranijih mjeseci proknjizeni u tekucem ulaze u tekucu knjigu (kao u Accessu). Editabilni datum knjizenja po racunu + dugme 'Proknjizi na kraj mjeseca' (povuce zakasnjele). Zakljucan mjesec ne prima nove racune.",
-  "datum": "2026-08-13"
+  "napomene": "Poreske knjige: prekidač 'Datum računa / Datum knjiženja' — knjige se mogu izlistati po datumu računa (bez obzira na prijem) ili po datumu knjiženja.",
+  "datum": "2026-08-14"
 }
