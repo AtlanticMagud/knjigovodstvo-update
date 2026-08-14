@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.39",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.39.zip",
+  "verzija": "1.0.40",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.40.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "edba928fc14adced0197775fea7e86b18538c7641ea083a5b78ee72574bd05bf",
+  "sha256": "e5767051c8a03077fee1af244fe2d16c1c15473c4139845f2a65dbdb667261b0",
   "obavezno": false,
-  "napomene": "Poreske knjige: prekidač 'Datum računa / Datum knjiženja' — knjige se mogu izlistati po datumu računa (bez obzira na prijem) ili po datumu knjiženja.",
+  "napomene": "Poreske knjige: prekidac Period po datumu (racun/knjizenje), Proknjizi na kraj mjeseca i zakljucavanje mjeseca - naknadne fakture se ne gube. PD i bilans: troskovi zarada iz modula Plate i prihod izdatih faktura. Kompletno uputstvo uz program. Sitne ispravke.",
   "datum": "2026-08-14"
 }
