@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.42",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.42.zip",
+  "verzija": "1.0.43",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.43.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f57ec23cb69217b6a1c721ec54706ab150d4b66a154f14f8ddacb228e4e8d6c7",
+  "sha256": "820b6ada3f64ca27eaeacc8c0a93cbbba17abf9ba9c92075ede168806b01c96d",
   "obavezno": false,
-  "napomene": "Smjene radnika: mjesecni raspored po marketima sa automatskim uklapanjem, sedmicni i dnevni pregled, sati idu u plate. Ucitavanje skeniranih dnevnih izvjestaja iz PDF-a (OCR) na ekranu Unos pazara. Ekran Smjene vise ne prikazuje zid crvenih poruka kad nema radnika. Brza instalacija web verzije i manji APK - podaci za citanje se preuzimaju tek pri prvoj upotrebi.",
-  "datum": "2026-08-16"
+  "napomene": "Telefon: folder za razmjenu podataka se sada moze podesiti (Povezivanje - Sinhronizacija). Ranije je bio zakucan pa se nije mogao povezati sa Google Drive-om. Uz polje stoji i uputstvo kako se folder vezuje sa Drive-om preko Autosync aplikacije.",
+  "datum": "2026-08-19"
 }
