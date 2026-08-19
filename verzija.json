@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.43",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.43.zip",
+  "verzija": "1.0.44",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.44.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "820b6ada3f64ca27eaeacc8c0a93cbbba17abf9ba9c92075ede168806b01c96d",
+  "sha256": "9e648d33ce341d5b05a45b09c29ca4fdf18afb6af480c75377a8528d57966011",
   "obavezno": false,
-  "napomene": "Telefon: folder za razmjenu podataka se sada moze podesiti (Povezivanje - Sinhronizacija). Ranije je bio zakucan pa se nije mogao povezati sa Google Drive-om. Uz polje stoji i uputstvo kako se folder vezuje sa Drive-om preko Autosync aplikacije.",
+  "napomene": "Fakture: logo firme u zaglavlju, podaci za virman (žiro račun, poziv na broj, rok plaćanja) i QR kod kad se račun fiskalizuje. Novo: Naplata od kupaca — ko duguje, koliko kasni, uplate se same vežu za fakture, a prilivi se uvoze iz bankovnog izvoda. Fiskalizacija izlaznih računa je ugrađena i provjerena po zvaničnoj specifikaciji Uprave prihoda (uključuje korektivni račun za storno i fiskalni žurnal za kontrolu) — uključuje se u Podešavanjima kad stigne kod softvera. Za fiskalizaciju je potrebna NOVA INSTALACIJA programa.",
   "datum": "2026-08-19"
 }
