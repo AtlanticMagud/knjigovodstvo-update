@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.44",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.44.zip",
+  "verzija": "1.0.45",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.45.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9e648d33ce341d5b05a45b09c29ca4fdf18afb6af480c75377a8528d57966011",
+  "sha256": "2dbbfc25182226dc150e1e963f5706353c7508594ff3c2a5079ca6169e2a3aa3",
   "obavezno": false,
-  "napomene": "Fakture: logo firme u zaglavlju, podaci za virman (žiro račun, poziv na broj, rok plaćanja) i QR kod kad se račun fiskalizuje. Novo: Naplata od kupaca — ko duguje, koliko kasni, uplate se same vežu za fakture, a prilivi se uvoze iz bankovnog izvoda. Fiskalizacija izlaznih računa je ugrađena i provjerena po zvaničnoj specifikaciji Uprave prihoda (uključuje korektivni račun za storno i fiskalni žurnal za kontrolu) — uključuje se u Podešavanjima kad stigne kod softvera. Za fiskalizaciju je potrebna NOVA INSTALACIJA programa.",
-  "datum": "2026-08-19"
+  "napomene": "Android: popravka sinhronizacije — telefon je slao promjene, ali nije PRIMAO sa računara (od Androida 11 aplikacija ne smije čitati fajlove koje spusti druga aplikacija, npr. Autosync sa Google Drive-a). Sada aplikacija na ekranu Povezivanje pokaže dugme Odobri pristup koje vodi pravo na sistemsko podešavanje, a Sačuvaj i provjeri pokaže i koliko fajlova stvarno vidi u folderu. NA TELEFONIMA OBAVEZNO: instalirati novu verziju (Ažuriranje preuzima APK), pa na Povezivanje kliknuti Odobri pristup jednom.",
+  "datum": "2026-08-22"
 }
