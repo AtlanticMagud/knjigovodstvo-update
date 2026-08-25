@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.45",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.45.zip",
+  "verzija": "1.0.46",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.46.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "2dbbfc25182226dc150e1e963f5706353c7508594ff3c2a5079ca6169e2a3aa3",
+  "sha256": "4ceb3788921269d6753a364271bc5cd6e7be61524c9d9eb51f3a13ee0437e667",
   "obavezno": false,
-  "napomene": "Android: popravka sinhronizacije — telefon je slao promjene, ali nije PRIMAO sa računara (od Androida 11 aplikacija ne smije čitati fajlove koje spusti druga aplikacija, npr. Autosync sa Google Drive-a). Sada aplikacija na ekranu Povezivanje pokaže dugme Odobri pristup koje vodi pravo na sistemsko podešavanje, a Sačuvaj i provjeri pokaže i koliko fajlova stvarno vidi u folderu. NA TELEFONIMA OBAVEZNO: instalirati novu verziju (Ažuriranje preuzima APK), pa na Povezivanje kliknuti Odobri pristup jednom.",
-  "datum": "2026-08-22"
+  "napomene": "Ispravka: sinhronizacija više ne miješa firme (Atlantic/Magud) — paketi i snimak baze se provjeravaju po firmi + alat za čišćenje ranije pomiješanih zapisa (Povezivanje). Novo: rashodovanje robe se knjiži MINUS kalkulacijom (konta 134000/134001/134002, protivstav 5771) + nalog za knjiženje. Unos radnika: šifarnik radnih mjesta, padajući meniji (sprema, ugovor, banka), provjera žiro računa (18 cifara), staž iz datuma zaposlenja, prirez po opštini (Budva 10%).",
+  "datum": "2026-08-25"
 }
