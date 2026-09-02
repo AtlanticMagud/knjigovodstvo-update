@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.46",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.46.zip",
+  "verzija": "1.0.47",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.47.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "4ceb3788921269d6753a364271bc5cd6e7be61524c9d9eb51f3a13ee0437e667",
+  "sha256": "d62aaf6769b17f98e433766cfe6f10b73bbcbbecfff268c40ca861244093ab92",
   "obavezno": false,
-  "napomene": "Ispravka: sinhronizacija više ne miješa firme (Atlantic/Magud) — paketi i snimak baze se provjeravaju po firmi + alat za čišćenje ranije pomiješanih zapisa (Povezivanje). Novo: rashodovanje robe se knjiži MINUS kalkulacijom (konta 134000/134001/134002, protivstav 5771) + nalog za knjiženje. Unos radnika: šifarnik radnih mjesta, padajući meniji (sprema, ugovor, banka), provjera žiro računa (18 cifara), staž iz datuma zaposlenja, prirez po opštini (Budva 10%).",
-  "datum": "2026-08-25"
+  "napomene": "Plate i radnici: radnici i radna mjesta se sada SINHRONIZUJU između uređaja; lista radnika (PDF/Excel) + redoslijed svuda po šifri; žiro račun prima i skraćeni zapis (nule se dopune same) i više nema pogrešne mod-97 uzbune; prirez jednokratno ispravljen po opštini prebivališta (Budva 10%); nova opcija (u platu je uračunat minuli rad) — isplata pogađa tačno uneseni iznos; vrsta Rad nedjeljom (+80% po Opštem kolektivnom ugovoru); upozorenje na sumnjivo velik iznos plate.",
+  "datum": "2026-09-02"
 }
