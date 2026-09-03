@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.47",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.47.zip",
+  "verzija": "1.0.48",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.48.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "d62aaf6769b17f98e433766cfe6f10b73bbcbbecfff268c40ca861244093ab92",
+  "sha256": "ee21a44b48a291da5b2b1031411c173bc5cd017f480a55e38ed186563cd4e02d",
   "obavezno": false,
-  "napomene": "Plate i radnici: radnici i radna mjesta se sada SINHRONIZUJU između uređaja; lista radnika (PDF/Excel) + redoslijed svuda po šifri; žiro račun prima i skraćeni zapis (nule se dopune same) i više nema pogrešne mod-97 uzbune; prirez jednokratno ispravljen po opštini prebivališta (Budva 10%); nova opcija (u platu je uračunat minuli rad) — isplata pogađa tačno uneseni iznos; vrsta Rad nedjeljom (+80% po Opštem kolektivnom ugovoru); upozorenje na sumnjivo velik iznos plate.",
-  "datum": "2026-09-02"
+  "napomene": "Izvoz: napravljeni fajl se sada ODMAH OTVORI (zato je ranije izgledalo da izvoz ne radi — fajl je tiho legao u Documents/Knjig_izvjestaji) + novo XML dugme na tabelarnim izvozima. Plate: sati noćnog/praznika/nedjelje/odmora automatski smanjuju redovan rad (prekovremeni ide povrh fonda); obustave (kazne, štete, krediti) uz upozorenje na zakonski maksimum 1/3 zarade — čl. 106 Zakona o radu; rad nedjeljom +80%. Sinhronizacija: SVI postojeći radnici se sada šalju automatski (jednokratno), a automatska sinhronizacija ide na 2 minuta.",
+  "datum": "2026-09-03"
 }
