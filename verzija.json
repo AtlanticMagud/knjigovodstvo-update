@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.48",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.48.zip",
+  "verzija": "1.0.49",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.49.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "ee21a44b48a291da5b2b1031411c173bc5cd017f480a55e38ed186563cd4e02d",
+  "sha256": "b8f41f01aae531b7dab8a97f9fa3768372263004fccccdf1db74662c03e70a05",
   "obavezno": false,
-  "napomene": "Izvoz: napravljeni fajl se sada ODMAH OTVORI (zato je ranije izgledalo da izvoz ne radi — fajl je tiho legao u Documents/Knjig_izvjestaji) + novo XML dugme na tabelarnim izvozima. Plate: sati noćnog/praznika/nedjelje/odmora automatski smanjuju redovan rad (prekovremeni ide povrh fonda); obustave (kazne, štete, krediti) uz upozorenje na zakonski maksimum 1/3 zarade — čl. 106 Zakona o radu; rad nedjeljom +80%. Sinhronizacija: SVI postojeći radnici se sada šalju automatski (jednokratno), a automatska sinhronizacija ide na 2 minuta.",
+  "napomene": "Radnici — sinhronizacija do kraja: aplikacija sada jednokratno POKUPI radnike i iz paketa koje su starije verzije preskočile (i novo dugme Pokupi radnike iz svih paketa na Povezivanju). Paket sa vrstama iz novije verzije se više ne označava primljenim — ništa se ne gubi pri prelaznim verzijama. VAŽNO: na računaru gdje su radnici UNESENI mora se instalirati ova verzija — pri prvom slanju ona sama pošalje SVE radnike.",
   "datum": "2026-09-03"
 }
