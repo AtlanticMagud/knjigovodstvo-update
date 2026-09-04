@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.50",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.50.zip",
+  "verzija": "1.0.51",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.51.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "3ae80979e2b601aa486f80880987b6c7957b5b44ca2428b275e3269433abb5a5",
+  "sha256": "d7301c025f0e8c3986e491633826be5472bcd52b362a2f3c7c12a7d6c2431304",
   "obavezno": false,
-  "napomene": "NOVO — više računara, isti podaci (glavni + sporedni): na Povezivanju se bira uloga računara. TAČNO JEDAN je GLAVNI (kod knjigovođe — obrađuje skenove i dodjeljuje brojeve) i on poslije svake promjene automatski objavi kompletnu bazu; SPOREDNI računari unose dokumente (odlaze glavnom) i automatski preuzimaju njegovu bazu — u roku od 2 minuta svi računari vide isto, uključujući i ispravke i marže. Pri preuzimanju se čuvaju podešavanja uređaja, neobrađeni skenovi i dokumenti uneseni u zadnjih 7 dana. Novo i: pregled svih uređaja u folderu (ko šalje i kad je zadnji put slao).",
+  "napomene": "Sigurnosne ispravke iz detaljne provjere: (1) brava protiv DVA glavna računara — ako bazu već objavljuje drugi, ovaj ne objavljuje preko njega nego jasno upozori; vidi se i ko trenutno objavljuje bazu. (2) Snimak baze se više ne može uvesti/otvoriti kao firma (uz dugme za brisanje takve stavke). (3) IZLAZNE FAKTURE i kupci sada putuju sinhronizacijom — faktura izdata na sporednom računaru stiže glavnom i ne gubi se pri preuzimanju baze. (4) Zaštita obračuna plata: preuzimanje baze se zaustavi ako bi obrisalo obračun koji postoji samo na tom računaru. (5) Obrisani dokumenti se više ne vraćaju kao duhovi pri preuzimanju.",
   "datum": "2026-09-04"
 }
