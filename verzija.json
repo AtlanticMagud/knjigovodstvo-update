@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.49",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.49.zip",
+  "verzija": "1.0.50",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.50.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "b8f41f01aae531b7dab8a97f9fa3768372263004fccccdf1db74662c03e70a05",
+  "sha256": "3ae80979e2b601aa486f80880987b6c7957b5b44ca2428b275e3269433abb5a5",
   "obavezno": false,
-  "napomene": "Radnici — sinhronizacija do kraja: aplikacija sada jednokratno POKUPI radnike i iz paketa koje su starije verzije preskočile (i novo dugme Pokupi radnike iz svih paketa na Povezivanju). Paket sa vrstama iz novije verzije se više ne označava primljenim — ništa se ne gubi pri prelaznim verzijama. VAŽNO: na računaru gdje su radnici UNESENI mora se instalirati ova verzija — pri prvom slanju ona sama pošalje SVE radnike.",
-  "datum": "2026-09-03"
+  "napomene": "NOVO — više računara, isti podaci (glavni + sporedni): na Povezivanju se bira uloga računara. TAČNO JEDAN je GLAVNI (kod knjigovođe — obrađuje skenove i dodjeljuje brojeve) i on poslije svake promjene automatski objavi kompletnu bazu; SPOREDNI računari unose dokumente (odlaze glavnom) i automatski preuzimaju njegovu bazu — u roku od 2 minuta svi računari vide isto, uključujući i ispravke i marže. Pri preuzimanju se čuvaju podešavanja uređaja, neobrađeni skenovi i dokumenti uneseni u zadnjih 7 dana. Novo i: pregled svih uređaja u folderu (ko šalje i kad je zadnji put slao).",
+  "datum": "2026-09-04"
 }
