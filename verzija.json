@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.53",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.53.zip",
+  "verzija": "1.0.54",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.54.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "e1fc7505b9dc981fd53be90b4756bd07b9de70ac6b1341713c0181e12c27d056",
+  "sha256": "9db29c4358f5705d39598828a43818bc50ac9de9169e93aa8b863a47765fc2e5",
   "obavezno": false,
-  "napomene": "Plate: premještanje obračuna na pravi mjesec; polje Radnih dana za srazmjernu platu (dani × 8 h). Sređeni tekstovi u aplikaciji.",
+  "napomene": "Plate: novo dugme IOPPD XML (e-prijava) — pravi fajl u tačnom formatu portala Poreske uprave (isti kakav portal sam izvozi), za direktan uvoz na prijavu: po radniku red osnova 1 sa doprinosima i red osnova 97 sa porezom, zbirni dio i dio za invalide (osnovica/stopa podesivi na kartici Stope). Izvoz traži JMBG za svako lice.",
   "datum": "2026-09-08"
 }
