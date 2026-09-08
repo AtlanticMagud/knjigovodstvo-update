@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.51",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.51.zip",
+  "verzija": "1.0.52",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.52.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "d7301c025f0e8c3986e491633826be5472bcd52b362a2f3c7c12a7d6c2431304",
+  "sha256": "7478f08cb394ddeed8939a4c8dc90df26c0b876f91d711b7ce308f6a2759396d",
   "obavezno": false,
-  "napomene": "Sigurnosne ispravke iz detaljne provjere: (1) brava protiv DVA glavna računara — ako bazu već objavljuje drugi, ovaj ne objavljuje preko njega nego jasno upozori; vidi se i ko trenutno objavljuje bazu. (2) Snimak baze se više ne može uvesti/otvoriti kao firma (uz dugme za brisanje takve stavke). (3) IZLAZNE FAKTURE i kupci sada putuju sinhronizacijom — faktura izdata na sporednom računaru stiže glavnom i ne gubi se pri preuzimanju baze. (4) Zaštita obračuna plata: preuzimanje baze se zaustavi ako bi obrisalo obračun koji postoji samo na tom računaru. (5) Obrisani dokumenti se više ne vraćaju kao duhovi pri preuzimanju.",
-  "datum": "2026-09-04"
+  "napomene": "Plate: (1) dugme Premjesti mjesec — obračun rađen pod pogrešnim mjesecom (npr. avgustovske plate pod septembrom) prepisuje se na pravi period, sa svim stavkama i rezultatima; (2) polje Radnih dana — radnik koji je radio npr. samo 10 dana dobija srazmjernu platu (dani × 8 h, po Zakonu o radu), minimalac se računa srazmjerno. Napomena uz XML dugme: opšti XML izvoz NIJE format za poresku e-prijavu — IOPPD XML za portal stiže čim se učita primjer sa portala (Izvoz u XML na bilo kojoj prijavi).",
+  "datum": "2026-09-08"
 }
