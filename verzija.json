@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.55",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.55.zip",
+  "verzija": "1.0.56",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.56.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "a3c1c1a8ee03eae31192c2fd6fc33c0cdb49a5db9ab4cd4fac94f2d598a3ea6c",
+  "sha256": "b8d73d5842945f9eee511b544e0c012e7d7946b2aa40b0a0a59ac9bd8a37b242",
   "obavezno": false,
-  "napomene": "Plate: novi mjesec se sam popuni radnicima iz prethodnog — jednom uneseni radnici ostaju u svakom mjesecu dok im se ne upiše DATUM PRESTANKA (novo polje kod radnika). U mjesecu prestanka i kod zaposlenja sred mjeseca sati se sami postave srazmjerno (radni dani × 8).",
-  "datum": "2026-09-08"
+  "napomene": "Market se pamti posebno za svaku firmu i prihvata samo aktivan market — u Magudu i Atlanticu unos više ne odlazi na tuđi market. Nova kalkulacija i obrada skenova imaju polje „Datum knjiženja\": početkom mjeseca fakture iz prethodnog mjeseca knjiže se u njegov mjesec (npr. 31.08). Plate: radnik sa datumom prestanka (ili neaktivan) sklanja se iz obračuna mjeseci u koje ne spada; period rada od–do stoji na listiću, rekapitulaciji i u IOPPD prijavi; nova vrsta obračuna „IQOS\" — poseban obračun naknada sa unosom neto ili bruto iznosa po radniku i sopstvenim IOPPD XML fajlom. Uvoz izvoda: dobavljač se prepoznaje po riječima naziva, a žiro račun i naziv koje jednom izabereš program pamti za sljedeće izvode. Kartica dobavljača ide hronološki po datumu, sa periodom i izvozom u PDF/Excel. Nalog za knjiženje rashoda sadrži sve stavke otpisne liste u minus i knjiženje po kontima.",
+  "datum": "2026-09-23"
 }
