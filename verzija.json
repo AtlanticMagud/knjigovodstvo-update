@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.57",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.57.zip",
+  "verzija": "1.0.58",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.58.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "328796d73afbd62de2df4727a6f3d89db158859b0f91a5a8aed3e17b19174150",
+  "sha256": "458d9e1f036a70f5e86732aecf2eb2bc88585f12a929143d74ead719eec3a85a",
   "obavezno": false,
-  "napomene": "Plate: prirez je obaveza na teret poslodavca — više se ne odbija od zarade radnika i ne ulazi u bruto 1 (npr. neto 850,00 = bruto 977,64; porez 24,99; PIO 97,76; nezaposlenost 4,89; prirez 10 % = 2,49 povrh). Na listiću i rekapitulaciji prirez stoji uz obaveze poslodavca i ulazi u ukupan trošak. Na obračunima rađenim ranije program pokaže upozorenje — klik na „Obračunaj sve\" ih uskladi, a dogovoreni neto svakog radnika ostaje isti (i kod IQOS obračuna sa unesenim neto iznosom).",
+  "napomene": "Smjene i plate. Radnici: na listi radnika (Plate → Radnici) svakom se dodjeljuje market — po njemu su složene liste u rasporedu smjena, na obračun plate ne utiče; stručna sprema se vodi dvojako (stvarna i po sistematizaciji). Smjene: svakom marketu se upisuje radno vrijeme (od–do, broj smjena, radnika u smjeni) i program iz toga pravi njegove smjene; klik na ime radnika u mjesečnom rasporedu otvara njegove zahtjeve (slobodan dan, odmor, željena smjena u sedmici, rad u drugom marketu) koji se uvažavaju pri automatskom raspoređivanju; mjesečni raspored je predlog, a svaka sedmica se potvrđuje — potvrđena je zaključana; u danu se upisuju zamjene i stvarno odrađeni sati; pregled sati pokazuje i koliko je nedjelja (dana) radnik radio. Plate: dugme „Obračunaj po smjenama\" prepisuje sate iz rasporeda u obračun (dodatna mogućnost, postojeći način ostaje) — čim je bar jedna sedmica potvrđena, ulaze samo potvrđene. Trudničko bolovanje: nova vrsta odsustva i primanja; u IOPPD prijavi ide u zaseban red pod šifrom osnova 7 sa periodom od datuma početka bolovanja (šifra osnova po vrsti primanja se podešava na kartici Stope i vrste primanja).",
   "datum": "2026-09-30"
 }
