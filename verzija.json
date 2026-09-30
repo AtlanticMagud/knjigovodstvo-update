@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.60",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.60.zip",
+  "verzija": "1.0.61",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.61.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "ddebc9ad4b533b66951916808097422b8cdb1da993cfb88181e4ecf457a3d054",
+  "sha256": "f014497adaee39f885d0b458c29047d6a9f5381c4eb360aaab64d1c3aa3bc10e",
   "obavezno": false,
-  "napomene": "IOPPD: doprinos zbog nezapošljavanja lica sa invaliditetom se sada računa sam, iz broja zaposlenih u obračunu, po pravilu koje primjenjuje portal Poreske uprave — do 9 zaposlenih nema doprinosa; 10–19 zaposlenih 5 % prosječne zarade; 20–49 zaposlenih obavezno jedno lice sa invaliditetom, a 50 i više najmanje 5 % zaposlenih, pa se za svako lice koje nedostaje obračunava 20 % prosječne zarade (npr. 35 zaposlenih: osnovica 1.206,00 × 20 % = 241,20; 51 zaposleni: 3.618,00 × 20 % = 723,60). Iznos i objašnjenje računa vide se ispod tabele obračuna plata. Prosječna zarada i broj zaposlenih lica sa invaliditetom upisuju se na kartici Stope i vrste primanja.",
+  "napomene": "IOPPD usklađen sa Pravilnikom i zakonom. (1) Zakup od fizičkog lica — nova kartica Plate → „Zakup (IOPPD 065)\": unese se zakupodavac (JMBG, opština, mjesečna zakupnina bruto ili neto, trajanje ugovora), a program svakog mjeseca sam obračuna porez na prihod od imovine (osnovica = zakupnina umanjena za standardne troškove 30 %, porez 15 %, prirez na teret firme) i upiše ga u IOPPD XML kao red sa šifrom osnova 065; iznos se za pojedini mjesec može ručno promijeniti ili izostaviti, a obračun izvesti u Excel/PDF sa računima za uplatu. (2) Doprinos zbog nezapošljavanja lica sa invaliditetom računa se tačno po čl. 21 i 22 Zakona: do 10 zaposlenih nema doprinosa; 11–19 zaposlenih 5 % prosječne zarade; od 20 do 50 zaposlenih obavezno jedno lice; preko 50 zaposlenih 5 % zaposlenih uz zaokruživanje (do 0,5 naniže, 0,5 i više naviše); lice sa IV stepenom potrebne podrške računa se kao dva. (3) Na radniku novo polje „Lice sa invaliditetom\" — njegova zarada se u IOPPD prijavljuje pod osnovom 003 i broji se u obavezu zapošljavanja. (4) Bolovanje do 60 dana ide u IOPPD pod osnovom 006, a preko 60 dana i trudničko pod 007 — svako u svom redu sa periodom od–do iz evidencije odsustava, dok zarada (001) pokriva ostale dane mjeseca; podržano je i više perioda bolovanja u istom mjesecu.",
   "datum": "2026-09-30"
 }
