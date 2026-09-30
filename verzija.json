@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.59",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.59.zip",
+  "verzija": "1.0.60",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.60.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9a0f507e400d01cf775425c82afc8eacd3d11b5c6335eebacf5f93c7aed5c320",
+  "sha256": "ddebc9ad4b533b66951916808097422b8cdb1da993cfb88181e4ecf457a3d054",
   "obavezno": false,
-  "napomene": "Plate po smjenama: „Obračunaj po smjenama\" sada ZAMJENJUJE postojeće stavke rada radnika (uključujući pun fond sati koji program sam upiše), pa se isti rad ne može obračunati dvaput. Plaćena odsustva iz evidencije (godišnji odmor, plaćeno odsustvo, bolovanje, trudničko) prepisuju se u obračun kao svoje stavke, i za radnika koji u mjesecu nema nijednu smjenu. Dogovoreni neto (uklapanje) ostaje isti poslije prepisivanja sati; ako sati sami daju više, program to javi poimence. Ručno dodat „Rad nedjeljom\" umanjuje redovan rad iz smjena za iste sate, a odmor i bolovanje dodati uz sate iz smjena ih ne umanjuju. Snimanje baze: izmjena napravljena dok je prethodno snimanje još u toku sada se pouzdano upisuje u fajl.",
+  "napomene": "IOPPD: doprinos zbog nezapošljavanja lica sa invaliditetom se sada računa sam, iz broja zaposlenih u obračunu, po pravilu koje primjenjuje portal Poreske uprave — do 9 zaposlenih nema doprinosa; 10–19 zaposlenih 5 % prosječne zarade; 20–49 zaposlenih obavezno jedno lice sa invaliditetom, a 50 i više najmanje 5 % zaposlenih, pa se za svako lice koje nedostaje obračunava 20 % prosječne zarade (npr. 35 zaposlenih: osnovica 1.206,00 × 20 % = 241,20; 51 zaposleni: 3.618,00 × 20 % = 723,60). Iznos i objašnjenje računa vide se ispod tabele obračuna plata. Prosječna zarada i broj zaposlenih lica sa invaliditetom upisuju se na kartici Stope i vrste primanja.",
   "datum": "2026-09-30"
 }
