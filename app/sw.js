@@ -4,28 +4,28 @@
 // Uloga: aplikacija mora raditi i bez mreže (u radnji signal zna da padne), a nova
 // objava na GitHub Pages-u mora sama stići do telefona. Zato se pri instalaciji
 // keširaju svi fajlovi verzije, a stari keš se briše pri aktivaciji.
-const VERZIJA = "1.0.62"
+const VERZIJA = "1.0.63"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
-  "assets/PinDijalog-DO7zQGdj.js",
-  "assets/artikli-Puzsv6UN.js",
-  "assets/bankpdf-_Q3OMUFm.js",
-  "assets/cijene-DjEuoGTD.js",
-  "assets/index-BDmiNpzm.js",
-  "assets/index-Br4ZkrDd.js",
-  "assets/index-CHTV5ITb.js",
+  "assets/PinDijalog-DI59GYis.js",
+  "assets/artikli-BlaoYMPG.js",
+  "assets/bankpdf-BgVY_xU8.js",
+  "assets/cijene-DB3zudi0.js",
+  "assets/index-B6BfIiME.js",
+  "assets/index-BFGi_Ycb.js",
+  "assets/index-BLsttXka.js",
+  "assets/index-BblSgWnI.js",
+  "assets/index-Bvb4b78e.js",
+  "assets/index-D77OlHB8.js",
   "assets/index-DNzFMgCo.js",
   "assets/index-DQ9f9PiB.css",
-  "assets/index-DVdtdeHk.js",
-  "assets/index-Dd7w1zgK.js",
-  "assets/index-Dlv5Smlu.js",
   "assets/index-ggsP5-uy.js",
   "assets/pdf.worker-Mx0w3D2U.js",
-  "assets/pdftekst-BveyH_Rf.js",
-  "assets/renumeracija-Be4n4ajk.js",
+  "assets/pdftekst-BlDngr04.js",
+  "assets/renumeracija-BT1b8Kbr.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
+  "assets/web-BQVkCYj6.js",
   "assets/web-BXJjiGQ6.js",
-  "assets/web-C2_uvgxR.js",
   "assets/web-DRnNXkco.js",
   "assets/web-sfuwvzF6.js",
   "assets/worker.min-32WLk7pY.js",
