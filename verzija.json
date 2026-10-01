@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.63",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.63.zip",
+  "verzija": "1.0.64",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.64.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f3802bbfd8e56fd2a8cd0679fd598fa52a3cd3c71454adba04070ea78488ecce",
+  "sha256": "e60e0d5bd465ebf03a75ca7d9a4cf36582d7f2e63fde314e918be25af93975d1",
   "obavezno": false,
-  "napomene": "IQOS naknada ide u redovnu platu (pravilo knjigovođe): unosi se dugmetom „IQOS naknade\" na Mjesečnom obračunu kao stavka 913 uz zaradu, bruto ili neto povrh plate; porez se računa na zbir svih primanja u mjesecu i sve ide u jednu IOPPD prijavu. Postojeći posebni IQOS obračuni se sami prenesu u platu istog mjeseca (iznosi „na ruke\" ostaju isti). KNJIŽNE NOTE (odobrenja dobavljača, negativne fakture) sada su u otvorenim stavkama: vide se kao negativan iznos, automatski se primjenjuju na najstarije otvorene fakture istog dobavljača prije vezivanja uplata, dug po dobavljaču je neto, a na fakturi se vidi koja nota ju je umanjila (može se i razvezati). PREKOVREMENI PO ZAKONU O RADU: prekovremeni su svi sati preko mjesečnog fonda, bez obzira na to da li su dnevni ili noćni; uzimaju se prvo iz dnevnih, a noćni sati preko fonda idu u novu vrstu „013 Prekovremeni noćni rad\" sa sabranim uvećanjem (+80 %). Pregled sati iz smjena koristi fond sati iz obračuna plata. Doprinos za lica sa invaliditetom se uplaćuje na jedinstveni račun 820-30000-74 (piše uz iznos).",
-  "datum": "2026-09-30"
+  "napomene": "SMJENE: novi glavni prikaz „Pregled sedmice — svi marketi\" — svi marketi u jednoj tabeli (dan × market), prva i druga smjena u boji, zamjene posebno označene, kolona slobodnih i odsutnih, potvrda sedmice po marketu ili za sve, štampa u PDF/Excel i dugme „Predlog za mjesec\". Predlog rotira smjene sedmično (nastavlja od rasporeda prethodne sedmice, radnik cijelu sedmicu drži istu smjenu), poštuje stalni slobodan dan sa kartice radnika, a slobodne dane pokrivaju zamjene (radnici bez stalnog marketa koji su nedavno radili); stalni radnik drugog marketa se ne posuđuje. Podešavanje „market radi po svom radnom vremenu\" sada putuje između računara. IQOS: ponovo poseban obračun sa svojom rekapitulacijom, listićima i isplatom; porez na IQOS se računa na zbir sa platom (razlika poreza), a u IOPPD XML ulazi zajedno sa platom — jedna prijava za mjesec. IQOS iznosi koji su bili spojeni u platu sami se vraćaju u poseban obračun. SINHRONIZACIJA: sporedni računar poslije preuzimanja baze glavnog šalje samo ono što se na njemu promijeni poslije toga.",
+  "datum": "2026-10-01"
 }
