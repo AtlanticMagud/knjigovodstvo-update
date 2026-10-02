@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.64",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.64.zip",
+  "verzija": "1.0.65",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.65.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "e60e0d5bd465ebf03a75ca7d9a4cf36582d7f2e63fde314e918be25af93975d1",
+  "sha256": "2cdf05d7268ec05537c86d31a51881763b130a851242c7cf06b1dd703eb4ff75",
   "obavezno": false,
-  "napomene": "SMJENE: novi glavni prikaz „Pregled sedmice — svi marketi\" — svi marketi u jednoj tabeli (dan × market), prva i druga smjena u boji, zamjene posebno označene, kolona slobodnih i odsutnih, potvrda sedmice po marketu ili za sve, štampa u PDF/Excel i dugme „Predlog za mjesec\". Predlog rotira smjene sedmično (nastavlja od rasporeda prethodne sedmice, radnik cijelu sedmicu drži istu smjenu), poštuje stalni slobodan dan sa kartice radnika, a slobodne dane pokrivaju zamjene (radnici bez stalnog marketa koji su nedavno radili); stalni radnik drugog marketa se ne posuđuje. Podešavanje „market radi po svom radnom vremenu\" sada putuje između računara. IQOS: ponovo poseban obračun sa svojom rekapitulacijom, listićima i isplatom; porez na IQOS se računa na zbir sa platom (razlika poreza), a u IOPPD XML ulazi zajedno sa platom — jedna prijava za mjesec. IQOS iznosi koji su bili spojeni u platu sami se vraćaju u poseban obračun. SINHRONIZACIJA: sporedni računar poslije preuzimanja baze glavnog šalje samo ono što se na njemu promijeni poslije toga.",
-  "datum": "2026-10-01"
+  "napomene": "Sinhronizacija: brže i bez zamrzavanja (Google Drive se čita u pozadini, snimak glavnog sa vremenskim rokom), dugme Sinhronizuj sada preuzima i snimak glavnog računara, snimak se objavljuje najviše na 10 min.",
+  "datum": "2026-10-02"
 }
