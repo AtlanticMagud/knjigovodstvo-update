@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.65",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.65.zip",
+  "verzija": "1.0.66",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.66.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "2cdf05d7268ec05537c86d31a51881763b130a851242c7cf06b1dd703eb4ff75",
+  "sha256": "6ecd47bcafa1f713b675146c6b63c45d86efcf1347a8f81b7246c627833460bc",
   "obavezno": false,
-  "napomene": "Sinhronizacija: brže i bez zamrzavanja (Google Drive se čita u pozadini, snimak glavnog sa vremenskim rokom), dugme Sinhronizuj sada preuzima i snimak glavnog računara, snimak se objavljuje najviše na 10 min.",
-  "datum": "2026-10-02"
+  "napomene": "Uvoz bankovnog izvoda: NLB dnevni izvod (nečitljiv font) se čita OCR-om — naziv i račun primaoca, iznosi, kontrola zbira; NLB pregled transakcija se učitava uz upozorenje da nema primaoca; dobavljač se pogađa i po iznosu otvorene fakture; učenje naziva više ne pamti opšte svrhe (placanje robe).",
+  "datum": "2026-10-04"
 }
