@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.67",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.67.zip",
+  "verzija": "1.0.68",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.68.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "57734e88efa8afc1b483a9daaa93d1f8f29669660e387493b51d7f01c436c2c9",
+  "sha256": "dbf7d6f76774a62b1088c5178febec43b5f2460c52e8ec098c13ee5a81aa84ca",
   "obavezno": false,
-  "napomene": "Banka: izvodi i novčani tok (registar izvoda, svaka transakcija jednom, pregled dan/mjesec/godina, uvoz cijele godine iz pošte) · Pošta iz Outlooka (traži novi Setup na Windowsu) · kartice/IOS dobavljača iz PDF-a + sporne stavke i odgovor na IOS · Kadrovi po Zakonu o radu (sistematizacija, ugovori, odmori, disciplina, podsjetnici) · cigare, smjene (boje, pomoćni, razmjena), fakture po datumu unosa, popis barkodom, dug bez partnerskih marketa · automatska štampa kalkulacije · uloga ADMIN · ažuriranje: jednokratno obavještenje i Posljednja promjena",
+  "napomene": "Potvrda o zaposlenju i sva dugmad sa unosom (dodatni dani odmora, prenos dana, uručenje odluke, obustava postupka, storno računa, nova vrsta troška, količina na popisu) sada rade na Windowsu.\nPoništavanje prestanka radnog odnosa (Kadrovi → Ugovori i prestanak → Upisani prestanci; Svi dokumenti → Poništi/Vrati) — radnik se vraća kao aktivan, dokument ostaje označen PONIŠTEN.\nSistematizacija: popuna bez duplih pozicija (Direktor = Izvršni direktor…), dopuna opisa, usklađen broj izvršilaca; pravilnik je cio akt (org. jedinice, objekti, rukovođenje, radno vrijeme, uslovi, radna mjesta sa šiframa, tabelarni pregled, šema, evidencija upoznavanja za potpise).\nIzbor godine do tekuće + 3 (raste sam).\nOutlook: čita se sam pri pokretanju i na 30 min od zadnjeg pročitanog datuma; vidi se dokle je pročitano; ako Outlook nije pokrenut — traka sa dugmetom „Pokreni Outlook\" (dugme traži novi Setup).\nPoslije čitanja pošte izvodi se SAMI uvoze u Banku: plaćanja po PIB-u/upamćenom računu se knjiže (dug dobavljačima se smanjuje), ostalo čeka pregled u Banka → Transakcije.\nPočetna: drugi red kockica — primljena roba danas, uplaćeno ove sedmice, dug, promet godine, zarada poslije poreza.",
   "datum": "2026-10-04"
 }
