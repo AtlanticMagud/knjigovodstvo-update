@@ -1,9 +1,9 @@
 {
-  "verzija": "1.0.66",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.66.zip",
+  "verzija": "1.0.67",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.67.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "6ecd47bcafa1f713b675146c6b63c45d86efcf1347a8f81b7246c627833460bc",
+  "sha256": "57734e88efa8afc1b483a9daaa93d1f8f29669660e387493b51d7f01c436c2c9",
   "obavezno": false,
-  "napomene": "Uvoz bankovnog izvoda: NLB dnevni izvod (nečitljiv font) se čita OCR-om — naziv i račun primaoca, iznosi, kontrola zbira; NLB pregled transakcija se učitava uz upozorenje da nema primaoca; dobavljač se pogađa i po iznosu otvorene fakture; učenje naziva više ne pamti opšte svrhe (placanje robe).",
+  "napomene": "Banka: izvodi i novčani tok (registar izvoda, svaka transakcija jednom, pregled dan/mjesec/godina, uvoz cijele godine iz pošte) · Pošta iz Outlooka (traži novi Setup na Windowsu) · kartice/IOS dobavljača iz PDF-a + sporne stavke i odgovor na IOS · Kadrovi po Zakonu o radu (sistematizacija, ugovori, odmori, disciplina, podsjetnici) · cigare, smjene (boje, pomoćni, razmjena), fakture po datumu unosa, popis barkodom, dug bez partnerskih marketa · automatska štampa kalkulacije · uloga ADMIN · ažuriranje: jednokratno obavještenje i Posljednja promjena",
   "datum": "2026-10-04"
 }
