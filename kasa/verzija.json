@@ -1,0 +1,11 @@
+{
+  "verzija": "1.1.1",
+  "datum": "2026-10-06",
+  "napomene": "Verzija 1.1.1 — sve iz 1.1 (cijene po marketu, fiskalizacija, storno, kasiri, izvještaji, obrisani računi, otpis, etikete) i ispravke poslije probe opterećenja:\n· dug račun (100–500 stavki) se kuca bez usporavanja;\n· izvještaji i presjek rade brzo i nad velikom bazom;\n· kasa provjerava bazu prije svakog snimanja — oštećenu sliku (greška memorije računara) ne upisuje na disk, a poslije ponovnog pokretanja vraća sve račune;\n· štampa: računi izlaze redom, dugačak izvještaj ne zaglavljuje štampu.\nKase sa starim Setup-om (1.0.0) treba prvo da instaliraju novi Setup.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.1.1.zip",
+  "sha256": "653f0e26e6a6b324df5aafd125eca27c29b01cf0aed0d7ee38b7ef50fd56504a",
+  "velicina": 1097292,
+  "minSetup": "1.1.0",
+  "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
+  "verzijaAndroid": "1.1.1"
+}
