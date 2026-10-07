@@ -1,0 +1,11 @@
+{
+  "verzija": "1.2.1",
+  "datum": "2026-10-07",
+  "opis": "Prva objava: podaci stižu sami iz Google Drive foldera, Početna sa pregledima (promet robe, rokovi trajanja, promjene nabavnih cijena), ažuriranje iz programa.",
+  "paket": "menadzer-paket-1.2.1.json.gz",
+  "sha256": "d9f1695e1c314f4e18471ae5dbad5c6e55189e965ac8e9e4857521f20873f329",
+  "velicina": 652147,
+  "apk": "Menadzer.apk",
+  "apkSha256": "cf3223c3086d08b5636c1a20f2ddb2e5851b8ed6b95803669302d5893301f7e9",
+  "apkVelicina": 3870242
+}
