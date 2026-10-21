@@ -1,9 +1,11 @@
 {
-  "verzija": "1.0.73",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.73.zip",
+  "verzija": "1.0.75",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.75.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "e5cbb9dd3586c4c091e41b1da2fcc04083f6f872d33f9c62b4ef8c5d5c268d0e",
+  "sha256": "63608ba17e0769867eed478753b5d871df22fff98b6bbfe467b06833d1ffc9b4",
   "obavezno": false,
-  "napomene": "AŽURIRATI SVE RAČUNARE I TELEFONE. PAZAR: ispravka (novo dugme „Ispravi\") i brisanje pazara sada stižu na sve računare; dva pazara istog marketa i dana (dvije kase) ostaju dva. Spisak pazara ima prikaz „Mogući dupli unosi\" (isti market i dan više puta, ili pazar od 0,00) i prikaz jednog dana, pa se može doći i do starijih pazara.\nBANKA: isti promet iz dnevnog izvoda i iz „pregleda transakcija\" (drugi oblik izvoda istog računa) vodi se jednom — sparuje se po računu, datumu, smjeru i iznosu, bez obzira na opis. Pregled transakcija uvoziti tek kad su SVI računari na ovoj verziji.\nČITANJE NLB IZVODA više ne staje kad prozor programa nije vidljiv (minimizovan, prekriven ili zaključan ekran); ako čitanje jednog izvoda ipak stane, on dobija poruku u Pošti, a uvoz ostalih ide dalje.\nSadrži i sve iz 1.0.72: čiji je račun (izvod se sam uvozi samo sa računa potvrđenog kao račun otvorene firme), više istih uplata na izvodu = isto toliko plaćanja, zaštita od duplog klika, kartica dobavljača sa jednim početnim stanjem.",
-  "datum": "2026-10-07"
+  "napomene": "Banka: program sam prepoznaje čiju firmu izvod nosi (PIB u zaglavlju) — Magud i Atlantic se više ne miješaju, ručni uvoz izvoda nije blokiran. Dobavljači: upozorenje na dupla plaćanja (ručno + iz izvoda) sa brisanjem na klik; saldo u minusu crven; prikaz duga se pamti (bez partnerskih marketa). Plate: IOPPD osnov po periodu za radnika (npr. 7 do 17.09, 8 od 18.09). Kadrovi: raskid ugovora po isteku jednim klikom, bez notara. Firma: nova adresa Atlantica i ime direktora na dokumentima. Otpis: normativ od prometa marketa. Ažuriranje: vraćanje prethodne verzije. Uključeno i: zaštićena razmjena plata, smjena i radnika (1.0.74).",
+  "datum": "2026-10-21",
+  "verzijaPrethodna": "1.0.73",
+  "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
