@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.75",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.75.zip",
+  "verzija": "1.0.76",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.76.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "63608ba17e0769867eed478753b5d871df22fff98b6bbfe467b06833d1ffc9b4",
+  "sha256": "e18899e9498bcb9e9926346877758b9640d139585f6eb418100ae141dae07c24",
   "obavezno": false,
-  "napomene": "Banka: program sam prepoznaje čiju firmu izvod nosi (PIB u zaglavlju) — Magud i Atlantic se više ne miješaju, ručni uvoz izvoda nije blokiran. Dobavljači: upozorenje na dupla plaćanja (ručno + iz izvoda) sa brisanjem na klik; saldo u minusu crven; prikaz duga se pamti (bez partnerskih marketa). Plate: IOPPD osnov po periodu za radnika (npr. 7 do 17.09, 8 od 18.09). Kadrovi: raskid ugovora po isteku jednim klikom, bez notara. Firma: nova adresa Atlantica i ime direktora na dokumentima. Otpis: normativ od prometa marketa. Ažuriranje: vraćanje prethodne verzije. Uključeno i: zaštićena razmjena plata, smjena i radnika (1.0.74).",
-  "datum": "2026-10-21",
-  "verzijaPrethodna": "1.0.73",
+  "napomene": "Cjenovnik kasa: cijene po kojima kase prodaju vode se u programu (opšta cijena firme + cijena po marketu, nov artikal za kase, kase po marketima, dnevnik izmjena). Glavni računar sam šalje cjenovnik kasama kroz Drive folder i preuzima izmjene koje šef uradi na kasi ili menadžer u svom programu — posljednja izmjena vrijedi. Uputstvo dopunjeno poglavljem Cjenovnik kasa.",
+  "datum": "2026-10-22",
+  "verzijaPrethodna": "1.0.75",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

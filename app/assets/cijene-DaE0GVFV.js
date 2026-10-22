@@ -1,4 +1,4 @@
-import{s as n}from"./index-DExteMfh.js";const l="ks.NabavnaCijenaBezPDV*(1-COALESCE(ks.RabatProcenat,0)/100)";function S(t,D=5){const i=n(`SELECT ks.StavkaID, ks.ArtikalID, COALESCE(a.Naziv,'(bez naziva)') AS Naziv, ks.Kolicina,
+import{s as n}from"./index-C2qohUN4.js";const l="ks.NabavnaCijenaBezPDV*(1-COALESCE(ks.RabatProcenat,0)/100)";function S(t,D=5){const i=n(`SELECT ks.StavkaID, ks.ArtikalID, COALESCE(a.Naziv,'(bez naziva)') AS Naziv, ks.Kolicina,
             ${l} AS Sada, ks.ProdajnaCijenaBezPdv AS Prodajna, ks.MarzaProcenat,
             (SELECT ks2.NabavnaCijenaBezPDV*(1-COALESCE(ks2.RabatProcenat,0)/100)
              FROM tblKalkStavke ks2 JOIN tblKalkulacija k2 ON k2.KalkID=ks2.KalkID
