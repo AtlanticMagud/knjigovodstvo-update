@@ -1,11 +1,11 @@
 {
-  "verzija": "1.1.1",
-  "datum": "2026-10-06",
-  "napomene": "Verzija 1.1.1 — sve iz 1.1 (cijene po marketu, fiskalizacija, storno, kasiri, izvještaji, obrisani računi, otpis, etikete) i ispravke poslije probe opterećenja:\n· dug račun (100–500 stavki) se kuca bez usporavanja;\n· izvještaji i presjek rade brzo i nad velikom bazom;\n· kasa provjerava bazu prije svakog snimanja — oštećenu sliku (greška memorije računara) ne upisuje na disk, a poslije ponovnog pokretanja vraća sve račune;\n· štampa: računi izlaze redom, dugačak izvještaj ne zaglavljuje štampu.\nKase sa starim Setup-om (1.0.0) treba prvo da instaliraju novi Setup.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.1.1.zip",
-  "sha256": "653f0e26e6a6b324df5aafd125eca27c29b01cf0aed0d7ee38b7ef50fd56504a",
-  "velicina": 1097292,
-  "minSetup": "1.1.0",
+  "verzija": "1.2.0",
+  "datum": "2026-10-23",
+  "napomene": "Verzija 1.2.0 — cijene artikala i razmjena sa Knjigovodstvom:\n· ⋯ Više → Cijene artikala: šef (PIN) mijenja cijenu i dodaje nov artikal; kasir ne može. Svaka izmjena je zabilježena (ko, kad, stara → nova).\n· poslije promjene cijene kasa nudi etiketu sa novom cijenom (i cijenom po kg / l);\n· Podešavanja → Razmjena sa Knjigovodstvom: kasa iz zajedničkog foldera sama uzima nov cjenovnik i izmjene cijena iz Knjigovodstva i Menadžera, a šalje izmjene šefa;\n· početni cjenovnik ostaje ugrađen; nazivi „stara kasa\" umjesto imena starog programa.\nOVA VERZIJA TRAŽI NOV SETUP (Kasa Setup 1.2.0) — instaliraj ga preko postojeće kase; računi i podešavanja ostaju.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.2.0.zip",
+  "sha256": "98ad4d5f3588ac1004661338858718a002f103f214f2db3dee00d399d026b257",
+  "velicina": 1105385,
+  "minSetup": "1.2.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.1.1"
+  "verzijaAndroid": "1.2.0"
 }
