@@ -1,12 +1,12 @@
 {
-  "verzija": "1.3.0",
-  "datum": "2026-10-22",
-  "opis": "Cijene za kase: cjenovnik firme stiže iz Knjigovodstva, menadžer mijenja cijenu po marketu ili opštu i dodaje nov artikal; izmjene idu kasama i Knjigovodstvu kroz Drive folder, a izmjene sa kasa i iz Knjigovodstva stižu ovdje (dnevnik izmjena). Ova verzija traži nov Setup (Menadzer Setup 1.3.0).",
-  "paket": "menadzer-paket-1.3.0.json.gz",
-  "sha256": "aaced67667ed743df9d4ae80f9277367643a6227c152698116f0c207a8295707",
-  "velicina": 660605,
-  "minLjuska": "1.3.0",
+  "verzija": "1.4.0",
+  "datum": "2026-10-23",
+  "opis": "IRIS Menadžer 1.4: ekran Danas (šta treba danas), zadaci, kontrolne liste i obilazak marketa sa ocjenom i fotografijama, kvarovi i nestašice, obavještenja marketima sa potvrdom, kalendar obaveza; nabavka: limit odobravanja, narudžbenica PDF / mail / Viber, dani naručivanja, potvrda dobavljača; prijem robe skenerom, povrat dobavljaču, poređenje naručeno–primljeno–fakturisano; trebovanje i prenos među marketima; ciklični popis i zalihe; rokovi i sniženje pred istek; otpis i gubici; kontrola kasira i pazar iz zaključaka kase; pregledi (KPI, rang marketa, ABC, ocjena dobavljača); svi uređaji i Knjigovodstvo dijele podatke kroz Drive folder. Traži novu instalaciju na Windows-u (Setup 1.4.0).",
+  "paket": "menadzer-paket-1.4.0.json.gz",
+  "sha256": "3b5b3cb106d0460979eb7ad3cdca783be5c7d9c630dc5b46d646471ceb1aeea0",
+  "velicina": 767405,
+  "minLjuska": "1.4.0",
   "apk": "Menadzer.apk",
-  "apkSha256": "6d87adbaebb033967617229097ad5cafa0bb9509ae49a36e258f76357ff9163d",
-  "apkVelicina": 3875946
+  "apkSha256": "6ef54c64aa4c2bf1a0332ac519c119bb621c9ceba98fd4860433b09006c3785e",
+  "apkVelicina": 3943986
 }
