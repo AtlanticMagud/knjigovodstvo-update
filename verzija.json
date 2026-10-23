@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.78",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.78.zip",
+  "verzija": "1.0.79",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.79.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "0a31be0b7b3e43f1d9f81a18888457b16a02cf46e44967dd95ff1c419f3c458a",
+  "sha256": "1a0e337126e84aa16dc056ddb3923663cfb15cddf8c2a0e4c522b01007e4121a",
   "obavezno": false,
-  "napomene": "Novo: ekran Menadžer (Pregledi) — pregled onoga što radi IRIS Menadžer: narudžbe, prijem robe i povrati, otpisi, popisi, prenosi među marketima, sniženja pred istek, zadaci, kvarovi i obilasci marketa; podaci stižu kroz Google Drive folder razmjene (samo pregled).",
+  "napomene": "Novo: program sam čita ŠALTERSKE ispise izvoda — ono što banka odštampa ili pošalje iz arhive (Prva banka, npr. svi izvodi godine u jednom PDF-u; NLB „Šalter … Pregled i štampanje izvoda“; Hipotekarna „Izvod prometa - POS…“, koji je u stvari izvod računa). PDF sa više izvoda se razdvaja i svaki izvod ide u Banku posebno, uz kontrolu stanja. Pošta takve priloge sama prepoznaje kao izvode. Isti izvod koji stigne u drugom obliku (mail ↔ šalter) više ne ulazi dvaput. Hipotekarin „Izvod za EFTPOS“ se prepoznaje kao POS izvještaj.",
   "datum": "2026-10-23",
-  "verzijaPrethodna": "1.0.77",
+  "verzijaPrethodna": "1.0.78",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
