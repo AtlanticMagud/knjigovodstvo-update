@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.76",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.76.zip",
+  "verzija": "1.0.77",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.77.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "e18899e9498bcb9e9926346877758b9640d139585f6eb418100ae141dae07c24",
+  "sha256": "49e2549eb8b1a2c5a77f9b155c941a764676ce103e73b8768bf34b2efc6c9d96",
   "obavezno": false,
-  "napomene": "Cjenovnik kasa: cijene po kojima kase prodaju vode se u programu (opšta cijena firme + cijena po marketu, nov artikal za kase, kase po marketima, dnevnik izmjena). Glavni računar sam šalje cjenovnik kasama kroz Drive folder i preuzima izmjene koje šef uradi na kasi ili menadžer u svom programu — posljednja izmjena vrijedi. Uputstvo dopunjeno poglavljem Cjenovnik kasa.",
-  "datum": "2026-10-22",
-  "verzijaPrethodna": "1.0.75",
+  "napomene": "Verzija 1.0.77 — uz novu kasu 1.3.0:\n· Cjenovnik kasa → AKCIJE (akcijska cijena, popust %, gratis 2+1, cijena od N komada; period, sati, dani, marketi) — stižu kasama sa cjenovnikom;\n· Cjenovnik kasa → KUPCI (vjernost): stalni kupac po broju telefona sa popustom koji kasa primjenjuje;\n· Povezivanje → Program za kase: zaključci nove kase iz Drive foldera — pazar po smjeni, promet po artiklima, otpisi sa kase kao dokument, obrisani računi → „Sumnjiv rad\" po kasiru;\n· uputstvo dopunjeno (poglavlja 08, 22, 26).",
+  "datum": "2026-10-23",
+  "verzijaPrethodna": "1.0.76",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
