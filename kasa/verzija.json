@@ -1,11 +1,11 @@
 {
-  "verzija": "1.2.0",
+  "verzija": "1.3.0",
   "datum": "2026-10-23",
-  "napomene": "Verzija 1.2.0 — cijene artikala i razmjena sa Knjigovodstvom:\n· ⋯ Više → Cijene artikala: šef (PIN) mijenja cijenu i dodaje nov artikal; kasir ne može. Svaka izmjena je zabilježena (ko, kad, stara → nova).\n· poslije promjene cijene kasa nudi etiketu sa novom cijenom (i cijenom po kg / l);\n· Podešavanja → Razmjena sa Knjigovodstvom: kasa iz zajedničkog foldera sama uzima nov cjenovnik i izmjene cijena iz Knjigovodstva i Menadžera, a šalje izmjene šefa;\n· početni cjenovnik ostaje ugrađen; nazivi „stara kasa\" umjesto imena starog programa.\nOVA VERZIJA TRAŽI NOV SETUP (Kasa Setup 1.2.0) — instaliraj ga preko postojeće kase; računi i podešavanja ostaju.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.2.0.zip",
-  "sha256": "98ad4d5f3588ac1004661338858718a002f103f214f2db3dee00d399d026b257",
-  "velicina": 1105385,
-  "minSetup": "1.2.0",
+  "napomene": "Verzija 1.3.0 — sve što je bilo moguće prije registracije kod Poreske:\n· AKCIJE iz Knjigovodstva (2+1, −%, happy hour, cijena od N komada) — kasa ih sama primjenjuje, na računu piše naziv akcije;\n· stalni kupac po broju telefona (Kupac → Telefon → Nađi) dobija svoj popust;\n· Računi → račun → „↩ Povrat dijela robe\": korektivni račun samo za vraćeno (šef);\n· Računi → Analiza: po satu, danu, kasiru, najprodavaniji artikli, artikli bez prometa, najveći popusti;\n· ⋯ Više → Provjera cijene (skeniraj i vidi cijenu / akciju bez kucanja na račun); brze tipke; slijepo brojanje na presjeku; potvrda godina za alkohol / duvan; ekran za kupca (Windows);\n· UGOSTITELJSTVO (Podešavanja → Režim rada): stolovi, nalog kuhinji / šanku, napomena uz stavku, podjela i spajanje računa;\n· poslije svakog Z kasa upisuje zaključke u folder razmjene — Knjigovodstvo 1.0.77 ih samo čita (pazar po smjeni, promet, otpisi).\nOVA VERZIJA TRAŽI NOV SETUP (Kasa Setup 1.3.0) — instaliraj ga preko postojeće kase; računi i podešavanja ostaju.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.0.zip",
+  "sha256": "8d9e8943c6baf50a35be4e99c2d11baf86a8028451349576138d3a6bfeaeaeb3",
+  "velicina": 1123240,
+  "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.2.0"
+  "verzijaAndroid": "1.3.0"
 }
