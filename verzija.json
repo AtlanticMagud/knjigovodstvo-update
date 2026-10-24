@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.79",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.79.zip",
+  "verzija": "1.0.80",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.80.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "1a0e337126e84aa16dc056ddb3923663cfb15cddf8c2a0e4c522b01007e4121a",
+  "sha256": "72081bac420dc21dfc073f97ef96859b6b801edef407fd1055f4cab56bcf8ae4",
   "obavezno": false,
-  "napomene": "Novo: program sam čita ŠALTERSKE ispise izvoda — ono što banka odštampa ili pošalje iz arhive (Prva banka, npr. svi izvodi godine u jednom PDF-u; NLB „Šalter … Pregled i štampanje izvoda“; Hipotekarna „Izvod prometa - POS…“, koji je u stvari izvod računa). PDF sa više izvoda se razdvaja i svaki izvod ide u Banku posebno, uz kontrolu stanja. Pošta takve priloge sama prepoznaje kao izvode. Isti izvod koji stigne u drugom obliku (mail ↔ šalter) više ne ulazi dvaput. Hipotekarin „Izvod za EFTPOS“ se prepoznaje kao POS izvještaj.",
-  "datum": "2026-10-23",
-  "verzijaPrethodna": "1.0.78",
+  "napomene": "Verzija 1.0.80 — ispravke iz detaljnog testa (24.10.2026):\n· broj kalkulacije je jedinstven unutar godine — od 01.01.2027. svaki market kreće od _00001 (ranije bi veliki marketi ostali bez kalkulacija);\n· „Datum knjiženja\" pri unosu važi samo za račune izdate do tog datuma (račun iz novog mjeseca više ne ulazi u prethodni);\n· „Spoji duple artikle\" preusmjerava sve veze; stavke „(bez naziva)\" se same vežu nazad za svoj artikal;\n· otpis se knjiži, a izvod/knjiženje banke poništava SAMO na glavnom računaru; otpis i prenos kroz razmjenu prenose i kasnije izmjene;\n· pogrešan PIB više ne briše registar banke računa sa knjiženjima; dospijeća računaju knjižne note; odgovor na IOS na dan kartice;\n· pazari: provjera iznosa pri unosu, mogući dupli i pod drugim datumom/marketom, OCR ne preskače drugi Z istog dana i ne mijenja godinu preko Nove godine;\n· plate: „Povuci sate\" čuva redovan rad radnika bez smjena, prekovremeni po fondu radnika, IOPPD kod trudničkog cio mjesec, zakonski limiti neoporezivih primanja;\n· zaključan mjesec ne prima nove račune; lista kalkulacija bez granice od 3.000; popis „sa PDV\"; cjenovnik kasa: PDV stope po fakturama, izmjena artikla, PJ po kasi.",
+  "datum": "2026-10-24",
+  "verzijaPrethodna": "1.0.79",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
