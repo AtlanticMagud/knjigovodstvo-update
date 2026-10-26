@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.0",
-  "datum": "2026-10-23",
-  "opis": "IRIS Menadžer 1.4: ekran Danas (šta treba danas), zadaci, kontrolne liste i obilazak marketa sa ocjenom i fotografijama, kvarovi i nestašice, obavještenja marketima sa potvrdom, kalendar obaveza; nabavka: limit odobravanja, narudžbenica PDF / mail / Viber, dani naručivanja, potvrda dobavljača; prijem robe skenerom, povrat dobavljaču, poređenje naručeno–primljeno–fakturisano; trebovanje i prenos među marketima; ciklični popis i zalihe; rokovi i sniženje pred istek; otpis i gubici; kontrola kasira i pazar iz zaključaka kase; pregledi (KPI, rang marketa, ABC, ocjena dobavljača); svi uređaji i Knjigovodstvo dijele podatke kroz Drive folder. Traži novu instalaciju na Windows-u (Setup 1.4.0).",
-  "paket": "menadzer-paket-1.4.0.json.gz",
-  "sha256": "3b5b3cb106d0460979eb7ad3cdca783be5c7d9c630dc5b46d646471ceb1aeea0",
-  "velicina": 767405,
-  "minLjuska": "1.4.0",
+  "verzija": "1.4.1",
+  "datum": "2026-10-26",
+  "opis": "IRIS Menadžer 1.4.1: ključ firme — prvi uređaj je uređaj administratora, svaki sljedeći telefon ili računar se uparuje kodom (Korisnici → „Kod za nov uređaj“); korisnike, uloge, PIN-ove i podešavanja mijenja samo uređaj administratora; PIN administratora i direktora 6–8 cifara (PIN iz 1.4.0 se mijenja pri prijavi); primljeno se računa iz prijema sa svih uređaja, „manjak“ zatvara narudžbu; zalihe i prijedlog i za dane bez kase; skener ostaje uključen; zakazane cijene i vraćanje sniženja; cijene po tačnom vremenu (i u noći promjene sata); dnevnik radnji sa svih uređaja; probna prodaja sa kasa se ne broji; program se sam oporavi od oštećene baze. Traži novu instalaciju na Windows-u (Setup 1.4.1) i nov APK.",
+  "paket": "menadzer-paket-1.4.1.json.gz",
+  "sha256": "e589ee6f49224b11942badbe05a23ee20bd665dfec76289dfb0562e6098375a3",
+  "velicina": 790346,
+  "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "6ef54c64aa4c2bf1a0332ac519c119bb621c9ceba98fd4860433b09006c3785e",
-  "apkVelicina": 3943986
+  "apkSha256": "d071fe486a6dc5889863d274bc06bd89df71ee5295ff4a6b91a2dd39b979dfc6",
+  "apkVelicina": 3960898
 }
