@@ -3,31 +3,31 @@
 //
 // Uloga: aplikacija mora raditi i bez mreže (u radnji signal zna da padne), a nova
 // objava na GitHub Pages-u mora sama stići do telefona. Zato se pri instalaciji
-// keširaju svi fajlovi verzije, a stari keš se briše pri aktivaciji.
-const VERZIJA = "1.0.80"
+// keširaju svi fajlovi verzije, a stari keševi se brišu pri aktivaciji (osim jednog prethodnog).
+const VERZIJA = "1.0.81"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
-  "assets/PinDijalog-_sWJmPxB.js",
-  "assets/artikli-CU17d_S7.js",
-  "assets/bankpdf-DWIFxJDb.js",
-  "assets/cijene-CMmKEDu4.js",
-  "assets/index-B1Vri4bc.js",
+  "assets/PinDijalog-DlRv-XlF.js",
+  "assets/artikli-DScNttjR.js",
+  "assets/bankpdf-Nb3P8_jg.js",
+  "assets/cijene-DBdtHaaW.js",
   "assets/index-BTTaWDYU.css",
-  "assets/index-DIh9p2Ra.js",
+  "assets/index-Bl5rh_I9.js",
+  "assets/index-Cqmohwq5.js",
+  "assets/index-D4uAVYYV.js",
+  "assets/index-DJWY2QKy.js",
   "assets/index-DNzFMgCo.js",
-  "assets/index-DORAfTTO.js",
-  "assets/index-DyiQpGX-.js",
-  "assets/index-I5UI1O_Q.js",
+  "assets/index-DTPCJVDg.js",
+  "assets/index-dZt2KCei.js",
   "assets/index-ggsP5-uy.js",
-  "assets/index-wRc_ljkg.js",
-  "assets/nlbizvod-4x_iD-lN.js",
+  "assets/nlbizvod-DTPpe9u-.js",
   "assets/pdf.worker-Mx0w3D2U.js",
-  "assets/renumeracija-C8rAq4kQ.js",
-  "assets/salterizvod-CPUvC9h0.js",
+  "assets/renumeracija-DB53bqP_.js",
+  "assets/salterizvod-BN_eylV3.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
-  "assets/web--TR5q8hd.js",
   "assets/web-BXJjiGQ6.js",
   "assets/web-DRnNXkco.js",
+  "assets/web-DjSWSYUn.js",
   "assets/web-sfuwvzF6.js",
   "assets/worker.min-32WLk7pY.js",
   "ikone/ikona-180.png",
@@ -37,19 +37,34 @@ const FAJLOVI = [
   "index.html",
   "manifest.webmanifest"
 ]
+const OBAVEZNI = ["index.html","assets/index-dZt2KCei.js","assets/index-BTTaWDYU.css"]
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {
     const kes = await caches.open(KES)
-    // Pojedinačno, da jedan promašaj ne obori cijelu instalaciju.
-    await Promise.all(FAJLOVI.map(f => kes.add(f).catch(() => {})))
+    // cache: 'reload' = mimo HTTP keša pregledača. GitHub Pages šalje max-age=600, pa je običan zahtjev dvije objave
+    // u 10 minuta punio NOVI keš STARIM index.html-om (bijeli ekran ili zaglavljena stara verzija).
+    const uzmi = f => kes.add(new Request(f, { cache: 'reload' }))
+    // index.html i njegovi fajlovi MORAJU ući, i to iz OVE verzije — inače instalacija pada, a stara verzija radi dalje
+    await Promise.all(OBAVEZNI.map(uzmi))
+    const html = await (await kes.match('index.html')).text()
+    for (const m of html.matchAll(/(?:src|href)=["']\.?\/?(assets\/[^"'?#]+)["']/g)) {
+      if (!FAJLOVI.includes(m[1])) throw new Error('index.html nije iz verzije ' + VERZIJA + ' (' + m[1] + ')')
+    }
+    // Ostalo pojedinačno, da jedan promašaj ne obori cijelu instalaciju (fetch ispod ga dopuni kad zatreba).
+    await Promise.all(FAJLOVI.filter(f => !OBAVEZNI.includes(f)).map(f => uzmi(f).catch(() => {})))
     await self.skipWaiting()
   })())
 })
 
 self.addEventListener('activate', e => {
   e.waitUntil((async () => {
-    for (const k of await caches.keys()) if (k !== KES) await caches.delete(k)
+    // Jedan prethodni keš ostaje: stranica koja je bila otvorena kad je stigla nova verzija i dalje lijeno učitava
+    // SVOJE dijelove (PIN dijalog, cijene, renumeracija…), a server ih poslije objave više nema. Stariji se brišu.
+    const brojke = k => k.slice('knjigovodstvo-'.length).split('.').map(Number)
+    const novijiPrvo = (a, b) => { const x = brojke(a); const y = brojke(b); for (let i = 0; i < 3; i++) if ((x[i] || 0) !== (y[i] || 0)) return (y[i] || 0) - (x[i] || 0); return 0 }
+    const prethodni = (await caches.keys()).filter(k => k !== KES && k.startsWith('knjigovodstvo-')).sort(novijiPrvo)
+    for (const k of await caches.keys()) if (k !== KES && k !== prethodni[0]) await caches.delete(k)
     await self.clients.claim()
   })())
 })
@@ -68,7 +83,8 @@ self.addEventListener('fetch', e => {
       return (await kes.match('index.html')) || (await fetch(zahtjev))
     }
 
-    const izKesa = await kes.match(zahtjev, { ignoreSearch: true })
+    // tekući keš, pa prethodni (dijelovi stare stranice koja je još otvorena)
+    const izKesa = (await kes.match(zahtjev, { ignoreSearch: true })) || (await caches.match(zahtjev, { ignoreSearch: true }))
     if (izKesa) return izKesa
 
     try {

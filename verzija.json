@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.80",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.80.zip",
+  "verzija": "1.0.81",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.81.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "72081bac420dc21dfc073f97ef96859b6b801edef407fd1055f4cab56bcf8ae4",
+  "sha256": "14b06f722a26fbec7a99b5268f1326c1fe8e5a7cefdf06a5cc3b46efd3305fe9",
   "obavezno": false,
-  "napomene": "Verzija 1.0.80 — ispravke iz detaljnog testa (24.10.2026):\n· broj kalkulacije je jedinstven unutar godine — od 01.01.2027. svaki market kreće od _00001 (ranije bi veliki marketi ostali bez kalkulacija);\n· „Datum knjiženja\" pri unosu važi samo za račune izdate do tog datuma (račun iz novog mjeseca više ne ulazi u prethodni);\n· „Spoji duple artikle\" preusmjerava sve veze; stavke „(bez naziva)\" se same vežu nazad za svoj artikal;\n· otpis se knjiži, a izvod/knjiženje banke poništava SAMO na glavnom računaru; otpis i prenos kroz razmjenu prenose i kasnije izmjene;\n· pogrešan PIB više ne briše registar banke računa sa knjiženjima; dospijeća računaju knjižne note; odgovor na IOS na dan kartice;\n· pazari: provjera iznosa pri unosu, mogući dupli i pod drugim datumom/marketom, OCR ne preskače drugi Z istog dana i ne mijenja godinu preko Nove godine;\n· plate: „Povuci sate\" čuva redovan rad radnika bez smjena, prekovremeni po fondu radnika, IOPPD kod trudničkog cio mjesec, zakonski limiti neoporezivih primanja;\n· zaključan mjesec ne prima nove račune; lista kalkulacija bez granice od 3.000; popis „sa PDV\"; cjenovnik kasa: PDV stope po fakturama, izmjena artikla, PJ po kasi.",
-  "datum": "2026-10-24",
-  "verzijaPrethodna": "1.0.79",
+  "napomene": "Verzija 1.0.81 — ispravke srednjih i niskih nalaza testa i usklađivanje sa propisima CG:\n· PR-PDV po zvaničnom obrascu PR PDV-2 (polja 10–30): nulta stopa u polju 13, oslobođeni promet u 14, ulazni PDV u 19, za uplatu 28, kredit 29;\n· faktura se izdaje samo fiskalizovana; stavke sa 0 % traže osnov (čl. 25, 26 ili 27 Zakona o PDV), a osnov piše i na računu;\n· trgovačka knjiga razdužuje cio dnevni pazar (i virman sa kase) i robu prodatu fakturom; uplata ostaje gotovina;\n· knjižno odobrenje dobavljača bez povraćaja robe (popust) više ne smanjuje stanje robe — postojeća su ispravljena;\n· KIF: računi firmama sa kase u posebnom redu (virman uvijek, gotovina kad kupac ima PDV broj);\n· neobračunati rabati: po dobavljaču manjak na fakturama i manjak poslije knjižnih odobrenja;\n· provjera numeracije: napomena o preskočenim brojevima, štampa se uz knjigu primljenih računa;\n· plate: minuli rad po razredima OKU (šema na kartici Stope, izvještaj razlike), 6–8. januar plaćeno odsustvo po zahtjevu, bolovanje iz prosjeka 12 mjeseci, nov obračun ugovora o djelu;\n· VAŽNO: isplaćene obračune zaključiti prije „Obračunaj sve\" — otvoren obračun se računa po novoj šemi minulog rada;\n· kadrovi: stimulacija godišnjeg odmora po godini, rješenje o prestanku po isteku ugovora;\n· kasni računi ostaju u mjesecu knjiženja; zaključan mjesec štiti pazare, fakture i nabavke; razmjena, pazari, banka i KEPU ispravke.",
+  "datum": "2026-10-26",
+  "verzijaPrethodna": "1.0.80",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
