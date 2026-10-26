@@ -1,11 +1,11 @@
 {
-  "verzija": "1.3.0",
-  "datum": "2026-10-23",
-  "napomene": "Verzija 1.3.0 — sve što je bilo moguće prije registracije kod Poreske:\n· AKCIJE iz Knjigovodstva (2+1, −%, happy hour, cijena od N komada) — kasa ih sama primjenjuje, na računu piše naziv akcije;\n· stalni kupac po broju telefona (Kupac → Telefon → Nađi) dobija svoj popust;\n· Računi → račun → „↩ Povrat dijela robe\": korektivni račun samo za vraćeno (šef);\n· Računi → Analiza: po satu, danu, kasiru, najprodavaniji artikli, artikli bez prometa, najveći popusti;\n· ⋯ Više → Provjera cijene (skeniraj i vidi cijenu / akciju bez kucanja na račun); brze tipke; slijepo brojanje na presjeku; potvrda godina za alkohol / duvan; ekran za kupca (Windows);\n· UGOSTITELJSTVO (Podešavanja → Režim rada): stolovi, nalog kuhinji / šanku, napomena uz stavku, podjela i spajanje računa;\n· poslije svakog Z kasa upisuje zaključke u folder razmjene — Knjigovodstvo 1.0.77 ih samo čita (pazar po smjeni, promet, otpisi).\nOVA VERZIJA TRAŽI NOV SETUP (Kasa Setup 1.3.0) — instaliraj ga preko postojeće kase; računi i podešavanja ostaju.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.0.zip",
-  "sha256": "8d9e8943c6baf50a35be4e99c2d11baf86a8028451349576138d3a6bfeaeaeb3",
-  "velicina": 1123240,
+  "verzija": "1.3.1",
+  "datum": "2026-10-25",
+  "napomene": "Verzija 1.3.1 — ispravke prije prve prave kase (detaljan test 24.10.2026):\n· storno računa sa kojeg je već vraćen dio robe više nije moguć (novac bi se vratio dvaput) — ostatak se vraća povratom;\n· povrat se vodi po redu računa (isti artikal u dva reda, roba na mjerenje), uz virman račun povrat ide virmanom, a korektivni za dio vagane robe se može poslati Poreskoj; povrati u dijelovima se slažu na cent;\n· kod poslovnog prostora: svaka kasa ima svoj, cjenovnik ga više ne mijenja; kod ENU iz spiska (stara kasa) traži nov kod ili potvrdu šefa;\n· ugostiteljstvo: podjela računa stola, „Na sto\", „Nalog\", premještanje i spajanje stola više ne gube ništa;\n· oporavak baze ne gubi račune ni redni broj; vraćena ili nova baza iste kase ne ponavlja brojeve računa;\n· cijene: posljednja izmjena po stvarnom trenutku (i kad je sat negdje pogrešan), sniženje sa rokom se samo vraća, Menadžer može ukinuti cijenu marketa;\n· zaključci za Knjigovodstvo: samo smjene ove kase, probne smjene i otpisi označeni, PDV sa računa, računi firmama i promet po danu;\n· sertifikat: upozorenje 30 dana prije isteka; slijepo brojanje bez očekivanog stanja i na papiru; pauza poslije 5 pogrešnih PIN-ova;\n· prepoznavanje alkohola i duvana za „Potvrdu godina\".\nEkran stiže ažuriranjem iz programa i na Setup 1.3.0. Rezervne kopije poslije pauze i prijem ažuriranja samo sa zvanične adrese — tek sa Setup-om 1.3.1.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.1.zip",
+  "sha256": "b01a41ec7e4edb6a927f01ece1c6b0bfeb62c0823b562f8d18c7b6cb3d000994",
+  "velicina": 1132699,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.3.0"
+  "verzijaAndroid": "1.3.1"
 }
