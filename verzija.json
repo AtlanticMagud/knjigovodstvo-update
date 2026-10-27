@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.81",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.81.zip",
+  "verzija": "1.0.82",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.82.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "14b06f722a26fbec7a99b5268f1326c1fe8e5a7cefdf06a5cc3b46efd3305fe9",
+  "sha256": "f0e7288d0f4c169c29642f1272af528ccf4ab8c8a99da157d44269dc77759503",
   "obavezno": false,
-  "napomene": "Verzija 1.0.81 — ispravke srednjih i niskih nalaza testa i usklađivanje sa propisima CG:\n· PR-PDV po zvaničnom obrascu PR PDV-2 (polja 10–30): nulta stopa u polju 13, oslobođeni promet u 14, ulazni PDV u 19, za uplatu 28, kredit 29;\n· faktura se izdaje samo fiskalizovana; stavke sa 0 % traže osnov (čl. 25, 26 ili 27 Zakona o PDV), a osnov piše i na računu;\n· trgovačka knjiga razdužuje cio dnevni pazar (i virman sa kase) i robu prodatu fakturom; uplata ostaje gotovina;\n· knjižno odobrenje dobavljača bez povraćaja robe (popust) više ne smanjuje stanje robe — postojeća su ispravljena;\n· KIF: računi firmama sa kase u posebnom redu (virman uvijek, gotovina kad kupac ima PDV broj);\n· neobračunati rabati: po dobavljaču manjak na fakturama i manjak poslije knjižnih odobrenja;\n· provjera numeracije: napomena o preskočenim brojevima, štampa se uz knjigu primljenih računa;\n· plate: minuli rad po razredima OKU (šema na kartici Stope, izvještaj razlike), 6–8. januar plaćeno odsustvo po zahtjevu, bolovanje iz prosjeka 12 mjeseci, nov obračun ugovora o djelu;\n· VAŽNO: isplaćene obračune zaključiti prije „Obračunaj sve\" — otvoren obračun se računa po novoj šemi minulog rada;\n· kadrovi: stimulacija godišnjeg odmora po godini, rješenje o prestanku po isteku ugovora;\n· kasni računi ostaju u mjesecu knjiženja; zaključan mjesec štiti pazare, fakture i nabavke; razmjena, pazari, banka i KEPU ispravke.",
-  "datum": "2026-10-26",
-  "verzijaPrethodna": "1.0.80",
+  "napomene": "Verzija 1.0.82 — ispravke iz pošte knjigovođe i program za cijelu Crnu Goru:\n· Plate: žuta traka „Ispravke podataka iz pošte knjigovođe\" — jedan klik ispravi zakup prodavnice 14 za septembar (16.500 je neto: porez 1.935,75 umjesto 2.475,00), godišnje ugovore o zakupu (mjesečno 0, iznos se upisuje u mjesecu isplate) i radnika 001 (Fustic Milijanka, IOPPD šifra 7 do 17.09. i 8 od 18.09.2026);\n· PDV broj firme po rješenju Poreske od 23.10.2026: ME + PIB (Atlantic ME02935147);\n· zakup: upozorenje kad su troškovi ispod 30 % ili je mjesečni iznos 3.000 EUR i više (vjerovatno godišnji); iznos za mjesec se unosi kako je ugovoren (neto/bruto);\n· svih 25 opština Crne Gore (Stope → „Prirez po opštinama\"): šifra opštine, račun prireza po Naredbi o uplati javnih prihoda i stopa prireza provjerena u odlukama opština (Podgorica i Cetinje 15 %, Budva 10 %, ostale 13 %; izvor uz svaku opštinu, 6 opština bez objavljene odluke označeno); naselja se svode na opštinu (Bečići → Budva, Igalo → Herceg Novi, Golubovci → Zeta…);\n· novi radnik i ugovor o djelu dobijaju prirez opštine sjedišta firme; dokumenti upisuju grad sjedišta, ne „Budva\";\n· nalog za plaćanje na obračunu plata i zakupa: 820-30000-74, model 18, poziv na broj PIB-šifra opštine sjedišta, prirez po opštini prebivališta sa računom;\n· Podešavanja → Firma: prepoznata opština sjedišta i šifra, upozorenje ako grad nije opština CG.",
+  "datum": "2026-10-27",
+  "verzijaPrethodna": "1.0.81",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
