@@ -1,4 +1,4 @@
-import{b as u,s as E,a as c,u as s,i as D}from"./index-f_9E8ExX.js";function m(r){const k=E(`SELECT k.KalkID, COALESCE(k.DatumDokumenta, k.DatumFakture) AS Datum, k.MarketID,
+import{b as u,s as E,a as c,u as s,i as D}from"./index-DEci0AAi.js";function m(r){const k=E(`SELECT k.KalkID, COALESCE(k.DatumDokumenta, k.DatumFakture) AS Datum, k.MarketID,
             COALESCE(k.BrojDokumenta,'') AS StariDok, COALESCE(k.BrojKalkulacije,'') AS StariKalk,
             COALESCE(k.Zakljucana,0) AS Zakljucana, COALESCE(m.Naziv,'Market') AS Market
      FROM tblKalkulacija k LEFT JOIN tblMarket m ON m.MarketID=k.MarketID
