@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.1",
-  "datum": "2026-10-26",
-  "opis": "IRIS Menadžer 1.4.1: ključ firme — prvi uređaj je uređaj administratora, svaki sljedeći telefon ili računar se uparuje kodom (Korisnici → „Kod za nov uređaj“); korisnike, uloge, PIN-ove i podešavanja mijenja samo uređaj administratora; PIN administratora i direktora 6–8 cifara (PIN iz 1.4.0 se mijenja pri prijavi); primljeno se računa iz prijema sa svih uređaja, „manjak“ zatvara narudžbu; zalihe i prijedlog i za dane bez kase; skener ostaje uključen; zakazane cijene i vraćanje sniženja; cijene po tačnom vremenu (i u noći promjene sata); dnevnik radnji sa svih uređaja; probna prodaja sa kasa se ne broji; program se sam oporavi od oštećene baze. Traži novu instalaciju na Windows-u (Setup 1.4.1) i nov APK.",
-  "paket": "menadzer-paket-1.4.1.json.gz",
-  "sha256": "e589ee6f49224b11942badbe05a23ee20bd665dfec76289dfb0562e6098375a3",
-  "velicina": 790346,
+  "verzija": "1.4.2",
+  "datum": "2026-10-28",
+  "opis": "IRIS Menadžer 1.4.2: veza sa serverom (IRIS CORVINA) — server postaje glavni put razmjene sa Knjigovodstvom, kasama i drugim Menadžerima, a Google Drive folder ostaje rezerva. Uparuje admin ili direktor: Pravila i limiti → Server (IRIS CORVINA) → kod od administratora servera. Fajlovi sa servera stižu u prijemni folder uređaja, svoje izmjene idu i na server; na telefonu nova verzija snimka Knjigovodstva stiže najviše jednom na sat. Bez uparivanja sve radi kao do sada. Ažurira se samo — nova instalacija nije potrebna.",
+  "paket": "menadzer-paket-1.4.2.json.gz",
+  "sha256": "50b574ccb178c796444d3f1ae41c7490a9e6973e3d3781f094bc43317d869ceb",
+  "velicina": 805360,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "d071fe486a6dc5889863d274bc06bd89df71ee5295ff4a6b91a2dd39b979dfc6",
-  "apkVelicina": 3960898
+  "apkSha256": "d659ce1097319eaa82caeaf260a5cdb1cbcbc0fba0f42b7cee0d5d3e8b332c47",
+  "apkVelicina": 3969838
 }
