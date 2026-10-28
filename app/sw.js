@@ -7,26 +7,26 @@
 const VERZIJA = "1.0.84"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
-  "assets/PinDijalog-DrHt8gGs.js",
-  "assets/artikli-CfxTpJ-Z.js",
-  "assets/bankpdf-CpfVn5vn.js",
-  "assets/cijene-C765zgj2.js",
-  "assets/index-BPDApZb_.js",
+  "assets/PinDijalog-BWJ5t5Uy.js",
+  "assets/artikli-DwgTdzOt.js",
+  "assets/bankpdf-kR8ZFLo0.js",
+  "assets/cijene-CcS8_eCL.js",
   "assets/index-BTTaWDYU.css",
-  "assets/index-BaDTUMz9.js",
-  "assets/index-BzQKIYe5.js",
-  "assets/index-BzoXQ8XY.js",
+  "assets/index-DNj8h6Yp.js",
   "assets/index-DNzFMgCo.js",
-  "assets/index-fwZA2cm3.js",
+  "assets/index-DWBCjzzz.js",
+  "assets/index-DgBQF0QB.js",
+  "assets/index-DzNRofqS.js",
+  "assets/index-EHPBpCoA.js",
   "assets/index-ggsP5-uy.js",
-  "assets/index-jbYVL9Bg.js",
-  "assets/nlbizvod-C2umWsRa.js",
+  "assets/index-pKTSfwRX.js",
+  "assets/nlbizvod-BW5xF9q_.js",
   "assets/pdf.worker-Mx0w3D2U.js",
-  "assets/renumeracija-O4LCVfL3.js",
-  "assets/salterizvod-ytIw62Gm.js",
+  "assets/renumeracija-D4aAHOd6.js",
+  "assets/salterizvod-BmZPFXgr.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
   "assets/web-BXJjiGQ6.js",
-  "assets/web-CvCQidoC.js",
+  "assets/web-Bk9lqOdP.js",
   "assets/web-DRnNXkco.js",
   "assets/web-sfuwvzF6.js",
   "assets/worker.min-32WLk7pY.js",
@@ -37,7 +37,7 @@ const FAJLOVI = [
   "index.html",
   "manifest.webmanifest"
 ]
-const OBAVEZNI = ["index.html","assets/index-BzoXQ8XY.js","assets/index-BTTaWDYU.css"]
+const OBAVEZNI = ["index.html","assets/index-DWBCjzzz.js","assets/index-BTTaWDYU.css"]
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {

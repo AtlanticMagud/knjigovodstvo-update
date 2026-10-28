@@ -2,9 +2,9 @@
   "verzija": "1.0.84",
   "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.84.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "db03b5553ca5757195395a75bbf11e443e135915b4aac5ba902ddfb055fe6c19",
+  "sha256": "ed1af80e17a9e27d27f93910dc1c39d4dee5ef392c91b7ea5c7cb1d5f1033361",
   "obavezno": false,
-  "napomene": "Veza sa serverom IRIS CORVINA (Povezivanje → Server): uparivanje kodom; server je glavni put razmjene između računara, telefona, kasa i Menadžera, Google Drive ostaje rezerva. Fajlovi sa servera se čuvaju u programu, ne u Drive folderu; snimak glavnog uvijek kao dosljedan par; spor server ne zadržava razmjenu (najviše 20 s). Bez uparivanja sve radi kao do sada. Finansijski dio: 1.0.83.",
+  "napomene": "Veza sa serverom IRIS CORVINA kao glavni put razmjene (Google Drive ostaje rezerva); razvrstavanje pravnog lica po podacima prethodne godine (čl. 7 Zakona 84/25) sa ručnim upisom i javnim iskazima iz registra IRMS; podaci firme Magud po javnom registru (MAGUD COMPANY DOO, PIB 02172224, Radanovići bb, Kotor).",
   "datum": "2026-10-28",
   "verzijaPrethodna": "1.0.83",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
