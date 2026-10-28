@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.85",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.85.zip",
+  "verzija": "1.0.86",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.86.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f6fa68f3486cfaacfcd44b53acb90ca6242ef07fda5ebd8554246f1283d02210",
+  "sha256": "e68bcd8accedb87c433226c1493bc183467ce7d48a7166c430081410a44c0b39",
   "obavezno": false,
-  "napomene": "Razmjena: uređaj koji preuzme bazu glavnog računara više ne primjenjuje ponovo stare pakete iz foldera i ne vraća podatke koje je glavni obrisao (pazare, kalkulacije, otpise); paketi nastali poslije snimka i dalje stižu. Veza sa serverom: brže prepoznavanje snimka na sporednim računarima, sigurnije čitanje podešavanja veze i ispravke iz pregleda.",
+  "napomene": "Razmjena: dugme „Novi ID\" (Povezivanje) više ne briše spisak primljenih paketa — uređaj ne primjenjuje ponovo staru istoriju foldera i ne vraća podatke koje je glavni obrisao; paketi računara koji je imao isti ID i dalje stižu.",
   "datum": "2026-10-28",
-  "verzijaPrethodna": "1.0.84",
+  "verzijaPrethodna": "1.0.85",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
