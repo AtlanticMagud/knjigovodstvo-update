@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.88",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.88.zip",
+  "verzija": "1.0.89",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.89.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "00faaf1c0abc1668e91725e4c2e1d44cd5d82cf56df12783deab4619ee403f60",
+  "sha256": "61d9d3ce8bbb57965f75436de3044bfc22b9ba70a0a3933c50fdc0458d7b5299",
   "obavezno": false,
-  "napomene": "Promjena marže na više kalkulacija odjednom (Kalkulacije i fakture → ％ Promjena marže): izbor marketa i perioda, nova marža za sve kalkulacije, cigare ostaju sa svojom maržom; izrada svih kalkulacija u PDF i Excel i Štampaj sve; Poništi. Trajna licenca za Atlantic i Magud.",
+  "napomene": "Verzija 1.0.89: Podrška i zahtjevi — nov ekran (Sistem → Podrška i zahtjevi) za poruke podršci IRIS CORVINA, prijavu greške i zahtjeve (više kasa, dodatni modul, produženje); odgovori izdavača stižu u program. Tehničke greške se šalju izdavaču očišćene od ličnih podataka (prekidač u Podešavanja → Zaštita). Servisni nalozi izdavača (poruka, reset PIN-a, ponovni prijem snimka, dnevnik programa). Licenca: po isteku program je samo za čitanje i izvoz na svim mjestima unosa (Atlantic i Magud rade uvijek).",
   "datum": "2026-10-28",
-  "verzijaPrethodna": "1.0.87",
+  "verzijaPrethodna": "1.0.88",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
