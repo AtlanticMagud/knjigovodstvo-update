@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.86",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.86.zip",
+  "verzija": "1.0.87",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.87.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "e68bcd8accedb87c433226c1493bc183467ce7d48a7166c430081410a44c0b39",
+  "sha256": "2512d38b20b46fffa3a71009bd6935bbf68f6aee922b975a3beb58af81394793",
   "obavezno": false,
-  "napomene": "Razmjena: dugme „Novi ID\" (Povezivanje) više ne briše spisak primljenih paketa — uređaj ne primjenjuje ponovo staru istoriju foldera i ne vraća podatke koje je glavni obrisao; paketi računara koji je imao isti ID i dalje stižu.",
+  "napomene": "Verzija 1.0.87: licenca firme (IRIS CORVINA) — program čita licencu svoje firme sa servera ili iz fajla u folderu razmjene; traka na vrhu kad licenca ističe, u milosti, suspendovana ili opozvana; meni po modulima licence (bez modula kasa nema Cjenovnika kasa i Programa za kase, bez modula Menadžer nema ekrana Menadžer); kad licenca ne važi program radi samo za čitanje i izvoz. Firma bez licence i interna licenca bez roka: sve kao do sada. Uz to: „Novi ID\" više ne vraća cijelu istoriju foldera (iz 1.0.86).",
   "datum": "2026-10-28",
-  "verzijaPrethodna": "1.0.85",
+  "verzijaPrethodna": "1.0.86",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
