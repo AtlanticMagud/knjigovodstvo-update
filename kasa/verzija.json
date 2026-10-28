@@ -1,11 +1,11 @@
 {
-  "verzija": "1.3.1",
-  "datum": "2026-10-25",
-  "napomene": "Verzija 1.3.1 — ispravke prije prve prave kase (detaljan test 24.10.2026):\n· storno računa sa kojeg je već vraćen dio robe više nije moguć (novac bi se vratio dvaput) — ostatak se vraća povratom;\n· povrat se vodi po redu računa (isti artikal u dva reda, roba na mjerenje), uz virman račun povrat ide virmanom, a korektivni za dio vagane robe se može poslati Poreskoj; povrati u dijelovima se slažu na cent;\n· kod poslovnog prostora: svaka kasa ima svoj, cjenovnik ga više ne mijenja; kod ENU iz spiska (stara kasa) traži nov kod ili potvrdu šefa;\n· ugostiteljstvo: podjela računa stola, „Na sto\", „Nalog\", premještanje i spajanje stola više ne gube ništa;\n· oporavak baze ne gubi račune ni redni broj; vraćena ili nova baza iste kase ne ponavlja brojeve računa;\n· cijene: posljednja izmjena po stvarnom trenutku (i kad je sat negdje pogrešan), sniženje sa rokom se samo vraća, Menadžer može ukinuti cijenu marketa;\n· zaključci za Knjigovodstvo: samo smjene ove kase, probne smjene i otpisi označeni, PDV sa računa, računi firmama i promet po danu;\n· sertifikat: upozorenje 30 dana prije isteka; slijepo brojanje bez očekivanog stanja i na papiru; pauza poslije 5 pogrešnih PIN-ova;\n· prepoznavanje alkohola i duvana za „Potvrdu godina\".\nEkran stiže ažuriranjem iz programa i na Setup 1.3.0. Rezervne kopije poslije pauze i prijem ažuriranja samo sa zvanične adrese — tek sa Setup-om 1.3.1.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.1.zip",
-  "sha256": "b01a41ec7e4edb6a927f01ece1c6b0bfeb62c0823b562f8d18c7b6cb3d000994",
-  "velicina": 1132699,
+  "verzija": "1.3.2",
+  "datum": "2026-10-28",
+  "napomene": "Verzija 1.3.2 — server IRIS CORVINA kao glavni put razmjene sa Knjigovodstvom i Menadžerom:\n· Podešavanja → „Server (IRIS CORVINA)\": uparivanje kodom administratora (jedan kod može za sve kase firme), stanje veze, „Razmijeni sada\", „Isključi vezu\";\n· uparena kasa svoje izmjene cijena i zaključke smjena šalje na server čim se promijene, a cjenovnik i izmjene cijena svoje firme sa servera uzima na minut i odmah primjenjuje;\n· fajlovi sa servera se čuvaju u kasi, ne u Google Drive folderu (Drive ih ne vraća u oblak); ako server ne radi, a nov cjenovnik stigne kroz Drive — važi noviji;\n· bez interneta fajlovi čekaju u redu (i preko gašenja kase) i odu sami; prodaja i štampa nikad ne čekaju server;\n· folder razmjene (Google Drive) radi i dalje — ostaje rezerva; neuparena kasa radi tačno kao 1.3.1.\nEkran stiže ažuriranjem iz programa (Setup 1.3.0 i noviji); ljuska nije mijenjana.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.2.zip",
+  "sha256": "6491bc813e792b84746dec1acee4aefabe6eb4e6592d92edffdb2fa3ffaaae7c",
+  "velicina": 1142374,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.3.1"
+  "verzijaAndroid": "1.3.2"
 }
