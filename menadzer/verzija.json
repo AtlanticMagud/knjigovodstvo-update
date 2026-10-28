@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.4",
+  "verzija": "1.4.5",
   "datum": "2026-10-28",
-  "opis": "IRIS Menadžer 1.4.4: trajna licenca za Atlantic (PIB 02935147) i Magud (PIB 02172224) — program za njih radi uvijek, sa svim modulima; Cijene za kase: kvačica „🏷 Kasa nudi etiketu“ — kasa marketa nudi štampu etiketa za nove cijene (Kasa 1.3.4), i grupna izmjena izabranih artikala (ista cijena, ± procenat ili ± iznos, zaokruživanje, pregled prije primjene). Bez nove instalacije (Setup 1.4.1 i noviji).",
-  "paket": "menadzer-paket-1.4.4.json.gz",
-  "sha256": "5b164fd6a000dda07ea56dc5af089e46dba03fb1a7cb2cd8d389bd4bcaef4911",
-  "velicina": 813910,
+  "opis": "IRIS Menadžer 1.4.5: Podrška (Podešavanja → Podrška, i iz Moj nalog) — poruke podršci IRIS CORVINA sa odgovorima u programu, prijava greške i zahtjevi (više kasa, modul, produženje); tehničke greške se šalju izdavaču očišćene od ličnih podataka (prekidač u Podršci); servisni nalozi izdavača (poruka, poništenje PIN-a — nov PIN se postavlja na uređaju administratora u roku od 24 sata, promjena uloge, dnevnik, ponovno preuzimanje). Uređaj na 1.4.4 ne može prijaviti korisnika čiji je PIN poništen dok se ne ažurira. Bez nove instalacije (Setup 1.4.1 i noviji).",
+  "paket": "menadzer-paket-1.4.5.json.gz",
+  "sha256": "ca7113ea72a49ab2fa7fdfc7b0c5e90ae1021a5931cd91b4c16bbb88cece77f2",
+  "velicina": 830190,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "5dbf2202a2ba8b433617ec7a3f9dfc8e6737dfa803027e464301a0c5d3b10777",
-  "apkVelicina": 3975846
+  "apkSha256": "4ffffeabbf4d8081777ab2661ee8833bf385e2ffe4f19ef0cfe6c6077f46caf9",
+  "apkVelicina": 3987058
 }
