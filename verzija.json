@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.83",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.83.zip",
+  "verzija": "1.0.84",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.84.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9c2bb5916e3c10845070284c556e73b822e053929d3a5b8434f023fb0f58df50",
+  "sha256": "db03b5553ca5757195395a75bbf11e443e135915b4aac5ba902ddfb055fe6c19",
   "obavezno": false,
-  "napomene": "Finansijski dio: kontni okvir CG (11/20), automatski nalozi iz dokumenata (kalkulacije, pazari, izvodi, plate, zakup, otpis, amortizacija, PDV), ručni i blagajnički nalozi, početno stanje, kartica konta, bruto bilans, dnevnik, kontrole mjeseca; Iskazi: bilans stanja, bilans uspjeha, statistički aneks, napomene, razvrstavanje, PD prijava, zaključak godine, paket za predaju; ručni unos faktura bez QR i transakcija bez izvoda; IOS kupca; OA obračun po Pravilniku 118/24.",
+  "napomene": "Veza sa serverom IRIS CORVINA (Povezivanje → Server): uparivanje kodom; server je glavni put razmjene između računara, telefona, kasa i Menadžera, Google Drive ostaje rezerva. Fajlovi sa servera se čuvaju u programu, ne u Drive folderu; snimak glavnog uvijek kao dosljedan par; spor server ne zadržava razmjenu (najviše 20 s). Bez uparivanja sve radi kao do sada. Finansijski dio: 1.0.83.",
   "datum": "2026-10-28",
-  "verzijaPrethodna": "1.0.82",
+  "verzijaPrethodna": "1.0.83",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
