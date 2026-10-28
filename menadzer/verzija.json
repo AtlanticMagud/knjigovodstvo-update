@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.2",
+  "verzija": "1.4.3",
   "datum": "2026-10-28",
-  "opis": "IRIS Menadžer 1.4.2: veza sa serverom (IRIS CORVINA) — server postaje glavni put razmjene sa Knjigovodstvom, kasama i drugim Menadžerima, a Google Drive folder ostaje rezerva. Uparuje admin ili direktor: Pravila i limiti → Server (IRIS CORVINA) → kod od administratora servera. Fajlovi sa servera stižu u prijemni folder uređaja, svoje izmjene idu i na server; na telefonu nova verzija snimka Knjigovodstva stiže najviše jednom na sat. Bez uparivanja sve radi kao do sada. Ažurira se samo — nova instalacija nije potrebna.",
-  "paket": "menadzer-paket-1.4.2.json.gz",
-  "sha256": "50b574ccb178c796444d3f1ae41c7490a9e6973e3d3781f094bc43317d869ceb",
-  "velicina": 805360,
+  "opis": "IRIS Menadžer 1.4.3: licenca firme (IRIS CORVINA) — Menadžer čita licencu svoje firme sa servera ili iz fajla u folderu razmjene i pokazuje je u Moj nalog i Podešavanjima; traka na vrhu kad licenca ističe, kad je u milosti poslije roka, suspendovana ili opozvana; kad licenca ne važi, izmjene (narudžbe, prijem, otpis, popis, cijene…) staju a pregledi, izvještaji, PDF i preuzimanje podataka rade; firma bez licence i interna licenca bez roka — sve kao do sada. Ažurira se samo — nova instalacija nije potrebna.",
+  "paket": "menadzer-paket-1.4.3.json.gz",
+  "sha256": "29b0211591abf636951116764113f733c5756f863fc6e51561aa3355f35e717c",
+  "velicina": 810840,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "d659ce1097319eaa82caeaf260a5cdb1cbcbc0fba0f42b7cee0d5d3e8b332c47",
-  "apkVelicina": 3969838
+  "apkSha256": "82d9eea9f19bde17d1f0947ee0fcf92298af30e626608db1508edd0aba19d96e",
+  "apkVelicina": 3973942
 }
