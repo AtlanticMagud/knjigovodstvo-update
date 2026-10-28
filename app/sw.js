@@ -4,30 +4,30 @@
 // Uloga: aplikacija mora raditi i bez mreže (u radnji signal zna da padne), a nova
 // objava na GitHub Pages-u mora sama stići do telefona. Zato se pri instalaciji
 // keširaju svi fajlovi verzije, a stari keševi se brišu pri aktivaciji (osim jednog prethodnog).
-const VERZIJA = "1.0.82"
+const VERZIJA = "1.0.83"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
-  "assets/PinDijalog-BzcmEqwp.js",
-  "assets/artikli-ml2XVDVa.js",
-  "assets/bankpdf-DiqCzILd.js",
-  "assets/cijene-BKpT_QMq.js",
-  "assets/index--dgZiYGz.js",
-  "assets/index-BRmC8KiU.js",
+  "assets/PinDijalog-BnPj4W2a.js",
+  "assets/artikli-Bw8NeG6r.js",
+  "assets/bankpdf-CwjxWCK9.js",
+  "assets/cijene-C-Nrwyo-.js",
   "assets/index-BTTaWDYU.css",
-  "assets/index-Ba8XXxyk.js",
-  "assets/index-DCR-dM8B.js",
+  "assets/index-CJL7SpOy.js",
   "assets/index-DNzFMgCo.js",
-  "assets/index-Dt6AhQTC.js",
-  "assets/index-Dxg3ajMr.js",
+  "assets/index-DZiGe46K.js",
+  "assets/index-DoddUfC0.js",
+  "assets/index-M74LHvDi.js",
+  "assets/index-Me_BUEd2.js",
   "assets/index-ggsP5-uy.js",
-  "assets/nlbizvod-BDcThduN.js",
+  "assets/index-jjZCxHRB.js",
+  "assets/nlbizvod-B4XeiFEz.js",
   "assets/pdf.worker-Mx0w3D2U.js",
-  "assets/renumeracija-CQatJhK_.js",
-  "assets/salterizvod-BWo-DGA6.js",
+  "assets/renumeracija-B1P23vTn.js",
+  "assets/salterizvod-BRuv9-nF.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
   "assets/web-BXJjiGQ6.js",
-  "assets/web-COPBuhr-.js",
   "assets/web-DRnNXkco.js",
+  "assets/web-dD3Fo3nV.js",
   "assets/web-sfuwvzF6.js",
   "assets/worker.min-32WLk7pY.js",
   "ikone/ikona-180.png",
@@ -37,7 +37,7 @@ const FAJLOVI = [
   "index.html",
   "manifest.webmanifest"
 ]
-const OBAVEZNI = ["index.html","assets/index--dgZiYGz.js","assets/index-BTTaWDYU.css"]
+const OBAVEZNI = ["index.html","assets/index-Me_BUEd2.js","assets/index-BTTaWDYU.css"]
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {

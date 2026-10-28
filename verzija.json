@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.82",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.82.zip",
+  "verzija": "1.0.83",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.83.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f0e7288d0f4c169c29642f1272af528ccf4ab8c8a99da157d44269dc77759503",
+  "sha256": "9c2bb5916e3c10845070284c556e73b822e053929d3a5b8434f023fb0f58df50",
   "obavezno": false,
-  "napomene": "Verzija 1.0.82 — ispravke iz pošte knjigovođe i program za cijelu Crnu Goru:\n· Plate: žuta traka „Ispravke podataka iz pošte knjigovođe\" — jedan klik ispravi zakup prodavnice 14 za septembar (16.500 je neto: porez 1.935,75 umjesto 2.475,00), godišnje ugovore o zakupu (mjesečno 0, iznos se upisuje u mjesecu isplate) i radnika 001 (Fustic Milijanka, IOPPD šifra 7 do 17.09. i 8 od 18.09.2026);\n· PDV broj firme po rješenju Poreske od 23.10.2026: ME + PIB (Atlantic ME02935147);\n· zakup: upozorenje kad su troškovi ispod 30 % ili je mjesečni iznos 3.000 EUR i više (vjerovatno godišnji); iznos za mjesec se unosi kako je ugovoren (neto/bruto);\n· svih 25 opština Crne Gore (Stope → „Prirez po opštinama\"): šifra opštine, račun prireza po Naredbi o uplati javnih prihoda i stopa prireza provjerena u odlukama opština (Podgorica i Cetinje 15 %, Budva 10 %, ostale 13 %; izvor uz svaku opštinu, 6 opština bez objavljene odluke označeno); naselja se svode na opštinu (Bečići → Budva, Igalo → Herceg Novi, Golubovci → Zeta…);\n· novi radnik i ugovor o djelu dobijaju prirez opštine sjedišta firme; dokumenti upisuju grad sjedišta, ne „Budva\";\n· nalog za plaćanje na obračunu plata i zakupa: 820-30000-74, model 18, poziv na broj PIB-šifra opštine sjedišta, prirez po opštini prebivališta sa računom;\n· Podešavanja → Firma: prepoznata opština sjedišta i šifra, upozorenje ako grad nije opština CG.",
-  "datum": "2026-10-27",
-  "verzijaPrethodna": "1.0.81",
+  "napomene": "Finansijski dio: kontni okvir CG (11/20), automatski nalozi iz dokumenata (kalkulacije, pazari, izvodi, plate, zakup, otpis, amortizacija, PDV), ručni i blagajnički nalozi, početno stanje, kartica konta, bruto bilans, dnevnik, kontrole mjeseca; Iskazi: bilans stanja, bilans uspjeha, statistički aneks, napomene, razvrstavanje, PD prijava, zaključak godine, paket za predaju; ručni unos faktura bez QR i transakcija bez izvoda; IOS kupca; OA obračun po Pravilniku 118/24.",
+  "datum": "2026-10-28",
+  "verzijaPrethodna": "1.0.82",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
