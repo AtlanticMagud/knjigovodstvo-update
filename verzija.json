@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.89",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.89.zip",
+  "verzija": "1.0.90",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.90.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "61d9d3ce8bbb57965f75436de3044bfc22b9ba70a0a3933c50fdc0458d7b5299",
+  "sha256": "9e25a4558b6d9e9ad2e3af0e29563ae1490ba40de2b51217dd74d0a049289e73",
   "obavezno": false,
-  "napomene": "Verzija 1.0.89: Podrška i zahtjevi — nov ekran (Sistem → Podrška i zahtjevi) za poruke podršci IRIS CORVINA, prijavu greške i zahtjeve (više kasa, dodatni modul, produženje); odgovori izdavača stižu u program. Tehničke greške se šalju izdavaču očišćene od ličnih podataka (prekidač u Podešavanja → Zaštita). Servisni nalozi izdavača (poruka, reset PIN-a, ponovni prijem snimka, dnevnik programa). Licenca: po isteku program je samo za čitanje i izvoz na svim mjestima unosa (Atlantic i Magud rade uvijek).",
-  "datum": "2026-10-28",
-  "verzijaPrethodna": "1.0.88",
+  "napomene": "Verzija 1.0.90: Samostalan rad — program radi i na jednom računaru, bez servera i kase (paket „Knjige\"); Prvi koraci vode kroz podatke firme, objekte i licencu. Uvoz pazara iz CSV/Excel fajla, sa pregledom prije upisa. QR kod fiskalnog računa čita se i iz PDF-a. Sertifikat za fiskalizaciju vezan za PIB firme (više firmi na jednom računaru). IRIS CORVINA — razmjena preko servera skoro trenutna: promjena odlazi nekoliko sekundi poslije upisa, a promjene drugih uređaja stižu odmah i same se upisuju. Kad je firma povezana sa serverom, Google Drive folder služi samo za rezervnu kopiju baze. Indikator veze u zaglavlju (zeleno: na vezi, crveno: bez veze, sivo: nije povezan) — klik za detalje i „Razmijeni sada\". Veza sa serverom po firmi. Nova firma direktno sa servera: kod za uparivanje → podaci firme, marketi i kase. Nov izgled i znak IRIS CORVINA, naziv firme istaknut, Početna bez izbora godine. Cjenovnik: vrijeme izmjene uz svaku cijenu; novi artikli sa kase stižu sami.",
+  "datum": "2026-10-29",
+  "verzijaPrethodna": "1.0.89",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
