@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.6",
+  "verzija": "1.4.7",
   "datum": "2026-10-29",
-  "opis": "IRIS Menadžer 1.4.6: razmjena samo preko servera IRIS CORVINA — izmjene stižu za par sekundi, Google Drive je samo rezervna kopija. Cijene sa kasa se vide odmah: prikaz svih marketa, „Posljednje izmjene\" i „Čeka market\"; važi posljednja izmjena po vremenu. Cijene stižu i dok niko nije prijavljen. Indikator veze i nov izgled IRIS CORVINA sa nazivom firme. Radi bez nove instalacije (Setup 1.4.1 i noviji); rezervna kopija u Google Drive folder traži Setup 1.4.6.",
-  "paket": "menadzer-paket-1.4.6.json.gz",
-  "sha256": "481c276ab0f058220ff70300864c63d6a5e38d2208b7aedb6cb372b9e7628171",
-  "velicina": 1120345,
+  "opis": "IRIS Menadžer 1.4.7: skeniranje faktura — skeniraj QR kod fakture i račun ide sam glavnom računaru Knjigovodstva (stanje: poslato, čeka obradu, obrađeno, greška). Popis telefonom za jednu ruku — skeniraj, upiši količinu, sljedeći; više ljudi broji isti popis i sabira se; otvoren popis ostaje i poslije gašenja. Nov ekran Primljena roba: provjera robe skeniranjem i potvrda prijema; nepoznat barkod se povezuje sa artiklom sa fakture. Nov uređaj firme se povezuje samo kodom sa servera. Na telefonu: nova instalacija (APK) za brzi Google čitač i dugme nazad. Na računaru radi bez nove instalacije (Setup 1.4.1 i noviji).",
+  "paket": "menadzer-paket-1.4.7.json.gz",
+  "sha256": "f3cb736982439f5540b1aff371a308a5939e651658dbdb4f84c681c2da400360",
+  "velicina": 1237371,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "a7ced85c549c8ec915a5c8a5457711043d330b72ca73b95c02d7d27db07bda58",
-  "apkVelicina": 4579201
+  "apkSha256": "496716f906c7dfb22a347afbf4c052bf23f4c8cec8fa4352f0aeccfe5dcb5f4a",
+  "apkVelicina": 25116620
 }
