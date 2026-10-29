@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.5",
-  "datum": "2026-10-28",
-  "opis": "IRIS Menadžer 1.4.5: Podrška (Podešavanja → Podrška, i iz Moj nalog) — poruke podršci IRIS CORVINA sa odgovorima u programu, prijava greške i zahtjevi (više kasa, modul, produženje); tehničke greške se šalju izdavaču očišćene od ličnih podataka (prekidač u Podršci); servisni nalozi izdavača (poruka, poništenje PIN-a — nov PIN se postavlja na uređaju administratora u roku od 24 sata, promjena uloge, dnevnik, ponovno preuzimanje). Uređaj na 1.4.4 ne može prijaviti korisnika čiji je PIN poništen dok se ne ažurira. Bez nove instalacije (Setup 1.4.1 i noviji).",
-  "paket": "menadzer-paket-1.4.5.json.gz",
-  "sha256": "ca7113ea72a49ab2fa7fdfc7b0c5e90ae1021a5931cd91b4c16bbb88cece77f2",
-  "velicina": 830190,
+  "verzija": "1.4.6",
+  "datum": "2026-10-29",
+  "opis": "IRIS Menadžer 1.4.6: razmjena samo preko servera IRIS CORVINA — izmjene stižu za par sekundi, Google Drive je samo rezervna kopija. Cijene sa kasa se vide odmah: prikaz svih marketa, „Posljednje izmjene\" i „Čeka market\"; važi posljednja izmjena po vremenu. Cijene stižu i dok niko nije prijavljen. Indikator veze i nov izgled IRIS CORVINA sa nazivom firme. Radi bez nove instalacije (Setup 1.4.1 i noviji); rezervna kopija u Google Drive folder traži Setup 1.4.6.",
+  "paket": "menadzer-paket-1.4.6.json.gz",
+  "sha256": "481c276ab0f058220ff70300864c63d6a5e38d2208b7aedb6cb372b9e7628171",
+  "velicina": 1120345,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "4ffffeabbf4d8081777ab2661ee8833bf385e2ffe4f19ef0cfe6c6077f46caf9",
-  "apkVelicina": 3987058
+  "apkSha256": "a7ced85c549c8ec915a5c8a5457711043d330b72ca73b95c02d7d27db07bda58",
+  "apkVelicina": 4579201
 }

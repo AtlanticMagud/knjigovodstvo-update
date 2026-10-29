@@ -1,11 +1,11 @@
 {
-  "verzija": "1.3.5",
-  "datum": "2026-10-28",
-  "napomene": "Verzija 1.3.5 — podrška IRIS CORVINA i ispravke razmjene sa serverom:\n· ⋯ Više → 🛟 Podrška: poruka podršci (uz dnevnik kase, a sa novim Setup-om i sliku ekrana), odgovori stižu u kasu (značka „nov odgovor\"), prijava greške i zahtjevi izdavaču (više kasa, modul, produženje);\n· tehničke greške kase šalju se izdavaču bez iznosa, stavki i imena (prekidač u Podešavanja → Podrška i greške);\n· nalozi izdavača: poruka na ekranu kase, poništenje PIN-a kasira (PIN šefa samo uz potpisan nalog), ponovno preuzimanje cjenovnika, dnevnik kase;\n· fajl izmjena cijena nosi samo izmjene ove kase — server ga više ne odbija zbog stare izmjene napravljene prije izbora kase;\n· kasa uparena prije izbora kase više se ne veže za probnu oznaku; ako je server vodi pod drugom oznakom, Podešavanja → Server to jasno kažu.\nEkran stiže ažuriranjem iz programa (Setup 1.3.0 i noviji); slika ekrana uz poruku podršci radi sa Setup-om 1.3.5.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.5.zip",
-  "sha256": "bfd6db961ce5b3ad9acc6b1421fe04f42c25a1be76c6a1e30b4587e57a82a1b5",
-  "velicina": 1161622,
+  "verzija": "1.3.6",
+  "datum": "2026-10-29",
+  "napomene": "Kasa 1.3.6: uparena kasa razmjenjuje samo preko servera — cijene stižu za sekundu-dvije, Google Drive služi za rezervnu kopiju.\nU zaglavlju znak IRIS, naziv firme i znak veze sa serverom (klik = detalji i „Razmijeni sada\").\nNov ekran „Artikli i cijene\": cijena u jedan-dva dodira, nov artikal sa grupom i barkodom, izmjena artikla, „ne prodaje se više\", grupna promjena;\nnepoznat barkod na prodaji može se odmah dodati.\nEkran stiže ažuriranjem iz programa (Setup 1.3.0 i noviji); nova ikona programa i rezervna kopija baze u Google Drive rade sa Setup-om 1.3.6.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.6.zip",
+  "sha256": "08f3a204ed209877f874520de6f92a360734fa565af8d0cb1aacde8263bf1113",
+  "velicina": 1321335,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.3.5"
+  "verzijaAndroid": "1.3.6"
 }
