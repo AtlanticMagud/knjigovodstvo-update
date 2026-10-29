@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.90",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.90.zip",
+  "verzija": "1.0.91",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.91.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9e25a4558b6d9e9ad2e3af0e29563ae1490ba40de2b51217dd74d0a049289e73",
+  "sha256": "a0a44a30b3d730199dfced385e5645bc6d83b8f091ef2fdeb5fdf2ea29ae2578",
   "obavezno": false,
-  "napomene": "Verzija 1.0.90: Samostalan rad — program radi i na jednom računaru, bez servera i kase (paket „Knjige\"); Prvi koraci vode kroz podatke firme, objekte i licencu. Uvoz pazara iz CSV/Excel fajla, sa pregledom prije upisa. QR kod fiskalnog računa čita se i iz PDF-a. Sertifikat za fiskalizaciju vezan za PIB firme (više firmi na jednom računaru). IRIS CORVINA — razmjena preko servera skoro trenutna: promjena odlazi nekoliko sekundi poslije upisa, a promjene drugih uređaja stižu odmah i same se upisuju. Kad je firma povezana sa serverom, Google Drive folder služi samo za rezervnu kopiju baze. Indikator veze u zaglavlju (zeleno: na vezi, crveno: bez veze, sivo: nije povezan) — klik za detalje i „Razmijeni sada\". Veza sa serverom po firmi. Nova firma direktno sa servera: kod za uparivanje → podaci firme, marketi i kase. Nov izgled i znak IRIS CORVINA, naziv firme istaknut, Početna bez izbora godine. Cjenovnik: vrijeme izmjene uz svaku cijenu; novi artikli sa kase stižu sami.",
+  "napomene": "Verzija 1.0.91: IRIS Menadžer ↔ Knjigovodstvo: fakture skenirane u Menadžeru stižu na glavni računar i same postaju kalkulacije sa brojevima (marža: prethodna kalkulacija istog dobavljača, pa marža iz Menadžera, pa nova „Podrazumijevana marža za skenove iz Menadžera\" u Podešavanja → Uređaj); sken obrisan u Menadžeru prije obrade se ne obrađuje, a Menadžer vidi stanje svakog skena. Menadžer dobija spisak primljene robe (kalkulacije zadnjih 35 dana sa izvorom); potvrda prijema iz Menadžera („u redu\" ili razlika po artiklu) vidi se na kalkulaciji i u Menadžer → „Potvrde prijema\" — kalkulacija se ne mijenja sama. Popisi iz Menadžera (više uređaja, količine se sabiraju) stižu na „Popis skenerom\" sa međuzbirom po uređaju i oznakom „spreman za zaključenje\"; dnevni kontrolni popis je u Zalihe i popis. Firma bez cjenovnika dobija početne cijene sama (Atlantic: početni katalog cijena, pa „Poveži prodajna mjesta sa marketima\"; ostale firme: posljednje prodajne cijene iz kalkulacija), cjenovnik se objavljuje i bez kase. Barkodovi sa faktura: nepoznat barkod na popisu se veže za artikal sa fakture, spisak „Artikli sa faktura bez barkoda\", barkodovi iz Menadžera u istoj evidenciji. Telefoni vide i grešku obrade svog skena.",
   "datum": "2026-10-29",
-  "verzijaPrethodna": "1.0.89",
+  "verzijaPrethodna": "1.0.90",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
