@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.91",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.91.zip",
+  "verzija": "1.0.92",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.92.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "a0a44a30b3d730199dfced385e5645bc6d83b8f091ef2fdeb5fdf2ea29ae2578",
+  "sha256": "d63679659be99ab873ab932ae28a0cfc9ac9aff238e5051c46e793520da66428",
   "obavezno": false,
-  "napomene": "Verzija 1.0.91: IRIS Menadžer ↔ Knjigovodstvo: fakture skenirane u Menadžeru stižu na glavni računar i same postaju kalkulacije sa brojevima (marža: prethodna kalkulacija istog dobavljača, pa marža iz Menadžera, pa nova „Podrazumijevana marža za skenove iz Menadžera\" u Podešavanja → Uređaj); sken obrisan u Menadžeru prije obrade se ne obrađuje, a Menadžer vidi stanje svakog skena. Menadžer dobija spisak primljene robe (kalkulacije zadnjih 35 dana sa izvorom); potvrda prijema iz Menadžera („u redu\" ili razlika po artiklu) vidi se na kalkulaciji i u Menadžer → „Potvrde prijema\" — kalkulacija se ne mijenja sama. Popisi iz Menadžera (više uređaja, količine se sabiraju) stižu na „Popis skenerom\" sa međuzbirom po uređaju i oznakom „spreman za zaključenje\"; dnevni kontrolni popis je u Zalihe i popis. Firma bez cjenovnika dobija početne cijene sama (Atlantic: početni katalog cijena, pa „Poveži prodajna mjesta sa marketima\"; ostale firme: posljednje prodajne cijene iz kalkulacija), cjenovnik se objavljuje i bez kase. Barkodovi sa faktura: nepoznat barkod na popisu se veže za artikal sa fakture, spisak „Artikli sa faktura bez barkoda\", barkodovi iz Menadžera u istoj evidenciji. Telefoni vide i grešku obrade svog skena.",
-  "datum": "2026-10-29",
-  "verzijaPrethodna": "1.0.90",
+  "napomene": "Smjene radnika: lakši unos — radno vrijeme svakog marketa (nejednake smjene), sedmica kao na papiru sa izborom radnika klikom na ime, brzi unos radnik × dan, nedjelje, ponavljanje sedmice-šablona na mjesec; prijem rasporeda iz Menadžera 1.4.8.",
+  "datum": "2026-10-31",
+  "verzijaPrethodna": "1.0.91",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
