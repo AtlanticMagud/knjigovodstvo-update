@@ -1,12 +1,11 @@
 {
-  "verzija": "1.4.7",
-  "datum": "2026-10-29",
-  "opis": "IRIS Menadžer 1.4.7: skeniranje faktura — skeniraj QR kod fakture i račun ide sam glavnom računaru Knjigovodstva (stanje: poslato, čeka obradu, obrađeno, greška). Popis telefonom za jednu ruku — skeniraj, upiši količinu, sljedeći; više ljudi broji isti popis i sabira se; otvoren popis ostaje i poslije gašenja. Nov ekran Primljena roba: provjera robe skeniranjem i potvrda prijema; nepoznat barkod se povezuje sa artiklom sa fakture. Nov uređaj firme se povezuje samo kodom sa servera. Na telefonu: nova instalacija (APK) za brzi Google čitač i dugme nazad. Na računaru radi bez nove instalacije (Setup 1.4.1 i noviji).",
-  "paket": "menadzer-paket-1.4.7.json.gz",
-  "sha256": "f3cb736982439f5540b1aff371a308a5939e651658dbdb4f84c681c2da400360",
-  "velicina": 1237371,
-  "minLjuska": "1.4.1",
+  "verzija": "1.4.8",
+  "datum": "2026-10-31",
+  "opis": "IRIS Menadžer 1.4.8: nov ekran Smjene — raspored (Kontrola): menadžer pravi sedmični raspored smjena po marketima kao na papiru — klik na „+\" uz smjenu, pa na ime radnika (radnici marketa, zamjene, ostali; radnik na odsustvu ili već raspoređen drugdje je posivljen), „Ponovi prošlu sedmicu\" prepisuje obrazac, „Pošalji Knjigovodstvu\" šalje sedmicu glavnom računaru (Knjigovodstvo 1.0.92+), gdje je direktor dobija gotovu i može je mijenjati. Radnici, radno vrijeme svakog marketa i postojeći raspored stižu snimkom Knjigovodstva. Radi i na telefonu. Na računaru bez nove instalacije.",
+  "paket": "menadzer-paket-1.4.8.json.gz",
+  "sha256": "da1b5076ebe8d7e1421f7ab55b99272480a33692e5971827085f394dcf6bb58f",
+  "velicina": 1246295,
   "apk": "Menadzer.apk",
-  "apkSha256": "496716f906c7dfb22a347afbf4c052bf23f4c8cec8fa4352f0aeccfe5dcb5f4a",
-  "apkVelicina": 25116620
+  "apkSha256": "5c5893ecb6a9b2f3338e23b51ef6056caf03167d5a636e8407fea6bf98eefeba",
+  "apkVelicina": 25122640
 }
