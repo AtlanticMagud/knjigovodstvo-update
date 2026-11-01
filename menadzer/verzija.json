@@ -1,11 +1,12 @@
 {
-  "verzija": "1.4.8",
-  "datum": "2026-10-31",
-  "opis": "IRIS Menadžer 1.4.8: nov ekran Smjene — raspored (Kontrola): menadžer pravi sedmični raspored smjena po marketima kao na papiru — klik na „+\" uz smjenu, pa na ime radnika (radnici marketa, zamjene, ostali; radnik na odsustvu ili već raspoređen drugdje je posivljen), „Ponovi prošlu sedmicu\" prepisuje obrazac, „Pošalji Knjigovodstvu\" šalje sedmicu glavnom računaru (Knjigovodstvo 1.0.92+), gdje je direktor dobija gotovu i može je mijenjati. Radnici, radno vrijeme svakog marketa i postojeći raspored stižu snimkom Knjigovodstva. Radi i na telefonu. Na računaru bez nove instalacije.",
-  "paket": "menadzer-paket-1.4.8.json.gz",
-  "sha256": "da1b5076ebe8d7e1421f7ab55b99272480a33692e5971827085f394dcf6bb58f",
-  "velicina": 1246295,
+  "verzija": "1.4.9",
+  "datum": "2026-11-01",
+  "opis": "IRIS Menadžer 1.4.9: Smjene — kancelarija (administrator, direktor, knjigovođa) se više ne nudi među radnicima za raspored i ne može se upisati u smjenu; odluka stiže iz Knjigovodstva 1.0.93 (kartica radnika, kućica „ne raspoređuje se u smjene\"), a za stariji snimak se izvodi iz naziva radnog mjesta. Ispomoć radnika iz drugog marketa radi kao i do sada. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK nije obavezan.",
+  "paket": "menadzer-paket-1.4.9.json.gz",
+  "sha256": "639f710111387cc3e3394299f5d806bae4dbe8761f0b0454e9a3c14d4e3dcf14",
+  "velicina": 1246751,
+  "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "5c5893ecb6a9b2f3338e23b51ef6056caf03167d5a636e8407fea6bf98eefeba",
-  "apkVelicina": 25122640
+  "apkSha256": "de4747f948b64f1dd177c3628e1a40b86e5947a665dfefcfc74ce89932362b59",
+  "apkVelicina": 25123116
 }
