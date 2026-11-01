@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.9",
+  "verzija": "1.4.10",
   "datum": "2026-11-01",
-  "opis": "IRIS Menadžer 1.4.9: Smjene — kancelarija (administrator, direktor, knjigovođa) se više ne nudi među radnicima za raspored i ne može se upisati u smjenu; odluka stiže iz Knjigovodstva 1.0.93 (kartica radnika, kućica „ne raspoređuje se u smjene\"), a za stariji snimak se izvodi iz naziva radnog mjesta. Ispomoć radnika iz drugog marketa radi kao i do sada. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK nije obavezan.",
-  "paket": "menadzer-paket-1.4.9.json.gz",
-  "sha256": "639f710111387cc3e3394299f5d806bae4dbe8761f0b0454e9a3c14d4e3dcf14",
-  "velicina": 1246751,
+  "opis": "IRIS Menadžer 1.4.10: Smjene — klik na ime u koloni „Slobodan dan“ otvara izbor marketa i smjene tog dana (matični market prvi, popunjenost smjene, kućica „kao pomoćni“); radnik iz drugog marketa ulazi kao zamjena/pomoćni; odsutni nisu klik; isti dan drugi put javlja „već raspoređen“. Sedmica koju je knjigovođa potvrdila u Knjigovodstvu je zaključana i u Menadžeru; smjena koja tog dana ne radi se ne nudi; ponavljanje sedmice preskače zauzete. Menadžer tako sam složi cio raspored, a knjigovođa poslije sinhronizacije samo pregleda i potvrdi. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK nije obavezan.",
+  "paket": "menadzer-paket-1.4.10.json.gz",
+  "sha256": "d142f6c0dc9045b73a99b4a33ad06b049d8c962d8ef123f7df27d2aae14b3fa2",
+  "velicina": 1250954,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "de4747f948b64f1dd177c3628e1a40b86e5947a665dfefcfc74ce89932362b59",
-  "apkVelicina": 25123116
+  "apkSha256": "6417d3ecedb6522b9581f5221a565f369a525807e0d72b9eedc15c6a5905819b",
+  "apkVelicina": 25125704
 }
