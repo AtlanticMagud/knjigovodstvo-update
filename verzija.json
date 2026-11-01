@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.94",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.94.zip",
+  "verzija": "1.0.95",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.95.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f075629c814fb18c08d2104181d05c86e260b70354c4fe57c3bb0cb7c5b27171",
+  "sha256": "ba284d657fb1273938577870bedd052304faaceff2ba89c13e0f6b0423c1ebf0",
   "obavezno": false,
-  "napomene": "Verzija 1.0.94: Plate — nov način unosa sati. U obračunu radnika upiši ODRAĐENE DANE po smjenama (radnih dana pon–sub, nedjelja, praznika; smjene su radno vrijeme matičnog marketa i mogu se prepraviti), a program iz trajanja smjene izvede sate: redovan rad do fonda radnika, prekovremeni preko fonda (+40 %), i DODATKE povrh osnove — noćni rad 22–06 iz položaja smjene (+40 %), nedjelja (+80 %), praznik (+150 %); uvećanja se sabiraju, redovan rad se više ne smanjuje. Upozorenja po Zakonu o radu (prekovremeni preko 10 h sedmično, bez sedmičnog odmora). Plaćeno odsustvo smanjuje fond radnika i sati se sami ponovo izvedu. „Sati iz smjena\" (uvoz iz rasporeda) i „Obračun po smjenama\" rade po istom modelu, uklapanje na dogovoreni neto ostaje. Stari način (noćni/nedjelja/praznik umjesto redovnog) se više ne nudi pri unosu, raniji obračuni ostaju kakvi su. Bez nove instalacije.",
+  "napomene": "Verzija 1.0.95: Plate — u obračunu radnika vraćeno polje „Radnih dana (× 8 h)\" uz fond sati mjeseca (koliko radnih dana je radnik radio, 22 dana = 176 h). Noćni rad, rad nedjeljom i rad praznikom su sada DODACI povrh osnove: ne smanjuju redovan rad ni radne dane (kad upišeš 22 dana pa 75 noćnih i 32 nedjeljom, ostaje 22 dana / 176 h, a dodaci +40 % / +80 % / +150 % idu povrh); iznos plate unutar fonda je isti kao ranije. Otvoreni obračuni u kojima su noćni ili nedjelja ranije skinuli redovne sate (npr. 11 umjesto 22 dana) se pri prvom otvaranju sami vrate na pune dane — zaključeni obračuni se ne diraju. Tabela „dani po smjenama\" ostaje kao dodatna mogućnost (sklopljena). Smjene — tabla sedmice: klik na ime u koloni „Slobodan dan\" otvara izbor marketa i smjene i raspoređuje radnika tog dana. Bez nove instalacije.",
   "datum": "2026-11-01",
-  "verzijaPrethodna": "1.0.93",
+  "verzijaPrethodna": "1.0.94",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
