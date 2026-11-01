@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.92",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.92.zip",
+  "verzija": "1.0.93",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.93.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "d63679659be99ab873ab932ae28a0cfc9ac9aff238e5051c46e793520da66428",
+  "sha256": "adb91d6eac8697a9635824dcf653c4a2da812ba44f12c178175a2e688127d0ec",
   "obavezno": false,
-  "napomene": "Smjene radnika: lakši unos — radno vrijeme svakog marketa (nejednake smjene), sedmica kao na papiru sa izborom radnika klikom na ime, brzi unos radnik × dan, nedjelje, ponavljanje sedmice-šablona na mjesec; prijem rasporeda iz Menadžera 1.4.8.",
-  "datum": "2026-10-31",
-  "verzijaPrethodna": "1.0.91",
+  "napomene": "Verzija 1.0.93: Smjene — kancelarijski radnici (administrator, direktor, knjigovođa) se više ne raspoređuju u smjene: program ih ne uzima kao zamjene ni kao ispomoć pri automatskom raspoređivanju, ne nudi ih među radnicima za izbor ni u brzom unosu, a raspored iz Menadžera ih preskače. Na kartici radnika (Plate → Radnici) je nova kućica „ne raspoređuje se u smjene\" — dok je ne promijeniš, prati naziv radnog mjesta. Ispomoć radnika iz drugog marketa radi kao i do sada. Bez nove instalacije.",
+  "datum": "2026-11-01",
+  "verzijaPrethodna": "1.0.92",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
