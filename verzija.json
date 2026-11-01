@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.93",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.93.zip",
+  "verzija": "1.0.94",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.94.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "adb91d6eac8697a9635824dcf653c4a2da812ba44f12c178175a2e688127d0ec",
+  "sha256": "f075629c814fb18c08d2104181d05c86e260b70354c4fe57c3bb0cb7c5b27171",
   "obavezno": false,
-  "napomene": "Verzija 1.0.93: Smjene — kancelarijski radnici (administrator, direktor, knjigovođa) se više ne raspoređuju u smjene: program ih ne uzima kao zamjene ni kao ispomoć pri automatskom raspoređivanju, ne nudi ih među radnicima za izbor ni u brzom unosu, a raspored iz Menadžera ih preskače. Na kartici radnika (Plate → Radnici) je nova kućica „ne raspoređuje se u smjene\" — dok je ne promijeniš, prati naziv radnog mjesta. Ispomoć radnika iz drugog marketa radi kao i do sada. Bez nove instalacije.",
+  "napomene": "Verzija 1.0.94: Plate — nov način unosa sati. U obračunu radnika upiši ODRAĐENE DANE po smjenama (radnih dana pon–sub, nedjelja, praznika; smjene su radno vrijeme matičnog marketa i mogu se prepraviti), a program iz trajanja smjene izvede sate: redovan rad do fonda radnika, prekovremeni preko fonda (+40 %), i DODATKE povrh osnove — noćni rad 22–06 iz položaja smjene (+40 %), nedjelja (+80 %), praznik (+150 %); uvećanja se sabiraju, redovan rad se više ne smanjuje. Upozorenja po Zakonu o radu (prekovremeni preko 10 h sedmično, bez sedmičnog odmora). Plaćeno odsustvo smanjuje fond radnika i sati se sami ponovo izvedu. „Sati iz smjena\" (uvoz iz rasporeda) i „Obračun po smjenama\" rade po istom modelu, uklapanje na dogovoreni neto ostaje. Stari način (noćni/nedjelja/praznik umjesto redovnog) se više ne nudi pri unosu, raniji obračuni ostaju kakvi su. Bez nove instalacije.",
   "datum": "2026-11-01",
-  "verzijaPrethodna": "1.0.92",
+  "verzijaPrethodna": "1.0.93",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

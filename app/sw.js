@@ -4,34 +4,34 @@
 // Uloga: aplikacija mora raditi i bez mreže (u radnji signal zna da padne), a nova
 // objava na GitHub Pages-u mora sama stići do telefona. Zato se pri instalaciji
 // keširaju svi fajlovi verzije, a stari keševi se brišu pri aktivaciji (osim jednog prethodnog).
-const VERZIJA = "1.0.93"
+const VERZIJA = "1.0.94"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
-  "assets/PinDijalog-CwrdO3S4.js",
+  "assets/PinDijalog-gM3bWK4M.js",
   "assets/amblem-svijetli-192-CoeYFji2.png",
   "assets/amblem-svijetli-96-BNRmYCi1.png",
   "assets/amblem-tamni-192-Dlvx0PIq.png",
   "assets/amblem-tamni-96-D-JBuMdz.png",
-  "assets/artikli-DJd2JfL7.js",
-  "assets/bankpdf-CYmJv_wK.js",
-  "assets/cijene-s1QLag6t.js",
-  "assets/index-BTviLVJS.js",
-  "assets/index-BWB_Fyw2.js",
-  "assets/index-BeEILCP_.js",
-  "assets/index-Bq9Rfe6n.js",
-  "assets/index-CL-D4Epx.js",
+  "assets/artikli-CZpN1bhs.js",
+  "assets/bankpdf-DcqISb0A.js",
+  "assets/cijene-CM61MscH.js",
+  "assets/index-B2SDdPhC.js",
+  "assets/index-CBWLLbIZ.js",
+  "assets/index-CUBrPoTQ.js",
+  "assets/index-CWYsx2DK.js",
+  "assets/index-D5CjESkT.js",
   "assets/index-DNzFMgCo.js",
   "assets/index-DdpWi2Dx.css",
-  "assets/index-WKby9ACc.js",
   "assets/index-ggsP5-uy.js",
-  "assets/nlbizvod-Bp32azJt.js",
+  "assets/index-ux-9yY5B.js",
+  "assets/nlbizvod-CfCWcjBR.js",
   "assets/pdf.worker-Mx0w3D2U.js",
   "assets/pocetni-katalog-02935147-BOk3bkTs.js",
-  "assets/renumeracija-BmO1Ugcw.js",
-  "assets/salterizvod-CbOCSSAb.js",
+  "assets/renumeracija-DV-5KRPl.js",
+  "assets/salterizvod-BJs2r9Z8.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
   "assets/web-BXJjiGQ6.js",
-  "assets/web-C-YPV4UX.js",
+  "assets/web-C77Iq1rQ.js",
   "assets/web-DRnNXkco.js",
   "assets/web-sfuwvzF6.js",
   "assets/worker.min-32WLk7pY.js",
@@ -43,7 +43,7 @@ const FAJLOVI = [
   "index.html",
   "manifest.webmanifest"
 ]
-const OBAVEZNI = ["index.html","assets/index-BWB_Fyw2.js","assets/index-DdpWi2Dx.css"]
+const OBAVEZNI = ["index.html","assets/index-ux-9yY5B.js","assets/index-DdpWi2Dx.css"]
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {
