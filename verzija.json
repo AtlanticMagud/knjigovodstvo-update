@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.95",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.95.zip",
+  "verzija": "1.0.96",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.96.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "ba284d657fb1273938577870bedd052304faaceff2ba89c13e0f6b0423c1ebf0",
+  "sha256": "0b59ae89e43f932644001f13f90472c7b239ad62e8fc2d0e51ca32da17f06039",
   "obavezno": false,
-  "napomene": "Verzija 1.0.95: Plate — u obračunu radnika vraćeno polje „Radnih dana (× 8 h)\" uz fond sati mjeseca (koliko radnih dana je radnik radio, 22 dana = 176 h). Noćni rad, rad nedjeljom i rad praznikom su sada DODACI povrh osnove: ne smanjuju redovan rad ni radne dane (kad upišeš 22 dana pa 75 noćnih i 32 nedjeljom, ostaje 22 dana / 176 h, a dodaci +40 % / +80 % / +150 % idu povrh); iznos plate unutar fonda je isti kao ranije. Otvoreni obračuni u kojima su noćni ili nedjelja ranije skinuli redovne sate (npr. 11 umjesto 22 dana) se pri prvom otvaranju sami vrate na pune dane — zaključeni obračuni se ne diraju. Tabela „dani po smjenama\" ostaje kao dodatna mogućnost (sklopljena). Smjene — tabla sedmice: klik na ime u koloni „Slobodan dan\" otvara izbor marketa i smjene i raspoređuje radnika tog dana. Bez nove instalacije.",
-  "datum": "2026-11-01",
-  "verzijaPrethodna": "1.0.94",
+  "napomene": "Verzija 1.0.96: Plate — period u kartici radnika sada ulazi i u platu, ne samo u IOPPD: šifra 006 = bolovanje 70 %, 007 = trudničko bolovanje 70 %, 008 = porodiljsko / roditeljsko odsustvo 100 %. Poslije unosa perioda program pita da li da upiše naknadu u otvorene obračune tih mjeseci, a u obračunu radnika traka nudi upis za taj mjesec. Naknada ide umjesto redovnog rada za te dane, stimulacija se skida za te dane, a IOPPD prijava nosi iste iznose kao listić. Zaključeni obračuni se ne diraju. Radnici: pored „Novi radnik\" su dugmad Aktivni i Neaktivni, liste se ne miješaju, a izvoz prati izabranu listu. Kolona Market ima novu opciju „Zamjena (slobodna)\", odvojenu od „nije dodijeljen\". Smjene: u evidenciji odsustava je nova vrsta „Porodiljsko / roditeljsko odsustvo\". Prijem rasporeda iz Menadžera: automatski predlog u drugom marketu ustupa mjesto novijem Menadžerovom rasporedu. Bez nove instalacije.",
+  "datum": "2026-11-02",
+  "verzijaPrethodna": "1.0.95",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
