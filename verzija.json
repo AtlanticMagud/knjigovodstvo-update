@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.97",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.97.zip",
+  "verzija": "1.0.98",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.98.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "28f0fdd9ae7a2b7341e185976a619cf8fba2bd8946683b4c465e6824fb0f8dee",
+  "sha256": "01e3147520d90a16c8424d86bc84f62ee1fc7f53815483386a5f40a3a13a34d1",
   "obavezno": false,
-  "napomene": "Verzija 1.0.97: Fakture — Poreska ih prima (vrsta računa po važećoj šemi servisa); faktura sa IKOF-om koja čeka JIKR se ne mijenja ni ne briše; na fakturi samo bezgotovinsko plaćanje. PDV prijava — upozorenje i oznaka NEPOTPUNO kad pazari nemaju podjelu po stopama; mjesec se ne zaključava dok se podjela ne upiše sa Z-izvještaja. Glavna knjiga — bilans stanja se više ne udvostručuje poslije „Otvori godinu“; bilans u ravnoteži i bez zaključka ranijih godina; porez u bilansu uspjeha iz PD obračuna; jedan PD. Trgovačka knjiga po Pravilniku 34/12 — popusti sa kase, povraćaj robe, usluge van robe, stvarne uplate pazara sa izvoda ili ručno, popisne razlike, početno stanje iz popisa 31.12., zaključenje godine sa PDF-om za ovjeru, upozorenje na kasni upis kalkulacije.",
+  "napomene": "Verzija 1.0.98: Glavna knjiga — nalog PDV knjiži ručna polja prijave (uvoz, usluge inostranih lica, PDV bez prava na odbitak); uplate poreza se razvrstavaju po računu javnog prihoda (jedinstveni račun po periodu iz poziva na broj, PDV, prirez, kazne, takse), nepoznate čekaju potvrdu na ekranu Finansije; POS provizija banke mjesečno; PIO po ugovoru o djelu na svom kontu. Izvozi — datumi kao datumi u Excelu, iznosi na cent, Excel bilansa sa „/“ u naslovu radi, dva izvoza u istoj sekundi ne prepisuju jedan drugi, datum kalkulacije je datum dokumenta, IOS kupcu sa jednim iznosom duga, ime IOPPD fajla bez razmaka. Fiskalni račun — tačno vrijeme izdavanja, datum prometa u poruci, ENU vezan za računar, svi elementi računa na štampi, strani kupac.",
   "datum": "2026-11-04",
-  "verzijaPrethodna": "1.0.96",
+  "verzijaPrethodna": "1.0.97",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
