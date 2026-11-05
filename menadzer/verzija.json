@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.11",
-  "datum": "2026-11-05",
-  "opis": "IRIS Menadžer 1.4.11: Rokovi i sniženja — uz svako sniženje pamti se i prikazuje prethodna cijena, tj. najniža cijena tog artikla u posljednjih 30 dana prije sniženja (Zakon o zaštiti potrošača, čl. 15 st. 2); market bez svoje cijene uzima opštu. Kasa 1.3.7 tu cijenu štampa na etiketi („Prethodna cijena … · akcija do …“). Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK nije obavezan.",
-  "paket": "menadzer-paket-1.4.11.json.gz",
-  "sha256": "8d34f39271a3f7bbfbe5819bccab5bb3592de955924b6d768265d4e93ac71744",
-  "velicina": 1251471,
+  "verzija": "1.5.0",
+  "datum": "2026-11-06",
+  "opis": "IRIS Menadžer 1.5.0: obavještenja na telefon i računar (nov zadatak, hitan kvar, nestašica, narudžba za odobrenje, isporuka kasni, kontrola kasa, pad prometa, pazar koji nije na izvodu, cijene iznad dozvoljene marže) i jutarnji sažetak u 07:00; dugme Excel ispod svakog ekrana sa tabelom; Pregledi — Rezultat po marketu, Trošak rada (i procjena većih zarada), Troškovi marketa (admin i direktor); promet i iz dnevnog pazara Knjigovodstva; prijedlog narudžbe prilagođen sezoni i praznicima; Regulisane marže (spremno za ograničenje marži od 01.01.2027); Predaja pazara i sef sa provjerom uplate na izvodu banke. Na računaru bez nove instalacije (Setup 1.4.1 i noviji; za obavještenja Windowsa preporučen Setup 1.5.0); na telefonu nov APK 1.5.0 (obavještenja).",
+  "paket": "menadzer-paket-1.5.0.json.gz",
+  "sha256": "0a1856c3758b9d5467368c34f4fb6a4e02f701d5facc72e9b648ae9cacddf90c",
+  "velicina": 1293619,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "b7f268acfffbda374746fb56d37c93551153d7702d737f4a328a806d4c30bfe1",
-  "apkVelicina": 25126056
+  "apkSha256": "048ce867e7bbd1c9fdeec4bce3561245bffcee342fed6ce7bcb8f032e4bfec92",
+  "apkVelicina": 25167942
 }
