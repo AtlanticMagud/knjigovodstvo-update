@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.104",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.104.zip",
+  "verzija": "1.0.105",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.105.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "02dc3d977debd097a41741e00bd5b0c50b56288e47e1703347bdb79a68ff7235",
+  "sha256": "d9a86da38ba9b5f49ad1047024b8eebc856a92dd0c414d0f5a3f5dae8a02669a",
   "obavezno": false,
-  "napomene": "Prirez se računa na ukupan porez obračuna po opštini (npr. 1.291,69 × 10 % = 129,17) i raspoređuje radnicima — otvoreni obračuni od oktobra 2026 se preračunaju na glavnom računaru pri otvaranju ekrana Plate. Bilans stanja: kolona 7 (početno stanje prethodne godine) samo kod retrospektivne korekcije ili reklasifikacije, po Pravilniku čl. 4; bilans uspjeha ima i redove 261–265 kao zvanični obrazac. Meni je složen po oblastima: materijalno knjigovodstvo, promet, finansijsko knjigovodstvo i porezi, zarade i kadrovi — sa opisom svake stavke. Akcije: happy hour bez datuma, tačnije poruke pri unosu.",
+  "napomene": "Za knjigovođu: novi pregled „Isplate fizičkim licima u mjesecu“ (zarade, IQOS, ugovor o djelu, zakup i isplate zakupa sa izvoda bez obračuna poreza) — Plate → dugme 👤. Nalozi za plaćanje imaju šifru plaćanja (151 zarade, 140 porezi i doprinosi) i uključuju zakup i ugovor o djelu istog mjeseca; nov nalog za plaćanje PDV-a iz polja 28 (Poreske knjige → PR-PDV). Konta 134: ulaz odvojeno od rashoda i kontrola prema KPR „iznos bez PDV“ sa spiskom razlika. Rashod robe: zbirni nalog za knjiženje za mjesec po marketima (zbir pojedinačnih naloga). Rekapitulacija plata: doprinos za invalide kao poseban red.",
   "datum": "2026-11-05",
-  "verzijaPrethodna": "1.0.103",
+  "verzijaPrethodna": "1.0.104",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
