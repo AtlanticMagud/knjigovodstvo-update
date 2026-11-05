@@ -1,11 +1,11 @@
 {
-  "verzija": "1.3.7",
-  "datum": "2026-11-05",
-  "napomene": "Kasa 1.3.7: etiketa za artikal na akciji ili sniženju štampa akcijsku cijenu, a ispod nje „Prethodna cijena X € · akcija do …“.\nPrethodna cijena je najniža cijena tog artikla u posljednjih 30 dana prije sniženja (Zakon o zaštiti potrošača, čl. 15 st. 2).\nIsto važi i za sniženje poslato iz Menadžera (cijena sa rokom važenja); u spisku etiketa vidi se koja je stavka na akciji.\nEkran stiže ažuriranjem iz programa (Setup 1.3.0 i noviji); na telefonu se nudi nov APK.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.3.7.zip",
-  "sha256": "c675451b1127ba3312209b54a10b2168a2a5321ca7d9f66bd87249dcd3b4a695",
-  "velicina": 1321958,
+  "verzija": "1.5.0",
+  "datum": "2026-11-06",
+  "napomene": "Verzija 1.5.0 — savremeni dodaci:\n· poklon-bonovi (prodaja, plaćanje bonom, ostatak, rok — važe na svim kasama); bodovi vjernosti;\n· fioka uz račun i „Otvori fioku\" uz razlog, poruka kad je u kasi previše gotovine; upozorenja vlasniku (storno, brisanja, popusti, fioka, razlike);\n· direktna štampa na termalni štampač (mrežni, Windows, Bluetooth / Android kasa sa štampačem); potvrda terminala i broj odobrenja kartice; aplikacija banke za karticu na telefonu; instant prenos;\n· vaga: barkod sa iznosom i podesiva pravila, izvoz artikala za vagu; 2D barkod sa rokom trajanja; izvoz cijena za elektronske etikete; QR e-kopije na ekranu kupca;\n· ugostiteljstvo: telefoni konobara, ekran kuhinje (tablet), rezervacije, raspored sale, dostava (Wolt, Glovo, telefon).\nEkran stiže ažuriranjem i na Setup 1.3.x; direktna štampa, fioka i telefoni konobara traže Setup 1.5.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.5.0.zip",
+  "sha256": "3f2100d20ae17c8dc481154790fbcca50e6d1b47c76a3cc65d5de00207222d15",
+  "velicina": 1364435,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.3.7"
+  "verzijaAndroid": "1.5.0"
 }
