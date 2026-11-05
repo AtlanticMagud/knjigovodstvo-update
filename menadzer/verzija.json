@@ -1,12 +1,12 @@
 {
-  "verzija": "1.4.10",
-  "datum": "2026-11-01",
-  "opis": "IRIS Menadžer 1.4.10: Smjene — klik na ime u koloni „Slobodan dan“ otvara izbor marketa i smjene tog dana (matični market prvi, popunjenost smjene, kućica „kao pomoćni“); radnik iz drugog marketa ulazi kao zamjena/pomoćni; odsutni nisu klik; isti dan drugi put javlja „već raspoređen“. Sedmica koju je knjigovođa potvrdila u Knjigovodstvu je zaključana i u Menadžeru; smjena koja tog dana ne radi se ne nudi; ponavljanje sedmice preskače zauzete. Menadžer tako sam složi cio raspored, a knjigovođa poslije sinhronizacije samo pregleda i potvrdi. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK nije obavezan.",
-  "paket": "menadzer-paket-1.4.10.json.gz",
-  "sha256": "d142f6c0dc9045b73a99b4a33ad06b049d8c962d8ef123f7df27d2aae14b3fa2",
-  "velicina": 1250954,
+  "verzija": "1.4.11",
+  "datum": "2026-11-05",
+  "opis": "IRIS Menadžer 1.4.11: Rokovi i sniženja — uz svako sniženje pamti se i prikazuje prethodna cijena, tj. najniža cijena tog artikla u posljednjih 30 dana prije sniženja (Zakon o zaštiti potrošača, čl. 15 st. 2); market bez svoje cijene uzima opštu. Kasa 1.3.7 tu cijenu štampa na etiketi („Prethodna cijena … · akcija do …“). Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK nije obavezan.",
+  "paket": "menadzer-paket-1.4.11.json.gz",
+  "sha256": "8d34f39271a3f7bbfbe5819bccab5bb3592de955924b6d768265d4e93ac71744",
+  "velicina": 1251471,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "6417d3ecedb6522b9581f5221a565f369a525807e0d72b9eedc15c6a5905819b",
-  "apkVelicina": 25125704
+  "apkSha256": "b7f268acfffbda374746fb56d37c93551153d7702d737f4a328a806d4c30bfe1",
+  "apkVelicina": 25126056
 }
