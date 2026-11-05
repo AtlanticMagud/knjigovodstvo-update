@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.99",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.99.zip",
+  "verzija": "1.0.100",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.100.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "25a66788a6e95ab13ede570216a5ea1bac05f7d8068670cef50454ed967a7946",
+  "sha256": "2660d7fe5d3ea1883ba9d36643c7ca8028feb44e56aad86a48784ea571df024a",
   "obavezno": false,
-  "napomene": "Knjige i PDV prijava: PDV broj kupca i firme u obliku ME + PIB; brojevi računa i Z sa trake u KIF-u; faktura po nultoj stopi ili oslobođena u pravoj koloni; nabavka u KPR-u sa podacima dobavljača; PR-PDV polja 9 i 30 i XML za portal (nacrt). Plate: neoporezivo po zakonu — dnevnice po danima i obrocima, godišnji limiti, nove vrste (odvojeni život, novorođeno dijete, poklon djeci, 8. mart, otpremnine); višak iznad neoporezivog obračunava se kao drugo primanje (porez 15 %, poseban red u IOPPD) umjesto da zaustavi obračun; topli obrok i regres sa kartice radnika; neplaćeno odsustvo za njegu člana porodice; upozorenje za nepotvrđenu stopu prireza. Osnovna sredstva: samo iznad 300 €; prodaja i rashodovanje se knjiže u glavnu knjigu.",
-  "datum": "2026-11-04",
-  "verzijaPrethodna": "1.0.98",
+  "napomene": "Cijene i kasa: popis i prenosnica uzimaju cijenu iz svog marketa; kalkulacija pokazuje cijenu na kasi i ima dugme „Pošalji MPC na kasu\"; MPC sa PDV se može upisati direktno (marža se sama izračuna); označeni su rabati koje račun ne potvrđuje; propisana MPC cigareta mijenja se samo uz potvrdu i datum od kog važi. Rokovi i plaćanja: na početnoj rokovi za PDV, IOPPD, finansijske iskaze i popis; upozorenje kad gotovina sa istim partnerom dostigne 10.000 € ili više; upozorenje za rok plaćanja kupca duži od 30 ili 60 dana; izvoz starosti potraživanja sa zateznom kamatom. Novi izvozi: kontni plan, šeme knjiženja i transakcije banke.",
+  "datum": "2026-11-05",
+  "verzijaPrethodna": "1.0.99",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
