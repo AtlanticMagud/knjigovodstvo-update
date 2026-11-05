@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.103",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.103.zip",
+  "verzija": "1.0.104",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.104.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "a1160f18473243946323e48b7fa7c91c6370bd992e357f0a67de9582d87621cd",
+  "sha256": "02dc3d977debd097a41741e00bd5b0c50b56288e47e1703347bdb79a68ff7235",
   "obavezno": false,
-  "napomene": "Lager: novo „Zalihe → Lager (stanje po artiklu)\" — stanje po artiklu u marketu na dan (ulaz, prodaja na kasi, prenos, otpis, fakture, popis cijelog marketa), kartica artikla klikom na red, minus stanje crveno; market bez kase je jasno označen; prodaja na kasi bez veze sa artiklom na posebnom spisku. Izvozi: pregled pazara sa kolonom „Kontrola\", IOS dobavljaču (PDF), nalozi za plaćanje iz obračuna plata (neto na žiro račune, porez i doprinosi, prirez po opštinama, doprinos za invalide). Kartica dobavljača: kolone „Zaduženje obaveze\" i „Smanjenje obaveze\". Akcije: prethodna cijena = najniža u 30 dana prije sniženja (Zakon o zaštiti potrošača čl. 15), dugme „cijene\" na akciji, sniženje mora imati period od–do.",
+  "napomene": "Prirez se računa na ukupan porez obračuna po opštini (npr. 1.291,69 × 10 % = 129,17) i raspoređuje radnicima — otvoreni obračuni od oktobra 2026 se preračunaju na glavnom računaru pri otvaranju ekrana Plate. Bilans stanja: kolona 7 (početno stanje prethodne godine) samo kod retrospektivne korekcije ili reklasifikacije, po Pravilniku čl. 4; bilans uspjeha ima i redove 261–265 kao zvanični obrazac. Meni je složen po oblastima: materijalno knjigovodstvo, promet, finansijsko knjigovodstvo i porezi, zarade i kadrovi — sa opisom svake stavke. Akcije: happy hour bez datuma, tačnije poruke pri unosu.",
   "datum": "2026-11-05",
-  "verzijaPrethodna": "1.0.102",
+  "verzijaPrethodna": "1.0.103",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
