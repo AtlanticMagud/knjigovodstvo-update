@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.101",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.101.zip",
+  "verzija": "1.0.102",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.102.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "00b2c55dd8b00fa0e96e8f3e34115896719fd9eb5fcad7a790183a81e779b50c",
+  "sha256": "58c48d4445a87265f2cf23ef7b0c02ee21bee23bcee723b461940e5d1ce396f7",
   "obavezno": false,
-  "napomene": "PDV: nabavke bez prava na odbitak (gorivo, djelovi i servis putničkog automobila, reprezentacija) idu u PR-PDV polje 26 i u KPR „ne može se odbiti\", a PDV u trošak; pregled računa primljenih poslije mjeseca; zvanični obrasci U-RAČ (17 kolona) i I-RAČ (15 kolona). Uvoz i strane usluge: carinske deklaracije (JCI) puni polje 20 i evidenciju uvoza, usluge stranih lica polje 21 i U-RAČ 14–16; strani dobavljač bez domaćeg PDV-a; upozorenje kad PDV nabavke ne odgovara stopi. Plate: refundacije naknada (Fond zdravstva od 61. dana bolovanja i za održavanje trudnoće, Centar za socijalni rad za porodiljsko) idu na potraživanje umjesto troška, rok zahtjeva na početnoj, izvoz zahtjeva; izvod vrste „refundacija\".",
+  "napomene": "Finansijski iskazi: bilans stanja sa kolonom 7 (prethodna godina — početno stanje), potpisi „Lice odgovorno za sastavljanje\" i „Odgovorno lice\" sa datumom sastavljanja, zaglavlje statističkog aneksa (matični broj, šifra djelatnosti, PIB, pravni oblik, veličina — matični broj i pravni oblik se upisuju u Podešavanja → Firma). Dnevnik unosa: na kalkulaciji, fakturi i nalogu piše ko je i kada unio i posljednji izmijenio dokument (i brisanje se pamti); dokumenti iz razmjene su označeni. Arhiva godine (Podešavanja → Backup): kopija baze samo za čitanje, iskazi, bruto bilans, dnevnik, I-RAČ i U-RAČ po mjesecima, trgovačke knjige i obračuni zarada sa rokovima čuvanja i SHA-256 otiscima.",
   "datum": "2026-11-05",
-  "verzijaPrethodna": "1.0.100",
+  "verzijaPrethodna": "1.0.101",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
