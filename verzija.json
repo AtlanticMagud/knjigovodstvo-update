@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.102",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.102.zip",
+  "verzija": "1.0.103",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.103.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "58c48d4445a87265f2cf23ef7b0c02ee21bee23bcee723b461940e5d1ce396f7",
+  "sha256": "a1160f18473243946323e48b7fa7c91c6370bd992e357f0a67de9582d87621cd",
   "obavezno": false,
-  "napomene": "Finansijski iskazi: bilans stanja sa kolonom 7 (prethodna godina — početno stanje), potpisi „Lice odgovorno za sastavljanje\" i „Odgovorno lice\" sa datumom sastavljanja, zaglavlje statističkog aneksa (matični broj, šifra djelatnosti, PIB, pravni oblik, veličina — matični broj i pravni oblik se upisuju u Podešavanja → Firma). Dnevnik unosa: na kalkulaciji, fakturi i nalogu piše ko je i kada unio i posljednji izmijenio dokument (i brisanje se pamti); dokumenti iz razmjene su označeni. Arhiva godine (Podešavanja → Backup): kopija baze samo za čitanje, iskazi, bruto bilans, dnevnik, I-RAČ i U-RAČ po mjesecima, trgovačke knjige i obračuni zarada sa rokovima čuvanja i SHA-256 otiscima.",
+  "napomene": "Lager: novo „Zalihe → Lager (stanje po artiklu)\" — stanje po artiklu u marketu na dan (ulaz, prodaja na kasi, prenos, otpis, fakture, popis cijelog marketa), kartica artikla klikom na red, minus stanje crveno; market bez kase je jasno označen; prodaja na kasi bez veze sa artiklom na posebnom spisku. Izvozi: pregled pazara sa kolonom „Kontrola\", IOS dobavljaču (PDF), nalozi za plaćanje iz obračuna plata (neto na žiro račune, porez i doprinosi, prirez po opštinama, doprinos za invalide). Kartica dobavljača: kolone „Zaduženje obaveze\" i „Smanjenje obaveze\". Akcije: prethodna cijena = najniža u 30 dana prije sniženja (Zakon o zaštiti potrošača čl. 15), dugme „cijene\" na akciji, sniženje mora imati period od–do.",
   "datum": "2026-11-05",
-  "verzijaPrethodna": "1.0.101",
+  "verzijaPrethodna": "1.0.102",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

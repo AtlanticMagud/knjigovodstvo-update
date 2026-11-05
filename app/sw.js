@@ -4,36 +4,36 @@
 // Uloga: aplikacija mora raditi i bez mreže (u radnji signal zna da padne), a nova
 // objava na GitHub Pages-u mora sama stići do telefona. Zato se pri instalaciji
 // keširaju svi fajlovi verzije, a stari keševi se brišu pri aktivaciji (osim jednog prethodnog).
-const VERZIJA = "1.0.102"
+const VERZIJA = "1.0.103"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
-  "assets/PinDijalog-C4N3y6ZN.js",
+  "assets/PinDijalog-DRvWnrtl.js",
   "assets/amblem-svijetli-192-CoeYFji2.png",
   "assets/amblem-svijetli-96-BNRmYCi1.png",
   "assets/amblem-tamni-192-Dlvx0PIq.png",
   "assets/amblem-tamni-96-D-JBuMdz.png",
-  "assets/artikli-BkEzdUQn.js",
-  "assets/bankpdf-E-t8cVZJ.js",
-  "assets/cijene-C3vNEKlJ.js",
+  "assets/artikli-wFxfgQwy.js",
+  "assets/bankpdf-DVpXC1O2.js",
+  "assets/cijene-lBP4uxBK.js",
   "assets/index-B4s5f70_.css",
-  "assets/index-BaHczns_.js",
-  "assets/index-CVhhE9xo.js",
-  "assets/index-Cd-5vAWh.js",
-  "assets/index-D3BzBsYz.js",
+  "assets/index-BF2lHcGq.js",
+  "assets/index-C3sJ1n6z.js",
+  "assets/index-C5yv2Z21.js",
+  "assets/index-CZTWlt8_.js",
   "assets/index-DNzFMgCo.js",
-  "assets/index-gTNJ-8lS.js",
+  "assets/index-DUZSFawz.js",
+  "assets/index-UjfpZuQf.js",
   "assets/index-ggsP5-uy.js",
-  "assets/index-n8AGUAVx.js",
-  "assets/nlbizvod-DoMK8A2n.js",
+  "assets/nlbizvod-CRhu2CNT.js",
   "assets/pdf.worker-Mx0w3D2U.js",
   "assets/pocetni-katalog-02935147-BOk3bkTs.js",
-  "assets/renumeracija-BSdCjRfL.js",
-  "assets/salterizvod-BVVzX4MD.js",
+  "assets/renumeracija-Dzie2Mrk.js",
+  "assets/salterizvod-CuWE4cMR.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
   "assets/web-BXJjiGQ6.js",
+  "assets/web-CV-iSGd-.js",
   "assets/web-DRnNXkco.js",
   "assets/web-sfuwvzF6.js",
-  "assets/web-w3gOUsBy.js",
   "assets/worker.min-32WLk7pY.js",
   "ikone/favicon-32.png",
   "ikone/ikona-180.png",
@@ -43,7 +43,7 @@ const FAJLOVI = [
   "index.html",
   "manifest.webmanifest"
 ]
-const OBAVEZNI = ["index.html","assets/index-D3BzBsYz.js","assets/index-B4s5f70_.css"]
+const OBAVEZNI = ["index.html","assets/index-C5yv2Z21.js","assets/index-B4s5f70_.css"]
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {
