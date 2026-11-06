@@ -1,11 +1,11 @@
 {
-  "verzija": "1.5.2",
-  "datum": "2026-11-06",
-  "napomene": "Verzija 1.5.2:\n· stanje kase uživo za Knjigovodstvo i Menadžer (uz Knjigovodstvo 1.0.108 ili novije) — šalje se samo dok kasa miruje, najviše jednom u 30 sekundi, bez opterećenja prodaje;\n· osnov za stopu 0 % (oslobođenje čl. 26 i 27, promet van sistema PDV) upisuje se u fiskalnu poruku kada ga Knjigovodstvo pošalje uz artikal; na računu i presjeku stoji „0% čl. …\";\n· nedjeljni režim kioska (čl. 35b Zakona o unutrašnjoj trgovini): nedjeljom i praznikom prodaju se samo dozvoljeni artikli; radno vrijeme kioska po danima.\nIz verzije 1.5.1: uvid Menadžera u kasu („Kase uživo\") — smjena, kasir, očekivano u fioci, posljednji računi i promet danas.\nStiže ažuriranjem i na Setup 1.3.x.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.5.2.zip",
-  "sha256": "d2e5a5b2e18f62dc5b7124fcff619a6a61f907a5e94c6e6f0ce1305e8af18102",
-  "velicina": 1371629,
+  "verzija": "1.6.0",
+  "datum": "2026-11-07",
+  "napomene": "Verzija 1.6.0 — kasa za svaku firmu:\n· program više nema ugrađenu firmu ni spisak kasa — firma, prodajna mjesta, artikli i cijene stižu iz Knjigovodstva firme;\n· prvo pokretanje „Poveži kasu sa firmom\": kod iz Knjigovodstva (Kase i marketi → Dodaj kasu i napravi kod), paket iz fajla ili probna kasa;\n· „Ova kasa na ovom mjestu\" za prodajno mjesto bez upisane kase; paket firme se pamti u kasi i poslije gašenja;\n· kodovi programa stare kase se ne primaju.\nKasa koja već radi ostaje kakva jeste. Stiže ažuriranjem i na Setup 1.3.x.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.6.0.zip",
+  "sha256": "9a09cc6278ddf9fae33821afa6a1be2ebc15e26241e5b22229244e092912a7ab",
+  "velicina": 1009653,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.5.2"
+  "verzijaAndroid": "1.6.0"
 }
