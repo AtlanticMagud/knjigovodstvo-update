@@ -1,12 +1,12 @@
 {
-  "verzija": "1.5.0",
+  "verzija": "1.5.1",
   "datum": "2026-11-06",
-  "opis": "IRIS Menadžer 1.5.0: obavještenja na telefon i računar (nov zadatak, hitan kvar, nestašica, narudžba za odobrenje, isporuka kasni, kontrola kasa, pad prometa, pazar koji nije na izvodu, cijene iznad dozvoljene marže) i jutarnji sažetak u 07:00; dugme Excel ispod svakog ekrana sa tabelom; Pregledi — Rezultat po marketu, Trošak rada (i procjena većih zarada), Troškovi marketa (admin i direktor); promet i iz dnevnog pazara Knjigovodstva; prijedlog narudžbe prilagođen sezoni i praznicima; Regulisane marže (spremno za ograničenje marži od 01.01.2027); Predaja pazara i sef sa provjerom uplate na izvodu banke. Na računaru bez nove instalacije (Setup 1.4.1 i noviji; za obavještenja Windowsa preporučen Setup 1.5.0); na telefonu nov APK 1.5.0 (obavještenja).",
-  "paket": "menadzer-paket-1.5.0.json.gz",
-  "sha256": "0a1856c3758b9d5467368c34f4fb6a4e02f701d5facc72e9b648ae9cacddf90c",
-  "velicina": 1293619,
+  "opis": "IRIS Menadžer 1.5.1: Kontrola → Kase uživo — sve kase na jednom ekranu (radi / kasni / ne javlja se, ko je na kasi, smjena, promet i novac danas, koliko je u fioci, posljednji račun, fiskalizacija, upozorenja) i kompletan uvid u svaku kasu: posljednji računi sa stavkama, promet po satu, artikli, kasiri, smjene, upozorenja i izuzeci, za danas ili posljednjih 60 dana; obavještenja za upozorenja sa kase i za kasu koja se ne javlja. Stanje uživo šalje Kasa 1.5.1. Na računaru bez nove instalacije; na telefonu nov APK 1.5.1.",
+  "paket": "menadzer-paket-1.5.1.json.gz",
+  "sha256": "29a25a135981fa0a1bf1e9e6c8f28a8a3a8047b8a7d71a1b5344e264c839999e",
+  "velicina": 1302498,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "048ce867e7bbd1c9fdeec4bce3561245bffcee342fed6ce7bcb8f032e4bfec92",
-  "apkVelicina": 25167942
+  "apkSha256": "7c4926ebb4f38a0f862dbee724b1245fcb24a2e44b913fec2090a4d49edbb143",
+  "apkVelicina": 25175006
 }
