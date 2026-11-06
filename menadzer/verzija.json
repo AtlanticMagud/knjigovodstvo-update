@@ -1,12 +1,12 @@
 {
-  "verzija": "1.5.1",
+  "verzija": "1.5.2",
   "datum": "2026-11-06",
-  "opis": "IRIS Menadžer 1.5.1: Kontrola → Kase uživo — sve kase na jednom ekranu (radi / kasni / ne javlja se, ko je na kasi, smjena, promet i novac danas, koliko je u fioci, posljednji račun, fiskalizacija, upozorenja) i kompletan uvid u svaku kasu: posljednji računi sa stavkama, promet po satu, artikli, kasiri, smjene, upozorenja i izuzeci, za danas ili posljednjih 60 dana; obavještenja za upozorenja sa kase i za kasu koja se ne javlja. Stanje uživo šalje Kasa 1.5.1. Na računaru bez nove instalacije; na telefonu nov APK 1.5.1.",
-  "paket": "menadzer-paket-1.5.1.json.gz",
-  "sha256": "29a25a135981fa0a1bf1e9e6c8f28a8a3a8047b8a7d71a1b5344e264c839999e",
-  "velicina": 1302498,
+  "opis": "IRIS Menadžer 1.5.2: Kontrola → Knjigovodstvo — pregled podataka Knjigovodstva, samo za čitanje: PR-PDV po mjesecima, trgovačka knjiga po objektu, lager, dobavljači i kupci, pazari i uplate, kalkulacije, banka, plate, rokovi i upozorenja, uz izbor firme, pretragu i Excel (finansijske podatke vide administrator i direktor; podatke šalje Knjigovodstvo 1.0.108 ili novije). Kase uživo, uz Kasu 1.5.2: stanje „radi / kasni“ prema intervalu javljanja kase (kao u Knjigovodstvu 1.0.108), stavke računa u kucanju, PDV dana po stopama i osnov za stopu 0 %. Kase kioska vode se uz matični market (roba, promet, zalihe), a prikazuju se posebno. Sadrži i izmjene iz 1.5.1 (Kase uživo — uvid u svaku kasu). Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK 1.5.2.",
+  "paket": "menadzer-paket-1.5.2.json.gz",
+  "sha256": "96eebecd1b00d2d85338a77139332eb653dae01dc4edc98e627fab942ae151b3",
+  "velicina": 1315834,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "7c4926ebb4f38a0f862dbee724b1245fcb24a2e44b913fec2090a4d49edbb143",
-  "apkVelicina": 25175006
+  "apkSha256": "f80265c04376915d7892a0fea8c9afcc1e331bdd7e37adce117031be5786012f",
+  "apkVelicina": 25183482
 }
