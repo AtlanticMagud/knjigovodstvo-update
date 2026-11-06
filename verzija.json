@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.107",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.107.zip",
+  "verzija": "1.0.108",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.108.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "488b8b6ad4f16e70a43c9331bc408f1139f8d1bbd15f0084467a884f68e9934f",
+  "sha256": "766ead0c0da275e9ce32fc1fb6fd137e1cdd138cfea01cb6587323593103eee1",
   "obavezno": false,
-  "napomene": "Kase uživo: pregled stanja svake kase u realnom vremenu (promet, načini plaćanja, gotovina u fioci, posljednji računi, promet po artiklu), samo čitanje; dostupno uz Kasu 1.5.1 ili noviju. Nivelacija sa izvještajem o popisu i upisom u trgovačku knjigu. Interni prenos robe u trgovačkim knjigama oba objekta (interna otpremnica i interna kalkulacija). Avansni račun, evidencija avansa i knjižno odobrenje kupcu (PDV kod obveznika tek po obavještenju kupca). Osnov za stopu 0 % na artiklu (PR-PDV polja 13 i 14). Broj kalkulacije po godini prijema robe i oznaka naknadnog unosa. Veleprodajni objekti: konta veleprodaje i evidencija EV. Zavisni troškovi: procjena prije fakture (konto 494) i PDV bez prava na odbitak. Prekidač „Strani dobavljač“ na kartici dobavljača. Datum prijema skeniranog računa je dan skeniranja.",
+  "napomene": "Kase i marketi: dodavanje kase sa kodom za uparivanje, uklanjanje kase i poništavanje neiskorišćenog koda, stanje veze svake kase (potreban server 0.5.2). Kiosk kao posebno prodajno mjesto uz market, sa svojom trgovačkom knjigom, vrstom izuzetka po čl. 35b Zakona o unutrašnjoj trgovini, robom dozvoljenom nedjeljom i praznikom i radnim vremenom (primjena na kasi od verzije 1.5.2). Praznici u paketu za kase. Osnov za 0 % u paketu za kase po izboru (podrazumijevano isključeno). Kase uživo: interval javljanja kase, račun u kucanju, PDV po stopi i osnov za 0 % iz kase. Pregled Knjigovodstva za Menadžer (samo čitanje).",
   "datum": "2026-11-06",
-  "verzijaPrethodna": "1.0.106",
+  "verzijaPrethodna": "1.0.107",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

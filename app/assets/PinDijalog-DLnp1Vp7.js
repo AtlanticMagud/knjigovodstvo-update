@@ -1,4 +1,4 @@
-import{h as j,k as m,l as k,m as e,r as c,q as p,v}from"./index-DzxJ2K2o.js";async function g(a){const t=j(a);return t.ok?m(a)?new Promise(s=>{const n=document.createElement("div");document.body.appendChild(n);const i=k.createRoot(n),r=l=>{i.unmount(),n.remove(),s(l)};i.render(e.jsx(f,{radnja:a,onKraj:r}))}):!0:(alert(t.razlog),!1)}async function h(a,t){const s=j("zakljucavanje");if(!s.ok)return alert(s.razlog),!1;const n=t?`Otključati ${a}?
+import{T as j,U as m,V as k,W as e,X as c,Y as p,Z as v}from"./index-Df-WdSH7.js";async function g(a){const t=j(a);return t.ok?m(a)?new Promise(s=>{const n=document.createElement("div");document.body.appendChild(n);const i=k.createRoot(n),r=l=>{i.unmount(),n.remove(),s(l)};i.render(e.jsx(f,{radnja:a,onKraj:r}))}):!0:(alert(t.razlog),!1)}async function h(a,t){const s=j("zakljucavanje");if(!s.ok)return alert(s.razlog),!1;const n=t?`Otključati ${a}?
 
 Poslije otključavanja se kalkulacije i fakture tog mjeseca mogu mijenjati i brisati — knjige koje su već predate knjigovođi tada se mogu promijeniti.`:`Zaključati ${a}?
 
