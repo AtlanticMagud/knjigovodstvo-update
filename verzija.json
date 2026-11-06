@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.105",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.105.zip",
+  "verzija": "1.0.106",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.106.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "d9a86da38ba9b5f49ad1047024b8eebc856a92dd0c414d0f5a3f5dae8a02669a",
+  "sha256": "7a8d32df81194ca85b7d681cc872bcfd4121f909ca25cbc75e31dedf5a7aac44",
   "obavezno": false,
-  "napomene": "Za knjigovođu: novi pregled „Isplate fizičkim licima u mjesecu“ (zarade, IQOS, ugovor o djelu, zakup i isplate zakupa sa izvoda bez obračuna poreza) — Plate → dugme 👤. Nalozi za plaćanje imaju šifru plaćanja (151 zarade, 140 porezi i doprinosi) i uključuju zakup i ugovor o djelu istog mjeseca; nov nalog za plaćanje PDV-a iz polja 28 (Poreske knjige → PR-PDV). Konta 134: ulaz odvojeno od rashoda i kontrola prema KPR „iznos bez PDV“ sa spiskom razlika. Rashod robe: zbirni nalog za knjiženje za mjesec po marketima (zbir pojedinačnih naloga). Rekapitulacija plata: doprinos za invalide kao poseban red.",
-  "datum": "2026-11-05",
-  "verzijaPrethodna": "1.0.104",
+  "napomene": "Knjige ulaznih računa i PR-PDV polje 19 vode se po datumu prijema računa (ZPDV čl. 37 st. 7); raniji mjeseci ostaju kakvi su bili. Ručna ulazna faktura ima polje „Datum prijema“. IOS kupcu uključuje knjižna odobrenja i korektivne račune. Ručni unos iste uplate traži potvrdu. Zaključak godine navodi uzrok i poštuje redoslijed godina. Lager i kartica artikla po datumu knjige; vrijednost robe primljene prenosom; izvoz kartice artikla. Trgovačka knjiga: u kolonama uplate samo evidentirane uplate, pazari bez uplate u posebnom spisku; privremeni prenos iz nezaključene godine; usluge u ručnom pazaru; upozorenje za negativan saldo. Strani dobavljač na kontu 4340; uvozne fakture van kolone 8 U-RAČ; raspored zavisnih troškova na nabavnu cijenu; evidencija carinskih deklaracija po izboru (Podešavanja → Podaci firme).",
+  "datum": "2026-11-06",
+  "verzijaPrethodna": "1.0.105",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
