@@ -1,11 +1,11 @@
 {
-  "verzija": "1.5.1",
+  "verzija": "1.5.2",
   "datum": "2026-11-06",
-  "napomene": "Verzija 1.5.1 — uvid Menadžera u kasu:\n· kasa svakog minuta šalje Menadžeru šta radi (otvorena smjena, ko je na kasi, očekivano u fioci, posljednji računi sa stavkama, fiskalizacija, šta se kuca) i promet danas (računi, plaćanja, storna, brisanja, po satu, po artiklu, po kasiru);\n· Menadžer 1.5.1 to pokazuje na ekranu „Kase uživo\"; fiskalizacija i računi se ne mijenjaju.\nStiže ažuriranjem i na Setup 1.3.x.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.5.1.zip",
-  "sha256": "a829e956efde44f63ae86abf4dec8cccc0804adf2503d92012f2ced45a189636",
-  "velicina": 1366949,
+  "napomene": "Verzija 1.5.2:\n· stanje kase uživo za Knjigovodstvo i Menadžer (uz Knjigovodstvo 1.0.108 ili novije) — šalje se samo dok kasa miruje, najviše jednom u 30 sekundi, bez opterećenja prodaje;\n· osnov za stopu 0 % (oslobođenje čl. 26 i 27, promet van sistema PDV) upisuje se u fiskalnu poruku kada ga Knjigovodstvo pošalje uz artikal; na računu i presjeku stoji „0% čl. …\";\n· nedjeljni režim kioska (čl. 35b Zakona o unutrašnjoj trgovini): nedjeljom i praznikom prodaju se samo dozvoljeni artikli; radno vrijeme kioska po danima.\nIz verzije 1.5.1: uvid Menadžera u kasu („Kase uživo\") — smjena, kasir, očekivano u fioci, posljednji računi i promet danas.\nStiže ažuriranjem i na Setup 1.3.x.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.5.2.zip",
+  "sha256": "d2e5a5b2e18f62dc5b7124fcff619a6a61f907a5e94c6e6f0ce1305e8af18102",
+  "velicina": 1371629,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.5.1"
+  "verzijaAndroid": "1.5.2"
 }
