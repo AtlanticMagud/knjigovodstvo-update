@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.110",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.110.zip",
+  "verzija": "1.0.111",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.111.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f559326fc2a04bdf24bf052676189475308844b281a952257d1d71ffa1024452",
+  "sha256": "da15b3d9e7e3c74947b528bcbad97e14877b5373c6fa211e0b30048bf91fce49",
   "obavezno": false,
-  "napomene": "Poruke i obavještenja u cijelom programu u profesionalnom, jednoobraznom stilu. Tekstovi licence i veze sa serverom usklađeni sa ostalim programima IRIS.",
+  "napomene": "Artikli sa faktura bez barkoda: barkod se upisuje ili skenira (USB čitač) u redu artikla i pamti se za naredne unose; artikal zatim nestaje sa spiska. Barkod koji već prepoznaje drugi artikal se ne prebacuje. Pri izboru artikla sa fakture za nepoznat barkod artikli bez barkoda su prvi, a na Popisu skenerom, kada je na fakturama marketa samo jedan artikal bez barkoda, nudi se kao predlog.",
   "datum": "2026-11-07",
-  "verzijaPrethodna": "1.0.109",
+  "verzijaPrethodna": "1.0.110",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
