@@ -1,12 +1,12 @@
 {
-  "verzija": "1.6.2",
+  "verzija": "1.6.3",
   "datum": "2026-11-07",
-  "opis": "Nepoznat barkod pri prijemu robe (po narudžbi, bez narudžbe, povrat): izbor artikla sa faktura, prvo artikli bez barkoda, uz predlog kada je takav artikal jedan; barkod se pamti za naredne unose. Ekran Artikli i spisak „Artikli bez barkoda\": polje za barkod (upis, USB čitač ili kamera). Barkod koji već prepoznaje drugi artikal se ne prebacuje. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK 1.6.2.",
-  "paket": "menadzer-paket-1.6.2.json.gz",
-  "sha256": "fff2615ccecd76368b64caf267964bb3aed88abd5a90f16f263b286c0a69783f",
-  "velicina": 1320353,
+  "opis": "Automatsko ažuriranje: po preuzimanju nove verzije program javlja izmjene i nudi ponovno pokretanje. Vraćanje prethodne verzije na računaru (uz instalaciju programa 1.6.3). Na telefonu se nova verzija preuzima na Wi-Fi vezi i instalira na zahtjev.",
+  "paket": "menadzer-paket-1.6.3.json.gz",
+  "sha256": "78e86e5ba5af9fab146c2ec8ea1cb361424d2922a74bad14e7908e4649635372",
+  "velicina": 1326270,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "37d412d119288021f282eb0ace4a468cdc3621619c5225c5908206af541ab03f",
-  "apkVelicina": 25186538
+  "apkSha256": "972b650cd8e897e778de6c9e5d7c68beebbde67ca4f1fb5d569ae78b66071a97",
+  "apkVelicina": 25194030
 }
