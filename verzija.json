@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.109",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.109.zip",
+  "verzija": "1.0.110",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.110.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "365d54ff5eaeb298020bec3d670030ffc08870b683746a80792226ec3f1339de",
+  "sha256": "f559326fc2a04bdf24bf052676189475308844b281a952257d1d71ffa1024452",
   "obavezno": false,
-  "napomene": "Povezivanje → Menadžer: kod za uparivanje programa Menadžer (rok i broj uređaja), spisak Menadžer uređaja firme sa stanjem veze, isključenje izgubljenog uređaja i poništavanje neiskorišćenih kodova (potreban server 0.5.3). Fajl baze za Menadžer za povezivanje bez servera. Paket za kase sadrži sve aktivne markete, pa nova kasa bira prodajno mjesto i kada market još nema kasu. Datum u spisku kasa prikazuje se po lokalnom vremenu.",
-  "datum": "2026-11-06",
-  "verzijaPrethodna": "1.0.108",
+  "napomene": "Poruke i obavještenja u cijelom programu u profesionalnom, jednoobraznom stilu. Tekstovi licence i veze sa serverom usklađeni sa ostalim programima IRIS.",
+  "datum": "2026-11-07",
+  "verzijaPrethodna": "1.0.109",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
