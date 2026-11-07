@@ -1,11 +1,11 @@
 {
-  "verzija": "1.0.111",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.111.zip",
+  "verzija": "1.0.112",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.112.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "da15b3d9e7e3c74947b528bcbad97e14877b5373c6fa211e0b30048bf91fce49",
+  "sha256": "de5679449380627964331b94ad69356c0fef4b0d5803ee1ef30360a2b7f4c451",
   "obavezno": false,
-  "napomene": "Artikli sa faktura bez barkoda: barkod se upisuje ili skenira (USB čitač) u redu artikla i pamti se za naredne unose; artikal zatim nestaje sa spiska. Barkod koji već prepoznaje drugi artikal se ne prebacuje. Pri izboru artikla sa fakture za nepoznat barkod artikli bez barkoda su prvi, a na Popisu skenerom, kada je na fakturama marketa samo jedan artikal bez barkoda, nudi se kao predlog.",
+  "napomene": "Dijelovi programa po paketu firme: Smjene radnika, Kadrovi i Prenos robe između objekata se prikazuju samo firmi kojoj trebaju (paket Market ili Lanac, uključen Menadžer, više objekata ili već postojeći podaci), a firma sa paketom Knjige ih ne vidi. Ručno uključivanje i isključivanje na ekranu O programu → Dijelovi van knjiga. Podaci se ne brišu i razmjena ih prenosi kao i do sada; firme sa trajnom licencom vide sve kao i ranije.",
   "datum": "2026-11-07",
-  "verzijaPrethodna": "1.0.110",
+  "verzijaPrethodna": "1.0.111",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
