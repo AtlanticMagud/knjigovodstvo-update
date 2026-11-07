@@ -1,12 +1,12 @@
 {
-  "verzija": "1.6.2",
+  "verzija": "1.7.0",
   "datum": "2026-11-07",
-  "napomene": "Nova verzija se preuzima automatski i primjenjuje se pri sljedećem pokretanju, nakon zaključenja smjene.\nPoruka o preuzetoj verziji prikazuje izmjene u novoj verziji.\nVraćanje prethodne verzije provjerava da li je baza podataka prilagođena novijoj verziji.\nAndroid: nova verzija se preuzima preko Wi-Fi veze i instalira na „Instaliraj sada\".",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.6.2.zip",
-  "sha256": "03d40b4c09c8ebfdc806ead2aa46ae73c5adb56483381573f5d5873a705a4848",
-  "velicina": 1013192,
+  "napomene": "QR meni za goste: gost skenira kod na stolu, bira artikle na jednom od osam jezika i šalje narudžbu; narudžba stiže na kasu i na telefone konobara. Gost može poništiti narudžbu dok račun nije izdat i zatražiti račun (kartica ili gotovina). Podešavanje: ⋯ Više → QR meni.\nApoteka: izdavanje lijekova na recept (FZO i privatni recept) uz farmaceuta, broj serije izdatog pakovanja; povučene serije se ne izdaju. Podešavanje: ⋯ Više → Apoteka — podešavanja. Razmjena sa servisom FZO još nije aktivna; do tada se koriste aplikacija FZO ili ručni unos.\nVerzija sadrži i automatsko ažuriranje iz verzije 1.6.2.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.7.0.zip",
+  "sha256": "5faaff7c5899d20837bf97d98a1e4a093397411d53388a2ab581f5c59878eb68",
+  "velicina": 1040019,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.6.2",
-  "sha256Android": "0757f96b169802382317c860272d9f86d1b9934e4eb3d515d57899039563ac9d"
+  "verzijaAndroid": "1.7.0",
+  "sha256Android": "4a99bc151d0a31ff90389bfafa76227ef8c82e340e43548308732be06e062fef"
 }
