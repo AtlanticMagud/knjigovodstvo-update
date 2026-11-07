@@ -1,12 +1,12 @@
 {
-  "verzija": "1.6.3",
+  "verzija": "1.7.0",
   "datum": "2026-11-07",
-  "opis": "Automatsko ažuriranje: po preuzimanju nove verzije program javlja izmjene i nudi ponovno pokretanje. Vraćanje prethodne verzije na računaru (uz instalaciju programa 1.6.3). Na telefonu se nova verzija preuzima na Wi-Fi vezi i instalira na zahtjev.",
-  "paket": "menadzer-paket-1.6.3.json.gz",
-  "sha256": "78e86e5ba5af9fab146c2ec8ea1cb361424d2922a74bad14e7908e4649635372",
-  "velicina": 1326270,
+  "opis": "QR meni: uređivanje menija za goste (nazivi i opisi na osam jezika, slike, stolovi i QR kodovi). Apoteka (prikazuje se samo firmama sa apotekom): rokovi po seriji, povučene serije sa povratom dobavljaču, recepti i FZO po kasama, ljekovi iznad najviše dozvoljene cijene, prodaja ljekova za CInMED. Prijem robe: broj serije po stavci. Verzija sadrži i automatsko ažuriranje iz verzije 1.6.3.",
+  "paket": "menadzer-paket-1.7.0.json.gz",
+  "sha256": "4ab8bf37022677cc3428479e8a6c84d54f26161ada4e4b77f51204726195b2fa",
+  "velicina": 1352594,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "972b650cd8e897e778de6c9e5d7c68beebbde67ca4f1fb5d569ae78b66071a97",
-  "apkVelicina": 25194030
+  "apkSha256": "d4b10e39c433dec54e007c2a40390f9740f4e61ed7b5148f36e103ae86bb9eff",
+  "apkVelicina": 25212422
 }
