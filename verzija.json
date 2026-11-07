@@ -1,12 +1,12 @@
 {
-  "verzija": "1.0.113",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.113.zip",
+  "verzija": "1.0.114",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.114.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "a5108581302430a0e486ad53cde7ffb686660bdd8f2b3fb630d6ff3b10c439be",
+  "sha256": "bad800dc028b06b07e9f571dca188073d8da31e07bf35d53fd06c4b66dc3398f",
   "obavezno": false,
-  "napomene": "Automatsko ažuriranje: nova verzija se preuzima sama, u pozadini, pri pokretanju programa i svaka dva sata. Po završenom preuzimanju program prikazuje izmjene nove verzije i nudi „Ponovo pokreni sada\" ili „Kasnije\"; nova verzija se primjenjuje pri sljedećem pokretanju.\nVraćanje prethodne verzije (Povezivanje → Ažuriranje) prije vraćanja provjerava da li prethodna verzija može raditi sa bazom firme.\nAndroid: nova verzija se preuzima preko Wi-Fi veze i instalira potvrdom u sistemskom prozoru.",
+  "napomene": "Revers: izdavanje robe na probu, korišćenje ili servis, povrat i prodaja sa reversa. Roba na reversu vidi se u lageru i na posebnoj popisnoj listi.\nOtpremnica bez računa: isporuka robe prije računa, razduženje na dan isporuke i faktura iz jedne ili više otpremnica istog kupca. Otpremnice bez računa starije od 8 dana prikazuju se kao upozorenje.\nPočetno stanje robe po artiklima: ručni unos ili uvoz lager liste iz Excel ili CSV fajla. Trgovačka knjiga, lager i kartica artikla polaze od početnog stanja.\nProdaja po artiklu bez kase IRIS: uvoz prodaje iz fajla kase drugog proizvođača, kontrola prema pazaru i izvještaj prodaje po popisu.\nRazmjena: dva izlazna dokumenta napravljena u istoj sekundi više se ne spajaju na drugom uređaju.",
   "datum": "2026-11-07",
-  "sha256Android": "3afb3c13f6bf5f670408bacbb03188944c1772e4bd5ac0e724f864511c231e21",
-  "verzijaPrethodna": "1.0.112",
+  "sha256Android": "c3e88c594bbf631d3f74bed2ca3f6880cf3243d4346de789011769a174c2c93b",
+  "verzijaPrethodna": "1.0.113",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
