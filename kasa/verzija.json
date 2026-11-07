@@ -1,11 +1,12 @@
 {
-  "verzija": "1.6.1",
+  "verzija": "1.6.2",
   "datum": "2026-11-07",
-  "napomene": "Poruke i obavještenja u profesionalnom stilu.\nTekstovi licence i veze sa serverom usklađeni sa ostalim programima IRIS.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.6.1.zip",
-  "sha256": "14d5a784f1141adb656a3ca0f8708dfda596012243a7c4b3f46c74b98d156a0e",
-  "velicina": 1008097,
+  "napomene": "Nova verzija se preuzima automatski i primjenjuje se pri sljedećem pokretanju, nakon zaključenja smjene.\nPoruka o preuzetoj verziji prikazuje izmjene u novoj verziji.\nVraćanje prethodne verzije provjerava da li je baza podataka prilagođena novijoj verziji.\nAndroid: nova verzija se preuzima preko Wi-Fi veze i instalira na „Instaliraj sada\".",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.6.2.zip",
+  "sha256": "03d40b4c09c8ebfdc806ead2aa46ae73c5adb56483381573f5d5873a705a4848",
+  "velicina": 1013192,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.6.1"
+  "verzijaAndroid": "1.6.2",
+  "sha256Android": "0757f96b169802382317c860272d9f86d1b9934e4eb3d515d57899039563ac9d"
 }
