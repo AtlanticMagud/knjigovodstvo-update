@@ -1,12 +1,12 @@
 {
-  "verzija": "1.6.0",
+  "verzija": "1.6.1",
   "datum": "2026-11-07",
-  "opis": "IRIS Menadžer 1.6.0: povezivanje sa firmom za svaku firmu, bez izdavača. Prvo pokretanje nudi kod iz Knjigovodstva (Knjigovodstvo 1.0.109: Povezivanje → Menadžer → Napravi kod; server IRIS CORVINA 0.5.3) ili fajl baze iz Knjigovodstva za rad bez servera. Server javlja da li firma već ima Menadžer: prvi uređaj firme odmah upisuje administratora i pravi ključ firme, a svaki sljedeći uređaj dobija ključ i korisnike sa servera. PIB i naziv firme stižu već pri povezivanju, a registar firme osvježava se odmah po prijemu podataka iz Knjigovodstva. Prijedlog marketa za kasu radi i kada nazivi marketa nemaju brojeve. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK 1.6.0.",
-  "paket": "menadzer-paket-1.6.0.json.gz",
-  "sha256": "cfff85291b42f68e5d00cb192309303af75e82ae72b0f02e607a2d0568a9dcb1",
-  "velicina": 1317622,
+  "opis": "Poruke i obavještenja u profesionalnom stilu. Tekstovi licence i veze sa serverom usklađeni sa ostalim programima IRIS.",
+  "paket": "menadzer-paket-1.6.1.json.gz",
+  "sha256": "e4609fcb739b7fc98913d566eae1e1826c53af8a8319baac734eb4fc845d4ac7",
+  "velicina": 1317661,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "7f597209d0d77c3253d8d3697da392fb63075e47da5b26b99e3f90b963b22fde",
-  "apkVelicina": 25185018
+  "apkSha256": "de50e886e4fe27f8d6b60d61dc9737e044e0ed57248c3867bb2090aa38c67cdb",
+  "apkVelicina": 25184754
 }
