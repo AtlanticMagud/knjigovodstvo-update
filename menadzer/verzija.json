@@ -1,12 +1,12 @@
 {
-  "verzija": "1.5.2",
-  "datum": "2026-11-06",
-  "opis": "IRIS Menadžer 1.5.2: Kontrola → Knjigovodstvo — pregled podataka Knjigovodstva, samo za čitanje: PR-PDV po mjesecima, trgovačka knjiga po objektu, lager, dobavljači i kupci, pazari i uplate, kalkulacije, banka, plate, rokovi i upozorenja, uz izbor firme, pretragu i Excel (finansijske podatke vide administrator i direktor; podatke šalje Knjigovodstvo 1.0.108 ili novije). Kase uživo, uz Kasu 1.5.2: stanje „radi / kasni“ prema intervalu javljanja kase (kao u Knjigovodstvu 1.0.108), stavke računa u kucanju, PDV dana po stopama i osnov za stopu 0 %. Kase kioska vode se uz matični market (roba, promet, zalihe), a prikazuju se posebno. Sadrži i izmjene iz 1.5.1 (Kase uživo — uvid u svaku kasu). Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK 1.5.2.",
-  "paket": "menadzer-paket-1.5.2.json.gz",
-  "sha256": "96eebecd1b00d2d85338a77139332eb653dae01dc4edc98e627fab942ae151b3",
-  "velicina": 1315834,
+  "verzija": "1.6.0",
+  "datum": "2026-11-07",
+  "opis": "IRIS Menadžer 1.6.0: povezivanje sa firmom za svaku firmu, bez izdavača. Prvo pokretanje nudi kod iz Knjigovodstva (Knjigovodstvo 1.0.109: Povezivanje → Menadžer → Napravi kod; server IRIS CORVINA 0.5.3) ili fajl baze iz Knjigovodstva za rad bez servera. Server javlja da li firma već ima Menadžer: prvi uređaj firme odmah upisuje administratora i pravi ključ firme, a svaki sljedeći uređaj dobija ključ i korisnike sa servera. PIB i naziv firme stižu već pri povezivanju, a registar firme osvježava se odmah po prijemu podataka iz Knjigovodstva. Prijedlog marketa za kasu radi i kada nazivi marketa nemaju brojeve. Na računaru bez nove instalacije (Setup 1.4.1 i noviji); na telefonu nov APK 1.6.0.",
+  "paket": "menadzer-paket-1.6.0.json.gz",
+  "sha256": "cfff85291b42f68e5d00cb192309303af75e82ae72b0f02e607a2d0568a9dcb1",
+  "velicina": 1317622,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "f80265c04376915d7892a0fea8c9afcc1e331bdd7e37adce117031be5786012f",
-  "apkVelicina": 25183482
+  "apkSha256": "7f597209d0d77c3253d8d3697da392fb63075e47da5b26b99e3f90b963b22fde",
+  "apkVelicina": 25185018
 }
