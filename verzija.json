@@ -1,12 +1,12 @@
 {
-  "verzija": "1.0.114",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.114.zip",
+  "verzija": "1.0.115",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.115.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "bad800dc028b06b07e9f571dca188073d8da31e07bf35d53fd06c4b66dc3398f",
+  "sha256": "0887a26fbeb93a88775d433fa58281c00280be73af594097751f63ff491c94ac",
   "obavezno": false,
-  "napomene": "Revers: izdavanje robe na probu, korišćenje ili servis, povrat i prodaja sa reversa. Roba na reversu vidi se u lageru i na posebnoj popisnoj listi.\nOtpremnica bez računa: isporuka robe prije računa, razduženje na dan isporuke i faktura iz jedne ili više otpremnica istog kupca. Otpremnice bez računa starije od 8 dana prikazuju se kao upozorenje.\nPočetno stanje robe po artiklima: ručni unos ili uvoz lager liste iz Excel ili CSV fajla. Trgovačka knjiga, lager i kartica artikla polaze od početnog stanja.\nProdaja po artiklu bez kase IRIS: uvoz prodaje iz fajla kase drugog proizvođača, kontrola prema pazaru i izvještaj prodaje po popisu.\nRazmjena: dva izlazna dokumenta napravljena u istoj sekundi više se ne spajaju na drugom uređaju.",
+  "napomene": "QR meni za goste (Kase i Menadžer → QR meni za goste): nazivi i opisi na osam jezika, alergeni, slike, grupe, adrese stolova i sopstveni domen.\nApoteka (Kase i Menadžer → Apoteka: ljekovi i FZO): šifarnik ljekova za kase, najviše cijene CInMED, povučene serije i faktura FZO iz recepata sa kasa.\nKalkulacija: broj serije i rok trajanja po stavci; izmjena roka ili serije poslije slanja kalkulacije stiže i na druge računare firme.",
   "datum": "2026-11-07",
-  "sha256Android": "c3e88c594bbf631d3f74bed2ca3f6880cf3243d4346de789011769a174c2c93b",
-  "verzijaPrethodna": "1.0.113",
+  "sha256Android": "2c2afdebf53e4181ab50cef994172be0c16f91aa60f6414969d9078d78aebbbf",
+  "verzijaPrethodna": "1.0.114",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
