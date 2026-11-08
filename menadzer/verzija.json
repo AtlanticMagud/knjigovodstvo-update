@@ -1,12 +1,12 @@
 {
-  "verzija": "1.8.0",
+  "verzija": "1.8.1",
   "datum": "2026-11-08",
-  "opis": "Logo i znak firme sa servera u zaglavlju, na prijavi i u PDF dokumentima. Rad preko lokalnog IRIS servera u radnji (Windows, uz instalaciju 1.8.0). Počni kao nova firma (Pravila i limiti, uz rezervni zapis). Stari zapisi u mjesečnim arhivama — manji fajl za slanje. Usklađen klijent servera: zahtjev za udaljenu podršku traži pristanak korisnika.",
-  "paket": "menadzer-paket-1.8.0.json.gz",
-  "sha256": "3b57cda71ef4fbe1857ae4ae13ecb0b4383cb1def3038e7122d1160fa8b31384",
-  "velicina": 1375659,
+  "opis": "Bočni meni pamti položaj pri prelazu između ekrana. Veća dugmad za dodavanje i uklanjanje radnika u rasporedu na telefonu. Skenirana faktura, prijem i narudžba odlaze na server odmah kad je uređaj na vezi; Enter u polju za QR adresu radi i sa zalijepljenim tekstom.",
+  "paket": "menadzer-paket-1.8.1.json.gz",
+  "sha256": "2ea7c6bae0a16e846563b6a8e4961cd2fb8b0042d2bb8cdafa126c214143a225",
+  "velicina": 1378590,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "a602e4a2a9022a1c44dee0f7d2a6f0cd767b61e127ddc5a318e5cd6ffb3f36e7",
-  "apkVelicina": 25226870
+  "apkSha256": "98aaa7d9f1e921b4e63b0ebfed44ac12257175020e68698d87ed31ec256b74f1",
+  "apkVelicina": 25228426
 }
