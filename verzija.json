@@ -1,12 +1,12 @@
 {
-  "verzija": "1.0.117",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.117.zip",
+  "verzija": "1.0.118",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.118.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9ca96e98edf84541bd5fbb936ca5f8f85e574f53da3d45ae1241175b3801146d",
+  "sha256": "12ffb191c5128d5d09261cecc9eeed5f26c52bc8d1bd4bf19a5074ec5799c9c8",
   "obavezno": false,
-  "napomene": "Logo i znak firme: izbor u Podešavanjima (Podaci firme), slanje na server i prikaz u Kasi, Menadžeru i na QR meniju; logo u PDF izvještajima, na kalkulaciji i platnim listićima; znak u zaglavlju programa i na ekranu izbora firme.\nRad preko lokalnog IRIS servera u radnji (uz instalaciju 1.0.117): uparivanje linkom, traženjem u mreži ili adresom uz potvrdu otiska.\nIzvozi plata: ispravljeni listići za radnike istog imena, listić radnika bez obračuna i nazivi fajlova.\nEkran Menadžer: jedan red po uređaju, sa brojem mjesečnih arhiva.\nZahtjev za udaljenu podršku traži pristanak korisnika.",
+  "napomene": "Unos pazara: napomena kad probne smjene kase nisu upisane u pazare, sa prečicom do podešavanja; naziv izvora zaključaka (server ili folder).\nOtpis sa kase za artikal koji nije u šifarniku: „Napravi artikal\" ili „Poveži sa postojećim\" (Povezivanje → Program za kase), uz potvrdu.\nPočetna: primljena roba se računa zaokruženo po stavci, kao na računu.\nPaket za kase: Badnji dan i Božić se više ne šalju kao neradni dani.\nFajl baze za Menadžer nosi tačno vrijeme snimka.\nOtvaranje baze bez prekida prikaza otvorenog ekrana.",
   "datum": "2026-11-08",
-  "sha256Android": "1bddeeda26c84e03f001ca6d322c8550e6f4f9fba0ef97f90dd980ec0782e27d",
-  "verzijaPrethodna": "1.0.116",
+  "sha256Android": "ab683a6f0226b9a11c9e56a8eb1829271e0acb6fb01520439bf9099bd52b14a2",
+  "verzijaPrethodna": "1.0.117",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
