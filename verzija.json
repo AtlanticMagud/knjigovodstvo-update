@@ -1,12 +1,12 @@
 {
-  "verzija": "1.0.116",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.116.zip",
+  "verzija": "1.0.117",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.117.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "53b5902596616ff010609a658168a0843b9d049665a90cf7a24ce62350435678",
+  "sha256": "9ca96e98edf84541bd5fbb936ca5f8f85e574f53da3d45ae1241175b3801146d",
   "obavezno": false,
-  "napomene": "Kalkulacija iz QR računa provjerava kupca: račun koji glasi na drugu firmu ne postaje kalkulacija bez izričite potvrde, a račun bez kupca nosi upozorenje da ulazni PDV nije odbitan.\nIzvodi iz pošte: čita se samo sanduče firme; plaćanja se knjiže automatski samo sa računa firme (Podešavanja → Firma → Računi firme); izvod sa PIB-om druge firme traži izričitu potvrdu.\nObrada skenova: istovremena obrada istog skena više ne javlja grešku i ne troši broj kalkulacije.\nPotvrde i obavještenja se prikazuju u prozoru programa; poslije potvrde polja odmah primaju unos.\nKase i marketi: „Napravi kod\" za kasu upisanu u IRIS Adminu.\nSnimak baze za Menadžer se objavljuje ubrzo poslije izmjene podataka i uz „Razmijeni sada\".\nUnos pazara: smjene iste kase istog dana nisu označene kao mogući dupli unos.",
+  "napomene": "Logo i znak firme: izbor u Podešavanjima (Podaci firme), slanje na server i prikaz u Kasi, Menadžeru i na QR meniju; logo u PDF izvještajima, na kalkulaciji i platnim listićima; znak u zaglavlju programa i na ekranu izbora firme.\nRad preko lokalnog IRIS servera u radnji (uz instalaciju 1.0.117): uparivanje linkom, traženjem u mreži ili adresom uz potvrdu otiska.\nIzvozi plata: ispravljeni listići za radnike istog imena, listić radnika bez obračuna i nazivi fajlova.\nEkran Menadžer: jedan red po uređaju, sa brojem mjesečnih arhiva.\nZahtjev za udaljenu podršku traži pristanak korisnika.",
   "datum": "2026-11-08",
-  "sha256Android": "118119cabb84f18ecd0d9dbf64262f824395ce4aa36ced18c13e0887ac96773a",
-  "verzijaPrethodna": "1.0.115",
+  "sha256Android": "1bddeeda26c84e03f001ca6d322c8550e6f4f9fba0ef97f90dd980ec0782e27d",
+  "verzijaPrethodna": "1.0.116",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
