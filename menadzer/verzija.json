@@ -1,12 +1,12 @@
 {
-  "verzija": "1.8.1",
+  "verzija": "1.8.2",
   "datum": "2026-11-08",
-  "opis": "Bočni meni pamti položaj pri prelazu između ekrana. Veća dugmad za dodavanje i uklanjanje radnika u rasporedu na telefonu. Skenirana faktura, prijem i narudžba odlaze na server odmah kad je uređaj na vezi; Enter u polju za QR adresu radi i sa zalijepljenim tekstom.",
-  "paket": "menadzer-paket-1.8.1.json.gz",
-  "sha256": "2ea7c6bae0a16e846563b6a8e4961cd2fb8b0042d2bb8cdafa126c214143a225",
-  "velicina": 1378590,
+  "opis": "- Skeniranje faktura: kada račun glasi na drugog kupca, program to javlja odmah pri skeniranju i označava račun u spisku skeniranih; račun bez kupca nosi napomenu da ulazni PDV nije odbitan. Odluku o kalkulaciji donosi Knjigovodstvo.\n- Razmjena sa serverom, slanje izmjena, rezervna kopija i snimanje baze rade i kada je prozor programa prekriven drugim prozorom ili minimizovan.\n- Poruka poslije ažuriranja prikazuje izmjene instalirane verzije.\n- Uređivač QR menija: potvrda napuštanja nesačuvanih izmjena u prozoru programa.",
+  "paket": "menadzer-paket-1.8.2.json.gz",
+  "sha256": "6fd7b527409b2a8765f81b8b2a2ff7399b80517a90786dd3024a2144766d6dbd",
+  "velicina": 1381990,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "98aaa7d9f1e921b4e63b0ebfed44ac12257175020e68698d87ed31ec256b74f1",
-  "apkVelicina": 25228426
+  "apkSha256": "b4a223105c104cb3635ba6dea831f5d32d8c5d3d424aba505a95781136738014",
+  "apkVelicina": 25231314
 }
