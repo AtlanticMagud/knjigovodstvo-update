@@ -1,12 +1,12 @@
 {
-  "verzija": "1.8.0",
-  "datum": "2026-11-08",
-  "napomene": "Logo i znak firme sa servera: u zaglavlju kase, na prijavi i na računu (i na termalnom štampaču).\nRad preko lokalnog IRIS servera u radnji (Windows, uz instalaciju 1.8.0).\nPočni kao nova kasa (Podešavanja, samo šef, uz premještanje starih podataka).\nVrsta prodajnog mjesta dolazi iz Knjigovodstva.\nBrze tipke primaju svaki dodir; brzo kucanje u dijalogu ide u polje; dugmad plaćanja ne mijenjaju položaj.\nZahtjev za udaljenu podršku traži pristanak kasira.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.8.0.zip",
-  "sha256": "8b6ea7eeee7daa0fa055d97ccc1291bff90b39527856a3c9308e4ac2de4a7738",
-  "velicina": 1052369,
+  "verzija": "1.8.1",
+  "datum": "2026-11-09",
+  "napomene": "Kasa radi i kad je prozor u pozadini: stanje uživo, slanje računa Poreskoj upravi i razmjena se ne zaustavljaju.\nRačun se štampa direktno na podrazumijevani Windows štampač, bez prozora za izbor; prozor za izbor samo uz izričit izbor u Podešavanjima.\nUređivač QR menija: potvrda napuštanja izmjena u prozoru programa.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.8.1.zip",
+  "sha256": "ad8db4bd41d7ce3371d773cdb263f5dbfe83bd5852edc6f05b4139e138567948",
+  "velicina": 1054323,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.8.0",
-  "sha256Android": "78a50b68625bc3f460109ece1006020e8d114195e04004314ff3be75f9d9c71c"
+  "verzijaAndroid": "1.8.1",
+  "sha256Android": "70a6c83e496323c9a249deb2b59003b1069da6b8b28148efc1a0df15c6c5737c"
 }
