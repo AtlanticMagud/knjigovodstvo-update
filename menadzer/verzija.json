@@ -1,12 +1,12 @@
 {
-  "verzija": "1.7.0",
-  "datum": "2026-11-07",
-  "opis": "QR meni: uređivanje menija za goste (nazivi i opisi na osam jezika, slike, stolovi i QR kodovi). Apoteka (prikazuje se samo firmama sa apotekom): rokovi po seriji, povučene serije sa povratom dobavljaču, recepti i FZO po kasama, ljekovi iznad najviše dozvoljene cijene, prodaja ljekova za CInMED. Prijem robe: broj serije po stavci. Verzija sadrži i automatsko ažuriranje iz verzije 1.6.3.",
-  "paket": "menadzer-paket-1.7.0.json.gz",
-  "sha256": "4ab8bf37022677cc3428479e8a6c84d54f26161ada4e4b77f51204726195b2fa",
-  "velicina": 1352594,
+  "verzija": "1.7.1",
+  "datum": "2026-11-08",
+  "opis": "Folder rezervne kopije na Google Drive-u je zaseban za svaku firmu; folder druge firme se ne bira automatski. Poruke razmjene navode šta je primljeno, uz vrijeme posljednjeg snimka Knjigovodstva.",
+  "paket": "menadzer-paket-1.7.1.json.gz",
+  "sha256": "3c7a68875c95594ab4445bfb1ff6eee76f0b803e7ef0a8ce0f4c419887aea0ee",
+  "velicina": 1357360,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "d4b10e39c433dec54e007c2a40390f9740f4e61ed7b5148f36e103ae86bb9eff",
-  "apkVelicina": 25212422
+  "apkSha256": "435a1e886e5b7600534a6eedf75a60f42910c60e95f8264ca21d22369f2df776",
+  "apkVelicina": 25215854
 }
