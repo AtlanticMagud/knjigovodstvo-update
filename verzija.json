@@ -1,12 +1,12 @@
 {
-  "verzija": "1.0.118",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.118.zip",
+  "verzija": "1.0.119",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-1.0.119.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "12ffb191c5128d5d09261cecc9eeed5f26c52bc8d1bd4bf19a5074ec5799c9c8",
+  "sha256": "b3ef28d0279ca6ce83fbb1f9e961ab9c70d9f682b977491e611d0344279a7abe",
   "obavezno": false,
-  "napomene": "Unos pazara: napomena kad probne smjene kase nisu upisane u pazare, sa prečicom do podešavanja; naziv izvora zaključaka (server ili folder).\nOtpis sa kase za artikal koji nije u šifarniku: „Napravi artikal\" ili „Poveži sa postojećim\" (Povezivanje → Program za kase), uz potvrdu.\nPočetna: primljena roba se računa zaokruženo po stavci, kao na računu.\nPaket za kase: Badnji dan i Božić se više ne šalju kao neradni dani.\nFajl baze za Menadžer nosi tačno vrijeme snimka.\nOtvaranje baze bez prekida prikaza otvorenog ekrana.",
+  "napomene": "Snimak baze za Menadžer se objavljuje ubrzo poslije svake izmjene koju Menadžer prikazuje (artikli, cijene, otpisi, popis, pazari, nivelacije i ostalo); krug razmjene bez novih podataka ne objavljuje snimak.\nProgram radi i kad je prozor u pozadini: razmjena, objava snimka, obrada skenova i čitanje pošte se ne zaustavljaju.\nPočetna: primljena roba se računa iz stavki računa dobavljača, kao dug.\nUređivač QR menija: potvrda napuštanja izmjena u prozoru programa.",
   "datum": "2026-11-08",
-  "sha256Android": "ab683a6f0226b9a11c9e56a8eb1829271e0acb6fb01520439bf9099bd52b14a2",
-  "verzijaPrethodna": "1.0.117",
+  "sha256Android": "c6c8fec69cd868d7eaf51b4499c40204af5859f3b2d9d71b8d272ca43913df79",
+  "verzijaPrethodna": "1.0.118",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
