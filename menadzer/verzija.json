@@ -1,12 +1,12 @@
 {
-  "verzija": "1.7.1",
+  "verzija": "1.8.0",
   "datum": "2026-11-08",
-  "opis": "Folder rezervne kopije na Google Drive-u je zaseban za svaku firmu; folder druge firme se ne bira automatski. Poruke razmjene navode šta je primljeno, uz vrijeme posljednjeg snimka Knjigovodstva.",
-  "paket": "menadzer-paket-1.7.1.json.gz",
-  "sha256": "3c7a68875c95594ab4445bfb1ff6eee76f0b803e7ef0a8ce0f4c419887aea0ee",
-  "velicina": 1357360,
+  "opis": "Logo i znak firme sa servera u zaglavlju, na prijavi i u PDF dokumentima. Rad preko lokalnog IRIS servera u radnji (Windows, uz instalaciju 1.8.0). Počni kao nova firma (Pravila i limiti, uz rezervni zapis). Stari zapisi u mjesečnim arhivama — manji fajl za slanje. Usklađen klijent servera: zahtjev za udaljenu podršku traži pristanak korisnika.",
+  "paket": "menadzer-paket-1.8.0.json.gz",
+  "sha256": "3b57cda71ef4fbe1857ae4ae13ecb0b4383cb1def3038e7122d1160fa8b31384",
+  "velicina": 1375659,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "435a1e886e5b7600534a6eedf75a60f42910c60e95f8264ca21d22369f2df776",
-  "apkVelicina": 25215854
+  "apkSha256": "a602e4a2a9022a1c44dee0f7d2a6f0cd767b61e127ddc5a318e5cd6ffb3f36e7",
+  "apkVelicina": 25226870
 }
