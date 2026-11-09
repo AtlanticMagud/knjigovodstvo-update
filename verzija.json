@@ -1,12 +1,12 @@
 {
-  "verzija": "2.0.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.0.0.zip",
+  "verzija": "2.0.1",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.0.1.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "783e73042da210af34734ede3fb28c3c0d45c92c1c9417cbb3a2433f7d3b3f66",
+  "sha256": "f82349c9db4041775d3d32c2cf5f2167b2a21cd46eb52912eed5012dac4382a2",
   "obavezno": false,
-  "napomene": "IRIS CORVINA 2.0 — prva verzija druge generacije programa. Autor i nosilac prava: Dragomir Dačević. Sadrži sve izmjene iz 1.0.119.\nU „O programu\": autor i nosilac prava, i spisak licenci korišćenih biblioteka.\nZIP prilozi iz pošte (npr. računi i izvodi u ZIP arhivi) raspakuju se i u instaliranom programu.",
+  "napomene": "Poreske knjige: izbor jednog ili više objekata (marketa) u KPR, KIF, EDI, KPP, KEPU, Konta 134 i PDV po marketima, brzi izbor perioda (mjesec, kvartal, godina) i pretraga. Izabrani period i objekti važe za sve kartice.\nKnjiga primljenih računa: ispod knjige su kalkulacije za izabrani period i objekte, sa iznosima fakture (bez PDV, PDV po stopama, sa PDV), nabavnom vrijednošću, RUC-om i prodajnom vrijednošću; zbirno po objektu, dobavljaču, danu ili mjesecu; izvoz u Excel, PDF i XML, i sa stavkama.\nIzvozi knjiga nose izabrane objekte u podnaslovu i nazivu fajla.\nKalkulacije i fakture: izbor više objekata i brzi izbor perioda.",
   "datum": "2026-11-09",
-  "sha256Android": "2a9e1ff0e9d915975700b10670c7f340df7231429b829b8661dd8a478abd9a03",
-  "verzijaPrethodna": "1.0.119",
+  "sha256Android": "ee258bec107033ae3a5b8a764aa056cf1aca05c55f736c4000c2a6b7f5357e86",
+  "verzijaPrethodna": "2.0.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
