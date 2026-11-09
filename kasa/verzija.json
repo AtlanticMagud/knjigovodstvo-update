@@ -1,12 +1,12 @@
 {
-  "verzija": "1.8.1",
+  "verzija": "2.0.0",
   "datum": "2026-11-09",
-  "napomene": "Kasa radi i kad je prozor u pozadini: stanje uživo, slanje računa Poreskoj upravi i razmjena se ne zaustavljaju.\nRačun se štampa direktno na podrazumijevani Windows štampač, bez prozora za izbor; prozor za izbor samo uz izričit izbor u Podešavanjima.\nUređivač QR menija: potvrda napuštanja izmjena u prozoru programa.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-1.8.1.zip",
-  "sha256": "ad8db4bd41d7ce3371d773cdb263f5dbfe83bd5852edc6f05b4139e138567948",
-  "velicina": 1054323,
+  "napomene": "IRIS CORVINA 2.0 — prva verzija druge generacije programa. Autor i nosilac prava: Dragomir Dačević. Sadrži sve izmjene iz 1.8.1.\nPodešavanja → O programu: autor i nosilac prava i spisak licenci korišćenih biblioteka.\nUređivač QR menija: potvrda napuštanja nesačuvanih izmjena u prozoru kase.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.0.0.zip",
+  "sha256": "43cc56189d2908f806797e2f9ceff75f5d68e66371ba507e798594efabc7b98e",
+  "velicina": 1081605,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "1.8.1",
-  "sha256Android": "70a6c83e496323c9a249deb2b59003b1069da6b8b28148efc1a0df15c6c5737c"
+  "verzijaAndroid": "2.0.0",
+  "sha256Android": "91a6a53fa563e7029f39df3595ec438874da5ea83545802509eb2dba9e881939"
 }
