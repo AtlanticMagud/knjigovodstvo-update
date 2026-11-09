@@ -1,12 +1,12 @@
 {
-  "verzija": "1.8.2",
-  "datum": "2026-11-08",
-  "opis": "- Skeniranje faktura: kada račun glasi na drugog kupca, program to javlja odmah pri skeniranju i označava račun u spisku skeniranih; račun bez kupca nosi napomenu da ulazni PDV nije odbitan. Odluku o kalkulaciji donosi Knjigovodstvo.\n- Razmjena sa serverom, slanje izmjena, rezervna kopija i snimanje baze rade i kada je prozor programa prekriven drugim prozorom ili minimizovan.\n- Poruka poslije ažuriranja prikazuje izmjene instalirane verzije.\n- Uređivač QR menija: potvrda napuštanja nesačuvanih izmjena u prozoru programa.",
-  "paket": "menadzer-paket-1.8.2.json.gz",
-  "sha256": "6fd7b527409b2a8765f81b8b2a2ff7399b80517a90786dd3024a2144766d6dbd",
-  "velicina": 1381990,
+  "verzija": "2.0.0",
+  "datum": "2026-11-09",
+  "opis": "IRIS CORVINA 2.0 — prva verzija druge generacije programa; autor i nosilac prava Dragomir Dačević. Sadrži sve izmjene iz 1.8.2.\n- O programu (Ažuriranje programa, Pravila i limiti): autor i nosilac prava i licence korišćenih biblioteka; isti spisak licenci ide uz instalaciju (LICENCE-TRECIH-LICA.txt).\n- Potvrde i pitanja se prikazuju u prozoru programa umjesto sistemskih prozora; fokus tastature i čitača bar-koda ostaje u programu.\n- Provjera prijema skeniranjem: za stavke koje nisu skenirane bira se „Nisu stigle\", „Količine kao na fakturi\" ili „Nastavi skeniranje\".\n- Počni kao nova firma: razmjena koja je u toku završava se prije zamjene baze, a ništa iz veze prethodne firme ne ulazi u novu bazu.",
+  "paket": "menadzer-paket-2.0.0.json.gz",
+  "sha256": "9b399203addb4988f11ed9fa48c1d9851b4ccdaf13f27f0e1724367a2ae335e6",
+  "velicina": 1415294,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "b4a223105c104cb3635ba6dea831f5d32d8c5d3d424aba505a95781136738014",
-  "apkVelicina": 25231314
+  "apkSha256": "5ee113d07fb73663b52e21a376e4a9cc3aaf5dc8a77442bc8013ccfdd40b52fc",
+  "apkVelicina": 25245991
 }
