@@ -1,12 +1,12 @@
 {
-  "verzija": "2.0.0",
-  "datum": "2026-11-09",
-  "napomene": "IRIS CORVINA 2.0 — prva verzija druge generacije programa. Autor i nosilac prava: Dragomir Dačević. Sadrži sve izmjene iz 1.8.1.\nPodešavanja → O programu: autor i nosilac prava i spisak licenci korišćenih biblioteka.\nUređivač QR menija: potvrda napuštanja nesačuvanih izmjena u prozoru kase.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.0.0.zip",
-  "sha256": "43cc56189d2908f806797e2f9ceff75f5d68e66371ba507e798594efabc7b98e",
-  "velicina": 1081605,
+  "verzija": "2.1.0",
+  "datum": "2026-11-11",
+  "napomene": "Šifarnik artikala: više barkodova po artiklu, isti barkod na više artikala (izbor sa spiska), barkod zbirnog pakovanja dodaje broj komada.\nNepoznat barkod: svaki kasir ga odmah povezuje sa postojećim artiklom (ručni unos ili izbor sa spiska); premještanje barkoda odobrava šef.\nCijene po prodajnim mjestima i zakazane cijene iz Knjigovodstva i Menadžera; poništavanje posljednje izmjene cijene.\nPredračun (rolna i A4), etikete A4 4 × 10 i prodaja po kupcima u Računima.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.1.0.zip",
+  "sha256": "e8f95a67d50a6d7619a455df98060b55788a5dedde8e97b35892cc0410fd1ceb",
+  "velicina": 1117939,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.0.0",
-  "sha256Android": "91a6a53fa563e7029f39df3595ec438874da5ea83545802509eb2dba9e881939"
+  "verzijaAndroid": "2.1.0",
+  "sha256Android": "aa494bfd29615eac52a19056cac27f05e946edf4d6fffd9fa6156e4114d58bce"
 }
