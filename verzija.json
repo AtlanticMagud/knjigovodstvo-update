@@ -1,12 +1,12 @@
 {
-  "verzija": "2.0.1",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.0.1.zip",
+  "verzija": "2.1.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.1.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f82349c9db4041775d3d32c2cf5f2167b2a21cd46eb52912eed5012dac4382a2",
+  "sha256": "9032b0641bd40c3ccbde061a91f699b2160274b8c2a383a98e4e86456b295426",
   "obavezno": false,
-  "napomene": "Poreske knjige: izbor jednog ili više objekata (marketa) u KPR, KIF, EDI, KPP, KEPU, Konta 134 i PDV po marketima, brzi izbor perioda (mjesec, kvartal, godina) i pretraga. Izabrani period i objekti važe za sve kartice.\nKnjiga primljenih računa: ispod knjige su kalkulacije za izabrani period i objekte, sa iznosima fakture (bez PDV, PDV po stopama, sa PDV), nabavnom vrijednošću, RUC-om i prodajnom vrijednošću; zbirno po objektu, dobavljaču, danu ili mjesecu; izvoz u Excel, PDF i XML, i sa stavkama.\nIzvozi knjiga nose izabrane objekte u podnaslovu i nazivu fajla.\nKalkulacije i fakture: izbor više objekata i brzi izbor perioda.",
-  "datum": "2026-11-09",
-  "sha256Android": "ee258bec107033ae3a5b8a764aa056cf1aca05c55f736c4000c2a6b7f5357e86",
-  "verzijaPrethodna": "2.0.0",
+  "napomene": "Šifarnik artikala: trajne šifre artikala, više barkodova po artiklu i dijeljeni barkodovi, PDV pravila po vrsti objekta i stopa od datuma.\nCjenovnik kasa: cijene po prodajnim mjestima (tri prikaza), artikli i barkodovi, zakazane promjene cijena i poništavanje izmjene; razmjena sa Kasom i Menadžerom u novom obliku 2.1.\nExcel izvoz i uvoz šifarnika sa pregledom razlika prije upisa i poništavanjem uvoza; uvoz baze artikala i povezivanje prodajnih mjesta sa marketima.\nNepoznat barkod na Popisu skenerom i Početnom stanju robe odmah se povezuje sa artiklom; traka za fakture čiji artikli nemaju barkod.\nIzlazne fakture i partneri: interna napomena, period prometa, kopija dokumenta, žiro računi i rabat po artiklu; razlika u cijeni (RUC), brza pretraga i povezani dokumenti; izvoz tabela u CSV.\nNapomena: poslije prelaska na 2.1.0 vraćanje na prethodnu verziju programa nije moguće.",
+  "datum": "2026-11-11",
+  "sha256Android": "7886cb7c7ccb2b7a9ed8e2431259ac634072ef1139bd4196a865a9f3f8eb2606",
+  "verzijaPrethodna": "2.0.1",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
