@@ -1,12 +1,12 @@
 {
-  "verzija": "2.1.0",
+  "verzija": "2.2.0",
   "datum": "2026-11-11",
-  "opis": "Šifarnik artikala, barkodova i cijena po prodajnim mjestima.\n- Isti barkod može imati više artikala; pri skeniranju se artikal bira u spisku. Barkod se ne premješta sa artikla na artikal bez pitanja.\n- Nepoznat barkod: ista kartica na popisu, provjeri prijema, prijemu, povratu, trebovanju, otpisu, u pretrazi artikla i na ekranu Artikli — povezivanje sa postojećim artiklom ili „Nov artikal\".\n- Primljena faktura sa artiklima bez barkoda: traka „Unesi barkodove\" na kalkulaciji i značka na meniju.\n- Cijene: prvo se bira radni market; „Brza promjena\" (barkod ili naziv, nova cijena, Enter); „Svi marketi\" je pregled sa izmjenom u malom prozoru; opšta cijena firme se mijenja posebno, uz potvrdu; „Poništi\" i „Moje izmjene danas\".\n- Menadžer mijenja cijene samo dodijeljenih marketa (ekran Korisnici).\n- Artikal: jedinica mjere iz šifarnika, grupa, proizvođač, neto količina, pakovanje, više barkodova i cijene po marketima; šifru dodjeljuje program.\n- Artikli: filteri „Bez barkoda\" i „Pogrešan kontrolni broj\"; izvoz šifarnika u Excel.",
-  "paket": "menadzer-paket-2.1.0.json.gz",
-  "sha256": "8238fcfa4aee23e559370d8c43ce6ae09cf87e4f85d71b9da3d7aa4be04abd0f",
-  "velicina": 1477335,
+  "opis": "Ekran Hotel za smještajne objekte firme.\n- Danas: dolasci, odlasci, gosti u objektu, sobe za čišćenje i rokovi prijave gostiju.\n- Tabla soba: stanje svake sobe (slobodna, gost u sobi, dolazak, čišćenje, van upotrebe).\n- Kalendar popunjenosti po sobama i danima.\n- Rezervacije: pregled, unos i izmjena, sa podacima o boravku i računom sobe. Fiskalne radnje i lični podaci gostiju nisu dostupni na ovom ekranu.\n- Čišćenje: spisak soba za čišćenje i promjena stanja sobe.\n- Izvještaji: dnevni pregled, popunjenost i prihod, boravišna taksa, dolasci i noćenja po državi (TU-11), avansi, prihod po izvoru rezervacije; uz štampu.\n- Način poslovanja firme (trgovina, ugostiteljstvo, hotel): meni prikazuje dijelove za izabrane djelatnosti; bez izbora prikazuje se sve. Bira administrator ili direktor u Pravila i limiti.\n- Obavještenje kad ističe rok prijave gostiju (dva sata prije isteka i po isteku); uključuje se u Moj nalog → Obavještenja.",
+  "paket": "menadzer-paket-2.2.0.json.gz",
+  "sha256": "d0b9cea21830ec0a06874a41d861ed4821a94be0ee437e14158765b619cac17f",
+  "velicina": 1546407,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "597d0edb22dff66c76951f08d32bc4088c3d6276114000b1a451e25a20bca198",
-  "apkVelicina": 25289667
+  "apkSha256": "574f17ce5717b0686f0e0e3ec5be08752bc61a126560877cca62b84358c1ced8",
+  "apkVelicina": 25334915
 }
