@@ -1,12 +1,12 @@
 {
-  "verzija": "2.0.0",
-  "datum": "2026-11-09",
-  "opis": "IRIS CORVINA 2.0 — prva verzija druge generacije programa; autor i nosilac prava Dragomir Dačević. Sadrži sve izmjene iz 1.8.2.\n- O programu (Ažuriranje programa, Pravila i limiti): autor i nosilac prava i licence korišćenih biblioteka; isti spisak licenci ide uz instalaciju (LICENCE-TRECIH-LICA.txt).\n- Potvrde i pitanja se prikazuju u prozoru programa umjesto sistemskih prozora; fokus tastature i čitača bar-koda ostaje u programu.\n- Provjera prijema skeniranjem: za stavke koje nisu skenirane bira se „Nisu stigle\", „Količine kao na fakturi\" ili „Nastavi skeniranje\".\n- Počni kao nova firma: razmjena koja je u toku završava se prije zamjene baze, a ništa iz veze prethodne firme ne ulazi u novu bazu.",
-  "paket": "menadzer-paket-2.0.0.json.gz",
-  "sha256": "9b399203addb4988f11ed9fa48c1d9851b4ccdaf13f27f0e1724367a2ae335e6",
-  "velicina": 1415294,
+  "verzija": "2.1.0",
+  "datum": "2026-11-11",
+  "opis": "Šifarnik artikala, barkodova i cijena po prodajnim mjestima.\n- Isti barkod može imati više artikala; pri skeniranju se artikal bira u spisku. Barkod se ne premješta sa artikla na artikal bez pitanja.\n- Nepoznat barkod: ista kartica na popisu, provjeri prijema, prijemu, povratu, trebovanju, otpisu, u pretrazi artikla i na ekranu Artikli — povezivanje sa postojećim artiklom ili „Nov artikal\".\n- Primljena faktura sa artiklima bez barkoda: traka „Unesi barkodove\" na kalkulaciji i značka na meniju.\n- Cijene: prvo se bira radni market; „Brza promjena\" (barkod ili naziv, nova cijena, Enter); „Svi marketi\" je pregled sa izmjenom u malom prozoru; opšta cijena firme se mijenja posebno, uz potvrdu; „Poništi\" i „Moje izmjene danas\".\n- Menadžer mijenja cijene samo dodijeljenih marketa (ekran Korisnici).\n- Artikal: jedinica mjere iz šifarnika, grupa, proizvođač, neto količina, pakovanje, više barkodova i cijene po marketima; šifru dodjeljuje program.\n- Artikli: filteri „Bez barkoda\" i „Pogrešan kontrolni broj\"; izvoz šifarnika u Excel.",
+  "paket": "menadzer-paket-2.1.0.json.gz",
+  "sha256": "8238fcfa4aee23e559370d8c43ce6ae09cf87e4f85d71b9da3d7aa4be04abd0f",
+  "velicina": 1477335,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "5ee113d07fb73663b52e21a376e4a9cc3aaf5dc8a77442bc8013ccfdd40b52fc",
-  "apkVelicina": 25245991
+  "apkSha256": "597d0edb22dff66c76951f08d32bc4088c3d6276114000b1a451e25a20bca198",
+  "apkVelicina": 25289667
 }
