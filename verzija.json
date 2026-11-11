@@ -1,12 +1,12 @@
 {
-  "verzija": "2.2.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.2.0.zip",
+  "verzija": "2.2.1",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.2.1.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "97864bbcb376c994a5e1a174648707c9825d15db5b5ab68ca4bffbc52e54341d",
+  "sha256": "902e23ea4df5c288bda2ba48949e0c9b93b9444ba914ea641de71fd9e3cb1fc6",
   "obavezno": false,
-  "napomene": "Modul Hotel: podešavanja objekata smještaja i boravišne takse, izvještaji hotela (smještaj, smjene recepcije, avansi) i podsjetnik na Početnoj.\nBoravišna taksa se vodi kao obaveza prema opštini, a ne kao prihod: odvaja se iz pazara i PR-PDV-a; evidencija uplata i ručnog obračuna takse.\nNačin poslovanja firme (trgovina, ugostiteljstvo, hotelijerstvo) bira se pri otvaranju firme i u Podešavanjima; raspored ekrana prati izabrani način.\nIspravka: poslije razmjene sa serverom program više ne upisuje nepromijenjene podatke i ne snima bazu bez potrebe.",
+  "napomene": "Uvoz baze artikala sa računara u ulozi administratora: uvoz se poslije pregleda šalje glavnom računaru firme, koji ga izvršava pri sljedećoj razmjeni, uz rezervnu kopiju baze.\nNa isti način se sa tog računara poništava posljednji uvoz i povezuju prodajna mjesta sa marketima; stanje poslatog naloga vidi se na ekranu Cjenovnik, jezičak „Razmjena i Excel\".",
   "datum": "2026-11-11",
-  "sha256Android": "b74212a1a7f828b45dfbf67d89897850c87042268b85ad9fb46a300deb56cd99",
-  "verzijaPrethodna": "2.1.0",
+  "sha256Android": "7463c4ee919db0eccbe512cc49e4546027d5ea57511190a6192d035f14cf9385",
+  "verzijaPrethodna": "2.2.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
