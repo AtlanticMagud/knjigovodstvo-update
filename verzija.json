@@ -1,12 +1,12 @@
 {
-  "verzija": "2.2.1",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.2.1.zip",
+  "verzija": "2.3.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.3.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "902e23ea4df5c288bda2ba48949e0c9b93b9444ba914ea641de71fd9e3cb1fc6",
+  "sha256": "d54ec4b999845dc0a47b12c86dcc60108db0e1bb5f9fd4feb41f248f4a6f3040",
   "obavezno": false,
-  "napomene": "Uvoz baze artikala sa računara u ulozi administratora: uvoz se poslije pregleda šalje glavnom računaru firme, koji ga izvršava pri sljedećoj razmjeni, uz rezervnu kopiju baze.\nNa isti način se sa tog računara poništava posljednji uvoz i povezuju prodajna mjesta sa marketima; stanje poslatog naloga vidi se na ekranu Cjenovnik, jezičak „Razmjena i Excel\".",
+  "napomene": "Jezik programa: natpisi na ekranu mogu biti na srpskom, engleskom, ruskom ili turskom (Podešavanja → Jezik; izbor i na ekranu izbora firme). Jezik važi za ovaj uređaj.\nIzvozi (PDF, Excel, XML), štampa, fiskalni računi i obrasci za Poresku upravu ostaju na crnogorskom jeziku.",
   "datum": "2026-11-11",
-  "sha256Android": "7463c4ee919db0eccbe512cc49e4546027d5ea57511190a6192d035f14cf9385",
-  "verzijaPrethodna": "2.2.0",
+  "sha256Android": "496366c201f034d60e15a61e8cf7a05ba2adb33f21068b51f608ade16065ab64",
+  "verzijaPrethodna": "2.2.1",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

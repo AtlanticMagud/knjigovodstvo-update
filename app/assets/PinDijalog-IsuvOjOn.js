@@ -1,4 +1,4 @@
-import{a0 as j,a1 as d,a2 as p,Y as v,Z as a,$ as c,a3 as k,a4 as g,a5 as f}from"./index-s3SQWuWK.js";async function x(e){const t=j(e);return t.ok?p(e)?new Promise(s=>{const n=document.createElement("div");document.body.appendChild(n);const o=v.createRoot(n),r=l=>{o.unmount(),n.remove(),s(l)};o.render(a.jsx(h,{radnja:e,onKraj:r}))}):!0:(await d(t.razlog||""),!1)}async function z(e,t){const s=j("zakljucavanje");if(!s.ok)return await d(s.razlog||""),!1;const n=t?`Otključati ${e}?
+import{a1 as j,a2 as d,a3 as p,Y as v,Z as a,$ as c,a4 as k,a5 as g,a6 as f}from"./index-D-98D-K1.js";async function x(e){const t=j(e);return t.ok?p(e)?new Promise(s=>{const n=document.createElement("div");document.body.appendChild(n);const o=v.createRoot(n),r=l=>{o.unmount(),n.remove(),s(l)};o.render(a.jsx(h,{radnja:e,onKraj:r}))}):!0:(await d(t.razlog||""),!1)}async function z(e,t){const s=j("zakljucavanje");if(!s.ok)return await d(s.razlog||""),!1;const n=t?`Otključati ${e}?
 
 Poslije otključavanja se kalkulacije i fakture tog mjeseca mogu mijenjati i brisati, pa se mogu promijeniti i knjige već predate knjigovođi.`:`Zaključati ${e}?
 
