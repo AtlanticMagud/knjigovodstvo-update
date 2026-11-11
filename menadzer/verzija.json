@@ -1,12 +1,12 @@
 {
-  "verzija": "2.2.0",
+  "verzija": "2.3.0",
   "datum": "2026-11-11",
-  "opis": "Ekran Hotel za smještajne objekte firme.\n- Danas: dolasci, odlasci, gosti u objektu, sobe za čišćenje i rokovi prijave gostiju.\n- Tabla soba: stanje svake sobe (slobodna, gost u sobi, dolazak, čišćenje, van upotrebe).\n- Kalendar popunjenosti po sobama i danima.\n- Rezervacije: pregled, unos i izmjena, sa podacima o boravku i računom sobe. Fiskalne radnje i lični podaci gostiju nisu dostupni na ovom ekranu.\n- Čišćenje: spisak soba za čišćenje i promjena stanja sobe.\n- Izvještaji: dnevni pregled, popunjenost i prihod, boravišna taksa, dolasci i noćenja po državi (TU-11), avansi, prihod po izvoru rezervacije; uz štampu.\n- Način poslovanja firme (trgovina, ugostiteljstvo, hotel): meni prikazuje dijelove za izabrane djelatnosti; bez izbora prikazuje se sve. Bira administrator ili direktor u Pravila i limiti.\n- Obavještenje kad ističe rok prijave gostiju (dva sata prije isteka i po isteku); uključuje se u Moj nalog → Obavještenja.",
-  "paket": "menadzer-paket-2.2.0.json.gz",
-  "sha256": "d0b9cea21830ec0a06874a41d861ed4821a94be0ee437e14158765b619cac17f",
-  "velicina": 1546407,
+  "opis": "Jezik programa: srpski, engleski, ruski ili turski.\n- Izbor u Moj nalog → Jezik programa i na ekranu prijave; jezik važi za ovaj uređaj.\n- Izvozi (Excel, PDF), štampa i etikete ostaju na crnogorskom jeziku.",
+  "paket": "menadzer-paket-2.3.0.json.gz",
+  "sha256": "ea46fb1eb8175b93eb0a226f526cd17afb25f2999001bb39625fc10f92942e44",
+  "velicina": 1897839,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "574f17ce5717b0686f0e0e3ec5be08752bc61a126560877cca62b84358c1ced8",
-  "apkVelicina": 25334915
+  "apkSha256": "cc9a656ad5d93ea7a061cedc9e30823af8133c260a6a6785c5a655fb5d0c9227",
+  "apkVelicina": 25584045
 }
