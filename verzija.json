@@ -1,12 +1,12 @@
 {
-  "verzija": "2.1.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.1.0.zip",
+  "verzija": "2.2.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.2.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "9032b0641bd40c3ccbde061a91f699b2160274b8c2a383a98e4e86456b295426",
+  "sha256": "97864bbcb376c994a5e1a174648707c9825d15db5b5ab68ca4bffbc52e54341d",
   "obavezno": false,
-  "napomene": "Šifarnik artikala: trajne šifre artikala, više barkodova po artiklu i dijeljeni barkodovi, PDV pravila po vrsti objekta i stopa od datuma.\nCjenovnik kasa: cijene po prodajnim mjestima (tri prikaza), artikli i barkodovi, zakazane promjene cijena i poništavanje izmjene; razmjena sa Kasom i Menadžerom u novom obliku 2.1.\nExcel izvoz i uvoz šifarnika sa pregledom razlika prije upisa i poništavanjem uvoza; uvoz baze artikala i povezivanje prodajnih mjesta sa marketima.\nNepoznat barkod na Popisu skenerom i Početnom stanju robe odmah se povezuje sa artiklom; traka za fakture čiji artikli nemaju barkod.\nIzlazne fakture i partneri: interna napomena, period prometa, kopija dokumenta, žiro računi i rabat po artiklu; razlika u cijeni (RUC), brza pretraga i povezani dokumenti; izvoz tabela u CSV.\nNapomena: poslije prelaska na 2.1.0 vraćanje na prethodnu verziju programa nije moguće.",
+  "napomene": "Modul Hotel: podešavanja objekata smještaja i boravišne takse, izvještaji hotela (smještaj, smjene recepcije, avansi) i podsjetnik na Početnoj.\nBoravišna taksa se vodi kao obaveza prema opštini, a ne kao prihod: odvaja se iz pazara i PR-PDV-a; evidencija uplata i ručnog obračuna takse.\nNačin poslovanja firme (trgovina, ugostiteljstvo, hotelijerstvo) bira se pri otvaranju firme i u Podešavanjima; raspored ekrana prati izabrani način.\nIspravka: poslije razmjene sa serverom program više ne upisuje nepromijenjene podatke i ne snima bazu bez potrebe.",
   "datum": "2026-11-11",
-  "sha256Android": "7886cb7c7ccb2b7a9ed8e2431259ac634072ef1139bd4196a865a9f3f8eb2606",
-  "verzijaPrethodna": "2.0.1",
+  "sha256Android": "b74212a1a7f828b45dfbf67d89897850c87042268b85ad9fb46a300deb56cd99",
+  "verzijaPrethodna": "2.1.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
