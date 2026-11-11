@@ -1,12 +1,12 @@
 {
-  "verzija": "2.2.0",
+  "verzija": "2.3.0",
   "datum": "2026-11-11",
-  "napomene": "Recepcija hotela: rezervacije, prijava gostiju, račun sobe, avansni račun i plaćanje „Na sobu\" (račun gosta ulazi u račun sobe i plaća se pri odjavi sumarnim računom); radi uz vezu kase sa serverom.\nNovo pravo kasira „Recepcija (lični podaci gostiju)\": bez njega se vidi samo spisak gostiju, bez ličnih podataka.\nPodešavanja → Način poslovanja: djelatnosti firme (prikazuju se samo potrebni dijelovi kase) i uključivanje recepcije.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.2.0.zip",
-  "sha256": "082ea9484234f6afe9f522e7c3fe8a129ce16d7297b8617dfa574275263d06ea",
-  "velicina": 1188027,
+  "napomene": "Jezik programa: natpisi na ekranu kase mogu biti na srpskom, engleskom, ruskom ili turskom (Podešavanja → Jezik programa; izbor i na ekranu povezivanja kase). Jezik važi za ovu kasu i mijenja se odmah.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.3.0.zip",
+  "sha256": "04103e2f1f8c1cdf93a42413800ec8f24725a96577793a8e1245e80ad9c08f9b",
+  "velicina": 1471186,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.2.0",
-  "sha256Android": "afb96fda5c9181f246e811dc52a7d01f2236bb47838ce9aaf3bca31e371e26da"
+  "verzijaAndroid": "2.3.0",
+  "sha256Android": "f36eb3cd63697b26dd1ab471d0f1532334eea63a9767a333c5199d5790ae134a"
 }
