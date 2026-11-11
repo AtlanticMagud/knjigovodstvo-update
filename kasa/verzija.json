@@ -1,12 +1,12 @@
 {
-  "verzija": "2.1.0",
+  "verzija": "2.2.0",
   "datum": "2026-11-11",
-  "napomene": "Šifarnik artikala: više barkodova po artiklu, isti barkod na više artikala (izbor sa spiska), barkod zbirnog pakovanja dodaje broj komada.\nNepoznat barkod: svaki kasir ga odmah povezuje sa postojećim artiklom (ručni unos ili izbor sa spiska); premještanje barkoda odobrava šef.\nCijene po prodajnim mjestima i zakazane cijene iz Knjigovodstva i Menadžera; poništavanje posljednje izmjene cijene.\nPredračun (rolna i A4), etikete A4 4 × 10 i prodaja po kupcima u Računima.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.1.0.zip",
-  "sha256": "e8f95a67d50a6d7619a455df98060b55788a5dedde8e97b35892cc0410fd1ceb",
-  "velicina": 1117939,
+  "napomene": "Recepcija hotela: rezervacije, prijava gostiju, račun sobe, avansni račun i plaćanje „Na sobu\" (račun gosta ulazi u račun sobe i plaća se pri odjavi sumarnim računom); radi uz vezu kase sa serverom.\nNovo pravo kasira „Recepcija (lični podaci gostiju)\": bez njega se vidi samo spisak gostiju, bez ličnih podataka.\nPodešavanja → Način poslovanja: djelatnosti firme (prikazuju se samo potrebni dijelovi kase) i uključivanje recepcije.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.2.0.zip",
+  "sha256": "082ea9484234f6afe9f522e7c3fe8a129ce16d7297b8617dfa574275263d06ea",
+  "velicina": 1188027,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.1.0",
-  "sha256Android": "aa494bfd29615eac52a19056cac27f05e946edf4d6fffd9fa6156e4114d58bce"
+  "verzijaAndroid": "2.2.0",
+  "sha256Android": "afb96fda5c9181f246e811dc52a7d01f2236bb47838ce9aaf3bca31e371e26da"
 }
