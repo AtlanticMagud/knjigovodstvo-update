@@ -4,44 +4,44 @@
 // Uloga: aplikacija mora raditi i bez mreže (u radnji signal zna da padne), a nova
 // objava na GitHub Pages-u mora sama stići do telefona. Zato se pri instalaciji
 // keširaju svi fajlovi verzije, a stari keševi se brišu pri aktivaciji (osim jednog prethodnog).
-const VERZIJA = "2.3.0"
+const VERZIJA = "2.3.1"
 const KES = 'knjigovodstvo-' + VERZIJA
 const FAJLOVI = [
   "LICENCE-TRECIH-LICA.txt",
-  "assets/NalogGlavnom-CZpb7-PH.js",
-  "assets/PinDijalog-IsuvOjOn.js",
+  "assets/NalogGlavnom-Dea6es4V.js",
+  "assets/PinDijalog-CMnsevSY.js",
   "assets/_virtual_licence-trecih-lica-yX7bAhEi.js",
   "assets/amblem-svijetli-192-CoeYFji2.png",
   "assets/amblem-svijetli-96-BNRmYCi1.png",
   "assets/amblem-tamni-192-Dlvx0PIq.png",
   "assets/amblem-tamni-96-D-JBuMdz.png",
-  "assets/artikli-CvLNy4lU.js",
-  "assets/bankpdf-CkgCVDpq.js",
-  "assets/cijene-DlqNU2PJ.js",
-  "assets/en-DXlpaupD.js",
-  "assets/index-BsALapHI.js",
-  "assets/index-CQ86F8GS.js",
-  "assets/index-CVy06ibv.js",
-  "assets/index-D-98D-K1.js",
+  "assets/artikli-dDKLCLK2.js",
+  "assets/bankpdf-Dy06Erwr.js",
+  "assets/cijene-DiTU6lzl.js",
+  "assets/en-JTYOXv6P.js",
+  "assets/index-BHHonJn7.js",
+  "assets/index-ByutPprS.js",
   "assets/index-DNzFMgCo.js",
-  "assets/index-IH1RvIRi.js",
+  "assets/index-DPYSpYRN.js",
+  "assets/index-DRciV-Li.js",
+  "assets/index-DolWH6_5.js",
   "assets/index-ggsP5-uy.js",
-  "assets/index-hb4fOOYw.js",
   "assets/index-nYT8KbMO.css",
-  "assets/jezik-Bu7h76JD.js",
-  "assets/kljucevi-D4lB7q1v.js",
-  "assets/knjpregled-COamF83Z.js",
-  "assets/nlbizvod-i6vQhh87.js",
+  "assets/index-vj2WAk3v.js",
+  "assets/jezik-CiJU4EeP.js",
+  "assets/kljucevi-DOZNXfCI.js",
+  "assets/knjpregled-C1rlC84J.js",
+  "assets/nlbizvod-CTewdq0h.js",
   "assets/pdf.worker-Mx0w3D2U.js",
-  "assets/renumeracija-CSsaS9ha.js",
-  "assets/ru-CPwAwuO3.js",
-  "assets/salterizvod-Hi1KgqaQ.js",
+  "assets/renumeracija-CPts3-Sj.js",
+  "assets/ru-B5TzXzkH.js",
+  "assets/salterizvod-6wiT4Ziw.js",
   "assets/sql-wasm-UFUCzYNW.wasm",
-  "assets/tr-CQZ2pfRa.js",
+  "assets/tr-BeB5uVW8.js",
   "assets/web-BXJjiGQ6.js",
-  "assets/web-BrPVwMnC.js",
   "assets/web-DRnNXkco.js",
   "assets/web-sfuwvzF6.js",
+  "assets/web-xnmDuaKh.js",
   "assets/worker.min-32WLk7pY.js",
   "ikone/favicon-32.png",
   "ikone/ikona-180.png",
@@ -51,7 +51,7 @@ const FAJLOVI = [
   "index.html",
   "manifest.webmanifest"
 ]
-const OBAVEZNI = ["index.html","assets/index-D-98D-K1.js","assets/index-nYT8KbMO.css"]
+const OBAVEZNI = ["index.html","assets/index-BHHonJn7.js","assets/index-nYT8KbMO.css"]
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {

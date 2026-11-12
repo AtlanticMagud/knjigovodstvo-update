@@ -1,12 +1,12 @@
 {
-  "verzija": "2.3.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.3.0.zip",
+  "verzija": "2.3.1",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.3.1.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "d54ec4b999845dc0a47b12c86dcc60108db0e1bb5f9fd4feb41f248f4a6f3040",
+  "sha256": "f7441a9f820faaa11563636028857e4d66feb4560137d50d41c5e0b516b23c5f",
   "obavezno": false,
-  "napomene": "Jezik programa: natpisi na ekranu mogu biti na srpskom, engleskom, ruskom ili turskom (Podešavanja → Jezik; izbor i na ekranu izbora firme). Jezik važi za ovaj uređaj.\nIzvozi (PDF, Excel, XML), štampa, fiskalni računi i obrasci za Poresku upravu ostaju na crnogorskom jeziku.",
-  "datum": "2026-11-11",
-  "sha256Android": "496366c201f034d60e15a61e8cf7a05ba2adb33f21068b51f608ade16065ab64",
-  "verzijaPrethodna": "2.2.1",
+  "napomene": "Njegošev dan (13. i 14. novembar) upisan je kao državni praznik: neradni dani u smjenama, platama, rokovima i kasama.\nKadrovi → Svi dokumenti → „Odluka: rad na praznik\": izbor praznika iz spiska, dodavanje praznika, promjena datuma i naziva, izbor objekata, radno vrijeme, broj i datum odluke, pravni osnov i „Dostaviti\". Odluka se pravi po obrascu firme i upisuje u evidenciju dokumenata.",
+  "datum": "2026-11-12",
+  "sha256Android": "03aec5ba36a3baad806d70043ae50c4c859744ad718f8d1a3618d7d9629fb102",
+  "verzijaPrethodna": "2.3.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
