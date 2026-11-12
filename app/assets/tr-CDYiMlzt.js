@@ -3200,6 +3200,7 @@ const a=`[\r
 "EDI — Günlük raporlar kaydı",\r
 "Etkin alış",\r
 "Egzotik meyveler",\r
+"Giriş ekranı açık değil.",\r
 "ekran: {0}",\r
 "Elektrik",\r
 "ELEKTRONİK GÜNLÜK — DÜZENLENEN FATURALAR",\r
@@ -3439,6 +3440,7 @@ const a=`[\r
 "Firma çalışmaya hazır. Diğer ayarlar zorunlu değildir ve sonra düzenlenebilir.",\r
 "Firma KDV sistemindedir",\r
 "Firma sunucuyla eşleştirilmiş: bu klasöre yalnızca yedekler kaydedilir, veri alışverişi dosyaları kaydedilmez.",\r
+"Fatura işlenmeden önce firma kapatıldı.",\r
 "Firma Vergi Mükellefleri Sicili'nde mevcut değil.",\r
 "Firmanın henüz Yönetici'si yok.",\r
 "Firmanın hiç işyeri yok.",\r
@@ -3959,6 +3961,7 @@ const a=`[\r
 "Aynı mağaza ve gün birden fazla girilmiş (aynı kasanın vardiyaları sayılmaz) veya 0,00 EUR hasılat",\r
 "Aynı mağaza ve günün birden fazla girilmesi, mağazada birden çok kasa olmadıkça mükerrer ciro ve KDV anlamına gelir. Aynı kasanın aynı gündeki vardiyaları (farklı Z numarası) mükerrer değildir; kasadan gelen hasılat yalnızca aynı kasa, aynı Z numarası ve aynı günde mükerrerdir. 0,00 EUR hasılatlar da gösterilir. Z raporuyla karşılaştırıldıktan sonra hatalı satır silinir veya düzeltilir; silme ve düzeltme diğer bilgisayarlarda da geçerlidir.",\r
 "aynı ad",\r
+"Aynı fatura zaten mevcut",\r
 "Birden fazla maliyet hesabında aynı sıra numarası: firma {0}, mağazalar {1}; \\"~\\" içeren numaralar: {2}. İki bilgisayar aynı anda numara verdiğinde oluşurlar — yeniden numaralandırma bunları düzeltir.",\r
 "Aynı telefon numarası zaten \\"{0}\\" müşterisine ait; müşteri listede işaretlenebilir.",\r
 "aynı Z no. {0}, {1} için zaten girilmiş",\r
@@ -5490,6 +5493,7 @@ const a=`[\r
 "Listede",\r
 "Belirsiz süreli",\r
 "Her iki zaman diliminde de aynı çalışan var. Değişim mümkün değil.",\r
+"işlenmeyi bekleyen: {0}",\r
 "Belirli süreli, bitiş (boş = belirsiz süreli)",\r
 "Belirli süreli",\r
 "Muhasebe Kanunu'nun 7. maddesi (Karadağ Resmî Gazetesi, sayı 84/25) uyarınca ve 31.12.{0} tarihi itibarıyla verilere göre:",\r
@@ -5778,6 +5782,7 @@ const a=`[\r
 "naSobu.potpis",\r
 "naSobu.ukljuceno",\r
 "Saymaya devam et",\r
+"Çalışmaya devam et",\r
 "Öğrenildi",\r
 "nav",\r
 "Geri",\r
@@ -6772,6 +6777,7 @@ const a=`[\r
 "toplam hesaplanan",\r
 "Toplam hesaplanan",\r
 "Faturaların işlenmesi telefonda mümkün değil. Kalkülasyonları ve belge numaralarını bilgisayar oluşturur.",\r
+"işlenemeyen: {0}",\r
 "İşleniyor…",\r
 "İşlenmiş veritabanı (telefondaki raporlar)",\r
 "İşlenenler",\r
@@ -9647,7 +9653,9 @@ const a=`[\r
 "hesap firmanın hesapları arasında değil (Ayarlar → Firma); ödemeler otomatik olarak kaydedilmedi ve inceleme bekliyor",\r
 "Fiş Gelir İdaresi tarafından onaylanmamıştır (JIKR yok).",\r
 "Fiş gönderime hazırlanmamış.",\r
+"Fatura kaydedilmedi: aynı tedarikçi, tarih ve tutar zaten mevcut.",\r
 "belediye hesabı",\r
+"Bu tedarikçinin {0} tarihli, {1} EUR tutarındaki faturası zaten girilmiş (maliyet hesabı {2}).\\n\\nAynı tedarikçi, tarih ve tutarla bir fatura daha girilsin mi?",\r
 "Bu ekstrenin hesabı ({0}) tanınmadı. Aidiyetin otomatik kontrolü mümkün değil.\\n\\n{1} firmasının ekstresi olarak aktarılsın mı?",\r
 "{0} alıcı hesabı bilinen bir kamu gelirleri hesabı değil",\r
 "alıcı hesabı {0}, ancak ödeme {1} için yapılmış",\r
@@ -9681,6 +9689,7 @@ const a=`[\r
 "mali onay bekleyen fiş",\r
 "48 saatten uzun süredir gönderilmeyi bekleyen fişler: {0}. Öngörülen süre aşıldı. Fişlerin hemen gönderilmesi veya sorunun Vergi İdaresi'ne bildirilmesi gerekir.",\r
 "Girilmeyen fatura sayısı: {0}. Son hata: {1}",\r
+"Girilmeyen fatura sayısı: {0}. Son hata: {1}\\n\\nFaturalar “Yeni maliyet hesabı” ekranında saklanıyor: “Yeniden dene” düğmesi girişi tekrarlar.",\r
 "Misafirin geliş saatinden itibaren hesaplanır.",\r
 "bilgisayar programın eski bir sürümünde; değişiklik otomatik uygulanmaz",\r
 "bu firmanın bilgisayarıdır",\r
@@ -10624,6 +10633,9 @@ const a=`[\r
 "Sahadan tarama",\r
 "tarama Vergi İdaresi'nde doğrulanır ve gönderilir; numara burada atanmaz",\r
 "hasılat taraması",\r
+"Taranan faturalar",\r
+"Henüz girilmemiş taranan faturalar ({0}).\\n\\nProgram kapatılırsa bu faturalar girilmez ve yeniden taranmaları gerekir. Program kapatılsın mı?",\r
+"Taranan faturalar girilmedi",\r
 "Fatura tarama",\r
 "tarama hemen bir maliyet hesabı oluşturur; telefondan gelen taramaları da işler",\r
 "Mali fişin QR kodu taranıyor. Maliyet hesabı Vergi İdaresi servisi (MAPR) üzerinden otomatik oluşturulur.",\r
@@ -11830,6 +11842,7 @@ const a=`[\r
 "brüt olarak girildi",\r
 "net olarak girildi",\r
 "Barkodları gir",\r
+"Bir tane daha gir",\r
 "Kasadan X raporunu gir",\r
 "Toplam {1} EUR tutarındaki {0} ödeme girilsin mi?",\r
 "Giren: {0}, {1}",\r
@@ -12942,6 +12955,147 @@ const a=`[\r
 "ZR:{0}",\r
 "DÜZELTME FATURALARI GÜNLÜĞÜ",\r
 "Resmî I-RAČ formu (15 sütun, KDV Kanunu Uygulama Yönetmeliği md. 122):",\r
-"Resmî U-RAČ formu (17 sütun, KDV Kanunu Uygulama Yönetmeliği md. 123; alınma tarihi = kayıt tarihi; yabancı tedarikçilerin mal faturaları bunda yer almaz — ithalatta KDV gümrük beyannamesine göre alan 20'ye gider):"\r
+"Resmî U-RAČ formu (17 sütun, KDV Kanunu Uygulama Yönetmeliği md. 123; alınma tarihi = kayıt tarihi; yabancı tedarikçilerin mal faturaları bunda yer almaz — ithalatta KDV gümrük beyannamesine göre alan 20'ye gider):",\r
+"\\"Euro model\\" (Hükümetin 17.09.2026 tarihli önerileri)",\r
+"(ilişkili kişi)",\r
+"({1} yılında daha önce girilen {0} ile birlikte)",\r
+"). Program vergiyi hesaplamaz; hesaplamayı muhasebeci onaylar. Ödeme ve iade ekstreden (\\"Borç / ödünç\\" türü) veya kasa üzerinden kaydedilir.",\r
+"{0}\\n\\nFiş yine de kaydedilsin mi?",\r
+"{0}\\n\\nİzin kaydedilsin mi?",\r
+"{0}\\n\\nBorç kaydedilsin mi?",\r
+"{0}\\nKaynak: {1}.\\n\\n{2} tarihinden itibaren (bordro ayına göre) şunlar geçerli olacaktır:\\n{3}\\n\\n{4}\\n\\nParametreler ancak kanun \\"Karadağ Resmî Gazetesi\\"nde yayımlandıktan sonra etkinleştirilir. Kanun yayımlandı mı ve parametreler etkinleştirilsin mi?",\r
+"{0} — {1} tarihinden itibaren geçerlidir.",\r
+"{0} · ek {1}",\r
+"{0} (yabancı): izin {1} tarihinde verilmiş, iş sözleşmesi ise {2} tarihli — {3} saatlik sürenin ({4}) sonrasında. Tarihin kontrol edilmesi gerekir.",\r
+"{0} (yabancı): izin {1} tarihinde verilmiştir. İş sözleşmesi imzalanmalı ve çalışan, iznin verilmesinden itibaren {2} saat içinde — {3} tarihine ({4}) kadar — sigortaya bildirilmelidir.",\r
+"{0} (yabancı): geçici ikamet ve çalışma izni {1} tarihinde sona erecek ({2} gün sonra). Yeni iznin süre dolmadan verilmesi gerekir.",\r
+"{0} (yabancı): geçici ikamet ve çalışma izni {1} tarihinde sona ermiştir ({2} gün önce). Çalışanın durumunun kontrol edilmesi gerekir; yasa dışı ikamet eden bir yabancıyı çalıştırmak bir kabahattir ({3}).",\r
+"{0} (yabancı): iznin bir kopyasının iş yerinde bulunduğu doğrulanmamıştır ({1}).",\r
+"{0} (yabancı): geçici ikamet ve çalışma izninin {1} bilgisi girilmemiştir.",\r
+"{0} (yabancı): işe başlama tarihi {1}. Çalışan işe başlamadıysa bakanlığa {2} gün içinde — {3} tarihine ({4}) kadar — bildirim yapılır.",\r
+"{0} (yabancı): çalışma, izin süresi dolmadan önce {1} tarihinde sona ermiştir{2}. Bakanlığa {3} gün içinde — {4} tarihine ({5}) kadar — bildirim yapılır. Bildirim tarihi çalışanın bilgilerine girilir.",\r
+"{0} ilişkili kişidir: borç, ilk euro'dan itibaren stopaj vergisine tabidir ({1}). Vergi hesaplamasını muhasebeci onaylar.",\r
+"{0}; hesaplama muhasebeci tarafından onaylanır",\r
+"{0}: {1}, kanun ise {2} öngörmektedir ({3}). Daha fazla günü işveren verebilir (iş sözleşmesi, işveren düzenlemesi).",\r
+"{0}: {1}{2}, kanun ise takvim yılında en fazla {3} iş günü öngörmektedir ({4}). Bunun üzerindeki günler \\"Ücretsiz izin\\" olarak girilmelidir.",\r
+"{0}: {1} yılındaki borçlar {2} EUR tutarındadır — yıllık {3} EUR'nun üzerindedir. Bu tutarın üzerindeki gerçek kişilere verilen borçlarda stopaj vergisi ödenir ({4}). Vergi hesaplamasını muhasebeci onaylar.",\r
+"• {0}: {1} (şimdi {2})",\r
+"• Oranlar sekmesindeki değerler (bu tarih için girilen satırlar kaldırılır)",\r
+"✉ E-posta ile",\r
+"➕ Parametre gir",\r
+"🤝 Gerçek kişilere borçlar",\r
+"işveren düzenlemesi",\r
+"İşveren düzenlemesi",\r
+"Program güncellemesi: paket yalnızca doğrulanmış parmak izi (SHA-256) ile uygulanır, başarısız olan sürüm otomatik olarak önceki sürüme döner. Program penceresi: gezinme ve yeni pencereler engellenir, her iç çağrının göndereni doğrulanır, bir dosyanın açılması çalıştırılabilir dosyaları başlatmaz. Mali sertifika parolası, Windows hesap korumasıyla şifrelenmiş olarak saklanır.",\r
+"Değişiklik yok (Oranlar sekmesindeki değerler geçerli)",\r
+"Güvenlik düzeltmeleri",\r
+"Güvenlik düzeltmeleri programın en son sürümünde yayımlanır ve güncelleme ile ulaşır. Eski sürüm, en son sürüme geçilerek düzeltmeleri alır.",\r
+"No. {0}",\r
+"İzin numarası",\r
+"Yabancılar Kanunu md. 210a",\r
+"Kurumlar Vergisi Kanunu md. 28a (\\"Karadağ Resmî Gazetesi\\", sayı 104/26)",\r
+"İş Kanunu md. 87 f. 4",\r
+"İş Kanunu md. 87 f. 6",\r
+"İş Kanunu md. 88 f. 1",\r
+"verildi",\r
+"Verildi",\r
+"{0} içinde verildi.",\r
+"Parametrenin geçerli olduğu başlangıç tarihi zorunludur.",\r
+"Parametrelerin geçerli olduğu başlangıç tarihi zorunludur.",\r
+"Borç tarihi zorunludur.",\r
+"Güvenlik güncellemeleri günlüğü",\r
+"Belge daha önce oluşturulmuştur: dışa aktarma klasöründeki dosya ile bir mesaj taslağı açılır. SMTP sunucusu üzerinden gönderim, programın bu oturumunda oluşturulan belge için mümkündür.",\r
+"Primler ve vergi, Oranlar sekmesindeki gibi kalır.",\r
+"Düzenlemenin çalışana e-posta ile tebliği; gönderim kaydı kanıt olarak e-posta günlüğünde kalır (İş Kanunu md. 176a)",\r
+"E-posta ile tebliğ edildi",\r
+"İzin verildi",\r
+"İzin geçerlilik tarihi",\r
+"EUR'nun yıllık tutarının üzerinde stopaj vergisi ödenir, ilişkili kişilerde ise ilk euro'dan itibaren (",\r
+"Gerçek kişilere verilen borçların kişi ve yıla göre kaydı (stopaj vergisi 01.01.2027 tarihinden itibaren)",\r
+"Şirketin gerçek kişilere verdiği borçların kişi ve yıla göre kaydı. Başlangıç:",\r
+"Nakit {0} EUR: {1} EUR ve üzeri nakit ödeme ve tahsilat artık yasaktır ({2} f. 1). Ödeme işlem hesabı üzerinden yapılır (f. 3).",\r
+"Nakit {0}: {1} EUR (bu ödeme ile birlikte). {2} EUR ve üzeri nakit yasağı, borçlar dahil birbiriyle bağlantılı birden fazla işlem için de geçerlidir ({3} f. 2).",\r
+"Kişinin adı ve soyadı zorunludur.",\r
+"Düzeltildi",\r
+"yılda {0} EUR üzeri — stopaj vergisi",\r
+"Stopaj vergisinin uygulandığı tutar",\r
+"JMBG 13 haneden oluşur.",\r
+"işveren için ceza {0}–{1} EUR, {2}",\r
+"Uzlaşma (asgari ücret +200 EUR, diğerleri değişmez)",\r
+"iznin bir kopyası iş yerinde bulunuyor",\r
+"bu kişiyle kasa üzerinden ±30 gün içinde",\r
+"Kişi",\r
+"engelli kişi ({0}; {1} tarihinden itibaren uygulanır)",\r
+"Lisans: kayıtlı lisans için de imza ve PIB doğrulanır; başka bir firma için sunucu yanıtı kabul edilmez.",\r
+"Öneride asgari net ücret üç kademelidir (1.000 / 1.250 / 1.400 EUR); program iki kademe tutar — nitelik düzeyine göre değerler yayımlanan metne göre girilmelidir.",\r
+"Bakanlığa bildirildi (işe başlamadı / sona erme)",\r
+"Oranlar sekmesinde",\r
+"gerçek kişilere verilen borçlarda şu tutarın üzerinde:",\r
+"Mevcut dosya ile mesaj taslağı Windows programında kullanılabilir. Bu cihazda belgenin yeniden oluşturulması ve ardından gönderilmesi gerekir.",\r
+"müzakerelerden alınan beyanlar — kanun teklifi değildir",\r
+"Geçerlilik tarihli parametre yok — tüm aylar için \\"Oranlar ve eşikler\\" tablosundaki değerler geçerlidir.",\r
+"Seçilen yıl için borç yok.",\r
+"Bilinmeyen parametre varyantı.",\r
+"Bu kayıt borç kaydından silinsin mi?",\r
+"OC",\r
+"Babalık izni (İş Kanunu md. 126a, çocuğun doğumundan itibaren 10 iş günü)",\r
+"01.12.2026 tarihinden itibaren; otomatik uygulanır). Kıdem ve diğer esaslara göre artışlar şirket tarafından yönetmelikle düzenlenir (",\r
+"Stopaj vergisi uygulanır",\r
+"Parametre",\r
+"Parametre {0} tarihinden itibaren girildi.",\r
+"Buraya girilen parametre, bordro ayına göre kendi tarihinden itibaren geçerlidir: bu tarihten önceki aya ait maaş eski değerlerle, bu aydan itibaren ise yeni değerlerle hesaplanır; hesaplamanın ne zaman yapıldığına bakılmaz. Kapatılmış bordro hesaplamaları değiştirilmez. Tablo boş olduğu sürece \\"Oranlar ve eşikler\\" tablosundaki değerler geçerlidir. 01.01.2027 için hazırlanan varyantlar şablondur: \\"Euro model\\" kanunları 10.11.2026 itibarıyla yayımlanmamıştır; bu nedenle varyant ancak \\"Karadağ Resmî Gazetesi\\"nde yayımlandıktan sonra, her değer yayımlanan metne göre kontrol edilerek etkinleştirilir.",\r
+"Geçerlilik tarihli parametreler (kanun değişiklikleri)",\r
+"PH",\r
+"Ücretli — acil aile nedeni (İş Kanunu md. 87, 1 iş günü)",\r
+"Ücretli — yakın aile üyesinin ölümü (İş Kanunu md. 87, 7 iş günü)",\r
+"Gerçek kişilere verilen yıllık {0} EUR üzeri borçlarda stopaj vergisi; ilişkili kişilerde ilk euro'dan itibaren ({1}). Vergi hesaplanmadı.",\r
+"Gerçek kişilere verilen borçlarda stopaj vergisi {0} tarihinden itibaren geçerlidir ({1}).",\r
+"borçlarda stopaj vergisi {0} tarihinden itibaren geçerlidir.",\r
+"Son güvenlik güncellemesi: sürüm {0} ({1})",\r
+"ilişkili kişi",\r
+"İlişkili kişi",\r
+"ilişkili kişi — ilk euro'dan itibaren stopaj vergisi",\r
+"Borç iadesi kaydedildi.",\r
+"Borç kaydedildi.",\r
+"Gerçek kişilere borçlar",\r
+"Gerçek kişilere borçlar — {0}",\r
+"kanun teklifleri — kabul edilmedi",\r
+"Kişiye göre özet —",\r
+"iş günü",\r
+"iş günü",\r
+"geçerlilik süresi",\r
+"İznin geçerlilik süresi verilme tarihinden önce olamaz.",\r
+"bu kişiyle (borçlar) ±30 gün içinde",\r
+"bu cari ile ±30 gün içinde",\r
+"Ne düzeltildi, hangi sürümde ve ne zaman.",\r
+"31.12.{0} tarihi itibarıyla bakiye.",\r
+"Yabancı",\r
+"yabancı (ikamet ve çalışma izni)",\r
+"Geçici ikamet ve çalışma izni olan yabancı — işveren süreleri: sözleşme ve sigorta bildirimi iznin verilmesinden itibaren {0} saat, bildirimler {1} ve {2} gün, iznin kopyası iş yerinde ({3})",\r
+"Ekte {0}{1} sunulmaktadır. Tebliğ, işveren kayıtlarındaki çalışanın e-posta adresine yapılır ({2}).",\r
+"Sözleşme",\r
+"Seçilen tarih için girilen satırları kaldırır.",\r
+"Satırın kaldırılması (Oranlar sekmesindeki değer veya önceki bir satır geçerli olur)",\r
+"{1} parametreden {0} tanesi etkinleştirildi. Değerler aşağıdaki tabloda düzeltilebilir; açık bordro hesaplamaları \\"Tümünü hesapla\\" düğmesiyle yeniden hesaplanır.",\r
+"\\"{0}\\", {1} tarihinden kaldırılsın mı?",\r
+"Ödeme girişi = nakit kasaya girer (borç 2430); ödeme çıkışı = nakit kasadan çıkar (alacak 2430). Karşı hesap: tedarikçi 4330, gider 5xxx, çalışan 2210, banka hesabı 2410 (hasılat yatırımı ekstreden otomatik kaydedilir). Başka bir kişiye 10.000 EUR ve üzeri nakit girilmez (ödeme hesap üzerinden yapılır).",\r
+"Varyant ancak kanun \\"Karadağ Resmî Gazetesi\\"nde yayımlandıktan sonra etkinleştirilir — onay gerekir.",\r
+"yürürlükteki mevzuat",\r
+"{0} sürümü güvenlik düzeltmelerini {1} tarihine kadar alır",\r
+"{0} sürümü güvenlik düzeltmelerini {1} tarihine kadar almıştır Son sürüme güncelleme gerekir.",\r
+"Yerel IRIS sunucusuna bağlantı: şifreli bağlantı yalnızca bağlanma sırasında kaydedilen sertifikayla kabul edilir; istekler programın ana işlemi üzerinden gider.",\r
+"Sahip, müdür, aile üyeleri ve diğer ilişkili kişiler — vergiden muaf tutar yok",\r
+"iade edildi",\r
+"İade edildi",\r
+"{0} içinde iade edildi.",\r
+"Değer değiştirildi.",\r
+"Şu tarihten itibaren değer",\r
+"Parametre değeri negatif olmayan bir sayı olmalıdır.",\r
+"WHERE substr(Datum,1,4)=?",\r
+"{0} için geçerlilik tarihli parametre yok — Oranlar sekmesindeki değerler geçerlidir.",\r
+"Bu parametre için geçerlilik tarihi girilmez.",\r
+"Kara Paranın Aklanmasının ve Terörün Finansmanının Önlenmesi Hakkında Kanun, md. 65",\r
+"Yabancılar Kanunu (\\"Karadağ Resmî Gazetesi\\", sayı 154/26)",\r
+"Çalışanın e-posta adresi girilmemiş (Personel → Sözleşmeler)."\r
 ]\r
 `;export{a as default};

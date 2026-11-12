@@ -3200,6 +3200,7 @@ null,\r
 "EDI — Record of daily reports",\r
 "Eff. purch.",\r
 "Exotic fruit",\r
+"The entry screen is not open.",\r
 "screen: {0}",\r
 "Electricity",\r
 "ELECTRONIC JOURNAL — ISSUED INVOICES",\r
@@ -3439,6 +3440,7 @@ null,\r
 "The company is ready for work. The other settings are not required and can be edited later.",\r
 "The company is in the VAT system",\r
 "The company is paired with the server: only backups are saved to this folder, without exchange files.",\r
+"The company was closed before the invoice was processed.",\r
 "The company does not exist in the Register of Taxpayers.",\r
 "The company does not have Manager yet.",\r
 "The company has no outlets.",\r
@@ -3959,6 +3961,7 @@ null,\r
 "The same store and day entered more than once (shifts of the same register are not counted), or takings of 0.00 EUR",\r
 "The same store and day entered more than once means duplicate turnover and VAT, except when the store has several registers. Shifts of the same register on the same day (different Z number) are not a duplicate; a takings entry from a register is a duplicate only with the same register, the same Z number and the same day. Takings of 0.00 EUR are also shown. After comparison with the Z report, a wrong row is deleted or corrected; deletion and correction also apply on the other computers.",\r
 "same name",\r
+"The same invoice already exists",\r
 "The same sequence number on several costing sheets: company {0}, stores {1}; numbers with \\"~\\": {2}. They occur when two computers assign numbers at the same time — renumbering corrects them.",\r
 "The same phone number already belongs to customer \\"{0}\\", who can be marked in the list.",\r
 "the same Z no. {0} has already been entered for {1}",\r
@@ -5490,6 +5493,7 @@ null,\r
 "On the list",\r
 "Indefinite term",\r
 "The same employee is in both slots. The swap is not possible.",\r
+"waiting to be processed: {0}",\r
 "Fixed-term until (empty = indefinite)",\r
 "Fixed term",\r
 "Pursuant to Article 7 of the Accounting Law (Official Gazette of Montenegro no. 84/25), and based on data as at 31.12.{0}:",\r
@@ -5778,6 +5782,7 @@ null,\r
 "naSobu.potpis",\r
 "naSobu.ukljuceno",\r
 "Continue counting",\r
+"Continue working",\r
 "Learned",\r
 "nav",\r
 "Back",\r
@@ -6772,6 +6777,7 @@ null,\r
 "total calculated",\r
 "Total calculated",\r
 "Processing invoices is not possible on a phone. Costing sheets and document numbers are created by the computer.",\r
+"processing failed: {0}",\r
 "Processing…",\r
 "Processed database (reports on the phone)",\r
 "Processed",\r
@@ -9647,7 +9653,9 @@ null,\r
 "the account is not among the company's accounts (Settings → Company); payments were not posted automatically and are waiting for review",\r
 "The receipt has not been confirmed by the Revenue Administration (no JIKR).",\r
 "The receipt has not been prepared for sending.",\r
+"The invoice was not saved: the same supplier, date and amount already exist.",\r
 "municipality account",\r
+"An invoice from this supplier dated {0} for {1} EUR has already been entered (costing sheet {2}).\\n\\nEnter another invoice with the same supplier, date and amount?",\r
 "The account of this statement ({0}) was not recognised. Automatic ownership check is not possible.\\n\\nImport as a statement of company {1}?",\r
 "recipient account {0} is not a known public revenue account",\r
 "recipient account {0}, but the payment was made for {1}",\r
@@ -9681,6 +9689,7 @@ null,\r
 "receipts waiting for fiscalization",\r
 "Receipts waiting to be sent for more than 48 hours: {0}. The prescribed deadline has been exceeded. The receipts must be sent immediately or the problem reported to the Tax Administration.",\r
 "Invoices not entered: {0}. Last error: {1}",\r
+"Invoices not entered: {0}. Last error: {1}\\n\\nThe invoices are kept on the “New costing sheet” screen: the “Try again” button repeats the entry.",\r
 "Counted from the guest's time of arrival.",\r
 "the computer is on an old version of the program; the change is not applied automatically",\r
 "this company's computer",\r
@@ -10624,6 +10633,9 @@ null,\r
 "Scan from the field",\r
 "the scan is checked with the Tax Administration and sent; the number is not assigned here",\r
 "daily takings scans",\r
+"Scanned invoices",\r
+"Scanned invoices that have not been entered yet ({0}).\\n\\nIf the program is closed, these invoices will not be entered and must be scanned again. Close the program?",\r
+"Scanned invoices have not been entered",\r
 "Invoice scanning",\r
 "scanning immediately makes a costing sheet; it also processes scans from the phone",\r
 "Scanning the QR code of a fiscal receipt. The costing sheet is created automatically through the Tax Administration service (MAPR).",\r
@@ -11830,6 +11842,7 @@ null,\r
 "entered as gross",\r
 "entered as net",\r
 "Enter barcodes",\r
+"Enter another",\r
 "Enter the interim report from the register",\r
 "Enter {0} payments with a total amount of {1} EUR?",\r
 "Entered by: {0}, {1}",\r
@@ -12942,6 +12955,147 @@ null,\r
 "ZR:{0}",\r
 "JOURNAL OF CORRECTIVE INVOICES",\r
 "Official I-RAČ form (15 columns, Rulebook on the application of the VAT Act, Art. 122):",\r
-"Official U-RAČ form (17 columns, Rulebook on the application of the VAT Act, Art. 123; date of receipt = date of registration; invoices from foreign suppliers for goods are not in it — import VAT goes by customs declaration to field 20):"\r
+"Official U-RAČ form (17 columns, Rulebook on the application of the VAT Act, Art. 123; date of receipt = date of registration; invoices from foreign suppliers for goods are not in it — import VAT goes by customs declaration to field 20):",\r
+"\\"Euro model\\" (Government proposals of 17.09.2026)",\r
+"(related party)",\r
+"(with {0} previously entered in {1})",\r
+"). The program does not calculate the tax; the calculation is confirmed by the accountant. Payout and repayment are posted from the statement (type \\"Loan / borrowing\\") or through the cash desk.",\r
+"{0}\\n\\nSave the voucher anyway?",\r
+"{0}\\n\\nRecord the leave?",\r
+"{0}\\n\\nRecord the loan?",\r
+"{0}\\nSource: {1}.\\n\\nFrom {2} (by payroll month) the following will apply:\\n{3}\\n\\n{4}\\n\\nThe parameters are enabled only once the law is published in the \\"Official Gazette of Montenegro\\". Has the law been published, and should the parameters be enabled?",\r
+"{0} — valid from {1}.",\r
+"{0} · attachment {1}",\r
+"{0} (foreigner): the permit was issued on {1}, and the employment contract is dated {2} — after the deadline of {3} hours ({4}). The date needs to be checked.",\r
+"{0} (foreigner): the permit was issued on {1}. The employment contract must be concluded and the employee registered for insurance within {2} hours of the permit being issued — by {3} ({4}).",\r
+"{0} (foreigner): the temporary residence and work permit expires on {1} (in {2} days). A new permit should be issued before it expires.",\r
+"{0} (foreigner): the temporary residence and work permit expired on {1} ({2} days ago). The employee's status needs to be checked; employing a foreigner who is residing unlawfully is a misdemeanour ({3}).",\r
+"{0} (foreigner): it has not been confirmed that a copy of the permit is kept at the workplace ({1}).",\r
+"{0} (foreigner): the {1} of the temporary residence and work permit has not been entered.",\r
+"{0} (foreigner): work start {1}. If the employee has not started work, the ministry must be notified within {2} days — by {3} ({4}).",\r
+"{0} (foreigner): employment ended on {1}, before the permit expired{2}. The ministry must be notified within {3} days — by {4} ({5}). The date of notification is entered in the employee's data.",\r
+"{0} is a related party: the loan is subject to withholding tax from the first euro ({1}). The tax calculation is confirmed by the accountant.",\r
+"{0}; calculation confirmed by the accountant",\r
+"{0}: {1}, and the law provides {2} ({3}). More days may be granted by the employer (employment contract, employer's act).",\r
+"{0}: {1}{2}, and the law provides at most {3} working days in a calendar year ({4}). Days beyond that should be entered as \\"Unpaid leave\\".",\r
+"{0}: loans in {1} amount to {2} EUR — above {3} EUR per year. Withholding tax is payable on loans to natural persons above that amount ({4}). The tax calculation is confirmed by the accountant.",\r
+"• {0}: {1} (now {2})",\r
+"• values from the Rates tab (rows entered for this date are removed)",\r
+"✉ By e-mail",\r
+"➕ Enter parameter",\r
+"🤝 Loans to natural persons",\r
+"employer's act",\r
+"Employer's act",\r
+"Program update: a package is applied only with a verified fingerprint (SHA-256), and a failed version rolls back to the previous one automatically. Program window: navigation and new windows are blocked, the sender of every internal call is verified, opening a file does not run executables. The fiscal certificate password is stored encrypted with Windows account protection.",\r
+"No change (values from the Rates tab apply)",\r
+"Security fixes",\r
+"Security fixes are released in the latest version of the program and delivered by update. An older version receives fixes by upgrading to the latest one.",\r
+"No. {0}",\r
+"Permit number",\r
+"Art. 210a of the Foreigners Act",\r
+"Art. 28a of the Corporate Income Tax Act (\\"Official Gazette of Montenegro\\", No. 104/26)",\r
+"Art. 87 para. 4 of the Labour Law",\r
+"Art. 87 para. 6 of the Labour Law",\r
+"Art. 88 para. 1 of the Labour Law",\r
+"given",\r
+"Given",\r
+"Given in {0}.",\r
+"The date from which the parameter applies is required.",\r
+"The date from which the parameters apply is required.",\r
+"The loan date is required.",\r
+"Security update log",\r
+"The document was created earlier: a message draft is opened with the file from the export folder. Sending via an SMTP server is possible for a document created in this session of the program.",\r
+"Contributions and tax remain as in the Rates tab.",\r
+"Delivery of the act to the employee by e-mail; the record of sending remains in the e-mail log as evidence (Art. 176a of the Labour Law)",\r
+"Delivered by e-mail",\r
+"Permit issued",\r
+"Permit valid until",\r
+"EUR per year, withholding tax is payable, and for related parties from the first euro (",\r
+"Record of loans to natural persons by person and year (withholding tax from 01.01.2027)",\r
+"Record of loans the company gives to natural persons, by person and year. From",\r
+"Cash {0} EUR: paying and receiving cash of {1} EUR or more is no longer permitted ({2} para. 1). Payment is made through a transaction account (para. 3).",\r
+"Cash {0}: {1} EUR (together with this payment). The ban on cash of {2} EUR or more also applies to several related transactions, including loans ({3} para. 2).",\r
+"The person's first and last name is required.",\r
+"Corrected",\r
+"above {0} EUR per year — withholding tax",\r
+"Amount to which the withholding tax applies",\r
+"JMBG has 13 digits.",\r
+"employer penalty {0}–{1} EUR, {2}",\r
+"Compromise (minimum wage +200 EUR, the rest unchanged)",\r
+"a copy of the permit is kept at the workplace",\r
+"through the cash desk with this person within ±30 days",\r
+"Person",\r
+"person with a disability ({0}; applies from {1})",\r
+"Licence: signature and PIB are verified, including for a remembered licence; a server response for another company is not accepted.",\r
+"The proposal has three levels of minimum net wage (1,000 / 1,250 / 1,400 EUR); the program keeps two — the values by qualification level must be entered according to the published text.",\r
+"Ministry notified (did not start / termination)",\r
+"On the Rates tab",\r
+"on loans to natural persons above",\r
+"A message draft with the existing file is available in the Windows program. On this device the document must be created again and then sent.",\r
+"statements from negotiations — not a draft law",\r
+"There are no parameters with an effective date — the values from the \\"Rates and thresholds\\" table apply for all months.",\r
+"There are no loans for the selected year.",\r
+"Unknown parameter variant.",\r
+"Delete this entry from the loan record?",\r
+"OC",\r
+"Paternity leave (Art. 126a of the Labour Law, 10 working days from the child's birth)",\r
+"from 01.12.2026; applied automatically). Increases for seniority and other grounds are regulated by the company in its rulebook (",\r
+"Withholding tax applies",\r
+"Parameter",\r
+"The parameter was entered from {0}.",\r
+"A parameter entered here applies from its date, by payroll month: the salary for a month before that date is calculated using the old values, and from that month using the new values, regardless of when the calculation is run. Closed payroll calculations are not changed. While the table is empty, the values from the \\"Rates and thresholds\\" table apply. The prepared variants for 01.01.2027 are templates: the \\"Euro model\\" laws had not been published by 10.11.2026, so a variant is enabled only after publication in the \\"Official Gazette of Montenegro\\", with each value checked against the published text.",\r
+"Parameters with an effective date (law amendments)",\r
+"PH",\r
+"Paid — urgent family reason (Art. 87 of the Labour Law, 1 working day)",\r
+"Paid — death of an immediate family member (Art. 87 of the Labour Law, 7 working days)",\r
+"Withholding tax on loans to natural persons above {0} EUR per year; related parties from the first euro ({1}). The tax has not been calculated.",\r
+"Withholding tax on loans to natural persons applies from {0} ({1}).",\r
+"withholding tax on loans applies from {0}.",\r
+"Latest security update: version {0} ({1})",\r
+"related party",\r
+"Related party",\r
+"related party — withholding tax from the first euro",\r
+"The loan repayment has been recorded.",\r
+"The loan has been recorded.",\r
+"Loans to natural persons",\r
+"Loans to natural persons — {0}",\r
+"draft laws — not adopted",\r
+"Overview by person —",\r
+"working days",\r
+"working day",\r
+"validity period",\r
+"The permit validity cannot be earlier than the issue date.",\r
+"with this person (loans) within ±30 days",\r
+"with this partner within ±30 days",\r
+"What was corrected, in which version and when.",\r
+"Balance as at 31.12.{0}.",\r
+"Foreigner",\r
+"foreigner (residence and work permit)",\r
+"Foreigner with a temporary residence and work permit — employer deadlines: contract and registration {0} hours from the permit being issued, notifications {1} and {2} days, copy of the permit at the workplace ({3})",\r
+"{0}{1} is enclosed. Delivery is made to the employee's e-mail address from the employer's records ({2}).",\r
+"Contract",\r
+"Removes the rows entered for the selected date.",\r
+"Row removal (the value from the Rates tab or an earlier row applies)",\r
+"{0} of {1} parameters enabled. The values can be corrected in the table below; open payroll calculations are recalculated with the \\"Calculate all\\" button.",\r
+"Remove \\"{0}\\" from {1}?",\r
+"Payment in = cash enters the cash desk (debit 2430); payout = cash leaves (credit 2430). Contra account: supplier 4330, expense 5xxx, employee 2210, bank account 2410 (the deposit of takings is posted automatically from the statement). Cash of 10,000 EUR or more to another person is not entered (payment goes through the account).",\r
+"The variant is enabled only after the law is published in the \\"Official Gazette of Montenegro\\" — confirmation is required.",\r
+"applicable regulations",\r
+"Version {0} receives security fixes until {1}",\r
+"Version {0} received security fixes until {1} An update to the latest version is required.",\r
+"Connection to the local IRIS server: an encrypted connection is accepted only with the certificate remembered at the time of connecting; requests go through the main process of the program.",\r
+"Owner, director, their family member and another related party — no tax-exempt amount",\r
+"returned",\r
+"Returned",\r
+"Returned in {0}.",\r
+"The value has been changed.",\r
+"Value from",\r
+"The parameter value must be a non-negative number.",\r
+"WHERE substr(Datum,1,4)=?",\r
+"For {0} there are no parameters with an effective date — the values from the Rates tab apply.",\r
+"No effective date is entered for this parameter.",\r
+"Law on the Prevention of Money Laundering and Terrorist Financing, Art. 65",\r
+"Foreigners Act (\\"Official Gazette of Montenegro\\", No. 154/26)",\r
+"The employee has no e-mail address entered (HR → Contracts)."\r
 ]\r
 `;export{e as default};

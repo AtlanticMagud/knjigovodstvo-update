@@ -1,12 +1,12 @@
 {
-  "verzija": "2.3.2",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.3.2.zip",
+  "verzija": "2.4.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.4.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "e3f19642c40f829ee1c40d84af4d5fd3ef47b87abb9d5e50cc66933338dfbcdb",
+  "sha256": "d5c78447fe52a81ddb88236a96a787ff0765a7d331a1bc6e82af0caacad519f6",
   "obavezno": false,
-  "napomene": "Nova kalkulacija: QR kod skeniran dok program čeka odgovor Poreske uprave više se ne gubi. Skenovi čekaju u redu i obrađuju se jedan po jedan; broj skenova u redu vidi se na ekranu, a račun koji nije unesen ostaje na ekranu uz „Pokušaj ponovo\".\nRazmjena sa serverom: fajl ostaje u redu za slanje kada server ne može da ga upiše i šalje se ponovo pri sljedećoj razmjeni.",
+  "napomene": "Unos i obrasci: klik pored obrasca ne zatvara obrazac u koji je nešto upisano; ponovljen klik na „Snimi\" ne snima dokument dva puta; ručni unos fakture bez broja računa upozorava na isti račun.\nNova kalkulacija: red skenova se čuva pri prelasku na drugi ekran i pri zatvaranju prozora.\nRazmjena: ručno unesena faktura prenosi se na druge računare.\nIzvozi: otvorene stavke imaju kolonu „Vrsta\"; zbirovi trgovačke knjige u Excel-u zaokruženi su na dvije decimale.\nGotovina: plaćanje ili uplata gotovinom od 10.000 EUR i više se ne upisuje; više gotovinskih plaćanja istom licu traži potvrdu.\nKadrovi: nove vrste odsustva (smrt člana uže porodice, hitan porodični razlog, očinsko odsustvo, neplaćeno odsustvo radi njege); dostavljanje akata zaposlenom e-poštom uz dokaz o slanju; dozvole i rokovi za strance; godišnji odmor lica sa invaliditetom od 01.12.2026.\nFinansije: evidencija pozajmica fizičkim licima; PDV broj kupca (ME + PIB) na fakturi, avansnom računu, odobrenju i otpremnici; ime primaoca na nalogu za isplatu zarade.\nPlate: parametri sa datumom važenja za 2027. godinu su pripremljeni i isključeni dok zakon ne bude objavljen.\nO programu: dnevnik bezbjednosnih ažuriranja. Ova verzija ne sadrži bezbjednosne ispravke.\nVažno: prije korišćenja ručnih faktura u razmjeni i novih vrsta odsustva ažurirajte sve računare na ovu verziju.",
   "datum": "2026-11-12",
-  "sha256Android": "5f4993317128fcc69f04c37bf7404449198419d2df9697c155e18e9184f0c9e9",
-  "verzijaPrethodna": "2.3.1",
+  "sha256Android": "97630658045d4c66e536f0dd4a8cae85195f25249208c90dc9f322cd31d61410",
+  "verzijaPrethodna": "2.3.2",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

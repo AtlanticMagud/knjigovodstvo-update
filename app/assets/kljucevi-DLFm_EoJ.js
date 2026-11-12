@@ -3200,6 +3200,7 @@ const a=`[\r
 "EDI — Evidencija dnevnih izvještaja",\r
 "Efektivna nab.",\r
 "Egzotično voće",\r
+"Ekran za unos nije otvoren.",\r
 "ekran: {0}",\r
 "Električna energija",\r
 "ELEKTRONSKI ŽURNAL — IZDATI RAČUNI",\r
@@ -3439,6 +3440,7 @@ const a=`[\r
 "Firma je spremna za rad. Ostala podešavanja nisu obavezna i mogu se urediti kasnije.",\r
 "Firma je u sistemu PDV-a",\r
 "Firma je uparena sa serverom: u ovaj folder se snimaju samo rezervne kopije, bez fajlova razmjene.",\r
+"Firma je zatvorena prije nego što je račun obrađen.",\r
 "Firma ne postoji u Registru poreskih obveznika.",\r
 "Firma nema Menadžer.",\r
 "Firma nema nijedan objekat.",\r
@@ -3959,6 +3961,7 @@ const a=`[\r
 "Isti market i dan upisan više puta (smjene iste kase se ne računaju), ili pazar od 0,00 EUR",\r
 "Isti market i dan upisan više puta znači dupli promet i PDV, osim kad market ima više kasa. Smjene iste kase istog dana (različit Z broj) nisu duplikat; pazar iz kase je duplikat samo uz istu kasu, isti Z broj i isti dan. Prikazani su i pazari od 0,00 EUR. Pogrešan red se, nakon poređenja sa Z-izvještajem, briše ili ispravlja; brisanje i ispravka važe i na ostalim računarima.",\r
 "isti naziv",\r
+"Isti račun već postoji",\r
 "Isti redni broj na više kalkulacija: firma {0}, marketi {1}; brojeva sa „~\\": {2}. Nastaju kad dva računara istovremeno daju brojeve — renumeracija ih ispravlja.",\r
 "Isti telefon već ima kupac „{0}\\", koji se može označiti u spisku.",\r
 "isti Z br. {0} je već upisan za {1}",\r
@@ -5490,6 +5493,7 @@ const a=`[\r
 "Na listi",\r
 "Na neodređeno vrijeme",\r
 "Na oba termina je isti radnik. Razmjena nije moguća.",\r
+"na obradu čeka: {0}",\r
 "Na određeno do (prazno = neodređeno)",\r
 "Na određeno vrijeme",\r
 "Na osnovu člana 7 Zakona o računovodstvu („Sl. list CG\\" br. 84/25), a prema podacima na dan 31.12.{0}. godine:",\r
@@ -5778,6 +5782,7 @@ const a=`[\r
 "naSobu.potpis",\r
 "naSobu.ukljuceno",\r
 "Nastavi brojanje",\r
+"Nastavi rad",\r
 "Naučeno",\r
 "nav",\r
 "Nazad",\r
@@ -6772,6 +6777,7 @@ const a=`[\r
 "obračunato ukupno",\r
 "Obračunato ukupno",\r
 "Obrada faktura nije moguća na telefonu. Kalkulacije i brojeve dokumenata pravi računar.",\r
+"obrada nije uspjela: {0}",\r
 "Obrada…",\r
 "Obrađena baza (izvještaji na telefonu)",\r
 "Obrađeni",\r
@@ -9647,7 +9653,9 @@ const a=`[\r
 "račun nije među računima firme (Podešavanja → Firma); plaćanja nisu knjižena automatski i čekaju pregled",\r
 "Račun nije potvrđen kod Uprave prihoda (nema JIKR).",\r
 "Račun nije pripremljen za slanje.",\r
+"Račun nije snimljen: isti dobavljač, datum i iznos već postoje.",\r
 "račun opštine",\r
+"Račun ovog dobavljača od {0} na iznos {1} EUR je već unesen (kalkulacija {2}).\\n\\nUnijeti još jedan račun sa istim dobavljačem, datumom i iznosom?",\r
 "Račun ovog izvoda ({0}) nije prepoznat. Automatska provjera pripadnosti nije moguća.\\n\\nUvesti kao izvod firme {1}?",\r
 "račun primaoca {0} nije poznat račun javnih prihoda",\r
 "račun primaoca {0}, a plaćanje je nastalo za {1}",\r
@@ -9681,6 +9689,7 @@ const a=`[\r
 "računa čeka fiskalizaciju",\r
 "Računa koji čekaju slanje duže od 48 sati: {0}. Propisani rok je prekoračen. Račune je potrebno odmah poslati ili prijaviti problem Upravi prihoda.",\r
 "Računa koji nisu uneseni: {0}. Posljednja greška: {1}",\r
+"Računa koji nisu uneseni: {0}. Posljednja greška: {1}\\n\\nRačuni su sačuvani na ekranu „Nova kalkulacija\\": dugme „Pokušaj ponovo\\" ponavlja unos.",\r
 "Računa se od časa dolaska gosta.",\r
 "računar je na staroj verziji programa; izmjena se ne upisuje automatski",\r
 "računar ove firme",\r
@@ -10624,6 +10633,9 @@ const a=`[\r
 "Sken sa terena",\r
 "sken se provjeri kod Poreske uprave i pošalje; broj se ne dodjeljuje ovdje",\r
 "skena pazara",\r
+"Skenirani računi",\r
+"Skenirani računi koji još nisu uneseni ({0}).\\n\\nAko se program zatvori, ti računi neće biti uneseni i moraju se skenirati ponovo. Zatvoriti program?",\r
+"Skenirani računi nisu uneseni",\r
 "Skeniranje faktura",\r
 "skeniranje odmah pravi kalkulaciju; obrađuje i skenove sa telefona",\r
 "Skeniranje QR koda fiskalnog računa. Kalkulacija se pravi automatski preko servisa Poreske uprave (MAPR).",\r
@@ -11830,6 +11842,7 @@ const a=`[\r
 "uneseno kao bruto",\r
 "uneseno kao neto",\r
 "Unesi barkodove",\r
+"Unesi još jedan",\r
 "Unesi presjek iz kase",\r
 "Unijeti {0} plaćanja u ukupnom iznosu {1} EUR?",\r
 "Unio: {0}, {1}",\r
@@ -12942,6 +12955,147 @@ const a=`[\r
 "ZR:{0}",\r
 "ŽURNAL KOREKTIVNIH RAČUNA",\r
 "Zvanični obrazac I-RAČ (15 kolona, Pravilnik o primjeni ZPDV čl. 122):",\r
-"Zvanični obrazac U-RAČ (17 kolona, Pravilnik o primjeni ZPDV čl. 123; datum prijema = datum zavođenja; fakture stranih dobavljača za robu nijesu u njemu — PDV pri uvozu ide po carinskoj deklaraciji u polje 20):"\r
+"Zvanični obrazac U-RAČ (17 kolona, Pravilnik o primjeni ZPDV čl. 123; datum prijema = datum zavođenja; fakture stranih dobavljača za robu nijesu u njemu — PDV pri uvozu ide po carinskoj deklaraciji u polje 20):",\r
+"„Euro model\\" (predlozi Vlade od 17.09.2026)",\r
+"(povezano lice)",\r
+"(uz {0} ranije upisanih u {1}. godini)",\r
+"). Program porez ne obračunava; obračun potvrđuje knjigovođa. Isplata i povraćaj se knjiže sa izvoda (vrsta „Pozajmica / zajam\\") ili kroz blagajnu.",\r
+"{0}\\n\\nIpak snimiti nalog?",\r
+"{0}\\n\\nUpisati odsustvo?",\r
+"{0}\\n\\nUpisati pozajmicu?",\r
+"{0}\\nIzvor: {1}.\\n\\nOd {2} (po mjesecu obračuna) važiće:\\n{3}\\n\\n{4}\\n\\nParametri se uključuju tek kad je zakon objavljen u „Službenom listu CG\\". Da li je zakon objavljen i da li se parametri uključuju?",\r
+"{0} — važi od {1}.",\r
+"{0} · prilog {1}",\r
+"{0} (stranac): dozvola je izdata {1}, a ugovor o radu nosi datum {2} — poslije roka od {3} časa ({4}). Potrebna je provjera datuma.",\r
+"{0} (stranac): dozvola je izdata {1}. Ugovor o radu se zaključuje i radnik prijavljuje na osiguranje u roku od {2} časa od izdavanja dozvole — do {3} ({4}).",\r
+"{0} (stranac): dozvola za privremeni boravak i rad ističe {1} (za {2} dana). Nova dozvola treba da bude izdata prije isteka.",\r
+"{0} (stranac): dozvola za privremeni boravak i rad je istekla {1} (prije {2} dana). Potrebna je provjera statusa radnika; zapošljavanje stranca koji nezakonito boravi je prekršaj ({3}).",\r
+"{0} (stranac): nije potvrđeno da je kopija dozvole na mjestu rada ({1}).",\r
+"{0} (stranac): nije upisan {1} dozvole za privremeni boravak i rad.",\r
+"{0} (stranac): početak rada {1}. Ako radnik nije stupio na rad, ministarstvo se obavještava u roku od {2} dana — do {3} ({4}).",\r
+"{0} (stranac): rad je prestao {1}, prije isteka dozvole{2}. Ministarstvo se obavještava u roku od {3} dana — do {4} ({5}). Datum obavještenja se upisuje u podatke radnika.",\r
+"{0} je povezano lice: pozajmica podliježe porezu po odbitku od prvog eura ({1}). Obračun poreza potvrđuje knjigovođa.",\r
+"{0}; obračun potvrđuje knjigovođa",\r
+"{0}: {1}, a zakon daje {2} ({3}). Više dana može odobriti poslodavac (ugovor o radu, akt poslodavca).",\r
+"{0}: {1}{2}, a zakon daje najviše {3} radnih dana u kalendarskoj godini ({4}). Dane preko toga treba upisati kao „Neplaćeno odsustvo\\".",\r
+"{0}: pozajmice u {1}. godini iznose {2} EUR — iznad {3} EUR godišnje. Na pozajmice fizičkim licima iznad tog iznosa plaća se porez po odbitku ({4}). Obračun poreza potvrđuje knjigovođa.",\r
+"• {0}: {1} (sada {2})",\r
+"• vrijednosti sa kartice Stope (redovi upisani za ovaj datum se uklanjaju)",\r
+"✉ E-poštom",\r
+"➕ Upiši parametar",\r
+"🤝 Pozajmice fizičkim licima",\r
+"akt poslodavca",\r
+"Akt poslodavca",\r
+"Ažuriranje programa: paket se primjenjuje samo uz provjeren otisak (SHA-256), neuspjela verzija se sama vraća na prethodnu. Prozor programa: zabrana navigacije i novih prozora, provjera pošiljaoca svakog unutrašnjeg poziva, otvaranje fajla ne pokreće izvršne fajlove. Lozinka fiskalnog sertifikata se čuva šifrovana zaštitom Windows naloga.",\r
+"Bez promjene (važe vrijednosti sa kartice Stope)",\r
+"Bezbjednosne ispravke",\r
+"Bezbjednosne ispravke izlaze u najnovijoj verziji programa i stižu ažuriranjem. Starija verzija dobija ispravke prelaskom na najnoviju.",\r
+"broj {0}",\r
+"Broj dozvole",\r
+"čl. 210a Zakona o strancima",\r
+"čl. 28a Zakona o porezu na dobit pravnih lica („Sl. list CG\\", br. 104/26)",\r
+"čl. 87 st. 4 Zakona o radu",\r
+"čl. 87 st. 6 Zakona o radu",\r
+"čl. 88 st. 1 Zakona o radu",\r
+"data",\r
+"Data",\r
+"Dato u {0}.",\r
+"Datum od kada parametar važi je obavezan.",\r
+"Datum od kada parametri važe je obavezan.",\r
+"Datum pozajmice je obavezan.",\r
+"Dnevnik bezbjednosnih ažuriranja",\r
+"Dokument je napravljen ranije: otvara se nacrt poruke sa fajlom iz foldera izvoza. Slanje preko SMTP servera je moguće za dokument napravljen u ovom radu programa.",\r
+"Doprinosi i porez ostaju kao na kartici Stope.",\r
+"Dostavljanje akta zaposlenom e-poštom; zapis o slanju ostaje u dnevniku e-pošte kao dokaz (čl. 176a Zakona o radu)",\r
+"Dostavljeno e-poštom",\r
+"Dozvola izdata",\r
+"Dozvola važi do",\r
+"EUR godišnje plaća se porez po odbitku, a za povezana lica od prvog eura (",\r
+"Evidencija pozajmica fizičkim licima po licu i godini (porez po odbitku od 01.01.2027)",\r
+"Evidencija pozajmica koje firma daje fizičkim licima, po licu i godini. Od",\r
+"Gotovina {0} EUR: plaćanje i primanje gotovine od {1} EUR i više nije dozvoljeno ({2} st. 1). Plaćanje se obavlja preko transakcionog računa (st. 3).",\r
+"Gotovina {0}: {1} EUR (zajedno sa ovim plaćanjem). Zabrana gotovine od {2} EUR i više važi i za više povezanih transakcija, uključujući zajmove ({3} st. 2).",\r
+"Ime i prezime lica je obavezno.",\r
+"Ispravljeno",\r
+"iznad {0} EUR godišnje — porez po odbitku",\r
+"Iznos na koji se odnosi porez po odbitku",\r
+"JMBG ima 13 cifara.",\r
+"kazna za poslodavca {0}–{1} EUR, {2}",\r
+"Kompromis (minimalna zarada +200 EUR, ostalo bez promjene)",\r
+"kopija dozvole je na mjestu rada",\r
+"kroz blagajnu sa ovim licem u ±30 dana",\r
+"Lice",\r
+"lice sa invaliditetom ({0}; primjena od {1}.)",\r
+"Licenca: provjera potpisa i PIB-a i za zapamćenu licencu; odgovor servera za drugu firmu se ne prihvata.",\r
+"Minimalna neto zarada po predlogu ima tri nivoa (1.000 / 1.250 / 1.400 EUR); program vodi dva — vrijednosti po nivou kvalifikacije treba upisati prema objavljenom tekstu.",\r
+"Ministarstvo obaviješteno (nije stupio / prestanak)",\r
+"Na kartici Stope",\r
+"na pozajmice fizičkim licima iznad",\r
+"Nacrt poruke sa postojećim fajlom je dostupan u Windows programu. Na ovom uređaju dokument treba napraviti ponovo, pa poslati.",\r
+"navodi iz pregovora — nije predlog zakona",\r
+"Nema parametara sa datumom važenja — za sve mjesece važe vrijednosti iz tabele „Stope i pragovi\\".",\r
+"Nema pozajmica za izabranu godinu.",\r
+"Nepoznata varijanta parametara.",\r
+"Obrisati ovaj upis iz evidencije pozajmica?",\r
+"OC",\r
+"Očinsko odsustvo (čl. 126a ZOR, 10 radnih dana od rođenja djeteta)",\r
+"od 01.12.2026.; primjenjuju se automatski). Uvećanja po stažu i drugim osnovama firma uređuje pravilnikom (",\r
+"Odnosi se porez po odbitku",\r
+"Parametar",\r
+"Parametar je upisan od {0}.",\r
+"Parametar upisan ovdje važi od svog datuma, po mjesecu obračuna: plata za mjesec prije tog datuma obračunava se po starim, a od tog mjeseca po novim vrijednostima, bez obzira na to kada se obračun radi. Zaključeni obračuni se ne mijenjaju. Dok je tabela prazna, važe vrijednosti iz tabele „Stope i pragovi\\". Pripremljene varijante za 01.01.2027. su predlošci: zakoni „Euro modela\\" do 10.11.2026. nisu objavljeni, pa se varijanta uključuje tek po objavi u „Službenom listu CG\\", uz provjeru svake vrijednosti prema objavljenom tekstu.",\r
+"Parametri sa datumom važenja (izmjene zakona)",\r
+"PH",\r
+"Plaćeno — hitan porodični razlog (čl. 87 ZOR, 1 radni dan)",\r
+"Plaćeno — smrt člana uže porodice (čl. 87 ZOR, 7 radnih dana)",\r
+"Porez po odbitku na pozajmice fizičkim licima iznad {0} EUR godišnje; povezana lica od prvog eura ({1}). Porez nije obračunat.",\r
+"Porez po odbitku na pozajmice fizičkim licima važi od {0}. ({1}).",\r
+"porez po odbitku na pozajmice važi od {0}.",\r
+"Posljednje bezbjednosno ažuriranje: verzija {0} ({1})",\r
+"povezano lice",\r
+"Povezano lice",\r
+"povezano lice — porez po odbitku od prvog eura",\r
+"Povraćaj pozajmice je upisan.",\r
+"Pozajmica je upisana.",\r
+"Pozajmice fizičkim licima",\r
+"Pozajmice fizičkim licima — {0}. godina",\r
+"predlozi zakona — nisu usvojeni",\r
+"Pregled po licu —",\r
+"radna dana",\r
+"radni dan",\r
+"rok važenja",\r
+"Rok važenja dozvole ne može biti prije datuma izdavanja.",\r
+"sa ovim licem (pozajmice) u ±30 dana",\r
+"sa ovim partnerom u ±30 dana",\r
+"Šta je ispravljeno, u kojoj verziji i kada.",\r
+"Stanje 31.12.{0}.",\r
+"Stranac",\r
+"stranac (dozvola za boravak i rad)",\r
+"Stranac sa dozvolom za privremeni boravak i rad — rokovi poslodavca: ugovor i prijava {0} časa od izdavanja dozvole, obavještenja {1} i {2} dana, kopija dozvole na mjestu rada ({3})",\r
+"U prilogu se dostavlja {0}{1}. Dostavljanje se vrši na e-adresu zaposlenog iz evidencije poslodavca ({2}).",\r
+"Ugovor",\r
+"Uklanja redove upisane za izabrani datum.",\r
+"Uklanjanje reda (važi vrijednost sa kartice Stope ili raniji red)",\r
+"Uključeno {0} parametara od {1}. Vrijednosti se mogu ispraviti u tabeli ispod; otvoreni obračuni se preračunavaju dugmetom „Obračunaj sve\\".",\r
+"Ukloniti „{0}\\" od {1}?",\r
+"Uplata = gotovina ulazi u blagajnu (duguje 2430); isplata = gotovina izlazi (potražuje 2430). Protukonto: dobavljač 4330, trošak 5xxx, radnik 2210, žiro-račun 2410 (polog pazara se knjiži automatski sa izvoda). Gotovina od 10.000 EUR i više prema drugom licu se ne upisuje (plaćanje ide preko računa).",\r
+"Varijanta se uključuje tek po objavi zakona u „Službenom listu CG\\" — potrebna je potvrda.",\r
+"važeći propisi",\r
+"Verzija {0} dobija bezbjednosne ispravke do {1}",\r
+"Verzija {0} je dobijala bezbjednosne ispravke do {1} Potrebno je ažuriranje na najnoviju verziju.",\r
+"Veza sa lokalnim IRIS serverom: šifrovana veza se prihvata samo uz sertifikat zapamćen pri povezivanju; zahtjevi idu kroz glavni proces programa.",\r
+"Vlasnik, direktor, član njihove porodice i drugo povezano lice — bez neoporezivog iznosa",\r
+"vraćena",\r
+"Vraćena",\r
+"Vraćeno u {0}.",\r
+"Vrijednost je izmijenjena.",\r
+"Vrijednost od",\r
+"Vrijednost parametra mora biti broj koji nije negativan.",\r
+"WHERE substr(Datum,1,4)=?",\r
+"Za {0} nema parametara sa datumom važenja — važe vrijednosti sa kartice Stope.",\r
+"Za ovaj parametar se ne upisuje datum važenja.",\r
+"Zakon o sprječavanju pranja novca i finansiranja terorizma, čl. 65",\r
+"Zakon o strancima („Sl. list CG\\", br. 154/26)",\r
+"Zaposleni nema upisanu e-adresu (Kadrovi → Ugovori)."\r
 ]\r
 `;export{a as default};
