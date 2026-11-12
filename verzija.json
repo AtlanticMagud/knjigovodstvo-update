@@ -1,12 +1,12 @@
 {
-  "verzija": "2.3.1",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.3.1.zip",
+  "verzija": "2.3.2",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.3.2.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "f7441a9f820faaa11563636028857e4d66feb4560137d50d41c5e0b516b23c5f",
+  "sha256": "e3f19642c40f829ee1c40d84af4d5fd3ef47b87abb9d5e50cc66933338dfbcdb",
   "obavezno": false,
-  "napomene": "Njegošev dan (13. i 14. novembar) upisan je kao državni praznik: neradni dani u smjenama, platama, rokovima i kasama.\nKadrovi → Svi dokumenti → „Odluka: rad na praznik\": izbor praznika iz spiska, dodavanje praznika, promjena datuma i naziva, izbor objekata, radno vrijeme, broj i datum odluke, pravni osnov i „Dostaviti\". Odluka se pravi po obrascu firme i upisuje u evidenciju dokumenata.",
+  "napomene": "Nova kalkulacija: QR kod skeniran dok program čeka odgovor Poreske uprave više se ne gubi. Skenovi čekaju u redu i obrađuju se jedan po jedan; broj skenova u redu vidi se na ekranu, a račun koji nije unesen ostaje na ekranu uz „Pokušaj ponovo\".\nRazmjena sa serverom: fajl ostaje u redu za slanje kada server ne može da ga upiše i šalje se ponovo pri sljedećoj razmjeni.",
   "datum": "2026-11-12",
-  "sha256Android": "03aec5ba36a3baad806d70043ae50c4c859744ad718f8d1a3618d7d9629fb102",
-  "verzijaPrethodna": "2.3.0",
+  "sha256Android": "5f4993317128fcc69f04c37bf7404449198419d2df9697c155e18e9184f0c9e9",
+  "verzijaPrethodna": "2.3.1",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
