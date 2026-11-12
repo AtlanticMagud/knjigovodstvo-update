@@ -1,12 +1,12 @@
 {
-  "verzija": "2.4.0",
+  "verzija": "2.5.0",
   "datum": "2026-11-12",
-  "opis": "Popis sa čitačem barkoda ne gubi skenirane stavke.\n- Barkod ili šifra očitani dok je otvoreno polje količine upisuju se kao nova stavka, ne kao količina.\n- Snimak Knjigovodstva druge firme se odbija prije upisa u bazu.\n- Ponovljen klik na dugme ne pokreće istu radnju drugi put dok prva traje.\n- Dopunjeni prevodi na engleski, ruski i turski.",
-  "paket": "menadzer-paket-2.4.0.json.gz",
-  "sha256": "47f5ee39f3bb6b3ccb83de2141b25c92a459099f98bf93b12e2a669f0fb0a62f",
-  "velicina": 1907975,
+  "opis": "Brži rad sa velikim šifarnikom i velikim brojem prijema.\n- Radnje i prelazak sa ekrana na ekran traju kraće kad firma ima više hiljada artikala.\n- Popis: brojanje ostaje jednako brzo i kad je prebrojano nekoliko hiljada artikala.\n- Etikete: veliki spisak se lista po 200 redova i štampa u dijelovima od po 50 tabaka.\n- Izvoz u Excel sa ekrana Etikete nosi cio spisak.",
+  "paket": "menadzer-paket-2.5.0.json.gz",
+  "sha256": "3570c4e30c2adb64e29341f90b283a2c96a3ef335b0cb1f006ebb3f822428bf8",
+  "velicina": 1914673,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "6899fba2b99400409c4aa7659dc54d71bfb657f1340c07de4854088d605acc82",
-  "apkVelicina": 25590485
+  "apkSha256": "018d79810ccd0202ab073a58a3748b14f885c08125d5364c858c145e9bf137df",
+  "apkVelicina": 25594761
 }
