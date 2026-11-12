@@ -1,12 +1,12 @@
 {
-  "verzija": "2.3.0",
-  "datum": "2026-11-11",
-  "opis": "Jezik programa: srpski, engleski, ruski ili turski.\n- Izbor u Moj nalog → Jezik programa i na ekranu prijave; jezik važi za ovaj uređaj.\n- Izvozi (Excel, PDF), štampa i etikete ostaju na crnogorskom jeziku.",
-  "paket": "menadzer-paket-2.3.0.json.gz",
-  "sha256": "ea46fb1eb8175b93eb0a226f526cd17afb25f2999001bb39625fc10f92942e44",
-  "velicina": 1897839,
+  "verzija": "2.3.1",
+  "datum": "2026-11-12",
+  "opis": "Zatvaranje programa više ne odnosi nesnimljene izmjene.\n- Program snima podatke prije zatvaranja prozora i prije ponovnog pokretanja radi ažuriranja.\n- Skenirane stavke u popisu čuvaju se odmah i vraćaju se pri sljedećem pokretanju.\n- Fajl razmjene ostaje u redu za slanje kad server ne može da ga upiše.",
+  "paket": "menadzer-paket-2.3.1.json.gz",
+  "sha256": "b1a4bc1b2c6e7a8a52b123618b7c0fee9f057b8e2b5939cbfc5dcf589d4bbd3e",
+  "velicina": 1903234,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "cc9a656ad5d93ea7a061cedc9e30823af8133c260a6a6785c5a655fb5d0c9227",
-  "apkVelicina": 25584045
+  "apkSha256": "13e16d3f63a4682530b468af55ad83c855b57020edba45a5054b0dfb6c337be9",
+  "apkVelicina": 25586909
 }
