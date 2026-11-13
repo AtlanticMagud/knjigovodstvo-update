@@ -1,12 +1,12 @@
 {
-  "verzija": "2.5.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.5.0.zip",
+  "verzija": "2.6.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.6.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "a57fb4a048a3420f7e618f13fa0dd62007a845fbdd5bff85543424fdfd1d97fa",
+  "sha256": "ee11eefbd5b5df9967eb9ad1dc060dd2d87710d6e1d268aa58f8e28209eaf57e",
   "obavezno": false,
-  "napomene": "Brzina: snimanje baze više ne zaustavlja ekran — poslije unosa se na disk upisuju samo izmijenjeni dijelovi baze. Za ovo je potreban novi Setup 2.5.0 (Windows); sa ranijim Setup-om program snima kao do sada.\nListe: duge liste (knjiga primljenih računa, kalkulacije, kartice) prikazuju se po 300 redova, sa listanjem po stranama; zbir, izvoz i štampa i dalje obuhvataju sve redove.\nPretraga: polje „Traži u svim redovima\" u listi po stranama pretražuje sve strane i otvara stranu sa pogotkom.\nIzvoz: PDF velikih tabela pravi se u pozadini — ekran ostaje upotrebljiv, traka pokazuje broj strana, a izrada se može prekinuti dugmetom „Odustani\".\nO programu: ova verzija ne sadrži bezbjednosne ispravke.\nVažno: snimanje bez zastoja radi poslije instalacije Setup-a 2.5.0 preko postojećeg programa (podaci ostaju); sve ostalo stiže redovnim ažuriranjem.",
+  "napomene": "Ažuriranje: objava nove verzije se prije preuzimanja provjerava potpisom izdavača. Objava sa neispravnim potpisom, povučena verzija i verzija starija od već objavljene se ne preuzimaju; ekran „Ažuriranje\" tada navodi razlog. Objava bez potpisa se preuzima kao do sada.\nVeza sa serverom: prijava uređaja na server se obnavlja sama — prije isteka roka i poslije isteka, bez ponovnog uparivanja. Nova prijava se upisuje na disk prije prve upotrebe.\nVeza sa serverom: kad server privremeno ograniči broj zahtjeva, program sačeka i ponovi zahtjev.\nO programu: dnevnik bezbjednosnih ažuriranja dopunjen je ovom verzijom.\nVažno: nije potreban novi Setup. Verzija radi i sa serverom koji ove mogućnosti još nema.",
   "datum": "2026-11-13",
-  "sha256Android": "d65f0e956ffcb2fd3cd1e8c35525a22f3e34dfa702b841f13b2841fd602ff12c",
-  "verzijaPrethodna": "2.4.0",
+  "sha256Android": "45936748707939a8c7b596cbc6263d4bba2520ddc9a0a2278b2dcface2d32bb3",
+  "verzijaPrethodna": "2.5.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

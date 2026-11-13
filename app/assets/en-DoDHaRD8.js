@@ -7,21 +7,40 @@ const e=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"Program update: the release announcement is verified with the publisher's signature; an announcement with an invalid signature, a withdrawn version and a version older than one already published are not downloaded. Server connection: the device sign-in is renewed automatically before it expires and after it has expired.",\r
+"update feed: release without signature",\r
+"update feed: release without state",\r
+"update feed: release has an invalid format",\r
+"update feed: release lower than a previously signed one",\r
+"update feed: release signature is not valid",\r
+"update feed: state signature is not valid",\r
+"update feed: signed release is issued for another program",\r
+"update feed: state is issued for another program",\r
+"update feed: state expired",\r
+"update feed: state older than the last accepted one",\r
 "PDF creation was cancelled.",\r
 "Creating PDF… ({0} rows)",\r
 "Creating PDF… ({0} pages)",\r
 "No matches",\r
+"The release of the new version has no publisher signature. The update was not downloaded.",\r
+"The release of the new version did not pass the publisher signature check. The update was not downloaded.",\r
+"The published version {0} is older than the previously published version {1}. The update was not downloaded.",\r
+"The data on valid versions did not pass the publisher signature check. The update was not downloaded.",\r
+"The data on valid versions has expired, so updates cannot be verified at the moment. The check is repeated automatically.",\r
 "Match {0} of {1}",\r
 "Last page",\r
 "Previous page",\r
 "Previous match",\r
 "Search across all pages of the list (Enter = next match)",\r
+"update check",\r
 "First page",\r
 "Rows {0}–{1} of {2}. Totals, export and printing cover all rows.",\r
 "Next page",\r
 "Next match",\r
 "Page {0} of {1}",\r
+"Persistent settings are not available.",\r
 "Search all rows",\r
+"Version {0} has been withdrawn. Waiting for the next version.",\r
 "– {0} {1}: 0 items",\r
 "– {0} {1}: statement of company {2} (PIB {3}) — another company, skipped",\r
 "– {0} {1}: another company's account, skipped",\r

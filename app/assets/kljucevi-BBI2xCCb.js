@@ -7,21 +7,40 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"Ažuriranje programa: objava nove verzije se provjerava potpisom izdavača; objava sa neispravnim potpisom, povučena verzija i verzija starija od već objavljene se ne preuzimaju. Veza sa serverom: prijava uređaja se obnavlja sama prije isteka roka i poslije isteka.",\r
+"feed ažuriranja: objava bez potpisa",\r
+"feed ažuriranja: objava bez stanja",\r
+"feed ažuriranja: objava nije ispravnog oblika",\r
+"feed ažuriranja: objava niža od ranije potpisane",\r
+"feed ažuriranja: potpis objave ne važi",\r
+"feed ažuriranja: potpis stanja ne važi",\r
+"feed ažuriranja: potpisana objava glasi na drugi program",\r
+"feed ažuriranja: stanje glasi na drugi program",\r
+"feed ažuriranja: stanje isteklo",\r
+"feed ažuriranja: stanje starije od posljednjeg prihvaćenog",\r
 "Izrada PDF-a je prekinuta.",\r
 "Izrada PDF-a… ({0} redova)",\r
 "Izrada PDF-a… ({0} strana)",\r
 "Nema pogodaka",\r
+"Objava nove verzije nema potpis izdavača. Ažuriranje nije preuzeto.",\r
+"Objava nove verzije nije prošla provjeru potpisa izdavača. Ažuriranje nije preuzeto.",\r
+"Objavljena verzija {0} je starija od već objavljene verzije {1}. Ažuriranje nije preuzeto.",\r
+"Podaci o važećim verzijama nisu prošli provjeru potpisa izdavača. Ažuriranje nije preuzeto.",\r
+"Podaci o važećim verzijama su istekli, pa se ažuriranja trenutno ne mogu provjeriti. Provjera se ponavlja sama.",\r
 "Pogodak {0} od {1}",\r
 "Posljednja strana",\r
 "Prethodna strana",\r
 "Prethodni pogodak",\r
 "Pretraga kroz sve strane liste (Enter = sljedeći pogodak)",\r
+"provjera ažuriranja",\r
 "Prva strana",\r
 "Redovi {0}–{1} od {2}. Zbir, izvoz i štampa obuhvataju sve redove.",\r
 "Sljedeća strana",\r
 "Sljedeći pogodak",\r
 "Strana {0} od {1}",\r
+"Trajna podešavanja nijesu dostupna.",\r
 "Traži u svim redovima",\r
+"Verzija {0} je povučena. Čeka se sljedeća verzija.",\r
 "– {0} {1}: 0 stavki{2}",\r
 "– {0} {1}: izvod firme {2} (PIB {3}) — druga firma, preskočeno",\r
 "– {0} {1}: račun druge firme{2}, preskočeno",\r

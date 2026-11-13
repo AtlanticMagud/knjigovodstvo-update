@@ -7,21 +7,40 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"Program güncellemesi: yeni sürüm duyurusu yayıncının imzasıyla doğrulanır; imzası geçersiz duyuru, geri çekilmiş sürüm ve daha önce yayımlanandan eski sürüm indirilmez. Sunucu bağlantısı: cihaz oturumu, süresi dolmadan önce ve dolduktan sonra kendiliğinden yenilenir.",\r
+"güncelleme akışı: imzasız yayın",\r
+"güncelleme akışı: durumsuz yayın",\r
+"güncelleme akışı: yayın biçimi geçersiz",\r
+"güncelleme akışı: yayın daha önce imzalanandan düşük",\r
+"güncelleme akışı: yayın imzası geçersiz",\r
+"güncelleme akışı: durum imzası geçersiz",\r
+"güncelleme akışı: imzalı yayın başka bir program için düzenlenmiş",\r
+"güncelleme akışı: durum başka bir program için düzenlenmiş",\r
+"güncelleme akışı: durumun süresi doldu",\r
+"güncelleme akışı: durum son kabul edilenden eski",\r
 "PDF oluşturma iptal edildi.",\r
 "PDF oluşturuluyor… ({0} satır)",\r
 "PDF oluşturuluyor… ({0} sayfa)",\r
 "Eşleşme yok",\r
+"Yeni sürümün yayınında yayıncı imzası yok. Güncelleme indirilmedi.",\r
+"Yeni sürümün yayını yayıncı imzası doğrulamasından geçemedi. Güncelleme indirilmedi.",\r
+"Yayınlanan {0} sürümü, daha önce yayınlanan {1} sürümünden eski. Güncelleme indirilmedi.",\r
+"Geçerli sürümlere ilişkin veriler yayıncı imzası doğrulamasından geçemedi. Güncelleme indirilmedi.",\r
+"Geçerli sürümlere ilişkin verilerin süresi doldu, bu nedenle güncellemeler şu anda doğrulanamıyor. Denetim kendiliğinden tekrarlanır.",\r
 "Eşleşme {0} / {1}",\r
 "Son sayfa",\r
 "Önceki sayfa",\r
 "Önceki eşleşme",\r
 "Listenin tüm sayfalarında arama (Enter = sonraki eşleşme)",\r
+"güncelleme denetimi",\r
 "İlk sayfa",\r
 "Satır {0}–{1} / {2}. Toplam, dışa aktarma ve yazdırma tüm satırları kapsar.",\r
 "Sonraki sayfa",\r
 "Sonraki eşleşme",\r
 "Sayfa {0} / {1}",\r
+"Kalıcı ayarlar kullanılamıyor.",\r
 "Tüm satırlarda ara",\r
+"{0} sürümü geri çekildi. Sonraki sürüm bekleniyor.",\r
 "– {0} {1}: 0 kalem",\r
 "– {0} {1}: {2} firmasının ekstresi (PIB {3}) — başka firma, atlandı",\r
 "– {0} {1}: başka firmanın hesabı, atlandı",\r
