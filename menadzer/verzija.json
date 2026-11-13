@@ -1,12 +1,12 @@
 {
-  "verzija": "2.6.0",
+  "verzija": "2.7.0",
   "datum": "2026-11-13",
-  "opis": "Zaštita ažuriranja i prijave uređaja na server.\n- Prije preuzimanja nove verzije program provjerava objavu: potpis izdavača, rok važenja i spisak povučenih verzija. Objava koja ne prođe provjeru se ne preuzima, a razlog se vidi na ekranu Ažuriranje programa.\n- Prijava uređaja na server se obnavlja sama kad server to zatraži; uređaj se ne uparuje ponovo.\n- Kad server privremeno ograniči broj zahtjeva, program sačeka i ponovi zahtjev.",
-  "paket": "menadzer-paket-2.6.0.json.gz",
-  "sha256": "379f90b61df662857d5eb6778bf6e1d0cc4d2eb758bc879b41fd5a0335f238f1",
-  "velicina": 1921940,
+  "opis": "Odstupanja od uobičajenog, odobrenja na jednom mjestu i dani bez robe.\n- Danas: spisak „Čeka odobrenje\" (narudžbe, trebovanja, sniženja pred istek roka, nacrti smjena). Narudžba do limita odobravanja se odobrava jednim dugmetom.\n- Odstupanja od uobičajenog: program javlja promet, broj računa, storno, popuste i brisanja koji odskaču od uobičajenog za taj market i taj dan u sedmici. Dok market nema dovoljno istorije, važi prag „pad prometa\" iz Pravila i limita.\n- Primljena roba: kalkulacija pokazuje artikle kojima je dobavljač promijenio nabavnu cijenu u odnosu na prethodnu isporuku.\n- Pregledi: nova kartica „Dani bez robe\" za najprodavanije artikle, sa procjenom izgubljene prodaje.\n- Jutarnji sažetak nosi odstupanja i broj stavki koje čekaju odobrenje.\n- Zadaci, Kvarovi i nestašice i Narudžbe se listaju po 50 redova; izvoz u Excel nosi cio spisak.\n- O programu: pravilo o podacima firme i automatskim predlozima.",
+  "paket": "menadzer-paket-2.7.0.json.gz",
+  "sha256": "d142adb81fcb93c21e4cc60aab125502f6f02cf15f00e71e0b718d45518c3134",
+  "velicina": 1942815,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "0e84c6a4baa93280145c2033ed38373820a00ba571a881f537d7a32635911aa4",
-  "apkVelicina": 25599817
+  "apkSha256": "4ded0e45a939d0fce4fbb182803a631ca999a415270956f2014fbf1ff4d7da59",
+  "apkVelicina": 25613605
 }
