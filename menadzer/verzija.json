@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.0",
+  "verzija": "2.7.1",
   "datum": "2026-11-13",
-  "opis": "Odstupanja od uobičajenog, odobrenja na jednom mjestu i dani bez robe.\n- Danas: spisak „Čeka odobrenje\" (narudžbe, trebovanja, sniženja pred istek roka, nacrti smjena). Narudžba do limita odobravanja se odobrava jednim dugmetom.\n- Odstupanja od uobičajenog: program javlja promet, broj računa, storno, popuste i brisanja koji odskaču od uobičajenog za taj market i taj dan u sedmici. Dok market nema dovoljno istorije, važi prag „pad prometa\" iz Pravila i limita.\n- Primljena roba: kalkulacija pokazuje artikle kojima je dobavljač promijenio nabavnu cijenu u odnosu na prethodnu isporuku.\n- Pregledi: nova kartica „Dani bez robe\" za najprodavanije artikle, sa procjenom izgubljene prodaje.\n- Jutarnji sažetak nosi odstupanja i broj stavki koje čekaju odobrenje.\n- Zadaci, Kvarovi i nestašice i Narudžbe se listaju po 50 redova; izvoz u Excel nosi cio spisak.\n- O programu: pravilo o podacima firme i automatskim predlozima.",
-  "paket": "menadzer-paket-2.7.0.json.gz",
-  "sha256": "d142adb81fcb93c21e4cc60aab125502f6f02cf15f00e71e0b718d45518c3134",
-  "velicina": 1942815,
+  "opis": "Ispravke poslije druge provjere programa.\n- Spiskovi po stranama (Zadaci, Kvarovi i nestašice, Narudžbe): poslije promjene prikaza spisak počinje od prvog reda.\n- Trebovanje i prenos: „Prijedlog preraspodjele\" se otvara odmah i kod velikog broja artikala.\n- Preuzimanje iz Knjigovodstva iz fajla: program pokazuje dokle je preuzimanje stiglo i za to vrijeme odgovara.\n- Danas i obavještenja: red i obavještenje o promjeni nabavne cijene otvaraju tu kalkulaciju, bez obzira na izabrani market i period.\n- Prijem po narudžbi na telefonu: izbor razlike staje na ekran.\n- Brže crtanje ekrana Prijem robe i Smjene.\n- Prevod: dopunjeni natpisi na engleskom, ruskom i turskom.",
+  "paket": "menadzer-paket-2.7.1.json.gz",
+  "sha256": "af91c41445c7a91f8f83195b3358deae3638bc18b89219fe73b8f740b886502e",
+  "velicina": 1953073,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "4ded0e45a939d0fce4fbb182803a631ca999a415270956f2014fbf1ff4d7da59",
-  "apkVelicina": 25613605
+  "apkSha256": "2877ba62254ee50c32f5871fb646ff64c380495bbc735b0f1d649d140b3d20b0",
+  "apkVelicina": 25620337
 }
