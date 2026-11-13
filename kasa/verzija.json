@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.0",
+  "verzija": "2.7.1",
   "datum": "2026-11-13",
-  "napomene": "Nove funkcije za kontrolu rada kase.\nProvjera starosti pri prodaji alkohola i duvana: uz potvrdu se može upisati datum rođenja sa isprave, a kasa bilježi ko je potvrdio ili odbio prodaju. Datum rođenja se ne čuva.\nDepozit i podizanje: razlog se bira iz spiska.\nViše → Izuzeci po kasiru (šef): storna, povrati, brisanja prije naplate, fioka bez računa i ručni popusti po kasiru.\nViše → Promet po radnom danu (šef): pregled za lokal koji radi poslije ponoći.\nViše → Rad bez interneta: šta kasa radi bez veze i šta čeka slanje.\nKad nova verzija ne prođe provjeru, razlog se vidi i pri automatskoj provjeri.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.0.zip",
-  "sha256": "8de65814bd193715002581f7b466aa49bdc90e082973acc2c8be67ebc03fb3aa",
-  "velicina": 1495549,
+  "napomene": "Ispravke po drugom krugu provjere.\nGotovina istom kupcu u danu (granica 10.000 €): storno i povrat kupca vjernosti umanjuju zbir, pa upozorenje izlazi samo kad ima osnova.\nNove cijene iz razmjene vide se na kasi čim stignu; „Provjeri razmjenu\" tokom automatske provjere daje poruku i ishod.\nDepozit i podizanje: razlog se bira prije upisa.\nProvjera starosti: pitanje zatvoreno bez odluke ne bilježi se kao odbijena prodaja; artikal se ne dodaje.\nIzuzeci po kasiru i Promet po radnom danu: datum u budućnosti se ne prima; period izuzetaka je najviše 366 dana.\nNa uskom ekranu natpisi dugmadi staju na svim jezicima.\nKad se veza sa Poreskom upravom vrati, računi koji su čekali šalju se u pozadini i ne zadržavaju naplatu.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.1.zip",
+  "sha256": "68c1c4f894bd30746c30fb8643f4f6650aa03d667bc030ead0f80a54c17e7034",
+  "velicina": 1499838,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.7.0",
-  "sha256Android": "5a6a9b20212c1394dad56a4c56a4ecff8dfe69f34394af46cb2f0b398844e3ca"
+  "verzijaAndroid": "2.7.1",
+  "sha256Android": "6e5435ddfb9a68960a9e8c3cf4ca8f781d8dd656dc1b47380513477280efdd05"
 }
