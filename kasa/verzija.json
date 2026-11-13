@@ -1,12 +1,12 @@
 {
-  "verzija": "2.6.0",
+  "verzija": "2.7.0",
   "datum": "2026-11-13",
-  "napomene": "Zaštita ažuriranja i prijave kase na server.\nPrije preuzimanja nove verzije program provjerava objavu: potpis izdavača, rok važenja i spisak povučenih verzija. Objava koja ne prođe provjeru se ne preuzima, a razlog se vidi pri provjeri u Podešavanjima (Ažuriranje).\nPrijava kase na server se obnavlja sama kad server to zatraži; kasa se ne povezuje ponovo.\nKad server privremeno ograniči broj zahtjeva, kasa sačeka i ponovi zahtjev.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.6.0.zip",
-  "sha256": "4a77d58878be62458407f70ffaae8dbc6cd037e1c8a99419319ec3325f0a7371",
-  "velicina": 1484859,
+  "napomene": "Nove funkcije za kontrolu rada kase.\nProvjera starosti pri prodaji alkohola i duvana: uz potvrdu se može upisati datum rođenja sa isprave, a kasa bilježi ko je potvrdio ili odbio prodaju. Datum rođenja se ne čuva.\nDepozit i podizanje: razlog se bira iz spiska.\nViše → Izuzeci po kasiru (šef): storna, povrati, brisanja prije naplate, fioka bez računa i ručni popusti po kasiru.\nViše → Promet po radnom danu (šef): pregled za lokal koji radi poslije ponoći.\nViše → Rad bez interneta: šta kasa radi bez veze i šta čeka slanje.\nKad nova verzija ne prođe provjeru, razlog se vidi i pri automatskoj provjeri.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.0.zip",
+  "sha256": "8de65814bd193715002581f7b466aa49bdc90e082973acc2c8be67ebc03fb3aa",
+  "velicina": 1495549,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.6.0",
-  "sha256Android": "1810297b69d9a03500334430ae64e3cdc80c83b5edc0f0a504191d5772145c07"
+  "verzijaAndroid": "2.7.0",
+  "sha256Android": "5a6a9b20212c1394dad56a4c56a4ecff8dfe69f34394af46cb2f0b398844e3ca"
 }
