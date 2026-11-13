@@ -7,6 +7,21 @@ const e=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"PDF creation was cancelled.",\r
+"Creating PDF… ({0} rows)",\r
+"Creating PDF… ({0} pages)",\r
+"No matches",\r
+"Match {0} of {1}",\r
+"Last page",\r
+"Previous page",\r
+"Previous match",\r
+"Search across all pages of the list (Enter = next match)",\r
+"First page",\r
+"Rows {0}–{1} of {2}. Totals, export and printing cover all rows.",\r
+"Next page",\r
+"Next match",\r
+"Page {0} of {1}",\r
+"Search all rows",\r
 "– {0} {1}: 0 items",\r
 "– {0} {1}: statement of company {2} (PIB {3}) — another company, skipped",\r
 "– {0} {1}: another company's account, skipped",\r

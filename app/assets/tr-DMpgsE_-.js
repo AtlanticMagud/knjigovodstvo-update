@@ -7,6 +7,21 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"PDF oluşturma iptal edildi.",\r
+"PDF oluşturuluyor… ({0} satır)",\r
+"PDF oluşturuluyor… ({0} sayfa)",\r
+"Eşleşme yok",\r
+"Eşleşme {0} / {1}",\r
+"Son sayfa",\r
+"Önceki sayfa",\r
+"Önceki eşleşme",\r
+"Listenin tüm sayfalarında arama (Enter = sonraki eşleşme)",\r
+"İlk sayfa",\r
+"Satır {0}–{1} / {2}. Toplam, dışa aktarma ve yazdırma tüm satırları kapsar.",\r
+"Sonraki sayfa",\r
+"Sonraki eşleşme",\r
+"Sayfa {0} / {1}",\r
+"Tüm satırlarda ara",\r
 "– {0} {1}: 0 kalem",\r
 "– {0} {1}: {2} firmasının ekstresi (PIB {3}) — başka firma, atlandı",\r
 "– {0} {1}: başka firmanın hesabı, atlandı",\r

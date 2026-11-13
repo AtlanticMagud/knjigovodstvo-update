@@ -1,12 +1,12 @@
 {
-  "verzija": "2.4.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.4.0.zip",
+  "verzija": "2.5.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.5.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "d5c78447fe52a81ddb88236a96a787ff0765a7d331a1bc6e82af0caacad519f6",
+  "sha256": "a57fb4a048a3420f7e618f13fa0dd62007a845fbdd5bff85543424fdfd1d97fa",
   "obavezno": false,
-  "napomene": "Unos i obrasci: klik pored obrasca ne zatvara obrazac u koji je nešto upisano; ponovljen klik na „Snimi\" ne snima dokument dva puta; ručni unos fakture bez broja računa upozorava na isti račun.\nNova kalkulacija: red skenova se čuva pri prelasku na drugi ekran i pri zatvaranju prozora.\nRazmjena: ručno unesena faktura prenosi se na druge računare.\nIzvozi: otvorene stavke imaju kolonu „Vrsta\"; zbirovi trgovačke knjige u Excel-u zaokruženi su na dvije decimale.\nGotovina: plaćanje ili uplata gotovinom od 10.000 EUR i više se ne upisuje; više gotovinskih plaćanja istom licu traži potvrdu.\nKadrovi: nove vrste odsustva (smrt člana uže porodice, hitan porodični razlog, očinsko odsustvo, neplaćeno odsustvo radi njege); dostavljanje akata zaposlenom e-poštom uz dokaz o slanju; dozvole i rokovi za strance; godišnji odmor lica sa invaliditetom od 01.12.2026.\nFinansije: evidencija pozajmica fizičkim licima; PDV broj kupca (ME + PIB) na fakturi, avansnom računu, odobrenju i otpremnici; ime primaoca na nalogu za isplatu zarade.\nPlate: parametri sa datumom važenja za 2027. godinu su pripremljeni i isključeni dok zakon ne bude objavljen.\nO programu: dnevnik bezbjednosnih ažuriranja. Ova verzija ne sadrži bezbjednosne ispravke.\nVažno: prije korišćenja ručnih faktura u razmjeni i novih vrsta odsustva ažurirajte sve računare na ovu verziju.",
-  "datum": "2026-11-12",
-  "sha256Android": "97630658045d4c66e536f0dd4a8cae85195f25249208c90dc9f322cd31d61410",
-  "verzijaPrethodna": "2.3.2",
+  "napomene": "Brzina: snimanje baze više ne zaustavlja ekran — poslije unosa se na disk upisuju samo izmijenjeni dijelovi baze. Za ovo je potreban novi Setup 2.5.0 (Windows); sa ranijim Setup-om program snima kao do sada.\nListe: duge liste (knjiga primljenih računa, kalkulacije, kartice) prikazuju se po 300 redova, sa listanjem po stranama; zbir, izvoz i štampa i dalje obuhvataju sve redove.\nPretraga: polje „Traži u svim redovima\" u listi po stranama pretražuje sve strane i otvara stranu sa pogotkom.\nIzvoz: PDF velikih tabela pravi se u pozadini — ekran ostaje upotrebljiv, traka pokazuje broj strana, a izrada se može prekinuti dugmetom „Odustani\".\nO programu: ova verzija ne sadrži bezbjednosne ispravke.\nVažno: snimanje bez zastoja radi poslije instalacije Setup-a 2.5.0 preko postojećeg programa (podaci ostaju); sve ostalo stiže redovnim ažuriranjem.",
+  "datum": "2026-11-13",
+  "sha256Android": "d65f0e956ffcb2fd3cd1e8c35525a22f3e34dfa702b841f13b2841fd602ff12c",
+  "verzijaPrethodna": "2.4.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

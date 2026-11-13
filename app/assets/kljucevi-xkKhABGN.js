@@ -7,6 +7,21 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"Izrada PDF-a je prekinuta.",\r
+"Izrada PDF-a… ({0} redova)",\r
+"Izrada PDF-a… ({0} strana)",\r
+"Nema pogodaka",\r
+"Pogodak {0} od {1}",\r
+"Posljednja strana",\r
+"Prethodna strana",\r
+"Prethodni pogodak",\r
+"Pretraga kroz sve strane liste (Enter = sljedeći pogodak)",\r
+"Prva strana",\r
+"Redovi {0}–{1} od {2}. Zbir, izvoz i štampa obuhvataju sve redove.",\r
+"Sljedeća strana",\r
+"Sljedeći pogodak",\r
+"Strana {0} od {1}",\r
+"Traži u svim redovima",\r
 "– {0} {1}: 0 stavki{2}",\r
 "– {0} {1}: izvod firme {2} (PIB {3}) — druga firma, preskočeno",\r
 "– {0} {1}: račun druge firme{2}, preskočeno",\r
