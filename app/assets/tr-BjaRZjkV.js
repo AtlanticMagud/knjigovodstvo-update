@@ -19,12 +19,17 @@ const a=`[\r
 "Banka: ekstre işlemleri, kayıt, tanıma yöntemi",\r
 "Banka: postadaki tüm ekstreleri içe aktar",\r
 "Belge numarası, IKOF veya JIKR — veya ekran ve işlem adı",\r
+"Numara: {0}",\r
+"Düzenlenme tarihi: {0}",\r
+"Tarih: {0}",\r
 "Ayrıntı",\r
 "Tedarikçinin açık faturası yok; {0} EUR ödeme fatura girilene kadar ön ödeme olarak kalır.",\r
 "tedarikçi {0}",\r
 "Tedarikçiler: tedarikçi kartı ve ödeme girişi",\r
 "Bu izin için rapor ve IOPPD kodu belirlenmemiştir ve muhasebecinin cevabını beklemektedir; bu nedenle program bu günleri izin olarak hesaplamaz: vardiya planı olmayan çalışanda bu günler normal çalışmadadır, vardiya planına göre çalışan için bu günlerin saatleri muhasebecinin talimatına göre bordroya girilmelidir.",\r
 "ekran",\r
+"EV",\r
+"dosya değişti",\r
 "güncelleme akışı: imzasız yayın",\r
 "güncelleme akışı: durumsuz yayın",\r
 "güncelleme akışı: yayın biçimi geçersiz",\r
@@ -35,6 +40,8 @@ const a=`[\r
 "güncelleme akışı: durum başka bir program için düzenlenmiş",\r
 "güncelleme akışı: durumun süresi doldu",\r
 "güncelleme akışı: durum son kabul edilenden eski",\r
+"FFFFFFFF",\r
+"Oluşturuldu: {0}",\r
 "Ayın büyük defteri dengede (borç = alacak)",\r
 "bu ay için büyük defter programda tutulmuyor",\r
 "Seçilen işlem türü yalnızca çıkışlar için geçerlidir.",\r
@@ -58,20 +65,29 @@ const a=`[\r
 "PDF oluşturuluyor… ({0} satır)",\r
 "PDF oluşturuluyor… ({0} sayfa)",\r
 "Banka ekstreleri ay sonuna kadar içe aktarıldı",\r
+"İcra direktörü: {0}",\r
 "Kalemin iş ortağı nasıl tanındı",\r
+"{0} tarihine kaydedildi.",\r
 "AY SONU KAPANIŞ KONTROL LİSTESİ — {0}",\r
 "müşteri {0}",\r
+"la",\r
 "Adet izni",\r
 "Adet izni (Sağlık Sigortası Kanunu md. 36a, ayda en fazla 2 gün)",\r
 "Ay teslime hazır",\r
 "Ayın kilidi açılmadı: kilit açma nedeni zorunludur.",\r
 "Ay kilitli (defterler teslim edildi)",\r
 "MO",\r
+"Bayram günü vardiya planına göre çalışanlar: {0}.",\r
 "KDV fişi mevcut",\r
 "Bu kalemden banka kuralı oluştur (açıklama veya alıcı hesabı → tür ve iş ortağı)",\r
 "Kural adı",\r
+"Mal adı",\r
 "Açıklamadaki ad",\r
 "uygulanmaz",\r
+"geçersiz parça",\r
+"geçersiz istek",\r
+"geçersiz uzunluk",\r
+"dosya yok",\r
 "ay için KDV hesaplama fişi yok",\r
 "ay için bordro yok",\r
 "Eşleşme yok",\r
@@ -80,20 +96,30 @@ const a=`[\r
 "ayda işlem yok",\r
 "ayda gelen fatura yok",\r
 "içe aktarılmış ekstre yok",\r
+"bilinmeyen mesaj",\r
 "kilitli değil",\r
 "Hiçbir bekleyen kalem değiştirilmedi.",\r
+"kayıt iş parçacığı yanıt vermiyor",\r
+"kayıt iş parçacığı veritabanını döndürmedi",\r
+"kayıt iş parçacığı: {0}",\r
+"PDF iş parçacığı başarısız oldu",\r
 "Yeni öneri: {0} ({1}).",\r
 "Yeni banka kuralı",\r
 "örn. Banka ücreti",\r
 "örn. hesap işletim ücreti",\r
+"Bu Karar, ücretleri ile ücret üzerinden vergi ve primleri iş sözleşmesine göre {1} çalışma için %{0} artırılarak hesaplanacak tüm çalışanlara bildirilmiştir ({2}).",\r
 "Yeni sürümün yayınında yayıncı imzası yok. Güncelleme indirilmedi.",\r
 "Yeni sürümün yayını yayıncı imzası doğrulamasından geçemedi. Güncelleme indirilmedi.",\r
 "Yayınlanan {0} sürümü, daha önce yayınlanan {1} sürümünden eski. Güncelleme indirilmedi.",\r
+"İşlem devam ediyor, sırada: {0}.",\r
+"Form: {0}",\r
+"Gerekçe",\r
 "bordro kilitli değil",\r
 "KDV hesabı büyük deftere kaydedildi",\r
 "Bordro ve IOPPD",\r
 "Bordro kilitli (IOPPD)",\r
 "\\"{0}\\" kuralı silinsin mi? Kuralın daha önce sınıflandırdığı kalemler olduğu gibi kalır.",\r
+"Karar, denetim hizmetleri için işyerinin girişine asılır.",\r
 "O zaman yaz",\r
 "Açıklama içerir (birden çok koşulu \\";\\" ile ayırın)",\r
 "açıklama \\"{0}\\" içeriyor",\r
@@ -105,16 +131,20 @@ const a=`[\r
 "Hasılat ±",\r
 "KDV kontrolleri (oranlara göre hasılat, giriş oranları)",\r
 "KDV beyannamesi (PR-PDV)",\r
+"KDV: {0}",\r
 "Açıklamada vergi no.",\r
+"VKN: {0}{1}",\r
 "Çalışan bordrosu: aylık hesap ve IOPPD",\r
 "ödeme otomatik olarak kaydedilmedi: alıcı hesabı tedarikçinin bilinen hesapları arasında değil —",\r
 "{0} EUR ödeme tedarikçiye açık borçtan ({1} EUR) büyük; {2} EUR fark ön ödeme olarak kalır.",\r
+"olağan çalışma saatlerinde",\r
 "Geçerli sürümlere ilişkin veriler yayıncı imzası doğrulamasından geçemedi. Güncelleme indirilmedi.",\r
 "Geçerli sürümlere ilişkin verilerin süresi doldu, bu nedenle güncellemeler şu anda doğrulanamıyor. Denetim kendiliğinden tekrarlanır.",\r
 "Eşleşme {0} / {1}",\r
 "Kayıt geri alınsın ve kalem yeniden tanınsın mı? Tedarikçiye ödeme silinir ve işlem yeni bir iş ortağı önerisiyle \\"bekliyor\\" durumuna döner.",\r
 "Vergi defterleri: kapanış kontrol listesi, kilitleme, kapanıştan sonraki değişiklikler",\r
 "Vergi defterleri: aylık KDV beyannamesi",\r
+"VERGİ MÜKELLEFİ: {0}",\r
 "Son sayfa",\r
 "onayla",\r
 "Banka kuralları",\r
@@ -132,6 +162,7 @@ const a=`[\r
 "\\"{0}\\" kuralı",\r
 "Kural: {0}",\r
 "banka kuralıyla tanındı (Banka → Banka kuralları)",\r
+"geride kaldı",\r
 "Önceki sayfa",\r
 "Önceki eşleşme",\r
 "Listenin tüm sayfalarında arama (Enter = sonraki eşleşme)",\r
@@ -153,19 +184,25 @@ const a=`[\r
 "Alıcı / ödeyen hesabı",\r
 "Alıcı hesabı {0} tedarikçinin bilinen hesapları arasında değil ({1}{2}). Ödemeden önce tedarikçiyle, bilinen bir iletişim kanalından, hesabın değiştiğini doğrulayın.",\r
 "Alıcı/ödeyen hesabı geçerli değil (3-13-2 hane, örn. 510-1234567-89).",\r
+"S.No",\r
+"S.No",\r
 "Satır {0}–{1} / {2}. Toplam, dışa aktarma ve yazdırma tüm satırları kapsar.",\r
+"sonuç bir SQLite veritabanı değil",\r
 "Elle onay",\r
 "Elle",\r
+"Fatura elle girildi: {0}, {1} EUR (maliyet hesabı {2}).",\r
 "Sonraki sayfa",\r
 "Sonraki eşleşme",\r
 "Vardiyalar: izinler ve tatiller (yıllık, hastalık, adet, babalık…)",\r
 "Ödemeyi kaydet",\r
+"Sonraki QR kod için hazır.",\r
 "Ayın ilk kilitlenmesindeki (veya 2.7.0 sürümüne geçişte bulunan) defter durumu bugünküyle karşılaştırılır; tüm kilit açmalar nedenleriyle.",\r
 "Ayın ilk kilitlenmesindeki defter durumu bugünküyle karşılaştırılır; tüm kilit açmalar nedenleriyle. 2.7.0 sürümünden önce kilitlenen ay için başlangıç noktası 2.7.0'daki ilk kilit açmada bulunan durumdur.",\r
 "İlk kilitlemedeki ve bugünkü durum; nedenleriyle kilit açmalar",\r
 "Dikkat gerektiren kalem: {0}",\r
 "Bu kurala uyan bekleyen kalemler:",\r
 "Sayfa {0} / {1}",\r
+"Sayfa {0}/{1}",\r
 "Her kalem verilerden kontrol edilir. Sorun olmayan bir uyarı (örn. hareketsiz hesap) elle onaylanır; onay kimin ve ne zaman onayladığını kaydeder.",\r
 "tüm işlemler kaydedildi veya sınıflandırıldı",\r
 "t.Status='ceka' AND t.Napomena LIKE ?",\r
@@ -180,12 +217,16 @@ const a=`[\r
 "Hatırlanan alıcı hesabı",\r
 "Yazar",\r
 "Koşul",\r
+"İçe aktarıldı: {0}, {1} kalem, {2} EUR (toplu, {3}).",\r
+"İçe aktarıldı: {0}, {1} kalem, {2} EUR.",\r
 "{0} yılı için adet izni doktor raporları (çalışan: {1})",\r
 "Postadan ekstre içe aktarma",\r
 "{0} sürümü geri çekildi. Sonraki sürüm bekleniyor.",\r
 "İşlem türü",\r
+"{0} yapılacaktır.",\r
 "Son kez",\r
 "Zorunlu Sağlık Sigortası Kanunu md. 36a — rapor işverene 30 Ocak'a kadar teslim edilir",\r
+"Devlet ve Diğer Bayramlar Kanunu (Karadağ Resmî Gazetesi, sayı 27/07, 36/13, 3/23 ve 30/23)",\r
 "Negatif bakiyesi olmayan mal stoku (büyük defter)",\r
 "Ay sonu kapanışı",\r
 "{0}\\n\\nÖdeme kaydedilsin mi?",\r
@@ -196,6 +237,7 @@ const a=`[\r
 "{0} hesap — {1} veya sonrasına kadar ekstreler",\r
 "{0} yalnızca kadın çalışan için girilir ({1}). Çalışan verilerine (cinsiyet, kimlik numarası) göre çalışan erkektir.",\r
 "{0} işlem kayıt veya sınıflandırma bekliyor",\r
+"{1} {2} günlerinde {0} – {3}.",\r
 "{0} {1}: son ekstre {2}",\r
 "{0}: {1}{2}, ancak kanun ayda en fazla {3} gün tanır ({4}). Bunu aşan günler \\"Hastalık izni\\" olarak girilmelidir.",\r
 "· ay teslime hazır",\r

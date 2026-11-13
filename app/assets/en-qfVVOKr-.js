@@ -19,12 +19,17 @@ const e=`[\r
 "Bank: statement transactions, posting, recognition method",\r
 "Bank: import all statements from mail",\r
 "Document number, IKOF or JIKR — or the name of a screen or action",\r
+"Number: {0}",\r
+"Date drawn up: {0}",\r
+"Date: {0}",\r
 "Detail",\r
 "The supplier has no open invoices; the payment of {0} EUR remains a prepayment until the invoice is entered.",\r
 "supplier {0}",\r
 "Suppliers: supplier card and payment entry",\r
 "The sick-leave certificate and the IOPPD code for this leave are not prescribed and await the accountant's answer, so the program does not calculate these days as leave: an employee without a shift schedule has them in regular work, while for an employee on a shift schedule the hours of those days should be entered in the payroll as instructed by the accountant.",\r
 "screen",\r
+"EV",\r
+"file changed",\r
 "update feed: release without signature",\r
 "update feed: release without state",\r
 "update feed: release has an invalid format",\r
@@ -35,6 +40,8 @@ const e=`[\r
 "update feed: state is issued for another program",\r
 "update feed: state expired",\r
 "update feed: state older than the last accepted one",\r
+"FFFFFFFF",\r
+"Generated: {0}",\r
 "General ledger of the month in balance (debit = credit)",\r
 "the general ledger is not kept in the program for this month",\r
 "The selected transaction type applies only to outflows.",\r
@@ -58,20 +65,29 @@ const e=`[\r
 "Creating PDF… ({0} rows)",\r
 "Creating PDF… ({0} pages)",\r
 "Bank statements imported up to the end of the month",\r
+"Executive director: {0}",\r
 "How the partner of the item was recognised",\r
+"Posted on {0}.",\r
 "MONTH-END CLOSING CHECKLIST — {0}",\r
 "customer {0}",\r
+"la",\r
 "Menstrual leave",\r
 "Menstrual leave (Art. 36a Health Insurance Law, up to 2 days per month)",\r
 "The month is ready for submission",\r
 "The month was not unlocked: a reason for unlocking is required.",\r
 "Month locked (books submitted)",\r
 "MO",\r
+"On the holiday, the following employees work according to the shift schedule: {0}.",\r
 "VAT journal entry exists",\r
 "Create a bank rule from this item (description or payee account → type and partner)",\r
 "Rule name",\r
+"Name of goods",\r
 "Name in description",\r
 "not applicable",\r
+"invalid segment",\r
+"invalid request",\r
+"invalid length",\r
+"file not found",\r
 "no VAT calculation entry for the month",\r
 "no payroll for the month",\r
 "No matches",\r
@@ -80,20 +96,30 @@ const e=`[\r
 "no transactions in the month",\r
 "no incoming invoices in the month",\r
 "no imported statements",\r
+"unknown message",\r
 "not locked",\r
 "No pending item was changed.",\r
+"the saving thread is not responding",\r
+"the saving thread did not return the database",\r
+"saving thread: {0}",\r
+"the PDF thread failed",\r
 "New suggestion: {0} ({1}).",\r
 "New bank rule",\r
 "e.g. Bank fee",\r
 "e.g. account maintenance fee",\r
+"All employees have been informed of this Decision; their salary and the taxes and contributions on it will be calculated, i.e. increased by {0} % under the employment contract for work {1} ({2}).",\r
 "The release of the new version has no publisher signature. The update was not downloaded.",\r
 "The release of the new version did not pass the publisher signature check. The update was not downloaded.",\r
 "The published version {0} is older than the previously published version {1}. The update was not downloaded.",\r
+"Processing continues, in queue: {0}.",\r
+"Form: {0}",\r
+"Statement of reasons",\r
 "payroll not locked",\r
 "VAT calculation posted in the general ledger",\r
 "Payroll and IOPPD",\r
 "Payroll locked (IOPPD)",\r
 "Delete the rule \\"{0}\\"? Items previously classified by the rule remain as they are.",\r
+"The Decision is publicly displayed at the entrance of the premises, for the purposes of the inspection services.",\r
 "Then enter",\r
 "Description contains (separate several conditions with \\";\\")",\r
 "description contains \\"{0}\\"",\r
@@ -105,16 +131,20 @@ const e=`[\r
 "Daily takings ±",\r
 "VAT checks (takings by rate, input rates)",\r
 "VAT return (PR-PDV)",\r
+"VAT: {0}",\r
 "Tax ID in description",\r
+"TIN: {0}{1}",\r
 "Employee payroll: monthly calculation and IOPPD",\r
 "payments were not posted automatically: the payee account is not among the supplier's known accounts —",\r
 "The payment of {0} EUR is greater than the open debt to the supplier ({1} EUR); the difference of {2} EUR remains a prepayment.",\r
+"during the usual working hours",\r
 "The data on valid versions did not pass the publisher signature check. The update was not downloaded.",\r
 "The data on valid versions has expired, so updates cannot be verified at the moment. The check is repeated automatically.",\r
 "Match {0} of {1}",\r
 "Undo the posting and recognise the item again? The payment to the supplier is deleted and the transaction returns to \\"pending\\" with a new partner suggestion.",\r
 "Tax books: closing checklist, locking, changes after closing",\r
 "Tax books: VAT return for the month",\r
+"TAXPAYER: {0}",\r
 "Last page",\r
 "confirm",\r
 "Bank rules",\r
@@ -132,6 +162,7 @@ const e=`[\r
 "rule \\"{0}\\"",\r
 "Rule: {0}",\r
 "recognised by a bank rule (Bank → Bank rules)",\r
+"overtaken",\r
 "Previous page",\r
 "Previous match",\r
 "Search across all pages of the list (Enter = next match)",\r
@@ -153,19 +184,25 @@ const e=`[\r
 "Payee / payer account",\r
 "Payee account {0} is not among the supplier's known accounts ({1}{2}). Before paying, confirm with the supplier, through a known contact, that the account has changed.",\r
 "The payee/payer account is not valid (3-13-2 digits, e.g. 510-1234567-89).",\r
+"No.",\r
+"No.",\r
 "Rows {0}–{1} of {2}. Totals, export and printing cover all rows.",\r
+"the result is not an SQLite database",\r
 "Manual confirmation",\r
 "Manual",\r
+"Invoice entered manually: {0}, {1} EUR (costing sheet {2}).",\r
 "Next page",\r
 "Next match",\r
 "Shifts: absences and holidays (annual, sick, menstrual, paternity…)",\r
 "Save payment",\r
+"Ready for the next QR code.",\r
 "The state of the books at the first locking of the month (or found when upgrading to version 2.7.0) compared with today, and all unlockings with the reason.",\r
 "The state of the books at the first locking of the month compared with today, and all unlockings with the reason. For a month locked before version 2.7.0 the starting point is the state found at the first unlocking in 2.7.0.",\r
 "State at the first locking and today; unlockings with the reason",\r
 "Items needing attention: {0}",\r
 "Pending items matching this rule:",\r
 "Page {0} of {1}",\r
+"Page {0}/{1}",\r
 "Each item is checked from the data. A warning that is in order (e.g. an account without turnover) is confirmed manually; the confirmation records who confirmed it and when.",\r
 "all transactions are posted or classified",\r
 "t.Status='ceka' AND t.Napomena LIKE ?",\r
@@ -180,12 +217,16 @@ const e=`[\r
 "Remembered payee account",\r
 "Enters",\r
 "Condition",\r
+"Imported: {0}, {1} items, {2} EUR (summary, {3}).",\r
+"Imported: {0}, {1} items, {2} EUR.",\r
 "Doctor's certificates for menstrual leave for {0} (employees: {1})",\r
 "Import statements from mail",\r
 "Version {0} has been withdrawn. Waiting for the next version.",\r
 "Transaction type",\r
+"be performed {0}.",\r
 "Last time",\r
 "Law on Compulsory Health Insurance Art. 36a — the certificate is submitted to the employer by 30 January",\r
+"of the Law on State and Other Holidays (Official Gazette of Montenegro nos. 27/07, 36/13, 3/23 and 30/23)",\r
 "Goods inventory without negative balance (general ledger)",\r
 "Month-end closing",\r
 "{0}\\n\\nPost the payment?",\r
@@ -196,6 +237,7 @@ const e=`[\r
 "{0} accounts — statements up to {1} or later",\r
 "{0} can be entered only for a female employee ({1}). According to the employee data (sex, personal ID number) the employee is male.",\r
 "{0} transactions await posting or classification",\r
+"{0} on the days of {1} {2} – {3}.",\r
 "{0} {1}: last statement {2}",\r
 "{0}: {1}{2}, while the law allows at most {3} days per month ({4}). Days above that should be entered as \\"Sick leave\\".",\r
 "· the month is ready for submission",\r

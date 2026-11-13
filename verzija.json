@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.0.zip",
+  "verzija": "2.7.1",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.1.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "199d4ad43fec98946154e6cbc5ac3864daef67edb849eaefa43a8cd5ba4492c4",
+  "sha256": "55c069216178cb8e439bb93b501411174864ff33265a02e8e1b11ef093b83060",
   "obavezno": false,
-  "napomene": "Banka: pravila banke (Banka → Pravila banke) — kad opis stavke izvoda sadrži zadati tekst ili je račun primaoca zadati račun, program upisuje vrstu prometa i partnera. Primjenjuju se pri uvozu izvoda i na zahtjev; pravilo se može napraviti i iz stavke (dugme „pravilo\").\nBanka: kolona i filter „Način\" pokazuju kako je partner prepoznat (PIB, upamćen račun, pravilo, naziv, iznos, ručno). „Poništi i ponovi\" vraća proknjiženu stavku na „čeka\" i odmah je ponovo prepoznaje.\nBanka: uplata poreza na račun za koji je konto ranije potvrđen dobija taj konto kao predlog.\nPlaćanja: prije knjiženja plaćanja dobavljaču program upozorava na prvo plaćanje, neuobičajeno velik iznos, plaćanje veće od otvorenog duga i račun primaoca koji nije među poznatim računima dobavljača. Takvo plaćanje sa izvoda se ne knjiži automatski — čeka pregled.\nPoreske knjige: kontrolna lista zatvaranja mjeseca (izvodi, transakcije, PDV kontrole, kalkulacije, glavna knjiga, plate) sa ručnom potvrdom; otključavanje mjeseca traži razlog; novi izvještaj „Izmjene poslije zaključenja\".\nKadrovi: nova vrsta odsustva „Menstrualno odsustvo\" (Zakon o obaveznom zdravstvenom osiguranju čl. 36a, do 2 dana mjesečno). Način iskazivanja u IOPPD čeka odgovor knjigovođe; obračun plata to navodi.\nPretraga (Ctrl+K): osim dokumenata nalazi i ekrane i radnje po nazivu.\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.6.0.",
+  "napomene": "Snimanje: zatvaranje programa odmah poslije unosa (dok se izmjena još upisuje na disk) više ne gubi posljednju izmjenu — tada se odmah upisuje cijela baza.\nNova kalkulacija (QR): račun skeniran u jednoj firmi više ne može ući u drugu firmu ako se firma promijeni dok se čeka odgovor Poreske uprave; takav račun ostaje među neunesenim i ponavlja se u svojoj firmi.\nKadrovi: menstrualno odsustvo — granica od 2 dana mjesečno broji i dan na koji radnica radi po rasporedu smjena (subota, nedjelja, praznik).\nPretraga (Ctrl+K): izbor strelicom više ne skače na prvi red dok je prozor otvoren.\nJezik programa (en, ru, tr): poruke poslije uvoza računa i ručnog unosa su prevedene; dopunjeno 36 tekstova bez prevoda. Izvozi ostaju na crnogorskom.\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.7.0.",
   "datum": "2026-11-13",
-  "sha256Android": "02dfd8f35d20a706ad3d2bcac7ea160c3045584f31c70ed6aa18785aa78f005e",
-  "verzijaPrethodna": "2.6.0",
+  "sha256Android": "605d6a80a81aec68ffe259eb1e2d47c89cdc4ea805923cc9eb6fef3523b923d7",
+  "verzijaPrethodna": "2.7.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
