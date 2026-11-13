@@ -1,4 +1,10 @@
 const a=`[\r
+"(otključan)",\r
+"(uz {0} ranije upisanih u {1})",\r
+"(zatečeno pri otključavanju; zaključan prije 2.7.0)",\r
+"(zatečeno pri prelasku na 2.7.0)",\r
+"(čl. 36a Zakona o obaveznom zdravstvenom osiguranju, naknada 100 % osnova):",\r
+". Prije knjiženja potvrditi sa dobavljačem, na poznat kontakt, da je račun promijenjen.",\r
 "_*.json). Fajlovi se pojavljuju poslije prvog rada u programu IRIS Menadžer. Menadžer se povezuje sa firmom u Povezivanje → Menadžer (kod za uparivanje ili fajl baze).",\r
 "- {0} br. {1} {2} EUR{3}",\r
 "- COALESCE(z.VisakPorez,0)",\r
@@ -7,7 +13,18 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"Ako",\r
 "Ažuriranje programa: objava nove verzije se provjerava potpisom izdavača; objava sa neispravnim potpisom, povučena verzija i verzija starija od već objavljene se ne preuzimaju. Veza sa serverom: prijava uređaja se obnavlja sama prije isteka roka i poslije isteka.",\r
+"Banka: pravila za razvrstavanje stavki izvoda (opis ili račun primaoca → vrsta i partner)",\r
+"Banka: transakcije sa izvoda, knjiženje, način prepoznavanja",\r
+"Banka: uvoz svih izvoda iz pošte",\r
+"Broj dokumenta, IKOF ili JIKR — ili naziv ekrana i radnje",\r
+"Detalj",\r
+"Dobavljač nema otvorenih faktura; plaćanje {0} EUR ostaje kao pretplata dok se faktura ne unese.",\r
+"dobavljač {0}",\r
+"Dobavljači: kartica dobavljača i unos plaćanja",\r
+"Doznaka i šifra u IOPPD za ovo odsustvo nisu propisane i čekaju odgovor knjigovođe, pa program te dane ne obračunava kao odsustvo: radnica bez rasporeda smjena ih ima u redovnom radu, a radnici po rasporedu sate tih dana treba upisati u obračun po uputstvu knjigovođe.",\r
+"ekran",\r
 "feed ažuriranja: objava bez potpisa",\r
 "feed ažuriranja: objava bez stanja",\r
 "feed ažuriranja: objava nije ispravnog oblika",\r
@@ -18,29 +35,175 @@ const a=`[\r
 "feed ažuriranja: stanje glasi na drugi program",\r
 "feed ažuriranja: stanje isteklo",\r
 "feed ažuriranja: stanje starije od posljednjeg prihvaćenog",\r
+"Glavna knjiga mjeseca u ravnoteži (duguje = potražuje)",\r
+"glavna knjiga se ne vodi u programu za ovaj mjesec",\r
+"Izabrana vrsta prometa važi samo za odlive.",\r
+"Izabrana vrsta prometa važi samo za prilive.",\r
+"Izlaznih",\r
+"Izlaznih faktura ±",\r
+"Izmijenjeno stavki koje čekaju: {0}.",\r
+"Izmjena pravila banke",\r
+"IZMJENE POSLIJE ZAKLJUČENJA — {0}. godina",\r
+"Iznos do",\r
+"Iznos kalk.",\r
+"Iznos kalkulacija ±",\r
+"Iznos od",\r
+"Iznos otvorene fakture",\r
+"Iznos pazara",\r
+"Iznos pazara ±",\r
+"Iznos {0} EUR je {1} puta veći od uobičajenog plaćanja ovom dobavljaču (uobičajeno {2} EUR, najveće ranije {3} EUR).",\r
+"iznos {0}{1}",\r
+"Iznos „od\\" je veći od iznosa „do\\".",\r
 "Izrada PDF-a je prekinuta.",\r
 "Izrada PDF-a… ({0} redova)",\r
 "Izrada PDF-a… ({0} strana)",\r
+"Izvodi banke učitani do kraja mjeseca",\r
+"Kako je partner stavke prepoznat",\r
+"KONTROLNA LISTA ZATVARANJA MJESECA — {0}",\r
+"kupac {0}",\r
+"Menstrualno odsustvo",\r
+"Menstrualno odsustvo (čl. 36a ZOZO, do 2 dana mjesečno)",\r
+"Mjesec je spreman za predaju",\r
+"Mjesec nije otključan: razlog otključavanja je obavezan.",\r
+"Mjesec zaključan (knjige predate)",\r
+"MO",\r
+"nalog PDV postoji",\r
+"Napravi pravilo banke od ove stavke (opis ili račun primaoca → vrsta i partner)",\r
+"Naziv pravila",\r
+"Naziv u opisu",\r
+"ne odnosi se",\r
+"nema naloga obračuna PDV-a za mjesec",\r
+"nema obračuna plata za mjesec",\r
 "Nema pogodaka",\r
+"Nema pravila. Pravilo se pravi dugmetom „Novo pravilo\\" ili iz stavke u kartici „Transakcije\\" (dugme „pravilo\\").",\r
+"nema radnika",\r
+"nema transakcija u mjesecu",\r
+"nema ulaznih računa u mjesecu",\r
+"nema uvezenih izvoda",\r
+"nije zaključan",\r
+"Nijedna stavka koja čeka nije izmijenjena.",\r
+"Novi predlog: {0} ({1}).",\r
+"Novo pravilo banke",\r
+"npr. Naknada banke",\r
+"npr. naknada za vodjenje racuna",\r
 "Objava nove verzije nema potpis izdavača. Ažuriranje nije preuzeto.",\r
 "Objava nove verzije nije prošla provjeru potpisa izdavača. Ažuriranje nije preuzeto.",\r
 "Objavljena verzija {0} je starija od već objavljene verzije {1}. Ažuriranje nije preuzeto.",\r
+"obračun nije zaključen",\r
+"Obračun PDV-a proknjižen u glavnoj knjizi",\r
+"Obračun plata i IOPPD",\r
+"Obračun plata zaključen (IOPPD)",\r
+"Obrisati pravilo „{0}\\"? Stavke koje je pravilo ranije razvrstalo ostaju kakve jesu.",\r
+"Onda upiši",\r
+"Opis sadrži (više uslova odvojiti znakom „;\\")",\r
+"opis sadrži „{0}\\"",\r
+"Otključavanja",\r
+"Otključavanja (razlog)",\r
+"ovaj uređaj",\r
+"Partner nije prepoznat i bira se ručno.",\r
+"Pazara",\r
+"Pazara ±",\r
+"PDV kontrole (pazari po stopama, stope ulaza)",\r
+"PDV prijava (PR-PDV)",\r
+"PIB u opisu",\r
+"Plate radnika: obračun mjeseca i IOPPD",\r
+"plaćanja nije proknjiženo automatski: račun primaoca nije među poznatim računima dobavljača —",\r
+"Plaćanje {0} EUR je veće od otvorenog duga prema dobavljaču ({1} EUR); razlika {2} EUR ostaje kao pretplata.",\r
 "Podaci o važećim verzijama nisu prošli provjeru potpisa izdavača. Ažuriranje nije preuzeto.",\r
 "Podaci o važećim verzijama su istekli, pa se ažuriranja trenutno ne mogu provjeriti. Provjera se ponavlja sama.",\r
 "Pogodak {0} od {1}",\r
+"Poništiti knjiženje i ponovo prepoznati stavku? Plaćanje dobavljaču se briše, a transakcija se vraća na „čeka\\" sa novim predlogom partnera.",\r
+"Poreske knjige: kontrolna lista zatvaranja, zaključavanje, izmjene poslije zaključenja",\r
+"Poreske knjige: PDV prijava za mjesec",\r
 "Posljednja strana",\r
+"potvrdi",\r
+"Pravila banke",\r
+"Pravila nisu primijenjena. {0}",\r
+"Pravila su primijenjena: izmijenjeno stavki koje čekaju: {0}.",\r
+"pravilo",\r
+"Pravilo je obrisano.",\r
+"Pravilo je snimljeno.",\r
+"Pravilo kaže: kad opis stavke izvoda sadrži zadati tekst (ili je račun primaoca/uplatioca zadati račun) — upiši vrstu prometa i/ili partnera. Primjenjuje se pri uvozu izvoda i na zahtjev nad stavkama koje čekaju, redom (manji broj u koloni „Redoslijed\\" ide prvi). Partner prepoznat po PIB-u, po upamćenom računu ili izabran ručno se ne mijenja. Stavka sa dobavljačem iz pravila se pri uvozu knjiži kao stavka sa upamćenim računom.",\r
+"Pravilo mora imati bar jedan uslov: tekst u opisu ili račun primaoca/uplatioca.",\r
+"Pravilo mora nešto upisati: vrstu prometa ili partnera.",\r
+"Pravilo nije obrisano. {0}",\r
+"Pravilo nije snimljeno. {0}",\r
+"Pravilo upisuje dobavljača ili kupca, ne oba.",\r
+"pravilo „{0}\\"",\r
+"Pravilo: {0}",\r
+"prepoznat po pravilu banke (Banka → Pravila banke)",\r
 "Prethodna strana",\r
 "Prethodni pogodak",\r
 "Pretraga kroz sve strane liste (Enter = sljedeći pogodak)",\r
+"Primijeni pravila na stavke koje čekaju",\r
+"Primijenjeno",\r
 "provjera ažuriranja",\r
+"Provjera prije plaćanja",\r
+"Provjera prije plaćanja:\\n{0}",\r
+"Provjera računa:",\r
+"provjeriti da su uvjerenja dostavljena",\r
 "Prva strana",\r
+"Prvo plaćanje ovom dobavljaču. Prije plaćanja provjeriti podatke dobavljača i račun primaoca.",\r
+"Prvo zaključavanje",\r
+"radnja",\r
+"Razlog otključavanja",\r
+"Razlog otključavanja mjeseca {0} {1}. (upisuje se u izvještaj „Izmjene poslije zaključenja\\"):",\r
+"račun firme {0}",\r
+"Račun nije u obliku 3-13-2 cifre.",\r
+"Račun primaoca / uplatioca",\r
+"Račun primaoca {0} nije među poznatim računima dobavljača ({1}{2}). Prije plaćanja potvrditi sa dobavljačem, na poznat kontakt, da je račun promijenjen.",\r
+"Račun primaoca/uplatioca nije ispravan (3-13-2 cifre, npr. 510-1234567-89).",\r
 "Redovi {0}–{1} od {2}. Zbir, izvoz i štampa obuhvataju sve redove.",\r
+"Ručna potvrda",\r
+"Ručno",\r
 "Sljedeća strana",\r
 "Sljedeći pogodak",\r
+"Smjene: odsustva i praznici (godišnji, bolovanje, menstrualno, očinsko…)",\r
+"Snimi plaćanje",\r
+"Stanje knjiga pri prvom zaključavanju mjeseca (ili zatečeno pri prelasku na verziju 2.7.0) upoređeno sa današnjim, i sva otključavanja sa razlogom.",\r
+"Stanje knjiga pri prvom zaključavanju mjeseca upoređeno sa današnjim, i sva otključavanja sa razlogom. Za mjesec zaključan prije verzije 2.7.0 polazište je stanje zatečeno pri prvom otključavanju u 2.7.0.",\r
+"Stanje pri prvom zaključavanju i danas; otključavanja sa razlogom",\r
+"Stavki koje traže pažnju: {0}",\r
+"Stavki koje čekaju i odgovaraju ovom pravilu:",\r
 "Strana {0} od {1}",\r
+"Svaka stavka se provjerava iz podataka. Upozorenje koje je u redu (npr. račun bez prometa) potvrđuje se ručno; potvrda pamti ko je i kada potvrdio.",\r
+"sve transakcije su proknjižene ili razvrstane",\r
+"t.Status='ceka' AND t.Napomena LIKE ?",\r
 "Trajna podešavanja nijesu dostupna.",\r
+"Transakcije banke",\r
+"Transakcije banke proknjižene i razvrstane",\r
 "Traži u svim redovima",\r
+"U godini nema zaključanih mjeseci.",\r
+"u ravnoteži",\r
+"Ulazni računi imaju kalkulaciju sa stavkama",\r
+"Unos plaćanja dobavljaču",\r
+"Upamćen račun primaoca",\r
+"Upisuje",\r
+"Uslov",\r
+"Uvjerenja ljekara za menstrualno odsustvo za {0}. godinu (radnica: {1})",\r
+"Uvoz izvoda iz pošte",\r
 "Verzija {0} je povučena. Čeka se sljedeća verzija.",\r
+"Vrsta prometa",\r
+"Zadnji put",\r
+"Zakon o obaveznom zdravstvenom osiguranju čl. 36a — uvjerenje se dostavlja poslodavcu do 30. januara",\r
+"Zalihe robe bez negativnog stanja (glavna knjiga)",\r
+"Zatvaranje mjeseca",\r
+"{0}\\n\\nProknjižiti plaćanje?",\r
+"{0}\\n\\nSnimiti plaćanje?",\r
+"{0} od {1} računa bez stavki",\r
+"{0} račun primaoca {1} nije među poznatim računima dobavljača, plaćanje nije proknjiženo automatski",\r
+"{0} računa",\r
+"{0} računa — izvodi do {1} ili kasnije",\r
+"{0} se upisuje samo za radnicu ({1}). Po podacima radnika (pol, JMBG) radnik je muškog pola.",\r
+"{0} transakcija čeka knjiženje ili razvrstavanje",\r
+"{0} {1}: zadnji izvod {2}",\r
+"{0}: {1}{2}, a zakon daje najviše {3} dana mjesečno ({4}). Dane preko toga treba upisati kao „Bolovanje\\".",\r
+"· mjesec je spreman za predaju",\r
+"· zatečeno pri otključavanju (zaključan prije 2.7.0)",\r
+"· zatečeno pri prelasku na 2.7.0",\r
+"· {0} mjeseci sa izmjenama",\r
+"· {0} stavki traži pažnju",\r
+"čl. 36a Zakona o obaveznom zdravstvenom osiguranju",\r
 "– {0} {1}: 0 stavki{2}",\r
 "– {0} {1}: izvod firme {2} (PIB {3}) — druga firma, preskočeno",\r
 "– {0} {1}: račun druge firme{2}, preskočeno",\r
@@ -49,6 +212,8 @@ const a=`[\r
 "– {0}: nije PDF, preskočeno",\r
 "– {0}: račun druge firme, preskočeno",\r
 "— (trošak perioda)",\r
+"— ne mijenja —",\r
+"— npr.",\r
 "— {0}; sati i minimalac su srazmjerni",\r
 "— automatski",\r
 "— bez dokumenta (upisano u Plate → Radnici)",\r
@@ -1056,6 +1221,10 @@ const a=`[\r
 "% od prodajne ·",\r
 "% osnovice. Zakupodavac dobija zakupninu umanjenu za porez; prirez na taj porez plaća firma opštini zakupodavca. Obračun mjeseca ulazi u",\r
 "% po godini).",\r
+"↩ poništi i ponovi",\r
+"⚠ čeka provjeru računa primaoca",\r
+"✅ Kontrolna lista zatvaranja —",\r
+"✓pravilo",\r
 "％ Promjena marže",\r
 "％ Promjena marže na kalkulacijama",\r
 "% zarade",\r
@@ -1256,6 +1425,7 @@ const a=`[\r
 "💾 Snimi deklaraciju",\r
 "💾 Snimi fakturu i kalkulaciju",\r
 "💾 Snimi i obračunaj",\r
+"💾 Snimi i primijeni na stavke koje čekaju",\r
 "💾 SNIMI ISPRAVKU",\r
 "💾 Snimi izabrane pazare",\r
 "💾 Snimi iznos za ovaj mjesec",\r
@@ -1319,6 +1489,7 @@ const a=`[\r
 "📊 Platni listić (Excel)",\r
 "📊 Zapisnik (Excel)",\r
 "📊 Zbirni nalog rashoda za mjesec",\r
+"📋 Izmjene poslije zaključenja —",\r
 "📋 Katalog povreda (lakše / teže)",\r
 "📋 Nalijepi drugi presjek",\r
 "📋 Normativ (Pravilnik)",\r

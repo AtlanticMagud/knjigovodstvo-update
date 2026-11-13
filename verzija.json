@@ -1,12 +1,12 @@
 {
-  "verzija": "2.6.0",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.6.0.zip",
+  "verzija": "2.7.0",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.0.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "ee11eefbd5b5df9967eb9ad1dc060dd2d87710d6e1d268aa58f8e28209eaf57e",
+  "sha256": "199d4ad43fec98946154e6cbc5ac3864daef67edb849eaefa43a8cd5ba4492c4",
   "obavezno": false,
-  "napomene": "Ažuriranje: objava nove verzije se prije preuzimanja provjerava potpisom izdavača. Objava sa neispravnim potpisom, povučena verzija i verzija starija od već objavljene se ne preuzimaju; ekran „Ažuriranje\" tada navodi razlog. Objava bez potpisa se preuzima kao do sada.\nVeza sa serverom: prijava uređaja na server se obnavlja sama — prije isteka roka i poslije isteka, bez ponovnog uparivanja. Nova prijava se upisuje na disk prije prve upotrebe.\nVeza sa serverom: kad server privremeno ograniči broj zahtjeva, program sačeka i ponovi zahtjev.\nO programu: dnevnik bezbjednosnih ažuriranja dopunjen je ovom verzijom.\nVažno: nije potreban novi Setup. Verzija radi i sa serverom koji ove mogućnosti još nema.",
+  "napomene": "Banka: pravila banke (Banka → Pravila banke) — kad opis stavke izvoda sadrži zadati tekst ili je račun primaoca zadati račun, program upisuje vrstu prometa i partnera. Primjenjuju se pri uvozu izvoda i na zahtjev; pravilo se može napraviti i iz stavke (dugme „pravilo\").\nBanka: kolona i filter „Način\" pokazuju kako je partner prepoznat (PIB, upamćen račun, pravilo, naziv, iznos, ručno). „Poništi i ponovi\" vraća proknjiženu stavku na „čeka\" i odmah je ponovo prepoznaje.\nBanka: uplata poreza na račun za koji je konto ranije potvrđen dobija taj konto kao predlog.\nPlaćanja: prije knjiženja plaćanja dobavljaču program upozorava na prvo plaćanje, neuobičajeno velik iznos, plaćanje veće od otvorenog duga i račun primaoca koji nije među poznatim računima dobavljača. Takvo plaćanje sa izvoda se ne knjiži automatski — čeka pregled.\nPoreske knjige: kontrolna lista zatvaranja mjeseca (izvodi, transakcije, PDV kontrole, kalkulacije, glavna knjiga, plate) sa ručnom potvrdom; otključavanje mjeseca traži razlog; novi izvještaj „Izmjene poslije zaključenja\".\nKadrovi: nova vrsta odsustva „Menstrualno odsustvo\" (Zakon o obaveznom zdravstvenom osiguranju čl. 36a, do 2 dana mjesečno). Način iskazivanja u IOPPD čeka odgovor knjigovođe; obračun plata to navodi.\nPretraga (Ctrl+K): osim dokumenata nalazi i ekrane i radnje po nazivu.\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.6.0.",
   "datum": "2026-11-13",
-  "sha256Android": "45936748707939a8c7b596cbc6263d4bba2520ddc9a0a2278b2dcface2d32bb3",
-  "verzijaPrethodna": "2.5.0",
+  "sha256Android": "02dfd8f35d20a706ad3d2bcac7ea160c3045584f31c70ed6aa18785aa78f005e",
+  "verzijaPrethodna": "2.6.0",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

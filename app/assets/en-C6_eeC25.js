@@ -1,4 +1,10 @@
 const e=`[\r
+"(unlocked)",\r
+"(with {0} entered earlier in {1})",\r
+"(found at unlocking; locked before 2.7.0)",\r
+"(found when upgrading to 2.7.0)",\r
+"(Art. 36a of the Law on Compulsory Health Insurance, compensation 100% of the base):",\r
+". Before posting, confirm with the supplier, through a known contact, that the account has changed.",\r
 "_*.json). The files appear after the first use of the IRIS Manager program. The Manager is linked to the company in Connecting → Manager (pairing code or database file).",\r
 "- {0} no. {1} {2} EUR",\r
 "- COALESCE(z.VisakPorez,0)",\r
@@ -7,7 +13,18 @@ const e=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"If",\r
 "Program update: the release announcement is verified with the publisher's signature; an announcement with an invalid signature, a withdrawn version and a version older than one already published are not downloaded. Server connection: the device sign-in is renewed automatically before it expires and after it has expired.",\r
+"Bank: rules for classifying statement items (description or payee account → type and partner)",\r
+"Bank: statement transactions, posting, recognition method",\r
+"Bank: import all statements from mail",\r
+"Document number, IKOF or JIKR — or the name of a screen or action",\r
+"Detail",\r
+"The supplier has no open invoices; the payment of {0} EUR remains a prepayment until the invoice is entered.",\r
+"supplier {0}",\r
+"Suppliers: supplier card and payment entry",\r
+"The sick-leave certificate and the IOPPD code for this leave are not prescribed and await the accountant's answer, so the program does not calculate these days as leave: an employee without a shift schedule has them in regular work, while for an employee on a shift schedule the hours of those days should be entered in the payroll as instructed by the accountant.",\r
+"screen",\r
 "update feed: release without signature",\r
 "update feed: release without state",\r
 "update feed: release has an invalid format",\r
@@ -18,29 +35,175 @@ const e=`[\r
 "update feed: state is issued for another program",\r
 "update feed: state expired",\r
 "update feed: state older than the last accepted one",\r
+"General ledger of the month in balance (debit = credit)",\r
+"the general ledger is not kept in the program for this month",\r
+"The selected transaction type applies only to outflows.",\r
+"The selected transaction type applies only to inflows.",\r
+"Outgoing",\r
+"Outgoing invoices ±",\r
+"Pending items changed: {0}.",\r
+"Edit bank rule",\r
+"CHANGES AFTER CLOSING — year {0}",\r
+"Amount to",\r
+"Calc. amount",\r
+"Calculation amount ±",\r
+"Amount from",\r
+"Open invoice amount",\r
+"Daily takings amount",\r
+"Daily takings amount ±",\r
+"The amount of {0} EUR is {1} times larger than the usual payment to this supplier (usual {2} EUR, largest earlier {3} EUR).",\r
+"amount {0}{1}",\r
+"The \\"from\\" amount is greater than the \\"to\\" amount.",\r
 "PDF creation was cancelled.",\r
 "Creating PDF… ({0} rows)",\r
 "Creating PDF… ({0} pages)",\r
+"Bank statements imported up to the end of the month",\r
+"How the partner of the item was recognised",\r
+"MONTH-END CLOSING CHECKLIST — {0}",\r
+"customer {0}",\r
+"Menstrual leave",\r
+"Menstrual leave (Art. 36a Health Insurance Law, up to 2 days per month)",\r
+"The month is ready for submission",\r
+"The month was not unlocked: a reason for unlocking is required.",\r
+"Month locked (books submitted)",\r
+"MO",\r
+"VAT journal entry exists",\r
+"Create a bank rule from this item (description or payee account → type and partner)",\r
+"Rule name",\r
+"Name in description",\r
+"not applicable",\r
+"no VAT calculation entry for the month",\r
+"no payroll for the month",\r
 "No matches",\r
+"No rules. A rule is created with the \\"New rule\\" button or from an item on the \\"Transactions\\" tab (\\"rule\\" button).",\r
+"no employees",\r
+"no transactions in the month",\r
+"no incoming invoices in the month",\r
+"no imported statements",\r
+"not locked",\r
+"No pending item was changed.",\r
+"New suggestion: {0} ({1}).",\r
+"New bank rule",\r
+"e.g. Bank fee",\r
+"e.g. account maintenance fee",\r
 "The release of the new version has no publisher signature. The update was not downloaded.",\r
 "The release of the new version did not pass the publisher signature check. The update was not downloaded.",\r
 "The published version {0} is older than the previously published version {1}. The update was not downloaded.",\r
+"payroll not locked",\r
+"VAT calculation posted in the general ledger",\r
+"Payroll and IOPPD",\r
+"Payroll locked (IOPPD)",\r
+"Delete the rule \\"{0}\\"? Items previously classified by the rule remain as they are.",\r
+"Then enter",\r
+"Description contains (separate several conditions with \\";\\")",\r
+"description contains \\"{0}\\"",\r
+"Unlockings",\r
+"Unlockings (reason)",\r
+"this device",\r
+"The partner was not recognised and is selected manually.",\r
+"Daily takings",\r
+"Daily takings ±",\r
+"VAT checks (takings by rate, input rates)",\r
+"VAT return (PR-PDV)",\r
+"Tax ID in description",\r
+"Employee payroll: monthly calculation and IOPPD",\r
+"payments were not posted automatically: the payee account is not among the supplier's known accounts —",\r
+"The payment of {0} EUR is greater than the open debt to the supplier ({1} EUR); the difference of {2} EUR remains a prepayment.",\r
 "The data on valid versions did not pass the publisher signature check. The update was not downloaded.",\r
 "The data on valid versions has expired, so updates cannot be verified at the moment. The check is repeated automatically.",\r
 "Match {0} of {1}",\r
+"Undo the posting and recognise the item again? The payment to the supplier is deleted and the transaction returns to \\"pending\\" with a new partner suggestion.",\r
+"Tax books: closing checklist, locking, changes after closing",\r
+"Tax books: VAT return for the month",\r
 "Last page",\r
+"confirm",\r
+"Bank rules",\r
+"Rules were not applied. {0}",\r
+"Rules applied: pending items changed: {0}.",\r
+"rule",\r
+"The rule has been deleted.",\r
+"The rule has been saved.",\r
+"A rule says: when the description of a statement item contains the given text (or the payee/payer account is the given account) — enter the transaction type and/or the partner. It is applied when statements are imported and on request to pending items, in order (a lower number in the \\"Order\\" column goes first). A partner recognised by tax ID, by a remembered account or selected manually is not changed. An item with a supplier from a rule is posted on import like an item with a remembered account.",\r
+"A rule must have at least one condition: text in the description or a payee/payer account.",\r
+"A rule must enter something: the transaction type or the partner.",\r
+"The rule was not deleted. {0}",\r
+"The rule was not saved. {0}",\r
+"A rule enters a supplier or a customer, not both.",\r
+"rule \\"{0}\\"",\r
+"Rule: {0}",\r
+"recognised by a bank rule (Bank → Bank rules)",\r
 "Previous page",\r
 "Previous match",\r
 "Search across all pages of the list (Enter = next match)",\r
+"Apply rules to pending items",\r
+"Applied",\r
 "update check",\r
+"Check before payment",\r
+"Check before payment:\\n{0}",\r
+"Account check:",\r
+"check that the certificates have been submitted",\r
 "First page",\r
+"First payment to this supplier. Before paying, check the supplier details and the payee account.",\r
+"First locking",\r
+"action",\r
+"Reason for unlocking",\r
+"Reason for unlocking the month {0} {1} (entered in the \\"Changes after closing\\" report):",\r
+"company account {0}",\r
+"The account is not in the 3-13-2 digit format.",\r
+"Payee / payer account",\r
+"Payee account {0} is not among the supplier's known accounts ({1}{2}). Before paying, confirm with the supplier, through a known contact, that the account has changed.",\r
+"The payee/payer account is not valid (3-13-2 digits, e.g. 510-1234567-89).",\r
 "Rows {0}–{1} of {2}. Totals, export and printing cover all rows.",\r
+"Manual confirmation",\r
+"Manual",\r
 "Next page",\r
 "Next match",\r
+"Shifts: absences and holidays (annual, sick, menstrual, paternity…)",\r
+"Save payment",\r
+"The state of the books at the first locking of the month (or found when upgrading to version 2.7.0) compared with today, and all unlockings with the reason.",\r
+"The state of the books at the first locking of the month compared with today, and all unlockings with the reason. For a month locked before version 2.7.0 the starting point is the state found at the first unlocking in 2.7.0.",\r
+"State at the first locking and today; unlockings with the reason",\r
+"Items needing attention: {0}",\r
+"Pending items matching this rule:",\r
 "Page {0} of {1}",\r
+"Each item is checked from the data. A warning that is in order (e.g. an account without turnover) is confirmed manually; the confirmation records who confirmed it and when.",\r
+"all transactions are posted or classified",\r
+"t.Status='ceka' AND t.Napomena LIKE ?",\r
 "Persistent settings are not available.",\r
+"Bank transactions",\r
+"Bank transactions posted and classified",\r
 "Search all rows",\r
+"There are no locked months in the year.",\r
+"in balance",\r
+"Incoming invoices have a calculation with items",\r
+"Payment to supplier entry",\r
+"Remembered payee account",\r
+"Enters",\r
+"Condition",\r
+"Doctor's certificates for menstrual leave for {0} (employees: {1})",\r
+"Import statements from mail",\r
 "Version {0} has been withdrawn. Waiting for the next version.",\r
+"Transaction type",\r
+"Last time",\r
+"Law on Compulsory Health Insurance Art. 36a — the certificate is submitted to the employer by 30 January",\r
+"Goods inventory without negative balance (general ledger)",\r
+"Month-end closing",\r
+"{0}\\n\\nPost the payment?",\r
+"{0}\\n\\nSave the payment?",\r
+"{0} of {1} invoices without items",\r
+"{0} payee account {1} is not among the supplier's known accounts, the payment was not posted automatically",\r
+"{0} invoices",\r
+"{0} accounts — statements up to {1} or later",\r
+"{0} can be entered only for a female employee ({1}). According to the employee data (sex, personal ID number) the employee is male.",\r
+"{0} transactions await posting or classification",\r
+"{0} {1}: last statement {2}",\r
+"{0}: {1}{2}, while the law allows at most {3} days per month ({4}). Days above that should be entered as \\"Sick leave\\".",\r
+"· the month is ready for submission",\r
+"· found at unlocking (locked before 2.7.0)",\r
+"· found when upgrading to 2.7.0",\r
+"· {0} months with changes",\r
+"· {0} items need attention",\r
+"Art. 36a of the Law on Compulsory Health Insurance",\r
 "– {0} {1}: 0 items",\r
 "– {0} {1}: statement of company {2} (PIB {3}) — another company, skipped",\r
 "– {0} {1}: another company's account, skipped",\r
@@ -49,6 +212,8 @@ const e=`[\r
 "– {0}: not a PDF, skipped",\r
 "– {0}: another company's account, skipped",\r
 "— (period expense)",\r
+"— no change —",\r
+"— e.g.",\r
 "— {0}; hours and minimum wage are proportional",\r
 "— automatic",\r
 "— no document (recorded in Payroll → Employees)",\r
@@ -1056,6 +1221,10 @@ const e=`[\r
 "% of selling ·",\r
 "% of the base. The lessor receives the rent reduced by the tax; the company pays the surtax on that tax to the lessor's municipality. The month's calculation enters",\r
 "% per year).",\r
+"↩ undo and redo",\r
+"⚠ awaiting payee account check",\r
+"✅ Month-end closing checklist —",\r
+"✓rule",\r
 "％ Change margin",\r
 "％ Margin change on costing sheets",\r
 "% of salary",\r
@@ -1256,6 +1425,7 @@ const e=`[\r
 "💾 Save declaration",\r
 "💾 Save invoice and costing sheet",\r
 "💾 Save and calculate",\r
+"💾 Save and apply to pending items",\r
 "💾 SAVE CORRECTION",\r
 "💾 Save selected takings",\r
 "💾 Save the amount for this month",\r
@@ -1319,6 +1489,7 @@ const e=`[\r
 "📊 Payslip (Excel)",\r
 "📊 Record (Excel)",\r
 "📊 Summary expense voucher for the month",\r
+"📋 Changes after closing —",\r
 "📋 Violation catalogue (minor / serious)",\r
 "📋 Paste another interim report",\r
 "📋 Norm (Rulebook)",\r
