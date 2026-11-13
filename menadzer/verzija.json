@@ -1,12 +1,12 @@
 {
-  "verzija": "2.5.0",
-  "datum": "2026-11-12",
-  "opis": "Brži rad sa velikim šifarnikom i velikim brojem prijema.\n- Radnje i prelazak sa ekrana na ekran traju kraće kad firma ima više hiljada artikala.\n- Popis: brojanje ostaje jednako brzo i kad je prebrojano nekoliko hiljada artikala.\n- Etikete: veliki spisak se lista po 200 redova i štampa u dijelovima od po 50 tabaka.\n- Izvoz u Excel sa ekrana Etikete nosi cio spisak.",
-  "paket": "menadzer-paket-2.5.0.json.gz",
-  "sha256": "3570c4e30c2adb64e29341f90b283a2c96a3ef335b0cb1f006ebb3f822428bf8",
-  "velicina": 1914673,
+  "verzija": "2.6.0",
+  "datum": "2026-11-13",
+  "opis": "Zaštita ažuriranja i prijave uređaja na server.\n- Prije preuzimanja nove verzije program provjerava objavu: potpis izdavača, rok važenja i spisak povučenih verzija. Objava koja ne prođe provjeru se ne preuzima, a razlog se vidi na ekranu Ažuriranje programa.\n- Prijava uređaja na server se obnavlja sama kad server to zatraži; uređaj se ne uparuje ponovo.\n- Kad server privremeno ograniči broj zahtjeva, program sačeka i ponovi zahtjev.",
+  "paket": "menadzer-paket-2.6.0.json.gz",
+  "sha256": "379f90b61df662857d5eb6778bf6e1d0cc4d2eb758bc879b41fd5a0335f238f1",
+  "velicina": 1921940,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "018d79810ccd0202ab073a58a3748b14f885c08125d5364c858c145e9bf137df",
-  "apkVelicina": 25594761
+  "apkSha256": "0e84c6a4baa93280145c2033ed38373820a00ba571a881f537d7a32635911aa4",
+  "apkVelicina": 25599817
 }
