@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.1",
-  "datum": "2026-11-13",
-  "opis": "Ispravke poslije druge provjere programa.\n- Spiskovi po stranama (Zadaci, Kvarovi i nestašice, Narudžbe): poslije promjene prikaza spisak počinje od prvog reda.\n- Trebovanje i prenos: „Prijedlog preraspodjele\" se otvara odmah i kod velikog broja artikala.\n- Preuzimanje iz Knjigovodstva iz fajla: program pokazuje dokle je preuzimanje stiglo i za to vrijeme odgovara.\n- Danas i obavještenja: red i obavještenje o promjeni nabavne cijene otvaraju tu kalkulaciju, bez obzira na izabrani market i period.\n- Prijem po narudžbi na telefonu: izbor razlike staje na ekran.\n- Brže crtanje ekrana Prijem robe i Smjene.\n- Prevod: dopunjeni natpisi na engleskom, ruskom i turskom.",
-  "paket": "menadzer-paket-2.7.1.json.gz",
-  "sha256": "af91c41445c7a91f8f83195b3358deae3638bc18b89219fe73b8f740b886502e",
-  "velicina": 1953073,
+  "verzija": "2.7.2",
+  "datum": "2026-11-15",
+  "opis": "Ispravke poslije kompletne provjere programa.\n- Trošak rada i Rezultat po marketu: trošak rada magacina ulazi u „zajednički\", pa je zbir jednak obračunu plata.\n- Rezultat po marketu: RUC % se računa iz tačno tri mjeseca.\n- Dospijeća plaćanja: „već dospjelo\" je isto na spisku i na kartici dobavljača; račun bez datuma valute nije dospio.\n- Gubici i Rezultat: otpisi proknjiženi u Knjigovodstvu se prikazuju odvojeno.\n- Sef: u očekivano stanje ulazi i pazar dana prethodnog brojanja.\n- Prodaja po artiklu: otpis na kasi prije zaključenja smjene više ne briše prodaju tog dana.\n- Snimak Knjigovodstva koji stigne sam preuzima se bez zastoja ekrana.\n- Spiskovi Zadaci, Kvarovi i Narudžbe: do 2.000 redova, uz napomenu kad se granica dostigne.\n- Sitnije ispravke prikaza i prevoda.",
+  "paket": "menadzer-paket-2.7.2.json.gz",
+  "sha256": "af3655fb830e02e320dc16bf9f0d59be551879ed7e0cb004dd35b1ad52b509c6",
+  "velicina": 1959315,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "2877ba62254ee50c32f5871fb646ff64c380495bbc735b0f1d649d140b3d20b0",
-  "apkVelicina": 25620337
+  "apkSha256": "afc19bfe4a1c5ab412b27b601a4998eae034478494d659815f7300519ea7d966",
+  "apkVelicina": 25623993
 }
