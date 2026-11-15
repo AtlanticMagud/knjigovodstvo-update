@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.2",
-  "datum": "2026-11-13",
-  "napomene": "Ispravka upisa podataka za vezu i fiskalizaciju.\nProbni ključ za potpis računa upisuje se redom, zajedno sa ostalim podacima kase: uparivanje sa serverom, zamjena pristupnog ključa uređaja i uvoz sertifikata koji se poklope sa njim ostaju sačuvani i poslije ponovnog pokretanja kase.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.2.zip",
-  "sha256": "2d59e9fae8b7602e72bae854c7b6c27955c0f5a8d37af0df6a95b7b090ef375a",
-  "velicina": 1499834,
+  "verzija": "2.7.3",
+  "datum": "2026-11-15",
+  "napomene": "Ispravke poslije kompletnog testa.",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.3.zip",
+  "sha256": "278ab7dddd3146a14702f9a9fea6e6f7751dd56b1d377c9311ef717dd2503ebe",
+  "velicina": 1503153,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.7.2",
-  "sha256Android": "7bcd6050374038338340432291cde5093180606bb2417b5aa3133f256d4ef4c7"
+  "verzijaAndroid": "2.7.3",
+  "sha256Android": "f5897dfcb4e3e6d8920a09ac5b890f2fb3d9865700065a265239ae1e1882202d"
 }
