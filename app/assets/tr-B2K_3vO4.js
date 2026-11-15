@@ -14,6 +14,7 @@ const a=`[\r
 "-NonInteractive",\r
 "-NoProfile",\r
 "Eğer",\r
+"otomatik",\r
 "Program güncellemesi: yeni sürüm duyurusu yayıncının imzasıyla doğrulanır; imzası geçersiz duyuru, geri çekilmiş sürüm ve daha önce yayımlanandan eski sürüm indirilmez. Sunucu bağlantısı: cihaz oturumu, süresi dolmadan önce ve dolduktan sonra kendiliğinden yenilenir.",\r
 "Banka: ekstre kalemlerini sınıflandırma kuralları (açıklama veya alıcı hesabı → tür ve iş ortağı)",\r
 "Banka: ekstre işlemleri, kayıt, tanıma yöntemi",\r
@@ -46,6 +47,7 @@ const a=`[\r
 "bu ay için büyük defter programda tutulmuyor",\r
 "Seçilen işlem türü yalnızca çıkışlar için geçerlidir.",\r
 "Seçilen işlem türü yalnızca girişler için geçerlidir.",\r
+"düzenlendi",\r
 "Giden",\r
 "Giden faturalar ±",\r
 "Değiştirilen bekleyen kalem: {0}.",\r
@@ -65,12 +67,15 @@ const a=`[\r
 "PDF oluşturuluyor… ({0} satır)",\r
 "PDF oluşturuluyor… ({0} sayfa)",\r
 "Banka ekstreleri ay sonuna kadar içe aktarıldı",\r
+"Dışa aktarımlar (IOPPD, maaş bordroları, özet) kayıtlı tutarları kullanır. Bordro kapatılmıştır ve kendiliğinden yeniden hesaplanmaz; yeniden hesaplama için kilidin açılması gerekir.",\r
+"Dışa aktarımlar (IOPPD, maaş bordroları, özet) kayıtlı tutarları kullanır. Dışa aktarmadan önce “Tümünü hesapla” çalıştırılmalıdır.",\r
 "İcra direktörü: {0}",\r
 "Kalemin iş ortağı nasıl tanındı",\r
 "{0} tarihine kaydedildi.",\r
 "AY SONU KAPANIŞ KONTROL LİSTESİ — {0}",\r
 "müşteri {0}",\r
 "la",\r
+"Marj uygulandı. Satış fiyatları yeniden hesaplandı. {0}",\r
 "Adet izni",\r
 "Adet izni (Sağlık Sigortası Kanunu md. 36a, ayda en fazla 2 gün)",\r
 "Ay teslime hazır",\r
@@ -88,6 +93,7 @@ const a=`[\r
 "geçersiz istek",\r
 "geçersiz uzunluk",\r
 "dosya yok",\r
+"yok",\r
 "ay için KDV hesaplama fişi yok",\r
 "ay için bordro yok",\r
 "Eşleşme yok",\r
@@ -125,7 +131,9 @@ const a=`[\r
 "açıklama \\"{0}\\" içeriyor",\r
 "Kilit açmalar",\r
 "Kilit açmalar (neden)",\r
+"Bu bilgisayar ana bilgisayar değildir: marj değişikliği yalnızca bu bilgisayarda kalır ve veri alışverişiyle aktarılmaz (ana bilgisayarın bir sonraki kopyası bunun üzerine yazar). Marjlar ana bilgisayarda değiştirilir.",\r
 "bu cihaz",\r
+"Bu faturalar tedarikçi borcuna dahildir, ancak alış faturaları defterinde, KDV beyannamesinde ve ticaret defterinde yoktur (maliyet hesabı silinmiş, fatura kalmıştır). Karar gereklidir: maliyet hesabının yeniden girilmesi veya faturanın silinmesi.",\r
 "İş ortağı tanınmadı ve elle seçilir.",\r
 "Hasılat",\r
 "Hasılat ±",\r
@@ -176,7 +184,9 @@ const a=`[\r
 "İlk sayfa",\r
 "Bu tedarikçiye ilk ödeme. Ödemeden önce tedarikçi bilgilerini ve alıcı hesabını kontrol edin.",\r
 "İlk kilitleme",\r
+"Çalışan: {0} ({1}{2}).",\r
 "işlem",\r
+"Zayi (kayıttan düşme)",\r
 "Kilit açma nedeni",\r
 "{0} {1} ayının kilit açma nedeni (\\"Kapanıştan sonraki değişiklikler\\" raporuna yazılır):",\r
 "firma hesabı {0}",\r
@@ -184,6 +194,8 @@ const a=`[\r
 "Alıcı / ödeyen hesabı",\r
 "Alıcı hesabı {0} tedarikçinin bilinen hesapları arasında değil ({1}{2}). Ödemeden önce tedarikçiyle, bilinen bir iletişim kanalından, hesabın değiştiğini doğrulayın.",\r
 "Alıcı/ödeyen hesabı geçerli değil (3-13-2 hane, örn. 510-1234567-89).",\r
+"Maliyet hesabı olmayan tedarikçi faturaları",\r
+"Maliyet hesabı olmayan tedarikçi faturaları: {0}, toplam {1} EUR.",\r
 "S.No",\r
 "S.No",\r
 "Satır {0}–{1} / {2}. Toplam, dışa aktarma ve yazdırma tüm satırları kapsar.",\r
@@ -195,6 +207,7 @@ const a=`[\r
 "Sonraki eşleşme",\r
 "Vardiyalar: izinler ve tatiller (yıllık, hastalık, adet, babalık…)",\r
 "Ödemeyi kaydet",\r
+"Bu bordronun kayıtlı sonuçları eski kurala göredir (ek vergi çalışanın net ücretinden düşülmüş; ek vergi işverene aittir ve net ücreti azaltmaz).",\r
 "Sonraki QR kod için hazır.",\r
 "Ayın ilk kilitlenmesindeki (veya 2.7.0 sürümüne geçişte bulunan) defter durumu bugünküyle karşılaştırılır; tüm kilit açmalar nedenleriyle.",\r
 "Ayın ilk kilitlenmesindeki defter durumu bugünküyle karşılaştırılır; tüm kilit açmalar nedenleriyle. 2.7.0 sürümünden önce kilitlenen ay için başlangıç noktası 2.7.0'daki ilk kilit açmada bulunan durumdur.",\r
@@ -212,6 +225,7 @@ const a=`[\r
 "Tüm satırlarda ara",\r
 "Yılda kilitli ay yok.",\r
 "dengede",\r
+"Giriş (maliyet hesapları)",\r
 "Gelen faturaların kalemli kalkülasyonu var",\r
 "Tedarikçiye ödeme girişi",\r
 "Hatırlanan alıcı hesabı",\r
@@ -233,12 +247,15 @@ const a=`[\r
 "{0}\\n\\nÖdeme kaydedilsin mi?",\r
 "{1} faturadan {0} kalemsiz",\r
 "{0} alıcı hesabı {1} tedarikçinin bilinen hesapları arasında değil, ödeme otomatik olarak kaydedilmedi",\r
+"Maliyet hesabı olmayan {0} fatura, toplam {1} EUR ({2}, fatura {3}, tarih {4}). Fatura tedarikçi borcuna dahildir, ancak alış faturaları defterinde, KDV beyannamesinde ve ticaret defterinde yoktur.",\r
 "{0} fatura",\r
 "{0} hesap — {1} veya sonrasına kadar ekstreler",\r
 "{0} yalnızca kadın çalışan için girilir ({1}). Çalışan verilerine (cinsiyet, kimlik numarası) göre çalışan erkektir.",\r
 "{0} işlem kayıt veya sınıflandırma bekliyor",\r
 "{1} {2} günlerinde {0} – {3}.",\r
 "{0} {1}: son ekstre {2}",\r
+"{0} · fatura {1}, tarih {2} · {3} EUR (KDV {4})",\r
+"{0}: net {1}, geçerli kurala göre {2}",\r
 "{0}: {1}{2}, ancak kanun ayda en fazla {3} gün tanır ({4}). Bunu aşan günler \\"Hastalık izni\\" olarak girilmelidir.",\r
 "· ay teslime hazır",\r
 "· kilit açılırken bulunan (2.7.0'dan önce kilitlendi)",\r

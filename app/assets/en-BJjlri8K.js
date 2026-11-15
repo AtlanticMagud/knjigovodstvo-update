@@ -14,6 +14,7 @@ const e=`[\r
 "-NonInteractive",\r
 "-NoProfile",\r
 "If",\r
+"automatic",\r
 "Program update: the release announcement is verified with the publisher's signature; an announcement with an invalid signature, a withdrawn version and a version older than one already published are not downloaded. Server connection: the device sign-in is renewed automatically before it expires and after it has expired.",\r
 "Bank: rules for classifying statement items (description or payee account → type and partner)",\r
 "Bank: statement transactions, posting, recognition method",\r
@@ -46,6 +47,7 @@ const e=`[\r
 "the general ledger is not kept in the program for this month",\r
 "The selected transaction type applies only to outflows.",\r
 "The selected transaction type applies only to inflows.",\r
+"issued",\r
 "Outgoing",\r
 "Outgoing invoices ±",\r
 "Pending items changed: {0}.",\r
@@ -65,12 +67,15 @@ const e=`[\r
 "Creating PDF… ({0} rows)",\r
 "Creating PDF… ({0} pages)",\r
 "Bank statements imported up to the end of the month",\r
+"Exports (IOPPD, payslips, summary) use the saved amounts. The payroll run is closed and is not recalculated automatically; recalculation requires unlocking.",\r
+"Exports (IOPPD, payslips, summary) use the saved amounts. Run “Calculate all” before exporting.",\r
 "Executive director: {0}",\r
 "How the partner of the item was recognised",\r
 "Posted on {0}.",\r
 "MONTH-END CLOSING CHECKLIST — {0}",\r
 "customer {0}",\r
 "la",\r
+"The margin has been applied. Selling prices have been recalculated. {0}",\r
 "Menstrual leave",\r
 "Menstrual leave (Art. 36a Health Insurance Law, up to 2 days per month)",\r
 "The month is ready for submission",\r
@@ -88,6 +93,7 @@ const e=`[\r
 "invalid request",\r
 "invalid length",\r
 "file not found",\r
+"none",\r
 "no VAT calculation entry for the month",\r
 "no payroll for the month",\r
 "No matches",\r
@@ -125,7 +131,9 @@ const e=`[\r
 "description contains \\"{0}\\"",\r
 "Unlockings",\r
 "Unlockings (reason)",\r
+"This computer is not the main one: the margin change stays only on it and is not transferred by the exchange (the next snapshot of the main computer will overwrite it). Margins are changed on the main computer.",\r
 "this device",\r
+"These invoices are included in the supplier balance but not in the purchase ledger, the VAT return or the trade book (the costing sheet was deleted, the invoice remained). A decision is required: re-enter the costing sheet or delete the invoice.",\r
 "The partner was not recognised and is selected manually.",\r
 "Daily takings",\r
 "Daily takings ±",\r
@@ -176,7 +184,9 @@ const e=`[\r
 "First page",\r
 "First payment to this supplier. Before paying, check the supplier details and the payee account.",\r
 "First locking",\r
+"Employees: {0} ({1}{2}).",\r
 "action",\r
+"Write-off",\r
 "Reason for unlocking",\r
 "Reason for unlocking the month {0} {1} (entered in the \\"Changes after closing\\" report):",\r
 "company account {0}",\r
@@ -184,6 +194,8 @@ const e=`[\r
 "Payee / payer account",\r
 "Payee account {0} is not among the supplier's known accounts ({1}{2}). Before paying, confirm with the supplier, through a known contact, that the account has changed.",\r
 "The payee/payer account is not valid (3-13-2 digits, e.g. 510-1234567-89).",\r
+"Supplier invoices without a costing sheet",\r
+"Supplier invoices without a costing sheet: {0}, total {1} EUR.",\r
 "No.",\r
 "No.",\r
 "Rows {0}–{1} of {2}. Totals, export and printing cover all rows.",\r
@@ -195,6 +207,7 @@ const e=`[\r
 "Next match",\r
 "Shifts: absences and holidays (annual, sick, menstrual, paternity…)",\r
 "Save payment",\r
+"The saved results of this payroll run come from an older rule (surtax deducted from the employee's net pay; the surtax is borne by the employer and does not reduce net pay).",\r
 "Ready for the next QR code.",\r
 "The state of the books at the first locking of the month (or found when upgrading to version 2.7.0) compared with today, and all unlockings with the reason.",\r
 "The state of the books at the first locking of the month compared with today, and all unlockings with the reason. For a month locked before version 2.7.0 the starting point is the state found at the first unlocking in 2.7.0.",\r
@@ -212,6 +225,7 @@ const e=`[\r
 "Search all rows",\r
 "There are no locked months in the year.",\r
 "in balance",\r
+"Receipt (costing sheets)",\r
 "Incoming invoices have a calculation with items",\r
 "Payment to supplier entry",\r
 "Remembered payee account",\r
@@ -233,12 +247,15 @@ const e=`[\r
 "{0}\\n\\nSave the payment?",\r
 "{0} of {1} invoices without items",\r
 "{0} payee account {1} is not among the supplier's known accounts, the payment was not posted automatically",\r
+"{0} invoice(s) without a costing sheet, total {1} EUR ({2}, invoice {3} of {4}). The invoice is included in the supplier balance but not in the purchase ledger, the VAT return or the trade book.",\r
 "{0} invoices",\r
 "{0} accounts — statements up to {1} or later",\r
 "{0} can be entered only for a female employee ({1}). According to the employee data (sex, personal ID number) the employee is male.",\r
 "{0} transactions await posting or classification",\r
 "{0} on the days of {1} {2} – {3}.",\r
 "{0} {1}: last statement {2}",\r
+"{0} · invoice {1} of {2} · {3} EUR (VAT {4})",\r
+"{0}: net {1}, under the current rule {2}",\r
 "{0}: {1}{2}, while the law allows at most {3} days per month ({4}). Days above that should be entered as \\"Sick leave\\".",\r
 "· the month is ready for submission",\r
 "· found at unlocking (locked before 2.7.0)",\r

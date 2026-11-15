@@ -14,6 +14,7 @@ const a=`[\r
 "-NonInteractive",\r
 "-NoProfile",\r
 "Ako",\r
+"automatski",\r
 "Ažuriranje programa: objava nove verzije se provjerava potpisom izdavača; objava sa neispravnim potpisom, povučena verzija i verzija starija od već objavljene se ne preuzimaju. Veza sa serverom: prijava uređaja se obnavlja sama prije isteka roka i poslije isteka.",\r
 "Banka: pravila za razvrstavanje stavki izvoda (opis ili račun primaoca → vrsta i partner)",\r
 "Banka: transakcije sa izvoda, knjiženje, način prepoznavanja",\r
@@ -46,6 +47,7 @@ const a=`[\r
 "glavna knjiga se ne vodi u programu za ovaj mjesec",\r
 "Izabrana vrsta prometa važi samo za odlive.",\r
 "Izabrana vrsta prometa važi samo za prilive.",\r
+"izdat",\r
 "Izlaznih",\r
 "Izlaznih faktura ±",\r
 "Izmijenjeno stavki koje čekaju: {0}.",\r
@@ -65,12 +67,15 @@ const a=`[\r
 "Izrada PDF-a… ({0} redova)",\r
 "Izrada PDF-a… ({0} strana)",\r
 "Izvodi banke učitani do kraja mjeseca",\r
+"Izvozi (IOPPD, platni listići, rekapitulacija) čitaju snimljene iznose. Obračun je zaključen i ne preračunava se sam; preračun traži otključavanje.",\r
+"Izvozi (IOPPD, platni listići, rekapitulacija) čitaju snimljene iznose. Prije izvoza potrebno je pokrenuti „Obračunaj sve\\".",\r
 "Izvršni direktor: {0}",\r
 "Kako je partner stavke prepoznat",\r
 "Knjiženo na {0}.",\r
 "KONTROLNA LISTA ZATVARANJA MJESECA — {0}",\r
 "kupac {0}",\r
 "la",\r
+"Marža je primijenjena. Prodajne cijene su preračunate. {0}",\r
 "Menstrualno odsustvo",\r
 "Menstrualno odsustvo (čl. 36a ZOZO, do 2 dana mjesečno)",\r
 "Mjesec je spreman za predaju",\r
@@ -88,6 +93,7 @@ const a=`[\r
 "neispravan zahtjev",\r
 "neispravna dužina",\r
 "nema fajla",\r
+"nema ih",\r
 "nema naloga obračuna PDV-a za mjesec",\r
 "nema obračuna plata za mjesec",\r
 "Nema pogodaka",\r
@@ -125,7 +131,9 @@ const a=`[\r
 "opis sadrži „{0}\\"",\r
 "Otključavanja",\r
 "Otključavanja (razlog)",\r
+"Ovaj računar nije glavni: izmjena marže ostaje samo na njemu i ne prenosi se razmjenom (prepisaće je sljedeći snimak glavnog računara). Marže se mijenjaju na glavnom računaru.",\r
 "ovaj uređaj",\r
+"Ovi računi ulaze u dug dobavljaču, a nisu u knjizi primljenih računa, PDV prijavi ni trgovačkoj knjizi (kalkulacija je obrisana, račun je ostao). Potrebna je odluka: ponovni unos kalkulacije ili brisanje računa.",\r
 "Partner nije prepoznat i bira se ručno.",\r
 "Pazara",\r
 "Pazara ±",\r
@@ -176,7 +184,9 @@ const a=`[\r
 "Prva strana",\r
 "Prvo plaćanje ovom dobavljaču. Prije plaćanja provjeriti podatke dobavljača i račun primaoca.",\r
 "Prvo zaključavanje",\r
+"Radnika: {0} ({1}{2}).",\r
 "radnja",\r
+"Rashod (otpis)",\r
 "Razlog otključavanja",\r
 "Razlog otključavanja mjeseca {0} {1}. (upisuje se u izvještaj „Izmjene poslije zaključenja\\"):",\r
 "račun firme {0}",\r
@@ -184,6 +194,8 @@ const a=`[\r
 "Račun primaoca / uplatioca",\r
 "Račun primaoca {0} nije među poznatim računima dobavljača ({1}{2}). Prije plaćanja potvrditi sa dobavljačem, na poznat kontakt, da je račun promijenjen.",\r
 "Račun primaoca/uplatioca nije ispravan (3-13-2 cifre, npr. 510-1234567-89).",\r
+"Računi dobavljača bez kalkulacije",\r
+"Računi dobavljača bez kalkulacije: {0}, ukupno {1} EUR.",\r
 "Rb",\r
 "Rbr",\r
 "Redovi {0}–{1} od {2}. Zbir, izvoz i štampa obuhvataju sve redove.",\r
@@ -195,6 +207,7 @@ const a=`[\r
 "Sljedeći pogodak",\r
 "Smjene: odsustva i praznici (godišnji, bolovanje, menstrualno, očinsko…)",\r
 "Snimi plaćanje",\r
+"Snimljeni rezultati ovog obračuna potiču od starijeg pravila (prirez odbijen od neta radnika; prirez je na teret poslodavca i ne umanjuje neto).",\r
 "Spremno za sljedeći QR kod.",\r
 "Stanje knjiga pri prvom zaključavanju mjeseca (ili zatečeno pri prelasku na verziju 2.7.0) upoređeno sa današnjim, i sva otključavanja sa razlogom.",\r
 "Stanje knjiga pri prvom zaključavanju mjeseca upoređeno sa današnjim, i sva otključavanja sa razlogom. Za mjesec zaključan prije verzije 2.7.0 polazište je stanje zatečeno pri prvom otključavanju u 2.7.0.",\r
@@ -212,6 +225,7 @@ const a=`[\r
 "Traži u svim redovima",\r
 "U godini nema zaključanih mjeseci.",\r
 "u ravnoteži",\r
+"Ulaz (kalkulacije)",\r
 "Ulazni računi imaju kalkulaciju sa stavkama",\r
 "Unos plaćanja dobavljaču",\r
 "Upamćen račun primaoca",\r
@@ -233,12 +247,15 @@ const a=`[\r
 "{0}\\n\\nSnimiti plaćanje?",\r
 "{0} od {1} računa bez stavki",\r
 "{0} račun primaoca {1} nije među poznatim računima dobavljača, plaćanje nije proknjiženo automatski",\r
+"{0} račun(a) bez kalkulacije, ukupno {1} EUR ({2}, račun {3} od {4}). Račun je u dugu dobavljaču, a nije u knjizi primljenih računa, PDV prijavi ni trgovačkoj knjizi.",\r
 "{0} računa",\r
 "{0} računa — izvodi do {1} ili kasnije",\r
 "{0} se upisuje samo za radnicu ({1}). Po podacima radnika (pol, JMBG) radnik je muškog pola.",\r
 "{0} transakcija čeka knjiženje ili razvrstavanje",\r
 "{0} u danima {1} {2} – {3}.",\r
 "{0} {1}: zadnji izvod {2}",\r
+"{0} · račun {1} od {2} · {3} EUR (PDV {4})",\r
+"{0}: neto {1}, po važećem pravilu {2}",\r
 "{0}: {1}{2}, a zakon daje najviše {3} dana mjesečno ({4}). Dane preko toga treba upisati kao „Bolovanje\\".",\r
 "· mjesec je spreman za predaju",\r
 "· zatečeno pri otključavanju (zaključan prije 2.7.0)",\r
