@@ -26,6 +26,7 @@ const e=`[\r
 "Detail",\r
 "The supplier has no open invoices; the payment of {0} EUR remains a prepayment until the invoice is entered.",\r
 "supplier {0}",\r
+"Supplier {0} has no invoices in company {1}.\\n\\nThe invoice will be entered in company {2}. Check that the invoice is issued to this company and not to another company on this computer.",\r
 "Suppliers: supplier card and payment entry",\r
 "The sick-leave certificate and the IOPPD code for this leave are not prescribed and await the accountant's answer, so the program does not calculate these days as leave: an employee without a shift schedule has them in regular work, while for an employee on a shift schedule the hours of those days should be entered in the payroll as instructed by the accountant.",\r
 "screen",\r
@@ -125,12 +126,15 @@ const e=`[\r
 "Payroll and IOPPD",\r
 "Payroll locked (IOPPD)",\r
 "Delete the rule \\"{0}\\"? Items previously classified by the rule remain as they are.",\r
+"Delete invoice {0} ({1}, {2} EUR)? The debt to the supplier is reduced by this amount. Deletion is permanent.",\r
+"Delete invoice",\r
 "The Decision is publicly displayed at the entrance of the premises, for the purposes of the inspection services.",\r
 "Then enter",\r
 "Description contains (separate several conditions with \\";\\")",\r
 "description contains \\"{0}\\"",\r
 "Unlockings",\r
 "Unlockings (reason)",\r
+"open company",\r
 "This computer is not the main one: the margin change stays only on it and is not transferred by the exchange (the next snapshot of the main computer will overwrite it). Margins are changed on the main computer.",\r
 "this device",\r
 "These invoices are included in the supplier balance but not in the purchase ledger, the VAT return or the trade book (the costing sheet was deleted, the invoice remained). A decision is required: re-enter the costing sheet or delete the invoice.",\r
@@ -150,6 +154,7 @@ const e=`[\r
 "The data on valid versions has expired, so updates cannot be verified at the moment. The check is repeated automatically.",\r
 "Match {0} of {1}",\r
 "Undo the posting and recognise the item again? The payment to the supplier is deleted and the transaction returns to \\"pending\\" with a new partner suggestion.",\r
+"Re-entry: scan the invoice QR code again (the invoice is linked to the new costing sheet). Deletion: the \\"Delete invoice\\" button, on the main computer; costing sheets and books are not changed.",\r
 "Tax books: closing checklist, locking, changes after closing",\r
 "Tax books: VAT return for the month",\r
 "TAXPAYER: {0}",\r
@@ -182,6 +187,7 @@ const e=`[\r
 "Account check:",\r
 "check that the certificates have been submitted",\r
 "First page",\r
+"Supplier's first invoice in this company",\r
 "First payment to this supplier. Before paying, check the supplier details and the payee account.",\r
 "First locking",\r
 "Employees: {0} ({1}{2}).",\r
@@ -190,10 +196,14 @@ const e=`[\r
 "Reason for unlocking",\r
 "Reason for unlocking the month {0} {1} (entered in the \\"Changes after closing\\" report):",\r
 "company account {0}",\r
+"The invoice has a costing sheet. It is deleted by deleting the costing sheet (Costing sheets and invoices).",\r
+"The invoice does not exist (it may already have been deleted).",\r
+"The invoice was not saved. To enter it in another company, open that company.",\r
 "The account is not in the 3-13-2 digit format.",\r
 "Payee / payer account",\r
 "Payee account {0} is not among the supplier's known accounts ({1}{2}). Before paying, confirm with the supplier, through a known contact, that the account has changed.",\r
 "The payee/payer account is not valid (3-13-2 digits, e.g. 510-1234567-89).",\r
+"Invoice {0} has been deleted. The debt to supplier {1} has been reduced by {2} EUR.",\r
 "Supplier invoices without a costing sheet",\r
 "Supplier invoices without a costing sheet: {0}, total {1} EUR.",\r
 "No.",\r
@@ -227,6 +237,7 @@ const e=`[\r
 "in balance",\r
 "Receipt (costing sheets)",\r
 "Incoming invoices have a calculation with items",\r
+"Enter in {0}",\r
 "Payment to supplier entry",\r
 "Remembered payee account",\r
 "Enters",\r

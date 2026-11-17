@@ -26,6 +26,7 @@ const a=`[\r
 "Ayrıntı",\r
 "Tedarikçinin açık faturası yok; {0} EUR ödeme fatura girilene kadar ön ödeme olarak kalır.",\r
 "tedarikçi {0}",\r
+"{0} tedarikçisinin {1} firmasında hiç faturası yok.\\n\\nFatura {2} firmasına girilecek. Faturanın bu bilgisayardaki başka bir firmaya değil, bu firmaya kesildiği kontrol edilmelidir.",\r
 "Tedarikçiler: tedarikçi kartı ve ödeme girişi",\r
 "Bu izin için rapor ve IOPPD kodu belirlenmemiştir ve muhasebecinin cevabını beklemektedir; bu nedenle program bu günleri izin olarak hesaplamaz: vardiya planı olmayan çalışanda bu günler normal çalışmadadır, vardiya planına göre çalışan için bu günlerin saatleri muhasebecinin talimatına göre bordroya girilmelidir.",\r
 "ekran",\r
@@ -125,12 +126,15 @@ const a=`[\r
 "Bordro ve IOPPD",\r
 "Bordro kilitli (IOPPD)",\r
 "\\"{0}\\" kuralı silinsin mi? Kuralın daha önce sınıflandırdığı kalemler olduğu gibi kalır.",\r
+"{0} faturası silinsin mi ({1}, {2} EUR)? Tedarikçiye olan borç bu tutar kadar azalır. Silme kalıcıdır.",\r
+"Faturayı sil",\r
 "Karar, denetim hizmetleri için işyerinin girişine asılır.",\r
 "O zaman yaz",\r
 "Açıklama içerir (birden çok koşulu \\";\\" ile ayırın)",\r
 "açıklama \\"{0}\\" içeriyor",\r
 "Kilit açmalar",\r
 "Kilit açmalar (neden)",\r
+"açık firma",\r
 "Bu bilgisayar ana bilgisayar değildir: marj değişikliği yalnızca bu bilgisayarda kalır ve veri alışverişiyle aktarılmaz (ana bilgisayarın bir sonraki kopyası bunun üzerine yazar). Marjlar ana bilgisayarda değiştirilir.",\r
 "bu cihaz",\r
 "Bu faturalar tedarikçi borcuna dahildir, ancak alış faturaları defterinde, KDV beyannamesinde ve ticaret defterinde yoktur (maliyet hesabı silinmiş, fatura kalmıştır). Karar gereklidir: maliyet hesabının yeniden girilmesi veya faturanın silinmesi.",\r
@@ -150,6 +154,7 @@ const a=`[\r
 "Geçerli sürümlere ilişkin verilerin süresi doldu, bu nedenle güncellemeler şu anda doğrulanamıyor. Denetim kendiliğinden tekrarlanır.",\r
 "Eşleşme {0} / {1}",\r
 "Kayıt geri alınsın ve kalem yeniden tanınsın mı? Tedarikçiye ödeme silinir ve işlem yeni bir iş ortağı önerisiyle \\"bekliyor\\" durumuna döner.",\r
+"Yeniden giriş: faturanın QR kodunu tekrar okutun (fatura yeni maliyet hesabına bağlanır). Silme: ana bilgisayarda \\"Faturayı sil\\" düğmesi; maliyet hesapları ve defterler değişmez.",\r
 "Vergi defterleri: kapanış kontrol listesi, kilitleme, kapanıştan sonraki değişiklikler",\r
 "Vergi defterleri: aylık KDV beyannamesi",\r
 "VERGİ MÜKELLEFİ: {0}",\r
@@ -182,6 +187,7 @@ const a=`[\r
 "Hesap kontrolü:",\r
 "raporların teslim edildiğini kontrol edin",\r
 "İlk sayfa",\r
+"Tedarikçinin bu firmadaki ilk faturası",\r
 "Bu tedarikçiye ilk ödeme. Ödemeden önce tedarikçi bilgilerini ve alıcı hesabını kontrol edin.",\r
 "İlk kilitleme",\r
 "Çalışan: {0} ({1}{2}).",\r
@@ -190,10 +196,14 @@ const a=`[\r
 "Kilit açma nedeni",\r
 "{0} {1} ayının kilit açma nedeni (\\"Kapanıştan sonraki değişiklikler\\" raporuna yazılır):",\r
 "firma hesabı {0}",\r
+"Faturanın maliyet hesabı var. Silme, maliyet hesabının silinmesiyle yapılır (Maliyet hesapları ve faturalar).",\r
+"Fatura mevcut değil (zaten silinmiş olabilir).",\r
+"Fatura kaydedilmedi. Başka bir firmaya girmek için o firma açılmalıdır.",\r
 "Hesap 3-13-2 hane biçiminde değil.",\r
 "Alıcı / ödeyen hesabı",\r
 "Alıcı hesabı {0} tedarikçinin bilinen hesapları arasında değil ({1}{2}). Ödemeden önce tedarikçiyle, bilinen bir iletişim kanalından, hesabın değiştiğini doğrulayın.",\r
 "Alıcı/ödeyen hesabı geçerli değil (3-13-2 hane, örn. 510-1234567-89).",\r
+"{0} faturası silindi. {1} tedarikçisine olan borç {2} EUR azaltıldı.",\r
 "Maliyet hesabı olmayan tedarikçi faturaları",\r
 "Maliyet hesabı olmayan tedarikçi faturaları: {0}, toplam {1} EUR.",\r
 "S.No",\r
@@ -227,6 +237,7 @@ const a=`[\r
 "dengede",\r
 "Giriş (maliyet hesapları)",\r
 "Gelen faturaların kalemli kalkülasyonu var",\r
+"{0} firmasına gir",\r
 "Tedarikçiye ödeme girişi",\r
 "Hatırlanan alıcı hesabı",\r
 "Yazar",\r

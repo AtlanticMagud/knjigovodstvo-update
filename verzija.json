@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.2",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.2.zip",
+  "verzija": "2.7.3",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.3.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "5af246f2424a1c9a40afa5d2318a7d540b8c462bc7ec9d89f57f68159bc3c310",
+  "sha256": "594d27fe0383a0e10d880575175322276172801e0ad218216c230952b1d90378",
   "obavezno": false,
-  "napomene": "Zaokruživanje: iznos koji padne tačno na pola centa (npr. PDV 4,935 ili doprinos 140,515) sada se zaokružuje naviše, isto u cijelom programu — ručno unesene fakture, izlazne fakture, plate, glavna knjiga. Već izdati računi i snimljeni obračuni plata se ne mijenjaju; u knjigama i pregledima ranijih perioda pojedini iznos može biti cent veći.\nPDV prijava: od prijave za novembar 2026. polje 19 (ulazni PDV) je zbir kolone PDV-a iz knjige primljenih računa, pa se prijava i knjiga slažu do centa. Prijave ranijih mjeseci se ne mijenjaju.\nKontrola: račun dobavljača koji nema kalkulaciju (ulazi u dug, a nije u knjigama) prikazuje se na ekranu Dobavljači i u kontrolnoj listi zatvaranja mjeseca.\nZalihe i popis → Ulazi po artiklu: nabavna vrijednost je poslije rabata (ranije prije rabata).\nTrgovačka knjiga: ekran se na velikoj bazi otvara znatno brže (spisak uplata bez para).\nPrenos robe: zbir prenosnice je jednak iznosu u trgovačkoj knjizi.\nPlate: upozorenje kad su snimljeni rezultati otvorenog obračuna nastali po starijem pravilu (prirez odbijen od neta) — tada je potrebno pokrenuti „Obračunaj sve\".\nMarže: na računaru koji nije glavni program upozorava da izmjena marže ostaje samo na tom računaru.\nJezik programa (en, ru, tr): dopunjeni prevodi (pravila banke, varijante stopa, nove poruke).\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.7.1.",
-  "datum": "2026-11-15",
-  "sha256Android": "9151eab96f0fdacf30bd066d38f1a9ec26dde2134dbf8a56eaf7fbce34bcbc05",
-  "verzijaPrethodna": "2.7.1",
+  "napomene": "Dobavljači — saldo i dugovi: u prikazu „svi marketi\" više se ne prikazuju dobavljači bez početnog stanja, faktura i plaćanja (dobavljači iz šifarnika sa kojima firma ne radi).\nKartica dobavljača: račun dobavljača koji je ostao bez kalkulacije prikazuje se i na kartici („Račun bez kalkulacije\"), pa se saldo na kartici i na spisku dobavljača slažu.\nRačuni bez kalkulacije: uz upozorenje na ekranu Dobavljači postoji dugme „Obriši račun\" (samo na glavnom računaru, uz PIN i potvrdu). Za ponovni unos kalkulacije dovoljno je ponovo skenirati QR kod računa — postojeći račun se veže za novu kalkulaciju.\nRučni unos fakture (bez QR koda): kad dobavljač u otvorenoj firmi još nema nijednu fakturu, program traži potvrdu sa nazivom firme, da se faktura ne unese u pogrešnu firmu.\nJezik programa (en, ru, tr): prevodi novih poruka.\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.7.2.",
+  "datum": "2026-11-17",
+  "sha256Android": "5bb98170f783abf37dc80d7075a9c624a862c2c6aa785a5a6d182ed0f44b8ab1",
+  "verzijaPrethodna": "2.7.2",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

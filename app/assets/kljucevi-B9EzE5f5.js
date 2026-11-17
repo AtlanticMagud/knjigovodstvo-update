@@ -26,6 +26,7 @@ const a=`[\r
 "Detalj",\r
 "Dobavljač nema otvorenih faktura; plaćanje {0} EUR ostaje kao pretplata dok se faktura ne unese.",\r
 "dobavljač {0}",\r
+"Dobavljač {0} nema nijednu fakturu u firmi {1}.\\n\\nFaktura se unosi u firmu {2}. Potrebno je provjeriti da faktura glasi na ovu firmu, a ne na drugu firmu na ovom računaru.",\r
 "Dobavljači: kartica dobavljača i unos plaćanja",\r
 "Doznaka i šifra u IOPPD za ovo odsustvo nisu propisane i čekaju odgovor knjigovođe, pa program te dane ne obračunava kao odsustvo: radnica bez rasporeda smjena ih ima u redovnom radu, a radnici po rasporedu sate tih dana treba upisati u obračun po uputstvu knjigovođe.",\r
 "ekran",\r
@@ -125,12 +126,15 @@ const a=`[\r
 "Obračun plata i IOPPD",\r
 "Obračun plata zaključen (IOPPD)",\r
 "Obrisati pravilo „{0}\\"? Stavke koje je pravilo ranije razvrstalo ostaju kakve jesu.",\r
+"Obrisati račun {0} ({1}, {2} EUR)? Dug dobavljaču se umanjuje za taj iznos. Brisanje je trajno.",\r
+"Obriši račun",\r
 "Odluka se javno ističe na ulazu objekta, a za potrebe inspekcijskih službi.",\r
 "Onda upiši",\r
 "Opis sadrži (više uslova odvojiti znakom „;\\")",\r
 "opis sadrži „{0}\\"",\r
 "Otključavanja",\r
 "Otključavanja (razlog)",\r
+"otvorena firma",\r
 "Ovaj računar nije glavni: izmjena marže ostaje samo na njemu i ne prenosi se razmjenom (prepisaće je sljedeći snimak glavnog računara). Marže se mijenjaju na glavnom računaru.",\r
 "ovaj uređaj",\r
 "Ovi računi ulaze u dug dobavljaču, a nisu u knjizi primljenih računa, PDV prijavi ni trgovačkoj knjizi (kalkulacija je obrisana, račun je ostao). Potrebna je odluka: ponovni unos kalkulacije ili brisanje računa.",\r
@@ -150,6 +154,7 @@ const a=`[\r
 "Podaci o važećim verzijama su istekli, pa se ažuriranja trenutno ne mogu provjeriti. Provjera se ponavlja sama.",\r
 "Pogodak {0} od {1}",\r
 "Poništiti knjiženje i ponovo prepoznati stavku? Plaćanje dobavljaču se briše, a transakcija se vraća na „čeka\\" sa novim predlogom partnera.",\r
+"Ponovni unos: ponovno skeniranje QR koda računa (račun se veže za novu kalkulaciju). Brisanje: dugme „Obriši račun\\", na glavnom računaru; kalkulacije i knjige se ne mijenjaju.",\r
 "Poreske knjige: kontrolna lista zatvaranja, zaključavanje, izmjene poslije zaključenja",\r
 "Poreske knjige: PDV prijava za mjesec",\r
 "PORESKI OBVEZNIK: {0}",\r
@@ -182,6 +187,7 @@ const a=`[\r
 "Provjera računa:",\r
 "provjeriti da su uvjerenja dostavljena",\r
 "Prva strana",\r
+"Prvi račun dobavljača u ovoj firmi",\r
 "Prvo plaćanje ovom dobavljaču. Prije plaćanja provjeriti podatke dobavljača i račun primaoca.",\r
 "Prvo zaključavanje",\r
 "Radnika: {0} ({1}{2}).",\r
@@ -190,10 +196,14 @@ const a=`[\r
 "Razlog otključavanja",\r
 "Razlog otključavanja mjeseca {0} {1}. (upisuje se u izvještaj „Izmjene poslije zaključenja\\"):",\r
 "račun firme {0}",\r
+"Račun ima kalkulaciju. Brisanje se radi brisanjem kalkulacije (Kalkulacije i fakture).",\r
+"Račun ne postoji (možda je već obrisan).",\r
+"Račun nije snimljen. Za unos u drugu firmu potrebno je otvoriti tu firmu.",\r
 "Račun nije u obliku 3-13-2 cifre.",\r
 "Račun primaoca / uplatioca",\r
 "Račun primaoca {0} nije među poznatim računima dobavljača ({1}{2}). Prije plaćanja potvrditi sa dobavljačem, na poznat kontakt, da je račun promijenjen.",\r
 "Račun primaoca/uplatioca nije ispravan (3-13-2 cifre, npr. 510-1234567-89).",\r
+"Račun {0} je obrisan. Dug dobavljaču {1} je umanjen za {2} EUR.",\r
 "Računi dobavljača bez kalkulacije",\r
 "Računi dobavljača bez kalkulacije: {0}, ukupno {1} EUR.",\r
 "Rb",\r
@@ -227,6 +237,7 @@ const a=`[\r
 "u ravnoteži",\r
 "Ulaz (kalkulacije)",\r
 "Ulazni računi imaju kalkulaciju sa stavkama",\r
+"Unesi u {0}",\r
 "Unos plaćanja dobavljaču",\r
 "Upamćen račun primaoca",\r
 "Upisuje",\r
