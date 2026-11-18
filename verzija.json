@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.3",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.3.zip",
+  "verzija": "2.7.4",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.4.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "594d27fe0383a0e10d880575175322276172801e0ad218216c230952b1d90378",
+  "sha256": "238378bef1add8a924811981ccdcd0b651b5aec682938be2d9d5bda2ec26c9dd",
   "obavezno": false,
-  "napomene": "Dobavljači — saldo i dugovi: u prikazu „svi marketi\" više se ne prikazuju dobavljači bez početnog stanja, faktura i plaćanja (dobavljači iz šifarnika sa kojima firma ne radi).\nKartica dobavljača: račun dobavljača koji je ostao bez kalkulacije prikazuje se i na kartici („Račun bez kalkulacije\"), pa se saldo na kartici i na spisku dobavljača slažu.\nRačuni bez kalkulacije: uz upozorenje na ekranu Dobavljači postoji dugme „Obriši račun\" (samo na glavnom računaru, uz PIN i potvrdu). Za ponovni unos kalkulacije dovoljno je ponovo skenirati QR kod računa — postojeći račun se veže za novu kalkulaciju.\nRučni unos fakture (bez QR koda): kad dobavljač u otvorenoj firmi još nema nijednu fakturu, program traži potvrdu sa nazivom firme, da se faktura ne unese u pogrešnu firmu.\nJezik programa (en, ru, tr): prevodi novih poruka.\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.7.2.",
-  "datum": "2026-11-17",
-  "sha256Android": "5bb98170f783abf37dc80d7075a9c624a862c2c6aa785a5a6d182ed0f44b8ab1",
-  "verzijaPrethodna": "2.7.2",
+  "napomene": "Kartica dobavljača (učitavanje i provjera): stavka koja kod dobavljača stoji pod drugim datumom (npr. knjižno odobrenje) uparuje se po istom iznosu i najbližem datumu (do 45 dana) i ne prikazuje se više dvaput kao „nema kod nas\" i „nema kod njih\". U napomeni stoji naš broj i datum.\nKalkulacije i fakture: novo dugme „Prebaci u troškove\" na kalkulaciji. Račun koji nije roba (struja, voda, telefon, gorivo…) prelazi u Nabavka i troškovi sa istim iznosom i PDV-om, u istom mjesecu; kalkulacija se briše, pa faktura više nije u trgovačkoj knjizi, zalihama ni u dugu dobavljaču. Radi na glavnom računaru; u zaključanom mjesecu uz razlog, koji se upisuje u izvještaj „Izmjene poslije zaključenja\".\nJezik programa (en, ru, tr): prevodi novih poruka.\nVažno: nije potreban novi Setup. Baza ostaje čitljiva i prethodnoj verziji 2.7.3.",
+  "datum": "2026-11-18",
+  "sha256Android": "7882b416a82ed1c55268d77ca9678935fc374380a7731832d599dc0ce0ab5682",
+  "verzijaPrethodna": "2.7.3",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }

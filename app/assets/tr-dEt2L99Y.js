@@ -32,6 +32,9 @@ const a=`[\r
 "ekran",\r
 "EV",\r
 "dosya değişti",\r
+"Tedarikçi faturası",\r
+"Fatura giderlere aktarıldı (Satın alma ve giderler) {0}.",\r
+"Fatura giderlere aktarıldı: KDV hariç {0} EUR, KDV {1} EUR, tarih {2} (Satın alma ve giderler). {3} maliyet hesabı silindi.",\r
 "güncelleme akışı: imzasız yayın",\r
 "güncelleme akışı: durumsuz yayın",\r
 "güncelleme akışı: yayın biçimi geçersiz",\r
@@ -72,7 +75,12 @@ const a=`[\r
 "Dışa aktarımlar (IOPPD, maaş bordroları, özet) kayıtlı tutarları kullanır. Dışa aktarmadan önce “Tümünü hesapla” çalıştırılmalıdır.",\r
 "İcra direktörü: {0}",\r
 "Kalemin iş ortağı nasıl tanındı",\r
+"Maliyet hesabı kilitli {0}/{1} ayında. Giderlere aktarma o ayın defterlerini değiştirir (ticari defter, stok): ayın kilidi açılmalı (Ayarlar → Dönem kilitleme), fatura aktarılmalı ve ay yeniden kilitlenmelidir.",\r
+"Maliyet hesabında ne fatura tarihi ne de teslim tarihi var.",\r
+"Zayi maliyet hesabı giderlere aktarılmaz.",\r
+"gider olarak (faturadaki tutarlar ve KDV, orana göre). Maliyet hesabı ve fatura silinir: fatura artık ticari defterde, stokta ve tedarikçi borcunda yer almaz. Giriş KDV'si aynı ayın alış faturaları defterinde kalır. İşlem yalnızca ana bilgisayarda, kilidi açık ayda yapılabilir.",\r
 "{0} tarihine kaydedildi.",\r
+"Alacak dekontu giderlere aktarılmaz.",\r
 "AY SONU KAPANIŞ KONTROL LİSTESİ — {0}",\r
 "müşteri {0}",\r
 "la",\r
@@ -174,6 +182,9 @@ const a=`[\r
 "Kural tedarikçi veya müşteri yazar, ikisini birden değil.",\r
 "\\"{0}\\" kuralı",\r
 "Kural: {0}",\r
+"Faturanın giderlere aktarılması — maliyet hesabı {0}",\r
+"{0} maliyet hesabından aktarıldı (fatura mal olarak girilmişti) {1}",\r
+"aktarılır:",\r
 "banka kuralıyla tanındı (Banka → Banka kuralları)",\r
 "geride kaldı",\r
 "Önceki sayfa",\r
@@ -197,6 +208,8 @@ const a=`[\r
 "{0} {1} ayının kilit açma nedeni (\\"Kapanıştan sonraki değişiklikler\\" raporuna yazılır):",\r
 "firma hesabı {0}",\r
 "Faturanın maliyet hesabı var. Silme, maliyet hesabının silinmesiyle yapılır (Maliyet hesapları ve faturalar).",\r
+"Maliyet hesabının faturasında kalem yok (tutarlar faturadan alınır).",\r
+"Mal olmayan bir fatura (elektrik, su, telefon, yakıt…) \\"Satın alma ve giderler\\"e aktarılır; maliyet hesabı silinir (ticari defter, stok ve tedarikçi borcu), giriş KDV'si aynı ayda kalır.",\r
 "Fatura mevcut değil (zaten silinmiş olabilir).",\r
 "Fatura kaydedilmedi. Başka bir firmaya girmek için o firma açılmalıdır.",\r
 "Hesap 3-13-2 hane biçiminde değil.",\r
@@ -256,6 +269,7 @@ const a=`[\r
 "Ay sonu kapanışı",\r
 "{0}\\n\\nÖdeme kaydedilsin mi?",\r
 "{0}\\n\\nÖdeme kaydedilsin mi?",\r
+"{0} (bizde {1}tarih {2}.{3}.{4}.)",\r
 "{1} faturadan {0} kalemsiz",\r
 "{0} alıcı hesabı {1} tedarikçinin bilinen hesapları arasında değil, ödeme otomatik olarak kaydedilmedi",\r
 "Maliyet hesabı olmayan {0} fatura, toplam {1} EUR ({2}, fatura {3}, tarih {4}). Fatura tedarikçi borcuna dahildir, ancak alış faturaları defterinde, KDV beyannamesinde ve ticaret defterinde yoktur.",\r
@@ -282,6 +296,7 @@ const a=`[\r
 "– {0}: PDF değil, atlandı",\r
 "– {0}: başka firmanın hesabı, atlandı",\r
 "— (dönem gideri)",\r
+"— türsüz —",\r
 "— değiştirmez —",\r
 "— örn.",\r
 "— {0}; saatler ve asgari ücret orantılıdır",\r
@@ -1292,6 +1307,7 @@ const a=`[\r
 "% matrah üzerinden. Kiraya veren, vergi düşülmüş kirayı alır; bu vergi üzerindeki ek vergiyi firma kiraya verenin belediyesine öder. Ayın hesaplaması şuna girer:",\r
 "% yıl başına).",\r
 "↩ geri al ve yinele",\r
+"↪ Giderlere aktar",\r
 "⚠ alıcı hesabı kontrolü bekliyor",\r
 "✅ Ay sonu kapanış kontrol listesi —",\r
 "✓kural",\r

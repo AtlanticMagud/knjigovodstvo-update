@@ -32,6 +32,9 @@ const a=`[\r
 "ekran",\r
 "EV",\r
 "fajl izmijenjen",\r
+"Faktura dobavljača",\r
+"Faktura je prebačena u troškove (Nabavka i troškovi) {0}.",\r
+"Faktura je prebačena u troškove: {0} EUR bez PDV-a, PDV {1} EUR, datum {2} (Nabavka i troškovi). Kalkulacija {3} je obrisana.",\r
 "feed ažuriranja: objava bez potpisa",\r
 "feed ažuriranja: objava bez stanja",\r
 "feed ažuriranja: objava nije ispravnog oblika",\r
@@ -72,7 +75,12 @@ const a=`[\r
 "Izvozi (IOPPD, platni listići, rekapitulacija) čitaju snimljene iznose. Prije izvoza potrebno je pokrenuti „Obračunaj sve\\".",\r
 "Izvršni direktor: {0}",\r
 "Kako je partner stavke prepoznat",\r
+"Kalkulacija je u zaključanom mjesecu {0}/{1}. Prebacivanje u troškove mijenja knjige tog mjeseca (trgovačka knjiga, zalihe): potrebno je otključati mjesec (Podešavanja → Zaključavanje perioda), prebaciti fakturu i mjesec ponovo zaključati.",\r
+"Kalkulacija nema datum računa ni datum prijema.",\r
+"Kalkulacija otpisa se ne prebacuje u troškove.",\r
+"kao trošak (iznosi i PDV sa računa, po stopi). Kalkulacija i račun se brišu: faktura više nije u trgovačkoj knjizi, zalihama ni u dugu dobavljaču. Ulazni PDV ostaje u knjizi primljenih računa istog mjeseca. Radnja je moguća samo na glavnom računaru, u otključanom mjesecu.",\r
 "Knjiženo na {0}.",\r
+"Knjižno odobrenje se ne prebacuje u troškove.",\r
 "KONTROLNA LISTA ZATVARANJA MJESECA — {0}",\r
 "kupac {0}",\r
 "la",\r
@@ -174,6 +182,9 @@ const a=`[\r
 "Pravilo upisuje dobavljača ili kupca, ne oba.",\r
 "pravilo „{0}\\"",\r
 "Pravilo: {0}",\r
+"Prebacivanje fakture u troškove — kalkulacija {0}",\r
+"Prebačeno iz kalkulacije {0} (faktura unesena kao roba) {1}",\r
+"prelazi u",\r
 "prepoznat po pravilu banke (Banka → Pravila banke)",\r
 "pretečen",\r
 "Prethodna strana",\r
@@ -197,6 +208,8 @@ const a=`[\r
 "Razlog otključavanja mjeseca {0} {1}. (upisuje se u izvještaj „Izmjene poslije zaključenja\\"):",\r
 "račun firme {0}",\r
 "Račun ima kalkulaciju. Brisanje se radi brisanjem kalkulacije (Kalkulacije i fakture).",\r
+"Račun kalkulacije nema stavki (iznosi se uzimaju sa računa).",\r
+"Račun koji nije roba (struja, voda, telefon, gorivo…) prelazi u „Nabavka i troškovi\\"; kalkulacija se briše (trgovačka knjiga, zalihe i dug dobavljaču), ulazni PDV ostaje u istom mjesecu.",\r
 "Račun ne postoji (možda je već obrisan).",\r
 "Račun nije snimljen. Za unos u drugu firmu potrebno je otvoriti tu firmu.",\r
 "Račun nije u obliku 3-13-2 cifre.",\r
@@ -256,6 +269,7 @@ const a=`[\r
 "Zatvaranje mjeseca",\r
 "{0}\\n\\nProknjižiti plaćanje?",\r
 "{0}\\n\\nSnimiti plaćanje?",\r
+"{0} (kod nas {1}datum {2}.{3}.{4}.)",\r
 "{0} od {1} računa bez stavki",\r
 "{0} račun primaoca {1} nije među poznatim računima dobavljača, plaćanje nije proknjiženo automatski",\r
 "{0} račun(a) bez kalkulacije, ukupno {1} EUR ({2}, račun {3} od {4}). Račun je u dugu dobavljaču, a nije u knjizi primljenih računa, PDV prijavi ni trgovačkoj knjizi.",\r
@@ -282,6 +296,7 @@ const a=`[\r
 "– {0}: nije PDF, preskočeno",\r
 "– {0}: račun druge firme, preskočeno",\r
 "— (trošak perioda)",\r
+"— bez vrste —",\r
 "— ne mijenja —",\r
 "— npr.",\r
 "— {0}; sati i minimalac su srazmjerni",\r
@@ -1292,6 +1307,7 @@ const a=`[\r
 "% osnovice. Zakupodavac dobija zakupninu umanjenu za porez; prirez na taj porez plaća firma opštini zakupodavca. Obračun mjeseca ulazi u",\r
 "% po godini).",\r
 "↩ poništi i ponovi",\r
+"↪ Prebaci u troškove",\r
 "⚠ čeka provjeru računa primaoca",\r
 "✅ Kontrolna lista zatvaranja —",\r
 "✓pravilo",\r

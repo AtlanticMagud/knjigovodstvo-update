@@ -32,6 +32,9 @@ const e=`[\r
 "screen",\r
 "EV",\r
 "file changed",\r
+"Supplier invoice",\r
+"The invoice has been moved to expenses (Procurement and expenses) {0}.",\r
+"The invoice has been moved to expenses: {0} EUR excluding VAT, VAT {1} EUR, date {2} (Procurement and expenses). Costing sheet {3} has been deleted.",\r
 "update feed: release without signature",\r
 "update feed: release without state",\r
 "update feed: release has an invalid format",\r
@@ -72,7 +75,12 @@ const e=`[\r
 "Exports (IOPPD, payslips, summary) use the saved amounts. Run “Calculate all” before exporting.",\r
 "Executive director: {0}",\r
 "How the partner of the item was recognised",\r
+"The costing sheet is in the locked month {0}/{1}. Moving to expenses changes the books of that month (trade ledger, stock): unlock the month (Settings → Period locking), move the invoice and lock the month again.",\r
+"The costing sheet has neither an invoice date nor a receipt date.",\r
+"A write-off costing sheet is not moved to expenses.",\r
+"as an expense (amounts and VAT from the invoice, by rate). The costing sheet and the invoice are deleted: the invoice is no longer in the trade ledger, stock or the debt to the supplier. Input VAT remains in the purchase invoice book of the same month. This is possible only on the main computer, in an unlocked month.",\r
 "Posted on {0}.",\r
+"A credit note is not moved to expenses.",\r
 "MONTH-END CLOSING CHECKLIST — {0}",\r
 "customer {0}",\r
 "la",\r
@@ -174,6 +182,9 @@ const e=`[\r
 "A rule enters a supplier or a customer, not both.",\r
 "rule \\"{0}\\"",\r
 "Rule: {0}",\r
+"Moving the invoice to expenses — costing sheet {0}",\r
+"Moved from costing sheet {0} (invoice entered as goods) {1}",\r
+"is moved to",\r
 "recognised by a bank rule (Bank → Bank rules)",\r
 "overtaken",\r
 "Previous page",\r
@@ -197,6 +208,8 @@ const e=`[\r
 "Reason for unlocking the month {0} {1} (entered in the \\"Changes after closing\\" report):",\r
 "company account {0}",\r
 "The invoice has a costing sheet. It is deleted by deleting the costing sheet (Costing sheets and invoices).",\r
+"The costing sheet's invoice has no items (amounts are taken from the invoice).",\r
+"An invoice that is not for goods (electricity, water, telephone, fuel…) is moved to \\"Procurement and expenses\\"; the costing sheet is deleted (trade ledger, stock and debt to the supplier), input VAT remains in the same month.",\r
 "The invoice does not exist (it may already have been deleted).",\r
 "The invoice was not saved. To enter it in another company, open that company.",\r
 "The account is not in the 3-13-2 digit format.",\r
@@ -256,6 +269,7 @@ const e=`[\r
 "Month-end closing",\r
 "{0}\\n\\nPost the payment?",\r
 "{0}\\n\\nSave the payment?",\r
+"{0} (in our records {1}date {2}.{3}.{4}.)",\r
 "{0} of {1} invoices without items",\r
 "{0} payee account {1} is not among the supplier's known accounts, the payment was not posted automatically",\r
 "{0} invoice(s) without a costing sheet, total {1} EUR ({2}, invoice {3} of {4}). The invoice is included in the supplier balance but not in the purchase ledger, the VAT return or the trade book.",\r
@@ -282,6 +296,7 @@ const e=`[\r
 "– {0}: not a PDF, skipped",\r
 "– {0}: another company's account, skipped",\r
 "— (period expense)",\r
+"— no type —",\r
 "— no change —",\r
 "— e.g.",\r
 "— {0}; hours and minimum wage are proportional",\r
@@ -1292,6 +1307,7 @@ const e=`[\r
 "% of the base. The lessor receives the rent reduced by the tax; the company pays the surtax on that tax to the lessor's municipality. The month's calculation enters",\r
 "% per year).",\r
 "↩ undo and redo",\r
+"↪ Move to expenses",\r
 "⚠ awaiting payee account check",\r
 "✅ Month-end closing checklist —",\r
 "✓rule",\r
