@@ -1,5 +1,61 @@
 const a=`[\r
+"— bez obračuna —",\r
+"— bez statusa —",\r
+"— dana kašnjenja",\r
+"— fizičko lice (kupac se pravi pri fakturisanju) —",\r
+"— interni projekat (bez kupca) —",\r
+"— izaberi projekat —",\r
+"— prema dobavljaču —",\r
+"— svi unosi —",\r
+", a podaci se dostavljaju FOJ-u do {0} (ZSPNFT čl. 66)",\r
+", obuka",\r
+", odgovoreno",\r
+", period {0}–{1}",\r
+"; bez podatka 10 (površina):",\r
+"; nije napravljeno: {0}",\r
+"; PDV obaveza {0} (posljednji dan perioda)",\r
+"; pravo na naknadu do {0}",\r
+"; prihvaćenu ponudu potpisuju servis i klijent.",\r
+"; rok istekao: {0}",\r
+"; za zemljište se struktura ne navodi",\r
+": za period od",\r
+". Jedna se ispravlja stornom ili korektivnim računom.",\r
+". Oglašavanje ovih nepokretnosti nije dozvoljeno.",\r
+". Po isteku roka lični podaci se brišu (ZSPNFT čl. 127 st. 5); ostaje zapis sa datumom brisanja.",\r
+". Podatak se upisuje na ugovoru, odnosno na nepokretnosti; izmjena se upisuje kao nov unos.",\r
+". podnosi se do",\r
+". Unos se ne briše i ne mijenja; ispravka se upisuje kao nov unos.",\r
+". Unosi evidencije o posredovanju ostaju (čuvaju se trajno).",\r
+"· 10 najvećih:",\r
+"· dodatak na stopu {0} p.p.",\r
+"· dodato poslije ponude",\r
+"· isplata primaocu:",\r
+"· kamata",\r
+"· klijenata:",\r
+"· naknada",\r
+"· po predračunu {0}",\r
+"· porez po odbitku:",\r
+"· primljeni računi",\r
+"· pristanak",\r
+"· usluga",\r
+"· za fakturisanje:",\r
+"(bez projekta)",\r
+"(bez ugovora)",\r
+"(ECB + 8 p.p.)",\r
+"(na drugom računaru)",\r
+"(nacrt)",\r
+"(nema faktura plaćenih sa zakašnjenjem ili je period već obračunat).",\r
+"(Opis LIKE ? OR Sifra LIKE ?)",\r
 "(otključan)",\r
+"(poslije roka)",\r
+"(predmet {0})",\r
+"(prvi rok",\r
+"(roba)",\r
+"(rok istekao: {0})",\r
+"(sa drugog računara)",\r
+"(uključuje naknadu za posredovanje)",\r
+"(usluga)",\r
+"(usluge)",\r
 "(uz {0} ranije upisanih u {1})",\r
 "(zatečeno pri otključavanju; zaključan prije 2.7.0)",\r
 "(zatečeno pri prelasku na 2.7.0)",\r
@@ -13,28 +69,473 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"(ZSPNFT čl. 20a i 117)",\r
+"[Dopuna {0}] {1}",\r
+"[lični podaci obrisani {0}]",\r
+"[Otkaz {0}: {1}]",\r
+"{0}\\n\\nIpak proknjižiti kao plaćanje dobavljaču?",\r
+"{0}\\n\\nIpak unijeti {1} kao plaćanje dobavljaču?\\n\\nU redu: nastavlja se unos svih označenih stavki.\\nOdustani: ništa se ne unosi (stavku isključiti kvačicom pa ponovo „Unesi označena plaćanja\\").",\r
+"{0}\\nFirma u programu: {1} (PIB {2}).\\n\\n{3}",\r
+"{0} — ime i prezime",\r
+"{0} — račun {1}, plaćeno {2}",\r
+"{0} — ugovor o posredovanju {1}",\r
+"{0} — zatezna kamata i naknada",\r
+"{0} · {1} EUR · {2}: {3}",\r
+"{0} ({1}, {2} EUR)",\r
+"{0} (autorski ugovor)",\r
+"{0} (čl. 20a)",\r
+"{0} (ExRate {1})",\r
+"{0} (faktura {1})",\r
+"{0} (od {1})",\r
+"{0} (završeno {1})",\r
+"{0} {1} (kurs {2})",\r
+"{0} {1} bez PDV-a{2}; {3}",\r
+"{0} {1} je evidentiran i na drugom računaru; ovdašnji zapis dobija broj {2}.",\r
+"{0} {1} ORDER BY n.Godina DESC, n.RedniBroj DESC",\r
+"{0} {1} sa drugog računara dobija broj {2} (broj je ovdje već zauzet ranijim zapisom).",\r
+"{0} je upisan kao plaćen gotovinom i već je knjižen na blagajnu. Isti izdatak se ne knjiži ponovo kao plaćanje dobavljaču sa izvoda.",\r
+"{0} je upisan kao plaćen karticom i već je knjižen na tekući račun. Transakcija kartice na izvodu se ne knjiži ponovo kao plaćanje dobavljaču.",\r
+"{0} kv. {1}",\r
+"{0} nije ispravan.",\r
+"{0} Novac se prima i predaje preko depozitnog računa.",\r
+"{0} Plaćanje nije proknjiženo automatski.",\r
+"{0} po ugovoru o posredovanju {1}",\r
+"{0} se upisuje oznakom ISO (npr. ME, RS, DE).",\r
+"{0} st. 1",\r
+"{0} st. 1 i 3",\r
+"{0} st. 2",\r
+"{0} st. 2 — povećanje veće od {1} % traži prethodni pisani pristanak",\r
+"{0} Upis u evidenciji o posredovanju je trajan.",\r
+"{0} WHERE n.NalogID=?",\r
+"{0} WHERE n.UID=?",\r
+"{0} za kupca {1} je snimljena.",\r
+"{0}, {1}, {2} {3} sa PDV",\r
+"{0}, bruto {1}",\r
+"{0}; nalogodavac {1}",\r
+"{0}: broj sati mora biti od 0 do 24.",\r
+"{0}: datum nije ispravan.",\r
+"{0}: kupac nema e-poštu",\r
+"{0}: umanjenje obaveze prema dobavljaču",\r
+"{0}. godina · rok za predaju {1}",\r
+"{0}. godina · ZPDPL čl. 29",\r
+"{0}. godina{1}",\r
+"% (granica",\r
+"% budžeta",\r
+"% godišnje, stopa CBCG po polugodištima) i naknadom troškova naplate 40 € za kupce privredne subjekte:",\r
+"+ Agent",\r
+"+ Dio",\r
+"+ Nov klijent",\r
+"+ Nov obilazak",\r
+"+ Nov prigovor",\r
+"+ Nov radni nalog",\r
+"+ Nov ugovor o posredovanju",\r
+"+ Nov unos",\r
+"+ Nov unos depozita",\r
+"+ Nova isplata nerezidentu",\r
+"+ Nova nepokretnost",\r
+"+ Nova usluga",\r
+"+ Novi projekat",\r
+"+ Novi ugovor",\r
+"+ obračun",\r
+"+ Obuka",\r
+"+ pazari sa PDV",\r
+"+ Stvarni vlasnik",\r
+"✉ IOS e-poštom",\r
+"✉ Pošalji izabrane e-poštom (",\r
+"💾 Snimi nepokretnost",\r
+"💾 Snimi obilazak",\r
+"💾 Snimi obračun",\r
+"💾 Snimi podatke posrednika",\r
+"💾 Snimi prigovor",\r
+"💾 Snimi projekat",\r
+"💾 Snimi sedmicu",\r
+"💾 Snimi ugovor",\r
+"💾 Upiši transakciju",\r
+"📄 Analiza rizika (PDF)",\r
+"📄 Knjiga (PDF)",\r
+"📄 Lista indikatora obveznika (PDF)",\r
+"📄 PDF ugovora",\r
+"📄 Podaci za FOJ (PDF)",\r
+"📄 Potvrda o obilasku",\r
+"📄 Prijemnica",\r
+"📄 Specifikacija",\r
+"📄 Ugovor (PDF)",\r
+"📋 Tekst oglasa",\r
+"📓 Prigovor",\r
+"€: obavezna je pisana ponuda sa specifikacijom radova, materijala i djelova, koju potpisuju servis i klijent.",\r
+"€): potreban je nov pisani pristanak klijenta prije nastavka rada.",\r
+"1 · Objekat (nije obavezan)",\r
+"1 EUR = {0} {1}",\r
+"1) naziv, sjedište i PIB posrednika (Podešavanja → Podaci firme)",\r
+"10 godina od zaključenja ugovora",\r
+"2) ime i prezime odnosno naziv, prebivalište odnosno sjedište, JMB odnosno PIB i uloga nalogodavca",\r
+"3) nepokretnost, vrsta pravnog posla i prodajna cijena odnosno cijena zakupa",\r
+"4) visina, način i rok plaćanja naknade za posredovanje",\r
+"5 godina od prestanka poslovnog odnosa, odnosno od transakcije",\r
+"5) vrijeme na koje se ugovor zaključuje (datum zaključenja)",\r
+"60 dana od početka djelatnosti",\r
+"7) prava i obaveze posrednika i nalogodavca",\r
+"adresa djelatnosti",\r
+"Adresa e-pošte nije ispravna.",\r
+"Adresa i opština prebivališta, odnosno boravišta nisu upisani (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Adresa mjesta djelatnosti (ako je druga)",\r
+"Adresa prebivališta, odnosno boravišta",\r
+"Adresa zastupnika",\r
+"AED",\r
+"Agent",\r
+"Agent „{0}\\" nije na spisku agenata sa položenim stručnim ispitom.",\r
+"Agenti sa položenim stručnim ispitom",\r
 "Ako",\r
+"Ako dug ne bude izmiren u navedenom roku, potraživanje će biti utuženo bez daljeg obavještenja, a troškovi postupka padaju na teret dužnika.",\r
+"Ako je plaćanje već izvršeno, molimo da ovu opomenu smatrate bespredmetnom i dostavite podatke o uplati.",\r
+"Ako se tokom popravke pokaže potreba za dodatnim radovima, materijalom ili djelovima zbog kojih se cijena uvećava za više od {0} %, servis prije nastavka rada traži pisani pristanak klijenta, dat lično ili sredstvima komunikacije na daljinu.",\r
+"aktivan",\r
+"aktivna (u ponudi)",\r
+"analiza nije usvojena",\r
+"Analiza prihoda",\r
+"Analiza rizika",\r
+"Analiza rizika i pragovi su snimljeni.",\r
+"Analiza rizika nije usvojena",\r
+"Analiza rizika nije usvojena; rok je 60 dana od početka djelatnosti.",\r
+"Analiza rizika se donosi u roku od 60 dana od osnivanja, odnosno početka djelatnosti (ZSPNFT čl. 12)",\r
+"AND o.DobavljacID=?",\r
+"AND u.UgovorID=?",\r
+"AND UgovorUID=?",\r
+"Artikal „{0}\\" ima promet robe (prodaja, početno stanje, popis ili prenos) i vodi se u trgovačkoj knjizi. Usluga se upisuje kao poseban artikal.",\r
+"Artikal „{0}\\" ima ulaz po kalkulaciji ({1}) i vodi se na zalihi. Usluga se upisuje kao poseban artikal.",\r
+"AUD",\r
 "automatski",\r
+"automatsko produženje",\r
+"Autorska naknada i prava intelektualne svojine (uključujući softver)",\r
+"autorski ugovor",\r
+"Autorski ugovor",\r
+"Avans je veći od iznosa ponude ({0} EUR).",\r
+"Avans po predračunu {0}",\r
+"Avans po predračunu:",\r
+"Avansni račun {0} je snimljen; ponuda je prihvaćena. Fiskalizacija i PDF: Avansi i knjižna odobrenja.",\r
+"Avansni račun iz predračuna",\r
+"Avansni račun na dan prijema uplate, sa iznosom i stopama PDV-a ove ponude",\r
+"Avansni račun za posredničku naknadu nije dozvoljen (Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 27).",\r
 "Ažuriranje programa: objava nove verzije se provjerava potpisom izdavača; objava sa neispravnim potpisom, povučena verzija i verzija starija od već objavljene se ne preuzimaju. Veza sa serverom: prijava uređaja se obnavlja sama prije isteka roka i poslije isteka.",\r
+"BAM",\r
+"Banka platioca (naziv, račun, država)",\r
+"Banka primaoca (naziv, račun, država)",\r
 "Banka: pravila za razvrstavanje stavki izvoda (opis ili račun primaoca → vrsta i partner)",\r
 "Banka: transakcije sa izvoda, knjiženje, način prepoznavanja",\r
 "Banka: uvoz svih izvoda iz pošte",\r
+"Bez potvrde o rezidentnosti primjenjuje se stopa {0} %.",\r
+"bez satnice",\r
+"Bez satnice",\r
+"bez statusa",\r
+"bez važećeg ugovora",\r
+"Bezgotovinska",\r
+"Bezgotovinska — izuzetak (EUR)",\r
+"Bezgotovinska (EUR)",\r
+"bezgotovinska transakcija {0} EUR (prag {1} EUR)",\r
+"Bezgotovinski",\r
+"BGN",\r
+"Biće napravljeno {0} nacrta faktura ({1} unosa, {2} h, {3} EUR bez PDV-a) sa datumom izdavanja {4}. Nastaviti?",\r
+"Biće napravljeno {0} nacrta faktura sa datumom izdavanja {1} (ukupno sa PDV: {2}). Nastaviti?",\r
+"Biće upisano u evidenciju o posredovanju: {0} ({1}). Upis je trajan: unos se ne briše i ne mijenja.",\r
+"Bliži saradnik",\r
+"Brisanje je moguće od {0} (rok čuvanja dvije godine)",\r
+"Brisanjem prijema bi predato bilo veće od primljenog; prvo se briše predaja.",\r
+"Briše se samo nacrt obračuna. Izdat obračun se stornira.",\r
 "Broj dokumenta, IKOF ili JIKR — ili naziv ekrana i radnje",\r
+"Broj i datum računa izdatog kroz registrovan fiskalni softver ulaze u podatak 14 evidencije o posredovanju.",\r
+"Broj naloga, odnosno ugovora",\r
+"Broj polise",\r
+"Broj potvrde",\r
+"Broj predmeta",\r
+"Broj računa izdatog van programa",\r
+"Broj sati mora biti veći od 0 i najviše 24.",\r
+"Broj se navodi u ugovoru (čl. 18) i u svakom oglasu (čl. 25)",\r
+"Broj ugovora o posredovanju",\r
+"Broj ugovora o potposredovanju",\r
+"broj upisa nije unesen (Posredovanje → Podaci posrednika)",\r
+"Broj upisa se unosi u kartici Podaci posrednika.",\r
+"Broj upisa u Registar posrednika",\r
+"Broj upisa u Registar posrednika nije unesen; ugovor ga navodi kao dokaz o upisu (čl. 18 st. 2 t. 1).",\r
+"Broj uvjerenja o stručnom ispitu",\r
+"Broj zahtjeva",\r
 "Broj: {0}",\r
+"Brojevi računa (18 cifara, razdvojeni zarezom)",\r
+"Bruto isplata (EUR)",\r
+"Bruto iznos isplate mora biti veći od nule.",\r
+"Bruto prihod",\r
+"Brzi unos sedmice",\r
+"Budžet sati",\r
+"Budžet sati nije ispravan.",\r
+"CAD",\r
+"CARD",\r
+"CBCG",\r
+"CBCG lista od {0}",\r
+"CBCG: {0}",\r
+"CBCG: lista je prazna",\r
+"CBCG: valuta {0} nije na listi",\r
+"čeka dostavu FOJ-u",\r
+"čeka pristanak",\r
+"četiri godine od prestanka funkcije, odnosno od obuke",\r
+"CG",\r
+"CHF",\r
+"Cijena je povećana više od {0} % bez pisanog pristanka klijenta ({1} st. 2).",\r
+"Cijena je povećana više od {0} % u odnosu na pristanak ({1} € → {2} €): nalog se ne završava dok se ne upiše pisani pristanak klijenta ({3} st. 2).",\r
+"Cijena uključuje naknadu za posredovanje",\r
+"Cijena zakupa",\r
+"Cijene se od {0} uvećavaju za {1} % (primjer prve stavke: {2} {3}).",\r
+"Cijene su izražene u {0}; račun se izdaje u {1}, a iznosi za obračun PDV-a se iskazuju u EUR po srednjem kursu Centralne banke Crne Gore na dan nastanka poreske obaveze.",\r
+"čl. 66 st. 1 al. 1",\r
+"čl. 66 st. 1 al. 2",\r
+"čl. 66 st. 2 (t. 13 al. 5, 10–13)",\r
+"čl. 66 st. 3",\r
+"Član uže porodice",\r
+"CNY",\r
+"COALESCE(d.Valuta,'')",\r
+"CZK",\r
+"Dan fakturisanja je od 1 do 28.",\r
+"Dan u mjesecu",\r
+"dana od prijema):",\r
+"Dani za opomene moraju biti rastući (npr. 8, 30, 60) i između 1 i 365.",\r
+"Datum „Zadržati do\\"",\r
+"Datum ({0}) je prije datuma prijema {1}",\r
+"Datum ({0}) je u budućnosti.",\r
+"Datum ({0}) nije ispravan.",\r
+"Datum dokumenta nije ispravan.",\r
+"Datum dostave FOJ-u",\r
+"Datum dostave je prije datuma unosa.",\r
+"Datum dostave je u budućnosti.",\r
+"Datum dostave je upisan.",\r
+"Datum dostave je već upisan ({0}).",\r
+"Datum dostave nije ispravan.",\r
+"Datum i vrijeme početka obustave",\r
+"Datum i vrijeme produženja",\r
+"Datum i vrijeme uvida",\r
+"Datum ili period prometa koji se razlikuje od dana izdavanja računa.",\r
+"Datum isplate nije ispravan.",\r
+"Datum ispravke",\r
+"Datum ispravke je obavezan.",\r
+"Datum ispravke ne može biti prije datuma utuženja.",\r
+"Datum isteka ugovora je prije početka važenja.",\r
+"Datum isteka ugovora nije ispravan.",\r
+"Datum izdavanja faktura",\r
+"Datum je u budućnosti.",\r
+"Datum kursa",\r
+"Datum kursa nije ispravan.",\r
+"Datum obilaska nije ispravan.",\r
+"Datum obračuna ne može biti prije dana do koga se kamata obračunava.",\r
+"Datum obračuna nije ispravan.",\r
+"Datum obuke",\r
+"Datum odgovora",\r
+"Datum odgovora je prije datuma prijema prigovora.",\r
+"Datum odgovora nije ispravan.",\r
+"datum odnosa",\r
+"Datum određivanja nije ispravan.",\r
+"Datum otkaza",\r
+"Datum otkaza je prije zaključenja ugovora.",\r
+"Datum otkaza je u budućnosti.",\r
+"Datum otkaza nije ispravan.",\r
+"Datum otpisa mora biti ispravan datum, ne prije datuma obračuna.",\r
+"Datum početka djelatnosti nije ispravan.",\r
+"Datum početka praćenja",\r
+"Datum početka važenja ugovora nije ispravan.",\r
+"Datum potvrde",\r
+"Datum potvrde o rezidentnosti nije ispravan.",\r
+"Datum predaje kopije nalogodavcu nije ispravan.",\r
+"Datum prestanka odnosa",\r
+"Datum prestanka odnosa je prije datuma uspostavljanja.",\r
+"Datum preuzimanja",\r
+"Datum preuzimanja je prije datuma završetka.",\r
+"Datum prijave nije ispravan.",\r
+"Datum prijema je u budućnosti.",\r
+"Datum prijema prigovora je u budućnosti.",\r
+"Datum prijema prigovora nije ispravan.",\r
+"Datum pristanka",\r
+"Datum produženja",\r
+"Datum projekta nije ispravan.",\r
+"Datum provjere u Registru stvarnih vlasnika",\r
+"Datum rođenja nije upisan (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Datum saglasnosti za elektronski račun nije ispravan.",\r
 "Datum sastavljanja: {0}",\r
+"Datum transakcije",\r
+"Datum transakcije nije ispravan.",\r
+"Datum u polju je nov datum važenja",\r
+"Datum ugovora o potposredovanju nije ispravan.",\r
+"Datum unosa",\r
+"Datum unosa nije ispravan.",\r
+"Datum upisa",\r
+"Datum upisa u katastar",\r
+"Datum upisa u katastar nije ispravan.",\r
+"Datum upisa u Registar posrednika nije ispravan.",\r
+"Datum uplate poreza",\r
+"Datum uplate poreza nije ispravan.",\r
+"Datum uspostavljanja odnosa",\r
+"Datum usvajanja",\r
+"Datum usvajanja analize rizika je u budućnosti.",\r
+"Datum usvajanja analize rizika nije ispravan.",\r
+"Datum utuženja",\r
+"Datum utuženja je obavezan.",\r
+"Datum utuženja ne može biti prije datuma fakture.",\r
+"Datum važenja lične isprave",\r
+"Datum važenja polise nije ispravan.",\r
+"Datum važenja ugovora nije ispravan.",\r
+"Datum zahtjeva klijenta nije ispravan.",\r
+"Datum zaključenja pravnog posla",\r
+"Datum zaključenja pravnog posla je u budućnosti.",\r
+"Datum zaključenja pravnog posla nije ispravan.",\r
+"Datum zaključenja ugovora je u budućnosti.",\r
+"Datum zaključenja ugovora nije ispravan.",\r
+"Datum zaključenja ugovora o posredovanju",\r
+"Datum završetka projekta je prije početka.",\r
 "Datum: {0}",\r
+"Davanje zajmova i posredovanje pri ugovaranju zajmova (t. 13 al. 8)",\r
+"DEP",\r
+"Deponovanje gotovog novca gdje je kao dokaz o porijeklu sredstava priložen isti isplatni nalog, a iznos deponovanog gotovog novca je značajno veći od iznosa naznačenog na isplatnom nalogu.",\r
+"Deponovanje gotovog novca kod više kreditnih institucija, gdje je kao dokaz o porijeklu novčanih sredstava priložen isti isplatni nalog, a iznos deponovanog novca je značajno veći od iznosa naznačenog na isplatnom nalogu.",\r
+"Depozit",\r
+"Depozit {0} {1} — ugovor o posredovanju {2}{3}",\r
+"Depozit po ugovoru o posredovanju {0}",\r
+"Depozit posrednika (novac nalogodavaca)",\r
+"Depozit posrednika: novac nalogodavaca na depozitnom računu (primljeno D, predato P)",\r
+"Depozit posrednika: obaveza prema nalogodavcima za primljeni novac",\r
+"Depozit se vodi u EUR.",\r
+"Depozitni račun",\r
+"DEPOZITNI RAČUN POSREDNIKA",\r
+"Depozitni račun posrednika (novac nalogodavaca)",\r
+"Depozitni račun se upisuje sa 18 cifara (npr. 510-0000000012345-67).",\r
+"Depozitni računi (novac nalogodavaca)",\r
 "Detalj",\r
+"Dio iz šifarnika izlazi sa zalihe objekta fakturom iz naloga",\r
+"Dio posredničke naknade iz zadržane kapare (Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 27 st. 3).",\r
+"Distributivni kanali (lično, na daljinu, preko zastupnika)",\r
+"Djelatnost obveznika i obim poslovanja",\r
+"Djelilac",\r
+"djelimično",\r
+"djelimično usvojen",\r
+"DKK",\r
+"Do dana",\r
 "Dobavljač nema otvorenih faktura; plaćanje {0} EUR ostaje kao pretplata dok se faktura ne unese.",\r
 "dobavljač {0}",\r
 "Dobavljač {0} nema nijednu fakturu u firmi {1}.\\n\\nFaktura se unosi u firmu {2}. Potrebno je provjeriti da faktura glasi na ovu firmu, a ne na drugu firmu na ovom računaru.",\r
 "Dobavljači: kartica dobavljača i unos plaćanja",\r
+"Dodaj dokument",\r
+"Dodaj uslugu iz šifarnika",\r
+"Dodatak na stopu mora biti između 0 i 20 procentnih poena.",\r
+"Dodatak na stopu za B2B (p.p.)",\r
+"dodato poslije ponude",\r
+"Donja granica gotovinske transakcije mora biti manja od gornje.",\r
+"Dopuna odgovora (dodaje se na kraj, sa današnjim datumom)",\r
+"Dopunjuje se samo prijava FOJ-u.",\r
+"Dospjelo na dan",\r
+"Dostavljeno",\r
+"dostavljeno {0}",\r
+"dostavljeno FOJ-u",\r
+"Dostavljeno FOJ-u",\r
+"Dostavljeno poslije roka ({0}).",\r
 "Doznaka i šifra u IOPPD za ovo odsustvo nisu propisane i čekaju odgovor knjigovođe, pa program te dane ne obračunava kao odsustvo: radnica bez rasporeda smjena ih ima u redovnom radu, a radnici po rasporedu sate tih dana treba upisati u obračun po uputstvu knjigovođe.",\r
+"Dozvola boravka",\r
+"Dozvoljeno povećanje cijene (%)",\r
+"Dozvoljeno povećanje cijene mora biti između 0 i 100 %.",\r
+"Druga javna isprava",\r
+"Druga opomena",\r
+"DRUGA OPOMENA",\r
+"Druga strana u poslu",\r
+"Drugi prihod iz čl. 29 (dividenda, kapitalni dobitak i dr.)",\r
+"drugo lice (spoljni saradnik)…",\r
+"Društvo za osiguranje",\r
+"Drzava",\r
+"država",\r
+"Država (ISO)",\r
+"država isprave",\r
+"Država izdavanja (ISO)",\r
+"Država izdavanja lične isprave nije upisana (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Država primaoca se upisuje oznakom ISO (npr. DE, USA, IRL).",\r
+"Država rođenja (ISO)",\r
+"Država rođenja nije upisana (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Država sjedišta nije upisana (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Država sjedišta, odnosno prebivališta",\r
+"Države i geografska područja",\r
+"Države sa liste Ministarstva finansija",\r
+"Države se upisuju oznakom ISO (dva ili tri slova), odvojene zarezom.",\r
+"Državljanstvo (ISO)",\r
+"Državljanstvo nije upisano (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Državljanstvo stvarnog vlasnika se upisuje oznakom ISO.",\r
+"dug",\r
+"Dug dobavljaču, rok plaćanja {0}.{1}.{2}.",\r
+"Dug dobavljaču: saldo, kartica, otvorene stavke i IOS",\r
+"Dug dobavljaču.",\r
+"dug, rok {0}",\r
+"Duže čuvanje na zahtjev FOJ-a ili nadzornog organa",\r
+"Duže čuvanje na zahtjev FOJ-a ili nadzornog organa (ZSPNFT čl. 127 st. 3)",\r
+"dvostruki zapis (isti izvor zapisan i na drugom računaru)",\r
+"e-pošta",\r
+"e-poštom",\r
+"ECB",\r
+"ECB {0} (CBCG lista nije dostupna)",\r
+"ECB: {0}",\r
 "ekran",\r
+"Ekskluzivno",\r
+"Ekskluzivno posredovanje",\r
+"Ekskluzivno posredovanje (čl. 31): nalogodavac se obavezuje da za vrijeme trajanja ugovora neće angažovati drugog posrednika. UPOZORENJE NALOGODAVCU: ako za vrijeme važenja ove klauzule nalogodavac zaključi pravni posao za koji je posredovao drugi posrednik, dužan je da ovom posredniku na ime naknade štete plati iznos ugovorene naknade za posredovanje.",\r
+"Ekskluzivno posredovanje: nalogodavac se posebno upozorava na značenje i posljedice klauzule (čl. 31 st. 3) — upozorenje je u štampi ugovora.",\r
+"Elektronska identifikacija",\r
+"elektronskom poštom",\r
+"ERacunNacin",\r
+"ERacunSaglasnost",\r
+"Estradni, zabavni, umjetnički ili sportski program u Crnoj Gori",\r
+"EUR. Avans se dijeli po stopama PDV-a ponude; datum računa je datum prijema uplate.",\r
+"EUR) · fakturisano:",\r
 "EV",\r
+"Evidencija",\r
+"Evidencija nema unosa. Unos nastaje snimanjem ugovora o posredovanju.",\r
+"Evidencija o posredovanju",\r
+"Evidencija o posredovanju se čuva trajno; ugovori o posredovanju deset godina od zaključenja.",\r
+"EVIDENCIJA O POSREDOVANJU U PROMETU I ZAKUPU NEPOKRETNOSTI",\r
+"Evidencija o pristupu nadzornog organa podacima; FOJ se obavještava u roku od tri radna dana od uvida.",\r
+"Evidencija prigovora potrošača (Zakon o zaštiti potrošača, „Sl. list CG\\" br. 12/26, čl. 27). Evidencija se čuva najmanje dvije godine.",\r
+"EVIDENCIJA RADNIH SATI",\r
+"EVIDENCIJA: {0}",\r
+"Evidencije",\r
+"Evidencije posebnih paketa ostaju u bazi firme i kad paket nije u licenci. Pregled i izvoz su uvijek dostupni; nov unos je moguć samo uz uključen paket.",\r
+"Evidencije se čuvaju u zakonskom roku i kad paket nije u licenci: pregled i izvoz su uvijek dostupni",\r
+"Evidentiraj sate",\r
+"Evidentirano sati",\r
+"Evidentirano:",\r
 "fajl izmijenjen",\r
+"faktura {0} ({1}) prebačena iz kalkulacije u troškove: {2}",\r
+"Faktura {0} je obrisana na drugom računaru, a ovdje nije nacrt — ostaje.",\r
+"Faktura {0} je već zatvorena.",\r
+"Faktura {0} nije napravljena iz evidencije sati.",\r
+"Faktura {0} nije u stranoj valuti.",\r
 "Faktura dobavljača",\r
+"Faktura ima stavke sa 0 % PDV bez osnova. Potrebno je izabrati osnov (nulta stopa čl. 25, oslobođenje čl. 26/27 ili promet van Crne Gore čl. 17 Zakona o PDV).",\r
+"Faktura iz evidencije sati ({0} unosa).",\r
+"Faktura iz naloga",\r
+"Faktura iz radnog naloga {0}.",\r
+"Faktura iz ugovora",\r
 "Faktura je prebačena u troškove (Nabavka i troškovi) {0}.",\r
 "Faktura je prebačena u troškove: {0} EUR bez PDV-a, PDV {1} EUR, datum {2} (Nabavka i troškovi). Kalkulacija {3} je obrisana.",\r
+"Faktura naknade",\r
+"Faktura naknade po ugovoru o posredovanju {0}",\r
+"faktura nema nenaplaćen dio sa PDV-om",\r
+"Faktura nema nenaplaćen dio sa PDV-om — ispravka nije potrebna.",\r
+"Faktura posredničke naknade",\r
+"Faktura posredničke naknade se izdaje tek po zaključenju pravnog posla (Zakon o posredovanju, čl. 27 st. 1–2).",\r
+"Faktura se izdaje više od osam dana poslije zaključenja posla ({0}); PDV obaveza nastaje osmog dana od prometa (Zakon o PDV, čl. 18 st. 3).",\r
+"Faktura se pravi za završen nalog (sada: {0}).",\r
+"Fakturabilno",\r
+"Fakture iz evidencije sati",\r
+"Fakture ne prate odgovarajuće prijemnice, otpremnice i druga dokumentacija iz čega se može steći utisak da je promet robe fiktivan.",\r
+"Fakture u kašnjenju sa zateznom kamatom (danas",\r
+"fakture, predračuni i ponude",\r
+"Fakturisani sati se ne mijenjaju",\r
+"Fakturisanje",\r
+"Fakturisano bez PDV",\r
+"Fakturisano do",\r
+"fakturisano na drugom računaru",\r
+"Fakturisano sati",\r
+"Fakturisano: {0}{1}",\r
+"fakturiše se",\r
+"Fakturiše se",\r
 "feed ažuriranja: objava bez potpisa",\r
 "feed ažuriranja: objava bez stanja",\r
 "feed ažuriranja: objava nije ispravnog oblika",\r
@@ -46,20 +547,133 @@ const a=`[\r
 "feed ažuriranja: stanje isteklo",\r
 "feed ažuriranja: stanje starije od posljednjeg prihvaćenog",\r
 "FFFFFFFF",\r
+"Filijala",\r
+"Fizičko prisustvo",\r
+"FOJ se obavještava o uvidu do {0} (ZSPNFT čl. 66 st. 12).",\r
+"Funkcija",\r
+"Garancija na izvršeni rad: {0} od dana preuzimanja.",\r
+"Garancija na izvršeni rad: {0} od preuzimanja.",\r
+"Garancija na izvršeni rad: {0}.",\r
+"Garancija na rad (mj.)",\r
+"Garancija na rad: cio broj mjeseci od 0 do 120.",\r
+"garaža",\r
+"GBP",\r
 "Generisano: {0}",\r
 "Glavna knjiga mjeseca u ravnoteži (duguje = potražuje)",\r
 "glavna knjiga se ne vodi u programu za ovaj mjesec",\r
+"Glavnica",\r
+"Godina prijema se ne mijenja: broj naloga pripada nizu te godine.",\r
+"Godina prijema se ne mijenja: redni broj prigovora pripada knjizi te godine.",\r
+"Godina unosa",\r
+"Godina zaključenja se ne mijenja: broj ugovora pripada nizu te godine.",\r
+"godišnje",\r
+"godišnje ažuriranje",\r
+"Godišnje ažuriranje analize rizika",\r
+"Gotovina (plaćeno odmah)",\r
+"Gotovina do (EUR)",\r
+"Gotovina od (EUR)",\r
+"gotovinom",\r
+"Gotovinska",\r
+"gotovinska transakcija {0} EUR (od {1} do {2} EUR)",\r
+"Gotovinski",\r
+"Grad, odnosno opština",\r
+"građevinsko zemljište",\r
+"Hosting, SaaS i pristup softveru (po odluci knjigovođe)",\r
+"HUF",\r
+"i st. 3",\r
+"Identifikacija",\r
+"Identifikacija i provjera identiteta klijenta, upis u registar klijenata",\r
+"ili iznos naknade bez PDV",\r
+"ILS",\r
+"Ime i prezime agenta koji je vodio predmet",\r
+"Ime i prezime agenta koji vodi predmet nije upisano (Pravilnik o evidenciji o posredovanju 45/26, čl. 3 t. 6).",\r
+"Ime i prezime klijenta nije upisano.",\r
+"Ime i prezime lica koje je obišlo nepokretnost nije upisano.",\r
+"Ime i prezime ovlašćenog službenika",\r
+"Ime i prezime potrošača nije upisano.",\r
+"Ime i prezime preduzetnika",\r
+"Ime i prezime preduzetnika nije upisano (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"Ime i prezime službenika",\r
+"Ime i prezime stvarnog vlasnika nije upisano.",\r
+"Ime i prezime zaposlenog",\r
+"Ime i prezime zastupnika",\r
+"Ime i prezime, odnosno naziv",\r
+"Ime, prezime, odnosno poslovno ime i adresa nalogodavca",\r
+"Indeksacija (%)",\r
+"Indeksacija (%) nije ispravna.",\r
+"Indikator",\r
+"Indikator {0} je na listi obveznika.",\r
+"Indikator {0} je uklonjen sa liste obveznika.",\r
+"Indikator {0} nije na listi indikatora.",\r
+"Indikator ne postoji.",\r
+"Indikator sa liste nije izabran (ZSPNFT čl. 81).",\r
+"Indikatori",\r
+"Indikatori sa liste (izabrano:",\r
+"Indikatori:",\r
+"industrijski objekat",\r
+"Informativno: prihod = fakture bez PDV-a izdate u periodu; trošak rada = sati u periodu × trošak sata radnika (trošak poslodavca iz obračuna zarada ÷ fond sati mjeseca). Sati spoljnih saradnika i radnika bez obračuna zarada su bez troška (kolona „Sati bez troška\\").",\r
+"Inostranstvo i kurs",\r
+"Interni akt obveznika o analizi rizika (ZSPNFT čl. 12): identifikacija i procjena rizika po klijentu, grupi klijenata, državi i geografskom području, poslovnom odnosu, transakciji, usluzi i distributivnom kanalu, kategorije rizika i mjere za umanjenje rizika. Analiza se ažurira najmanje jednom godišnje.",\r
+"Interni sati se ne fakturišu, ali ulaze u izvještaje i trošak projekta",\r
+"Interno",\r
+"interno (ne fakturiše se)",\r
+"Investiranje, promet i posredovanje u prometu nepokretnosti (t. 13 al. 9)",\r
+"IPD",\r
+"Ishod posredovanja",\r
+"Ishod prigovora nije poznat.",\r
+"Ishod se upisuje uz odgovor trgovca.",\r
+"Isplata ne podliježe porezu po odbitku ({0}).",\r
+"Isplata primaocu",\r
+"isprava važi do",\r
+"Ispravi PDV",\r
+"Ispravka izlaznog PDV {0} % — nenaplativo potraživanje (čl. 20a)",\r
+"Ispravka izlaznog PDV-a za nenaplaćen dio fakture (",\r
+"Ispravka PDV {0}",\r
+"Ispravka PDV po računu {0}{1} — {2}",\r
+"Ispravka PDV-a",\r
+"Ispravka PDV-a (nenaplativo potraživanje)",\r
+"Ispravka PDV-a je moguća samo za potraživanje utuženo prije otvaranja stečajnog postupka nad kupcem (Zakon o PDV čl. 20a). Potrebna je potvrda.",\r
+"Ispravka PDV-a je moguća samo za utuženo potraživanje. Prvo se upisuje utuženje.",\r
+"Ispravka PDV-a je poništena.",\r
+"Ispravka PDV-a je upisana. Ulazi u PR-PDV i KIF mjeseca ispravke.",\r
+"Ispravka PDV-a od",\r
+"Ispravka PDV-a za nenaplativo potraživanje — račun {0}",\r
+"Ispravka PDV-a za ovu fakturu je već urađena ({0}).",\r
+"Istek ugovora {0}",\r
+"Istekao rok čuvanja: klijenata",\r
+"istekla {0}",\r
+"Isti indikator je već na sopstvenoj listi.",\r
+"ističe",\r
+"Istorija opomena",\r
+"Istraživanje tržišta",\r
+"Iz registra klijenata (ZSPNFT)",\r
+"Iz šifarnika kupaca (neobavezno)",\r
+"iz šifarnika: naziv, šifra ili barkod",\r
+"Iz zadržane kapare",\r
 "Izabrana vrsta prometa važi samo za odlive.",\r
 "Izabrana vrsta prometa važi samo za prilive.",\r
+"Izabrani sati prave nacrt obične fakture po kupcu, sa periodom prometa od prvog do posljednjeg dana rada. Fakturisani sati se ne mijenjaju; storno ili brisanje nacrta ih oslobađa.",\r
+"Izdaj ponudu",\r
+"IZDAJE SE",\r
 "izdat",\r
+"Izdati avansni račun",\r
+"Izlazne fakture kupcu iz inostranstva: prihod od prodaje robe",\r
+"Izlazne fakture kupcu iz inostranstva: prihod od usluga",\r
 "Izlaznih",\r
 "Izlaznih faktura ±",\r
+"Između privrednih subjekata povjerilac ima pravo i na naknadu troškova naplate od najmanje 40 € po zakašnjeloj fakturi (Zakon o rokovima izmirenja novčanih obaveza, čl. 7).",\r
 "Izmijenjeno stavki koje čekaju: {0}.",\r
+"izmjena bez otključavanja — {0}",\r
+"Izmjena podataka klijenta: {0}",\r
 "Izmjena pravila banke",\r
+"Izmjena unosa sati",\r
 "IZMJENE POSLIJE ZAKLJUČENJA — {0}. godina",\r
+"Iznajmljivanje i posredovanje u iznajmljivanju nepokretnosti — zakup od 10.000 € mjesečno (t. 13 al. 5)",\r
+"Iznos avansa sa PDV (EUR)",\r
 "Iznos do",\r
 "Iznos kalk.",\r
 "Iznos kalkulacija ±",\r
+"Iznos naknade nije određen (ugovoreni iznos ili procenat od cijene posla).",\r
 "Iznos od",\r
 "Iznos otvorene fakture",\r
 "Iznos pazara",\r
@@ -67,65 +681,570 @@ const a=`[\r
 "Iznos {0} EUR je {1} puta veći od uobičajenog plaćanja ovom dobavljaču (uobičajeno {2} EUR, najveće ranije {3} EUR).",\r
 "iznos {0}{1}",\r
 "Iznos „od\\" je veći od iznosa „do\\".",\r
+"Iznos po pristanku klijenta: {0} € (dozvoljeno odstupanje do {1} €).",\r
+"Iznos ponude sa PDV:",\r
+"Iznos se uplaćuje na račun {0}, sa pozivom na broj {1}.",\r
+"Iznos transakcije (EUR)",\r
+"Iznos transakcije u EUR mora biti veći od nule.",\r
+"Iznos u EUR po srednjem kursu CBCG na dan {0} (1 EUR = {1} {2}): {3} EUR, od toga PDV {4} EUR.",\r
+"Iznos u EUR:",\r
+"Iznos u valuti",\r
+"Iznos uplate u valuti {0} mora biti veći od nule.",\r
+"Iznosi su bez PDV-a; PDV je obračunat na fakturi.",\r
+"Iznosi za knjige i PDV prijavu: iznos u valuti ÷ kurs CBCG",\r
+"Izračunaj",\r
 "Izrada PDF-a je prekinuta.",\r
 "Izrada PDF-a… ({0} redova)",\r
 "Izrada PDF-a… ({0} strana)",\r
+"Izvod otvorenih stavki",\r
 "Izvodi banke učitani do kraja mjeseca",\r
+"Izvor (odluka, Službeni list)",\r
+"Izvor imovine i sredstava",\r
+"Izvor isplate nije određen.",\r
+"izvor sredstava",\r
+"izvori nijesu odgovorili",\r
+"Izvoz posebnih evidencija",\r
 "Izvozi (IOPPD, platni listići, rekapitulacija) čitaju snimljene iznose. Obračun je zaključen i ne preračunava se sam; preračun traži otključavanje.",\r
 "Izvozi (IOPPD, platni listići, rekapitulacija) čitaju snimljene iznose. Prije izvoza potrebno je pokrenuti „Obračunaj sve\\".",\r
+"Izvršena",\r
 "Izvršni direktor: {0}",\r
+"Javna funkcija",\r
+"Jedinstveni matični broj preduzetnika nije upisan (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"jedinstveni račun — za {0}/{1}{2} nema obračuna plata, zakupa, djela ni poreza po odbitku u glavnoj knjizi",\r
+"Jednokratno povećanje cijena od zadatog datuma (period koji počinje tog dana ili kasnije)",\r
+"Jmb",\r
+"JMB preduzetnika",\r
+"JMB, odnosno PIB",\r
+"JMB/PIB zastupnika",\r
+"JPY",\r
 "Kako je partner stavke prepoznat",\r
+"Kalkulacija iz ovog računa ulazi u knjige ove firme, a ulazni PDV u PR-PDV. Napraviti kalkulaciju?",\r
+"Kalkulacija je u zaključanom mjesecu {0}/{1}. Knjiga primljenih računa i PDV prijava se ne mijenjaju (trošak dobija isti datum i isti PDV); mijenjaju se trgovačka knjiga i zalihe tog mjeseca. Potreban je razlog, koji se upisuje u izvještaj „Izmjene poslije zaključenja\\".",\r
 "Kalkulacija je u zaključanom mjesecu {0}/{1}. Prebacivanje u troškove mijenja knjige tog mjeseca (trgovačka knjiga, zalihe): potrebno je otključati mjesec (Podešavanja → Zaključavanje perioda), prebaciti fakturu i mjesec ponovo zaključati.",\r
+"Kalkulacija je u zaključanom mjesecu. Knjiga primljenih računa i PDV prijava se ne mijenjaju; mijenjaju se trgovačka knjiga i zalihe tog mjeseca. Razlog se upisuje u izvještaj „Izmjene poslije zaključenja\\".",\r
 "Kalkulacija nema datum računa ni datum prijema.",\r
+"Kalkulacija nije napravljena.",\r
 "Kalkulacija otpisa se ne prebacuje u troškove.",\r
+"KAM",\r
+"Kamata",\r
+"Kamata (osim zatezne)",\r
+"Kamata i opomene",\r
+"Kao domaći kupac (2020), prihodi 6020 / 6120",\r
+"kao trošak (iznosi i PDV sa računa, po stopi). Kalkulacija i račun se brišu: faktura više nije u trgovačkoj knjizi ni u zalihama. Dug dobavljaču ostaje (trošak sa istim rokom plaćanja). Ulazni PDV ostaje u knjizi primljenih računa istog mjeseca. Radnja je moguća samo na glavnom računaru.",\r
 "kao trošak (iznosi i PDV sa računa, po stopi). Kalkulacija i račun se brišu: faktura više nije u trgovačkoj knjizi, zalihama ni u dugu dobavljaču. Ulazni PDV ostaje u knjizi primljenih računa istog mjeseca. Radnja je moguća samo na glavnom računaru, u otključanom mjesecu.",\r
+"Kapara zadržana dana",\r
+"Kartica (plaćeno odmah)",\r
+"karticom",\r
+"Kašnjenje plaćanja",\r
+"KAŠNJENJE PLAĆANJA PO KUPCU",\r
+"kat. parcela {0}",\r
+"Katastarska opština",\r
+"Katastarska parcela",\r
+"Kategorije rizika i kriterijumi razvrstavanja klijenata",\r
+"Kijent raskida ugovor o saradnji sa računovođom zbog zahtjeva za dodatnim objašnjenjem realizacije (ili najave realizacije) određenih transakcija.",\r
+"Klijent",\r
+"Klijent (ime i prezime ili naziv)",\r
+"Klijent (ime i prezime ili naziv) nije upisan.",\r
+"Klijent (klik — brisanje ličnih podataka)",\r
+"Klijent (pravno lice) daje adresu koja predstavlja broj poštanskog faha za komunikaciju sa posrednikom ili je adresa na kojoj je taj klijent registrovan nepostojeća.",\r
+"Klijent {0} je u registru klijenata (ZSPNFT): {1} — podaci se dostavljaju FOJ-u do {2}",\r
+"Klijent često mijenja adresu, adresu sjedišta ili na jednoj adresi je registrovano više pravnih lica.",\r
+"Klijent često mijenja osnivače i/ili stvarne vlasnike i/ili zakonske zastupnike.",\r
+"Klijent često mijenja računovođe.",\r
+"Klijent daje neadekvatno objašnjenje zbog čega u posljednjem trenutku mijenja imena lica koja koristi u vezi sa transakcijom.",\r
+"Klijent daje nejasna objašnjenja o izvoru prihoda ili gotovog novca koje koristi u poslovnim transakcijama.",\r
+"Klijent daje zajmove pravnim i fizičkim licima koje poslije otpisuje ili zatvara cesijama, kompenzacijama i sl.",\r
+"Klijent donosi veliki iznos gotovog novca sa namjerom da obavi transakcije.",\r
+"Klijent fakturiše usluge za koje se ne može sa sigurnošću potvrditi da su izvršene, odnosno vrši plaćanja za određenu vrstu usluge pravnim licima sa sjedištem na ofšor destinacijama, odnosno \\"poreskim rajevima\\".",\r
+"Klijent ima komplikovanu organizacionu strukturu koja nije efikasna niti ekonomski opravdana.",\r
+"Klijent ima složenu vlasničku strukturu iako vrsta i obim poslova koje obavlja ne zahtijevaju takvu strukturu.",\r
+"Klijent insistira na elektronskom zaključenju ugovora i elektronskom ispostavljanju kupoprodajnog naloga, a potiče iz države poznate po proizvodnji i prometu narkotika, visoko-rizične treće države i države sa takozvane \\"crne liste\\", odnosno države za koju se sumnja da podstiče terorističke aktivnosti i finansiranje terorizma, iako nije izvjesno da će usluga posredovanja biti izvršena.",\r
+"Klijent insistira na novim uslugama novčanog poslovanja, pri čemu postoji vjerovatnoća da ne mogu da se identifikuju realni tokovi novca ili učesnici plaćanja koji se do sada nijesu pojavljivali na tržištu kod posrednika ili se koriste različiti elektronski ili drugi kanali plaćanja.",\r
+"Klijent je \\"veoma pričljiv\\" u vezi sa temama koje se tiču pranja novca ili finansiranja terorizma.",\r
+"Klijent je državljanin države koja ne primjenjuje standarde za sprečavanje pranja novca i finansiranja terorizma.",\r
+"Klijent je lice koje nije registrovano kao stvarni vlasnik i koje nema funkciju u pravnom licu, a upravlja i donosi odluke.",\r
+"Klijent je odbio ponudu, odnosno povećanje cijene? Nalog se zatvara statusom „odbijeno\\".",\r
+"Klijent je upisan u registar.",\r
+"Klijent je, prema tvrdnjama medija, poznat javnosti kao lice koje je uključeno u vršenje nelegalnih privrednih (siva zona poslovanja) i/ili kriminalnih aktivnosti.",\r
+"Klijent koji je nedavno kupio nepokretnost, prodaje je za višestruko veću cijenu od kupovne, što ukazuje na povezana lica zbog fiktivnog transfera novca i skrivanja porijekla i raslojavanja.",\r
+"Klijent koji je poznat iz javnog života kupuje nekretnine u većim iznosima, čija vrijednost odstupa od njegovog pretpostavljenog imovnog stanja.",\r
+"Klijent koji kupuje nekretnine mlađe je životne dobi i vidljivo je da raspolaže luksuznim statusnim simbolima (skupocjeni automobili, motocikli, plovila, satovi i dr.).",\r
+"Klijent koji prema saznanjima ima izvore novca u inostranstvu ili van finansijskog sistema i želi da ugovori plaćanja u više manjih iznosa koristeći platne institucije za prenos novca.",\r
+"Klijent koji se interesuje za nekretninu, koju nije lično vidio, tu nekretninu kupuje preko posrednika (advokata, zastupnika, bliskih osoba i dr.), a postoje saznanja da klijent kupac obavlja razna poslovanja na ivici legalnosti (nezakonito).",\r
+"Klijent kupuje imovinu ili investira u nekretnine u kratkom vremenskom periodu i ne djeluje mnogo zainteresovan za lokaciju, stanje ili projektovane troškove popravke te imovine.",\r
+"Klijent kupuje imovinu, a naročito nekretnine, na neviđeno.",\r
+"Klijent kupuje polisu osiguranja za iznos koji nije srazmjeran prihodima klijenta.",\r
+"Klijent na uvid prilaže samo fotokopije ličnih isprava ili neodgovarajuće isprave.",\r
+"Klijent ne dostavlja računovodstvenu ispravu ili postoji sumnja u vjerodostojnost računovodstvene isprave da je istinita i da prikazuje poslovnu promjenu ili dostavljena računovodstvena isprava ne sadrži sve podatke potrebne za knjiženje u poslovnim knjigama, a klijent i dalje insistira da takva isprava bude proknjižena.",\r
+"Klijent ne pokazuje naročit interes za karakteristike nepokretnosti (kvalitet izrade, lokaciju, datum završetka i primopredaje), već po svaku cijenu želi da se izvrši usluga posredovanja prometa/zakupa nepokretnosti.",\r
+"Klijent ne postoji.",\r
+"Klijent ne poznaje dobro svoj posao, iz čega se može zaključiti da ga uopšte ne obavlja ili ga obavlja u veoma ograničenom opsegu.",\r
+"Klijent ne želi da njegovo ime bude na bilo kojem dokumentu koji bi ga doveo u vezu sa datom poslovnom transakcijom.",\r
+"Klijent ne želi da se identifikuje u slučaju kupovine nekretnine gotovim novcem ili se identifikuje falsifikovanim podacima i ispravama.",\r
+"Klijent ne zna pouzdano gdje se nalazi njegova poslovna dokumentacija, uključujući i finansijsku, odnosno knjigovodstvenu dokumentaciju.",\r
+"Klijent nema zaposlenih ili nema poslovne prostorije što nije u skladu sa vrstom i obimom poslovanja.",\r
+"Klijent neuobičajeno dobro poznaje zakonske propise u vezi sa prijavljivanjem sumnjive transakcije, brzo potvrđuje posredniku da su novčana sredstva \\"čista\\" i da \\"nijesu oprana\\".",\r
+"Klijent nije izabran.",\r
+"Klijent nudi novac, poklone, kao i druge neuobičajene pogodnosti kao protivuslugu za izvođenje očigledno neuobičajenog i sumnjivog posla.",\r
+"Klijent nudi visoku posredničku naknadu, sa ciljem potkupljivanja kako se ne bi preduzimale radnje i obaveze iz Zakona.",\r
+"Klijent obavlja djelatnost koja je u skladu sa Nacionalnom procjenom rizika od pranja novca i finansiranja terorizma označena kao visokorizična.",\r
+"Klijent obavlja transakcije u velikim iznosima koje odstupaju od uobičajenog poslovanja klijenta.",\r
+"Klijent ostvaruje značajne prilive sredstava od funkcionera, odnosno od člana uže porodice funkcionera ili bližeg saradnika funkcionera koji nijesu u skladu sa dostupnim podacima o prihodima funkcionera.",\r
+"Klijent plaća avans velikim iznosom gotovog novca, dok se ostatak finansira iz neuobičajenog izvora ili kreditne institucije iz oblasti u kojoj su male stope poreza na dobit ili u kojoj nema poreza na dobit (u daljem tekstu: ofšor destinacija).",\r
+"Klijent plaća za robu i usluge koje ne odgovaraju opisu njegove djelatnosti.",\r
+"Klijent pokazuje neočekivano veliko interesovanje za mehanizme i načine funkcionisanja sistema sprečavanja pranja novca i finansiranja terorizma.",\r
+"Klijent pokušava da dokaže svoj identitet na drugi način, a ne predajom lične isprave za identifikaciju.",\r
+"Klijent pokušava da se identifikuje sa ispravama koje nijesu lične isprave.",\r
+"Klijent pokušava uspostaviti dobre i prijateljske odnose sa zaposlenim kod posrednika, a prema javnim saznanjima potiče iz kriminalnog miljea.",\r
+"Klijent posluje sa neprofitnim ili humanitarnim organizacijama, za što ne postoji pravi ekonomski razlog.",\r
+"Klijent pregovara o obavljanju poslova po tržišnoj cijeni ili cijeni većoj od tražene, ali zahtijeva da u dokumentima bude navedena manja vrijednost, plaćajući razliku u cijeni \\"ispod tezge\\".",\r
+"Klijent preuzima završen uređaj (sada: {0}). Uređaj po odbijenoj ponudi se vraća statusom „odbijeno\\".",\r
+"Klijent prijevremeno gotovinski otplaćuje kredit ili vrši povraćaj zajma ili pozajmice osnivača za likvidnost.",\r
+"Klijent prilaže samo kopije ličnih isprava ili pokušava da obavi identifikaciju sa drugim ispravama, koje nijesu lične isprave.",\r
+"Klijent prilikom uspostavljanja poslovnog odnosa izbjegava lično pojavljivanje ili uspostavlja poslovni odnos preko punomoćnika.",\r
+"Klijent prima zajmove i kredite, a novčana sredstva primljena po tom osnovu, odmah u istom ili sličnom iznosu, daje kao zajmove i kredite drugim licima ili ih koristi za osnivanje zavisnih pravnih lica.",\r
+"Klijent pruža sumnjive ili nejasne informacije.",\r
+"Klijent raspolaže imovinom velike vrijednosti (luksuzni automobili, plovila, stanovi, rezidencije i sl.) koja je izvan uobičajenih okvira poslovanja, odnosno ne može se povezati sa poslovanjem klijenta.",\r
+"Klijent samoinicijativno navodi na zaključak da su sredstva kojima raspolaže legalna.",\r
+"Klijent se izjašnjava da učestvuje u obavljanju nezakonitih poslova.",\r
+"Klijent se obavještava da preuzme uređaj",\r
+"Klijent se raspituje ili obavlja transakcije sa nekretninama za fizička i pravna lica, rezidente i nerezidente koji su iz ofšor destinacija ili za kompanije osnovane u ofšor destinacijama (u daljem tekstu: ofšor kompanija), kao i država poznatih po proizvodnji i/ili prometu narkotika, država u kojima se ne primjenjuju ili se nedovoljno primjenjuju mjere za sprečavanje i otkrivanje pranja novca i finansiranja terorizma i država sa tzv. crne liste, odnosno liste država za koje se sumnja da podstiču terorističke akte i finansiranje terorizma.",\r
+"Klijent se raspituje o neuobičajenim načinima plaćanja.",\r
+"Klijent se u sredstvima javnog informisanja dovodi u vezu sa terorizmom, finansiranjem terorizma, ekstremizmom, fundamentalizmom i vjerskim radikalizmom.",\r
+"Klijent traži da plaća u ratama kako bi izbjegao plaćanje iznosa gotovog novca koji podliježe izvještavanju u skladu sa Zakonom o sprečavanju pranja novca i finansiranja terorizma (u daljem tekstu: Zakon).",\r
+"Klijent traži savjet",\r
+"Klijent traži savjet (ZSPNFT čl. 66 st. 11) — {0}",\r
+"Klijent u posljednjem trenutku, pred realizaciju ugovora, mijenja ugovorne strane (dovodi novo lice i predstavlja ga kao fiktivno lice), ne pružajući objašnjenje za takvo postupanje, a poznat je po svojim nelegalnim aktivnostima.",\r
+"Klijent u suprotnosti sa poslovnom praksom traži da računovođa u svoje ime i za svoj račun obavi transakciju.",\r
+"Klijent u značajnoj mjeri posluje sa gotovim novcem iako to nije u skladu sa prirodom njegovog poslovanja.",\r
+"Klijent vrlo dobro poznaje pravila o obavještavanju o sumnjivim transakcijama i/ili klijent pokazuje neočekivano veliko interesovanje za prijavljivanje podataka po osnovu Zakona kao i za mehanizme i načine funkcionisanja sistema sprečavanja pranja novca i finansiranja terorizma.",\r
+"Klijent vrši dokapitalizaciju preduzeća bez ekonomski opravdanog razloga.",\r
+"Klijent vrši neuobičajene ili veoma složene transakcije, naročito krajem i početkom izvještajnog perioda ili vrši transakcije koje ne prati adekvatna dokumentacija.",\r
+"Klijent vrši neuobičajene transakcije, transakcije sa povezanim licima ili licima koja odstupaju od uobičajenih klijenata (plaćanje fizičkim licima, politički ili javno eksponiranim licima).",\r
+"Klijent vrši plaćanja za robu i usluge čiju je tržišnu vrijednost teško utvrditi.",\r
+"Klijent vrši transakcije u velikim iznosima koje uključuju poljoprivredna gazdinstva i privredne subjekte koji se bave trgovinom i otkupom sekundarnih sirovina, bez ekonomske opravdanosti.",\r
+"Klijent za kojeg postoji sumnja da je povezan sa terorističkim aktima i/ili se nalazi na konsolidovanoj listi Komiteta za sankcije na osnovu Rezolucije 1267 Savjeta bezbjednosti Ujedinjenih nacija, zainteresovan je za uspostavljanje poslovnih odnosa i ulaganje u nepokretnosti.",\r
+"Klijent zahtijeva da izvještaj o gotovinskoj transakciji ne bude sačinjen ili odbija da obavi transakciju nakon što sazna da je sačinjavanje izvještaja obavezno.",\r
+"Klijent zahtijeva da se transakcija izvrši hitno ili zahtijeva da se ona tretira kao povjerljiva.",\r
+"Klijent želi da kupi imovinu ili obavi posao u ime nekog drugog lica (poznanika ili srodnika, osim svog supružnika).",\r
+"Klijent želi da uvjeri računovođu da nije potrebno da popuni ili priloži neki od potrebnih dokumenata ili mu nije poznato gdje se čuva poslovna dokumentacija.",\r
+"Klijent zloupotrebljava otpis robe.",\r
+"Klijent: {0}",\r
+"Klijenti",\r
+"Klijenti i grupe klijenata (rizik po vrsti klijenta)",\r
+"Klijenti sa rokom čuvanja",\r
+"Klijentova knjigovodstvena dokumentacija je neažurirana, neadekvatna i/ili neuredna.",\r
+"Klijentova knjigovodstvena dokumentacija se često gubi, nestaje ili je uništena \\"višom silom\\".",\r
+"Klijentove lične isprave za identifikaciju su nove, odnosno nedavno izdate.",\r
+"Klijentovi neaktivni računi iznenada postaju aktivni i preko njih se vrše značajni transferi po obimu i učestalosti u odnosu na klijentov obim poslovanja.",\r
+"KNJIGA EVIDENCIJE PRIGOVORA",\r
+"Knjiga prigovora",\r
 "Knjiženo na {0}.",\r
+"Knjižna odobrenja (umanjenje prihoda)",\r
+"Knjižno odobrenje (korektivni račun) se ne upisuje kao trošak. Odobrenje se unosi kroz „Nova kalkulacija (QR)\\" ili ručno u „Nabavka i troškovi\\".",\r
 "Knjižno odobrenje se ne prebacuje u troškove.",\r
+"KO {0}",\r
+"Kod klijenta je uočena pojava paralelne dokumentacije.",\r
+"Kod klijenta se primjećuju neuobičajeno veliki troškovi po osnovu plaćenih usluga u korist inostranih dobavljača.",\r
+"Kod oslobođenja (fiskalna poruka)",\r
+"Kod oslobođenja nije u šemi fiskalnog servisa.",\r
+"Kod oslobođenja u fiskalnoj poruci (stavka EX, grupa ExemptFromVAT)",\r
+"Kod video-elektronske identifikacije čuva se video-audio zapis (ZSPNFT čl. 117 st. 1 t. 5); putanja zapisa nije upisana.",\r
+"Kolona KIF-a: „ne podliježe\\" ili „oslobođeno\\".",\r
+"Kolona knjige izdatih računa (KIF)",\r
+"Kome je predato",\r
+"Konsalting (savjetovanje, pravne, poreske i računovodstvene usluge)",\r
+"Konta kupca iz inostranstva",\r
+"Kontakt (adresa, telefon, e-pošta)",\r
+"Kontakt (telefon, e-pošta)",\r
+"Kontakt: {0}",\r
 "KONTROLNA LISTA ZATVARANJA MJESECA — {0}",\r
+"Kopija dokumenta {0} je napravljena kao nacrt {1}.{2}{3}",\r
+"Kopija predata nalogodavcu",\r
+"Kopija ugovora o potposredovanju je predata poslije roka od tri dana ({0}).",\r
+"Kopija ugovora o potposredovanju se predaje nalogodavcu u roku od tri dana (čl. 21 st. 4); rok je istekao {0}",\r
+"Korisnik imovine",\r
+"KP, PRK, IR, IRN, MM, MMR",\r
+"KR",\r
+"Kriptoimovina",\r
+"kuća",\r
 "kupac {0}",\r
+"Kupac fizičko lice (potrošač) — bez naknade troškova naplate",\r
+"Kupac iz šifarnika (neobavezno)",\r
+"Kupac je platio iznos fakture u valuti, a banka je odobrila EUR po svom kursu. Uplata zatvara fakturu, a razlika se knjiži kao kursna razlika.",\r
+"Kupac je strani poreski obveznik, a na fakturi je obračunat PDV. Potrebna je provjera mjesta prometa (čl. 17 st. 2).",\r
+"Kupac nema evidentiranu saglasnost za elektronski račun (upisuje se na kupcu ili pri slanju e-poštom).",\r
+"Kupac nema evidentiranu saglasnost za prijem elektronskog računa. Račun se elektronski dostavlja uz saglasnost kupca.",\r
+"Kupac nema otvorenih faktura u kašnjenju za ovu opomenu.",\r
+"Kupac privredni subjekt",\r
+"Kupac privredni subjekt i opomene",\r
+"Kupac projekta ne postoji.",\r
+"Kupac sa upisanom državom van Crne Gore",\r
+"Kupac u šifarniku (neobavezno)",\r
+"Kupci {0} faktura nemaju evidentiranu saglasnost za elektronski račun.",\r
+"Kupci u inostranstvu (2030), prihodi 6030 / 6130",\r
+"Kupcu privrednom subjektu (PIB, nije fizičko lice) se po zakašnjeloj fakturi obračunava i naknada troškova naplate, bez opomene (Zakon o rokovima izmirenja novčanih obaveza, čl. 7). Potrošaču se naknada i trošak opomene ne obračunavaju (Zakon o zaštiti potrošača, čl. 26).",\r
+"kupoprodajna cijena",\r
+"Kupoprodajna cijena odnosno zakupnina nije upisana.",\r
+"Kupoprodajna cijena, odnosno zakupnina",\r
+"Kurs",\r
+"Kurs (ručno)",\r
+"Kurs (za 1 EUR)",\r
+"Kurs {0} ({1}).",\r
+"Kurs {0} za {1} nije preuzet ({2}). Kurs se upisuje ručno: Podešavanja → Inostranstvo i kurs → Kursna lista.",\r
+"Kurs {0} za {1} nije u kursnoj listi i nije preuzet: {2}",\r
+"Kurs {0} za {1}: {2} ({3}).",\r
+"Kurs CBCG",\r
+"Kurs je obrisan.",\r
+"Kurs je snimljen.",\r
+"Kurs mora biti veći od nule (jedinica valute za 1 EUR, npr. 1,09680).",\r
+"Kurs mora biti veći od nule.",\r
+"Kurs na dan obaveze",\r
+"Kurs na dan priliva",\r
+"Kurs nije obrisan.",\r
+"Kurs nije upisan.",\r
+"Kurs za današnji dan nije u kursnoj listi; kopija nosi kurs originala. Kurs se ažurira dugmetom „Preuzmi kurs\\".",\r
+"Kurs za ovaj dan nije u kursnoj listi: „Preuzmi kurs\\" ili ručni upis.",\r
+"Kursna lista",\r
+"Kursna razlika",\r
+"Kursna razlika {0} po računu {1} — {2}",\r
+"Kursna razlika pri zatvaranju faktura",\r
+"KVan",\r
 "la",\r
+"Lice kod obveznika",\r
+"Lice koje je obišlo nepokretnost",\r
+"Lice koje je primilo naredbu",\r
+"Lice kome je novac predat nije upisano.",\r
+"Lice od koga je novac primljen nije upisano.",\r
+"Lična isprava",\r
+"Lična isprava ističe {0}",\r
+"Lična isprava je istekla {0}. Potrebna je važeća isprava.",\r
+"Lične isprave klijenata koje ističu ili su istekle: {0}",\r
+"lični podaci klijenta se brišu; ostaje zapis sa datumom brisanja",\r
+"Lični podaci klijenta su obrisani",\r
+"Lični podaci klijenta su obrisani {0} Nov unos nije moguć.",\r
+"Lični podaci klijenta su obrisani {0} po isteku roka čuvanja; zapis se ne mijenja.",\r
+"Lični podaci klijenta su obrisani; dokumentacija se ne dodaje.",\r
+"Lični podaci klijenta su obrisani; unos se ne dodaje.",\r
+"Lični podaci kojima je istekao rok čuvanja: {0}",\r
+"lični podaci obrisani",\r
+"Lični podaci su obrisani (evidencija: {0} unosa).{1}",\r
+"Lični podaci su već obrisani {0}",\r
+"Lični podaci u evidenciji obuke su obrisani.",\r
+"lično",\r
+"lično (usmeno na prodajnom mjestu)",\r
+"List nepokretnosti",\r
+"Lista indikatora",\r
+"Lista indikatora nije sastavljena (kartica Lista indikatora).",\r
+"Lista indikatora nije sastavljena.",\r
+"Lista indikatora obveznika nije sastavljena",\r
+"Lista indikatora obveznika: indikatori iz Pravilnika o listi indikatora (MUP, „Sl. list CG\\" 29/24) koje obveznik primjenjuje i sopstveni indikatori (čl. 83 — lista mora biti u dokumentaciji obveznika). Na listi:",\r
+"Lista koja važi tog dana",\r
+"Lista objavljena tog dana",\r
+"Lista teritorija sa poreskim suverenitetom koju objavljuje Ministarstvo finansija (ZPDPL čl. 29 st. 10) — oznake ISO odvojene zarezom",\r
+"Lokacija nepokretnosti (mjesto, ulica i broj, katastarska parcela i katastarska opština)",\r
+"Lokacija: {0}",\r
 "Marža je primijenjena. Prodajne cijene su preračunate. {0}",\r
+"matični broj / JMB",\r
+"Matični broj / JMB",\r
+"Matični broj pravnog lica nije upisan (ZSPNFT čl. 117 st. 1 t. 1).",\r
+"Matični broj preduzetnika nije upisan (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"ME",\r
 "Menstrualno odsustvo",\r
 "Menstrualno odsustvo (čl. 36a ZOZO, do 2 dana mjesečno)",\r
+"Mjere poznavanja i praćenja poslovanja klijenta",\r
+"Mjere, radnje i postupci za umanjenje rizika",\r
+"Mjesec {0}/{1} je zaključan. Ispravka se ne poništava.",\r
+"Mjesec {0}/{1} je zaključan. Ispravka se upisuje u otvoren mjesec.",\r
+"Mjesec {0}/{1} je zaključan. Otpis se upisuje u otvoreni mjesec.",\r
+"Mjesec {0}/{1} je zaključan. Status obračuna se ne mijenja.",\r
 "Mjesec je spreman za predaju",\r
 "Mjesec nije otključan: razlog otključavanja je obavezan.",\r
+"Mjesec PDV prijave kojoj pripada faktura sa periodom prometa.",\r
 "Mjesec zaključan (knjige predate)",\r
+"mjeseca",\r
+"Mjesečni (sukcesivni) računi su pojedinačni standardni računi (INVOICE) sa periodom prometa.",\r
+"mjesečno",\r
+"MKD",\r
 "MO",\r
+"MUP 29/24",\r
+"n.Status IN ({0})",\r
 "Na dan praznika rade zaposleni prema rasporedu smjena: {0}.",\r
+"Na depozitu po ugovoru {0} je {1} EUR; ne može se predati više od primljenog.",\r
+"na drugom računaru",\r
+"Na fakturama dobavljača upisan je tekući račun fizičkog lica kao račun na koji treba izvršiti uplatu po osnovu fakturisane usluge/robe.",\r
+"Na računu:",\r
+"Na zateznu kamatu se ne obračunava PDV.",\r
+"Način (račun ili gotovina) nije izabran.",\r
+"način identifikacije",\r
+"Način identifikacije",\r
+"Način identifikacije klijenta nije izabran (ZSPNFT čl. 117 st. 1 t. 4).",\r
+"Način identifikacije nije sa spiska.",\r
+"Način izvršenja",\r
+"Način na koji je kupac dao saglasnost",\r
+"Način plaćanja je već upisan.",\r
+"Način plaćanja naknade",\r
+"Način plaćanja nije sa spiska.",\r
+"Način podnošenja",\r
+"Način podnošenja prigovora nije izabran.",\r
+"Način pristanka",\r
+"Način pristanka klijenta nije izabran.",\r
+"Način saglasnosti: pisana izjava, e-pošta ili ugovor.",\r
+"Nacrt fakture naknade je napravljen (Izdati dokumenti).",\r
+"Nacrt fakture naknade se pravi u Izdatim dokumentima; broj računa ulazi u podatak 14 evidencije kad je faktura izdata.",\r
+"Nacrt fakture posredničke naknade (PDV 21 % kad je nepokretnost u Crnoj Gori — Zakon o PDV, čl. 17a)",\r
+"Nacrt fakture sa stavkama naloga; specifikacija radova je prilog računa",\r
+"Nacrt obračuna je obrisan.",\r
+"nacrti faktura se prave na ekranu Ugovori",\r
+"Nadzorni organ",\r
+"najduže pet godina po isteku osnovnog roka (polje „Zadržati do\\")",\r
+"Najviše dana",\r
+"Najviše dana kašnjenja",\r
+"Naknada bez PDV",\r
+"Naknada se fakturiše {0}, {1}, {2}. dana u mjesecu. Na računu se navodi period prometa.",\r
+"Naknada troškova naplate (€)",\r
+"Naknada troškova naplate (čl. 7)",\r
+"Naknada troškova naplate (Zakon o rokovima izmirenja novčanih obaveza čl. 7)",\r
+"Naknada troškova naplate iznosi najmanje 40 € (Zakon o rokovima izmirenja novčanih obaveza, čl. 7).",\r
+"Naknada troškova naplate se obračunava po zakašnjeloj fakturi, bez opomene (Zakon o rokovima izmirenja novčanih obaveza, „Sl. list CG\\" br. 113/24, čl. 7).",\r
+"Naknada za posredovanje",\r
+"Naknada za posredovanje — {0}, {1}{2}; ugovor o posredovanju {3} od {4}",\r
+"Naknada za posredovanje: {0}; način plaćanja: {1}; rok plaćanja: {2}. Posrednik stiče pravo na naknadu u trenutku zaključenja pravnog posla i ne zahtijeva plaćanje naknade unaprijed (čl. 27 st. 1–2). Ako u roku od devet mjeseci od prestanka ovog ugovora nalogodavac sa trećim licem zaključi pravni posao koji je rezultat radnji posrednika prije prestanka ugovora, posrednik ima pravo na naknadu (čl. 27 st. 6).",\r
+"Nalog {0} je fakturisan (faktura {1}) i ne briše se.",\r
+"Nalog {0} je fakturisan (faktura {1}); stavke se ne mijenjaju.",\r
+"Nalog {0} je fakturisan; mijenja se samo preuzimanje.",\r
+"Nalog {0} je već fakturisan (faktura {1}).",\r
+"Nalog {0} je zatvoren ({1}); stavke se ne mijenjaju.",\r
+"Nalog ima ugrađene djelove iz šifarnika, a objekat nije izabran: zaliha se vodi po objektu, pa se objekat upisuje na nalogu.",\r
+"Nalog je u radu.",\r
+"Nalog je zatvoren: ponuda je odbijena.",\r
+"Nalog je završen.",\r
+"Nalog nema stavki izvršenih radova, djelova i materijala.",\r
+"Nalog nema stavki sa iznosom za fakturisanje.",\r
+"Nalog nema stavki: pristanak se daje na ponudu sa radovima, djelovima i materijalom.",\r
 "nalog PDV postoji",\r
+"Nalog troška: potražuje blagajna (2430) za gotovinu, odnosno tekući račun (2410) za karticu.",\r
+"Nalogodavac",\r
+"Nalogodavac je saglasan da posrednik ugovorom o potposredovanju prenese prava i obaveze iz ovog ugovora na drugog posrednika (čl. 21){0}. Kopija ugovora o potposredovanju se predaje nalogodavcu u roku od tri dana od zaključenja.",\r
+"Nalogodavac nije dao saglasnost za potposredovanje.",\r
+"Nalogodavac nije u registru klijenata (ZSPNFT). Za pravni posao od {0} EUR potrebne su mjere poznavanja klijenta{1}. Klijent se upisuje u Usklađenost (ZSPNFT) → Klijenti i bira na ugovoru o posredovanju.",\r
+"Nalogodavac se obavezuje da obavijesti posrednika o svim okolnostima od značaja za posredovanje, stavi na uvid originalne isprave o pravu na nepokretnosti i upozori na upisane i neupisane terete, omogući razgledanje nepokretnosti, isplati ugovorenu naknadu po zaključenju pravnog posla i obavijesti posrednika o promjenama u roku od tri radna dana (čl. 28).",\r
+"Nalogodavac se posebno upozorava na značenje i posljedice klauzule o ekskluzivnom posredovanju (čl. 31 st. 3); upozorenje je u štampi ugovora.",\r
+"Naplaćeno u periodu",\r
+"Naplata u valuti: negativna kursna razlika",\r
+"Naplata u valuti: pozitivna kursna razlika",\r
+"Napomena (interna)",\r
+"Napomena (obavezna za ručni upis)",\r
+"Napomena može imati najviše 200 znakova (polje Note fiskalne poruke).",\r
+"Napomena na računu",\r
+"Napravi nacrt fakture",\r
+"Napravi nacrt fakture (",\r
+"Napravi nacrte faktura (",\r
 "Napravi pravilo banke od ove stavke (opis ili račun primaoca → vrsta i partner)",\r
+"Napraviti fakturu",\r
+"Napravljen je nacrt fakture {0}. Specifikacija izvršenih radova je prilog računa.",\r
+"Napravljene fakture",\r
+"Napravljeno nacrta faktura: {0} ({1}).",\r
+"Napravljeno nacrta faktura: {0}{1}.",\r
+"Naredbe o privremenom obustavljanju transakcije",\r
+"Nastanak promjene",\r
+"Nastavi",\r
+"Naziv klijenta nije upisan.",\r
+"Naziv nadzornog organa",\r
+"Naziv obuke",\r
+"Naziv opštine na kojoj se nepokretnost nalazi",\r
 "Naziv pravila",\r
+"Naziv projekta",\r
+"Naziv projekta nije upisan.",\r
 "Naziv robe",\r
 "Naziv u opisu",\r
+"Naziv usluge *",\r
+"Naziv usluge je obavezan.",\r
+"Naziv, odnosno ime i prezime",\r
 "ne odnosi se",\r
+"Ne podliježe (seminari, usluge inženjera i arhitekata, posredovanje, baze podataka i druge usluge van čl. 29)",\r
+"ne podliježe (ZPDPL čl. 29b t. 4)",\r
+"Ne podliježe PDV-u",\r
+"Ne ulazi u PR-PDV",\r
+"Nefakturisani sati",\r
+"NEFAKTURISANI SATI PO KUPCU I PROJEKTU",\r
+"Nefakturisano",\r
+"negativna",\r
+"Negativna kursna razlika {0} — {1}",\r
+"Negativna kursna razlika po računu {0}",\r
 "neispravan komad",\r
 "neispravan zahtjev",\r
 "neispravna dužina",\r
+"Neki od izabranih unosa sati ne postoje.",\r
+"Nema aktivnih projekata.",\r
+"Nema dospjelih perioda za fakturisanje.",\r
+"Nema evidentiranih klijenata. Klijent se upisuje prije uspostavljanja poslovnog odnosa, odnosno prije transakcije (ZSPNFT čl. 117).",\r
+"Nema evidentiranih nepokretnosti ni ugovora o posredovanju.",\r
+"Nema evidentiranih obilazaka.",\r
+"Nema evidentiranih obuka.",\r
+"Nema evidentiranih prigovora.",\r
+"Nema evidentiranih projekata.",\r
+"Nema evidentiranih radnih naloga.",\r
+"Nema evidentiranih ugovora.",\r
 "nema fajla",\r
+"Nema faktura napravljenih iz evidencije sati.",\r
+"Nema faktura napravljenih iz ugovora.",\r
 "nema ih",\r
+"Nema isplata nerezidentima u godini.",\r
+"Nema izdatih faktura u izabranom periodu.",\r
+"Nema klijenata kojima teče rok čuvanja (poslovni odnosi traju).",\r
+"Nema kupaca sa fakturama u kašnjenju za ovaj nivo opomene.",\r
 "nema naloga obračuna PDV-a za mjesec",\r
+"Nema nefakturisanih sati.",\r
+"Nema nepokretnosti za izabrani filter.",\r
+"Nema neraspoređenih uplata ovog kupca.",\r
 "nema obračuna plata za mjesec",\r
+"nema obračuna zarada",\r
+"Nema obračunatog poreza po odbitku u godini.",\r
+"Nema podataka za izabrani period.",\r
 "Nema pogodaka",\r
+"Nema poslatih ni snimljenih opomena.",\r
 "Nema pravila. Pravilo se pravi dugmetom „Novo pravilo\\" ili iz stavke u kartici „Transakcije\\" (dugme „pravilo\\").",\r
+"Nema prigovora za izabrani filter.",\r
+"Nema prijava.",\r
+"Nema projekata za izabrani filter.",\r
+"Nema radnih naloga za izabrani filter.",\r
 "nema radnika",\r
+"Nema slobodnog iznosa (uplata ili obračun su već zatvoreni).",\r
+"Nema snimljenih obračuna kamate.",\r
 "nema transakcija u mjesecu",\r
+"Nema ugovora o posredovanju.",\r
+"Nema ugovora za izabrani filter.",\r
 "nema ulaznih računa u mjesecu",\r
+"Nema unesenih stopa zatezne kamate.",\r
+"Nema unosa depozita.",\r
+"Nema unosa sati za izabrani period.",\r
+"Nema unosa u ovoj evidenciji.",\r
+"Nema unosa za izabranu godinu.",\r
 "nema uvezenih izvoda",\r
+"Nenamjensko podizanje novčanih sredstava u strukturiranim iznosima, nakon što su novčana sredstva prenijeta.",\r
+"Nenaplaćeni dio obračuna se knjiži kao rashod od otpisa potraživanja na današnji dan",\r
+"Nenaplativo potraživanje: otpis ostatka potraživanja (radnja knjigovođe)",\r
+"Nepokretnost",\r
+"Nepokretnost {0}",\r
+"Nepokretnost ima ugovor o posredovanju i ne briše se. Nepokretnost se povlači iz ponude izmjenom statusa.",\r
+"Nepokretnost je izmijenjena.",\r
+"Nepokretnost je obrisana.",\r
+"Nepokretnost je upisana pod oznakom {0}.",\r
+"Nepokretnost ne postoji.",\r
+"Nepokretnost nije izabrana.",\r
+"Nepokretnosti",\r
+"Nepokretnosti bez važećeg ugovora:",\r
+"Nepokretnosti bez važećeg ugovora: {0}",\r
+"Nepoznat izvoz.",\r
+"Nepoznat način slanja opomene.",\r
+"Nepoznat status radnog naloga.",\r
 "nepoznata poruka",\r
+"Neraspoređene uplate kupca",\r
+"Neraspoređeno",\r
+"Netržišni",\r
+"Neuobičajena",\r
+"Neuobičajena profitabilnost klijenta u poređenju sa drugim pravnim licima iz iste privredne grane.",\r
+"Neuplaćen porez po odbitku:",\r
+"Nije označeno da li je klijent rezident ili nerezident (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Nije preuzeto: {0} ({1})",\r
+"nije unesena za",\r
+"Nije upisano: {0}.",\r
+"nije uplaćeno",\r
 "nije zaključan",\r
+"nije zaključen — ugovor o posredovanju istekao {0}",\r
+"nije zaključen — ugovor o posredovanju otkazan {0}",\r
+"nije zaključen (posredovanje u toku)",\r
+"Nijedan unos sati nije izabran.",\r
 "Nijedna stavka koja čeka nije izmijenjena.",\r
 "nit snimanja ne odgovara",\r
 "nit snimanja nije vratila bazu",\r
 "nit snimanja: {0}",\r
 "nit za PDF je otkazala",\r
+"Nivo opomene je 1, 2 ili 3.",\r
+"nivo rizika",\r
+"Nivo rizika",\r
+"Nivo rizika nije sa spiska.",\r
+"Niža stopa iz ugovora primjenjuje se samo uz potvrdu o rezidentnosti ovjerenu od nadležnog organa druge države (država, broj i datum potvrde).",\r
+"Nizak",\r
+"NOK",\r
+"Nov datum važenja mora biti poslije dosadašnjeg.",\r
+"Nov klijent",\r
+"Nov obilazak",\r
+"Nov prigovor",\r
+"Nov radni nalog",\r
+"Nov ugovor o posredovanju",\r
+"Nov unos depozita",\r
+"Nov unos: {0}",\r
+"Nova nepokretnost",\r
+"nova uplata (unosi se sada)",\r
+"Nova usluga",\r
+"Novac nalogodavaca (kapara, cijena) na depozitnom računu posrednika nije prihod ni novac firme. Saldo ukupno:",\r
+"Novac nalogodavca primljen na depozit",\r
+"Novac sa depozita predat",\r
+"Novi datum važenja ugovora",\r
+"Novi ili budući klijent je poznat kao lice za koje postoje podaci da je uključen u vršenje nelegalnih aktivnosti ili je lice poznato po kriminalnim aktivnostima.",\r
 "Novi predlog: {0} ({1}).",\r
+"Novi projekat",\r
+"Novi ugovor",\r
 "Novo pravilo banke",\r
+"npr. 10,65",\r
+"npr. 2,65",\r
+"npr. Izrada veb prodavnice",\r
+"npr. Kancelarija Centar",\r
+"npr. kurs sa liste CBCG, odštampana lista",\r
+"npr. Market 1_00015, 2026061400002, FA-2026-0004, F8471C7C…",\r
 "npr. Naknada banke",\r
 "npr. naknada za vodjenje racuna",\r
+"npr. Odluka CBCG, „Sl. list CG\\" 01/27",\r
+"npr. održavanje informacionog sistema",\r
+"npr. P 123/26",\r
+"npr. punjač, torba",\r
+"npr. račun za struju unesen kao roba",\r
+"npr. Ugovor sa Njemačkom, čl. 12",\r
+"npr. Veš mašina Gorenje W2",\r
+"Numeracija evidencije: nije nađen slobodan redni broj.",\r
+"Numeracija ugovora: nije nađen slobodan broj.",\r
+"Numerisana knjiga za godinu (sve strane numerisane)",\r
+"Numerisana knjiga: sve strane numerisane, broj upisa u Registar posrednika, mjesto za potpis",\r
 "O navedenoj Odluci su upoznati svi zaposleni kojima će zarada kao i porezi i doprinosi na zaradu biti obračunati tj. uvećani za {0} % po ugovoru o radu za rad {1} ({2}).",\r
+"Obaveze za porez po odbitku — nerezidenti",\r
+"Obilasci",\r
+"OBILASCI NEPOKRETNOSTI",\r
+"Obilazak je obrisan.",\r
+"Obilazak je upisan.",\r
+"Obilazak ne postoji.",\r
+"Obilazak nepokretnosti",\r
+"Obim prava",\r
 "Objava nove verzije nema potpis izdavača. Ažuriranje nije preuzeto.",\r
 "Objava nove verzije nije prošla provjeru potpisa izdavača. Ažuriranje nije preuzeto.",\r
 "Objavljena verzija {0} je starija od već objavljene verzije {1}. Ažuriranje nije preuzeto.",\r
+"Objekat (neobavezno)",\r
+"Objekat je poslovni prostor firme: kancelarija, servis, salon.",\r
+"Objekat nije obavezan za uslužnu firmu. Upisuje se kad firma ima poslovni prostor sa kasom (fiskalni račun) ili vodi evidenciju po objektu.",\r
+"obračun {0}",\r
+"Obračun {0} — uplate",\r
+"Obračun {0} je izdat.",\r
+"Obračun {0} je otpisan.",\r
+"Obračun {0} je storniran.",\r
+"Obračun {0} nije izdat. Uplata se veže samo za izdat obračun.",\r
+"Obračun do dana",\r
+"Obračun je plaćen u cjelini. Otpis nije potreban.",\r
+"Obračun kamate",\r
+"Obračun kamate {0} — {1}",\r
+"Obračun kamate je snimljen kao nacrt.",\r
+"Obračun ne postoji.",\r
+"Obračun poreza po odbitku je obrisan.",\r
+"Obračun poreza po odbitku je snimljen. {0}",\r
+"Obračun poreza po odbitku ne postoji.",\r
+"Obračun srazmjerno za {0} dana perioda.",\r
+"Obračun u statusu „{0}\\" ne može preći u status „{1}\\".",\r
+"Obračun zatezne kamate",\r
+"Obračun zatezne kamate {0} — {1}",\r
+"Obračun zatezne kamate: naknada troškova naplate (B2B, 40 €)",\r
+"Obračun zatezne kamate: potraživanje od kupca za kamatu i naknadu (po kupcu)",\r
+"Obračun zatezne kamate: prihod od kamata",\r
+"Obračunat porez",\r
 "Obrada se nastavlja, u redu: {0}.",\r
 "Obrazac: {0}",\r
 "Obrazloženje",\r
@@ -133,44 +1252,376 @@ const a=`[\r
 "Obračun PDV-a proknjižen u glavnoj knjizi",\r
 "Obračun plata i IOPPD",\r
 "Obračun plata zaključen (IOPPD)",\r
+"Obrazloženje: zašto podaci nisu dostavljeni prije izvršenja",\r
+"Obrisano",\r
+"Obrisati ime i radno mjesto zaposlenog u evidenciji obuke „{0}\\"? Brisanje je trajno.",\r
+"Obrisati kurs {0} za {1}?",\r
+"Obrisati lične podatke klijenta {0}, stvarne vlasnike, spisak dokumentacije i lične podatke u evidencijama? Brisanje je trajno.",\r
+"Obrisati nacrt obračuna {0}?",\r
+"Obrisati nepokretnost {0}? Brisanje je trajno.",\r
+"Obrisati obilazak {0} ({1})? Brisanje je trajno.",\r
+"Obrisati obračun poreza po odbitku?",\r
+"Obrisati opomenu {0}?",\r
+"Obrisati podatke o utuženju?",\r
 "Obrisati pravilo „{0}\\"? Stavke koje je pravilo ranije razvrstalo ostaju kakve jesu.",\r
+"Obrisati prigovor {0}/{1}? Brisanje je trajno.",\r
+"Obrisati projekat {0}?",\r
 "Obrisati račun {0} ({1}, {2} EUR)? Dug dobavljaču se umanjuje za taj iznos. Brisanje je trajno.",\r
+"Obrisati radni nalog {0}? Brisanje je trajno.",\r
+"Obrisati stopu za {0}? Obračun kamate za to polugodište neće biti moguć dok se stopa ponovo ne unese.",\r
+"Obrisati ugovor {0} sa obilascima i depozitom? Brisanje je trajno.",\r
+"Obrisati ugovor {0}?",\r
+"Obrisati unos {0} ({1} h, {2})?",\r
+"Obrisati unos depozita {0} EUR ({1}, {2})? Brisanje je trajno.",\r
+"Obriši lične podatke",\r
 "Obriši račun",\r
+"Obuka",\r
+"od {0} h budžeta",\r
+"od datuma",\r
+"Od koga je primljeno",\r
+"Od prestanka odnosa teče rok čuvanja od pet godina (ZSPNFT čl. 127 st. 1)",\r
+"Od toga poslije roka",\r
+"Odbija se ponuda ili povećanje cijene (sada: {0}).",\r
+"Odbijanje klijenta da da podatke koji se u praksi uobičajeno prikupljaju (lični podaci, adresa, zanimanje) i/ili postoje nedosljednosti u priloženoj dokumentaciji (datumi, potpisi i drugi podaci).",\r
+"Odbijanje uspostavljanja odnosa ili transakcije",\r
+"odbijena.",\r
+"Odgovor",\r
+"odgovor do {0}",\r
+"Odgovor trgovca",\r
+"odgovoreno {0}{1}",\r
+"Odluka CBCG, „Sl. list CG\\" 01/24",\r
+"Odluka CBCG, „Sl. list CG\\" 01/25",\r
+"Odluka CBCG, „Sl. list CG\\" 05/26",\r
+"Odluka CBCG, „Sl. list CG\\" 65/24",\r
+"Odluka CBCG, „Sl. list CG\\" 68/25",\r
+"Odluka CBCG, „Sl. list CG\\" 95/26",\r
 "Odluka se javno ističe na ulazu objekta, a za potrebe inspekcijskih službi.",\r
+"Odnos od",\r
+"odnos prestao",\r
+"Odnos prestao",\r
+"Odnos uspostavljen",\r
+"Određen od",\r
+"Oglas mora sadržati {0} nepokretnosti (Zakon o posredovanju, čl. 25 st. 1). Upisati {1} na nepokretnosti.",\r
+"Oglas sadrži naziv posrednika i broj upisa u Registar posrednika (Zakon o posredovanju, čl. 25 st. 1). Broj se upisuje u kartici Podaci posrednika.",\r
+"oglašavanje nije dozvoljeno",\r
+"OK-{0}-{1}",\r
 "Onda upiši",\r
+"OP-{0}-{1}",\r
+"OP-{0}-%",\r
+"Opis indikatora nije upisan.",\r
+"Opis kvara, odnosno zahtjev klijenta",\r
+"Opis kvara, odnosno zahtjeva klijenta nije upisan.",\r
+"Opis prigovora",\r
+"Opis prigovora nije upisan.",\r
+"Opis rada",\r
+"Opis rada, dio ili materijal",\r
 "Opis sadrži (više uslova odvojiti znakom „;\\")",\r
 "opis sadrži „{0}\\"",\r
+"Opis zahtjeva",\r
+"Opis zahtjeva klijenta nije upisan.",\r
+"Opomena",\r
+"OPOMENA",\r
+"Opomena je obrisana.",\r
+"Opomena je predata poštom ili lično",\r
+"Opomena mora imati kupca.",\r
+"Opomena ne postoji.",\r
+"Opomena pred utuženje",\r
+"OPOMENA PRED UTUŽENJE",\r
+"Opomena se ne naplaćuje. Dani kašnjenja za predlog se podešavaju u Podešavanja → Zatezna kamata i opomene.",\r
+"Opomene",\r
+"Oprema",\r
+"Oprema predata uz uređaj",\r
+"Opšti indikatori",\r
+"Opšti uslovi poslovanja posrednika su sastavni dio ovog ugovora (čl. 23). Nalogodavac nije dužan da pristupi pregovorima niti da zaključi pravni posao sa licem koje je posrednik pronašao (čl. 29).",\r
+"Opšti uslovi poslovanja posrednika su sastavni dio ovog ugovora; nalogodavac je posebno upozoren na njihovu sadržinu i obaveznost (čl. 23).",\r
+"opština {0}",\r
+"Opština na kojoj se nepokretnost nalazi nije izabrana.",\r
+"Organizator",\r
+"Osigurana suma po jednom slučaju je manja od 20.000 € (Zakon o posredovanju, čl. 8).",\r
+"Osigurana suma za sve zahtjeve u godini je manja od 60.000 € (Zakon o posredovanju, čl. 8).",\r
+"Osiguranje od profesionalne odgovornosti",\r
+"Osiguranje od profesionalne odgovornosti posrednika ističe",\r
+"Oslobođeni promet",\r
+"Osnivač",\r
+"Osnov „Promet van Crne Gore\\" (čl. 17) je izabran za kupca iz Crne Gore. Potrebna je provjera mjesta prometa.",\r
+"Osnov (kapara, dio cijene, zakupnina…)",\r
+"Osnov čl. 17 za fizičko lice: mjesto prometa usluge fizičkom licu je po pravilu u Crnoj Gori (čl. 17 st. 5).",\r
+"osnov PEP",\r
+"Osnov sticanja",\r
+"Osnov za 0 % PDV",\r
+"Osnov za 0 % PDV nije poznat.",\r
+"Osnov za stavke sa 0 % PDV (piše se na fakturi)",\r
+"ostaje u evidenciji; storno se upisuje kao nov unos sa razlogom.",\r
+"Ostali obveznici iz t. 13 (forfeting, izgradnja objekata, platni instrumenti — al. 1, 6, 7)",\r
+"Otkaz se upisuje u evidenciju o posredovanju; upis je trajan. Od dana otkaza teče rok od devet mjeseci za pravo na naknadu (čl. 27 st. 6). Otkazan ugovor se ne produžava.",\r
+"Otkaz ugovora",\r
+"Otkaz ugovora je upisan.",\r
+"Otkaz ugovora o posredovanju",\r
+"Otkazni rok (dana)",\r
+"Otkazni rok (dana) nije ispravan.",\r
+"otkazni rok {0} dana, {1} {2}",\r
+"Otkazni rok je {0} dana.",\r
 "Otključavanja",\r
 "Otključavanja (razlog)",\r
+"Otpis nenaplaćene kamate i naknade {0}",\r
+"Otpis obračuna kamate {0} — {1}",\r
+"otpisan {0}",\r
+"Otpisati nenaplaćeni dio obračuna {0} ({1} EUR) na današnji dan?",\r
+"Otpiši",\r
 "otvorena firma",\r
+"Otvoreno u kašnjenju",\r
 "Ovaj računar nije glavni: izmjena marže ostaje samo na njemu i ne prenosi se razmjenom (prepisaće je sljedeći snimak glavnog računara). Marže se mijenjaju na glavnom računaru.",\r
 "ovaj uređaj",\r
+"ove stavke",\r
 "Ovi računi ulaze u dug dobavljaču, a nisu u knjizi primljenih računa, PDV prijavi ni trgovačkoj knjizi (kalkulacija je obrisana, račun je ostao). Potrebna je odluka: ponovni unos kalkulacije ili brisanje računa.",\r
+"Ovlašćeno lice i obuke",\r
+"Ovlašćeno lice i zamjenik",\r
+"Ovlašćeno lice i zamjenik nisu određeni",\r
+"Ovlašćeno lice i zamjenik su snimljeni.",\r
+"Ovlašćeno lice nije upisano (ZSPNFT čl. 14).",\r
+"Ovlašćeno lice, zamjenik, stručno osposobljavanje zaposlenih",\r
+"ovu stavku",\r
+"Oznaka {0} već postoji.",\r
+"Oznaka države ISO (npr. DE, USA, IRL)",\r
+"Oznaka ISO: ME, RS, DE …",\r
+"Oznaka ugovora. Obračun i IOPPD šifra su isti; normirani troškovi autorskog ugovora se provjeravaju sa knjigovođom (ZPDFL čl. 20 st. 2).",\r
+"Paket „{0}\\" nije uključen za firmu. Postojeće evidencije su dostupne za pregled i izvoz (O programu → Izvoz posebnih evidencija); nov unos nije moguć.",\r
+"Paket je uključen.",\r
+"Paket nije uključen: evidencije su dostupne samo za pregled i izvoz.",\r
+"Parcela",\r
 "Partner nije prepoznat i bira se ručno.",\r
+"paušal",\r
 "Pazara",\r
 "Pazara ±",\r
+"PDF evidencije je napravljen: {0}",\r
+"PDF knjige je napravljen: {0}",\r
+"PDF ugovora je napravljen: {0}",\r
+"PDO",\r
+"PDV {0} % {1} (osnovica {2})",\r
+"PDV {0} % −{1}",\r
 "PDV kontrole (pazari po stopama, stope ulaza)",\r
+"PDV mjesec {0}/{1} je zaključan.",\r
+"PDV obaveza",\r
+"PDV obaveza po fakturi iz ugovora nastaje {0} (posljednji dan perioda prometa) i pripada zaključanom mjesecu {1}. Izdavanje je moguće nakon otključavanja tog mjeseca.",\r
 "PDV prijava (PR-PDV)",\r
 "PDV: {0}",\r
+"Pep",\r
+"PEP",\r
+"Period {0} je već fakturisan.",\r
+"period {0}–{1} ugovora {2} je fakturisan fakturom {3}",\r
+"Period nije u planu fakturisanja ugovora.",\r
+"Period prometa fakture iz ugovora određuje ugovor i ne mijenja se. Faktura za drugi period se pravi na ekranu Ugovori.",\r
+"Period prometa je oznaka fakturisanog perioda ugovora i ne mijenja se na fakturi.",\r
+"Periodi od",\r
+"Periodi ugovora",\r
+"periodično fakturisanje",\r
+"pet godina od prestanka poslovnog odnosa, odnosno od izvršene povremene transakcije ili odbijanja",\r
 "PIB u opisu",\r
 "PIB: {0}{1}",\r
+"PIN nije ispravan.",\r
+"PIN zaštite",\r
+"pisana izjava",\r
+"pisani pristanak e-poštom ili porukom",\r
+"pisani pristanak predat lično",\r
+"pisano (pošta ili predat lično)",\r
+"Plaćanje obaveza klijent učestalo vrši putem obveznica.",\r
+"Plaćeno gotovinom.",\r
+"Plaćeno karticom.",\r
+"Plan fakturisanja",\r
 "Plate radnika: obračun mjeseca i IOPPD",\r
 "plaćanja nije proknjiženo automatski: račun primaoca nije među poznatim računima dobavljača —",\r
 "Plaćanje {0} EUR je veće od otvorenog duga prema dobavljaču ({1} EUR); razlika {2} EUR ostaje kao pretplata.",\r
+"PLN",\r
+"Po isteku roka",\r
+"po isteku roka čuvanja (ZSPNFT čl. 127 st. 5). Zapis se ne mijenja.",\r
+"Po isteku se ugovor produžava za isti period; fakturisanje se nastavlja",\r
+"Po klijentu",\r
+"Po periodu sa PDV",\r
+"Po periodu sa PDV:",\r
+"Po projektu",\r
+"po projektu i satnici",\r
+"Po ugovoru",\r
+"Po ugovoru {0}{1}: {2}.{3}",\r
+"Po ugovoru su napravljene fakture. Brisanje nije moguće; ugovor se može označiti kao raskinut.",\r
+"po unosu sati",\r
+"Po usluzi",\r
 "po ustaljenom radnom vremenu",\r
+"Početak",\r
+"Početak djelatnosti",\r
+"Početni spisak: države za koje FATF poziva na mjere; dopunjuje se po spisku koji objavljuje FOJ",\r
+"Počni rad",\r
+"Podaci dostavljeni FOJ-u",\r
+"Podaci i evidencije po ZSPNFT se čuvaju pet godina od prestanka poslovnog odnosa, odnosno od izvršene transakcije (čl. 127).",\r
+"Podaci iz lista nepokretnosti (stvarno pravo, osnov sticanja, zabilježbe, starost objekta)",\r
+"Podaci klijenta su izmijenjeni.",\r
+"Podaci o klijentu i transakciji (ZSPNFT)",\r
+"Podaci o klijentu, transakcijama, dokumentacija i izvještaji",\r
+"Podaci o obuci se čuvaju četiri godine (ZSPNFT čl. 127 st. 4); brisanje je moguće od {0}",\r
+"Podaci o transakciji nisu upisani (ZSPNFT čl. 117 st. 1 t. 7).",\r
+"Podaci o transakciji se dostavljaju FOJ-u do {0} (ZSPNFT čl. 66).",\r
 "Podaci o važećim verzijama nisu prošli provjeru potpisa izdavača. Ažuriranje nije preuzeto.",\r
 "Podaci o važećim verzijama su istekli, pa se ažuriranja trenutno ne mogu provjeriti. Provjera se ponavlja sama.",\r
+"Podaci posrednika",\r
+"Podaci posrednika su snimljeni.",\r
+"Podaci se čuvaju pet godina (ZSPNFT čl. 127 st. 1{0}); brisanje je moguće od {1}",\r
+"Podaci se dostavljaju elektronski, kroz aplikaciju finansijsko-obavještajne jedinice, uz kvalifikovani elektronski potpis (ZSPNFT čl. 66 st. 13). Pregled služi za unos i ostaje u dokumentaciji obveznika. Evidencija: {0} ({1}).",\r
+"Podaci se dostavljaju FOJ-u do {0} ({1}).",\r
+"Podaci se dostavljaju FOJ-u prije izvršenja transakcije, uz rok u kome transakcija treba da se izvrši. Kad to nije moguće — najkasnije sljedećeg radnog dana od izvršenja, uz obrazloženje.",\r
+"Podaci su već obrisani.",\r
+"Podešavanja poreza po odbitku su snimljena.",\r
+"Podešavanje je snimljeno.",\r
+"Podrazumijevana satnica za nove unose sati, bez PDV-a",\r
+"Podsjetnik za nepreuzet uređaj (dana)",\r
 "Pogodak {0} od {1}",\r
+"Pojedinačan unos",\r
+"Pokušaj transakcije",\r
+"polisa {0}",\r
+"Polisa važi do",\r
+"Politički eksponirano lice",\r
+"Politički eksponirano lice: nivo rizika nije „visok\\" (produbljene mjere, ZSPNFT čl. 13).",\r
+"Politički eksponirano lice: osnov je obavezan",\r
+"Polja",\r
+"Polje PR-PDV",\r
+"Polje PR-PDV: ne ulazi, 13 ili 14.",\r
+"poljoprivredno zemljište",\r
+"Polugodište",\r
+"poništen unos (greška u evidenciji)",\r
+"Poništi ispravku",\r
+"Poništiti ispravku PDV-a (npr. potraživanje je naplaćeno)?",\r
 "Poništiti knjiženje i ponovo prepoznati stavku? Plaćanje dobavljaču se briše, a transakcija se vraća na „čeka\\" sa novim predlogom partnera.",\r
 "Ponovni unos: ponovno skeniranje QR koda računa (račun se veže za novu kalkulaciju). Brisanje: dugme „Obriši račun\\", na glavnom računaru; kalkulacije i knjige se ne mijenjaju.",\r
+"Ponuda ima stavke sa stopom PDV-a za koju se avansni račun ne izdaje (avans: 21, 15 ili 7 %). Avans se unosi na ekranu Avansi i knjižna odobrenja.",\r
+"ponuda izdata",\r
+"Ponuda je {0} {1} i označiti ponudu kao prihvaćenu?",\r
+"Ponuda je izdata: {0} €{1}",\r
+"Ponuda je stornirana.",\r
+"Ponuda nema kupca. Avansni račun se izdaje kupcu.",\r
+"Ponuda nema stavki: upisati radove, djelove i materijal sa cijenama.",\r
+"Ponuda prihvaćena {0}{1}.",\r
+"Ponuda se izdaje za primljen nalog (sada: {0}). Za dodatne radove poslije pristanka upisuje se nov pristanak.",\r
+"Ponuda se izdaje za primljen nalog ili za nalog koji čeka pristanak na povećanje cijene (sada: {0}). Za dodatne radove poslije pristanka upisuje se nov pristanak.",\r
 "Poreske knjige: kontrolna lista zatvaranja, zaključavanje, izmjene poslije zaključenja",\r
 "Poreske knjige: PDV prijava za mjesec",\r
 "PORESKI OBVEZNIK: {0}",\r
+"Porez po odbitku",\r
+"POREZ PO ODBITKU — ISPLATE NEREZIDENTIMA",\r
+"Porez po odbitku — izmjena obračuna",\r
+"Porez po odbitku — nerezident",\r
+"Porez po odbitku — nerezidenti",\r
+"Porez po odbitku {0} % — {1} ({2})",\r
+"Porez po odbitku {0} EUR ({1} % na bruto {2} EUR); isplata primaocu {3} EUR. Osnov: {4}.",\r
+"Porez po odbitku iz ove evidencije se obračunava na isplate nerezidentima (država van Crne Gore).",\r
+"Porez po odbitku na isplate nerezidentima (ZPDPL čl. 29): obaveza za porez; dobavljač se umanjuje za porez",\r
+"Porez po odbitku na isplatu nerezidentnom pravnom licu (ZPDPL čl. 29); obračun na bruto iznos, datum = datum računa (mijenja se u obračunu)",\r
+"Porez po odbitku na isplatu nerezidentu (ZPDPL čl. 29)",\r
+"Porez po odbitku nije obračunat: {0}",\r
+"Porez po odbitku se obračunava i plaća u trenutku isplate. Izvještaj o uplaćenom porezu po odbitku (IOPPO) za",\r
+"Porez po odbitku se obračunava na bruto iznos isplate i plaća u trenutku isplate. Primalac dobija iznos umanjen za porez.",\r
+"Posao je zaključen poslije isteka devet mjeseci od prestanka ugovora ({0}); pravo na naknadu ne postoji (Zakon o posredovanju, čl. 27 st. 6).",\r
+"Posao je zaključen u roku od devet mjeseci od prestanka ugovora (do {0}); pravo na naknadu postoji ako je posao rezultat radnji posrednika prije prestanka ugovora (čl. 27 st. 6).",\r
+"Posao je zaključen; ugovor je prestao zaključenjem pravnog posla.",\r
+"posao zaključen",\r
+"Posao zaključen",\r
+"Posebne evidencije",\r
+"Posebne evidencije određuje licenca firme.",\r
+"Posebni paketi licence. Vide se kad ih licenca firme uključuje; podaci se ne brišu kad paket nije u licenci.",\r
+"Poslata opomena se ne briše (ostaje u istoriji kupca).",\r
+"Poslato faktura: {0}.{1}",\r
+"Poslato poštom",\r
+"Poslije roka od osam dana: {0}.",\r
+"Posljednja opomena",\r
 "Posljednja strana",\r
+"posljednji obračun {0}",\r
+"Poslovna kartica firme kupca. Plaćanje ličnom platnom karticom je gotovinsko i ide kroz kasu.",\r
+"Poslovne transakcije klijenta nijesu u skladu sa njegovim prihodima i imovinom.",\r
+"Poslovni odnos",\r
+"Poslovni odnos ili transakcija uključuje neprofitne ili humanitarne organizacije za šta ne postoji pravi ekonomski razlog.",\r
+"Poslovni odnos traje; rok čuvanja počinje od prestanka odnosa (ZSPNFT čl. 127 st. 1).",\r
+"poslovni prostor",\r
+"Posrednici u prometu i zakupu nepokretnosti",\r
+"Posrednička naknada za nepokretnost u Crnoj Gori je promet u Crnoj Gori i podliježe PDV-u i kada je nalogodavac strano lice (Zakon o PDV, čl. 17a st. 1). Osnov „promet van Crne Gore\\" (čl. 17) se ne primjenjuje.",\r
+"Posrednička naknada, izdati račun i broj računa",\r
+"Posrednik ima saznanja da je klijent bio kažnjavan za neka krivična djela.",\r
+"Posrednik se obavezuje da nastoji da pronađe i dovede u vezu sa nalogodavcem lice radi zaključenja pravnog posla, izvrši uvid u isprave o pravu svojine i upozori nalogodavca na upisana prava, terete, pravo preče kupovine i ograničenja u prometu, obavi radnje prezentacije nepokretnosti, omogući pregled nepokretnosti, posreduje u pregovorima i obavijesti nalogodavca o svim okolnostima od značaja za pravni posao (čl. 20).",\r
+"Posrednik sumnja u istinitost navedene svrhe transakcije (npr. pomoć porodici, izdržavanje lica, pojmovi često korišćeni od strane ekstremista i terorista i sl.), naročito ako se radi o učestalim nalozima gdje se ne može utvrditi lična ili poslovna veza između učesnika transakcije.",\r
+"Posrednik: {0}, {1}, PIB {2}; broj upisa u Registar posrednika: {3}{4}.",\r
+"Posrednik: {0}, broj upisa u Registar posrednika: {1}",\r
+"Posredovanje",\r
+"Posredovanje (nekretnine)",\r
+"Posredovanje u prometu nepokretnosti",\r
+"pošta",\r
+"Poštanski broj",\r
+"Postignuta cijena",\r
+"postoje fakture",\r
+"Postoje podaci da je klijent možda umiješan u nezakonite aktivnosti.",\r
+"Postoje saznanja da klijent ima lošu reputaciju ili da postoji sumnja u izvore sredstava, da u svom poslovanju koristi virtuelne valute (npr. bitkoin ili lajtkoin) ili koristi alternativne kanale plaćanja (npr. havala, hundi), sa ciljem izbjegavanja redovnih finansijskih kanala.",\r
+"Postoji sumnja u stvarnu svrhu obavljene transakcije.",\r
+"Postoji veliki broj avansnih uplata, gdje do kraja obračunskog perioda nije došlo do realizacije usluge ili isporuke robe.",\r
+"Potpis",\r
+"potpisana ponuda (obje strane)",\r
+"Potpisana potvrda",\r
+"Potpisana potvrda o obilasku je dokaz o posredovanju (Zakon o posredovanju, čl. 24) i ne briše se.",\r
+"Potposrednik",\r
+"Potposredovanje",\r
+"Potposredovanje je moguće samo uz izričitu saglasnost nalogodavca (Zakon o posredovanju, čl. 21 st. 1).",\r
+"Potraživanja",\r
+"Potraživanja od kupaca u inostranstvu (kupac sa državom van Crne Gore): faktura, avans, odobrenje, naplata",\r
+"Potraživanja za kamatu",\r
+"potraživanja, IOS, opomene",\r
+"Potraživanje utuženo…",\r
+"Potrosac",\r
+"Potrošač",\r
+"Potrošač (ime i prezime)",\r
+"potrošač je povukao prigovor",\r
+"Potvrda je dokaz o obilasku nepokretnosti iz evidencije o posredovanju (Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 24).",\r
+"Potvrda o obilasku je napravljena: {0}",\r
+"Potvrda o rezidentnosti",\r
+"Potvrda o rezidentnosti je izdata za državu {0}, a primalac je iz {1}.",\r
+"Potvrda o rezidentnosti je od {0}; potrebno je provjeriti da važi za godinu isplate.",\r
+"potvrda potpisana",\r
+"Potvrda: država",\r
 "potvrdi",\r
+"Potvrđujem da sam {0} uz posredovanje {1} obišao/obišla nepokretnost: {2}{3}, {4}.",\r
+"Povjerenik",\r
+"Povrsina",\r
+"Površina (m²)",\r
+"Površina je obavezna (podatak 10 evidencije o posredovanju, Pravilnik 45/26 čl. 3). Oglas sadrži površinu i strukturu nepokretnosti (Zakon o posredovanju, čl. 25 st. 1)",\r
+"Površina m²",\r
+"Površina ne može biti negativna.",\r
+"Površina nepokretnosti",\r
+"Površina nepokretnosti (m²) nije upisana. Površina je podatak evidencije o posredovanju (Pravilnik 45/26, čl. 3 t. 10) i obavezan podatak oglasa (Zakon o posredovanju, čl. 25 st. 1).",\r
+"Površina nepokretnosti {0} nije upisana (Pravilnik o evidenciji o posredovanju 45/26, čl. 3 t. 10). Površina se upisuje na nepokretnosti.",\r
+"Površina: {0} m²",\r
+"površinu",\r
+"površinu (m²)",\r
+"površinu (m²) i strukturu",\r
+"površinu i strukturu",\r
+"povučena iz ponude",\r
+"pozitivna",\r
+"Pozitivna kursna razlika {0} — {1}",\r
+"Pozitivna kursna razlika po računu {0}",\r
+"Poznavanje klijenta · evidencije po ZSPNFT · rokovi za prijavu FOJ-u · analiza rizika · lista indikatora",\r
+"Poznavanje klijenta, evidencije po ZSPNFT, prijave FOJ-u sa rokovima, lista indikatora, analiza rizika i rokovi čuvanja.",\r
+"poznavanje klijenta, evidencije po ZSPNFT, prijave FOJ-u, analiza rizika i lista indikatora",\r
+"PR PDV-2: polje 13 — promet po stopi 0 %, polje 14 — oslobođeni promet",\r
+"PR-{0}-%",\r
+"Praćenje poslovanja klijenta — transakcija",\r
+"Prag pisane ponude (€, sa PDV-om)",\r
+"Prag pisane ponude mora biti između 0 i 100.000 €.",\r
+"Pragovi i rokovi moraju biti veći od nule.",\r
+"Prava i obaveze (tekst za ugovor o posredovanju)",\r
+"Prava i obaveze posrednika i nalogodavca",\r
 "Pravila banke",\r
 "Pravila nisu primijenjena. {0}",\r
 "Pravila su primijenjena: izmijenjeno stavki koje čekaju: {0}.",\r
+"Pravilnik o bližem sadržaju, načinu vođenja i roku čuvanja evidencije o posredovanju u prometu i zakupu nepokretnosti („Sl. list CG\\" br. 45/26), čl. 3–5. Redni broj unosa je neprekidan; promjena se upisuje kao nov unos sa pozivom na prvobitni unos. Evidencija se čuva trajno.",\r
+"Pravilnik o evidenciji o posredovanju („Sl. list CG\\" 45/26), čl. 3 t. 6 i 10",\r
+"Pravilnik o evidenciji o posredovanju („Sl. list CG\\" 45/26), čl. 3–5",\r
+"Pravilnik o evidenciji o posredovanju („Sl. list CG\\" 45/26), čl. 4 — upis u roku od osam dana",\r
+"Pravilnik o evidenciji o posredovanju („Sl. list CG\\" 45/26), čl. 4 — upis u roku od osam dana od zaključenja ugovora, odnosno od nastanka promjene",\r
+"Pravilnik o evidenciji o posredovanju („Sl. list CG\\" 45/26), čl. 5 st. 1",\r
+"Pravilnik o evidenciji o posredovanju („Sl. list CG\\" 45/26), čl. 5 st. 2",\r
+"Pravilnik o listi indikatora za prepoznavanje sumnjivih klijenata i transakcija („Sl. list CG\\" br. 29/24)",\r
 "pravilo",\r
 "Pravilo je obrisano.",\r
 "Pravilo je snimljeno.",\r
@@ -182,28 +1633,232 @@ const a=`[\r
 "Pravilo upisuje dobavljača ili kupca, ne oba.",\r
 "pravilo „{0}\\"",\r
 "Pravilo: {0}",\r
+"Pravni posao i naknada",\r
+"Pravni posao je zaključen prije ugovora o posredovanju.",\r
+"Pravni posao po ugovoru o posredovanju {0}",\r
+"Pravni posao zaključen {0}",\r
+"Pravni posao zaključen / nije zaključen",\r
+"Pravno lice",\r
+"Pravo na naknadu do",\r
+"Pravo na naknadu po ugovoru {0} (devet mjeseci po prestanku)",\r
+"Prazno = satnica projekta",\r
 "Prebacivanje fakture u troškove — kalkulacija {0}",\r
 "Prebačeno iz kalkulacije {0} (faktura unesena kao roba) {1}",\r
+"Prebivalište, odnosno sjedište",\r
+"Pred utuženje",\r
+"predat",\r
+"predata",\r
+"Predato",\r
+"predato (isplaćeno) licu po nalogu",\r
+"Predlog stope = stopa ECB + 8 p.p. Važeća je stopa koju objavi CBCG.",\r
+"Predlog stope:",\r
+"Predmet (račun, radni nalog, proizvod ili usluga)",\r
+"Predmet (uređaj ili vozilo) nije upisan.",\r
+"Predmet (uređaj, vozilo, model)",\r
+"Predmet posredovanja: {0} nepokretnosti — {1}{2}{3}; lokacija: {4}. {5}: {6} {7}. Cijena je utvrđena tako da uključuje iznos naknade za posredovanje (čl. 18 st. 3 Zakona).",\r
+"Predmet ugovora nije upisan.",\r
+"Predmet ugovora: {0}.",\r
+"Preduzeta mjera",\r
+"Pregled za izvještaj IOPPO —",\r
+"PREGLED ZA IZVJEŠTAJ O POREZU PO ODBITKU (IOPPO)",\r
+"preko depozitnog računa",\r
 "prelazi u",\r
+"prema računu",\r
+"Prema računu: gotovinski račun je plaćen odmah, bezgotovinski je dug dobavljaču do plaćanja.",\r
+"Prenesi",\r
+"Prenos poreske obaveze. Mjesto prometa van Crne Gore (čl. 17 st. 2 ZPDV).",\r
+"Prenosi novčanih sredstava manjih iznosa u kojima su uključena ista lica preko drugih alternativnih sistema za prenos novca su učestali.",\r
 "prepoznat po pravilu banke (Banka → Pravila banke)",\r
+"prestanak odnosa",\r
 "pretečen",\r
 "Prethodna strana",\r
 "Prethodni pogodak",\r
+"Pretraga (broj, klijent, predmet, serijski broj)",\r
+"Pretraga (broj, nalogodavac, lokacija, agent)",\r
+"Pretraga (broj, predmet, kupac)",\r
+"Pretraga (naziv, matični broj, JMB)",\r
+"Pretraga (oznaka, lokacija, parcela, vlasnik)",\r
+"Pretraga (potrošač, predmet, opis)",\r
+"Pretraga (šifra, naziv, kupac)",\r
+"pretraga indikatora",\r
 "Pretraga kroz sve strane liste (Enter = sljedeći pogodak)",\r
+"Preuzeo (ime i prezime)",\r
+"Preuzeto",\r
+"Preuzeto dana: {0}.{1}",\r
+"Preuzeto indikatora iz Pravilnika: {0}.",\r
+"Preuzimanje ili ručni upis za jedan dan",\r
+"Preuzimanje je upisano.",\r
+"Preuzmi",\r
+"Preuzmi kurs",\r
+"Preuzmi liste iz Pravilnika (MUP 29/24)",\r
+"Preuzmi za period",\r
+"Prigovor {0}/{1}",\r
+"Prigovor {0}/{1} je evidentiran i na drugom računaru; ovdašnji unos dobija broj {2}/{3}.",\r
+"Prigovor {0}/{1} je izmijenjen.",\r
+"Prigovor {0}/{1} sa drugog računara dobija broj {2}/{3} (broj je ovdje već zauzet ranijim unosom).",\r
+"Prigovor je obrisan.",\r
+"Prigovor je odgovoren",\r
+"Prigovor je odgovoren {0} Upisani podaci se ne mijenjaju; odgovor se može samo dopuniti (Zakon o zaštiti potrošača, čl. 27).",\r
+"Prigovor je upisan pod brojem {0}/{1}. Rok za odgovor: {2}.",\r
+"Prigovor ne postoji.",\r
+"Prigovor se čuva najmanje dvije godine (Zakon o zaštiti potrošača, čl. 27); brisanje je moguće od {0}. Pogrešan unos se zatvara ishodom „poništen unos\\".",\r
+"Prigovora bez odgovora kojima je istekao rok (",\r
+"Prigovori potrošača, odgovori i rokovi za odgovor",\r
+"Prigovori potrošača, odgovori i rokovi za odgovor.",\r
+"Prigovori u Knjizi prigovora:",\r
+"Prihod",\r
+"Prihod bez PDV",\r
+"Prihod bez PDV-a u periodu:",\r
+"Prihodi od prodaje usluga na inostranom tržištu",\r
+"PRIHODI PO KLIJENTU",\r
+"PRIHODI PO MJESECIMA",\r
+"PRIHODI PO PROJEKTU",\r
+"PRIHODI PO UGOVORU",\r
+"PRIHODI PO USLUZI I ARTIKLU",\r
+"prihvaćena",\r
+"Prihvaćenu ponudu potpisuju servis i klijent; jedan primjerak se predaje klijentu ({0}).",\r
+"Prijava je dopunjena.",\r
+"Prijava je dostavljena FOJ-u i ne mijenja se.",\r
+"Prijave",\r
+"PRIJAVE FOJ-u",\r
+"Prijave FOJ-u koje čekaju:",\r
+"Prijave FOJ-u koje čekaju: {0}",\r
+"Prijem uređaja na servis · radni nalog · pisana ponuda za popravku · specifikacija uz račun",\r
+"Prijem uređaja na servis, radni nalozi, pisana ponuda za popravku i specifikacija uz račun.",\r
+"Priliv novčanih sredstava je nastao po osnovu ugovora o zajmu čiji je rok vraćanja istekao, a novčana sredstva koja su bila predmet ugovora o zajmu nijesu vraćena.",\r
+"Priliv sa izvoda",\r
+"Prilog",\r
+"Prilog (potpisan ugovor, putanja do fajla)",\r
+"Prilog (putanja do fotografija ili dokumenata)",\r
+"Primalac (nerezidentno pravno lice)",\r
+"Primalac isplate nije upisan.",\r
 "Primijeni pravila na stavke koje čekaju",\r
+"Primijenjena je stopa zatezne kamate koju za svako polugodište objavljuje Centralna banka Crne Gore{0}. Kamata teče od dana poslije dospijeća; uplata umanjuje glavnicu od dana uplate.",\r
 "Primijenjeno",\r
+"primljen od",\r
+"primljena",\r
+"Primljeni depoziti nalogodavaca",\r
+"primljeni računi danas (EUR sa PDV)",\r
+"primljenih računa danas ·",\r
+"primljenih računa ovaj mjesec ·",\r
+"primljeno od nalogodavca ili druge strane",\r
+"Primljeno: {0} {1}; srednji kurs CBCG na dan {2}: {3} {4} za 1 EUR",\r
+"Prirez (%)",\r
+"Prirez %",\r
+"Pristanak klijenta je upisan.",\r
+"Pristanak na povećanje",\r
+"Pristanak na povećanje je upisan; nalog je ponovo u radu.",\r
+"Pristanak se upisuje za nalog sa ponudom ili za povećanje cijene (sada: {0}).",\r
+"Pristupi nadzornih organa podacima",\r
+"Procenat naknade nije ispravan.",\r
+"PRODAJE SE",\r
+"Prodajna cijena",\r
+"Prodajna cijena odnosno cijena zakupa se utvrđuje tako da uključuje naknadu za posredovanje (Zakon o posredovanju, čl. 18 st. 3). Potrebno je označiti „Cijena uključuje naknadu za posredovanje\\".",\r
+"Prodajna cijena odnosno zakupnina sa uračunatom naknadom za posredovanje (Zakon o posredovanju, čl. 18 st. 3)",\r
+"Prodavac",\r
+"Produženje ugovora",\r
+"Produženje ugovora…",\r
+"Produži do datuma",\r
+"Produži ugovor",\r
+"Profitabilnost projekta",\r
+"PROFITABILNOST PROJEKTA",\r
+"Projekat",\r
+"Projekat „{0}\\" nema kupca.",\r
+"Projekat „{0}\\": evidentirano {1} h, budžet {2} h.",\r
+"projekat {0}",\r
+"Projekat {0}",\r
+"projekat bez kupca",\r
+"Projekat ima {0} unosa sati i ne briše se. Završen projekat se označava statusom „završen\\".",\r
+"Projekat je obrisan.",\r
+"Projekat je snimljen.",\r
+"Projekat ne postoji.",\r
+"Projekat nije aktivan; sati se unose samo na aktivan projekat.",\r
+"Projekat nije izabran.",\r
+"Projekat sa šifrom {0} već postoji.",\r
+"Projekata",\r
+"Projekti",\r
+"PROJEKTI",\r
+"Projekti i evidencija sati",\r
+"Projekti po klijentima · evidencija radnih sati · faktura iz evidentiranih sati",\r
+"Projekti po klijentima, evidencija radnih sati i fakturisanje po evidentiranim satima.",\r
+"promet",\r
+"Promet kulturnih dobara, dragocjenih metala i dragog kamenja (t. 13 al. 12)",\r
+"Promet motornih vozila (t. 13 al. 10)",\r
+"Promet plovnih i vazduhoplovnih objekata (t. 13 al. 11)",\r
+"Promet sa inostranstvom",\r
+"Promet van CG — ne podliježe PDV (dodatna kolona)",\r
+"Promet van Crne Gore (mjesto prometa u inostranstvu)",\r
+"promjena",\r
+"promjena (prvi unos {0})",\r
+"promjena podataka",\r
+"Promjene za upis u evidenciju o posredovanju:",\r
+"Promjene za upis u evidenciju o posredovanju: {0}",\r
+"Propis",\r
+"Prosječno kašnjenje (dana)",\r
+"Prosta kamata po stopi CBCG za svako polugodište, 36.500 (prestupna godina 36.600); uplata umanjuje glavnicu od dana uplate. Kupcu privrednom subjektu i naknada troškova naplate po zakašnjeloj fakturi.",\r
 "provjera ažuriranja",\r
 "Provjera prije plaćanja",\r
 "Provjera prije plaćanja:\\n{0}",\r
 "Provjera računa:",\r
+"provjera u Registru stvarnih vlasnika",\r
+"Provjera u Registru stvarnih vlasnika",\r
 "provjeriti da su uvjerenja dostavljena",\r
 "Prva strana",\r
 "Prvi račun dobavljača u ovoj firmi",\r
 "Prvo plaćanje ovom dobavljaču. Prije plaćanja provjeriti podatke dobavljača i račun primaoca.",\r
 "Prvo zaključavanje",\r
+"punomocnik",\r
+"punomoćnik",\r
+"Putanja do potpisanog ugovora (PDF) na ovom računaru; fajl ne putuje razmjenom",\r
+"Putanja fajla (folder firme {0})",\r
+"Putanja skeniranog dokumenta nije upisana.",\r
+"QR nije validan. Nedostaje IIC računa.",\r
+"QRText",\r
+"račun br. {0} od {1}",\r
+"račun br. {0}{1}",\r
+"Račun glasi na drugog kupca. Upis u troškove je moguć samo uz izričitu potvrdu.",\r
+"Račun izdat kroz registrovan fiskalni softver: broj i datum za evidenciju (podatak 14)",\r
+"Račun izdat van programa",\r
+"Račun izdat van programa…",\r
+"Račun je već unesen kao kalkulacija (#{0}).",\r
+"Račun je već upisan u troškove (Nabavka i troškovi, unos {0}).",\r
+"Račun koji nije roba (struja, voda, telefon, gorivo…) prelazi u „Nabavka i troškovi\\"; kalkulacija se briše (trgovačka knjiga i zalihe), dug dobavljaču ostaje kao trošak, ulazni PDV ostaje u istom mjesecu.",\r
+"Račun naknade",\r
+"Račun naknade je upisan.",\r
+"Račun nema iznosa (stavke ni zbirni podaci po stopama).",\r
+"račun nije izdat",\r
+"Račun plaćen virmanom je dug dobavljaču do plaćanja (saldo, kartica, otvorene stavke, dospijeća, IOS). Plaćen gotovinom ili karticom ne ulazi u dug.",\r
+"Račun u stranoj valuti nosi oznaku valute i kurs; iznosi u poruci su u EUR.",\r
+"Račun unesen QR kodom {0}",\r
+"Račun za posredničku naknadu po ugovoru {0}",\r
+"Račun za posredničku naknadu se izdaje tek po zaključenju pravnog posla (Zakon o posredovanju, čl. 27 st. 1–2).",\r
+"Račun za robu ide u kalkulaciju (zaliha, trgovačka knjiga). Račun za struju, telefon, zakup, usluge i sl. ide direktno u troškove (Nabavka i troškovi), bez kalkulacije i bez objekta.",\r
+"Računovođe",\r
+"Rad počinje poslije pristanka klijenta (sada: {0}).",\r
+"Radni nalog {0} — {1}",\r
+"Radni nalog {0} — {1}{2}",\r
+"Radni nalog {0} — {1}{2}.",\r
+"Radni nalog {0} je evidentiran i na drugom računaru; ovdašnji nalog dobija broj {1}.",\r
+"Radni nalog {0} sa drugog računara dobija broj {1} (broj je ovdje već zauzet ranijim nalogom).",\r
+"Radni nalog je obrisan.",\r
+"Radni nalog je snimljen.",\r
+"Radni nalog ne postoji.",\r
+"Radni nalog nije snimljen.",\r
+"Radni nalozi",\r
+"RADNI NALOZI",\r
+"Radni nalozi čekaju pisani pristanak klijenta na povećanje cijene: {0}",\r
+"Radnik nije izabran ni upisan.",\r
+"Radnik nije u evidenciji radnika.",\r
 "Radnika: {0} ({1}{2}).",\r
 "radnja",\r
+"Radovi, djelovi i materijal",\r
 "Rashod (otpis)",\r
+"Razlika između uplate ({0} EUR) i otvorenog dijela fakture ({1} EUR) je veća od {2} % i nije kursna razlika.",\r
+"Razlika je kursna",\r
+"Razlog (obavezno)",\r
+"razlog odnosa",\r
+"Razlog odnosa",\r
+"Razlog otkaza",\r
 "Razlog otključavanja",\r
 "Razlog otključavanja mjeseca {0} {1}. (upisuje se u izvještaj „Izmjene poslije zaključenja\\"):",\r
 "račun firme {0}",\r
@@ -219,53 +1874,641 @@ const a=`[\r
 "Račun {0} je obrisan. Dug dobavljaču {1} je umanjen za {2} EUR.",\r
 "Računi dobavljača bez kalkulacije",\r
 "Računi dobavljača bez kalkulacije: {0}, ukupno {1} EUR.",\r
+"Razlog poslovnog odnosa nije sa spiska.",\r
+"Razlog poslovnog odnosa, odnosno transakcije nije izabran (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Razlog storna",\r
+"Razlog storna je obavezan.",\r
+"Razlozi za izvršenje transakcije (obrazloženje)",\r
+"Razlozi za sumnju",\r
+"Razlozi za sumnju (kad postoje)",\r
+"Razlozi za sumnju nisu upisani (ZSPNFT čl. 117 st. 8).",\r
+"Razlozi za sumnju nisu upisani.",\r
 "Rb",\r
 "Rbr",\r
+"Redni broj unosa",\r
+"Redni broj unosa je neprekidan. Promjena se upisuje kao nov unos sa pozivom na prvobitni unos; unosi se ne brišu i ne mijenjaju (evidencija se čuva trajno).",\r
 "Redovi {0}–{1} od {2}. Zbir, izvoz i štampa obuhvataju sve redove.",\r
+"Redovna",\r
+"Referentna stopa ECB za glavne operacije refinansiranja (MRO) koja važi prvog dana polugodišta",\r
+"REGISTAR KLIJENATA (ZSPNFT čl. 117)",\r
+"Registar klijenata, paket Usklađenost (ZSPNFT): pravni posao nalogodavca ulazi u provjeru pragova za dostavu podataka FOJ-u (ZSPNFT čl. 66)",\r
+"REGISTAR NEPOKRETNOSTI",\r
+"Registar nepokretnosti · ugovori o posredovanju · evidencija o posredovanju · obilasci · depozitni račun",\r
+"registar nepokretnosti, ugovori i evidencija o posredovanju, depozitni račun",\r
+"Registar nepokretnosti, ugovori o posredovanju, evidencija o posredovanju, obilasci i depozitni račun.",\r
+"Registar posrednika",\r
+"Revizija finansijskih izvještaja",\r
+"Revizija, računovodstvo i poresko savjetovanje (t. 13 al. 2)",\r
+"Rezident",\r
+"Rezultat",\r
 "rezultat nije SQLite baza",\r
+"Rizik",\r
+"RN-{0}-{1}",\r
+"Roba (kalkulacija)",\r
+"Rok (radnih dana)",\r
+"Rok čuvanja",\r
+"Rok čuvanja do",\r
+"Rok čuvanja istekao",\r
+"Rok istekao",\r
+"Rok iz opomene (dana)",\r
+"Rok iz opomene mora biti između 1 i 90 dana.",\r
+"Rok izvršenja nije ispravan.",\r
+"Rok izvršenja transakcije",\r
+"Rok plaćanja (dana) nije ispravan.",\r
+"Rok plaćanja (datum valute)",\r
+"rok plaćanja (upozorenje)",\r
+"Rok plaćanja je prije datuma nabavke.",\r
+"Rok plaćanja naknade",\r
+"Rok plaćanja nije ispravan datum.",\r
+"Rok podsjetnika za nepreuzet uređaj mora biti između 1 i 365 dana.",\r
+"Rok važenja ponude je istekao",\r
+"Rok za odgovor",\r
+"rok za odgovor je istekao {0}",\r
+"Rok za otkaz ugovora {0}",\r
+"Rok za plaćanje iz opomene mora biti između 1 i 90 dana.",\r
+"Rok za upis",\r
+"Rok za upis u evidenciju je istekao {0}",\r
+"Rok za upis u Registar posrednika je istekao",\r
+"Rok za upis u Registar posrednika je istekao {0} Posredovanje bez upisa nije dozvoljeno (Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 36); broj upisa se unosi u kartici Podaci posrednika.",\r
+"Rok za visokorizičnu državu (dana)",\r
+"Rok: {0} ({1}).",\r
+"Rokovi čuvanja",\r
+"RON",\r
+"ROUND({0} - {1}, 2)",\r
+"RSD",\r
+"RUB",\r
 "Ručna potvrda",\r
 "Ručno",\r
 "Ručno unesena faktura: {0}, {1} EUR (kalkulacija {2}).",\r
+"Sadržaj fiskalne poruke fakture",\r
+"Saglasnost kupca za elektronski račun je upisana.",\r
+"Saglasnost za elektronski račun (datum)",\r
+"Saglasnost za potposredovanje",\r
+"Saldo po ugovoru",\r
+"Šalji datum ili period prometa (SupplyDateOrPeriod)",\r
+"Šalji poreski period mjesečne fakture (TaxPeriod)",\r
+"Šalji valutu računa (Currency)",\r
+"samo bez odgovora",\r
+"Samo prijave koje čekaju",\r
+"Samo usluge",\r
+"Sati bez troška",\r
+"sati po projektu i klijentu",\r
+"Sati po radniku",\r
+"SATI PO RADNIKU I MJESECU",\r
+"Sati su evidentirani.{0}",\r
+"Sati su fakturisani (faktura {0}) i ne mijenjaju se. Za izmjenu se faktura stornira ili briše nacrt.",\r
+"Sati zaključno sa",\r
+"Satnica",\r
+"Satnica (EUR, bez PDV)",\r
+"Satnica (EUR)",\r
+"Satnica nije ispravna.",\r
+"Saznanje iz pouzdanih izvora (koji uključuju medije ili druge otvorene izvore podataka) koji ukazuju da je klijent uključen u neke nelegalne aktivnosti.",\r
+"Sedmica (bilo koji dan)",\r
+"Sedmica je snimljena: novih unosa {0}, izmijenjeno {1}, obrisano {2}.",\r
+"SEK",\r
+"Ser. broj / registracija",\r
+"Serijski broj / registracija",\r
+"Servis: radni nalozi",\r
+"šifarnik (zaliha)",\r
+"Šifra „{0}\\" je zauzeta.",\r
+"Šifra (nije obavezna)",\r
+"šifra djelatnosti",\r
+"Sjedište (adresa i grad, odnosno opština) nije upisano (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Skenirana dokumentacija",\r
+"Skenove u folderu firme obrisati ručno: {0}",\r
+"Skladištenje i promet kulturnih dobara u lukama i slobodnoj zoni (t. 13 al. 13)",\r
+"Slanje {0} faktura kupcima e-poštom (SMTP).{1} Nastaviti?",\r
+"Slanje više faktura odjednom ide preko SMTP servera (Podešavanja → E-pošta); bez njega faktura se šalje pojedinačno (✉).",\r
 "Sljedeća strana",\r
 "Sljedeći pogodak",\r
+"Složena",\r
+"Složene i neuobičajene transakcije",\r
 "Smjene: odsustva i praznici (godišnji, bolovanje, menstrualno, očinsko…)",\r
+"Smjer (primljeno ili predato) nije izabran.",\r
+"Snimi dopunu",\r
+"Snimi izmjenu",\r
+"Snimi kurs",\r
+"Snimi obračun",\r
 "Snimi plaćanje",\r
+"Snimi stopu",\r
+"Snimi utuženje",\r
+"Snimljeni obračuni",\r
 "Snimljeni rezultati ovog obračuna potiču od starijeg pravila (prirez odbijen od neta radnika; prirez je na teret poslodavca i ne umanjuje neto).",\r
+"Sopstveni indikator",\r
+"Sopstveni indikator {0} je dodat.",\r
+"Sopstveni indikator {0} sa drugog računara dobija šifru {1} (šifra je ovdje zauzeta).",\r
+"Sopstveni indikatori obveznika",\r
+"Specifikacija sati — prilog fakture",\r
+"Specifikacija se izdaje uz račun za izvršenu uslugu ({0} st. 4).",\r
+"SPISAK UGOVORA SA KLIJENTIMA",\r
+"Spisak visokorizičnih trećih država je prazan.",\r
+"spoljni saradnik — bez obračuna zarada",\r
+"Sprat / spratnost",\r
+"Sprat: {0}",\r
 "Spremno za sljedeći QR kod.",\r
+"Srednji",\r
+"Srednji kurs CBCG na dan priliva: jedinica valute za 1 EUR",\r
+"Srednji kurs CBCG: jedinica valute za 1 EUR (ZPDV čl. 23 st. 2)",\r
+"Srednji kurs Centralne banke Crne Gore (jedinica valute za 1 EUR). Kad lista CBCG nije dostupna, kurs se uzima sa liste ECB posljednjeg radnog dana CBCG; bez oba izvora kurs se upisuje ručno uz napomenu. Preuzet kurs se čuva i ne traži se ponovo.",\r
+"Šta se upisuje",\r
 "Stanje knjiga pri prvom zaključavanju mjeseca (ili zatečeno pri prelasku na verziju 2.7.0) upoređeno sa današnjim, i sva otključavanja sa razlogom.",\r
 "Stanje knjiga pri prvom zaključavanju mjeseca upoređeno sa današnjim, i sva otključavanja sa razlogom. Za mjesec zaključan prije verzije 2.7.0 polazište je stanje zatečeno pri prvom otključavanju u 2.7.0.",\r
+"Stanje pri prijemu (oštećenja, tragovi)",\r
 "Stanje pri prvom zaključavanju i danas; otključavanja sa razlogom",\r
+"Stanje računa",\r
+"Stanje ugovora:",\r
+"Starost",\r
+"Starost objekta",\r
+"STAROST POTRAŽIVANJA",\r
+"Status nepokretnosti nije poznat.",\r
+"Status ponude",\r
+"Status ponude je snimljen.",\r
+"Status ponude: poslata, prihvaćena ili odbijena.",\r
+"Status projekta: aktivan, završen ili obustavljen.",\r
+"Status se vodi samo za ponude.",\r
+"Status ugovora: aktivan, raskinut ili istekao.",\r
+"Stavka „{0}\\": cijena nije ispravna.",\r
+"Stavka „{0}\\": količina mora biti veća od nule.",\r
+"Stavka „{0}\\": stopa PDV-a 21, 15, 7 ili 0 %.",\r
+"Stavka „{0}\\": stopa PDV-a je 21, 15, 7 ili 0 %.",\r
+"Stavka „{0}\\": vrsta je rad, dio ili materijal.",\r
+"Stavke (cijena bez PDV u",\r
+"Stavke fakture",\r
 "Stavki koje traže pažnju: {0}",\r
 "Stavki koje čekaju i odgovaraju ovom pravilu:",\r
+"Stopa — poreski suverenitet (%)",\r
+"Stopa (% godišnje)",\r
+"Stopa ECB (MRO, %)",\r
+"Stopa je obrisana.",\r
+"Stopa na dan",\r
+"Stopa PDV-a: 21, 15, 7 ili 0 %.",\r
+"Stopa po ugovoru (%)",\r
+"Stopa po ugovoru o izbjegavanju dvostrukog oporezivanja nije ispravna.",\r
+"Stopa poreza po odbitku nije ispravna.",\r
+"Stopa se utvrđuje za svako polugodište: referentna stopa Evropske centralne banke za glavne operacije refinansiranja koja važi prvog dana polugodišta, uvećana za 8 procentnih poena. Objavljuje je Centralna banka Crne Gore prvog radnog dana polugodišta. Obračun za period bez unesene stope se ne pravi.",\r
+"Stopa za {0} je snimljena.",\r
+"Stopa za teritorije sa poreskim suverenitetom nije ispravna.",\r
+"Stopa zatezne kamate CBCG za {0} nije unesena",\r
+"Stopa zatezne kamate mora biti veća od 0 i manja od 100 %.",\r
+"Stopa zatezne kamate se unosi po polugodištu: od 01.01. ili od 01.07.",\r
+"Stopa zatezne kamate za period od {0} nije unesena.",\r
+"Stope i države",\r
+"Stope zatezne kamate",\r
+"Stornirati obračun {0}? Period ovog obračuna se može ponovo obračunati.",\r
+"Storno unos je upisan.",\r
+"Storno unos se ne stornira.",\r
+"storno unosa {0}",\r
+"Storno unosa {0}",\r
+"Storno unosa…",\r
 "Strana {0} od {1}",\r
 "Strana {0}/{1}",\r
+"Stručno osposobljavanje i usavršavanje zaposlenih",\r
+"Stručno osposobljavanje zaposlenih",\r
+"Struktura",\r
+"Struktura: {0}",\r
+"Strukturirani depoziti (izvjesno je planski vršeno deponovanje gotovog novca u određenim iznosima, periodično, od strane različitih lica kako bi se izbjeglo lako uočavanje) koji se koriste kao garancija za kredit, deponovanje velikih iznosa novca koji su uplaćeni u istim velikim novčanim apoenima ili sitnim apoenima.",\r
+"stvarni vlasnici",\r
+"Stvarni vlasnici",\r
+"Stvarni vlasnik",\r
+"Stvarni vlasnik je politički eksponirano lice.",\r
+"Stvarni vlasnik klijenta je strano fizičko lice državljanin \\"poreskog raja\\", odnsono visoko-rizične treće države, dok se iz opšteg poslovanja stiče utisak da je stvarni vlasnik neko domaće fizičko lice.",\r
+"Stvarni vlasnik nije upisan.",\r
+"Stvarnih vlasnika",\r
+"Stvarno pravo",\r
+"Suma po slučaju",\r
+"Suma za godinu",\r
+"Sumnjiva",\r
+"Sumnjiva transakcija",\r
+"Sumnjiva transakcija — {0}",\r
+"Sumnjiva transakcija je upisana; podaci se dostavljaju FOJ-u do {0}",\r
+"Sumnjiva transakcija se upisuje dugmetom „Sumnjiva transakcija\\" (sa razlozima i indikatorima).",\r
 "Svaka stavka se provjerava iz podataka. Upozorenje koje je u redu (npr. račun bez prometa) potvrđuje se ručno; potvrda pamti ko je i kada potvrdio.",\r
+"Sve izmjene i dopune ugovora važe samo u pisanoj formi. Sporove strane rješavaju sporazumno, a u suprotnom nadležni sud u Crnoj Gori.",\r
 "sve transakcije su proknjižene ili razvrstane",\r
+"Svi obavezni elementi su upisani.",\r
+"svi unosi",\r
+"Svrha i namjena",\r
+"svrha odnosa",\r
+"Svrha, namjena i priroda odnosa",\r
+"t.KljucRacuna NOT IN ({0})",\r
 "t.Status='ceka' AND t.Napomena LIKE ?",\r
+"TAX",\r
+"Tekst indikatora iz Pravilnika se ne mijenja; firma dodaje sopstveni indikator.",\r
+"Tekst oglasa",\r
+"Tereti",\r
+"Tereti i upisana prava (napomena)",\r
+"Tip transakcije nije sa spiska.",\r
 "Trajna podešavanja nijesu dostupna.",\r
+"transakcija {0} EUR uključuje visokorizičnu treću državu ({1})",\r
+"Transakcija izvoda depozitnog računa",\r
+"Transakcija izvoda je već vezana za drugi unos depozita.",\r
+"Transakcija je upisana (praćenje poslovanja klijenta). Obaveza dostave FOJ-u po iznosu ne postoji.",\r
+"Transakcija je upisana u evidenciju složenih i neuobičajenih transakcija.",\r
+"Transakcija je upisana. {0}",\r
+"Transakcija je već izvršena",\r
+"Transakcija klijenta",\r
+"Transakcija koju klijent obavlja nije u skladu sa njegovom uobičajenom poslovnom praksom.",\r
+"Transakcija se ne izvršava do dostave podataka FOJ-u (ZSPNFT čl. 66 st. 6–7).",\r
+"Transakcija se provjerava prema pragovima za dostavu podataka FOJ-u (vrsta obveznika i pragovi: kartica Analiza rizika). Sumnjiva transakcija se upisuje u kartici Transakcije i prijave FOJ-u.",\r
 "Transakcije banke",\r
 "Transakcije banke proknjižene i razvrstane",\r
+"Transakcije gdje klijent zahtijeva plaćanje koje se sastoji od više manjih uplata, koje u zbiru čine cijenu nepokretnosti (usitnjavanje), naročito ako se radi o nekretninama velike vrijednosti i ako postoje saznanja da su ugovorne strane povezane sa nelegalnim ili kriminalnim aktivnostima.",\r
+"Transakcije i prijave FOJ-u",\r
+"Transakcije koje dolaze iz država koje se nalaze na \\"crnoj listi\\", koje ne primjenjuju propise iz oblasti sprečavanja pranja novca ili finansiranja terorizma i gdje postoji visok rizik od pranja novca, bez obzira na to da li klijent dolazi iz tih država.",\r
+"Transakcije sa pravnim licima čiji identitet stvarnih vlasnika je teško utvrditi.",\r
+"Transakcije za koje su zaposleni kod obveznika (u daljem tekstu: obveznik) na osnovu iskustva, znanja i informacija kojima raspolažu, ocijenili da nijesu u skladu sa uobičajenim aktivnostima klijenta",\r
 "Traži u svim redovima",\r
+"Trgovačka knjiga za {0}. je zaključena i pripremljena za ovjeru. Prebacivanje fakture iz {1}/{2} u troškove nije moguće bez poništavanja zaključenja knjige (Trgovačka knjiga → „Poništi zaključenje {3}.\\").",\r
+"trošak",\r
+"Trošak „{0}\\"{1} od {2} na isti iznos",\r
+"Trošak „{0}\\"{1} od {2} na isti iznos je upisan kao plaćen gotovinom i već je knjižen na blagajnu. Ista isplata se ne unosi ponovo kroz blagajnu.",\r
+"Trošak (bez kalkulacije)",\r
+"trošak {0}",\r
+"Trošak iz „Nabavka i troškovi\\" sa ovim dobavljačem (račun bez kalkulacije)",\r
+"Trošak iz ovog računa ulazi u knjige ove firme, a ulazni PDV u PR-PDV. Upisati trošak?",\r
+"Trošak je unesen prije verzije 2.7.5 bez načina plaćanja i nije u dugu dobavljaču (saldo, otvorene stavke, IOS). Oznaka „dug\\" ga uvodi u dug; plaćanja se vežu na ekranu Obaveze.",\r
+"Trošak je upisan kao dug dobavljaču.",\r
+"Trošak je upisan: {0}, račun {1}, {2} EUR.",\r
+"Trošak je već plaćen",\r
+"Trošak nema dobavljača iz šifarnika, pa nije dug dobavljaču.",\r
+"Trošak nije upisan: {0}",\r
+"Trošak nije upisan.",\r
+"Trošak plaćen gotovinom (blagajna)",\r
+"Trošak plaćen karticom (tekući račun)",\r
+"Trošak rada",\r
+"Trošak se knjiži i kao isplata iz blagajne. Ista isplata se ne unosi ponovo u blagajnu.",\r
+"Trošak se knjiži i kao plaćanje sa tekućeg računa. Transakcija kartice na izvodu se ne razvrstava kao plaćanje dobavljaču.",\r
+"trošak stranog dobavljača",\r
+"Trošak: {0}",\r
+"Troškovi dodatnih usluga (izričito ugovoreni, čl. 27 st. 4): {0}.",\r
+"Troškovi dodatnih usluga (samo ako su izričito ugovoreni)",\r
+"Troškovi dodatnih usluga nisu ugovoreni.",\r
+"TRY",\r
+"Tržišni",\r
+"Tužba je podnesena prije otvaranja stečajnog postupka nad kupcem (Zakon o PDV čl. 20a).",\r
+"U EUR (PDV",\r
+"U godini nema evidentiranih prigovora.",\r
 "U godini nema zaključanih mjeseci.",\r
+"U klijentovom poslovanju pojavljuju se velike i neobjašnjive oscilacije u prihodima i/ili rashodima, odnosno neuobičajeno i neobjašnjivo visoki prihodi u odnosu na rashode.",\r
+"u potpunosti",\r
+"U prilogu se nalazi avansni račun {0}.",\r
+"U prilogu se nalazi izvod otvorenih stavki{0}. Molimo da potvrdite saglasnost sa iskazanim stanjem ili dostavite primjedbe u roku od 8 dana.",\r
+"U prilogu se nalazi knjižno odobrenje {0}.",\r
+"U prilogu se nalazi obračun zatezne kamate {0} sa specifikacijom po fakturama i periodima.",\r
+"U prilogu se nalazi opomena {0} za fakture kojima je istekao rok plaćanja. Molimo da dug izmirite u roku navedenom u opomeni. Ako je plaćanje već izvršeno, molimo da dostavite podatke o uplati.",\r
+"u radu",\r
+"U ratama",\r
 "u ravnoteži",\r
+"u roku",\r
+"u roku od 8 dana od zaključenja pravnog posla",\r
+"U šifarniku već postoji artikal „{0}\\"{1}.",\r
+"Učešće %",\r
+"Ucestalost",\r
+"Učestalost",\r
+"Učestalost fakturisanja: mjesečno, kvartalno ili godišnje.",\r
+"Udio",\r
+"Udio (%)",\r
+"Udio stvarnog vlasnika je od 0 do 100 %.",\r
+"UG-{0}-{1}",\r
+"UG-{0}-%",\r
+"Ugovor (država, član)",\r
+"ugovor {0}",\r
+"Ugovor {0}",\r
+"Ugovor {0} je obrisan.",\r
+"Ugovor {0}, period {1}.",\r
+"Ugovor broj {0} već postoji.",\r
+"Ugovor ima stavke sa 0 % PDV. Potrebno je izabrati osnov (čl. 25, 26, 27 ili 17 Zakona o PDV), koji se štampa na fakturi.",\r
+"ugovor ističe",\r
+"ugovor ističe — produženje ili nov ugovor",\r
+"Ugovor je istekao {0} Otkaz nije moguć: ugovor je prestao istekom vremena na koje je zaključen (Zakon o posredovanju, čl. 19).",\r
+"Ugovor je izmijenjen.",\r
+"Ugovor je obrisan.",\r
+"Ugovor je prestao i ne produžava se; zaključuje se nov ugovor.",\r
+"Ugovor je produžen.",\r
+"Ugovor je sačinjen u dva istovjetna primjerka, po jedan za svaku stranu.",\r
+"Ugovor je snimljen.",\r
+"Ugovor je već otkazan {0}",\r
+"Ugovor mora imati bar jednu stavku.",\r
+"Ugovor mora imati kupca.",\r
+"Ugovor ne postoji.",\r
+"Ugovor nema stavki.",\r
+"Ugovor nije aktivan ({0}).",\r
+"ugovor o djelu",\r
+"Ugovor o izbjegavanju dvostrukog oporezivanja",\r
+"ugovor o izbjegavanju dvostrukog oporezivanja, ZPDPL čl. 29a ({0} %)",\r
+"Ugovor o posredovanju",\r
+"Ugovor o posredovanju {0}",\r
+"Ugovor o posredovanju {0} ističe",\r
+"Ugovor o posredovanju {0} je zaključen i na drugom računaru; ovdašnji ugovor dobija broj {1}.",\r
+"Ugovor o posredovanju {0} sa drugog računara dobija broj {1} (broj je ovdje već zauzet ranijim ugovorom).",\r
+"Ugovor o posredovanju {0}; kapara zadržana {1}",\r
+"Ugovor o posredovanju i dokumenta vezana za ugovor",\r
+"Ugovor o posredovanju je snimljen i upisan u evidenciju.",\r
+"Ugovor o posredovanju koji predviđa naplatu iz kapare",\r
+"Ugovor o posredovanju ne sadrži obavezne elemente (Zakon o posredovanju, čl. 18 st. 2): {0}.",\r
+"Ugovor o posredovanju nije izabran.",\r
+"Ugovor o posredovanju se čuva deset godina od zaključenja (Pravilnik 45/26, čl. 5 st. 2); brisanje je moguće od {0}",\r
+"Ugovor sadrži sedam obaveznih elemenata (čl. 18 st. 2).",\r
+"ugovor se automatski produžava",\r
+"Ugovor se zaključuje {0} na određeno vrijeme do {1} i može se produžiti (čl. 19).",\r
+"Ugovor važi do upisanog datuma (čl. 19); promjena se upisuje u evidenciju o posredovanju.",\r
+"Ugovor: otkazni rok prije isteka",\r
+"Ugovor: rok važenja",\r
+"ugovoreno {0} {1}",\r
+"ugovoreno {0} od cijene",\r
+"Ugovori i ponavljajuće fakture",\r
+"Ugovori i ponavljajuće fakture → Plan fakturisanja",\r
+"Ugovori kojima je istekao rok čuvanja od deset godina:",\r
+"Ugovori o posredovanju",\r
+"UGOVORI O POSREDOVANJU",\r
+"Ugovori sa klijentima · periodično fakturisanje (mjesečno, kvartalno, godišnje) · rokovi važenja ugovora",\r
+"Ugovori sa klijentima, periodično fakturisanje (mjesečno, kvartalno, godišnje) i rokovi važenja ugovora.",\r
+"Ugovori: periodi za fakturisanje — {0}",\r
+"Uključuju se ručno, po potrebi firme. Podaci se ne brišu kad se evidencija isključi.",\r
+"Ukloni stavku",\r
+"Ukloniti „{0}\\" sa spiska dokumentacije klijenta? Fajl ostaje u folderu.",\r
+"Ukupno ({0})",\r
+"Ukupno prigovora: {0}. Odgovoreno: {1}. Bez odgovora: {2}.",\r
+"ukupno sa PDV-om",\r
+"Ukupno unosa: {0}.",\r
 "Ulaz (kalkulacije)",\r
 "Ulazni računi imaju kalkulaciju sa stavkama",\r
+"Ulica i broj",\r
+"Uloga nije sa spiska.",\r
+"Umanjen PDV",\r
+"Unaprijed",\r
+"unaprijed (period koji počinje)",\r
+"Unesi stopu",\r
 "Unesi u {0}",\r
+"unijeti stopu (Podešavanja → Zatezna kamata i opomene)",\r
+"Unos {0} evidencije o posredovanju je napravljen i na drugom računaru; ovdašnji unos dobija redni broj {1}.",\r
+"Unos {0} evidencije o posredovanju sa drugog računara dobija redni broj {1} (broj je ovdje već zauzet ranijim unosom).",\r
+"Unos {0} je interni (ne fakturiše se).",\r
+"Unos {0} je već fakturisan (faktura {1}).",\r
+"Unos {0} je već storniran.",\r
+"Unos {0} nema satnicu.",\r
+"Unos depozita",\r
+"Unos depozita je obrisan.",\r
+"Unos depozita je snimljen.",\r
+"Unos depozita je snimljen. {0}.",\r
+"Unos evidencije {0}",\r
+"Unos je upisan u evidenciju.",\r
+"Unos nastaje dugmetom „Uvid nadzornog organa\\" (kartica Transakcije i prijave FOJ-u).",\r
+"Unos ne čeka dostavu FOJ-u.",\r
+"Unos ne postoji.",\r
+"Unos o obuci ne postoji.",\r
 "Unos plaćanja dobavljaču",\r
+"Unos sati",\r
+"Unos sati je izmijenjen.",\r
+"Unos sati je obrisan.",\r
+"Unos sati ne postoji.",\r
+"Unosa",\r
+"Unosi bez podatka 6 (agent):",\r
+"Unosi nastaju pri svakom upisu i izmjeni podataka klijenta i pri upisu transakcije.",\r
+"Unosi nastaju u kartici Transakcije i prijave FOJ-u.",\r
+"UP-{0}-{1}",\r
 "Upamćen račun primaoca",\r
+"Upis prigovora klijenta u Knjigu prigovora, sa vezom na ovaj nalog",\r
+"Upis u Registar posrednika",\r
+"Upis u Registar posrednika: rok",\r
+"upis ugovora",\r
+"Upisani podaci se ne mijenjaju; odgovor se može dopuniti, a kontakt potrošača izmijeniti.",\r
+"Upisano je da je opomena poslata poštom.",\r
+"upisano poslije roka od {0} dana (promjena {1})",\r
+"Upisano u evidenciju: {0}.{1}",\r
+"Upisati dostavu FOJ-u {0}? Poslije upisa prijava se više ne mijenja.",\r
+"Upisati otkaz ugovora {0} na dan {1}?",\r
+"Upisati storno unosa {0}? Storno je nov trajan unos u evidenciji o posredovanju.",\r
+"Upisati trošak „{0}\\" kao dug dobavljaču (plaćanje virmanom)?",\r
+"Upisati zaključen pravni posao po ugovoru {0}: {1}, cijena {2} EUR?",\r
+"Upiši dostavu",\r
+"Upiši kao dug",\r
+"Upiši otkaz",\r
+"Upiši preuzimanje",\r
+"Upiši pristanak",\r
+"Upiši promjene u evidenciju",\r
+"Upiši račun",\r
+"Upiši saglasnost danas",\r
+"Upiši storno",\r
+"Upiši transakciju",\r
+"Upiši trošak",\r
+"Upiši zaključen posao",\r
 "Upisuje",\r
+"Uplaćen porez",\r
+"Uplata / isplata",\r
+"Uplata i faktura pripadaju različitim kupcima.",\r
+"Uplata i obračun kamate pripadaju različitim kupcima.",\r
+"Uplata ili faktura ne postoji.",\r
+"Uplata ili obračun kamate ne postoji.",\r
+"Uplata je razvezana od obračuna.",\r
+"Uplata je već evidentirana u valuti; kursna razlika se obračunava iz veze.",\r
+"Uplata je vezana i za druge fakture. Kursna razlika se zatvara za uplatu koja plaća samo ovu fakturu.",\r
+"Uplata je vezana i za obračun kamate.",\r
+"Uplata je vezana za obračun kamate.",\r
+"Uplata kupca kojom je plaćena kamata i naknada (zatvara potraživanje za kamatu)",\r
+"Uplata od {0} ({1}) vezana za obračun kamate još nije primljena.",\r
+"Uplata poreza",\r
+"Uplate, prilivi sa izvoda, depoziti i pravni poslovi klijenata iz registra se provjeravaju prema pragovima iz čl. 66; kad je prag dostignut, prijava se pojavljuje ovdje sa rokom. Dostava ide kroz aplikaciju FOJ-a uz kvalifikovani elektronski potpis; program daje pregled podataka i bilježi datum dostave.",\r
+"Upravljanje imovinom za treća lica (t. 13 al. 4)",\r
+"Uređaj je primljen radi utvrđivanja kvara i popravke. Za popravku čija je vrijednost veća od {0} € klijentu se izdaje pisana ponuda sa specifikacijom radova, materijala i djelova; popravka počinje po prihvatanju ponude.",\r
+"Uređaj preuzet{0}, ispravan, sa predatom opremom.",\r
+"Uređaj se preuzima uz ovu prijemnicu. {0}.",\r
+"USD",\r
+"Usklađenost",\r
+"Usklađenost (ZSPNFT)",\r
+"Usklađenost → Analiza rizika",\r
+"Usklađenost → Lista indikatora",\r
+"Usklađenost → Ovlašćeno lice i obuke",\r
+"Usklađenost → Rokovi čuvanja",\r
 "Uslov",\r
+"usluga",\r
+"Usluga „{0}\\" je dodata u šifarnik.",\r
+"Usluga / artikal",\r
+"Usluga DESC,",\r
+"Usluga nema zalihu ni razduženje; barkod nije potreban. Na izlaznoj fakturi ide na prihod od usluga.",\r
+"Usluga nema zalihu ni razduženje; na fakturi ide na prihod od usluga.",\r
+"usluga stranog lica",\r
+"Usluga stranom poreskom obvezniku sa mjestom prometa van Crne Gore (Zakon o PDV čl. 17 st. 2) — osnov „čl. 17\\" na fakturi. Pravila su podesiva do odgovora Poreske uprave; zaključan mjesec zadržava pravila iz trenutka zaključavanja.",\r
+"Usluge (IT, agencije, konsalting, servisi, zakup)",\r
+"Usluge osnivanja pravnih lica, poslovne i fiducijarne usluge (t. 13 al. 3)",\r
+"Usluge po evidenciji radnih sati za period {0}. Specifikacija sati je prilog računa.",\r
+"Usluge po satu — {0}, {1}",\r
+"Usluge, poslovni odnosi i transakcije",\r
+"usmeno (do praga pisane ponude)",\r
+"Uspostavljanje poslovnog odnosa",\r
+"usvojena {0}",\r
+"Utužena potraživanja i ispravka PDV-a",\r
+"Utuženje i ispravka PDV-a se upisuju na fakturi (klik na fakturu u spisku otvorenih faktura).",\r
+"Utuženje je obrisano.",\r
+"Utuženje je upisano.",\r
+"Utuženje se upisuje samo za izdatu fakturu.",\r
+"Utuženo",\r
+"Utuženo potraživanje i ispravka PDV-a",\r
 "Uvezeno: {0}, {1} stavki, {2} EUR (zbirno, {3}).",\r
 "Uvezeno: {0}, {1} stavki, {2} EUR.",\r
+"Uvid je upisan u evidenciju. {0}",\r
+"uvid nadzornog organa",\r
+"Uvid nadzornog organa",\r
 "Uvjerenja ljekara za menstrualno odsustvo za {0}. godinu (radnica: {1})",\r
 "Uvoz izvoda iz pošte",\r
+"Uz odgovor se upisuje datum odgovora.",\r
+"Uz račun se izdaje specifikacija izvršenih radova, korišćenog materijala i djelova.",\r
+"Valuta nije ispravna.",\r
+"Valuta se upisuje troslovnom oznakom ISO 4217 (npr. USD, GBP, CHF).",\r
+"van Crne Gore",\r
+"važi",\r
+"Važi do (prazno = neodređeno)",\r
+"Važi na dan",\r
+"Već realizovano",\r
+"Veliki broj prenosa novčanih sredstava između nekoliko pravnih ili fizičkih lica koji se realizuju sistematski, po sumnjivim osnovima upotrebom računa samo kao prolaznih i tzv. escrow računa.",\r
 "Verzija {0} je povučena. Čeka se sljedeća verzija.",\r
+"video zapis",\r
+"Video-audio zapis (putanja fajla)",\r
+"Video-elektronska identifikacija",\r
+"Virman (dug dobavljaču)",\r
+"virmanom na račun posrednika",\r
+"Više transakcija kupoprodaje nepokretnosti koje vrši grupa fizičkih i/ili pravnih lica (nevladina, humanitarna, vjerska ili druga neprofitna organizacija) za koje se pretpostavlja da su umiješana u neke nedozvoljene radnje, a postoje sazanja da izvori novca za plaćanja potiču od nesrodnih lica.",\r
+"Više unosa za dan — izmjena u spisku unosa",\r
+"Visok",\r
+"Visokorizična država (EUR)",\r
+"Visokorizične treće države (ISO, odvojene zarezom)",\r
+"Vlasnik",\r
+"Vlasnik / nalogodavac",\r
+"Vlasnik klijenta je firma ili fizičko lice registrovano u \\"poreskom raju\\", državi preko koje se obavlja promet narkoticima ili državi u kojoj nije pravno regulisana oblast sprečavanja pranja novca i finansiranja terorizma, dok se iz opšteg poslovanja stiče utisak da je pravi vlasnik neko domaće fizičko lice.",\r
+"Vlasnik klijenta je firma registrovana u \\"poreskom raju\\", državi koja se dovodi u vezu sa proizvodnjom i prometom narkoticima ili državi u kojoj nije pravno regulisana oblast sprečavanja pranja novca i finansiranja terorizma.",\r
+"vraćanja",\r
+"Vrati podrazumijevani tekst",\r
+"Vrijednost ponuđene nepokretnosti je velika, a klijent daje nelogične odgovore o načinima plaćanja te nepokretnosti, odnosno raspituje se da se transakcije isključivo obave u gotovom novcu ili kombinovano sa nepouzdanim izvorima plaćanja.",\r
+"Vrijednost popravke je {0} €, veća od {1} €: potrebna je pisana ponuda sa specifikacijom radova, materijala i djelova koju potpisuju servis i klijent ({2} st. 1 i 3). Izdati ponudu za povećan iznos ili upisati pristanak potpisom ponude.",\r
+"Vrijednost popravke je {0} €, veća od {1} €: prije pristanka se izdaje pisana ponuda sa specifikacijom radova, materijala i djelova ({2} st. 1).",\r
+"Vrijednost popravke je veća od",\r
+"Vrijednost popravke je veća od {0} €: potrebna je pisana ponuda sa specifikacijom radova, materijala i djelova ({1} st. 1).",\r
+"Vrijednosti iz zakona: pisana ponuda za popravku čija je vrijednost sa PDV-om veća od 50,00 €; nov pisani pristanak klijenta za povećanje cijene veće od 10 %. Mijenjaju se samo uz izmjenu propisa.",\r
+"Vršenje transakcije",\r
+"Vrsta artikla je snimljena.",\r
+"Vrsta dokumenta nije upisana.",\r
+"Vrsta evidencije nije izabrana.",\r
+"vrsta isprave",\r
+"Vrsta klijenta",\r
+"Vrsta klijenta nije izabrana.",\r
+"Vrsta nepokretnosti",\r
+"Vrsta nepokretnosti nije izabrana.",\r
+"Vrsta obveznika",\r
+"Vrsta obveznika i pragovi za dostavu FOJ-u",\r
+"Vrsta obveznika nije izabrana.",\r
+"Vrsta obveznika: {0}. Lista obuhvata indikatore iz priloga Pravilnika ({1}) koje obveznik primjenjuje i sopstvene indikatore obveznika (ZSPNFT čl. 83). Pri utvrđivanju razloga za sumnju koriste se liste iz čl. 82 i 83 (čl. 81).",\r
+"Vrsta posla (prodaja ili zakup) nije izabrana.",\r
+"Vrsta prihoda",\r
+"Vrsta prihoda nije izabrana.",\r
 "Vrsta prometa",\r
 "vršiti {0}.",\r
+"Vrsta transakcije (gotovinska, bezgotovinska, kriptoimovina) nije izabrana.",\r
+"Vrsta unosa",\r
+"WHERE fd.DatumIzdavanja>=?",\r
+"WHERE kr.PlacID=?",\r
+"WHERE o.KupacID=?",\r
+"Za brzi unos se bira radnik; red je projekat, kolona dan u sedmici.",\r
+"Za dio naknade iz zadržane kapare upisuju se ugovor o posredovanju koji tu naplatu predviđa i datum kada je nalogodavac zadržao kaparu (Zakon o posredovanju, čl. 27 st. 3).",\r
+"Za dokument u valuti {0} potreban je kurs (jedinica valute za 1 EUR). Kurs se preuzima dugmetom „Preuzmi kurs\\" ili upisuje ručno.",\r
+"za fakturisanje",\r
+"Za fakturisanje",\r
+"Za fakturisanje (EUR)",\r
+"Za fakturisanje (sati)",\r
+"Za fakturu je urađena ispravka PDV-a. Datum utuženja se ne mijenja dok ispravka postoji.",\r
+"Za fakturu je urađena ispravka PDV-a. Prvo se poništava ispravka.",\r
+"Za fizičko lice se upisuje JMB, a za lice bez JMB broj lične isprave (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Za indeksaciju je potreban datum od kada važi.",\r
+"Za isti period ugovora postoje dvije fakture: {0} i {1}. Jedna se ispravlja stornom ili korektivnim računom.",\r
+"Za izabrani period nema unosa u evidenciji.",\r
+"Za izabrani period nema upisanih kurseva.",\r
+"Za izvršenu sumnjivu transakciju upisuje se obrazloženje zašto podaci nisu dostavljeni prije izvršenja (ZSPNFT čl. 66 st. 9).",\r
+"Za klijenta postoji prijava FOJ-u koja nije dostavljena; lični podaci se ne brišu dok se ne upiše datum dostave.",\r
+"Za kupca nema zatezne kamate za obračun do",\r
+"Za kupca nema zatezne kamate za obračun do {0}.",\r
+"Za ličnu ispravu se upisuju vrsta, broj i datum prestanka važenja (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Za lokaciju nepokretnosti upisuje se ulica i broj ili katastarska parcela.",\r
+"Za nalog {0} postoji prigovor u Knjizi prigovora; nalog se ne briše.",\r
+"Za nepokretnost ne postoji važeći ugovor o posredovanju; oglašavanje nije dozvoljeno (Zakon o posredovanju, čl. 25 st. 3).",\r
+"Za obračun je vezana uplata kupca. Prije storna potrebno je razvezati uplatu (Naplata → Kamata i opomene).",\r
+"Za obračun nije vezana nijedna uplata.",\r
+"Za ovaj ugovor je posao već zaključen.",\r
+"Za politički eksponirano lice upisuje se osnov: javna funkcija, član uže porodice ili bliži saradnik (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Za popravku veću od {0} € prihvaćenu ponudu potpisuju servis i klijent; jedan primjerak se predaje klijentu ({1} st. 3).",\r
+"Za povećanje cijene veće od {0} % potreban je prethodni pisani pristanak klijenta, dat lično ili sredstvima komunikacije na daljinu ({1} st. 2).",\r
+"Za preduzetnika se upisuju ime, prezime i JMB (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"za protekli period",\r
+"Za ručno upisan kurs potrebna je napomena (izvor ili razlog).",\r
+"Za saglasnost za elektronski račun potreban je i način davanja saglasnosti.",\r
+"Za stavke sa 0 % PDV primjenjuje se {0} Zakona o PDV ({1}).",\r
+"Za stopu 0 % PDV potrebno je izabrati osnov (čl. 25, 26, 27 ili 17 Zakona o PDV), koji se štampa na fakturi.",\r
+"Za stvarnog vlasnika {0} (politički eksponirano lice) upisuje se osnov.",\r
+"Za svaki dospio period pravi se nacrt obične fakture sa periodom prometa; PDV obaveza nastaje posljednjeg dana perioda. Isti period se ne fakturiše dvaput.",\r
+"Za ugovor već postoji faktura naknade {0}.",\r
+"Za unos depozita postoji zapis u evidenciji po ZSPNFT (prijava FOJ-u); unos se ne briše. Ispravka se upisuje novim unosom depozita.",\r
+"Za uplatu je izdat avansni račun. Kursna razlika se ne zatvara ovom radnjom.",\r
+"Za uplatu u valuti {0} potreban je kurs na dan priliva ili iznos priliva u EUR.",\r
+"Zabiljezbe",\r
+"Zabilježbe",\r
 "Zadnji put",\r
+"zadržati do",\r
+"Zadržati do",\r
+"Zahtjev klijenta je upisan; FOJ se obavještava bez odlaganja (ZSPNFT čl. 66 st. 11).",\r
+"Zahtjevi za praćenje finansijskog poslovanja klijenta",\r
+"Zainteresovani",\r
+"Zaključen",\r
+"zaključen ({0})",\r
+"Zaključen posao je upisan.",\r
+"Zaključen posao se upisuje u evidenciju o posredovanju (podaci 11–13); upis je trajan i ne može se poništiti. Faktura naknade se izdaje tek po zaključenju posla (čl. 27 st. 1–2).",\r
+"Zaključen pravni posao",\r
+"zaključno sa {0}",\r
 "Zakon o obaveznom zdravstvenom osiguranju čl. 36a — uvjerenje se dostavlja poslodavcu do 30. januara",\r
+"Zakon o PDV čl. 18 st. 3 — kad račun nije izdat, PDV se obračunava osam dana od dana prometa",\r
+"Zakon o PDV čl. 20a",\r
+"Zakon o PDV, čl. 31 st. 6",\r
+"Zakon o PDV, čl. 31 st. 6: elektronski račun se izdaje uz saglasnost primaoca.",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 18 st. 2",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 19 — ugovor na određeno vrijeme, može se produžiti",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 25 st. 3",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 25 st. 3 — oglas samo za nepokretnost za koju postoji ugovor o posredovanju",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 26 i 34",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 27 st. 6",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 36 — posredovanje bez upisa u Registar posrednika nije dozvoljeno",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 36 i 41",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 41 (izmjena „Sl. list CG\\" 114/26)",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 41 (izmjena „Sl. list CG\\" 114/26) — zahtjev za upis u roku od 24 mjeseca od stupanja zakona na snagu",\r
+"Zakon o posredovanju u prometu i zakupu nepokretnosti, čl. 8 — najmanje 20.000 € po slučaju i 60.000 € godišnje",\r
+"Zakon o posredovanju, čl. 18 st. 3 — cijena se utvrđuje tako da uključuje iznos naknade za posredovanje",\r
+"Zakon o posredovanju, čl. 19 — bez upisanog datuma ugovor važi {0} mjeseci",\r
+"Zakon o posredovanju, čl. 20 t. 2 — upozorenje nalogodavcu na upisana prava i terete",\r
+"Zakon o posredovanju, čl. 21 — potposredovanje samo uz izričitu saglasnost nalogodavca",\r
+"Zakon o posredovanju, čl. 25: oglas sa nazivom posrednika i brojem upisa u Registar posrednika, samo uz važeći ugovor",\r
+"Zakon o posredovanju, čl. 27 st. 3 — dio naknade iz kapare koju je nalogodavac zadržao zbog neizvršenja ugovora od drugog lica",\r
+"Zakon o posredovanju, čl. 31 — upozorenje nalogodavcu se štampa u ugovoru",\r
+"Zakon o posredovanju, čl. 34 — transakcije ovih računa nisu dio novčanog toka firme i ne knjiže se nalogom izvoda",\r
+"Zakon o posredovanju, čl. 8 — najmanje 20.000 € po slučaju i 60.000 € za sve zahtjeve u godini",\r
+"Zakon o rokovima izmirenja novčanih obaveza čl. 3 t. 6 i čl. 6 st. 2 se razlikuju; podrazumijevano se primjenjuje stopa CBCG (0 p.p.). Mijenja se samo po uputstvu knjigovođe.",\r
+"Zakon o visini stope zatezne kamate („Sl. list CG\\" 83/09, 75/18), čl. 3–6",\r
+"Zakon o visini stope zatezne kamate čl. 3–5 — stopa ECB za glavne operacije refinansiranja prvog dana polugodišta + 8 p.p.; CBCG je objavljuje prvog radnog dana polugodišta",\r
+"Zakon o visini stope zatezne kamate čl. 6; Zakon o rokovima izmirenja novčanih obaveza čl. 7",\r
+"Zakon o visini stope zatezne kamate čl. 6: prosta kamata, 36.500 (prestupna godina 36.600), stopa po polugodištu; Zakon o rokovima izmirenja novčanih obaveza čl. 7",\r
+"Zakon o zaštiti potrošača („Sl. list CG\\" 12/26), čl. 21",\r
+"Zakon o zaštiti potrošača čl. 26",\r
 "Zakona o državnim i drugim praznicima („Sl. list CG\\", br. 27/07, 36/13, 3/23 i 30/23)",\r
+"zakonski zastupnik",\r
+"Zakup pokretne i nepokretne imovine",\r
+"Zakupnina",\r
+"Zakupnina u iznosu koji je značajno veći od zakupnine nekretnine približnih karakteristika na istoj ili sličnoj lokaciji, koja se unaprijed plaća za duži vremenski period, kad postoji sumnja u kriminalnu namjeru i fiktivnost ugovora.",\r
 "Zalihe robe bez negativnog stanja (glavna knjiga)",\r
+"Zamjenik",\r
+"zapis",\r
+"zapisa",\r
+"Zaposleni",\r
+"Zaposleni (klik — brisanje ličnih podataka)",\r
+"Zašto je transakcija složena, odnosno neuobičajena",\r
+"Zastupnik",\r
+"Zatezna kamata do {0}",\r
+"Zatezna kamata i opomene",\r
+"Zatezna kamata je obračunata prostim (dekurzivnim) kamatnim računom na dospjelu glavnicu, bez pripisa kamate glavnici, za kalendarski broj dana: kamata = glavnica × stopa × dani / 36.500, u prestupnoj godini / 36.600 (Zakon o visini stope zatezne kamate, „Sl. list CG\\" br. 83/09 i 75/18, čl. 6).",\r
 "Zatvaranje mjeseca",\r
 "{0}\\n\\nProknjižiti plaćanje?",\r
 "{0}\\n\\nSnimiti plaćanje?",\r
@@ -13143,6 +15386,7 @@ const a=`[\r
 "Zatvori program",\r
 "Zatvori raspored",\r
 "Zatvoriti aplikaciju?",\r
+"Zatvoriti fakturu {0} ovom uplatom? Razlika {1} EUR se knjiži kao kursna razlika.",\r
 "Zauzeti barkodovi",\r
 "Zauzeti barkodovi (barkod već ima drugi artikal)",\r
 "Zauzeti barkodovi koje pregled na računaru „{0}\\" nije prikazao: {1} — preskočeni (barkod ostaje artiklu koji ga već ima).",\r
@@ -13159,12 +15403,20 @@ const a=`[\r
 "Zavisni troškovi nabavke (u nabavnu)",\r
 "Zavisni troškovi ove kalkulacije su već raspoređeni na stavke. Izmjena troška je moguća nakon poništavanja rasporeda; raspored se zatim ponavlja.",\r
 "Zavisni troškovi: procjena troška čija faktura nije stigla (razgraničenje do prijema fakture)",\r
+"Završava se nalog u radu (sada: {0}).",\r
 "završen",\r
+"Završeni uređaji koje klijent nije preuzeo ({0} i više dana): {1}",\r
+"završeno",\r
+"Završeno",\r
 "Završetak",\r
+"Završetak (neobavezno)",\r
+"završetka",\r
 "Završi",\r
 "Završi i otvori Finansije",\r
 "zbijeno",\r
+"Zbir isplata koje podliježu porezu, po primaocu, vrsti prihoda i stopi. Izvještaj se predaje elektronski, uz digitalni sertifikat.",\r
 "Zbir iznosa po stopama ({0}) nije jednak iznosu avansa ({1}).",\r
+"Zbir je veći od iznosa pristanka za više od",\r
 "Zbir obrisanih",\r
 "zbir odobrenja {0} ≠ {1} iz izvoda",\r
 "Zbir plaćanja ({0}) nije jednak iznosu za naplatu ({1}).",\r
@@ -13175,10 +15427,12 @@ const a=`[\r
 "Zbir prometa po stopama je {0}, a „UKUPAN POREZ → Promet\\" iznosi {1}.",\r
 "Zbir se poredi sa pazarom iz trgovačke knjige u istom periodu.",\r
 "Zbir stavki",\r
+"Zbir stavki ({0} €) je veći od izdate ponude ({1} €) za više od {2} %: izdati novu ponudu.",\r
 "Zbir stavki ({0} EUR) nije jednak iznosu sa računa ({1} EUR). Razlika: {2} EUR.",\r
 "Zbir stavki je jednak iznosu sa računa.",\r
 "Zbir stopa ({0} / {1} / {2}) se ne slaže sa UKUPAN POREZ. Potrebna je provjera prema slici.",\r
 "Zbir svih objekata jednak je PR-PDV-u za isti period: izlazni PDV iz pazara, ulazni sa faktura. Pazari bez razdvojenog PDV-a ovdje ulaze samo u promet, ne u PDV.",\r
+"Zbir udjela stvarnih vlasnika je {0} %.",\r
 "zbir zaduženja {0} ≠ {1} iz izvoda",\r
 "Zbirni nalog rashoda: {0}",\r
 "ZBIRNI NALOG ZA KNJIŽENJE — RASHOD ROBE",\r
@@ -13217,18 +15471,37 @@ const a=`[\r
 "Žitarice",\r
 "Žitarice sa glutenom",\r
 "ZK",\r
+"Značajni prenosi novčanih sredstava na račune na kojima nije bilo transakcija (neaktivni računi) koji su odmah praćeni povlačenjem sredstava, tj. podizanjem gotovog novca.",\r
 "znak",\r
 "Znak",\r
 "Znak (amblem)",\r
 "Znak mora biti kvadratnog oblika (razlika stranica do 10 %).",\r
 "Znak nije postavljen.",\r
 "Zona još nije prepoznata.",\r
+"ZPDPL čl. 29 st. 1",\r
+"ZPDPL čl. 29 st. 1 t. 2",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 1",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 2",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 4",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 5",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 6",\r
+"ZPDPL čl. 29 st. 3",\r
+"ZPDPL čl. 29 st. 4 ({0} %)",\r
+"ZPDPL čl. 29 st. 4 i 11",\r
+"ZPDPL čl. 29 st. 4: porez se obračunava i plaća u trenutku isplate prihoda, na bruto iznos.",\r
+"ZPDPL čl. 29 st. 5",\r
+"ZPDPL čl. 29 st. 5 — teritorija sa poreskim suverenitetom ({0} %)",\r
+"ZPDPL čl. 29a st. 1–3",\r
+"ZPDPL čl. 29b — nije izričito uređeno",\r
+"ZPDPL čl. 29b t. 4",\r
 "ZPDV čl. 18 st. 2–3: isporuka se smatra izvršenom u trenutku izdavanja računa; ako račun nije izdat, PDV se obračunava osam dana od dana isporuke.",\r
 "ZPDV čl. 18 st. 3: ako račun nije izdat, PDV se obračunava osam dana od dana isporuke.",\r
 "ZPDV čl. 18 st. 4 (avans), čl. 20 st. 9 (odobrenje kupcu obvezniku); PPZPDV čl. 121 st. 4",\r
+"ZPDV čl. 18 st. 4 i čl. 31 st. 2: PDV na avans se obračunava na dan prijema naknade",\r
 "ZPDV čl. 18 st. 4, čl. 20 st. 9, čl. 31 st. 2; PPZPDV čl. 76, čl. 121 st. 4",\r
 "ZPDV čl. 20 st. 9",\r
 "ZPDV čl. 20 st. 9: kupac pismeno obavještava da je umanjio odbitak ulaznog PDV",\r
+"ZPDV čl. 23 st. 2: srednji kurs CBCG na dan nastanka poreske obaveze. CBCG objavljuje listu „na dan D\\" koja važi od sljedećeg dana.",\r
 "ZPDV čl. 24a st. 1 t. 1; Pravilnik 117/24 čl. 2",\r
 "ZPDV čl. 24a st. 1 t. 10; Pravilnik čl. 13",\r
 "ZPDV čl. 24a st. 1 t. 11; Pravilnik čl. 14",\r
@@ -13240,10 +15513,49 @@ const a=`[\r
 "ZPDV čl. 24a st. 2 t. 3; Pravilnik 117/24 čl. 18",\r
 "ZPDV čl. 25 — PR PDV-2 polje 13.",\r
 "ZPDV čl. 26–27 — PR PDV-2 polje 14.",\r
+"ZPDV čl. 32 st. 7; ide i u polje Note fiskalne poruke (najviše 200 znakova)",\r
 "ZPDV čl. 37 st. 5: ulazni PDV se ne odbija za putničke automobile i motocikle, gorivo, maziva, djelove i usluge za njih, novoizgrađen stambeni objekat i reprezentaciju. Takav PDV ide u PR-PDV polje 26 i u trošak (nabavnu vrijednost).",\r
 "ZPDV čl. 37 st. 6–7: PDV iz carinske deklaracije se odbija u periodu kada je deklaracija primljena. Carina i akciza nijesu PDV. Osnovica i PDV se upisuju kako piše na deklaraciji (predlog: carinska vrijednost + carina + akciza).",\r
 "ZPDV čl. 71e: „Odredbe člana 24a stav 1 tačka 1) i člana 25 stav 1 tačka 12d) ovog zakona prestaju da važe 31. decembra 2022. godine.\\" Hljeb, brašno i ulje se od 01.01.2023 ne prodaju po 0 %. Artikal po 0 % bez osnova treba provjeriti (stopa ili osnov na ekranu Artikli).",\r
 "ZR:{0}",\r
+"ZSPNFT čl. 116 st. 1 t. 1",\r
+"ZSPNFT čl. 116 st. 1 t. 2, čl. 117 st. 7",\r
+"ZSPNFT čl. 116 st. 1 t. 3, čl. 117 st. 8",\r
+"ZSPNFT čl. 116 st. 1 t. 4, čl. 117 st. 9",\r
+"ZSPNFT čl. 116 st. 1 t. 5, čl. 117 st. 10",\r
+"ZSPNFT čl. 116 st. 1 t. 6, čl. 117 st. 11; čl. 66 st. 12",\r
+"ZSPNFT čl. 116 st. 1 t. 7, čl. 117 st. 12",\r
+"ZSPNFT čl. 116 st. 1 t. 7, čl. 117 st. 12; čuvanje četiri godine (čl. 127 st. 4)",\r
+"ZSPNFT čl. 117 st. 1 t. 1–3",\r
+"ZSPNFT čl. 117 st. 1 t. 1, 3, 4–6",\r
+"ZSPNFT čl. 117 st. 1 t. 3 — datum prestanka važenja lične isprave",\r
+"ZSPNFT čl. 117 st. 1 t. 6 — skenirana dokumentacija; fajl se čuva u folderu firme i ne putuje razmjenom",\r
+"ZSPNFT čl. 117 st. 11; čl. 66 st. 12",\r
+"ZSPNFT čl. 12",\r
+"ZSPNFT čl. 12 — najmanje jednom godišnje",\r
+"ZSPNFT čl. 12 — u roku od 60 dana od osnivanja, odnosno početka djelatnosti; ažurira se najmanje jednom godišnje",\r
+"ZSPNFT čl. 127 — paket Usklađenost (ZSPNFT)",\r
+"ZSPNFT čl. 127 st. 1–2",\r
+"ZSPNFT čl. 127 st. 3",\r
+"ZSPNFT čl. 127 st. 4",\r
+"ZSPNFT čl. 127 st. 5",\r
+"ZSPNFT čl. 127 st. 5 — po isteku roka lični podaci se brišu",\r
+"ZSPNFT čl. 14 — ovlašćeno lice na rukovodećoj poziciji",\r
+"ZSPNFT čl. 14 — ovlašćeno lice na rukovodećoj poziciji i zamjenik",\r
+"ZSPNFT čl. 4 st. 2 t. 13; čl. 66 st. 1–3",\r
+"ZSPNFT čl. 66 — dostava elektronski, uz kvalifikovani elektronski potpis",\r
+"ZSPNFT čl. 66 st. 1 al. 1",\r
+"ZSPNFT čl. 66 st. 1 al. 2",\r
+"ZSPNFT čl. 66 st. 1–3",\r
+"ZSPNFT čl. 66 st. 11 — obavještenje FOJ-u bez odlaganja",\r
+"ZSPNFT čl. 66 st. 12 — obavještenje FOJ-u u roku od tri radna dana",\r
+"ZSPNFT čl. 66 st. 2",\r
+"ZSPNFT čl. 66 st. 3",\r
+"ZSPNFT čl. 66 st. 6–10",\r
+"ZSPNFT čl. 66 st. 6–10 — prije izvršenja, uz rok izvršenja",\r
+"ZSPNFT čl. 81 — pri utvrđivanju razloga za sumnju koriste se liste indikatora",\r
+"ZSPNFT čl. 81–83",\r
+"ZSPNFT čl. 83 — sopstvena lista indikatora mora biti u dokumentaciji obveznika",\r
 "ŽURNAL KOREKTIVNIH RAČUNA",\r
 "Zvanični obrazac I-RAČ (15 kolona, Pravilnik o primjeni ZPDV čl. 122):",\r
 "Zvanični obrazac U-RAČ (17 kolona, Pravilnik o primjeni ZPDV čl. 123; datum prijema = datum zavođenja; fakture stranih dobavljača za robu nijesu u njemu — PDV pri uvozu ide po carinskoj deklaraciji u polje 20):",\r

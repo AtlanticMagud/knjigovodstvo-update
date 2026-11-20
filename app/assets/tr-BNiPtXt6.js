@@ -1,5 +1,61 @@
 const a=`[\r
+"— hesaplamasız —",\r
+"— durumsuz —",\r
+"— gecikme günü",\r
+"— gerçek kişi (müşteri faturalamada oluşturulur) —",\r
+"— dahili proje (müşterisiz) —",\r
+"— proje seçin —",\r
+"— tedarikçiye göre —",\r
+"— tüm kayıtlar —",\r
+", veriler {0} tarihine kadar FOJ'a iletilir (ZSPNFT čl. 66)",\r
+", eğitim",\r
+", yanıtlandı",\r
+", dönem {0}–{1}",\r
+"; veri 10 (alan) eksik:",\r
+"; oluşturulamadı: {0}",\r
+"; KDV yükümlülüğü {0} (dönemin son günü)",\r
+"; ücret hakkı {0} tarihine kadar",\r
+"; kabul edilen teklif servis ve müşteri tarafından imzalanır.",\r
+"; süresi dolan: {0}",\r
+"; arazi için oda düzeni belirtilmez",\r
+": dönem başlangıcı",\r
+". Biri iptal veya düzeltme faturasıyla düzeltilir.",\r
+". Bu gayrimenkuller için ilan verilmesine izin verilmez.",\r
+". Süre dolduğunda kişisel veriler silinir (ZSPNFT čl. 127 st. 5); silme tarihini içeren kayıt kalır.",\r
+". Veri sözleşmeye veya gayrimenkul kaydına girilir; değişiklik yeni kayıt olarak girilir.",\r
+". yılı için son verme tarihi",\r
+". Kayıt silinmez ve değiştirilmez; düzeltme yeni kayıt olarak girilir.",\r
+". Aracılık kayıtlarındaki girişler kalır (süresiz saklanır).",\r
+"· en büyük 10:",\r
+"· orana ek {0} p.p.",\r
+"· tekliften sonra eklendi",\r
+"· alıcıya ödeme:",\r
+"· faiz",\r
+"· müşteri sayısı:",\r
+"· tazminat",\r
+"· {0} numaralı proforma faturaya göre",\r
+"· stopaj:",\r
+"· alınan faturalar",\r
+"· onay",\r
+"· hizmet",\r
+"· faturalanacak:",\r
+"(projesiz)",\r
+"(sözleşmesiz)",\r
+"(ECB + 8 p.p.)",\r
+"(başka bilgisayarda)",\r
+"(taslak)",\r
+"(gecikmeli ödenmiş fatura yok veya dönem zaten hesaplanmış).",\r
+"(Opis LIKE ? OR Sifra LIKE ?)",\r
 "(kilit açık)",\r
+"(süre geçtikten sonra)",\r
+"(dosya {0})",\r
+"(ilk son tarih",\r
+"(mal)",\r
+"(süre doldu: {0})",\r
+"(başka bilgisayardan)",\r
+"(aracılık ücreti dahil)",\r
+"(hizmet)",\r
+"(hizmetler)",\r
 "({1} içinde daha önce girilen {0} ile birlikte)",\r
 "(kilit açılırken bulunan; 2.7.0'dan önce kilitlendi)",\r
 "(2.7.0 sürümüne geçişte bulunan)",\r
@@ -13,28 +69,473 @@ const a=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"(ZSPNFT čl. 20a ve 117)",\r
+"[Ek {0}] {1}",\r
+"[kişisel veriler silindi {0}]",\r
+"[Fesih {0}: {1}]",\r
+"{0}\\n\\nYine de tedarikçi ödemesi olarak deftere işlensin mi?",\r
+"{0}\\n\\n{1} yine de tedarikçi ödemesi olarak girilsin mi?\\n\\nTamam: işaretli tüm satırlar girilir.\\nİptal: hiçbir şey girilmez (satırın işaretini kaldırıp „Unesi označena plaćanja\\" düğmesine yeniden basın).",\r
+"{0}\\nProgramdaki firma: {1} (PIB {2}).\\n\\n{3}",\r
+"{0} — ad soyad",\r
+"{0} — fatura {1}, ödeme: {2}",\r
+"{0} — aracılık sözleşmesi {1}",\r
+"{0} — gecikme faizi ve tazminat",\r
+"{0} · {1} EUR · {2}: {3}",\r
+"{0} ({1}, {2} EUR)",\r
+"{0} (telif sözleşmesi)",\r
+"{0} (čl. 20a)",\r
+"{0} (ExRate {1})",\r
+"{0} (fatura {1})",\r
+"{0} ({1} tarihinden itibaren)",\r
+"{0} (tamamlandı {1})",\r
+"{0} {1} (kur {2})",\r
+"{0} {1} KDV hariç{2}; {3}",\r
+"{0} {1} başka bilgisayarda da kayıtlı; buradaki kayıt {2} numarasını alır.",\r
+"{0} {1} ORDER BY n.Godina DESC, n.RedniBroj DESC",\r
+"Başka bilgisayardan gelen {0} {1}, {2} numarasını alır (numara burada daha önceki bir kayıtta kullanılıyor).",\r
+"{0} nakit ödenmiş olarak girildi ve kasaya zaten işlendi. Aynı gider, ekstreden tedarikçi ödemesi olarak yeniden işlenmez.",\r
+"{0} kartla ödenmiş olarak girildi ve cari hesaba zaten işlendi. Ekstredeki kart işlemi tedarikçi ödemesi olarak yeniden işlenmez.",\r
+"{0}. çeyrek {1}",\r
+"{0} geçerli değil.",\r
+"{0} Para emanet hesabı üzerinden alınır ve teslim edilir.",\r
+"{0} Ödeme otomatik olarak işlenmedi.",\r
+"{1} numaralı aracılık sözleşmesine göre {0}",\r
+"{0} ISO koduyla girilir (ör. ME, RS, DE).",\r
+"{0} st. 1",\r
+"{0} st. 1 ve 3",\r
+"{0} st. 2",\r
+"{0} st. 2 — %{1} üzerindeki artış önceden yazılı onay gerektirir",\r
+"{0} Aracılık kayıtlarındaki kayıt kalıcıdır.",\r
+"{0} WHERE n.NalogID=?",\r
+"{0} WHERE n.UID=?",\r
+"{1} müşterisi için {0} kaydedildi.",\r
+"{0}, {1}, {2} {3} KDV dahil",\r
+"{0}, brüt {1}",\r
+"{0}; müvekkil {1}",\r
+"{0}: saat sayısı 0 ile 24 arasında olmalıdır.",\r
+"{0}: tarih geçerli değil.",\r
+"{0}: müşterinin e-postası yok",\r
+"{0}: tedarikçiye borcun azaltılması",\r
+"{0} yılı · verme süresi {1}",\r
+"{0} yılı · ZPDPL čl. 29",\r
+"{0} yılı{1}",\r
+"% (sınır",\r
+"% bütçe",\r
+"% yıllık, altı aylık dönemlere göre CBCG oranı) ve ticari işletme müşteriler için 40 € tahsilat masrafı tazminatıyla:",\r
+"+ Danışman",\r
+"+ Parça",\r
+"+ Yeni müşteri",\r
+"+ Yeni yer gösterme",\r
+"+ Yeni şikâyet",\r
+"+ Yeni iş emri",\r
+"+ Yeni aracılık sözleşmesi",\r
+"+ Yeni kayıt",\r
+"+ Yeni depozito kaydı",\r
+"+ Yerleşik olmayana yeni ödeme",\r
+"+ Yeni gayrimenkul",\r
+"+ Yeni hizmet",\r
+"+ Yeni proje",\r
+"+ Yeni sözleşme",\r
+"+ hesaplama",\r
+"+ Eğitim",\r
+"+ KDV dahil günlük hasılat",\r
+"+ Gerçek lehdar",\r
+"✉ IOS'u e-postayla",\r
+"✉ Seçilenleri e-postayla gönder (",\r
+"💾 Gayrimenkulü kaydet",\r
+"💾 Yer göstermeyi kaydet",\r
+"💾 Hesaplamayı kaydet",\r
+"💾 Aracı bilgilerini kaydet",\r
+"💾 Şikâyeti kaydet",\r
+"💾 Projeyi kaydet",\r
+"💾 Haftayı kaydet",\r
+"💾 Sözleşmeyi kaydet",\r
+"💾 İşlemi kaydet",\r
+"📄 Risk analizi (PDF)",\r
+"📄 Defter (PDF)",\r
+"📄 Yükümlünün gösterge listesi (PDF)",\r
+"📄 Sözleşme PDF'i",\r
+"📄 FOJ için veriler (PDF)",\r
+"📄 Yer gösterme belgesi",\r
+"📄 Teslim alma belgesi",\r
+"📄 Döküm",\r
+"📄 Sözleşme (PDF)",\r
+"📋 İlan metni",\r
+"📓 Şikâyet",\r
+"€'yu aşıyor: iş, malzeme ve parça dökümünü içeren, servis ve müşteri tarafından imzalanan yazılı teklif zorunludur.",\r
+"€): devam etmeden önce müşterinin yeni yazılı onayı gereklidir.",\r
+"1 · İşyeri (zorunlu değil)",\r
+"1 EUR = {0} {1}",\r
+"1) aracının unvanı, merkezi ve PIB'i (Ayarlar → Firma bilgileri)",\r
+"Sözleşmenin akdedilmesinden itibaren 10 yıl",\r
+"2) müvekkilin adı soyadı veya unvanı, ikametgâhı veya merkezi, JMB'si veya PIB'i ve rolü",\r
+"3) gayrimenkul, hukuki işlemin türü ve satış fiyatı veya kira bedeli",\r
+"4) aracılık ücretinin tutarı, ödeme şekli ve süresi",\r
+"İş ilişkisinin sona ermesinden veya işlemden itibaren 5 yıl",\r
+"5) sözleşmenin akdedildiği süre (akit tarihi)",\r
+"faaliyetin başlangıcından itibaren 60 gün",\r
+"7) aracının ve müvekkilin hak ve yükümlülükleri",\r
+"faaliyet adresi",\r
+"E-posta adresi geçerli değil.",\r
+"İkametgâh veya oturma yerinin adresi ve belediyesi girilmedi (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Faaliyet yeri adresi (farklıysa)",\r
+"İkametgâh veya oturma adresi",\r
+"Temsilcinin adresi",\r
+"AED",\r
+"Danışman",\r
+"\\"{0}\\" danışmanı, mesleki sınavı geçmiş danışmanlar listesinde değil.",\r
+"Mesleki sınavı geçmiş danışmanlar",\r
 "Eğer",\r
+"Borç belirtilen süre içinde ödenmezse, alacak için başkaca bildirim yapılmaksızın dava açılacak ve yargılama giderleri borçluya ait olacaktır.",\r
+"Ödeme yapıldıysa bu ihtarı dikkate almamanızı ve ödeme bilgilerini iletmenizi rica ederiz.",\r
+"Onarım sırasında fiyatı %{0} oranından fazla artıran ek iş, malzeme veya parça ihtiyacı ortaya çıkarsa servis, işe devam etmeden önce müşterinin bizzat veya uzaktan iletişim araçlarıyla verdiği yazılı onayı alır.",\r
+"aktif",\r
+"aktif (portföyde)",\r
+"analiz kabul edilmedi",\r
+"Gelir analizi",\r
+"Risk analizi",\r
+"Risk analizi ve eşikler kaydedildi.",\r
+"Risk analizi kabul edilmedi",\r
+"Risk analizi kabul edilmedi; süre, faaliyetin başlangıcından itibaren 60 gündür.",\r
+"Risk analizi, kuruluştan veya faaliyetin başlangıcından itibaren 60 gün içinde kabul edilir (ZSPNFT čl. 12)",\r
+"AND o.DobavljacID=?",\r
+"AND u.UgovorID=?",\r
+"AND UgovorUID=?",\r
+"\\"{0}\\" ürününün mal hareketi var (satış, açılış bakiyesi, sayım veya transfer) ve ticari defterde izleniyor. Hizmet ayrı bir ürün olarak girilir.",\r
+"\\"{0}\\" ürününün maliyet hesabıyla girişi var ({1}) ve stokta izleniyor. Hizmet ayrı bir ürün olarak girilir.",\r
+"AUD",\r
 "otomatik",\r
+"otomatik uzatma",\r
+"Telif ücreti ve fikri mülkiyet hakları (yazılım dahil)",\r
+"telif sözleşmesi",\r
+"Telif sözleşmesi",\r
+"Avans teklif tutarından büyük ({0} EUR).",\r
+"{0} numaralı proforma faturaya göre avans",\r
+"Proforma faturaya göre avans:",\r
+"{0} numaralı avans faturası kaydedildi; teklif kabul edildi. Mali onay ve PDF: Avanslar ve alacak dekontları.",\r
+"Proforma faturadan avans faturası",\r
+"Ödemenin alındığı gün düzenlenen, bu teklifin tutarı ve KDV oranlarıyla avans faturası",\r
+"Aracılık ücreti için avans faturasına izin verilmez (Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 27).",\r
 "Program güncellemesi: yeni sürüm duyurusu yayıncının imzasıyla doğrulanır; imzası geçersiz duyuru, geri çekilmiş sürüm ve daha önce yayımlanandan eski sürüm indirilmez. Sunucu bağlantısı: cihaz oturumu, süresi dolmadan önce ve dolduktan sonra kendiliğinden yenilenir.",\r
+"BAM",\r
+"Ödeyenin bankası (ad, hesap, ülke)",\r
+"Alıcının bankası (ad, hesap, ülke)",\r
 "Banka: ekstre kalemlerini sınıflandırma kuralları (açıklama veya alıcı hesabı → tür ve iş ortağı)",\r
 "Banka: ekstre işlemleri, kayıt, tanıma yöntemi",\r
 "Banka: postadaki tüm ekstreleri içe aktar",\r
+"Mukimlik belgesi olmadan %{0} oranı uygulanır.",\r
+"saatlik ücretsiz",\r
+"Saatlik ücretsiz",\r
+"durumsuz",\r
+"geçerli sözleşmesiz",\r
+"Nakitsiz",\r
+"Nakitsiz — istisna (EUR)",\r
+"Nakitsiz (EUR)",\r
+"nakitsiz işlem {0} EUR (eşik {1} EUR)",\r
+"Nakitsiz",\r
+"BGN",\r
+"{4} düzenleme tarihli {0} fatura taslağı oluşturulacak ({1} kayıt, {2} h, KDV hariç {3} EUR). Devam edilsin mi?",\r
+"{1} düzenleme tarihli {0} fatura taslağı oluşturulacak (KDV dahil toplam: {2}). Devam edilsin mi?",\r
+"Aracılık kayıtlarına girilecek: {0} ({1}). Kayıt kalıcıdır: silinemez ve değiştirilemez.",\r
+"Yakın iş ortağı",\r
+"Silme {0} tarihinden itibaren mümkündür (muhafaza süresi iki yıl)",\r
+"Alış kaydının silinmesiyle teslim edilen tutar alınandan büyük olur; önce teslim kaydı silinir.",\r
+"Yalnızca taslak hesaplama silinir. Düzenlenmiş hesaplama iptal edilir.",\r
 "Belge numarası, IKOF veya JIKR — veya ekran ve işlem adı",\r
+"Kayıtlı mali yazılımla düzenlenen faturanın numarası ve tarihi, aracılık kayıtlarının 14. verisine girilir.",\r
+"Talimat veya sözleşme numarası",\r
+"Poliçe numarası",\r
+"Belge numarası",\r
+"Dosya numarası",\r
+"Program dışında düzenlenen fatura numarası",\r
+"Saat sayısı 0'dan büyük ve en fazla 24 olmalıdır.",\r
+"Numara sözleşmede (čl. 18) ve her ilanda (čl. 25) belirtilir",\r
+"Aracılık sözleşmesi numarası",\r
+"Alt aracılık sözleşmesi numarası",\r
+"kayıt numarası girilmedi (Aracılık → Aracı bilgileri)",\r
+"Kayıt numarası Aracı bilgileri sekmesinde girilir.",\r
+"Aracılar Sicili kayıt numarası",\r
+"Aracılar Sicili kayıt numarası girilmedi; sözleşme bunu kayıt kanıtı olarak belirtir (čl. 18 st. 2 t. 1).",\r
+"Mesleki sınav belgesi numarası",\r
+"Talep numarası",\r
 "Numara: {0}",\r
+"Hesap numaraları (18 hane, virgülle ayrılmış)",\r
+"Brüt ödeme (EUR)",\r
+"Brüt ödeme tutarı sıfırdan büyük olmalıdır.",\r
+"Brüt gelir",\r
+"Hızlı haftalık giriş",\r
+"Saat bütçesi",\r
+"Saat bütçesi geçerli değil.",\r
+"CAD",\r
+"CARD",\r
+"CBCG",\r
+"{0} tarihli CBCG listesi",\r
+"CBCG: {0}",\r
+"CBCG: liste boş",\r
+"CBCG: {0} para birimi listede yok",\r
+"FOJ'a iletilmeyi bekliyor",\r
+"onay bekliyor",\r
+"görevin sona ermesinden veya eğitimden itibaren dört yıl",\r
+"CG",\r
+"CHF",\r
+"Fiyat, müşterinin yazılı onayı olmadan %{0} oranından fazla arttı ({1} st. 2).",\r
+"Fiyat, onaya göre %{0} oranından fazla arttı ({1} € → {2} €): müşterinin yazılı onayı girilene kadar emir tamamlanamaz ({3} st. 2).",\r
+"Fiyata aracılık ücreti dahil",\r
+"Kira bedeli",\r
+"Fiyatlar {0} tarihinden itibaren %{1} artırılır (ilk kalem örneği: {2} {3}).",\r
+"Fiyatlar {0} cinsinden ifade edilmiştir; fatura {1} cinsinden düzenlenir ve KDV hesaplamasına esas tutarlar, vergi yükümlülüğünün doğduğu gündeki Karadağ Merkez Bankası orta kuru ile EUR cinsinden gösterilir.",\r
+"čl. 66 st. 1 al. 1",\r
+"čl. 66 st. 1 al. 2",\r
+"čl. 66 st. 2 (t. 13 al. 5, 10–13)",\r
+"čl. 66 st. 3",\r
+"Yakın aile üyesi",\r
+"CNY",\r
+"COALESCE(d.Valuta,'')",\r
+"CZK",\r
+"Faturalama günü 1 ile 28 arasındadır.",\r
+"Ayın günü",\r
+"günlük süre, alınma tarihinden itibaren):",\r
+"İhtar günleri artan sırada (ör. 8, 30, 60) ve 1 ile 365 arasında olmalıdır.",\r
+"\\"Muhafaza süresi sonu\\" tarihi",\r
+"Tarih ({0}) teslim alma tarihinden önce: {1}",\r
+"Tarih ({0}) gelecekte.",\r
+"Tarih ({0}) geçerli değil.",\r
+"Belge tarihi geçerli değil.",\r
+"FOJ'a iletim tarihi",\r
+"İletim tarihi kayıt tarihinden önce.",\r
+"İletim tarihi gelecekte.",\r
+"İletim tarihi kaydedildi.",\r
+"İletim tarihi zaten girilmiş ({0}).",\r
+"İletim tarihi geçerli değil.",\r
+"Durdurmanın başlangıç tarihi ve saati",\r
+"Uzatma tarihi ve saati",\r
+"İnceleme tarihi ve saati",\r
+"Fatura düzenleme gününden farklı işlem tarihi veya dönemi.",\r
+"Ödeme tarihi geçerli değil.",\r
+"Düzeltme tarihi",\r
+"Düzeltme tarihi zorunludur.",\r
+"Düzeltme tarihi dava tarihinden önce olamaz.",\r
+"Sözleşmenin bitiş tarihi geçerlilik başlangıcından önce.",\r
+"Sözleşmenin bitiş tarihi geçerli değil.",\r
+"Faturaların düzenleme tarihi",\r
+"Tarih gelecekte.",\r
+"Kur tarihi",\r
+"Kur tarihi geçerli değil.",\r
+"Yer gösterme tarihi geçerli değil.",\r
+"Hesaplama tarihi, faizin hesaplandığı son günden önce olamaz.",\r
+"Hesaplama tarihi geçerli değil.",\r
+"Eğitim tarihi",\r
+"Yanıt tarihi",\r
+"Yanıt tarihi şikâyetin alınma tarihinden önce.",\r
+"Yanıt tarihi geçerli değil.",\r
+"ilişki tarihi",\r
+"Atama tarihi geçerli değil.",\r
+"Fesih tarihi",\r
+"Fesih tarihi sözleşmenin akit tarihinden önce.",\r
+"Fesih tarihi ileri bir tarih.",\r
+"Fesih tarihi geçerli değil.",\r
+"Kayıttan düşme tarihi geçerli bir tarih olmalı ve hesaplama tarihinden önce olmamalıdır.",\r
+"Faaliyetin başlangıç tarihi geçerli değil.",\r
+"İzlemenin başlangıç tarihi",\r
+"Sözleşmenin geçerlilik başlangıç tarihi geçerli değil.",\r
+"Belge tarihi",\r
+"Mukimlik belgesinin tarihi geçerli değil.",\r
+"Kopyanın müvekkile teslim tarihi geçerli değil.",\r
+"İlişkinin sona erme tarihi",\r
+"İlişkinin sona erme tarihi kuruluş tarihinden önce.",\r
+"Teslim tarihi",\r
+"Teslim tarihi bitiş tarihinden önce.",\r
+"Bildirim tarihi geçerli değil.",\r
+"Teslim alma tarihi gelecekte.",\r
+"Şikâyetin alınma tarihi gelecekte.",\r
+"Şikâyetin alınma tarihi geçerli değil.",\r
+"Onay tarihi",\r
+"Uzatma tarihi",\r
+"Proje tarihi geçerli değil.",\r
+"Gerçek Lehdarlar Sicili'nde kontrol tarihi",\r
+"Doğum tarihi girilmedi (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Elektronik fatura onay tarihi geçerli değil.",\r
 "Düzenlenme tarihi: {0}",\r
+"İşlem tarihi",\r
+"İşlem tarihi geçerli değil.",\r
+"Alandaki tarih yeni geçerlilik tarihidir",\r
+"Alt aracılık sözleşmesinin tarihi geçerli değil.",\r
+"Kayıt tarihi",\r
+"Kayıt tarihi geçerli değil.",\r
+"Kayıt tarihi",\r
+"Kadastro kayıt tarihi",\r
+"Kadastro kayıt tarihi geçerli değil.",\r
+"Aracılar Sicili'ne kayıt tarihi geçerli değil.",\r
+"Vergi ödeme tarihi",\r
+"Vergi ödeme tarihi geçerli değil.",\r
+"İlişkinin kurulma tarihi",\r
+"Kabul tarihi",\r
+"Risk analizinin kabul tarihi gelecekte.",\r
+"Risk analizinin kabul tarihi geçerli değil.",\r
+"Dava tarihi",\r
+"Dava tarihi zorunludur.",\r
+"Dava tarihi fatura tarihinden önce olamaz.",\r
+"Kimlik belgesinin geçerlilik bitiş tarihi",\r
+"Poliçe geçerlilik tarihi geçerli değil.",\r
+"Sözleşmenin geçerlilik tarihi geçerli değil.",\r
+"Müşteri talebinin tarihi geçerli değil.",\r
+"Hukuki işlemin akit tarihi",\r
+"Hukuki işlemin akit tarihi gelecekte.",\r
+"Hukuki işlemin akit tarihi geçerli değil.",\r
+"Sözleşmenin akit tarihi gelecekte.",\r
+"Sözleşmenin akit tarihi geçerli değil.",\r
+"Aracılık sözleşmesinin akit tarihi",\r
+"Projenin bitiş tarihi başlangıçtan önce.",\r
 "Tarih: {0}",\r
+"Kredi verilmesi ve kredi sözleşmelerinde aracılık (t. 13 al. 8)",\r
+"DEP",\r
+"Deponovanje gotovog novca gdje je kao dokaz o porijeklu sredstava priložen isti isplatni nalog, a iznos deponovanog gotovog novca je značajno veći od iznosa naznačenog na isplatnom nalogu.",\r
+"Deponovanje gotovog novca kod više kreditnih institucija, gdje je kao dokaz o porijeklu novčanih sredstava priložen isti isplatni nalog, a iznos deponovanog novca je značajno veći od iznosa naznačenog na isplatnom nalogu.",\r
+"Depozito",\r
+"Depozito {0} {1} — aracılık sözleşmesi {2}{3}",\r
+"{0} numaralı aracılık sözleşmesine göre depozito",\r
+"Aracı depozitosu (müvekkil parası)",\r
+"Aracı depozitosu: emanet hesabındaki müvekkil parası (alınan B, teslim edilen A)",\r
+"Aracı depozitosu: alınan para için müvekkillere borç",\r
+"Depozito EUR cinsinden izlenir.",\r
+"Emanet hesabı",\r
+"ARACININ EMANET HESABI",\r
+"Aracının emanet hesabı (müvekkil parası)",\r
+"Emanet hesabı 18 haneli olarak girilir (ör. 510-0000000012345-67).",\r
+"Emanet hesapları (müvekkil parası)",\r
 "Ayrıntı",\r
+"Kod listesindeki parça, emirden düzenlenen faturayla işyeri stokundan çıkar",\r
+"Alıkonulan kaporadan aracılık ücretinin bir kısmı (Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 27 st. 3).",\r
+"Dağıtım kanalları (bizzat, uzaktan, temsilci aracılığıyla)",\r
+"Yükümlünün faaliyeti ve iş hacmi",\r
+"Bölen",\r
+"kısmen",\r
+"kısmen kabul edildi",\r
+"DKK",\r
+"Bitiş günü",\r
 "Tedarikçinin açık faturası yok; {0} EUR ödeme fatura girilene kadar ön ödeme olarak kalır.",\r
 "tedarikçi {0}",\r
 "{0} tedarikçisinin {1} firmasında hiç faturası yok.\\n\\nFatura {2} firmasına girilecek. Faturanın bu bilgisayardaki başka bir firmaya değil, bu firmaya kesildiği kontrol edilmelidir.",\r
 "Tedarikçiler: tedarikçi kartı ve ödeme girişi",\r
+"Belge ekle",\r
+"Kod listesinden hizmet ekle",\r
+"Orana ek, 0 ile 20 yüzde puan arasında olmalıdır.",\r
+"B2B için orana ek (p.p.)",\r
+"tekliften sonra eklendi",\r
+"Nakit işlemin alt sınırı üst sınırdan küçük olmalıdır.",\r
+"Yanıta ek (bugünün tarihiyle sona eklenir)",\r
+"Yalnızca FOJ bildirimi tamamlanır.",\r
+"Şu tarihte vadesi gelen",\r
+"İletildi",\r
+"iletildi {0}",\r
+"FOJ'a iletildi",\r
+"FOJ'a iletildi",\r
+"Süre geçtikten sonra iletildi ({0}).",\r
 "Bu izin için rapor ve IOPPD kodu belirlenmemiştir ve muhasebecinin cevabını beklemektedir; bu nedenle program bu günleri izin olarak hesaplamaz: vardiya planı olmayan çalışanda bu günler normal çalışmadadır, vardiya planına göre çalışan için bu günlerin saatleri muhasebecinin talimatına göre bordroya girilmelidir.",\r
+"Oturma izni",\r
+"İzin verilen fiyat artışı (%)",\r
+"İzin verilen fiyat artışı 0 ile 100 % arasında olmalıdır.",\r
+"Diğer resmî belge",\r
+"İkinci ihtar",\r
+"İKİNCİ İHTAR",\r
+"İşlemin karşı tarafı",\r
+"čl. 29 kapsamındaki diğer gelirler (temettü, sermaye kazancı vb.)",\r
+"başka kişi (dış iş ortağı)…",\r
+"Sigorta şirketi",\r
+"Drzava",\r
+"ülke",\r
+"Ülke (ISO)",\r
+"belgeyi veren ülke",\r
+"Veren ülke (ISO)",\r
+"Kimlik belgesini düzenleyen ülke girilmedi (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Alıcının ülkesi ISO koduyla girilir (ör. DE, USA, IRL).",\r
+"Doğum ülkesi (ISO)",\r
+"Doğum ülkesi girilmedi (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Merkez ülkesi girilmedi (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Merkez veya ikamet ülkesi",\r
+"Ülkeler ve coğrafi bölgeler",\r
+"Maliye Bakanlığı listesindeki ülkeler",\r
+"Ülkeler ISO koduyla (iki veya üç harf) virgülle ayrılarak girilir.",\r
+"Vatandaşlık (ISO)",\r
+"Vatandaşlık girilmedi (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Gerçek lehdarın vatandaşlığı ISO koduyla girilir.",\r
+"borç",\r
+"Tedarikçiye borç, ödeme süresi {0}.{1}.{2}.",\r
+"Tedarikçiye borç: bakiye, hesap kartı, açık kalemler ve IOS",\r
+"Tedarikçiye borç.",\r
+"borç, vade {0}",\r
+"FOJ'un veya denetim makamının talebi üzerine daha uzun muhafaza",\r
+"FOJ'un veya denetim makamının talebi üzerine daha uzun muhafaza (ZSPNFT čl. 127 st. 3)",\r
+"mükerrer kayıt (aynı kaynak başka bilgisayarda da kaydedildi)",\r
+"e-posta",\r
+"e-postayla",\r
+"ECB",\r
+"ECB {0} (CBCG listesine erişilemiyor)",\r
+"ECB: {0}",\r
 "ekran",\r
+"Münhasır",\r
+"Münhasır aracılık",\r
+"Münhasır aracılık (čl. 31): müvekkil, sözleşme süresince başka bir aracı görevlendirmemeyi taahhüt eder. MÜVEKKİLE UYARI: bu madde yürürlükteyken müvekkil başka bir aracının aracılık ettiği bir hukuki işlemi akdederse, bu aracıya tazminat olarak kararlaştırılan aracılık ücreti tutarını ödemekle yükümlüdür.",\r
+"Münhasır aracılık: müvekkil, bu maddenin anlamı ve sonuçları konusunda ayrıca uyarılır (čl. 31 st. 3) — uyarı, sözleşmenin çıktısında yer alır.",\r
+"Elektronik kimlik tespiti",\r
+"e-postayla",\r
+"ERacunNacin",\r
+"ERacunSaglasnost",\r
+"Karadağ'da eğlence, sanat veya spor programı",\r
+"EUR. Avans, teklifin KDV oranlarına göre bölünür; fatura tarihi ödemenin alındığı tarihtir.",\r
+"EUR) · faturalanan:",\r
 "EV",\r
+"Kayıtlar",\r
+"Kayıtlarda giriş yok. Giriş, aracılık sözleşmesinin kaydedilmesiyle oluşur.",\r
+"Aracılık kayıtları",\r
+"Aracılık kayıtları süresiz saklanır; aracılık sözleşmeleri akit tarihinden itibaren on yıl.",\r
+"GAYRİMENKUL ALIM-SATIM VE KİRALAMADA ARACILIK KAYITLARI",\r
+"Denetim makamının verilere erişimine ilişkin kayıt; FOJ'a incelemeden itibaren üç iş günü içinde bildirilir.",\r
+"Tüketici şikâyetleri kaydı (Tüketicinin Korunması Kanunu, „Sl. list CG\\" br. 12/26, čl. 27). Kayıt en az iki yıl saklanır.",\r
+"ÇALIŞMA SAATİ KAYITLARI",\r
+"KAYIT: {0}",\r
+"Kayıtlar",\r
+"Özel paketlerin kayıtları, paket lisansta olmasa da firmanın veritabanında kalır. Görüntüleme ve dışa aktarma her zaman mümkündür; yeni giriş yalnızca paket etkinken yapılabilir.",\r
+"Kayıtlar, paket lisansta olmasa da yasal süre boyunca saklanır: görüntüleme ve dışa aktarma her zaman mümkündür",\r
+"Saatleri kaydet",\r
+"Kaydedilen saat",\r
+"Kaydedilen:",\r
 "dosya değişti",\r
+"fatura {0} ({1}) maliyet hesabından giderlere aktarıldı: {2}",\r
+"{0} faturası başka bilgisayarda silindi, ancak burada taslak değil — kalır.",\r
+"{0} faturası zaten kapatılmış.",\r
+"{0} numaralı fatura saat kayıtlarından oluşturulmadı.",\r
+"{0} faturası döviz cinsinden değil.",\r
 "Tedarikçi faturası",\r
+"Faturada gerekçesi belirtilmemiş %0 KDV'li kalemler var. Bir gerekçe seçilmelidir (sıfır oran čl. 25, muafiyet čl. 26/27 veya Karadağ dışı işlem čl. 17, KDV Kanunu).",\r
+"Saat kayıtlarından fatura ({0} kayıt).",\r
+"Emirden fatura",\r
+"{0} numaralı iş emrinden fatura.",\r
+"Sözleşmeden fatura",\r
 "Fatura giderlere aktarıldı (Satın alma ve giderler) {0}.",\r
 "Fatura giderlere aktarıldı: KDV hariç {0} EUR, KDV {1} EUR, tarih {2} (Satın alma ve giderler). {3} maliyet hesabı silindi.",\r
+"Ücret faturası",\r
+"{0} numaralı aracılık sözleşmesine göre ücret faturası",\r
+"faturanın tahsil edilmemiş KDV'li kısmı yok",\r
+"Faturanın tahsil edilmemiş KDV'li kısmı yok — düzeltme gerekmez.",\r
+"Aracılık ücreti faturası",\r
+"Aracılık ücreti faturası ancak hukuki işlem akdedildikten sonra düzenlenir (Aracılık Kanunu, čl. 27 st. 1–2).",\r
+"Fatura, işlemin tamamlanmasından ({0}) sekiz günden fazla sonra düzenleniyor; KDV yükümlülüğü işlemin sekizinci gününde doğar (KDV Kanunu, čl. 18 st. 3).",\r
+"Fatura tamamlanmış emir için oluşturulur (şu an: {0}).",\r
+"Fakturabilno",\r
+"Saat kayıtlarından faturalar",\r
+"Fakture ne prate odgovarajuće prijemnice, otpremnice i druga dokumentacija iz čega se može steći utisak da je promet robe fiktivan.",\r
+"Gecikme faizli vadesi geçmiş faturalar (bugün",\r
+"faturalar, proforma faturalar ve teklifler",\r
+"Faturalanmış saatler değiştirilemez",\r
+"Faturalama",\r
+"Faturalanan (KDV hariç)",\r
+"Faturalanan son tarih",\r
+"başka bilgisayarda faturalandı",\r
+"Faturalanan saat",\r
+"Faturalandı: {0}{1}",\r
+"faturalanır",\r
+"Faturalanır",\r
 "güncelleme akışı: imzasız yayın",\r
 "güncelleme akışı: durumsuz yayın",\r
 "güncelleme akışı: yayın biçimi geçersiz",\r
@@ -46,20 +547,133 @@ const a=`[\r
 "güncelleme akışı: durumun süresi doldu",\r
 "güncelleme akışı: durum son kabul edilenden eski",\r
 "FFFFFFFF",\r
+"Şube",\r
+"Fiziksel hazır bulunma",\r
+"FOJ'a inceleme hakkında {0} tarihine kadar bilgi verilir (ZSPNFT čl. 66 st. 12).",\r
+"Görev",\r
+"Yapılan işe garanti: teslim gününden itibaren {0}.",\r
+"Yapılan işe garanti: teslimden itibaren {0}.",\r
+"Yapılan işe garanti: {0}.",\r
+"İş garantisi (ay)",\r
+"İş garantisi: 0 ile 120 arasında tam ay sayısı.",\r
+"garaj",\r
+"GBP",\r
 "Oluşturuldu: {0}",\r
 "Ayın büyük defteri dengede (borç = alacak)",\r
 "bu ay için büyük defter programda tutulmuyor",\r
+"Anapara",\r
+"Teslim alma yılı değiştirilemez: emir numarası o yılın serisine aittir.",\r
+"Alınma yılı değiştirilemez: şikâyet sıra numarası o yılın defterine aittir.",\r
+"Kayıt yılı",\r
+"Akit yılı değiştirilemez: sözleşme numarası o yılın serisine aittir.",\r
+"yıllık",\r
+"yıllık güncelleme",\r
+"Risk analizinin yıllık güncellemesi",\r
+"Nakit (hemen ödendi)",\r
+"Nakit, üst sınır (EUR)",\r
+"Nakit, alt sınır (EUR)",\r
+"nakit",\r
+"Nakit",\r
+"nakit işlem {0} EUR ({1} ile {2} EUR arası)",\r
+"Nakit",\r
+"Şehir veya belediye",\r
+"arsa",\r
+"Barındırma, SaaS ve yazılıma erişim (muhasebecinin kararına göre)",\r
+"HUF",\r
+"ve st. 3",\r
+"Kimlik tespiti",\r
+"Müşterinin kimlik tespiti ve doğrulanması, müşteri siciline kayıt",\r
+"veya KDV hariç ücret tutarı",\r
+"ILS",\r
+"Dosyayı yürüten danışmanın adı ve soyadı",\r
+"Dosyayı yürüten danışmanın adı soyadı girilmedi (Aracılık Kayıtları Yönetmeliği 45/26, čl. 3 t. 6).",\r
+"Müşterinin adı soyadı girilmedi.",\r
+"Gayrimenkulü gezen kişinin adı soyadı girilmedi.",\r
+"Yetkili görevlinin adı soyadı",\r
+"Tüketicinin adı soyadı girilmedi.",\r
+"Şahıs işletmesi sahibinin adı soyadı",\r
+"Girişimcinin adı soyadı girilmedi (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"Görevlinin adı soyadı",\r
+"Gerçek lehdarın adı soyadı girilmedi.",\r
+"Çalışanın adı soyadı",\r
+"Temsilcinin adı soyadı",\r
+"Ad soyad veya unvan",\r
+"Müvekkilin adı, soyadı veya ticari unvanı ve adresi",\r
+"Endeksleme (%)",\r
+"Endeksleme (%) geçerli değil.",\r
+"Gösterge",\r
+"{0} göstergesi yükümlünün listesinde.",\r
+"{0} göstergesi yükümlünün listesinden kaldırıldı.",\r
+"{0} göstergesi gösterge listesinde yok.",\r
+"Gösterge mevcut değil.",\r
+"Listeden gösterge seçilmedi (ZSPNFT čl. 81).",\r
+"Göstergeler",\r
+"Listeden göstergeler (seçilen:",\r
+"Göstergeler:",\r
+"sanayi yapısı",\r
+"Bilgi amaçlı: gelir = dönemde düzenlenen KDV hariç faturalar; işçilik gideri = dönemdeki saatler × çalışanın saat maliyeti (bordrodan işveren maliyeti ÷ ayın saat fonu). Dış iş ortaklarının ve bordrosu olmayan çalışanların saatleri maliyetsizdir (\\"Maliyetsiz saatler\\" sütunu).",\r
+"Yurt dışı ve kur",\r
+"Yükümlünün risk analizine ilişkin iç düzenlemesi (ZSPNFT čl. 12): müşteri, müşteri grubu, ülke ve coğrafi bölge, iş ilişkisi, işlem, hizmet ve dağıtım kanalı bazında risklerin belirlenmesi ve değerlendirilmesi, risk kategorileri ve riski azaltma önlemleri. Analiz en az yılda bir kez güncellenir.",\r
+"Dahili saatler faturalanmaz, ancak raporlara ve proje giderine dahil edilir",\r
+"Dahili",\r
+"dahili (faturalanmaz)",\r
+"Gayrimenkul yatırımı, alım-satımı ve alım-satımında aracılık (t. 13 al. 9)",\r
+"IPD",\r
+"Aracılığın sonucu",\r
+"Şikâyetin sonucu bilinmiyor.",\r
+"Sonuç, satıcının yanıtıyla birlikte girilir.",\r
+"Ödeme stopaja tabi değil ({0}).",\r
+"Alıcıya ödeme",\r
+"belge geçerlilik tarihi",\r
+"KDV'yi düzelt",\r
+"Hesaplanan KDV düzeltmesi %{0} — tahsil edilemeyen alacak (čl. 20a)",\r
+"Faturanın tahsil edilmemiş kısmı için hesaplanan KDV düzeltmesi (",\r
+"KDV düzeltmesi {0}",\r
+"KDV düzeltmesi, fatura {0}{1} — {2}",\r
+"KDV düzeltmesi",\r
+"KDV düzeltmesi (tahsil edilemeyen alacak)",\r
+"KDV düzeltmesi yalnızca müşteri hakkında iflas işlemleri başlatılmadan önce dava konusu edilmiş alacak için mümkündür (KDV Kanunu čl. 20a). Onay gereklidir.",\r
+"KDV düzeltmesi yalnızca dava konusu alacak için mümkündür. Önce dava kaydı girilir.",\r
+"KDV düzeltmesi iptal edildi.",\r
+"KDV düzeltmesi kaydedildi. Düzeltme ayının PR-PDV ve KIF'ine girer.",\r
+"KDV düzeltmesi, tarih",\r
+"Tahsil edilemeyen alacak için KDV düzeltmesi — fatura {0}",\r
+"Bu fatura için KDV düzeltmesi zaten yapılmış ({0}).",\r
+"{0} sözleşmesinin bitişi",\r
+"Muhafaza süresi doldu: müşteri",\r
+"süresi doldu: {0}",\r
+"Aynı gösterge zaten firmanın kendi listesinde.",\r
+"süresi doluyor",\r
+"İhtar geçmişi",\r
+"Pazar araştırması",\r
+"Müşteri sicilinden (ZSPNFT)",\r
+"Müşteri kod listesinden (isteğe bağlı)",\r
+"kod listesinden: ad, kod veya barkod",\r
+"Alıkonulan kaporadan",\r
 "Seçilen işlem türü yalnızca çıkışlar için geçerlidir.",\r
 "Seçilen işlem türü yalnızca girişler için geçerlidir.",\r
+"Seçilen saatler, ilk iş gününden son iş gününe kadar işlem dönemiyle müşteri bazında normal fatura taslağı oluşturur. Faturalanmış saatler değiştirilemez; taslağın iptali veya silinmesi onları serbest bırakır.",\r
+"Teklif düzenle",\r
+"KİRALIK",\r
 "düzenlendi",\r
+"Avans faturası düzenlensin",\r
+"Yurt dışı müşteriye satış faturaları: mal satış geliri",\r
+"Yurt dışı müşteriye satış faturaları: hizmet geliri",\r
 "Giden",\r
 "Giden faturalar ±",\r
+"Ticari işletmeler arasında alacaklı, geciken her fatura için en az 40 € tahsilat masrafı tazminatı talep etme hakkına da sahiptir (Para Borçlarının Ödeme Süreleri Kanunu, čl. 7).",\r
 "Değiştirilen bekleyen kalem: {0}.",\r
+"kilit açılmadan değişiklik — {0}",\r
+"Müşteri bilgilerinde değişiklik: {0}",\r
 "Banka kuralını düzenle",\r
+"Saat kaydının düzenlenmesi",\r
 "KAPANIŞTAN SONRAKİ DEĞİŞİKLİKLER — {0} yılı",\r
+"Gayrimenkul kiralama ve kiralamada aracılık — aylık 10.000 € ve üzeri kira (t. 13 al. 5)",\r
+"KDV dahil avans tutarı (EUR)",\r
 "Tutar (en çok)",\r
 "Kalk. tutarı",\r
 "Kalkülasyon tutarı ±",\r
+"Ücret tutarı belirlenmemiş (sözleşmedeki tutar veya işlem bedelinin yüzdesi).",\r
 "Tutar (en az)",\r
 "Açık fatura tutarı",\r
 "Hasılat tutarı",\r
@@ -67,65 +681,570 @@ const a=`[\r
 "{0} EUR tutarı bu tedarikçiye yapılan olağan ödemenin {1} katı (olağan {2} EUR, önceki en büyük {3} EUR).",\r
 "tutar {0}{1}",\r
 "\\"Başlangıç\\" tutarı \\"bitiş\\" tutarından büyük.",\r
+"Müşteri onayına göre tutar: {0} € (izin verilen sapma {1} €'ya kadar).",\r
+"KDV dahil teklif tutarı:",\r
+"Tutar, {1} referans numarasıyla {0} hesabına ödenir.",\r
+"İşlem tutarı (EUR)",\r
+"EUR cinsinden işlem tutarı sıfırdan büyük olmalıdır.",\r
+"{0} tarihli CBCG orta kuruyla EUR tutarı (1 EUR = {1} {2}): {3} EUR; bunun KDV tutarı {4} EUR.",\r
+"EUR cinsinden tutar:",\r
+"Döviz cinsinden tutar",\r
+"{0} cinsinden ödeme tutarı sıfırdan büyük olmalıdır.",\r
+"Tutarlar KDV hariçtir; KDV faturada hesaplanmıştır.",\r
+"Defterler ve KDV beyannamesi için tutarlar: döviz tutarı ÷ CBCG kuru",\r
+"Hesapla",\r
 "PDF oluşturma iptal edildi.",\r
 "PDF oluşturuluyor… ({0} satır)",\r
 "PDF oluşturuluyor… ({0} sayfa)",\r
+"Açık kalemler ekstresi",\r
 "Banka ekstreleri ay sonuna kadar içe aktarıldı",\r
+"Kaynak (karar, Resmî Gazete)",\r
+"Varlık ve fon kaynağı",\r
+"Ödemenin kaynağı belirlenmedi.",\r
+"fon kaynağı",\r
+"kaynaklar yanıt vermedi",\r
+"Özel kayıtların dışa aktarılması",\r
 "Dışa aktarımlar (IOPPD, maaş bordroları, özet) kayıtlı tutarları kullanır. Bordro kapatılmıştır ve kendiliğinden yeniden hesaplanmaz; yeniden hesaplama için kilidin açılması gerekir.",\r
 "Dışa aktarımlar (IOPPD, maaş bordroları, özet) kayıtlı tutarları kullanır. Dışa aktarmadan önce “Tümünü hesapla” çalıştırılmalıdır.",\r
+"Gerçekleştirildi",\r
 "İcra direktörü: {0}",\r
+"Kamu görevi",\r
+"Girişimcinin kimlik numarası (JMB) girilmedi (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"tek hesap — büyük defterde {0}/{1}{2} için bordro, kira, hizmet sözleşmesi veya stopaj hesabı yok",\r
+"Belirlenen tarihten itibaren fiyatlarda tek seferlik artış (o gün veya sonrasında başlayan dönem)",\r
+"Jmb",\r
+"Şahıs işletmesi sahibinin JMB'si",\r
+"JMB veya PIB",\r
+"Temsilcinin JMB/PIB'i",\r
+"JPY",\r
 "Kalemin iş ortağı nasıl tanındı",\r
+"Bu faturadan oluşturulan maliyet hesabı bu firmanın defterlerine, giriş KDV'si PR-PDV'ye girer. Maliyet hesabı oluşturulsun mu?",\r
+"Maliyet hesabı kilitli {0}/{1} ayında. Alış defteri ve KDV beyannamesi değişmez (gider aynı tarihi ve aynı KDV'yi alır); o ayın ticari defteri ve stokları değişir. \\"Kapanıştan sonraki değişiklikler\\" raporuna yazılan bir neden gereklidir.",\r
 "Maliyet hesabı kilitli {0}/{1} ayında. Giderlere aktarma o ayın defterlerini değiştirir (ticari defter, stok): ayın kilidi açılmalı (Ayarlar → Dönem kilitleme), fatura aktarılmalı ve ay yeniden kilitlenmelidir.",\r
+"Maliyet hesabı kilitli ayda. Alış defteri ve KDV beyannamesi değişmez; o ayın ticari defteri ve stokları değişir. Neden \\"Kapanıştan sonraki değişiklikler\\" raporuna yazılır.",\r
 "Maliyet hesabında ne fatura tarihi ne de teslim tarihi var.",\r
+"Maliyet hesabı oluşturulmadı.",\r
 "Zayi maliyet hesabı giderlere aktarılmaz.",\r
+"KAM",\r
+"Faiz",\r
+"Faiz (gecikme faizi hariç)",\r
+"Faiz ve ihtarlar",\r
+"Yurt içi müşteri gibi (2020), gelirler 6020 / 6120",\r
+"gider olarak (faturadaki tutarlar ve KDV, orana göre). Maliyet hesabı ve fatura silinir: fatura artık ticari defterde ve stoklarda yer almaz. Tedarikçiye borç kalır (aynı ödeme süreli gider). Giriş KDV'si aynı ayın alış defterinde kalır. İşlem yalnızca ana bilgisayarda yapılabilir.",\r
 "gider olarak (faturadaki tutarlar ve KDV, orana göre). Maliyet hesabı ve fatura silinir: fatura artık ticari defterde, stokta ve tedarikçi borcunda yer almaz. Giriş KDV'si aynı ayın alış faturaları defterinde kalır. İşlem yalnızca ana bilgisayarda, kilidi açık ayda yapılabilir.",\r
+"Kaporanın alıkonulduğu tarih",\r
+"Kart (hemen ödendi)",\r
+"kartla",\r
+"Ödeme gecikmesi",\r
+"MÜŞTERİYE GÖRE ÖDEME GECİKMESİ",\r
+"kad. parsel {0}",\r
+"Kadastro bölgesi",\r
+"Kadastro parseli",\r
+"Risk kategorileri ve müşterilerin sınıflandırma kriterleri",\r
+"Kijent raskida ugovor o saradnji sa računovođom zbog zahtjeva za dodatnim objašnjenjem realizacije (ili najave realizacije) određenih transakcija.",\r
+"Müşteri",\r
+"Müşteri (ad soyad veya unvan)",\r
+"Müşteri (ad soyad veya unvan) girilmedi.",\r
+"Müşteri (tıklayın — kişisel verilerin silinmesi)",\r
+"Klijent (pravno lice) daje adresu koja predstavlja broj poštanskog faha za komunikaciju sa posrednikom ili je adresa na kojoj je taj klijent registrovan nepostojeća.",\r
+"{0} müşterisi müşteri sicilinde kayıtlı (ZSPNFT): {1} — veriler {2} tarihine kadar FOJ'a iletilir",\r
+"Klijent često mijenja adresu, adresu sjedišta ili na jednoj adresi je registrovano više pravnih lica.",\r
+"Klijent često mijenja osnivače i/ili stvarne vlasnike i/ili zakonske zastupnike.",\r
+"Klijent često mijenja računovođe.",\r
+"Klijent daje neadekvatno objašnjenje zbog čega u posljednjem trenutku mijenja imena lica koja koristi u vezi sa transakcijom.",\r
+"Klijent daje nejasna objašnjenja o izvoru prihoda ili gotovog novca koje koristi u poslovnim transakcijama.",\r
+"Klijent daje zajmove pravnim i fizičkim licima koje poslije otpisuje ili zatvara cesijama, kompenzacijama i sl.",\r
+"Klijent donosi veliki iznos gotovog novca sa namjerom da obavi transakcije.",\r
+"Klijent fakturiše usluge za koje se ne može sa sigurnošću potvrditi da su izvršene, odnosno vrši plaćanja za određenu vrstu usluge pravnim licima sa sjedištem na ofšor destinacijama, odnosno \\"poreskim rajevima\\".",\r
+"Klijent ima komplikovanu organizacionu strukturu koja nije efikasna niti ekonomski opravdana.",\r
+"Klijent ima složenu vlasničku strukturu iako vrsta i obim poslova koje obavlja ne zahtijevaju takvu strukturu.",\r
+"Klijent insistira na elektronskom zaključenju ugovora i elektronskom ispostavljanju kupoprodajnog naloga, a potiče iz države poznate po proizvodnji i prometu narkotika, visoko-rizične treće države i države sa takozvane \\"crne liste\\", odnosno države za koju se sumnja da podstiče terorističke aktivnosti i finansiranje terorizma, iako nije izvjesno da će usluga posredovanja biti izvršena.",\r
+"Klijent insistira na novim uslugama novčanog poslovanja, pri čemu postoji vjerovatnoća da ne mogu da se identifikuju realni tokovi novca ili učesnici plaćanja koji se do sada nijesu pojavljivali na tržištu kod posrednika ili se koriste različiti elektronski ili drugi kanali plaćanja.",\r
+"Klijent je \\"veoma pričljiv\\" u vezi sa temama koje se tiču pranja novca ili finansiranja terorizma.",\r
+"Klijent je državljanin države koja ne primjenjuje standarde za sprečavanje pranja novca i finansiranja terorizma.",\r
+"Klijent je lice koje nije registrovano kao stvarni vlasnik i koje nema funkciju u pravnom licu, a upravlja i donosi odluke.",\r
+"Müşteri teklifi veya fiyat artışını reddetti mi? Emir \\"reddedildi\\" durumuyla kapatılır.",\r
+"Müşteri sicile kaydedildi.",\r
+"Klijent je, prema tvrdnjama medija, poznat javnosti kao lice koje je uključeno u vršenje nelegalnih privrednih (siva zona poslovanja) i/ili kriminalnih aktivnosti.",\r
+"Klijent koji je nedavno kupio nepokretnost, prodaje je za višestruko veću cijenu od kupovne, što ukazuje na povezana lica zbog fiktivnog transfera novca i skrivanja porijekla i raslojavanja.",\r
+"Klijent koji je poznat iz javnog života kupuje nekretnine u većim iznosima, čija vrijednost odstupa od njegovog pretpostavljenog imovnog stanja.",\r
+"Klijent koji kupuje nekretnine mlađe je životne dobi i vidljivo je da raspolaže luksuznim statusnim simbolima (skupocjeni automobili, motocikli, plovila, satovi i dr.).",\r
+"Klijent koji prema saznanjima ima izvore novca u inostranstvu ili van finansijskog sistema i želi da ugovori plaćanja u više manjih iznosa koristeći platne institucije za prenos novca.",\r
+"Klijent koji se interesuje za nekretninu, koju nije lično vidio, tu nekretninu kupuje preko posrednika (advokata, zastupnika, bliskih osoba i dr.), a postoje saznanja da klijent kupac obavlja razna poslovanja na ivici legalnosti (nezakonito).",\r
+"Klijent kupuje imovinu ili investira u nekretnine u kratkom vremenskom periodu i ne djeluje mnogo zainteresovan za lokaciju, stanje ili projektovane troškove popravke te imovine.",\r
+"Klijent kupuje imovinu, a naročito nekretnine, na neviđeno.",\r
+"Klijent kupuje polisu osiguranja za iznos koji nije srazmjeran prihodima klijenta.",\r
+"Klijent na uvid prilaže samo fotokopije ličnih isprava ili neodgovarajuće isprave.",\r
+"Klijent ne dostavlja računovodstvenu ispravu ili postoji sumnja u vjerodostojnost računovodstvene isprave da je istinita i da prikazuje poslovnu promjenu ili dostavljena računovodstvena isprava ne sadrži sve podatke potrebne za knjiženje u poslovnim knjigama, a klijent i dalje insistira da takva isprava bude proknjižena.",\r
+"Klijent ne pokazuje naročit interes za karakteristike nepokretnosti (kvalitet izrade, lokaciju, datum završetka i primopredaje), već po svaku cijenu želi da se izvrši usluga posredovanja prometa/zakupa nepokretnosti.",\r
+"Müşteri mevcut değil.",\r
+"Klijent ne poznaje dobro svoj posao, iz čega se može zaključiti da ga uopšte ne obavlja ili ga obavlja u veoma ograničenom opsegu.",\r
+"Klijent ne želi da njegovo ime bude na bilo kojem dokumentu koji bi ga doveo u vezu sa datom poslovnom transakcijom.",\r
+"Klijent ne želi da se identifikuje u slučaju kupovine nekretnine gotovim novcem ili se identifikuje falsifikovanim podacima i ispravama.",\r
+"Klijent ne zna pouzdano gdje se nalazi njegova poslovna dokumentacija, uključujući i finansijsku, odnosno knjigovodstvenu dokumentaciju.",\r
+"Klijent nema zaposlenih ili nema poslovne prostorije što nije u skladu sa vrstom i obimom poslovanja.",\r
+"Klijent neuobičajeno dobro poznaje zakonske propise u vezi sa prijavljivanjem sumnjive transakcije, brzo potvrđuje posredniku da su novčana sredstva \\"čista\\" i da \\"nijesu oprana\\".",\r
+"Müşteri seçilmedi.",\r
+"Klijent nudi novac, poklone, kao i druge neuobičajene pogodnosti kao protivuslugu za izvođenje očigledno neuobičajenog i sumnjivog posla.",\r
+"Klijent nudi visoku posredničku naknadu, sa ciljem potkupljivanja kako se ne bi preduzimale radnje i obaveze iz Zakona.",\r
+"Klijent obavlja djelatnost koja je u skladu sa Nacionalnom procjenom rizika od pranja novca i finansiranja terorizma označena kao visokorizična.",\r
+"Klijent obavlja transakcije u velikim iznosima koje odstupaju od uobičajenog poslovanja klijenta.",\r
+"Klijent ostvaruje značajne prilive sredstava od funkcionera, odnosno od člana uže porodice funkcionera ili bližeg saradnika funkcionera koji nijesu u skladu sa dostupnim podacima o prihodima funkcionera.",\r
+"Klijent plaća avans velikim iznosom gotovog novca, dok se ostatak finansira iz neuobičajenog izvora ili kreditne institucije iz oblasti u kojoj su male stope poreza na dobit ili u kojoj nema poreza na dobit (u daljem tekstu: ofšor destinacija).",\r
+"Klijent plaća za robu i usluge koje ne odgovaraju opisu njegove djelatnosti.",\r
+"Klijent pokazuje neočekivano veliko interesovanje za mehanizme i načine funkcionisanja sistema sprečavanja pranja novca i finansiranja terorizma.",\r
+"Klijent pokušava da dokaže svoj identitet na drugi način, a ne predajom lične isprave za identifikaciju.",\r
+"Klijent pokušava da se identifikuje sa ispravama koje nijesu lične isprave.",\r
+"Klijent pokušava uspostaviti dobre i prijateljske odnose sa zaposlenim kod posrednika, a prema javnim saznanjima potiče iz kriminalnog miljea.",\r
+"Klijent posluje sa neprofitnim ili humanitarnim organizacijama, za što ne postoji pravi ekonomski razlog.",\r
+"Klijent pregovara o obavljanju poslova po tržišnoj cijeni ili cijeni većoj od tražene, ali zahtijeva da u dokumentima bude navedena manja vrijednost, plaćajući razliku u cijeni \\"ispod tezge\\".",\r
+"Müşteri tamamlanmış cihazı teslim alır (şu an: {0}). Reddedilen teklife ait cihaz \\"reddedildi\\" durumuyla iade edilir.",\r
+"Klijent prijevremeno gotovinski otplaćuje kredit ili vrši povraćaj zajma ili pozajmice osnivača za likvidnost.",\r
+"Klijent prilaže samo kopije ličnih isprava ili pokušava da obavi identifikaciju sa drugim ispravama, koje nijesu lične isprave.",\r
+"Klijent prilikom uspostavljanja poslovnog odnosa izbjegava lično pojavljivanje ili uspostavlja poslovni odnos preko punomoćnika.",\r
+"Klijent prima zajmove i kredite, a novčana sredstva primljena po tom osnovu, odmah u istom ili sličnom iznosu, daje kao zajmove i kredite drugim licima ili ih koristi za osnivanje zavisnih pravnih lica.",\r
+"Klijent pruža sumnjive ili nejasne informacije.",\r
+"Klijent raspolaže imovinom velike vrijednosti (luksuzni automobili, plovila, stanovi, rezidencije i sl.) koja je izvan uobičajenih okvira poslovanja, odnosno ne može se povezati sa poslovanjem klijenta.",\r
+"Klijent samoinicijativno navodi na zaključak da su sredstva kojima raspolaže legalna.",\r
+"Klijent se izjašnjava da učestvuje u obavljanju nezakonitih poslova.",\r
+"Müşteriye cihazı teslim alması bildirilir",\r
+"Klijent se raspituje ili obavlja transakcije sa nekretninama za fizička i pravna lica, rezidente i nerezidente koji su iz ofšor destinacija ili za kompanije osnovane u ofšor destinacijama (u daljem tekstu: ofšor kompanija), kao i država poznatih po proizvodnji i/ili prometu narkotika, država u kojima se ne primjenjuju ili se nedovoljno primjenjuju mjere za sprečavanje i otkrivanje pranja novca i finansiranja terorizma i država sa tzv. crne liste, odnosno liste država za koje se sumnja da podstiču terorističke akte i finansiranje terorizma.",\r
+"Klijent se raspituje o neuobičajenim načinima plaćanja.",\r
+"Klijent se u sredstvima javnog informisanja dovodi u vezu sa terorizmom, finansiranjem terorizma, ekstremizmom, fundamentalizmom i vjerskim radikalizmom.",\r
+"Klijent traži da plaća u ratama kako bi izbjegao plaćanje iznosa gotovog novca koji podliježe izvještavanju u skladu sa Zakonom o sprečavanju pranja novca i finansiranja terorizma (u daljem tekstu: Zakon).",\r
+"Müşteri tavsiye istiyor",\r
+"Müşteri tavsiye istiyor (ZSPNFT čl. 66 st. 11) — {0}",\r
+"Klijent u posljednjem trenutku, pred realizaciju ugovora, mijenja ugovorne strane (dovodi novo lice i predstavlja ga kao fiktivno lice), ne pružajući objašnjenje za takvo postupanje, a poznat je po svojim nelegalnim aktivnostima.",\r
+"Klijent u suprotnosti sa poslovnom praksom traži da računovođa u svoje ime i za svoj račun obavi transakciju.",\r
+"Klijent u značajnoj mjeri posluje sa gotovim novcem iako to nije u skladu sa prirodom njegovog poslovanja.",\r
+"Klijent vrlo dobro poznaje pravila o obavještavanju o sumnjivim transakcijama i/ili klijent pokazuje neočekivano veliko interesovanje za prijavljivanje podataka po osnovu Zakona kao i za mehanizme i načine funkcionisanja sistema sprečavanja pranja novca i finansiranja terorizma.",\r
+"Klijent vrši dokapitalizaciju preduzeća bez ekonomski opravdanog razloga.",\r
+"Klijent vrši neuobičajene ili veoma složene transakcije, naročito krajem i početkom izvještajnog perioda ili vrši transakcije koje ne prati adekvatna dokumentacija.",\r
+"Klijent vrši neuobičajene transakcije, transakcije sa povezanim licima ili licima koja odstupaju od uobičajenih klijenata (plaćanje fizičkim licima, politički ili javno eksponiranim licima).",\r
+"Klijent vrši plaćanja za robu i usluge čiju je tržišnu vrijednost teško utvrditi.",\r
+"Klijent vrši transakcije u velikim iznosima koje uključuju poljoprivredna gazdinstva i privredne subjekte koji se bave trgovinom i otkupom sekundarnih sirovina, bez ekonomske opravdanosti.",\r
+"Klijent za kojeg postoji sumnja da je povezan sa terorističkim aktima i/ili se nalazi na konsolidovanoj listi Komiteta za sankcije na osnovu Rezolucije 1267 Savjeta bezbjednosti Ujedinjenih nacija, zainteresovan je za uspostavljanje poslovnih odnosa i ulaganje u nepokretnosti.",\r
+"Klijent zahtijeva da izvještaj o gotovinskoj transakciji ne bude sačinjen ili odbija da obavi transakciju nakon što sazna da je sačinjavanje izvještaja obavezno.",\r
+"Klijent zahtijeva da se transakcija izvrši hitno ili zahtijeva da se ona tretira kao povjerljiva.",\r
+"Klijent želi da kupi imovinu ili obavi posao u ime nekog drugog lica (poznanika ili srodnika, osim svog supružnika).",\r
+"Klijent želi da uvjeri računovođu da nije potrebno da popuni ili priloži neki od potrebnih dokumenata ili mu nije poznato gdje se čuva poslovna dokumentacija.",\r
+"Klijent zloupotrebljava otpis robe.",\r
+"Müşteri: {0}",\r
+"Müşteriler",\r
+"Müşteriler ve müşteri grupları (müşteri türüne göre risk)",\r
+"Muhafaza süresi işleyen müşteriler",\r
+"Klijentova knjigovodstvena dokumentacija je neažurirana, neadekvatna i/ili neuredna.",\r
+"Klijentova knjigovodstvena dokumentacija se često gubi, nestaje ili je uništena \\"višom silom\\".",\r
+"Klijentove lične isprave za identifikaciju su nove, odnosno nedavno izdate.",\r
+"Klijentovi neaktivni računi iznenada postaju aktivni i preko njih se vrše značajni transferi po obimu i učestalosti u odnosu na klijentov obim poslovanja.",\r
+"ŞİKÂYET KAYIT DEFTERİ",\r
+"Şikâyet defteri",\r
 "{0} tarihine kaydedildi.",\r
+"Alacak dekontları (gelir azaltımı)",\r
+"Alacak dekontu (düzeltme faturası) gider olarak kaydedilmez. Dekont \\"Yeni maliyet hesabı (QR)\\" üzerinden veya \\"Satın alma ve giderler\\" bölümünde elle girilir.",\r
 "Alacak dekontu giderlere aktarılmaz.",\r
+"KO {0}",\r
+"Kod klijenta je uočena pojava paralelne dokumentacije.",\r
+"Kod klijenta se primjećuju neuobičajeno veliki troškovi po osnovu plaćenih usluga u korist inostranih dobavljača.",\r
+"Muafiyet kodu (mali mesaj)",\r
+"Muafiyet kodu mali servisin şemasında yok.",\r
+"Mali mesajdaki muafiyet kodu (EX kalemi, ExemptFromVAT grubu)",\r
+"Görüntülü elektronik kimlik tespitinde görüntü-ses kaydı saklanır (ZSPNFT čl. 117 st. 1 t. 5); kaydın dosya yolu girilmedi.",\r
+"KIF sütunu: \\"tabi değil\\" veya \\"muaf\\".",\r
+"Satış faturaları defteri (KIF) sütunu",\r
+"Kime teslim edildi",\r
+"Danışmanlık (müşavirlik, hukuk, vergi ve muhasebe hizmetleri)",\r
+"Yurt dışı müşteri hesapları",\r
+"İletişim (adres, telefon, e-posta)",\r
+"İletişim (telefon, e-posta)",\r
+"İletişim: {0}",\r
 "AY SONU KAPANIŞ KONTROL LİSTESİ — {0}",\r
+"{0} belgesinin kopyası {1} taslağı olarak oluşturuldu.{2}{3}",\r
+"Kopya müvekkile teslim edildi",\r
+"Alt aracılık sözleşmesinin kopyası üç günlük süreden sonra teslim edildi ({0}).",\r
+"Alt aracılık sözleşmesinin kopyası üç gün içinde müvekkile teslim edilir (čl. 21 st. 4); süre {0} tarihinde doldu",\r
+"Varlık lehdarı",\r
+"KP, PRK, IR, IRN, MM, MMR",\r
+"KR",\r
+"Kripto varlık",\r
+"ev",\r
 "müşteri {0}",\r
+"Gerçek kişi müşteri (tüketici) — tahsilat masrafı tazminatı yok",\r
+"Kod listesinden müşteri (isteğe bağlı)",\r
+"Müşteri fatura tutarını döviz olarak ödedi, banka ise kendi kurundan EUR olarak hesaba geçirdi. Ödeme faturayı kapatır, fark kur farkı olarak kaydedilir.",\r
+"Müşteri yabancı vergi mükellefi, ancak faturada KDV hesaplanmış. İşlem yerinin kontrolü gereklidir (čl. 17 st. 2).",\r
+"Müşterinin elektronik fatura için kayıtlı onayı yok (müşteri kartında veya e-postayla gönderirken girilir).",\r
+"Müşterinin elektronik fatura alımı için kayıtlı onayı yok. Fatura, müşterinin onayıyla elektronik olarak iletilir.",\r
+"Müşterinin bu ihtar için vadesi geçmiş açık faturası yok.",\r
+"Ticari işletme müşteri",\r
+"Ticari işletme müşteri ve ihtarlar",\r
+"Projenin müşterisi mevcut değil.",\r
+"Ülkesi Karadağ dışında girilmiş müşteri",\r
+"Kod listesindeki müşteri (isteğe bağlı)",\r
+"{0} faturanın müşterilerinin elektronik fatura için kayıtlı onayı yok.",\r
+"Yurt dışı müşteriler (2030), gelirler 6030 / 6130",\r
+"Ticari işletme müşteriye (PIB'li, gerçek kişi olmayan) geciken fatura için ihtar gerekmeksizin tahsilat masrafı tazminatı da hesaplanır (Para Borçlarının Ödeme Süreleri Kanunu, čl. 7). Tüketiciye tazminat ve ihtar masrafı hesaplanmaz (Tüketicinin Korunması Kanunu, čl. 26).",\r
+"satış bedeli",\r
+"Satış bedeli veya kira bedeli girilmedi.",\r
+"Satış bedeli veya kira bedeli",\r
+"Kur",\r
+"Kur (elle)",\r
+"Kur (1 EUR için)",\r
+"Kur {0} ({1}).",\r
+"{1} için {0} kuru alınamadı ({2}). Kur elle girilir: Ayarlar → Yurt dışı ve kur → Kur listesi.",\r
+"{1} için {0} kuru kur listesinde yok ve alınamadı: {2}",\r
+"{1} için {0} kuru: {2} ({3}).",\r
+"CBCG kuru",\r
+"Kur silindi.",\r
+"Kur kaydedildi.",\r
+"Kur sıfırdan büyük olmalıdır (1 EUR karşılığı döviz birimi, ör. 1,09680).",\r
+"Kur sıfırdan büyük olmalıdır.",\r
+"Yükümlülük günündeki kur",\r
+"Giriş günündeki kur",\r
+"Kur silinmedi.",\r
+"Kur girilmedi.",\r
+"Bugünün kuru kur listesinde yok; kopya orijinalin kurunu taşır. Kur \\"Kuru al\\" düğmesiyle güncellenir.",\r
+"Bu günün kuru kur listesinde yok: \\"Kuru al\\" veya elle giriş.",\r
+"Kur listesi",\r
+"Kur farkı",\r
+"Kur farkı {0}, fatura {1} — {2}",\r
+"Fatura kapatmada kur farkı",\r
+"KVan",\r
 "la",\r
+"Yükümlüdeki sorumlu kişi",\r
+"Gayrimenkulü gezen kişi",\r
+"Talimatı alan kişi",\r
+"Paranın teslim edildiği kişi girilmedi.",\r
+"Paranın alındığı kişi girilmedi.",\r
+"Kimlik belgesi",\r
+"Kimlik belgesinin süresi doluyor {0}",\r
+"Kimlik belgesinin süresi {0} tarihinde doldu. Geçerli bir belge gereklidir.",\r
+"Süresi dolmak üzere olan veya dolmuş müşteri kimlik belgeleri: {0}",\r
+"müşterinin kişisel verileri silinir; silme tarihini içeren kayıt kalır",\r
+"Müşterinin kişisel verileri silindi",\r
+"Müşterinin kişisel verileri silindi: {0} Yeni kayıt mümkün değil.",\r
+"Müşterinin kişisel verileri muhafaza süresi dolduktan sonra {0} tarihinde silindi; kayıt değiştirilemez.",\r
+"Müşterinin kişisel verileri silindi; belge eklenemez.",\r
+"Müşterinin kişisel verileri silindi; kayıt eklenemez.",\r
+"Muhafaza süresi dolmuş kişisel veriler: {0}",\r
+"kişisel veriler silindi",\r
+"Kişisel veriler silindi (kayıtlar: {0} giriş).{1}",\r
+"Kişisel veriler zaten silindi {0}",\r
+"Eğitim kayıtlarındaki kişisel veriler silindi.",\r
+"elden",\r
+"bizzat (satış noktasında sözlü)",\r
+"Tapu kaydı",\r
+"Gösterge listesi",\r
+"Gösterge listesi oluşturulmadı (Gösterge listesi sekmesi).",\r
+"Gösterge listesi oluşturulmadı.",\r
+"Yükümlünün gösterge listesi oluşturulmadı",\r
+"Yükümlünün gösterge listesi: Gösterge Listesi Hakkında Yönetmelik'teki (MUP, „Sl. list CG\\" 29/24) yükümlünün uyguladığı göstergeler ve kendi göstergeleri (čl. 83 — liste yükümlünün belgelerinde bulunmalıdır). Listede:",\r
+"O gün geçerli olan liste",\r
+"O gün yayımlanan liste",\r
+"Maliye Bakanlığı'nın yayımladığı vergi egemenliği olan bölgeler listesi (ZPDPL čl. 29 st. 10) — virgülle ayrılmış ISO kodları",\r
+"Gayrimenkulün konumu (yer, sokak ve numara, kadastro parseli ve kadastro bölgesi)",\r
+"Konum: {0}",\r
 "Marj uygulandı. Satış fiyatları yeniden hesaplandı. {0}",\r
+"sicil numarası / JMB",\r
+"Sicil numarası / JMB",\r
+"Tüzel kişinin sicil numarası girilmedi (ZSPNFT čl. 117 st. 1 t. 1).",\r
+"Şahıs işletmesinin sicil numarası girilmedi (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"ME",\r
 "Adet izni",\r
 "Adet izni (Sağlık Sigortası Kanunu md. 36a, ayda en fazla 2 gün)",\r
+"Müşteri tanıma ve iş ilişkisini izleme önlemleri",\r
+"Riski azaltmaya yönelik önlemler, işlemler ve prosedürler",\r
+"{0}/{1} ayı kilitli. Düzeltme iptal edilemez.",\r
+"{0}/{1} ayı kilitli. Düzeltme açık bir aya girilir.",\r
+"{0}/{1} ayı kilitli. Kayıttan düşme açık bir aya girilir.",\r
+"{0}/{1} ayı kilitli. Hesaplamanın durumu değiştirilemez.",\r
 "Ay teslime hazır",\r
 "Ayın kilidi açılmadı: kilit açma nedeni zorunludur.",\r
+"İşlem dönemli faturanın ait olduğu KDV beyannamesi ayı.",\r
 "Ay kilitli (defterler teslim edildi)",\r
+"ay",\r
+"Aylık (ardışık) faturalar, işlem dönemi belirtilen ayrı standart faturalardır (INVOICE).",\r
+"aylık",\r
+"MKD",\r
 "MO",\r
+"MUP 29/24",\r
+"n.Status IN ({0})",\r
 "Bayram günü vardiya planına göre çalışanlar: {0}.",\r
+"{0} numaralı sözleşmeye ait depozitoda {1} EUR var; alınandan fazlası teslim edilemez.",\r
+"başka bilgisayarda",\r
+"Na fakturama dobavljača upisan je tekući račun fizičkog lica kao račun na koji treba izvršiti uplatu po osnovu fakturisane usluge/robe.",\r
+"Faturada:",\r
+"Gecikme faizine KDV hesaplanmaz.",\r
+"Şekil (hesap veya nakit) seçilmedi.",\r
+"kimlik tespit yöntemi",\r
+"Kimlik tespit yöntemi",\r
+"Müşteri kimlik tespit yöntemi seçilmedi (ZSPNFT čl. 117 st. 1 t. 4).",\r
+"Kimlik tespit yöntemi listede yok.",\r
+"Gerçekleştirme şekli",\r
+"Müşterinin onay verme şekli",\r
+"Ödeme şekli zaten girilmiş.",\r
+"Ücretin ödeme şekli",\r
+"Ödeme şekli listede yok.",\r
+"Yapılma şekli",\r
+"Şikâyetin yapılma şekli seçilmedi.",\r
+"Onay şekli",\r
+"Müşteri onayının şekli seçilmedi.",\r
+"Onay şekli: yazılı beyan, e-posta veya sözleşme.",\r
+"Ücret faturası taslağı oluşturuldu (Düzenlenen belgeler).",\r
+"Ücret faturası taslağı Düzenlenen belgeler bölümünde oluşturulur; fatura düzenlendiğinde fatura numarası kayıtların 14. verisine girilir.",\r
+"Aracılık ücreti fatura taslağı (gayrimenkul Karadağ'daysa KDV %21 — KDV Kanunu, čl. 17a)",\r
+"Emir kalemleriyle fatura taslağı; iş dökümü faturanın ekidir",\r
+"Hesaplama taslağı silindi.",\r
+"fatura taslakları Sözleşmeler ekranında oluşturulur",\r
+"Denetim makamı",\r
+"temel sürenin bitiminden sonra en fazla beş yıl (\\"Muhafaza süresi sonu\\" alanı)",\r
+"En fazla gün",\r
+"En fazla gecikme günü",\r
+"KDV hariç ücret",\r
+"Ücret {0}, {1}, ayın {2}. günü faturalandırılır. Faturada işlem dönemi belirtilir.",\r
+"Tahsilat masrafı tazminatı (€)",\r
+"Tahsilat masrafı tazminatı (čl. 7)",\r
+"Tahsilat masrafı tazminatı (Para Borçlarının Ödeme Süreleri Kanunu čl. 7)",\r
+"Tahsilat masrafı tazminatı en az 40 €'dur (Para Borçlarının Ödeme Süreleri Kanunu, čl. 7).",\r
+"Tahsilat masrafı tazminatı, ihtar gerekmeksizin geciken her fatura için hesaplanır (Para Borçlarının Ödeme Süreleri Kanunu, „Sl. list CG\\" br. 113/24, čl. 7).",\r
+"Aracılık ücreti",\r
+"Aracılık ücreti — {0}, {1}{2}; {4} tarihli {3} numaralı aracılık sözleşmesi",\r
+"Aracılık ücreti: {0}; ödeme şekli: {1}; ödeme süresi: {2}. Aracı, ücret hakkını hukuki işlemin akdedildiği anda kazanır ve ücretin peşin ödenmesini talep etmez (čl. 27 st. 1–2). Bu sözleşmenin sona ermesinden itibaren dokuz ay içinde müvekkil, aracının sözleşme sona ermeden önceki faaliyetlerinin sonucu olan bir hukuki işlemi üçüncü bir kişiyle akdederse aracının ücret hakkı vardır (čl. 27 st. 6).",\r
+"{0} numaralı emir faturalandı (fatura {1}) ve silinemez.",\r
+"{0} numaralı emir faturalandı (fatura {1}); kalemler değiştirilemez.",\r
+"{0} numaralı emir faturalandı; yalnızca teslim bilgisi değiştirilebilir.",\r
+"{0} numaralı emir zaten faturalandı (fatura {1}).",\r
+"{0} numaralı emir kapatıldı ({1}); kalemler değiştirilemez.",\r
+"Emirde kod listesinden takılan parçalar var, ancak işyeri seçilmedi: stok işyeri bazında izlendiğinden işyeri emirde girilir.",\r
+"Emir işlemde.",\r
+"Emir kapatıldı: teklif reddedildi.",\r
+"Emir tamamlandı.",\r
+"Emirde yapılan iş, parça ve malzeme kalemleri yok.",\r
+"Emirde faturalanacak tutarlı kalem yok.",\r
+"Emirde kalem yok: onay, işler, parçalar ve malzemeyi içeren teklife verilir.",\r
 "KDV fişi mevcut",\r
+"Gider fişi: nakit için kasa (2430), kart için vadesiz hesap (2410) alacaklandırılır.",\r
+"Müvekkil",\r
+"Müvekkil, aracının alt aracılık sözleşmesiyle bu sözleşmeden doğan hak ve yükümlülükleri başka bir aracıya devretmesine onay verir (čl. 21){0}. Alt aracılık sözleşmesinin kopyası, akdinden itibaren üç gün içinde müvekkile teslim edilir.",\r
+"Müvekkil alt aracılığa onay vermemiştir.",\r
+"Müvekkil müşteri sicilinde yok (ZSPNFT). {0} EUR tutarındaki hukuki işlem için müşteri tanıma tedbirleri gereklidir{1}. Müşteri Uyum (ZSPNFT) → Müşteriler bölümüne girilir ve aracılık sözleşmesinde seçilir.",\r
+"Müvekkil; aracıyı aracılık için önemli tüm durumlar hakkında bilgilendirmeyi, gayrimenkul üzerindeki hakka ilişkin asıl belgeleri incelemeye sunmayı ve tescilli ve tescilsiz takyidatlar konusunda uyarmayı, gayrimenkulün gezilmesini sağlamayı, hukuki işlem akdedildiğinde kararlaştırılan ücreti ödemeyi ve değişiklikleri üç iş günü içinde aracıya bildirmeyi taahhüt eder (čl. 28).",\r
+"Müvekkil, münhasır aracılık maddesinin anlamı ve sonuçları konusunda ayrıca uyarılır (čl. 31 st. 3); uyarı sözleşmenin çıktısında yer alır.",\r
+"Dönemde tahsil edilen",\r
+"Dövizli tahsilat: negatif kur farkı",\r
+"Dövizli tahsilat: pozitif kur farkı",\r
+"Not (dahili)",\r
+"Not (elle giriş için zorunlu)",\r
+"Not en fazla 200 karakter olabilir (mali mesajın Note alanı).",\r
+"Faturadaki not",\r
+"Fatura taslağı oluştur",\r
+"Fatura taslağı oluştur (",\r
+"Fatura taslakları oluştur (",\r
 "Bu kalemden banka kuralı oluştur (açıklama veya alıcı hesabı → tür ve iş ortağı)",\r
+"Fatura oluşturulsun",\r
+"{0} fatura taslağı oluşturuldu. Yapılan işlerin dökümü faturanın ekidir.",\r
+"Oluşturulan faturalar",\r
+"Oluşturulan fatura taslağı: {0} ({1}).",\r
+"Oluşturulan fatura taslağı: {0}{1}.",\r
+"İşlemin geçici olarak durdurulmasına ilişkin talimatlar",\r
+"Değişikliğin oluşması",\r
+"Devam",\r
+"Müşterinin unvanı girilmedi.",\r
+"Denetim makamının adı",\r
+"Eğitimin adı",\r
+"Gayrimenkulün bulunduğu belediyenin adı",\r
 "Kural adı",\r
+"Proje adı",\r
+"Proje adı girilmedi.",\r
 "Mal adı",\r
 "Açıklamadaki ad",\r
+"Hizmet adı *",\r
+"Hizmet adı zorunludur.",\r
+"Unvan veya ad soyad",\r
 "uygulanmaz",\r
+"Tabi değil (seminerler, mühendis ve mimar hizmetleri, aracılık, veri tabanları ve čl. 29 dışındaki diğer hizmetler)",\r
+"tabi değil (ZPDPL čl. 29b t. 4)",\r
+"KDV'ye tabi değil",\r
+"PR-PDV'ye dahil değil",\r
+"Faturalanmamış saatler",\r
+"MÜŞTERİ VE PROJEYE GÖRE FATURALANMAMIŞ SAATLER",\r
+"Faturalanmamış",\r
+"negatif",\r
+"Negatif kur farkı {0} — {1}",\r
+"{0} numaralı faturada negatif kur farkı",\r
 "geçersiz parça",\r
 "geçersiz istek",\r
 "geçersiz uzunluk",\r
+"Seçilen saat kayıtlarından bazıları mevcut değil.",\r
+"Aktif proje yok.",\r
+"Faturalanacak vadesi gelmiş dönem yok.",\r
+"Kayıtlı müşteri yok. Müşteri, iş ilişkisi kurulmadan veya işlemden önce kaydedilir (ZSPNFT čl. 117).",\r
+"Kayıtlı gayrimenkul veya aracılık sözleşmesi yok.",\r
+"Kayıtlı yer gösterme yok.",\r
+"Kayıtlı eğitim yok.",\r
+"Kayıtlı şikâyet yok.",\r
+"Kayıtlı proje yok.",\r
+"Kayıtlı iş emri yok.",\r
+"Kayıtlı sözleşme yok.",\r
 "dosya yok",\r
+"Saat kayıtlarından oluşturulmuş fatura yok.",\r
+"Sözleşmelerden oluşturulmuş fatura yok.",\r
 "yok",\r
+"Yıl içinde yerleşik olmayanlara ödeme yok.",\r
+"Seçilen dönemde düzenlenmiş fatura yok.",\r
+"Muhafaza süresi işleyen müşteri yok (iş ilişkileri devam ediyor).",\r
+"Bu ihtar seviyesi için vadesi geçmiş faturası olan müşteri yok.",\r
 "ay için KDV hesaplama fişi yok",\r
+"Faturalanmamış saat yok.",\r
+"Seçilen filtre için gayrimenkul yok.",\r
+"Bu müşterinin dağıtılmamış ödemesi yok.",\r
 "ay için bordro yok",\r
+"maaş hesaplaması yok",\r
+"Yıl içinde hesaplanmış stopaj yok.",\r
+"Seçilen dönem için veri yok.",\r
 "Eşleşme yok",\r
+"Gönderilmiş veya kaydedilmiş ihtar yok.",\r
 "Kural yok. Kural \\"Yeni kural\\" düğmesiyle veya \\"İşlemler\\" sekmesindeki bir kalemden (\\"kural\\" düğmesi) oluşturulur.",\r
+"Seçilen filtre için şikâyet yok.",\r
+"Bildirim yok.",\r
+"Seçilen filtre için proje yok.",\r
+"Seçilen filtre için iş emri yok.",\r
 "çalışan yok",\r
+"Kullanılabilir tutar yok (ödeme veya hesaplama zaten kapatılmış).",\r
+"Kaydedilmiş faiz hesaplaması yok.",\r
 "ayda işlem yok",\r
+"Aracılık sözleşmesi yok.",\r
+"Seçilen filtre için sözleşme yok.",\r
 "ayda gelen fatura yok",\r
+"Girilmiş gecikme faizi oranı yok.",\r
+"Depozito kaydı yok.",\r
+"Seçilen dönem için saat kaydı yok.",\r
+"Bu kayıtta giriş yok.",\r
+"Seçilen yıl için kayıt yok.",\r
 "içe aktarılmış ekstre yok",\r
+"Nenamjensko podizanje novčanih sredstava u strukturiranim iznosima, nakon što su novčana sredstva prenijeta.",\r
+"Hesaplamanın tahsil edilmemiş kısmı bugünün tarihiyle alacak silme gideri olarak kaydedilir",\r
+"Tahsil edilemeyen alacak: kalan alacağın silinmesi (muhasebeci işlemi)",\r
+"Gayrimenkul",\r
+"Gayrimenkul {0}",\r
+"Gayrimenkulün aracılık sözleşmesi var ve silinemez. Gayrimenkul, durumu değiştirilerek portföyden çekilir.",\r
+"Gayrimenkul değiştirildi.",\r
+"Gayrimenkul silindi.",\r
+"Gayrimenkul {0} koduyla kaydedildi.",\r
+"Gayrimenkul mevcut değil.",\r
+"Gayrimenkul seçilmedi.",\r
+"Gayrimenkuller",\r
+"Geçerli sözleşmesi olmayan gayrimenkuller:",\r
+"Geçerli sözleşmesi olmayan gayrimenkuller: {0}",\r
+"Bilinmeyen dışa aktarma.",\r
+"Bilinmeyen ihtar gönderme şekli.",\r
+"Bilinmeyen iş emri durumu.",\r
 "bilinmeyen mesaj",\r
+"Müşterinin dağıtılmamış ödemeleri",\r
+"Dağıtılmamış",\r
+"Piyasa dışı",\r
+"Olağandışı",\r
+"Neuobičajena profitabilnost klijenta u poređenju sa drugim pravnim licima iz iste privredne grane.",\r
+"Ödenmemiş stopaj:",\r
+"Müşterinin yerleşik olup olmadığı işaretlenmedi (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Alınamadı: {0} ({1})",\r
+"girilmedi:",\r
+"Girilmedi: {0}.",\r
+"ödenmedi",\r
 "kilitli değil",\r
+"akdedilmedi — aracılık sözleşmesinin süresi doldu {0}",\r
+"akdedilmedi — aracılık sözleşmesi feshedildi {0}",\r
+"akdedilmedi (aracılık devam ediyor)",\r
+"Hiçbir saat kaydı seçilmedi.",\r
 "Hiçbir bekleyen kalem değiştirilmedi.",\r
 "kayıt iş parçacığı yanıt vermiyor",\r
 "kayıt iş parçacığı veritabanını döndürmedi",\r
 "kayıt iş parçacığı: {0}",\r
 "PDF iş parçacığı başarısız oldu",\r
+"İhtar seviyesi 1, 2 veya 3'tür.",\r
+"risk seviyesi",\r
+"Risk seviyesi",\r
+"Risk seviyesi listede yok.",\r
+"Anlaşmadaki düşük oran yalnızca diğer ülkenin yetkili makamınca onaylanmış mukimlik belgesiyle uygulanır (ülke, belge numarası ve tarihi).",\r
+"Düşük",\r
+"NOK",\r
+"Yeni geçerlilik tarihi mevcut tarihten sonra olmalıdır.",\r
+"Yeni müşteri",\r
+"Yeni yer gösterme",\r
+"Yeni şikâyet",\r
+"Yeni iş emri",\r
+"Yeni aracılık sözleşmesi",\r
+"Yeni depozito kaydı",\r
+"Yeni kayıt: {0}",\r
+"Yeni gayrimenkul",\r
+"yeni ödeme (şimdi girilir)",\r
+"Yeni hizmet",\r
+"Müvekkillerin aracının emanet hesabındaki parası (kapora, bedel) firmanın geliri veya parası değildir. Toplam bakiye:",\r
+"Müvekkilin parası depozitoya alındı",\r
+"Depozitodaki para teslim edildi",\r
+"Sözleşmenin yeni geçerlilik bitiş tarihi",\r
+"Novi ili budući klijent je poznat kao lice za koje postoje podaci da je uključen u vršenje nelegalnih aktivnosti ili je lice poznato po kriminalnim aktivnostima.",\r
 "Yeni öneri: {0} ({1}).",\r
+"Yeni proje",\r
+"Yeni sözleşme",\r
 "Yeni banka kuralı",\r
+"ör. 10,65",\r
+"ör. 2,65",\r
+"ör. Web mağazası geliştirme",\r
+"ör. Merkez Ofis",\r
+"ör. CBCG listesindeki kur, basılı liste",\r
+"ör. Market 1_00015, 2026061400002, FA-2026-0004, F8471C7C…",\r
 "örn. Banka ücreti",\r
 "örn. hesap işletim ücreti",\r
+"ör. CBCG Kararı, „Sl. list CG\\" 01/27",\r
+"ör. bilgi sisteminin bakımı",\r
+"ör. P 123/26",\r
+"ör. şarj cihazı, çanta",\r
+"ör. elektrik faturası mal olarak girilmiş",\r
+"ör. Almanya ile anlaşma, čl. 12",\r
+"ör. Çamaşır makinesi Gorenje W2",\r
+"Kayıt numaralandırması: boş sıra numarası bulunamadı.",\r
+"Sözleşme numaralandırması: boş numara bulunamadı.",\r
+"Yıllık numaralı defter (tüm sayfalar numaralı)",\r
+"Numaralı defter: tüm sayfalar numaralı, Aracılar Sicili kayıt numarası, imza yeri",\r
 "Bu Karar, ücretleri ile ücret üzerinden vergi ve primleri iş sözleşmesine göre {1} çalışma için %{0} artırılarak hesaplanacak tüm çalışanlara bildirilmiştir ({2}).",\r
+"Stopaj borçları — yerleşik olmayanlar",\r
+"Yer göstermeler",\r
+"GAYRİMENKUL YER GÖSTERMELERİ",\r
+"Yer gösterme silindi.",\r
+"Yer gösterme kaydedildi.",\r
+"Yer gösterme kaydı mevcut değil.",\r
+"Gayrimenkul yer gösterme",\r
+"Hakkın kapsamı",\r
 "Yeni sürümün yayınında yayıncı imzası yok. Güncelleme indirilmedi.",\r
 "Yeni sürümün yayını yayıncı imzası doğrulamasından geçemedi. Güncelleme indirilmedi.",\r
 "Yayınlanan {0} sürümü, daha önce yayınlanan {1} sürümünden eski. Güncelleme indirilmedi.",\r
+"İşyeri (isteğe bağlı)",\r
+"İşyeri, firmanın iş yeridir: ofis, servis, salon.",\r
+"Hizmet firması için işyeri zorunlu değildir. Firmanın kasalı bir iş yeri varsa (mali fiş) veya kayıtlar işyeri bazında tutuluyorsa girilir.",\r
+"bordro {0}",\r
+"Hesaplama {0} — ödemeler",\r
+"{0} hesaplaması düzenlendi.",\r
+"{0} hesaplaması kayıttan düşüldü.",\r
+"{0} hesaplaması iptal edildi.",\r
+"{0} hesaplaması düzenlenmedi. Ödeme yalnızca düzenlenmiş bir hesaplamaya bağlanır.",\r
+"Hesaplama son günü",\r
+"Hesaplama tamamen ödendi. Kayıttan düşme gerekmez.",\r
+"Faiz hesaplaması",\r
+"Faiz hesaplaması {0} — {1}",\r
+"Faiz hesaplaması taslak olarak kaydedildi.",\r
+"Hesaplama mevcut değil.",\r
+"Stopaj hesaplaması silindi.",\r
+"Stopaj hesaplaması kaydedildi. {0}",\r
+"Stopaj hesaplaması mevcut değil.",\r
+"{0} günlük dönem için orantılı hesaplama.",\r
+"\\"{0}\\" durumundaki hesaplama \\"{1}\\" durumuna geçemez.",\r
+"Gecikme faizi hesaplaması",\r
+"Gecikme faizi hesaplaması {0} — {1}",\r
+"Gecikme faizi hesaplaması: tahsilat masrafı tazminatı (B2B, 40 €)",\r
+"Gecikme faizi hesaplaması: müşteriden faiz ve tazminat alacağı (müşteri bazında)",\r
+"Gecikme faizi hesaplaması: faiz geliri",\r
+"Hesaplanan vergi",\r
 "İşlem devam ediyor, sırada: {0}.",\r
 "Form: {0}",\r
 "Gerekçe",\r
@@ -133,44 +1252,376 @@ const a=`[\r
 "KDV hesabı büyük deftere kaydedildi",\r
 "Bordro ve IOPPD",\r
 "Bordro kilitli (IOPPD)",\r
+"Gerekçe: verilerin neden gerçekleştirmeden önce iletilmediği",\r
+"Silindi",\r
+"\\"{0}\\" eğitim kaydındaki çalışanın adı ve görev yeri silinsin mi? Silme kalıcıdır.",\r
+"{1} için {0} kuru silinsin mi?",\r
+"{0} müşterisinin kişisel verileri, gerçek lehdarları, belge listesi ve kayıtlardaki kişisel veriler silinsin mi? Silme kalıcıdır.",\r
+"{0} hesaplama taslağı silinsin mi?",\r
+"{0} gayrimenkulü silinsin mi? Silme kalıcıdır.",\r
+"{0} tarihli yer gösterme silinsin mi ({1})? Silme kalıcıdır.",\r
+"Stopaj hesaplaması silinsin mi?",\r
+"{0} ihtarı silinsin mi?",\r
+"Dava bilgileri silinsin mi?",\r
 "\\"{0}\\" kuralı silinsin mi? Kuralın daha önce sınıflandırdığı kalemler olduğu gibi kalır.",\r
+"{0}/{1} numaralı şikâyet silinsin mi? Silme kalıcıdır.",\r
+"{0} projesi silinsin mi?",\r
 "{0} faturası silinsin mi ({1}, {2} EUR)? Tedarikçiye olan borç bu tutar kadar azalır. Silme kalıcıdır.",\r
+"{0} iş emri silinsin mi? Silme kalıcıdır.",\r
+"{0} için oran silinsin mi? Oran yeniden girilene kadar bu altı aylık dönem için faiz hesaplanamaz.",\r
+"{0} sözleşmesi yer göstermeler ve depozitoyla birlikte silinsin mi? Silme kalıcıdır.",\r
+"{0} sözleşmesi silinsin mi?",\r
+"{0} kaydı silinsin mi ({1} h, {2})?",\r
+"{0} EUR tutarındaki depozito kaydı silinsin mi ({1}, {2})? Silme kalıcıdır.",\r
+"Kişisel verileri sil",\r
 "Faturayı sil",\r
+"Eğitim",\r
+"/ {0} h bütçe",\r
+"başlangıç tarihi",\r
+"Kimden alındı",\r
+"İlişkinin sona ermesinden itibaren beş yıllık muhafaza süresi işler (ZSPNFT čl. 127 st. 1)",\r
+"Bunun vade sonrası kısmı",\r
+"Teklif veya fiyat artışı reddedilir (şu an: {0}).",\r
+"Odbijanje klijenta da da podatke koji se u praksi uobičajeno prikupljaju (lični podaci, adresa, zanimanje) i/ili postoje nedosljednosti u priloženoj dokumentaciji (datumi, potpisi i drugi podaci).",\r
+"İlişki kurulmasının veya işlemin reddedilmesi",\r
+"reddedildi.",\r
+"Yanıt",\r
+"yanıt son tarihi {0}",\r
+"Satıcının yanıtı",\r
+"yanıtlandı {0}{1}",\r
+"CBCG Kararı, „Sl. list CG\\" 01/24",\r
+"CBCG Kararı, „Sl. list CG\\" 01/25",\r
+"CBCG Kararı, „Sl. list CG\\" 05/26",\r
+"CBCG Kararı, „Sl. list CG\\" 65/24",\r
+"CBCG Kararı, „Sl. list CG\\" 68/25",\r
+"CBCG Kararı, „Sl. list CG\\" 95/26",\r
 "Karar, denetim hizmetleri için işyerinin girişine asılır.",\r
+"İlişki başlangıcı",\r
+"ilişki sona erdi",\r
+"İlişki sona erdi",\r
+"İlişki kuruldu",\r
+"Atanma tarihi",\r
+"İlan, gayrimenkulün {0} içermelidir (Aracılık Kanunu, čl. 25 st. 1). Gayrimenkul kaydına {1} girilmelidir.",\r
+"İlan, aracının adını ve Aracılar Sicili kayıt numarasını içerir (Aracılık Kanunu, čl. 25 st. 1). Numara, Aracı bilgileri sekmesinde girilir.",\r
+"ilan verilmesine izin verilmez",\r
+"OK-{0}-{1}",\r
 "O zaman yaz",\r
+"OP-{0}-{1}",\r
+"OP-{0}-%",\r
+"Gösterge açıklaması girilmedi.",\r
+"Arıza açıklaması veya müşteri talebi",\r
+"Arıza açıklaması veya müşteri talebi girilmedi.",\r
+"Şikâyet açıklaması",\r
+"Şikâyet açıklaması girilmedi.",\r
+"İş açıklaması",\r
+"İş, parça veya malzeme açıklaması",\r
 "Açıklama içerir (birden çok koşulu \\";\\" ile ayırın)",\r
 "açıklama \\"{0}\\" içeriyor",\r
+"Talep açıklaması",\r
+"Müşteri talebinin açıklaması girilmedi.",\r
+"İhtar",\r
+"İHTAR",\r
+"İhtar silindi.",\r
+"İhtar posta ile veya elden teslim edildi",\r
+"İhtarın bir müşterisi olmalıdır.",\r
+"İhtar mevcut değil.",\r
+"Dava öncesi ihtar",\r
+"DAVA ÖNCESİ İHTAR",\r
+"İhtar için ücret alınmaz. Öneri için gecikme günleri Ayarlar → Gecikme faizi ve ihtarlar bölümünde ayarlanır.",\r
+"İhtarlar",\r
+"Ekipman",\r
+"Cihazla birlikte teslim edilen ekipman",\r
+"Genel göstergeler",\r
+"Aracının genel iş koşulları bu sözleşmenin ayrılmaz parçasıdır (čl. 23). Müvekkil, aracının bulduğu kişiyle müzakereye girmek veya hukuki işlem yapmak zorunda değildir (čl. 29).",\r
+"Aracının genel iş koşulları bu sözleşmenin ayrılmaz parçasıdır; müvekkil bunların içeriği ve bağlayıcılığı konusunda ayrıca uyarılmıştır (čl. 23).",\r
+"{0} belediyesi",\r
+"Gayrimenkulün bulunduğu belediye seçilmedi.",\r
+"Düzenleyen",\r
+"Olay başına sigorta bedeli 20.000 €'dan az (Aracılık Kanunu, čl. 8).",\r
+"Yıl içindeki tüm talepler için sigorta bedeli 60.000 €'dan az (Aracılık Kanunu, čl. 8).",\r
+"Mesleki sorumluluk sigortası",\r
+"Aracının mesleki sorumluluk sigortasının süresi doluyor",\r
+"Muaf işlem",\r
+"Kurucu",\r
+"\\"Karadağ dışı işlem\\" gerekçesi (čl. 17) Karadağ'daki bir müşteri için seçildi. İşlem yerinin kontrolü gereklidir.",\r
+"Dayanak (kapora, bedelin bir kısmı, kira bedeli…)",\r
+"Gerçek kişi için čl. 17 gerekçesi: gerçek kişiye verilen hizmetin işlem yeri kural olarak Karadağ'dır (čl. 17 st. 5).",\r
+"PEP dayanağı",\r
+"Edinme sebebi",\r
+"%0 KDV gerekçesi",\r
+"%0 KDV gerekçesi bilinmiyor.",\r
+"%0 KDV'li kalemler için gerekçe (faturaya yazılır)",\r
+"kayıtlarda kalır; iptal, nedeniyle birlikte yeni kayıt olarak girilir.",\r
+"t. 13 kapsamındaki diğer yükümlüler (forfaiting, yapı inşaatı, ödeme araçları — al. 1, 6, 7)",\r
+"Fesih aracılık kayıtlarına girilir; kayıt kalıcıdır. Ücret hakkı için dokuz aylık süre fesih tarihinden itibaren işler (čl. 27 st. 6). Feshedilen sözleşme uzatılamaz.",\r
+"Sözleşmenin feshi",\r
+"Sözleşmenin feshi kaydedildi.",\r
+"Aracılık sözleşmesinin feshi",\r
+"Fesih bildirim süresi (gün)",\r
+"Fesih bildirim süresi (gün) geçerli değil.",\r
+"fesih bildirim süresi {0} gün, {1} {2}",\r
+"Fesih bildirim süresi {0} gündür.",\r
 "Kilit açmalar",\r
 "Kilit açmalar (neden)",\r
+"Tahsil edilmemiş faiz ve tazminatın kayıttan düşülmesi {0}",\r
+"Faiz hesaplamasının kayıttan düşülmesi {0} — {1}",\r
+"kayıttan düşüldü {0}",\r
+"{0} hesaplamasının tahsil edilmemiş kısmı ({1} EUR) bugünün tarihiyle kayıttan düşülsün mü?",\r
+"Kayıttan düş",\r
 "açık firma",\r
+"Vadesi geçmiş açık tutar",\r
 "Bu bilgisayar ana bilgisayar değildir: marj değişikliği yalnızca bu bilgisayarda kalır ve veri alışverişiyle aktarılmaz (ana bilgisayarın bir sonraki kopyası bunun üzerine yazar). Marjlar ana bilgisayarda değiştirilir.",\r
 "bu cihaz",\r
+"bu satırlar",\r
 "Bu faturalar tedarikçi borcuna dahildir, ancak alış faturaları defterinde, KDV beyannamesinde ve ticaret defterinde yoktur (maliyet hesabı silinmiş, fatura kalmıştır). Karar gereklidir: maliyet hesabının yeniden girilmesi veya faturanın silinmesi.",\r
+"Yetkili kişi ve eğitimler",\r
+"Yetkili kişi ve yardımcısı",\r
+"Yetkili kişi ve yardımcısı belirlenmedi",\r
+"Yetkili kişi ve yardımcısı kaydedildi.",\r
+"Yetkili kişi girilmedi (ZSPNFT čl. 14).",\r
+"Yetkili kişi, yardımcısı, çalışanların mesleki eğitimi",\r
+"bu satır",\r
+"{0} kodu zaten mevcut.",\r
+"ISO ülke kodu (ör. DE, USA, IRL)",\r
+"ISO kodu: ME, RS, DE …",\r
+"Sözleşme kodu. Hesaplama ve IOPPD kodu aynıdır; telif sözleşmesinin götürü giderleri muhasebeciyle kontrol edilir (ZPDFL čl. 20 st. 2).",\r
+"\\"{0}\\" paketi firma için etkin değil. Mevcut kayıtlar görüntüleme ve dışa aktarma için erişilebilir (Program hakkında → Özel kayıtların dışa aktarılması); yeni giriş yapılamaz.",\r
+"Paket etkin.",\r
+"Paket etkin değil: kayıtlar yalnızca görüntüleme ve dışa aktarma için erişilebilir.",\r
+"Parsel",\r
 "İş ortağı tanınmadı ve elle seçilir.",\r
+"götürü",\r
 "Hasılat",\r
 "Hasılat ±",\r
+"Kayıtların PDF'i oluşturuldu: {0}",\r
+"Defterin PDF'i oluşturuldu: {0}",\r
+"Sözleşmenin PDF'i oluşturuldu: {0}",\r
+"PDO",\r
+"KDV %{0} {1} (matrah {2})",\r
+"KDV %{0} −{1}",\r
 "KDV kontrolleri (oranlara göre hasılat, giriş oranları)",\r
+"KDV ayı {0}/{1} kilitli.",\r
+"KDV yükümlülüğü",\r
+"Sözleşmeden oluşturulan faturanın KDV yükümlülüğü {0} tarihinde (işlem döneminin son günü) doğar ve kilitli {1} ayına aittir. Düzenleme, bu ayın kilidi açıldıktan sonra mümkündür.",\r
 "KDV beyannamesi (PR-PDV)",\r
 "KDV: {0}",\r
+"Pep",\r
+"PEP",\r
+"{0} dönemi zaten faturalandı.",\r
+"{2} numaralı sözleşmenin {0}–{1} dönemi {3} numaralı faturayla faturalandı",\r
+"Dönem, sözleşmenin faturalama planında yok.",\r
+"Sözleşmeden oluşturulan faturanın işlem dönemini sözleşme belirler ve değiştirilemez. Başka bir dönemin faturası Sözleşmeler ekranında oluşturulur.",\r
+"İşlem dönemi, sözleşmenin faturalanan döneminin göstergesidir ve faturada değiştirilemez.",\r
+"Dönemler, başlangıç",\r
+"Sözleşme dönemleri",\r
+"dönemsel faturalama",\r
+"iş ilişkisinin sona ermesinden veya arızi işlemin gerçekleştirilmesinden ya da reddedilmesinden itibaren beş yıl",\r
 "Açıklamada vergi no.",\r
 "VKN: {0}{1}",\r
+"PIN geçerli değil.",\r
+"Koruma PIN'i",\r
+"yazılı beyan",\r
+"e-posta veya mesajla yazılı onay",\r
+"elden teslim edilen yazılı onay",\r
+"yazılı (posta ile veya elden teslim)",\r
+"Plaćanje obaveza klijent učestalo vrši putem obveznica.",\r
+"Nakit ödendi.",\r
+"Kartla ödendi.",\r
+"Faturalama planı",\r
 "Çalışan bordrosu: aylık hesap ve IOPPD",\r
 "ödeme otomatik olarak kaydedilmedi: alıcı hesabı tedarikçinin bilinen hesapları arasında değil —",\r
 "{0} EUR ödeme tedarikçiye açık borçtan ({1} EUR) büyük; {2} EUR fark ön ödeme olarak kalır.",\r
+"PLN",\r
+"Süre bitiminde",\r
+"muhafaza süresi dolduktan sonra (ZSPNFT čl. 127 st. 5). Kayıt değiştirilemez.",\r
+"Süre bitiminde sözleşme aynı süre için uzar; faturalama devam eder",\r
+"Müşteriye göre",\r
+"Dönem başına KDV dahil",\r
+"Dönem başına KDV dahil:",\r
+"Projeye göre",\r
+"proje ve saatlik ücrete göre",\r
+"Sözleşmeye göre",\r
+"Sözleşmeye göre {0}{1}: {2}.{3}",\r
+"Sözleşmeye göre faturalar oluşturuldu. Silme mümkün değil; sözleşme feshedildi olarak işaretlenebilir.",\r
+"saat kaydına göre",\r
+"Hizmete göre",\r
 "olağan çalışma saatlerinde",\r
+"Başlangıç",\r
+"Faaliyet başlangıcı",\r
+"Başlangıç listesi: FATF'nin önlem çağrısında bulunduğu ülkeler; FOJ'un yayımladığı listeye göre tamamlanır",\r
+"İşe başla",\r
+"FOJ'a iletilen veriler",\r
+"ZSPNFT kapsamındaki veriler ve kayıtlar, iş ilişkisinin sona ermesinden veya işlemin gerçekleştirilmesinden itibaren beş yıl saklanır (čl. 127).",\r
+"Tapu kaydındaki bilgiler (ayni hak, edinme sebebi, şerhler, bina yaşı)",\r
+"Müşteri bilgileri değiştirildi.",\r
+"Müşteri ve işlem bilgileri (ZSPNFT)",\r
+"Müşteri, işlem bilgileri, belgeler ve raporlar",\r
+"Eğitim verileri dört yıl saklanır (ZSPNFT čl. 127 st. 4); silme {0} tarihinden itibaren mümkündür",\r
+"İşlem bilgileri girilmedi (ZSPNFT čl. 117 st. 1 t. 7).",\r
+"İşlem bilgileri {0} tarihine kadar FOJ'a iletilir (ZSPNFT čl. 66).",\r
 "Geçerli sürümlere ilişkin veriler yayıncı imzası doğrulamasından geçemedi. Güncelleme indirilmedi.",\r
 "Geçerli sürümlere ilişkin verilerin süresi doldu, bu nedenle güncellemeler şu anda doğrulanamıyor. Denetim kendiliğinden tekrarlanır.",\r
+"Aracı bilgileri",\r
+"Aracı bilgileri kaydedildi.",\r
+"Veriler beş yıl saklanır (ZSPNFT čl. 127 st. 1{0}); silme {1} tarihinden itibaren mümkündür",\r
+"Veriler, nitelikli elektronik imzayla finansal istihbarat biriminin uygulaması üzerinden elektronik olarak iletilir (ZSPNFT čl. 66 st. 13). Bu özet giriş için kullanılır ve yükümlünün belgelerinde kalır. Kayıt: {0} ({1}).",\r
+"Veriler {0} tarihine kadar FOJ'a iletilir ({1}).",\r
+"Veriler, işlemin gerçekleştirilmesi gereken süreyle birlikte, işlem gerçekleştirilmeden önce FOJ'a iletilir. Bu mümkün değilse — gerekçesiyle birlikte en geç gerçekleştirmeden sonraki iş günü.",\r
+"Veriler zaten silindi.",\r
+"Stopaj ayarları kaydedildi.",\r
+"Ayar kaydedildi.",\r
+"Yeni saat kayıtları için varsayılan saatlik ücret, KDV hariç",\r
+"Teslim alınmayan cihaz hatırlatıcısı (gün)",\r
 "Eşleşme {0} / {1}",\r
+"Tekli giriş",\r
+"İşlem girişimi",\r
+"poliçe {0}",\r
+"Poliçe geçerlilik tarihi",\r
+"Siyasi nüfuz sahibi kişi",\r
+"Siyasi nüfuz sahibi kişi: risk seviyesi \\"yüksek\\" değil (sıkılaştırılmış önlemler, ZSPNFT čl. 13).",\r
+"Siyasi nüfuz sahibi kişi: dayanak zorunludur",\r
+"Alanlar",\r
+"PR-PDV alanı",\r
+"PR-PDV alanı: dahil değil, 13 veya 14.",\r
+"tarım arazisi",\r
+"Altı aylık dönem",\r
+"kayıt iptal edildi (kayıt hatası)",\r
+"Düzeltmeyi iptal et",\r
+"KDV düzeltmesi iptal edilsin mi (ör. alacak tahsil edildi)?",\r
 "Kayıt geri alınsın ve kalem yeniden tanınsın mı? Tedarikçiye ödeme silinir ve işlem yeni bir iş ortağı önerisiyle \\"bekliyor\\" durumuna döner.",\r
 "Yeniden giriş: faturanın QR kodunu tekrar okutun (fatura yeni maliyet hesabına bağlanır). Silme: ana bilgisayarda \\"Faturayı sil\\" düğmesi; maliyet hesapları ve defterler değişmez.",\r
+"Teklifte, avans faturası düzenlenmeyen KDV oranına sahip kalemler var (avans: %21, %15 veya %7). Avans, Avanslar ve alacak dekontları ekranında girilir.",\r
+"teklif verildi",\r
+"Teklif {0} {1} ve teklif kabul edildi olarak işaretlensin mi?",\r
+"Teklif düzenlendi: {0} €{1}",\r
+"Teklif iptal edildi.",\r
+"Teklifte müşteri yok. Avans faturası müşteriye düzenlenir.",\r
+"Teklifte kalem yok: işleri, parçaları ve malzemeyi fiyatlarıyla girin.",\r
+"Teklif kabul edildi {0}{1}.",\r
+"Teklif, teslim alınmış emir için düzenlenir (şu an: {0}). Onaydan sonraki ek işler için yeni onay girilir.",\r
+"Teklif, alınmış bir iş emri veya fiyat artışı için onay bekleyen bir iş emri için düzenlenir (şu an: {0}). Onaydan sonraki ek işler için yeni onay girilir.",\r
 "Vergi defterleri: kapanış kontrol listesi, kilitleme, kapanıştan sonraki değişiklikler",\r
 "Vergi defterleri: aylık KDV beyannamesi",\r
 "VERGİ MÜKELLEFİ: {0}",\r
+"Stopaj",\r
+"STOPAJ — YERLEŞİK OLMAYANLARA ÖDEMELER",\r
+"Stopaj — hesaplamanın düzenlenmesi",\r
+"Stopaj — yerleşik olmayan",\r
+"Stopaj — yerleşik olmayanlar",\r
+"Stopaj %{0} — {1} ({2})",\r
+"Stopaj {0} EUR (brüt {2} EUR üzerinden %{1}); alıcıya ödeme {3} EUR. Dayanak: {4}.",\r
+"Bu kayıttaki stopaj, yerleşik olmayanlara (Karadağ dışındaki ülke) yapılan ödemeler üzerinden hesaplanır.",\r
+"Yerleşik olmayanlara yapılan ödemelerde stopaj (ZPDPL čl. 29): vergi borcu; tedarikçi borcu vergi kadar azaltılır",\r
+"Yerleşik olmayan tüzel kişiye ödemede stopaj (ZPDPL čl. 29); brüt tutar üzerinden hesaplama, tarih = fatura tarihi (hesaplamada değiştirilir)",\r
+"Yerleşik olmayana ödemede stopaj (ZPDPL čl. 29)",\r
+"Stopaj hesaplanmadı: {0}",\r
+"Stopaj, gelirin ödendiği anda hesaplanır ve ödenir. Ödenen stopaj raporunun (IOPPO)",\r
+"Stopaj, brüt ödeme tutarı üzerinden hesaplanır ve ödeme anında ödenir. Alıcı, vergi düşülmüş tutarı alır.",\r
+"İşlem, sözleşmenin sona ermesinden ({0}) itibaren dokuz ay geçtikten sonra tamamlanmış; ücret hakkı yoktur (Aracılık Kanunu, čl. 27 st. 6).",\r
+"İşlem, sözleşmenin sona ermesinden itibaren dokuz ay içinde ({0} tarihine kadar) tamamlanmış; işlem aracının sözleşme sona ermeden önceki faaliyetlerinin sonucuysa ücret hakkı vardır (čl. 27 st. 6).",\r
+"İşlem tamamlandı; sözleşme hukuki işlemin akdedilmesiyle sona erdi.",\r
+"işlem tamamlandı",\r
+"İşlem tamamlandı",\r
+"Özel kayıtlar",\r
+"Özel kayıtları firmanın lisansı belirler.",\r
+"Özel lisans paketleri. Firmanın lisansı içerdiğinde görünür; paket lisansta olmadığında veriler silinmez.",\r
+"Gönderilmiş ihtar silinemez (müşteri geçmişinde kalır).",\r
+"Gönderilen fatura: {0}.{1}",\r
+"Posta ile gönderildi",\r
+"Sekiz günlük süreden sonra: {0}.",\r
+"Son ihtar",\r
 "Son sayfa",\r
+"son bordro {0}",\r
+"Müşteri firmanın kurumsal kartı. Kişisel ödeme kartıyla ödeme nakit sayılır ve kasadan geçer.",\r
+"Poslovne transakcije klijenta nijesu u skladu sa njegovim prihodima i imovinom.",\r
+"İş ilişkisi",\r
+"Poslovni odnos ili transakcija uključuje neprofitne ili humanitarne organizacije za šta ne postoji pravi ekonomski razlog.",\r
+"İş ilişkisi devam ediyor; muhafaza süresi ilişkinin sona ermesinden itibaren başlar (ZSPNFT čl. 127 st. 1).",\r
+"işyeri",\r
+"Gayrimenkul alım-satım ve kiralamada aracılar",\r
+"Karadağ'daki gayrimenkul için aracılık ücreti Karadağ'da yapılmış işlemdir ve müvekkil yabancı kişi olsa da KDV'ye tabidir (KDV Kanunu, čl. 17a st. 1). \\"Karadağ dışı işlem\\" gerekçesi (čl. 17) uygulanmaz.",\r
+"Aracılık ücreti, düzenlenen fatura ve fatura numarası",\r
+"Posrednik ima saznanja da je klijent bio kažnjavan za neka krivična djela.",\r
+"Aracı; müvekkille hukuki işlem yapmak üzere bir kişi bulmaya ve bu kişiyi müvekkille bir araya getirmeye çalışmayı, mülkiyet hakkına ilişkin belgeleri incelemeyi ve müvekkili tescilli haklar, takyidatlar, önalım hakkı ve devir kısıtlamaları konusunda uyarmayı, gayrimenkulün tanıtım işlemlerini yürütmeyi, gayrimenkulün görülmesini sağlamayı, müzakerelerde aracılık etmeyi ve müvekkili hukuki işlem için önemli tüm durumlar hakkında bilgilendirmeyi taahhüt eder (čl. 20).",\r
+"Posrednik sumnja u istinitost navedene svrhe transakcije (npr. pomoć porodici, izdržavanje lica, pojmovi često korišćeni od strane ekstremista i terorista i sl.), naročito ako se radi o učestalim nalozima gdje se ne može utvrditi lična ili poslovna veza između učesnika transakcije.",\r
+"Aracı: {0}, {1}, PIB {2}; Aracılar Sicili kayıt numarası: {3}{4}.",\r
+"Aracı: {0}, Aracılar Sicili kayıt numarası: {1}",\r
+"Aracılık",\r
+"Aracılık (gayrimenkul)",\r
+"Gayrimenkul alım-satımında aracılık",\r
+"posta",\r
+"Posta kodu",\r
+"Gerçekleşen fiyat",\r
+"için faturalar mevcut:",\r
+"Postoje podaci da je klijent možda umiješan u nezakonite aktivnosti.",\r
+"Postoje saznanja da klijent ima lošu reputaciju ili da postoji sumnja u izvore sredstava, da u svom poslovanju koristi virtuelne valute (npr. bitkoin ili lajtkoin) ili koristi alternativne kanale plaćanja (npr. havala, hundi), sa ciljem izbjegavanja redovnih finansijskih kanala.",\r
+"Postoji sumnja u stvarnu svrhu obavljene transakcije.",\r
+"Postoji veliki broj avansnih uplata, gdje do kraja obračunskog perioda nije došlo do realizacije usluge ili isporuke robe.",\r
+"İmza",\r
+"imzalı teklif (her iki taraf)",\r
+"İmzalı belge",\r
+"İmzalı yer gösterme belgesi aracılığın kanıtıdır (Aracılık Kanunu, čl. 24) ve silinemez.",\r
+"Alt aracı",\r
+"Alt aracılık",\r
+"Alt aracılık yalnızca müvekkilin açık onayıyla mümkündür (Aracılık Kanunu, čl. 21 st. 1).",\r
+"Alacaklar",\r
+"Yurt dışı müşterilerden alacaklar (ülkesi Karadağ dışında olan müşteri): fatura, avans, alacak dekontu, tahsilat",\r
+"Faiz alacakları",\r
+"alacaklar, IOS, ihtarlar",\r
+"Alacak için dava açıldı…",\r
+"Potrosac",\r
+"Tüketici",\r
+"Tüketici (ad soyad)",\r
+"tüketici şikâyetini geri çekti",\r
+"Bu belge, aracılık kayıtlarındaki gayrimenkulün gezildiğinin kanıtıdır (Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 24).",\r
+"Yer gösterme belgesi oluşturuldu: {0}",\r
+"Mukimlik belgesi",\r
+"Mukimlik belgesi {0} ülkesi için düzenlenmiş, ancak alıcı {1} ülkesinden.",\r
+"Mukimlik belgesi {0} tarihli; ödeme yılı için geçerli olup olmadığı kontrol edilmelidir.",\r
+"belge imzalandı",\r
+"Belge: ülke",\r
 "onayla",\r
+"{0} tarihinde {1} aracılığıyla şu gayrimenkulü gezdiğimi onaylarım: {2}{3}, {4}.",\r
+"Yediemin",\r
+"Povrsina",\r
+"Alan (m²)",\r
+"Alan zorunludur (aracılık kayıtlarının 10. verisi, Yönetmelik 45/26 čl. 3). İlan, gayrimenkulün alanını ve oda düzenini içerir (Aracılık Kanunu, čl. 25 st. 1)",\r
+"Alan m²",\r
+"Alan negatif olamaz.",\r
+"Gayrimenkul alanı",\r
+"Gayrimenkul alanı (m²) girilmedi. Alan, aracılık kayıtlarının bir verisidir (Yönetmelik 45/26, čl. 3 t. 10) ve ilanın zorunlu bilgisidir (Aracılık Kanunu, čl. 25 st. 1).",\r
+"{0} gayrimenkulünün alanı girilmedi (Aracılık Kayıtları Yönetmeliği 45/26, čl. 3 t. 10). Alan, gayrimenkul kaydına girilir.",\r
+"Alan: {0} m²",\r
+"alanını",\r
+"alan (m²)",\r
+"alan (m²) ve oda düzeni",\r
+"alanını ve oda düzenini",\r
+"portföyden çekildi",\r
+"pozitif",\r
+"Pozitif kur farkı {0} — {1}",\r
+"{0} numaralı faturada pozitif kur farkı",\r
+"Müşteri tanıma · ZSPNFT kayıtları · FOJ bildirim süreleri · risk analizi · gösterge listesi",\r
+"Müşteri tanıma, ZSPNFT kayıtları, süreli FOJ bildirimleri, gösterge listesi, risk analizi ve muhafaza süreleri.",\r
+"müşteri tanıma, ZSPNFT kayıtları, FOJ bildirimleri, risk analizi ve gösterge listesi",\r
+"PR PDV-2: alan 13 — %0 oranlı işlem, alan 14 — muaf işlem",\r
+"PR-{0}-%",\r
+"Müşterinin iş ilişkisinin izlenmesi — işlem",\r
+"Yazılı teklif eşiği (€, KDV dahil)",\r
+"Yazılı teklif eşiği 0 ile 100.000 € arasında olmalıdır.",\r
+"Eşikler ve süreler sıfırdan büyük olmalıdır.",\r
+"Hak ve yükümlülükler (aracılık sözleşmesi metni)",\r
+"Aracının ve müvekkilin hak ve yükümlülükleri",\r
 "Banka kuralları",\r
 "Kurallar uygulanmadı. {0}",\r
 "Kurallar uygulandı: değiştirilen bekleyen kalem: {0}.",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kayıtlarının Ayrıntılı İçeriği, Tutulma Şekli ve Muhafaza Süresi Hakkında Yönetmelik („Sl. list CG\\" br. 45/26), čl. 3–5. Kayıt sıra numarası kesintisizdir; değişiklik, ilk kayda atıfla yeni kayıt olarak girilir. Kayıtlar süresiz saklanır.",\r
+"Aracılık Kayıtları Yönetmeliği („Sl. list CG\\" 45/26), čl. 3 t. 6 ve 10",\r
+"Aracılık Kayıtları Yönetmeliği („Sl. list CG\\" 45/26), čl. 3–5",\r
+"Aracılık Kayıtları Yönetmeliği („Sl. list CG\\" 45/26), čl. 4 — sekiz gün içinde kayıt",\r
+"Aracılık Kayıtları Yönetmeliği („Sl. list CG\\" 45/26), čl. 4 — sözleşmenin akdinden veya değişikliğin oluşmasından itibaren sekiz gün içinde kayıt",\r
+"Aracılık Kayıtları Yönetmeliği („Sl. list CG\\" 45/26), čl. 5 st. 1",\r
+"Aracılık Kayıtları Yönetmeliği („Sl. list CG\\" 45/26), čl. 5 st. 2",\r
+"Şüpheli müşteri ve işlemlerin tespitine yönelik gösterge listesi hakkında yönetmelik („Sl. list CG\\" br. 29/24)",\r
 "kural",\r
 "Kural silindi.",\r
 "Kural kaydedildi.",\r
@@ -182,28 +1633,232 @@ const a=`[\r
 "Kural tedarikçi veya müşteri yazar, ikisini birden değil.",\r
 "\\"{0}\\" kuralı",\r
 "Kural: {0}",\r
+"Hukuki işlem ve ücret",\r
+"Hukuki işlem, aracılık sözleşmesinden önce akdedilmiş.",\r
+"{0} numaralı aracılık sözleşmesine göre hukuki işlem",\r
+"Hukuki işlem akdedildi: {0}",\r
+"Hukuki işlem akdedildi / akdedilmedi",\r
+"Tüzel kişi",\r
+"Ücret hakkı bitişi",\r
+"{0} numaralı sözleşmeye göre ücret hakkı (sona ermeden sonra dokuz ay)",\r
+"Boş = projenin saatlik ücreti",\r
 "Faturanın giderlere aktarılması — maliyet hesabı {0}",\r
 "{0} maliyet hesabından aktarıldı (fatura mal olarak girilmişti) {1}",\r
+"İkametgâh veya merkez",\r
+"Dava öncesi",\r
+"teslim edildi:",\r
+"teslim edilen",\r
+"Teslim edilen",\r
+"talimata göre kişiye teslim edildi (ödendi)",\r
+"Önerilen oran = ECB oranı + 8 p.p. Geçerli oran, CBCG'nin yayımladığı orandır.",\r
+"Önerilen oran:",\r
+"Konu (fatura, iş emri, ürün veya hizmet)",\r
+"Konu (cihaz veya araç) girilmedi.",\r
+"Konu (cihaz, araç, model)",\r
+"Aracılık konusu: gayrimenkul {0} — {1}{2}{3}; konum: {4}. {5}: {6} {7}. Bedel, aracılık ücreti tutarını içerecek şekilde belirlenmiştir (Kanun čl. 18 st. 3).",\r
+"Sözleşmenin konusu girilmedi.",\r
+"Sözleşmenin konusu: {0}.",\r
+"Alınan önlem",\r
+"IOPPO raporu için özet —",\r
+"STOPAJ RAPORU (IOPPO) İÇİN ÖZET",\r
+"emanet hesabı üzerinden",\r
 "aktarılır:",\r
+"faturaya göre",\r
+"Faturaya göre: nakit fatura hemen ödenmiştir, nakitsiz fatura ödenene kadar tedarikçiye borçtur.",\r
+"Aktar",\r
+"Vergi yükümlülüğünün devri. İşlem yeri Karadağ dışında (čl. 17 st. 2 ZPDV).",\r
+"Prenosi novčanih sredstava manjih iznosa u kojima su uključena ista lica preko drugih alternativnih sistema za prenos novca su učestali.",\r
 "banka kuralıyla tanındı (Banka → Banka kuralları)",\r
+"ilişkinin sona ermesi",\r
 "geride kaldı",\r
 "Önceki sayfa",\r
 "Önceki eşleşme",\r
+"Arama (numara, müşteri, konu, seri numarası)",\r
+"Arama (numara, müvekkil, konum, danışman)",\r
+"Arama (numara, konu, müşteri)",\r
+"Arama (unvan, sicil numarası, JMB)",\r
+"Arama (kod, konum, parsel, malik)",\r
+"Arama (tüketici, konu, açıklama)",\r
+"Arama (kod, ad, müşteri)",\r
+"gösterge arama",\r
 "Listenin tüm sayfalarında arama (Enter = sonraki eşleşme)",\r
+"Teslim alan (ad soyad)",\r
+"Teslim edildi",\r
+"Alınan gün: {0}.{1}",\r
+"Yönetmelikten alınan gösterge: {0}.",\r
+"Tek bir gün için alma veya elle giriş",\r
+"Teslim kaydedildi.",\r
+"Al",\r
+"Kuru al",\r
+"Yönetmelikteki listeleri al (MUP 29/24)",\r
+"Dönem için al",\r
+"Şikâyet {0}/{1}",\r
+"{0}/{1} numaralı şikâyet başka bilgisayarda da kaydedildi; buradaki kayıt {2}/{3} numarasını alır.",\r
+"{0}/{1} numaralı şikâyet değiştirildi.",\r
+"Başka bilgisayardan gelen {0}/{1} numaralı şikâyet {2}/{3} numarasını alır (numara burada daha önceki bir kayıt tarafından kullanılıyor).",\r
+"Şikâyet silindi.",\r
+"Şikâyet yanıtlandı",\r
+"Şikâyet yanıtlandı: {0} Girilen veriler değiştirilemez; yanıta yalnızca ek yapılabilir (Tüketicinin Korunması Kanunu, čl. 27).",\r
+"Şikâyet {0}/{1} numarasıyla kaydedildi. Yanıt süresi: {2}.",\r
+"Şikâyet mevcut değil.",\r
+"Şikâyet en az iki yıl saklanır (Tüketicinin Korunması Kanunu, čl. 27); silme {0} tarihinden itibaren mümkündür. Hatalı kayıt \\"kayıt iptal edildi\\" sonucuyla kapatılır.",\r
+"Süresi dolmuş yanıtsız şikâyetler (",\r
+"Tüketici şikâyetleri, yanıtlar ve yanıt süreleri",\r
+"Tüketici şikâyetleri, yanıtlar ve yanıt süreleri.",\r
+"Şikâyet defterindeki şikâyetler:",\r
+"Gelir",\r
+"KDV hariç gelir",\r
+"Dönemde KDV hariç gelir:",\r
+"Yurt dışı piyasada hizmet satış gelirleri",\r
+"MÜŞTERİYE GÖRE GELİRLER",\r
+"AYLARA GÖRE GELİRLER",\r
+"PROJEYE GÖRE GELİRLER",\r
+"SÖZLEŞMEYE GÖRE GELİRLER",\r
+"HİZMET VE ÜRÜNE GÖRE GELİRLER",\r
+"kabul edildi",\r
+"Kabul edilen teklif servis ve müşteri tarafından imzalanır; bir nüsha müşteriye verilir ({0}).",\r
+"Bildirim tamamlandı.",\r
+"Bildirim FOJ'a iletildi ve değiştirilemez.",\r
+"Bildirimler",\r
+"FOJ BİLDİRİMLERİ",\r
+"Bekleyen FOJ bildirimleri:",\r
+"Bekleyen FOJ bildirimleri: {0}",\r
+"Servise cihaz kabulü · iş emri · onarım için yazılı teklif · faturayla döküm",\r
+"Servise cihaz kabulü, iş emirleri, onarım için yazılı teklif ve faturayla döküm.",\r
+"Priliv novčanih sredstava je nastao po osnovu ugovora o zajmu čiji je rok vraćanja istekao, a novčana sredstva koja su bila predmet ugovora o zajmu nijesu vraćena.",\r
+"Ekstreden giriş",\r
+"Ek",\r
+"Ek (imzalı sözleşme, dosya yolu)",\r
+"Ek (fotoğraf veya belgelerin dosya yolu)",\r
+"Alıcı (yerleşik olmayan tüzel kişi)",\r
+"Ödeme alıcısı girilmedi.",\r
 "Kuralları bekleyen kalemlere uygula",\r
+"Karadağ Merkez Bankası'nın her altı aylık dönem için yayımladığı gecikme faizi oranı uygulanmıştır{0}. Faiz vade tarihinden sonraki günden itibaren işler; ödeme, ödeme gününden itibaren anaparayı azaltır.",\r
 "Uygulandı",\r
+"alındı:",\r
+"alınan",\r
+"Müvekkillerden alınan depozitolar",\r
+"bugün alınan faturalar (KDV dahil EUR)",\r
+"bugün alınan fatura ·",\r
+"bu ay alınan fatura ·",\r
+"müvekkilden veya karşı taraftan alındı",\r
+"Alınan: {0} {1}; {2} tarihli CBCG orta kuru: 1 EUR = {3} {4}",\r
+"Ek vergi (%)",\r
+"Ek vergi %",\r
+"Müşteri onayı kaydedildi.",\r
+"Artış onayı",\r
+"Artış onayı kaydedildi; emir yeniden işlemde.",\r
+"Onay, teklifli emir veya fiyat artışı için girilir (şu an: {0}).",\r
+"Denetim makamlarının verilere erişimi",\r
+"Ücret yüzdesi geçerli değil.",\r
+"SATILIK",\r
+"Satış fiyatı",\r
+"Satış fiyatı veya kira bedeli, aracılık ücretini içerecek şekilde belirlenir (Aracılık Kanunu, čl. 18 st. 3). \\"Fiyata aracılık ücreti dahil\\" işaretlenmelidir.",\r
+"Aracılık ücreti dahil satış fiyatı veya kira bedeli (Aracılık Kanunu, čl. 18 st. 3)",\r
+"Satıcı",\r
+"Sözleşmenin uzatılması",\r
+"Sözleşmenin uzatılması…",\r
+"Bu tarihe kadar uzat",\r
+"Sözleşmeyi uzat",\r
+"Proje kârlılığı",\r
+"PROJE KÂRLILIĞI",\r
+"Proje",\r
+"\\"{0}\\" projesinin müşterisi yok.",\r
+"\\"{0}\\" projesi: kaydedilen {1} h, bütçe {2} h.",\r
+"proje {0}",\r
+"Proje {0}",\r
+"müşterisiz proje",\r
+"Projede {0} saat kaydı var ve silinemez. Tamamlanan proje \\"tamamlandı\\" durumuyla işaretlenir.",\r
+"Proje silindi.",\r
+"Proje kaydedildi.",\r
+"Proje mevcut değil.",\r
+"Proje aktif değil; saatler yalnızca aktif projeye girilir.",\r
+"Proje seçilmedi.",\r
+"{0} kodlu proje zaten mevcut.",\r
+"Proje",\r
+"Projeler",\r
+"PROJELER",\r
+"Projeler ve saat kayıtları",\r
+"Müşteri bazında projeler · çalışma saati kayıtları · kaydedilen saatlerden fatura",\r
+"Müşteri bazında projeler, çalışma saati kayıtları ve kaydedilen saatlere göre faturalama.",\r
+"ciro",\r
+"Kültür varlıkları, değerli metaller ve kıymetli taş ticareti (t. 13 al. 12)",\r
+"Motorlu araç ticareti (t. 13 al. 10)",\r
+"Deniz ve hava taşıtları ticareti (t. 13 al. 11)",\r
+"Yurt dışı işlemler",\r
+"Karadağ dışı işlem — KDV'ye tabi değil (ek sütun)",\r
+"Karadağ dışı işlem (işlem yeri yurt dışında)",\r
+"değişiklik",\r
+"değişiklik (ilk kayıt {0})",\r
+"veri değişikliği",\r
+"Aracılık kayıtlarına girilecek değişiklikler:",\r
+"Aracılık kayıtlarına girilecek değişiklikler: {0}",\r
+"Mevzuat",\r
+"Ortalama gecikme (gün)",\r
+"Her altı aylık dönem için CBCG oranıyla basit faiz, 36.500 (artık yıl 36.600); ödeme, ödeme gününden itibaren anaparayı azaltır. Ticari işletme müşteriye ayrıca geciken her fatura için tahsilat masrafı tazminatı.",\r
 "güncelleme denetimi",\r
 "Ödeme öncesi kontrol",\r
 "Ödeme öncesi kontrol:\\n{0}",\r
 "Hesap kontrolü:",\r
+"Gerçek Lehdarlar Sicili'nde kontrol",\r
+"Gerçek Lehdarlar Sicili'nde kontrol",\r
 "raporların teslim edildiğini kontrol edin",\r
 "İlk sayfa",\r
 "Tedarikçinin bu firmadaki ilk faturası",\r
 "Bu tedarikçiye ilk ödeme. Ödemeden önce tedarikçi bilgilerini ve alıcı hesabını kontrol edin.",\r
 "İlk kilitleme",\r
+"punomocnik",\r
+"vekil",\r
+"İmzalı sözleşmenin (PDF) bu bilgisayardaki dosya yolu; dosya veri alışverişiyle aktarılmaz",\r
+"Dosya yolu (firma klasörü {0})",\r
+"Taranmış belgenin dosya yolu girilmedi.",\r
+"QR geçerli değil. Faturanın IIC'si eksik.",\r
+"QRText",\r
+"{1} tarihli {0} numaralı fatura",\r
+"fatura no. {0}{1}",\r
+"Fatura başka bir müşteri adına düzenlenmiş. Giderlere kayıt yalnızca açık onayla mümkündür.",\r
+"Kayıtlı mali yazılımla düzenlenen fatura: kayıtlar için numara ve tarih (veri 14)",\r
+"Program dışında düzenlenen fatura",\r
+"Program dışında düzenlenen fatura…",\r
+"Fatura zaten maliyet hesabı olarak girilmiş (#{0}).",\r
+"Fatura zaten giderlere kaydedilmiş (Satın alma ve giderler, kayıt {0}).",\r
+"Mal olmayan fatura (elektrik, su, telefon, yakıt…) \\"Satın alma ve giderler\\" bölümüne aktarılır; maliyet hesabı silinir (ticari defter ve stoklar), tedarikçiye borç gider olarak kalır, giriş KDV'si aynı ayda kalır.",\r
+"Ücret faturası",\r
+"Ücret faturası kaydedildi.",\r
+"Faturada tutar yok (ne kalemler ne de oranlara göre toplam veriler).",\r
+"fatura düzenlenmedi",\r
+"Havaleyle ödenen fatura, ödenene kadar tedarikçiye borçtur (bakiye, hesap kartı, açık kalemler, vadeler, IOS). Nakit veya kartla ödenen fatura borca girmez.",\r
+"Döviz cinsinden fatura, para birimi kodunu ve kuru taşır; mesajdaki tutarlar EUR cinsindendir.",\r
+"Fatura QR koduyla girildi {0}",\r
+"{0} numaralı sözleşmeye göre aracılık ücreti faturası",\r
+"Aracılık ücreti faturası ancak hukuki işlem akdedildikten sonra düzenlenir (Aracılık Kanunu, čl. 27 st. 1–2).",\r
+"Mal faturası maliyet hesabına gider (stok, ticari defter). Elektrik, telefon, kira, hizmet vb. faturalar maliyet hesabı ve işyeri olmadan doğrudan giderlere gider (Satın alma ve giderler).",\r
+"Muhasebeciler",\r
+"İş, müşteri onayından sonra başlar (şu an: {0}).",\r
+"İş emri {0} — {1}",\r
+"İş emri {0} — {1}{2}",\r
+"İş emri {0} — {1}{2}.",\r
+"{0} numaralı iş emri başka bilgisayarda da kaydedildi; buradaki emir {1} numarasını alır.",\r
+"Başka bilgisayardan gelen {0} numaralı iş emri {1} numarasını alır (numara burada daha önceki bir emir tarafından kullanılıyor).",\r
+"İş emri silindi.",\r
+"İş emri kaydedildi.",\r
+"İş emri mevcut değil.",\r
+"İş emri kaydedilmedi.",\r
+"İş emirleri",\r
+"İŞ EMİRLERİ",\r
+"Fiyat artışı için müşterinin yazılı onayını bekleyen iş emirleri: {0}",\r
+"Çalışan seçilmedi veya girilmedi.",\r
+"Çalışan, çalışan kayıtlarında yok.",\r
 "Çalışan: {0} ({1}{2}).",\r
 "işlem",\r
+"İşler, parçalar ve malzeme",\r
 "Zayi (kayıttan düşme)",\r
+"Ödeme ({0} EUR) ile faturanın açık kısmı ({1} EUR) arasındaki fark %{2} oranını aşıyor ve kur farkı değil.",\r
+"Kur farkı",\r
+"Neden (zorunlu)",\r
+"ilişkinin nedeni",\r
+"İlişkinin nedeni",\r
+"Fesih nedeni",\r
 "Kilit açma nedeni",\r
 "{0} {1} ayının kilit açma nedeni (\\"Kapanıştan sonraki değişiklikler\\" raporuna yazılır):",\r
 "firma hesabı {0}",\r
@@ -219,53 +1874,641 @@ const a=`[\r
 "{0} faturası silindi. {1} tedarikçisine olan borç {2} EUR azaltıldı.",\r
 "Maliyet hesabı olmayan tedarikçi faturaları",\r
 "Maliyet hesabı olmayan tedarikçi faturaları: {0}, toplam {1} EUR.",\r
+"İş ilişkisinin nedeni listede yok.",\r
+"İş ilişkisinin veya işlemin nedeni seçilmedi (ZSPNFT čl. 117 st. 1 {0}).",\r
+"İptal nedeni",\r
+"İptal nedeni zorunludur.",\r
+"İşlemin gerçekleştirilme nedenleri (gerekçe)",\r
+"Şüphe gerekçeleri",\r
+"Şüphe gerekçeleri (varsa)",\r
+"Şüphe gerekçeleri girilmedi (ZSPNFT čl. 117 st. 8).",\r
+"Şüphe gerekçeleri girilmedi.",\r
 "S.No",\r
 "S.No",\r
+"Kayıt sıra numarası",\r
+"Kayıt sıra numarası kesintisizdir. Değişiklik, ilk kayda atıfla yeni kayıt olarak girilir; kayıtlar silinmez ve değiştirilmez (kayıtlar süresiz saklanır).",\r
 "Satır {0}–{1} / {2}. Toplam, dışa aktarma ve yazdırma tüm satırları kapsar.",\r
+"Olağan",\r
+"Altı aylık dönemin ilk gününde geçerli ECB ana refinansman işlemleri (MRO) referans oranı",\r
+"MÜŞTERİ SİCİLİ (ZSPNFT čl. 117)",\r
+"Müşteri sicili, Uyum (ZSPNFT) paketi: müvekkilin hukuki işlemi, FOJ'a veri iletimi eşiklerinin kontrolüne dahil edilir (ZSPNFT čl. 66)",\r
+"GAYRİMENKUL SİCİLİ",\r
+"Gayrimenkul sicili · aracılık sözleşmeleri · aracılık kayıtları · yer göstermeler · emanet hesabı",\r
+"gayrimenkul sicili, aracılık sözleşmeleri ve kayıtları, emanet hesabı",\r
+"Gayrimenkul sicili, aracılık sözleşmeleri, aracılık kayıtları, yer göstermeler ve emanet hesabı.",\r
+"Aracılar Sicili",\r
+"Finansal tabloların denetimi",\r
+"Denetim, muhasebe ve vergi danışmanlığı (t. 13 al. 2)",\r
+"Yerleşik",\r
+"Sonuç",\r
 "sonuç bir SQLite veritabanı değil",\r
+"Risk",\r
+"RN-{0}-{1}",\r
+"Mal (maliyet hesabı)",\r
+"Süre (iş günü)",\r
+"Muhafaza süresi",\r
+"Muhafaza süresi sonu",\r
+"Muhafaza süresi doldu",\r
+"Süre doldu",\r
+"İhtardaki süre (gün)",\r
+"İhtardaki süre 1 ile 90 gün arasında olmalıdır.",\r
+"Gerçekleştirme süresi geçerli değil.",\r
+"İşlemin gerçekleştirilme süresi",\r
+"Ödeme süresi (gün) geçerli değil.",\r
+"Ödeme süresi (vade tarihi)",\r
+"ödeme süresi (uyarı)",\r
+"Ödeme süresi satın alma tarihinden önce.",\r
+"Ücretin ödeme süresi",\r
+"Ödeme süresi geçerli bir tarih değil.",\r
+"Teslim alınmayan cihaz hatırlatma süresi 1 ile 365 gün arasında olmalıdır.",\r
+"Teklifin geçerlilik süresi doldu",\r
+"Yanıt süresi",\r
+"yanıt süresi {0} tarihinde doldu",\r
+"{0} sözleşmesinin fesih bildirimi için son tarih",\r
+"İhtardaki ödeme süresi 1 ile 90 gün arasında olmalıdır.",\r
+"Kayıt süresi",\r
+"Kayıtlara giriş süresi {0} tarihinde doldu",\r
+"Aracılar Sicili'ne kayıt süresi doldu",\r
+"Aracılar Sicili'ne kayıt süresi doldu: {0} Sicile kayıt olmadan aracılık yapılmasına izin verilmez (Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 36); kayıt numarası Aracı bilgileri sekmesinde girilir.",\r
+"Yüksek riskli ülke için süre (gün)",\r
+"Son tarih: {0} ({1}).",\r
+"Muhafaza süreleri",\r
+"RON",\r
+"ROUND({0} - {1}, 2)",\r
+"RSD",\r
+"RUB",\r
 "Elle onay",\r
 "Elle",\r
 "Fatura elle girildi: {0}, {1} EUR (maliyet hesabı {2}).",\r
+"Faturanın mali mesaj içeriği",\r
+"Müşterinin elektronik fatura onayı kaydedildi.",\r
+"Elektronik fatura onayı (tarih)",\r
+"Alt aracılık onayı",\r
+"Sözleşmeye göre bakiye",\r
+"İşlem tarihini veya dönemini gönder (SupplyDateOrPeriod)",\r
+"Aylık faturanın vergi dönemini gönder (TaxPeriod)",\r
+"Fatura para birimini gönder (Currency)",\r
+"yalnızca yanıtsız",\r
+"Yalnızca bekleyen bildirimler",\r
+"Yalnızca hizmetler",\r
+"Maliyetsiz saatler",\r
+"projeye ve müşteriye göre saatler",\r
+"Çalışana göre saatler",\r
+"ÇALIŞAN VE AYA GÖRE SAATLER",\r
+"Saatler kaydedildi.{0}",\r
+"Saatler faturalandı (fatura {0}) ve değiştirilemez. Değişiklik için fatura iptal edilir veya taslak silinir.",\r
+"Şu tarih dahil saatler",\r
+"Saatlik ücret",\r
+"Saatlik ücret (EUR, KDV hariç)",\r
+"Saatlik ücret (EUR)",\r
+"Saatlik ücret geçerli değil.",\r
+"Saznanje iz pouzdanih izvora (koji uključuju medije ili druge otvorene izvore podataka) koji ukazuju da je klijent uključen u neke nelegalne aktivnosti.",\r
+"Hafta (herhangi bir gün)",\r
+"Hafta kaydedildi: yeni kayıt {0}, değiştirilen {1}, silinen {2}.",\r
+"SEK",\r
+"Seri no. / plaka",\r
+"Seri numarası / plaka",\r
+"Servis: iş emirleri",\r
+"kod listesi (stok)",\r
+"\\"{0}\\" kodu kullanımda.",\r
+"Kod (zorunlu değil)",\r
+"faaliyet kodu",\r
+"Merkez (adres ve şehir veya belediye) girilmedi (ZSPNFT čl. 117 st. 1 {0}).",\r
+"Taranmış belgeler",\r
+"Firma klasöründeki taramalar elle silinmelidir: {0}",\r
+"Limanlarda ve serbest bölgede kültür varlıklarının depolanması ve ticareti (t. 13 al. 13)",\r
+"{0} faturanın müşterilere e-postayla gönderilmesi (SMTP).{1} Devam edilsin mi?",\r
+"Birden çok faturanın aynı anda gönderimi SMTP sunucusu üzerinden yapılır (Ayarlar → E-posta); sunucu yoksa fatura tek tek gönderilir (✉).",\r
 "Sonraki sayfa",\r
 "Sonraki eşleşme",\r
+"Karmaşık",\r
+"Karmaşık ve olağandışı işlemler",\r
 "Vardiyalar: izinler ve tatiller (yıllık, hastalık, adet, babalık…)",\r
+"Yön (alındı veya teslim edildi) seçilmedi.",\r
+"Eki kaydet",\r
+"Değişikliği kaydet",\r
+"Kuru kaydet",\r
+"Hesaplamayı kaydet",\r
 "Ödemeyi kaydet",\r
+"Oranı kaydet",\r
+"Dava kaydını kaydet",\r
+"Kaydedilen hesaplamalar",\r
 "Bu bordronun kayıtlı sonuçları eski kurala göredir (ek vergi çalışanın net ücretinden düşülmüş; ek vergi işverene aittir ve net ücreti azaltmaz).",\r
+"Kendi göstergesi",\r
+"{0} kendi göstergesi eklendi.",\r
+"Başka bilgisayardan gelen {0} kendi göstergesi {1} kodunu alır (kod burada kullanımda).",\r
+"Yükümlünün kendi göstergeleri",\r
+"Saat dökümü — fatura eki",\r
+"Döküm, yapılan hizmetin faturasıyla birlikte verilir ({0} st. 4).",\r
+"MÜŞTERİLERLE SÖZLEŞMELER LİSTESİ",\r
+"Yüksek riskli üçüncü ülkeler listesi boş.",\r
+"dış iş ortağı — maaş hesaplaması yok",\r
+"Kat / kat sayısı",\r
+"Kat: {0}",\r
 "Sonraki QR kod için hazır.",\r
+"Orta",\r
+"Giriş günündeki CBCG orta kuru: 1 EUR karşılığı döviz birimi",\r
+"CBCG orta kuru: 1 EUR karşılığı döviz birimi (ZPDV čl. 23 st. 2)",\r
+"Karadağ Merkez Bankası orta kuru (1 EUR karşılığı döviz birimi). CBCG listesine erişilemediğinde kur, CBCG'nin son iş günündeki ECB listesinden alınır; iki kaynak da yoksa kur not ile elle girilir. Alınan kur saklanır ve tekrar istenmez.",\r
+"Ne kaydedilir",\r
 "Ayın ilk kilitlenmesindeki (veya 2.7.0 sürümüne geçişte bulunan) defter durumu bugünküyle karşılaştırılır; tüm kilit açmalar nedenleriyle.",\r
 "Ayın ilk kilitlenmesindeki defter durumu bugünküyle karşılaştırılır; tüm kilit açmalar nedenleriyle. 2.7.0 sürümünden önce kilitlenen ay için başlangıç noktası 2.7.0'daki ilk kilit açmada bulunan durumdur.",\r
+"Teslim alındığındaki durum (hasarlar, izler)",\r
 "İlk kilitlemedeki ve bugünkü durum; nedenleriyle kilit açmalar",\r
+"Hesap bakiyesi",\r
+"Sözleşme durumu:",\r
+"Bina yaşı",\r
+"Bina yaşı",\r
+"ALACAK YAŞLANDIRMASI",\r
+"Gayrimenkul durumu bilinmiyor.",\r
+"Teklif durumu",\r
+"Teklif durumu kaydedildi.",\r
+"Teklif durumu: gönderildi, kabul edildi veya reddedildi.",\r
+"Proje durumu: aktif, tamamlandı veya durduruldu.",\r
+"Durum yalnızca teklifler için izlenir.",\r
+"Sözleşme durumu: aktif, feshedildi veya süresi doldu.",\r
+"\\"{0}\\" kalemi: fiyat geçerli değil.",\r
+"\\"{0}\\" kalemi: miktar sıfırdan büyük olmalıdır.",\r
+"\\"{0}\\" kalemi: KDV oranı %21, %15, %7 veya %0.",\r
+"\\"{0}\\" kalemi: KDV oranı %21, %15, %7 veya %0'dır.",\r
+"\\"{0}\\" kalemi: tür iş, parça veya malzemedir.",\r
+"Kalemler (KDV hariç fiyat,",\r
+"Fatura kalemleri",\r
 "Dikkat gerektiren kalem: {0}",\r
 "Bu kurala uyan bekleyen kalemler:",\r
+"Oran — vergi egemenliği (%)",\r
+"Oran (yıllık %)",\r
+"ECB oranı (MRO, %)",\r
+"Oran silindi.",\r
+"Oran, tarih",\r
+"KDV oranı: %21, %15, %7 veya %0.",\r
+"Anlaşmaya göre oran (%)",\r
+"Çifte vergilendirmeyi önleme anlaşmasına göre oran geçerli değil.",\r
+"Stopaj oranı geçerli değil.",\r
+"Oran her altı aylık dönem için belirlenir: altı aylık dönemin ilk gününde geçerli olan Avrupa Merkez Bankası ana refinansman işlemleri referans oranına 8 yüzde puan eklenir. Karadağ Merkez Bankası bu oranı altı aylık dönemin ilk iş gününde yayımlar. Oranı girilmemiş dönem için hesaplama yapılmaz.",\r
+"{0} için oran kaydedildi.",\r
+"Vergi egemenliği olan bölgeler için oran geçerli değil.",\r
+"{0} için CBCG gecikme faizi oranı girilmedi",\r
+"Gecikme faizi oranı 0'dan büyük ve %100'den küçük olmalıdır.",\r
+"Gecikme faizi oranı altı aylık dönem bazında girilir: 01.01. veya 01.07. tarihinden itibaren.",\r
+"{0} tarihinden itibaren dönem için gecikme faizi oranı girilmedi.",\r
+"Oranlar ve ülkeler",\r
+"Gecikme faizi oranları",\r
+"{0} hesaplaması iptal edilsin mi? Bu hesaplamanın dönemi yeniden hesaplanabilir.",\r
+"İptal kaydı girildi.",\r
+"İptal kaydı iptal edilemez.",\r
+"{0} numaralı kaydın iptali",\r
+"{0} numaralı kaydın iptali",\r
+"Kaydı iptal et…",\r
 "Sayfa {0} / {1}",\r
 "Sayfa {0}/{1}",\r
+"Çalışanların mesleki eğitimi ve gelişimi",\r
+"Çalışanların mesleki eğitimi",\r
+"Oda düzeni",\r
+"Oda düzeni: {0}",\r
+"Strukturirani depoziti (izvjesno je planski vršeno deponovanje gotovog novca u određenim iznosima, periodično, od strane različitih lica kako bi se izbjeglo lako uočavanje) koji se koriste kao garancija za kredit, deponovanje velikih iznosa novca koji su uplaćeni u istim velikim novčanim apoenima ili sitnim apoenima.",\r
+"gerçek lehdarlar",\r
+"Gerçek lehdarlar",\r
+"Gerçek lehdar",\r
+"Gerçek lehdar siyasi nüfuz sahibi kişidir.",\r
+"Stvarni vlasnik klijenta je strano fizičko lice državljanin \\"poreskog raja\\", odnsono visoko-rizične treće države, dok se iz opšteg poslovanja stiče utisak da je stvarni vlasnik neko domaće fizičko lice.",\r
+"Gerçek lehdar girilmedi.",\r
+"Gerçek lehdar sayısı",\r
+"Ayni hak",\r
+"Olay başına bedel",\r
+"Yıllık bedel",\r
+"Şüpheli",\r
+"Şüpheli işlem",\r
+"Şüpheli işlem — {0}",\r
+"Şüpheli işlem kaydedildi; veriler {0} tarihine kadar FOJ'a iletilir",\r
+"Şüpheli işlem \\"Şüpheli işlem\\" düğmesiyle girilir (gerekçeler ve göstergelerle).",\r
 "Her kalem verilerden kontrol edilir. Sorun olmayan bir uyarı (örn. hareketsiz hesap) elle onaylanır; onay kimin ve ne zaman onayladığını kaydeder.",\r
+"Sözleşmedeki tüm değişiklik ve eklemeler yalnızca yazılı şekilde geçerlidir. Taraflar uyuşmazlıkları uzlaşmayla çözer; aksi halde Karadağ'daki yetkili mahkeme karar verir.",\r
 "tüm işlemler kaydedildi veya sınıflandırıldı",\r
+"Tüm zorunlu unsurlar girildi.",\r
+"tüm kayıtlar",\r
+"Amaç ve kullanım",\r
+"ilişkinin amacı",\r
+"İlişkinin amacı ve niteliği",\r
+"t.KljucRacuna NOT IN ({0})",\r
 "t.Status='ceka' AND t.Napomena LIKE ?",\r
+"TAX",\r
+"Yönetmelikteki gösterge metni değiştirilemez; firma kendi göstergesini ekler.",\r
+"İlan metni",\r
+"Takyidatlar",\r
+"Takyidatlar ve tescilli haklar (not)",\r
+"İşlem tipi listede yok.",\r
 "Kalıcı ayarlar kullanılamıyor.",\r
+"{0} EUR tutarındaki işlem yüksek riskli üçüncü bir ülkeyi içeriyor ({1})",\r
+"Emanet hesabı ekstresi işlemi",\r
+"Ekstre işlemi zaten başka bir depozito kaydına bağlı.",\r
+"İşlem kaydedildi (müşterinin iş ilişkisinin izlenmesi). Tutar bazında FOJ'a iletme yükümlülüğü yoktur.",\r
+"İşlem, karmaşık ve olağandışı işlemler kaydına girildi.",\r
+"İşlem kaydedildi. {0}",\r
+"İşlem zaten gerçekleştirildi",\r
+"Müşteri işlemi",\r
+"Transakcija koju klijent obavlja nije u skladu sa njegovom uobičajenom poslovnom praksom.",\r
+"Veriler FOJ'a iletilene kadar işlem gerçekleştirilmez (ZSPNFT čl. 66 st. 6–7).",\r
+"İşlem, FOJ'a veri iletimi eşiklerine göre kontrol edilir (yükümlü türü ve eşikler: Risk analizi sekmesi). Şüpheli işlem, İşlemler ve FOJ bildirimleri sekmesinde girilir.",\r
 "Banka işlemleri",\r
 "Banka işlemleri kaydedildi ve sınıflandırıldı",\r
+"Transakcije gdje klijent zahtijeva plaćanje koje se sastoji od više manjih uplata, koje u zbiru čine cijenu nepokretnosti (usitnjavanje), naročito ako se radi o nekretninama velike vrijednosti i ako postoje saznanja da su ugovorne strane povezane sa nelegalnim ili kriminalnim aktivnostima.",\r
+"İşlemler ve FOJ bildirimleri",\r
+"Transakcije koje dolaze iz država koje se nalaze na \\"crnoj listi\\", koje ne primjenjuju propise iz oblasti sprečavanja pranja novca ili finansiranja terorizma i gdje postoji visok rizik od pranja novca, bez obzira na to da li klijent dolazi iz tih država.",\r
+"Transakcije sa pravnim licima čiji identitet stvarnih vlasnika je teško utvrditi.",\r
+"Transakcije za koje su zaposleni kod obveznika (u daljem tekstu: obveznik) na osnovu iskustva, znanja i informacija kojima raspolažu, ocijenili da nijesu u skladu sa uobičajenim aktivnostima klijenta",\r
 "Tüm satırlarda ara",\r
+"{0} yılı ticari defteri kapatıldı ve onaya hazırlandı. {1}/{2} dönemine ait faturanın giderlere aktarılması, defter kapanışı iptal edilmeden mümkün değildir (Ticari defter → \\"Kapatmayı iptal et {3}.\\").",\r
+"gider",\r
+"Gider „{0}\\"{1}, {2} tarihli, aynı tutarda",\r
+"{2} tarihli \\"{0}\\"{1} gideri aynı tutarda nakit ödenmiş olarak girildi ve kasaya zaten kaydedildi. Aynı ödeme kasa üzerinden tekrar girilmez.",\r
+"Gider (maliyet hesabı olmadan)",\r
+"gider {0}",\r
+"Bu tedarikçiye ait \\"Satın alma ve giderler\\" bölümündeki gider (maliyet hesabı olmayan fatura)",\r
+"Bu faturadan oluşan gider bu firmanın defterlerine, giriş KDV'si PR-PDV'ye girer. Gider kaydedilsin mi?",\r
+"Gider 2.7.5 sürümünden önce ödeme şekli olmadan girildi ve tedarikçiye borçta yer almıyor (bakiye, açık kalemler, IOS). \\"Borç\\" işareti onu borca dahil eder; ödemeler Yükümlülükler ekranında bağlanır.",\r
+"Gider tedarikçiye borç olarak kaydedildi.",\r
+"Gider kaydedildi: {0}, fatura {1}, {2} EUR.",\r
+"Gider zaten ödendi",\r
+"Giderin kod listesinden bir tedarikçisi yok, bu nedenle tedarikçiye borç değildir.",\r
+"Gider kaydedilmedi: {0}",\r
+"Gider kaydedilmedi.",\r
+"Nakit ödenen gider (kasa)",\r
+"Kartla ödenen gider (vadesiz hesap)",\r
+"İşçilik gideri",\r
+"Gider aynı zamanda kasadan ödeme olarak kaydedilir. Aynı ödeme kasaya tekrar girilmez.",\r
+"Gider aynı zamanda vadesiz hesaptan ödeme olarak kaydedilir. Ekstredeki kart işlemi tedarikçiye ödeme olarak sınıflandırılmaz.",\r
+"yabancı tedarikçi gideri",\r
+"Gider: {0}",\r
+"Ek hizmet masrafları (açıkça kararlaştırılmış, čl. 27 st. 4): {0}.",\r
+"Ek hizmet masrafları (yalnızca açıkça kararlaştırıldıysa)",\r
+"Ek hizmet masrafları kararlaştırılmamıştır.",\r
+"TRY",\r
+"Piyasa koşullarında",\r
+"Dava, müşteri hakkında iflas işlemleri başlatılmadan önce açılmıştır (KDV Kanunu čl. 20a).",\r
+"EUR olarak (KDV",\r
+"Yıl içinde kaydedilmiş şikâyet yok.",\r
 "Yılda kilitli ay yok.",\r
+"U klijentovom poslovanju pojavljuju se velike i neobjašnjive oscilacije u prihodima i/ili rashodima, odnosno neuobičajeno i neobjašnjivo visoki prihodi u odnosu na rashode.",\r
+"tamamen",\r
+"Ekte {0} numaralı avans faturası bulunmaktadır.",\r
+"Ekte açık kalemler ekstresi{0} bulunmaktadır. Gösterilen bakiyeyi onaylamanızı veya itirazlarınızı 8 gün içinde iletmenizi rica ederiz.",\r
+"Ekte {0} numaralı alacak dekontu bulunmaktadır.",\r
+"Ekte, fatura ve dönem bazında dökümüyle birlikte {0} numaralı gecikme faizi hesaplaması bulunmaktadır.",\r
+"Ekte, ödeme süresi geçmiş faturalar için {0} numaralı ihtar bulunmaktadır. Borcun ihtarda belirtilen süre içinde ödenmesini rica ederiz. Ödeme yapıldıysa ödeme bilgilerini iletmenizi rica ederiz.",\r
+"işlemde",\r
+"Taksitli",\r
 "dengede",\r
+"süresinde",\r
+"hukuki işlemin akdinden itibaren 8 gün içinde",\r
+"Kod listesinde \\"{0}\\"{1} ürünü zaten mevcut.",\r
+"Pay %",\r
+"Ucestalost",\r
+"Sıklık",\r
+"Faturalama sıklığı: aylık, üç aylık veya yıllık.",\r
+"Pay",\r
+"Pay (%)",\r
+"Gerçek lehdarın payı %0 ile %100 arasındadır.",\r
+"UG-{0}-{1}",\r
+"UG-{0}-%",\r
+"Anlaşma (ülke, madde)",\r
+"sözleşme {0}",\r
+"Sözleşme {0}",\r
+"{0} sözleşmesi silindi.",\r
+"Sözleşme {0}, dönem {1}.",\r
+"{0} numaralı sözleşme zaten mevcut.",\r
+"Sözleşmede %0 KDV'li kalemler var. Faturada basılan bir gerekçe seçilmelidir (KDV Kanunu čl. 25, 26, 27 veya 17).",\r
+"sözleşme sona eriyor",\r
+"sözleşme sona eriyor — uzatma veya yeni sözleşme",\r
+"Sözleşmenin süresi doldu: {0} Fesih mümkün değil: sözleşme, akdedildiği sürenin dolmasıyla sona erdi (Aracılık Kanunu, čl. 19).",\r
+"Sözleşme değiştirildi.",\r
+"Sözleşme silindi.",\r
+"Sözleşme sona erdi ve uzatılamaz; yeni sözleşme yapılır.",\r
+"Sözleşme uzatıldı.",\r
+"Sözleşme, her taraf için birer nüsha olmak üzere iki özdeş nüsha olarak düzenlenmiştir.",\r
+"Sözleşme kaydedildi.",\r
+"Sözleşme zaten feshedildi: {0}",\r
+"Sözleşmenin en az bir kalemi olmalıdır.",\r
+"Sözleşmenin bir müşterisi olmalıdır.",\r
+"Sözleşme mevcut değil.",\r
+"Sözleşmede kalem yok.",\r
+"Sözleşme aktif değil ({0}).",\r
+"hizmet sözleşmesi",\r
+"Çifte vergilendirmeyi önleme anlaşması",\r
+"çifte vergilendirmeyi önleme anlaşması, ZPDPL čl. 29a (%{0})",\r
+"Aracılık sözleşmesi",\r
+"Aracılık sözleşmesi {0}",\r
+"{0} numaralı aracılık sözleşmesinin süresi doluyor",\r
+"{0} numaralı aracılık sözleşmesi başka bilgisayarda da akdedildi; buradaki sözleşme {1} numarasını alır.",\r
+"Başka bilgisayardan gelen {0} numaralı aracılık sözleşmesi {1} numarasını alır (numara burada daha önceki bir sözleşme tarafından kullanılıyor).",\r
+"Aracılık sözleşmesi {0}; kapora alıkonuldu: {1}",\r
+"Aracılık sözleşmesi ve sözleşmeyle ilgili belgeler",\r
+"Aracılık sözleşmesi kaydedildi ve kayıtlara girildi.",\r
+"Kaporadan tahsilatı öngören aracılık sözleşmesi",\r
+"Aracılık sözleşmesi zorunlu unsurları içermiyor (Aracılık Kanunu, čl. 18 st. 2): {0}.",\r
+"Aracılık sözleşmesi seçilmedi.",\r
+"Aracılık sözleşmesi akit tarihinden itibaren on yıl saklanır (Yönetmelik 45/26, čl. 5 st. 2); silme {0} tarihinden itibaren mümkündür",\r
+"Sözleşme yedi zorunlu unsur içerir (čl. 18 st. 2).",\r
+"sözleşme otomatik olarak uzar",\r
+"Sözleşme {0} tarihinde {1} tarihine kadar belirli süreli olarak akdedilir ve uzatılabilir (čl. 19).",\r
+"Sözleşme girilen tarihe kadar geçerlidir (čl. 19); değişiklik aracılık kayıtlarına girilir.",\r
+"Sözleşme: bitişten önce fesih bildirim süresi",\r
+"Sözleşme: geçerlilik süresi",\r
+"kararlaştırılan {0} {1}",\r
+"kararlaştırılan: bedelin {0}",\r
+"Sözleşmeler ve tekrarlayan faturalar",\r
+"Sözleşmeler ve tekrarlayan faturalar → Faturalama planı",\r
+"On yıllık muhafaza süresi dolmuş sözleşmeler:",\r
+"Aracılık sözleşmeleri",\r
+"ARACILIK SÖZLEŞMELERİ",\r
+"Müşterilerle sözleşmeler · dönemsel faturalama (aylık, üç aylık, yıllık) · sözleşme geçerlilik süreleri",\r
+"Müşterilerle sözleşmeler, dönemsel faturalama (aylık, üç aylık, yıllık) ve sözleşme geçerlilik süreleri.",\r
+"Sözleşmeler: faturalanacak dönemler — {0}",\r
+"Firmanın ihtiyacına göre elle etkinleştirilir. Kayıt devre dışı bırakıldığında veriler silinmez.",\r
+"Kalemi kaldır",\r
+"\\"{0}\\" müşterinin belge listesinden kaldırılsın mı? Dosya klasörde kalır.",\r
+"Toplam ({0})",\r
+"Toplam şikâyet: {0}. Yanıtlanan: {1}. Yanıtsız: {2}.",\r
+"KDV dahil toplam",\r
+"Toplam kayıt: {0}.",\r
 "Giriş (maliyet hesapları)",\r
 "Gelen faturaların kalemli kalkülasyonu var",\r
+"Sokak ve numara",\r
+"Rol listede yok.",\r
+"Azaltılan KDV",\r
+"Peşin",\r
+"peşin (başlayan dönem)",\r
+"Oranı gir",\r
 "{0} firmasına gir",\r
+"oranı girin (Ayarlar → Gecikme faizi ve ihtarlar)",\r
+"Aracılık kayıtlarının {0} numaralı kaydı başka bilgisayarda da oluşturuldu; buradaki kayıt {1} sıra numarasını alır.",\r
+"Başka bilgisayardan gelen aracılık kayıtlarının {0} numaralı kaydı {1} sıra numarasını alır (numara burada daha önceki bir kayıt tarafından kullanılıyor).",\r
+"{0} kaydı dahili (faturalanmaz).",\r
+"{0} kaydı zaten faturalandı (fatura {1}).",\r
+"{0} numaralı kayıt zaten iptal edildi.",\r
+"{0} kaydının saatlik ücreti yok.",\r
+"Depozito kaydı",\r
+"Depozito kaydı silindi.",\r
+"Depozito kaydı kaydedildi.",\r
+"Depozito kaydı kaydedildi. {0}.",\r
+"Kayıt girişi {0}",\r
+"Giriş kayda eklendi.",\r
+"Kayıt, \\"Denetim makamının incelemesi\\" düğmesiyle oluşur (İşlemler ve FOJ bildirimleri sekmesi).",\r
+"Kayıt FOJ'a iletilmeyi beklemiyor.",\r
+"Kayıt mevcut değil.",\r
+"Eğitim kaydı mevcut değil.",\r
 "Tedarikçiye ödeme girişi",\r
+"Saat girişi",\r
+"Saat kaydı değiştirildi.",\r
+"Saat kaydı silindi.",\r
+"Saat kaydı mevcut değil.",\r
+"Kayıt",\r
+"Veri 6 (danışman) eksik kayıtlar:",\r
+"Kayıtlar, müşteri bilgilerinin her girişinde ve değişikliğinde ve işlem kaydında oluşur.",\r
+"Kayıtlar İşlemler ve FOJ bildirimleri sekmesinde oluşur.",\r
+"UP-{0}-{1}",\r
 "Hatırlanan alıcı hesabı",\r
+"Müşteri şikâyetinin bu emre bağlantıyla Şikâyet defterine kaydı",\r
+"Aracılar Sicili'ne kayıt",\r
+"Aracılar Sicili'ne kayıt: son tarih",\r
+"sözleşme kaydı",\r
+"Girilen veriler değiştirilemez; yanıta ek yapılabilir, tüketicinin iletişim bilgileri değiştirilebilir.",\r
+"İhtarın posta ile gönderildiği kaydedildi.",\r
+"{0} günlük süreden sonra kaydedildi (değişiklik {1})",\r
+"Kayıtlara girildi: {0}.{1}",\r
+"FOJ'a iletim {0} tarihiyle kaydedilsin mi? Kayıttan sonra bildirim artık değiştirilemez.",\r
+"{0} sözleşmesinin feshi {1} tarihiyle kaydedilsin mi?",\r
+"{0} numaralı kaydın iptali girilsin mi? İptal, aracılık kayıtlarında yeni ve kalıcı bir kayıttır.",\r
+"\\"{0}\\" gideri tedarikçiye borç olarak kaydedilsin mi (havaleyle ödeme)?",\r
+"{0} sözleşmesine göre akdedilen hukuki işlem kaydedilsin mi: {1}, bedel {2} EUR?",\r
+"İletimi kaydet",\r
+"Borç olarak kaydet",\r
+"Feshi kaydet",\r
+"Teslimi kaydet",\r
+"Onayı kaydet",\r
+"Değişiklikleri kayıtlara gir",\r
+"Faturayı kaydet",\r
+"Onayı bugünün tarihiyle kaydet",\r
+"İptali kaydet",\r
+"İşlemi kaydet",\r
+"Gideri kaydet",\r
+"Tamamlanan işlemi kaydet",\r
 "Yazar",\r
+"Ödenen vergi",\r
+"Tahsilat / ödeme",\r
+"Ödeme ve fatura farklı müşterilere ait.",\r
+"Ödeme ve faiz hesaplaması farklı müşterilere ait.",\r
+"Ödeme veya fatura mevcut değil.",\r
+"Ödeme veya faiz hesaplaması mevcut değil.",\r
+"Ödemenin hesaplamayla bağlantısı kaldırıldı.",\r
+"Ödeme zaten döviz olarak kaydedilmiş; kur farkı bağlantıdan hesaplanır.",\r
+"Ödeme başka faturalara da bağlı. Kur farkı yalnızca bu faturayı ödeyen bir ödeme için kapatılır.",\r
+"Ödeme bir faiz hesaplamasına da bağlı.",\r
+"Ödeme faiz hesaplamasına bağlandı.",\r
+"Faiz ve tazminatın ödendiği müşteri ödemesi (faiz alacağını kapatır)",\r
+"Faiz hesaplamasına bağlı {0} tarihli ödeme ({1}) henüz alınmadı.",\r
+"Vergi ödemesi",\r
+"Sicildeki müşterilerin ödemeleri, ekstre girişleri, depozitoları ve hukuki işlemleri čl. 66'daki eşiklere göre kontrol edilir; eşiğe ulaşıldığında bildirim burada süresiyle birlikte görünür. İletim, nitelikli elektronik imzayla FOJ uygulaması üzerinden yapılır; program veri özetini sunar ve iletim tarihini kaydeder.",\r
+"Üçüncü kişiler adına varlık yönetimi (t. 13 al. 4)",\r
+"Cihaz, arıza tespiti ve onarım için teslim alınmıştır. Değeri {0} €'yu aşan onarımlar için müşteriye iş, malzeme ve parça dökümünü içeren yazılı teklif verilir; onarım teklifin kabulüyle başlar.",\r
+"Cihaz geri alındı{0}; çalışır durumda ve teslim edilen ekipmanla birlikte.",\r
+"Cihaz bu teslim alma belgesiyle geri alınır. {0}.",\r
+"USD",\r
+"Uyum",\r
+"Uyum (ZSPNFT)",\r
+"Uyum → Risk analizi",\r
+"Uyum → Gösterge listesi",\r
+"Uyum → Yetkili kişi ve eğitimler",\r
+"Uyum → Muhafaza süreleri",\r
 "Koşul",\r
+"hizmet",\r
+"\\"{0}\\" hizmeti kod listesine eklendi.",\r
+"Hizmet / ürün",\r
+"Usluga DESC,",\r
+"Hizmetin stoku ve stoktan düşümü yoktur; barkod gerekmez. Satış faturasında hizmet gelirine gider.",\r
+"Hizmetin stoku ve stoktan düşümü yoktur; faturada hizmet gelirine gider.",\r
+"yabancı kişi hizmeti",\r
+"Karadağ dışında işlem yeri olan yabancı vergi mükellefine hizmet (KDV Kanunu čl. 17 st. 2) — faturada \\"čl. 17\\" gerekçesi. Kurallar, Vergi İdaresi'nin yanıtına kadar ayarlanabilir; kilitli ay, kilitlendiği andaki kuralları korur.",\r
+"Hizmetler (BT, ajanslar, danışmanlık, servisler, kiralama)",\r
+"Tüzel kişi kuruluş hizmetleri, iş ve güven (fidüsyer) hizmetleri (t. 13 al. 3)",\r
+"{0} dönemi çalışma saati kayıtlarına göre hizmetler. Saat dökümü faturanın ekidir.",\r
+"Saatlik hizmetler — {0}, {1}",\r
+"Hizmetler, iş ilişkileri ve işlemler",\r
+"sözlü (yazılı teklif eşiğine kadar)",\r
+"İş ilişkisinin kurulması",\r
+"kabul edildi: {0}",\r
+"Dava konusu alacaklar ve KDV düzeltmesi",\r
+"Dava ve KDV düzeltmesi faturada girilir (açık faturalar listesinde faturaya tıklayın).",\r
+"Dava kaydı silindi.",\r
+"Dava kaydedildi.",\r
+"Dava kaydı yalnızca düzenlenmiş fatura için girilir.",\r
+"Dava açıldı",\r
+"Dava konusu alacak ve KDV düzeltmesi",\r
 "İçe aktarıldı: {0}, {1} kalem, {2} EUR (toplu, {3}).",\r
 "İçe aktarıldı: {0}, {1} kalem, {2} EUR.",\r
+"İnceleme kayda girildi. {0}",\r
+"denetim makamının incelemesi",\r
+"Denetim makamının incelemesi",\r
 "{0} yılı için adet izni doktor raporları (çalışan: {1})",\r
 "Postadan ekstre içe aktarma",\r
+"Yanıtla birlikte yanıt tarihi girilir.",\r
+"Faturayla birlikte yapılan işlerin, kullanılan malzeme ve parçaların dökümü verilir.",\r
+"Para birimi geçerli değil.",\r
+"Para birimi ISO 4217 üç harfli koduyla girilir (ör. USD, GBP, CHF).",\r
+"Karadağ dışında",\r
+"geçerli",\r
+"Bitiş (boş = belirsiz süreli)",\r
+"Geçerlilik günü",\r
+"Gerçekleştirilmiş",\r
+"Veliki broj prenosa novčanih sredstava između nekoliko pravnih ili fizičkih lica koji se realizuju sistematski, po sumnjivim osnovima upotrebom računa samo kao prolaznih i tzv. escrow računa.",\r
 "{0} sürümü geri çekildi. Sonraki sürüm bekleniyor.",\r
+"video kaydı",\r
+"Görüntü-ses kaydı (dosya yolu)",\r
+"Görüntülü elektronik kimlik tespiti",\r
+"Havale (tedarikçiye borç)",\r
+"aracının hesabına havaleyle",\r
+"Više transakcija kupoprodaje nepokretnosti koje vrši grupa fizičkih i/ili pravnih lica (nevladina, humanitarna, vjerska ili druga neprofitna organizacija) za koje se pretpostavlja da su umiješana u neke nedozvoljene radnje, a postoje sazanja da izvori novca za plaćanja potiču od nesrodnih lica.",\r
+"Gün için birden çok kayıt — değişiklik kayıt listesinde",\r
+"Yüksek",\r
+"Yüksek riskli ülke (EUR)",\r
+"Yüksek riskli üçüncü ülkeler (ISO, virgülle ayrılmış)",\r
+"Malik",\r
+"Malik / müvekkil",\r
+"Vlasnik klijenta je firma ili fizičko lice registrovano u \\"poreskom raju\\", državi preko koje se obavlja promet narkoticima ili državi u kojoj nije pravno regulisana oblast sprečavanja pranja novca i finansiranja terorizma, dok se iz opšteg poslovanja stiče utisak da je pravi vlasnik neko domaće fizičko lice.",\r
+"Vlasnik klijenta je firma registrovana u \\"poreskom raju\\", državi koja se dovodi u vezu sa proizvodnjom i prometom narkoticima ili državi u kojoj nije pravno regulisana oblast sprečavanja pranja novca i finansiranja terorizma.",\r
+"iade",\r
+"Varsayılan metni geri yükle",\r
+"Vrijednost ponuđene nepokretnosti je velika, a klijent daje nelogične odgovore o načinima plaćanja te nepokretnosti, odnosno raspituje se da se transakcije isključivo obave u gotovom novcu ili kombinovano sa nepouzdanim izvorima plaćanja.",\r
+"Onarım bedeli {0} €, {1} € üzerinde: servis ve müşterinin imzaladığı, işçilik, malzeme ve parça dökümünü içeren yazılı teklif gereklidir ({2} st. 1 ve 3). Artırılmış tutar için teklif düzenleyin veya onayı teklifin imzalanmasıyla kaydedin.",\r
+"Onarım değeri {0} €, {1} €'dan büyük: onaydan önce iş, malzeme ve parça dökümünü içeren yazılı teklif düzenlenir ({2} st. 1).",\r
+"Onarım değeri",\r
+"Onarım değeri {0} €'yu aşıyor: iş, malzeme ve parça dökümünü içeren yazılı teklif gereklidir ({1} st. 1).",\r
+"Kanuni değerler: KDV dahil değeri 50,00 €'yu aşan onarım için yazılı teklif; %10'u aşan fiyat artışı için müşterinin yeni yazılı onayı. Yalnızca mevzuat değiştiğinde değiştirilir.",\r
+"İşlemin gerçekleştirilmesi",\r
+"Ürün türü kaydedildi.",\r
+"Belge türü girilmedi.",\r
+"Kayıt türü seçilmedi.",\r
+"belge türü",\r
+"Müşteri türü",\r
+"Müşteri türü seçilmedi.",\r
+"Gayrimenkul türü",\r
+"Gayrimenkul türü seçilmedi.",\r
+"Yükümlü türü",\r
+"Yükümlü türü ve FOJ'a iletim eşikleri",\r
+"Yükümlü türü seçilmedi.",\r
+"Yükümlü türü: {0}. Liste, yükümlünün uyguladığı Yönetmelik ekindeki göstergeleri ({1}) ve yükümlünün kendi göstergelerini kapsar (ZSPNFT čl. 83). Şüphe gerekçelerinin belirlenmesinde čl. 82 ve 83'teki listeler kullanılır (čl. 81).",\r
+"İşlem türü (satış veya kiralama) seçilmedi.",\r
+"Gelir türü",\r
+"Gelir türü seçilmedi.",\r
 "İşlem türü",\r
 "{0} yapılacaktır.",\r
+"İşlem türü (nakit, nakitsiz, kripto varlık) seçilmedi.",\r
+"Giriş türü",\r
+"WHERE fd.DatumIzdavanja>=?",\r
+"WHERE kr.PlacID=?",\r
+"WHERE o.KupacID=?",\r
+"Hızlı giriş için çalışan seçilir; satır proje, sütun haftanın günüdür.",\r
+"Alıkonulan kaporadan ücretin bir kısmı için bu tahsilatı öngören aracılık sözleşmesi ve müvekkilin kaporayı alıkoyduğu tarih girilir (Aracılık Kanunu, čl. 27 st. 3).",\r
+"{0} para birimindeki belge için kur gereklidir (1 EUR karşılığı döviz birimi). Kur \\"Kuru al\\" düğmesiyle alınır veya elle girilir.",\r
+"faturalanacak",\r
+"Faturalanacak",\r
+"Faturalanacak (EUR)",\r
+"Faturalanacak (saat)",\r
+"Fatura için KDV düzeltmesi yapılmış. Düzeltme mevcut olduğu sürece dava tarihi değiştirilemez.",\r
+"Fatura için KDV düzeltmesi yapılmış. Önce düzeltme iptal edilir.",\r
+"Gerçek kişi için JMB, JMB'si olmayan kişi için kimlik belgesi numarası girilir (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Endeksleme için geçerlilik başlangıç tarihi gereklidir.",\r
+"Sözleşmenin aynı dönemi için iki fatura var: {0} ve {1}. Biri iptal veya düzeltme faturasıyla düzeltilir.",\r
+"Seçilen dönem için kayıtlarda giriş yok.",\r
+"Seçilen dönem için girilmiş kur yok.",\r
+"Gerçekleştirilmiş şüpheli işlem için verilerin neden gerçekleştirmeden önce iletilmediğine ilişkin gerekçe girilir (ZSPNFT čl. 66 st. 9).",\r
+"Müşteri için iletilmemiş bir FOJ bildirimi var; iletim tarihi girilene kadar kişisel veriler silinmez.",\r
+"Müşteri için şu tarihe kadar hesaplanacak gecikme faizi yok:",\r
+"Müşteri için {0} tarihine kadar hesaplanacak gecikme faizi yok.",\r
+"Kimlik belgesi için tür, numara ve geçerlilik bitiş tarihi girilir (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"Gayrimenkulün konumu için sokak ve numara veya kadastro parseli girilir.",\r
+"{0} numaralı emir için Şikâyet defterinde şikâyet var; emir silinemez.",\r
+"Gayrimenkul için geçerli bir aracılık sözleşmesi yok; ilan verilmesine izin verilmez (Aracılık Kanunu, čl. 25 st. 3).",\r
+"Hesaplamaya bir müşteri ödemesi bağlı. İptalden önce ödemenin bağlantısı kaldırılmalıdır (Tahsilat → Faiz ve ihtarlar).",\r
+"Hesaplamaya bağlı ödeme yok.",\r
+"Bu sözleşme için işlem zaten tamamlanmış.",\r
+"Siyasi nüfuz sahibi kişi için dayanak girilir: kamu görevi, yakın aile üyesi veya yakın iş ortağı (ZSPNFT čl. 117 st. 1 t. 3).",\r
+"{0} €'yu aşan onarımlarda kabul edilen teklif servis ve müşteri tarafından imzalanır; bir nüsha müşteriye verilir ({1} st. 3).",\r
+"%{0} üzerindeki fiyat artışı için müşterinin bizzat veya uzaktan iletişim araçlarıyla verdiği önceden yazılı onayı gereklidir ({1} st. 2).",\r
+"Şahıs işletmesi için ad, soyad ve JMB girilir (ZSPNFT čl. 117 st. 1 t. 2).",\r
+"geçmiş dönem için",\r
+"Elle girilen kur için not gereklidir (kaynak veya neden).",\r
+"Elektronik fatura onayı için onayın veriliş şekli de gereklidir.",\r
+"%0 KDV'li kalemlere KDV Kanunu {0} uygulanır ({1}).",\r
+"%0 KDV oranı için faturada basılan bir gerekçe seçilmelidir (KDV Kanunu čl. 25, 26, 27 veya 17).",\r
+"{0} gerçek lehdarı (siyasi nüfuz sahibi kişi) için dayanak girilir.",\r
+"Vadesi gelen her dönem için işlem dönemli normal fatura taslağı oluşturulur; KDV yükümlülüğü dönemin son günü doğar. Aynı dönem iki kez faturalanmaz.",\r
+"Sözleşme için {0} numaralı ücret faturası zaten mevcut.",\r
+"Depozito kaydı için ZSPNFT kaydı (FOJ bildirimi) mevcut; kayıt silinemez. Düzeltme yeni bir depozito kaydıyla girilir.",\r
+"Ödeme için avans faturası düzenlendi. Kur farkı bu işlemle kapatılmaz.",\r
+"{0} cinsinden ödeme için giriş günündeki kur veya EUR cinsinden giriş tutarı gereklidir.",\r
+"Zabiljezbe",\r
+"Şerhler",\r
 "Son kez",\r
+"muhafaza süresi sonu",\r
+"Muhafaza süresi sonu",\r
+"Müşteri talebi kaydedildi; FOJ'a gecikmeksizin bildirilir (ZSPNFT čl. 66 st. 11).",\r
+"Müşterinin finansal işlemlerinin izlenmesine ilişkin talepler",\r
+"İlgilenen kişi",\r
+"Akdedildi",\r
+"akdedildi ({0})",\r
+"Tamamlanan işlem kaydedildi.",\r
+"Tamamlanan işlem aracılık kayıtlarına girilir (veriler 11–13); kayıt kalıcıdır ve geri alınamaz. Ücret faturası ancak işlem tamamlandıktan sonra düzenlenir (čl. 27 st. 1–2).",\r
+"Akdedilen hukuki işlem",\r
+"{0} tarihine kadar (dahil)",\r
 "Zorunlu Sağlık Sigortası Kanunu md. 36a — rapor işverene 30 Ocak'a kadar teslim edilir",\r
+"KDV Kanunu čl. 18 st. 3 — fatura düzenlenmediğinde KDV, işlem gününden itibaren sekiz gün sonra hesaplanır",\r
+"KDV Kanunu čl. 20a",\r
+"KDV Kanunu, čl. 31 st. 6",\r
+"KDV Kanunu, čl. 31 st. 6: elektronik fatura alıcının onayıyla düzenlenir.",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 18 st. 2",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 19 — belirli süreli sözleşme, uzatılabilir",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 25 st. 3",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 25 st. 3 — yalnızca aracılık sözleşmesi bulunan gayrimenkul için ilan",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 26 ve 34",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 27 st. 6",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 36 — Aracılar Sicili'ne kayıt olmadan aracılık yapılmasına izin verilmez",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 36 ve 41",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 41 (değişiklik „Sl. list CG\\" 114/26)",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 41 (değişiklik „Sl. list CG\\" 114/26) — kanunun yürürlüğe girmesinden itibaren 24 ay içinde kayıt başvurusu",\r
+"Gayrimenkul Alım-Satım ve Kiralamada Aracılık Kanunu, čl. 8 — olay başına en az 20.000 € ve yıllık 60.000 €",\r
+"Aracılık Kanunu, čl. 18 st. 3 — fiyat, aracılık ücreti tutarını içerecek şekilde belirlenir",\r
+"Aracılık Kanunu, čl. 19 — tarih girilmezse sözleşme {0} ay geçerlidir",\r
+"Aracılık Kanunu, čl. 20 t. 2 — müvekkilin tescilli haklar ve takyidatlar konusunda uyarılması",\r
+"Aracılık Kanunu, čl. 21 — alt aracılık yalnızca müvekkilin açık onayıyla",\r
+"Aracılık Kanunu, čl. 25: aracının adını ve Aracılar Sicili kayıt numarasını içeren ilan, yalnızca geçerli sözleşmeyle",\r
+"Aracılık Kanunu, čl. 27 st. 3 — müvekkilin karşı tarafın sözleşmeyi ifa etmemesi nedeniyle alıkoyduğu kaporadan ücretin bir kısmı",\r
+"Aracılık Kanunu, čl. 31 — müvekkile yönelik uyarı sözleşmede basılır",\r
+"Aracılık Kanunu, čl. 34 — bu hesapların işlemleri firmanın nakit akışının parçası değildir ve ekstre fişiyle kaydedilmez",\r
+"Aracılık Kanunu, čl. 8 — olay başına en az 20.000 € ve yıl içindeki tüm talepler için 60.000 €",\r
+"Para Borçlarının Ödeme Süreleri Kanunu čl. 3 t. 6 ve čl. 6 st. 2 birbirinden farklıdır; varsayılan olarak CBCG oranı (0 p.p.) uygulanır. Yalnızca muhasebecinin talimatıyla değiştirilir.",\r
+"Gecikme Faizi Oranı Kanunu („Sl. list CG\\" 83/09, 75/18), čl. 3–6",\r
+"Gecikme Faizi Oranı Kanunu čl. 3–5 — altı aylık dönemin ilk günündeki ECB ana refinansman işlemleri oranı + 8 p.p.; CBCG bu oranı altı aylık dönemin ilk iş gününde yayımlar",\r
+"Gecikme Faizi Oranı Kanunu čl. 6; Para Borçlarının Ödeme Süreleri Kanunu čl. 7",\r
+"Gecikme Faizi Oranı Kanunu čl. 6: basit faiz, 36.500 (artık yıl 36.600), altı aylık döneme göre oran; Para Borçlarının Ödeme Süreleri Kanunu čl. 7",\r
+"Tüketicinin Korunması Kanunu („Sl. list CG\\" 12/26), čl. 21",\r
+"Tüketicinin Korunması Kanunu čl. 26",\r
 "Devlet ve Diğer Bayramlar Kanunu (Karadağ Resmî Gazetesi, sayı 27/07, 36/13, 3/23 ve 30/23)",\r
+"kanuni temsilci",\r
+"Taşınır ve taşınmaz mal kiralaması",\r
+"Kira bedeli",\r
+"Zakupnina u iznosu koji je značajno veći od zakupnine nekretnine približnih karakteristika na istoj ili sličnoj lokaciji, koja se unaprijed plaća za duži vremenski period, kad postoji sumnja u kriminalnu namjeru i fiktivnost ugovora.",\r
 "Negatif bakiyesi olmayan mal stoku (büyük defter)",\r
+"Yardımcı",\r
+"kayıt",\r
+"kayıt",\r
+"Çalışan",\r
+"Çalışan (tıklayın — kişisel verilerin silinmesi)",\r
+"İşlemin neden karmaşık veya olağandışı olduğu",\r
+"Temsilci",\r
+"{0} tarihine kadar gecikme faizi",\r
+"Gecikme faizi ve ihtarlar",\r
+"Gecikme faizi, vadesi gelmiş anaparaya, faiz anaparaya eklenmeden, takvim gün sayısı üzerinden basit (dönem sonu) faiz hesabıyla hesaplanmıştır: faiz = anapara × oran × gün / 36.500, artık yılda / 36.600 (Gecikme Faizi Oranı Kanunu, „Sl. list CG\\" br. 83/09 ve 75/18, čl. 6).",\r
 "Ay sonu kapanışı",\r
 "{0}\\n\\nÖdeme kaydedilsin mi?",\r
 "{0}\\n\\nÖdeme kaydedilsin mi?",\r
@@ -4653,7 +6896,7 @@ const a=`[\r
 "JIKR",\r
 "Birim",\r
 "Birim değiştirildi.",\r
-"JM neto",\r
+"Net birim",\r
 "JMB",\r
 "JMB {0}",\r
 "JMBG",\r
@@ -5142,7 +7385,7 @@ const a=`[\r
 "KOM",\r
 "Adet",\r
 "Adet {0}",\r
-"Komada u pakovanju",\r
+"Ambalajdaki adet",\r
 "Komandit şirket",\r
 "Kime",\r
 "Komisyon (adlar, virgülle ayrılmış)",\r
@@ -5908,10 +8151,10 @@ const a=`[\r
 "En yüksek fiyat",\r
 "En yüksek fiyat CInMED raporundan alındı.",\r
 "En yüksek perakende fiyatı {0}; kasalardaki fiyat {1}.",\r
-"Najviša MP",\r
+"Azami perakende fiyat",\r
 "Azami perakende ≈ toptan ×",\r
 "Azami perakende ≈ toptan × {0} × {1}",\r
-"Najviša VP",\r
+"Azami toptan fiyat",\r
 "Haftalık en fazla saat",\r
 "Toplam azami",\r
 "En fazla ardışık gün",\r
@@ -9559,7 +11802,7 @@ const a=`[\r
 "{0} değişiklik hazırlandı. Pencerede Google Drive'ı seçmeniz gerekir.",\r
 "Diğer cihazlara göndermek için hazırlandı: {1} belgeden {0} tanesi.",\r
 "Ek vergi",\r
-"PRIREZ",\r
+"EK VERGİ",\r
 "Ek vergi — {0} (%)",\r
 "Ek vergi (ödeyen)",\r
 "Ek vergi (ikamet belediyesine göre):",\r
@@ -9570,7 +11813,7 @@ const a=`[\r
 "Gelir vergisi üzerindeki ek vergi belediyeye aittir",\r
 "Ek vergi: 1 = bordronun toplam vergisi üzerinden %10 (belediye oranı), çalışanlara dağıtılır; 0 = çalışan bazında",\r
 "Ek vergi: 1 = kuruşa kesme, 0 = yuvarlama",\r
-"PRIREZI",\r
+"EK VERGİLER",\r
 "talimat #{0} uyarınca ekran erişimi: {1}",\r
 "Kamera erişimine izin verilmedi. iPhone'da: Ayarlar → Safari → Kamera → \\"Sor\\" veya \\"İzin Ver\\", ardından uygulamayı yeniden başlatın. Ana ekrana eklenen uygulamada izin ilk taramada istenir.",\r
 "Misafir verilerine erişim",\r
@@ -9731,11 +11974,11 @@ const a=`[\r
 "{0}.{1} deftere işlendi: {2}{3}{4}{5} ({6} sn){7}",\r
 "büyük defterde kaydedildi (yıl sonu kapanışı)",\r
 "İşlendi: malı azaltan eksi maliyet hesabı oluşturuldu (hesaplar 134000/134001/134002, karşı hesap 5771). Kalemler \\"İşlemeyi iptal et\\" sonrasında değiştirilebilir.",\r
-"kaydedildi",\r
+"deftere işlendi",\r
 "deftere işlenen işlemler: ekstredeki alıcı ödemenin tedarikçisi değil (ekstre daha önce hatalı birleştirilerek okunmuş) —",\r
-"kaydedildi",\r
+"deftere işlendi",\r
 "{0} {1} ay sonuna işlendi: {2} belge.",\r
-"Kaydedildi.",\r
+"Deftere işlendi.",\r
 "İşlendi. {0} eksi maliyet hesabı oluşturuldu (Maliyet hesapları ve faturalar).",\r
 "Deftere işle",\r
 "Ayı deftere işle",\r
@@ -10419,7 +12662,7 @@ const a=`[\r
 "Giderler (elektrik, su, telefon, yakıt)",\r
 "Rejim",\r
 "Rejim",\r
-"Režim FZO",\r
+"FZO rejimi",\r
 "FZO türü yalnızca FZO Listesi'ndeki bir ilaç için girilir.",\r
 "Verilme şekli",\r
 "Yeni ilaç kaydı için dağıtım rejimi (otc veya rx) zorunludur.",\r
@@ -12244,7 +14487,7 @@ const a=`[\r
 "belediyeye ödenen",\r
 "Vergi ve primler için tek hesaba yatırılır {0}.",\r
 "gelen ödeme",\r
-"Ödeme",\r
+"Tahsilat",\r
 "UPLATA",\r
 "{0} EUR tutarındaki ödeme, {1} EUR nakit hasılattan ({2}) büyük.{3} Ödeme önceki günleri de kapsıyor mu?",\r
 "{0} EUR tutarındaki ödeme seçilenden daha az günü kapsıyor (son gün hariç nakit zaten {1} EUR). Daha az hasılat kaydı seçilmelidir.",\r
@@ -13143,6 +15386,7 @@ const a=`[\r
 "Programı kapat",\r
 "Dağıtımı kapat",\r
 "Uygulama kapatılsın mı?",\r
+"{0} faturası bu ödemeyle kapatılsın mı? {1} EUR tutarındaki fark kur farkı olarak kaydedilir.",\r
 "Kullanımda olan barkodlar",\r
 "Kullanımda olan barkodlar (barkod zaten başka bir ürüne ait)",\r
 "\\"{0}\\" bilgisayarındaki önizlemenin göstermediği kullanımdaki barkodlar: {1} — atlandı (barkod, onu zaten taşıyan üründe kalır).",\r
@@ -13159,12 +15403,20 @@ const a=`[\r
 "Bağlı alış giderleri (alış değerine dahil)",\r
 "Bu maliyet hesabının bağlı maliyetleri kalemlere zaten dağıtılmış. Maliyet, dağıtım iptal edildikten sonra değiştirilebilir; ardından dağıtım tekrarlanır.",\r
 "Bağlı giderler: faturası gelmemiş giderin tahmini (fatura alınana kadar erteleme)",\r
+"Yalnızca işlemdeki emir tamamlanır (şu an: {0}).",\r
 "tamamlandı",\r
+"Müşterinin teslim almadığı tamamlanmış cihazlar ({0} gün ve üzeri): {1}",\r
+"tamamlandı",\r
+"Tamamlandı",\r
 "Bitiş",\r
+"Bitiş (isteğe bağlı)",\r
+"bitiş",\r
 "Bitir",\r
 "Bitir ve Finans'ı aç",\r
 "sıkıştırılmış",\r
+"Vergiye tabi ödemelerin alıcı, gelir türü ve orana göre toplamı. Rapor, dijital sertifikayla elektronik olarak verilir.",\r
 "Oranlara göre tutarların toplamı ({0}) avans tutarına ({1}) eşit değil.",\r
+"Toplam, onay tutarını şu orandan fazla aşıyor:",\r
 "Toplam silinen",\r
 "toplam alacak {0} ≠ ekstredeki {1}",\r
 "Ödemeler toplamı ({0}), tahsil edilecek tutara ({1}) eşit değil.",\r
@@ -13175,10 +15427,12 @@ const a=`[\r
 "Oranlara göre ciro toplamı {0}, ancak \\"UKUPAN POREZ → Promet\\" {1}.",\r
 "Toplam, aynı dönemdeki ticari defter hasılatıyla karşılaştırılır.",\r
 "Toplam kalem",\r
+"Kalemlerin toplamı ({0} €), düzenlenen tekliften ({1} €) %{2} oranından fazla yüksek: yeni teklif düzenleyin.",\r
 "Kalemlerin toplamı ({0} EUR) fatura tutarına ({1} EUR) eşit değil. Fark: {2} EUR.",\r
 "Kalemlerin toplamı fatura tutarına eşit.",\r
 "Oranların toplamı ({0} / {1} / {2}) UKUPAN POREZ ile uyuşmuyor. Görüntüye göre kontrol gerekir.",\r
 "Tüm işyerlerinin toplamı aynı dönem için PR-PDV'ye eşittir: çıkış KDV hasılattan, girdi faturalardan. KDV'si ayrılmamış hasılat burada yalnızca cironun içine girer, KDV'ye girmez.",\r
+"Gerçek lehdarların paylarının toplamı %{0}.",\r
 "toplam borç {0} ≠ ekstredeki {1}",\r
 "Toplu gider fişi: {0}",\r
 "TOPLU MUHASEBE FİŞİ — MAL GİDERİ",\r
@@ -13217,18 +15471,37 @@ const a=`[\r
 "Tahıllar",\r
 "Gluten içeren tahıllar",\r
 "ZK",\r
+"Značajni prenosi novčanih sredstava na račune na kojima nije bilo transakcija (neaktivni računi) koji su odmah praćeni povlačenjem sredstava, tj. podizanjem gotovog novca.",\r
 "amblem",\r
 "Amblem",\r
 "Amblem",\r
 "Amblem kare olmalıdır (kenar farkı en fazla 10 %).",\r
 "Amblem ayarlanmadı.",\r
 "Bölge henüz tanınmadı.",\r
+"ZPDPL čl. 29 st. 1",\r
+"ZPDPL čl. 29 st. 1 t. 2",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 1",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 2",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 4",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 5",\r
+"ZPDPL čl. 29 st. 1 t. 2, čl. 29b t. 6",\r
+"ZPDPL čl. 29 st. 3",\r
+"ZPDPL čl. 29 st. 4 (%{0})",\r
+"ZPDPL čl. 29 st. 4 ve 11",\r
+"ZPDPL čl. 29 st. 4: vergi, gelirin ödendiği anda brüt tutar üzerinden hesaplanır ve ödenir.",\r
+"ZPDPL čl. 29 st. 5",\r
+"ZPDPL čl. 29 st. 5 — vergi egemenliği olan bölge (%{0})",\r
+"ZPDPL čl. 29a st. 1–3",\r
+"ZPDPL čl. 29b — açıkça düzenlenmemiş",\r
+"ZPDPL čl. 29b t. 4",\r
 "KDV Kanunu md. 18 f. 2–3: teslim, faturanın düzenlendiği anda yapılmış sayılır; fatura düzenlenmemişse KDV, teslim tarihinden itibaren sekiz gün sonra hesaplanır.",\r
 "KDV Kanunu md. 18 f. 3: fatura düzenlenmemişse KDV, teslim gününden sekiz gün sonra hesaplanır.",\r
 "KDV Kanunu md. 18 f. 4 (avans), md. 20 f. 9 (mükellef müşteriye alacak dekontu); PPZPDV md. 121 f. 4",\r
+"ZPDV čl. 18 st. 4 ve čl. 31 st. 2: avans üzerindeki KDV, bedelin alındığı gün hesaplanır",\r
 "KDV Kanunu md. 18 f. 4, md. 20 f. 9, md. 31 f. 2; PPZPDV md. 76, md. 121 f. 4",\r
 "KDV Kanunu md. 20 f. 9",\r
 "KDV Kanunu md. 20 f. 9: müşteri, girdi KDV indirimini azalttığını yazılı olarak bildirir",\r
+"ZPDV čl. 23 st. 2: vergi yükümlülüğünün doğduğu gündeki CBCG orta kuru. CBCG, ertesi günden itibaren geçerli olan \\"D günü\\" listesini yayımlar.",\r
 "KDV Kanunu md. 24a f. 1 b. 1; Yönetmelik 117/24 md. 2",\r
 "KDV Kanunu md. 24a f. 1 b. 10; Yönetmelik md. 13",\r
 "KDV Kanunu md. 24a f. 1 b. 11; Yönetmelik md. 14",\r
@@ -13240,10 +15513,49 @@ const a=`[\r
 "KDV Kanunu md. 24a f. 2 b. 3; Yönetmelik 117/24 md. 18",\r
 "KDV Kanunu md. 25 — PR PDV-2 alan 13.",\r
 "KDV Kanunu md. 26–27 — PR PDV-2 alan 14.",\r
+"ZPDV čl. 32 st. 7; mali mesajın Note alanına da gider (en fazla 200 karakter)",\r
 "KDV Kanunu md. 37 f. 5: binek otomobiller ve motosikletler, yakıt, yağlayıcılar, bunlara ait parçalar ve hizmetler, yeni inşa edilmiş konutlar ve ağırlama giderleri için giriş KDV'si indirilmez. Bu KDV, PR-PDV 26. alanına ve maliyete (alış değerine) girer.",\r
 "KDV Kanunu md. 37 f. 6–7: Gümrük beyannamesindeki KDV, beyannamenin alındığı dönemde indirilir. Gümrük vergisi ve ÖTV, KDV değildir. Matrah ve KDV beyannamede yazdığı gibi girilir (öneri: gümrük değeri + gümrük vergisi + ÖTV).",\r
 "KDV Kanunu md. 71e: \\"Bu Kanunun 24a maddesi birinci fıkra 1) bendi ile 25. maddesi birinci fıkra 12d) bendi hükümleri 31 Aralık 2022'de yürürlükten kalkar.\\" Ekmek, un ve yağ 01.01.2023'ten itibaren %0 ile satılmaz. Esassız %0'lı ürün kontrol edilmelidir (Ürünler ekranında oran veya esas).",\r
 "ZR:{0}",\r
+"ZSPNFT čl. 116 st. 1 t. 1",\r
+"ZSPNFT čl. 116 st. 1 t. 2, čl. 117 st. 7",\r
+"ZSPNFT čl. 116 st. 1 t. 3, čl. 117 st. 8",\r
+"ZSPNFT čl. 116 st. 1 t. 4, čl. 117 st. 9",\r
+"ZSPNFT čl. 116 st. 1 t. 5, čl. 117 st. 10",\r
+"ZSPNFT čl. 116 st. 1 t. 6, čl. 117 st. 11; čl. 66 st. 12",\r
+"ZSPNFT čl. 116 st. 1 t. 7, čl. 117 st. 12",\r
+"ZSPNFT čl. 116 st. 1 t. 7, čl. 117 st. 12; muhafaza dört yıl (čl. 127 st. 4)",\r
+"ZSPNFT čl. 117 st. 1 t. 1–3",\r
+"ZSPNFT čl. 117 st. 1 t. 1, 3, 4–6",\r
+"ZSPNFT čl. 117 st. 1 t. 3 — kimlik belgesinin geçerlilik bitiş tarihi",\r
+"ZSPNFT čl. 117 st. 1 t. 6 — taranmış belgeler; dosya firma klasöründe saklanır ve veri alışverişiyle aktarılmaz",\r
+"ZSPNFT čl. 117 st. 11; čl. 66 st. 12",\r
+"ZSPNFT čl. 12",\r
+"ZSPNFT čl. 12 — en az yılda bir kez",\r
+"ZSPNFT čl. 12 — kuruluştan veya faaliyetin başlangıcından itibaren 60 gün içinde; en az yılda bir kez güncellenir",\r
+"ZSPNFT čl. 127 — Uyum (ZSPNFT) paketi",\r
+"ZSPNFT čl. 127 st. 1–2",\r
+"ZSPNFT čl. 127 st. 3",\r
+"ZSPNFT čl. 127 st. 4",\r
+"ZSPNFT čl. 127 st. 5",\r
+"ZSPNFT čl. 127 st. 5 — süre dolduğunda kişisel veriler silinir",\r
+"ZSPNFT čl. 14 — yönetici pozisyonunda yetkili kişi",\r
+"ZSPNFT čl. 14 — yönetici pozisyonunda yetkili kişi ve yardımcısı",\r
+"ZSPNFT čl. 4 st. 2 t. 13; čl. 66 st. 1–3",\r
+"ZSPNFT čl. 66 — nitelikli elektronik imzayla elektronik iletim",\r
+"ZSPNFT čl. 66 st. 1 al. 1",\r
+"ZSPNFT čl. 66 st. 1 al. 2",\r
+"ZSPNFT čl. 66 st. 1–3",\r
+"ZSPNFT čl. 66 st. 11 — FOJ'a gecikmeksizin bildirim",\r
+"ZSPNFT čl. 66 st. 12 — üç iş günü içinde FOJ'a bildirim",\r
+"ZSPNFT čl. 66 st. 2",\r
+"ZSPNFT čl. 66 st. 3",\r
+"ZSPNFT čl. 66 st. 6–10",\r
+"ZSPNFT čl. 66 st. 6–10 — gerçekleştirmeden önce, gerçekleştirme süresiyle birlikte",\r
+"ZSPNFT čl. 81 — şüphe gerekçelerinin belirlenmesinde gösterge listeleri kullanılır",\r
+"ZSPNFT čl. 81–83",\r
+"ZSPNFT čl. 83 — kendi gösterge listesi yükümlünün belgelerinde bulunmalıdır",\r
 "DÜZELTME FATURALARI GÜNLÜĞÜ",\r
 "Resmî I-RAČ formu (15 sütun, KDV Kanunu Uygulama Yönetmeliği md. 122):",\r
 "Resmî U-RAČ formu (17 sütun, KDV Kanunu Uygulama Yönetmeliği md. 123; alınma tarihi = kayıt tarihi; yabancı tedarikçilerin mal faturaları bunda yer almaz — ithalatta KDV gümrük beyannamesine göre alan 20'ye gider):",\r

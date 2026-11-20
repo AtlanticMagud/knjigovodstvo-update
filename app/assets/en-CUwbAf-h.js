@@ -1,5 +1,61 @@
 const e=`[\r
+"— no calculation —",\r
+"— no status —",\r
+"— days overdue",\r
+"— natural person (the customer is created when invoicing) —",\r
+"— internal project (no customer) —",\r
+"— select project —",\r
+"— per supplier —",\r
+"— all entries —",\r
+", and the data is submitted to FOJ by {0} (ZSPNFT Art. 66)",\r
+", training",\r
+", replied",\r
+", period {0}–{1}",\r
+"; without data item 10 (area):",\r
+"; not created: {0}",\r
+"; VAT liability {0} (last day of the period)",\r
+"; entitled to a fee until {0}",\r
+"; the accepted quote is signed by the repair shop and the client.",\r
+"; overdue: {0}",\r
+"; for land, the layout is not stated",\r
+": for the period from",\r
+". One is corrected by cancellation or a corrective invoice.",\r
+". Advertising these properties is not allowed.",\r
+". After the period expires, personal data is deleted (ZSPNFT Art. 127 para. 5); a record with the deletion date remains.",\r
+". The data is entered on the agreement or on the property; a change is recorded as a new entry.",\r
+". is submitted by",\r
+". An entry is not deleted or changed; a correction is entered as a new entry.",\r
+". Brokerage records entries remain (kept permanently).",\r
+"· top 10:",\r
+"· rate surcharge {0} p.p.",\r
+"· added after the quote",\r
+"· payment to recipient:",\r
+"· interest",\r
+"· clients:",\r
+"· compensation",\r
+"· on pro forma invoice {0}",\r
+"· withholding tax:",\r
+"· received invoices",\r
+"· consent",\r
+"· service",\r
+"· to invoice:",\r
+"(no project)",\r
+"(no contract)",\r
+"(ECB + 8 p.p.)",\r
+"(on another computer)",\r
+"(draft)",\r
+"(there are no invoices paid late, or the period has already been calculated).",\r
+"(Opis LIKE ? OR Sifra LIKE ?)",\r
 "(unlocked)",\r
+"(late)",\r
+"(case {0})",\r
+"(first deadline",\r
+"(goods)",\r
+"(deadline expired: {0})",\r
+"(from another computer)",\r
+"(includes the brokerage fee)",\r
+"(service)",\r
+"(services)",\r
 "(with {0} entered earlier in {1})",\r
 "(found at unlocking; locked before 2.7.0)",\r
 "(found when upgrading to 2.7.0)",\r
@@ -13,28 +69,473 @@ const e=`[\r
 "-File",\r
 "-NonInteractive",\r
 "-NoProfile",\r
+"(ZSPNFT Art. 20a and 117)",\r
+"[Supplement {0}] {1}",\r
+"[personal data deleted {0}]",\r
+"[Termination {0}: {1}]",\r
+"{0}\\n\\nPost it as a supplier payment anyway?",\r
+"{0}\\n\\nEnter {1} as a supplier payment anyway?\\n\\nOK: all selected lines are entered.\\nCancel: nothing is entered (untick the line and click „Unesi označena plaćanja\\" again).",\r
+"{0}\\nCompany in the program: {1} (PIB {2}).\\n\\n{3}",\r
+"{0} — first and last name",\r
+"{0} — invoice {1}, paid {2}",\r
+"{0} — brokerage agreement {1}",\r
+"{0} — default interest and compensation",\r
+"{0} · {1} EUR · {2}: {3}",\r
+"{0} ({1}, {2} EUR)",\r
+"{0} (copyright contract)",\r
+"{0} (Art. 20a)",\r
+"{0} (ExRate {1})",\r
+"{0} (invoice {1})",\r
+"{0} (from {1})",\r
+"{0} (completed {1})",\r
+"{0} {1} (rate {2})",\r
+"{0} {1} excl. VAT{2}; {3}",\r
+"{0} {1} is also recorded on another computer; the local record gets number {2}.",\r
+"{0} {1} ORDER BY n.Godina DESC, n.RedniBroj DESC",\r
+"{0} {1} from another computer gets number {2} (the number is already taken here by an earlier record).",\r
+"{0} was entered as paid in cash and is already posted to the cash box. The same expense is not posted again as a supplier payment from the bank statement.",\r
+"{0} was entered as paid by card and is already posted to the current account. The card transaction on the bank statement is not posted again as a supplier payment.",\r
+"Q{0} {1}",\r
+"{0} is not valid.",\r
+"{0} Money is received and handed over through the deposit account.",\r
+"{0} The payment was not posted automatically.",\r
+"{0} under brokerage agreement {1}",\r
+"{0} is entered as an ISO code (e.g. ME, RS, DE).",\r
+"{0} para. 1",\r
+"{0} para. 1 and 3",\r
+"{0} para. 2",\r
+"{0} para. 2 — an increase of more than {1} % requires prior written consent",\r
+"{0} The entry in the brokerage records is permanent.",\r
+"{0} WHERE n.NalogID=?",\r
+"{0} WHERE n.UID=?",\r
+"{0} for customer {1} has been saved.",\r
+"{0}, {1}, {2} {3} incl. VAT",\r
+"{0}, gross {1}",\r
+"{0}; principal {1}",\r
+"{0}: the number of hours must be from 0 to 24.",\r
+"{0}: the date is not valid.",\r
+"{0}: the customer has no e-mail address",\r
+"{0}: reduction of the liability to the supplier",\r
+"Year {0} · submission deadline {1}",\r
+"Year {0} · ZPDPL Art. 29",\r
+"Year {0}{1}",\r
+"% (limit",\r
+"% of budget",\r
+"% per year, CBCG rate by half-year) and recovery cost compensation of 40 € for business customers:",\r
+"+ Agent",\r
+"+ Part",\r
+"+ New client",\r
+"+ New viewing",\r
+"+ New complaint",\r
+"+ New work order",\r
+"+ New brokerage agreement",\r
+"+ New entry",\r
+"+ New deposit entry",\r
+"+ New payment to non-resident",\r
+"+ New property",\r
+"+ New service",\r
+"+ New project",\r
+"+ New contract",\r
+"+ calculation",\r
+"+ Training",\r
+"+ daily takings incl. VAT",\r
+"+ Beneficial owner",\r
+"✉ IOS by e-mail",\r
+"✉ Send selected by e-mail (",\r
+"💾 Save property",\r
+"💾 Save viewing",\r
+"💾 Save calculation",\r
+"💾 Save broker details",\r
+"💾 Save complaint",\r
+"💾 Save project",\r
+"💾 Save week",\r
+"💾 Save agreement",\r
+"💾 Record transaction",\r
+"📄 Risk analysis (PDF)",\r
+"📄 Book (PDF)",\r
+"📄 Reporting entity's indicator list (PDF)",\r
+"📄 Contract PDF",\r
+"📄 Data for FOJ (PDF)",\r
+"📄 Viewing confirmation",\r
+"📄 Intake receipt",\r
+"📄 Specification",\r
+"📄 Agreement (PDF)",\r
+"📋 Advertisement text",\r
+"📓 Complaint",\r
+"€: a written quote specifying work, materials and parts, signed by the repair shop and the client, is mandatory.",\r
+"€): the client's new written consent is required before work continues.",\r
+"1 · Outlet (optional)",\r
+"1 EUR = {0} {1}",\r
+"1) name, registered office and PIB of the broker (Settings → Company details)",\r
+"10 years from conclusion of the agreement",\r
+"2) first and last name or business name, residence or registered office, JMB or PIB, and role of the principal",\r
+"3) the property, type of legal transaction and sale price or rent",\r
+"4) amount, method and deadline for payment of the brokerage fee",\r
+"5 years from the end of the business relationship or from the transaction",\r
+"5) term for which the agreement is concluded (conclusion date)",\r
+"60 days from the start of business",\r
+"7) rights and obligations of the broker and the principal",\r
+"business address",\r
+"The e-mail address is not valid.",\r
+"The address and municipality of permanent or temporary residence have not been entered (ZSPNFT Art. 117 para. 1 item 3).",\r
+"Business address (if different)",\r
+"Address of permanent or temporary residence",\r
+"Representative's address",\r
+"AED",\r
+"Agent",\r
+"Agent \\"{0}\\" is not on the list of agents who have passed the professional exam.",\r
+"Agents who have passed the professional exam",\r
 "If",\r
+"If the debt is not settled within the stated period, the claim will be brought to court without further notice, and the costs of the proceedings will be borne by the debtor.",\r
+"If payment has already been made, please disregard this reminder and send us the payment details.",\r
+"If during the repair additional work, material or parts are needed that would increase the price by more than {0} %, the repair shop requests the client's written consent before continuing, given in person or by means of distance communication.",\r
+"active",\r
+"active (on offer)",\r
+"analysis not adopted",\r
+"Revenue analysis",\r
+"Risk analysis",\r
+"The risk analysis and thresholds have been saved.",\r
+"Risk analysis not adopted",\r
+"The risk analysis has not been adopted; the deadline is 60 days from the start of business.",\r
+"The risk analysis is adopted within 60 days of incorporation or start of business (ZSPNFT Art. 12)",\r
+"AND o.DobavljacID=?",\r
+"AND u.UgovorID=?",\r
+"AND UgovorUID=?",\r
+"Item \\"{0}\\" has goods movements (sales, opening balance, stocktaking or transfer) and is kept in the trade ledger. A service is entered as a separate item.",\r
+"Item \\"{0}\\" has receipts by costing sheet ({1}) and is kept in stock. A service is entered as a separate item.",\r
+"AUD",\r
 "automatic",\r
+"automatic renewal",\r
+"Copyright fees and intellectual property rights (including software)",\r
+"copyright contract",\r
+"Copyright contract",\r
+"The advance is greater than the quote amount ({0} EUR).",\r
+"Advance on pro forma invoice {0}",\r
+"Advance on pro forma invoice:",\r
+"Advance invoice {0} has been saved; the quote has been accepted. Fiscalization and PDF: Advances and credit notes.",\r
+"Advance invoice from pro forma invoice",\r
+"Advance invoice on the date the payment is received, with the amount and VAT rates of this quote",\r
+"An advance invoice for the brokerage fee is not allowed (Law on Brokerage in Real Estate Sales and Leases, Art. 27).",\r
 "Program update: the release announcement is verified with the publisher's signature; an announcement with an invalid signature, a withdrawn version and a version older than one already published are not downloaded. Server connection: the device sign-in is renewed automatically before it expires and after it has expired.",\r
+"BAM",\r
+"Payer's bank (name, account, country)",\r
+"Payee's bank (name, account, country)",\r
 "Bank: rules for classifying statement items (description or payee account → type and partner)",\r
 "Bank: statement transactions, posting, recognition method",\r
 "Bank: import all statements from mail",\r
+"Without a certificate of residence, the rate of {0} % applies.",\r
+"no hourly rate",\r
+"No hourly rate",\r
+"no status",\r
+"no valid agreement",\r
+"Non-cash",\r
+"Non-cash — exception (EUR)",\r
+"Non-cash (EUR)",\r
+"non-cash transaction {0} EUR (threshold {1} EUR)",\r
+"Non-cash",\r
+"BGN",\r
+"{0} draft invoices will be created ({1} entries, {2} h, {3} EUR excl. VAT) with issue date {4}. Continue?",\r
+"{0} draft invoices will be created with issue date {1} (total incl. VAT: {2}). Continue?",\r
+"To be recorded in the brokerage records: {0} ({1}). The entry is permanent: it cannot be deleted or changed.",\r
+"Close associate",\r
+"Deletion is possible from {0} (two-year retention period)",\r
+"Deleting the receipt would make the amount handed over greater than the amount received; delete the handover first.",\r
+"Only a draft calculation can be deleted. An issued calculation is cancelled.",\r
 "Document number, IKOF or JIKR — or the name of a screen or action",\r
+"The number and date of the invoice issued through registered fiscal software go into data item 14 of the brokerage records.",\r
+"Order or contract number",\r
+"Policy number",\r
+"Certificate number",\r
+"Case number",\r
+"Number of an invoice issued outside the program",\r
+"The number of hours must be greater than 0 and at most 24.",\r
+"The number is stated in the agreement (Art. 18) and in every advertisement (Art. 25)",\r
+"Brokerage agreement number",\r
+"Sub-brokerage agreement number",\r
+"entry number not entered (Brokerage → Broker details)",\r
+"The entry number is entered on the Broker details tab.",\r
+"Registar posrednika entry number",\r
+"The Registar posrednika entry number has not been entered; the agreement cites it as proof of registration (Art. 18 para. 2 item 1).",\r
+"Professional exam certificate number",\r
+"Request number",\r
 "Number: {0}",\r
+"Account numbers (18 digits, separated by commas)",\r
+"Gross payment (EUR)",\r
+"The gross payment amount must be greater than zero.",\r
+"Gross income",\r
+"Quick weekly entry",\r
+"Hours budget",\r
+"The hours budget is not valid.",\r
+"CAD",\r
+"CARD",\r
+"CBCG",\r
+"CBCG list of {0}",\r
+"CBCG: {0}",\r
+"CBCG: the list is empty",\r
+"CBCG: currency {0} is not on the list",\r
+"awaiting submission to FOJ",\r
+"awaiting consent",\r
+"four years from the end of the appointment or from the training",\r
+"CG",\r
+"CHF",\r
+"The price has increased by more than {0} % without the client's written consent ({1} para. 2).",\r
+"The price has increased by more than {0} % compared to the consent ({1} € → {2} €): the order cannot be completed until the client's written consent is entered ({3} para. 2).",\r
+"Price includes the brokerage fee",\r
+"Rent",\r
+"From {0} prices increase by {1} % (example for the first item: {2} {3}).",\r
+"Prices are expressed in {0}; the invoice is issued in {1}, and the amounts for VAT calculation are stated in EUR at the middle rate of the Central Bank of Montenegro on the date the tax liability arises.",\r
+"Art. 66 para. 1 indent 1",\r
+"Art. 66 para. 1 indent 2",\r
+"Art. 66 para. 2 (item 13 indent 5, 10–13)",\r
+"Art. 66 para. 3",\r
+"Immediate family member",\r
+"CNY",\r
+"COALESCE(d.Valuta,'')",\r
+"CZK",\r
+"The invoicing day is from 1 to 28.",\r
+"Day of month",\r
+"days from receipt):",\r
+"Reminder days must be in ascending order (e.g. 8, 30, 60) and between 1 and 365.",\r
+"\\"Retain until\\" date",\r
+"The date ({0}) is before the receipt date {1}",\r
+"The date ({0}) is in the future.",\r
+"The date ({0}) is not valid.",\r
+"The document date is not valid.",\r
+"Date submitted to FOJ",\r
+"The submission date is before the entry date.",\r
+"The submission date is in the future.",\r
+"The submission date has been recorded.",\r
+"The submission date has already been entered ({0}).",\r
+"The submission date is not valid.",\r
+"Date and time suspension started",\r
+"Date and time of extension",\r
+"Date and time of inspection",\r
+"Date or period of supply that differs from the invoice issue date.",\r
+"The payment date is not valid.",\r
+"Adjustment date",\r
+"The adjustment date is required.",\r
+"The adjustment date cannot be before the lawsuit date.",\r
+"The contract expiry date is before the start date.",\r
+"The contract expiry date is not valid.",\r
+"Invoice issue date",\r
+"The date is in the future.",\r
+"Exchange rate date",\r
+"The exchange rate date is not valid.",\r
+"The viewing date is not valid.",\r
+"The calculation date cannot be before the date up to which interest is calculated.",\r
+"The calculation date is not valid.",\r
+"Training date",\r
+"Reply date",\r
+"The reply date is before the complaint receipt date.",\r
+"The reply date is not valid.",\r
+"relationship date",\r
+"The appointment date is not valid.",\r
+"Termination date",\r
+"The termination date is before the conclusion of the agreement.",\r
+"The termination date is in the future.",\r
+"The termination date is not valid.",\r
+"The write-off date must be a valid date, not earlier than the calculation date.",\r
+"The business start date is not valid.",\r
+"Monitoring start date",\r
+"The contract start date is not valid.",\r
+"Certificate date",\r
+"The certificate of residence date is not valid.",\r
+"The date the copy was handed to the principal is not valid.",\r
+"Relationship end date",\r
+"The relationship end date is before the start date.",\r
+"Collection date",\r
+"The collection date is before the completion date.",\r
+"The report date is not valid.",\r
+"The receipt date is in the future.",\r
+"The complaint receipt date is in the future.",\r
+"The complaint receipt date is not valid.",\r
+"Consent date",\r
+"Extension date",\r
+"The project date is not valid.",\r
+"Date of check in the Register of Beneficial Owners",\r
+"The date of birth has not been entered (ZSPNFT Art. 117 para. 1 item 3).",\r
+"The consent date for electronic invoices is not valid.",\r
 "Date drawn up: {0}",\r
+"Transaction date",\r
+"The transaction date is not valid.",\r
+"The date in the field is the new validity date",\r
+"The sub-brokerage agreement date is not valid.",\r
+"Entry date",\r
+"The entry date is not valid.",\r
+"Entry date",\r
+"Cadastre entry date",\r
+"The cadastre entry date is not valid.",\r
+"The date of entry in the Registar posrednika is not valid.",\r
+"Tax payment date",\r
+"The tax payment date is not valid.",\r
+"Relationship start date",\r
+"Adoption date",\r
+"The risk analysis adoption date is in the future.",\r
+"The risk analysis adoption date is not valid.",\r
+"Lawsuit date",\r
+"The lawsuit date is required.",\r
+"The lawsuit date cannot be before the invoice date.",\r
+"Identity document expiry date",\r
+"The policy expiry date is not valid.",\r
+"The agreement validity date is not valid.",\r
+"The client's request date is not valid.",\r
+"Date of conclusion of the legal transaction",\r
+"The date of conclusion of the legal transaction is in the future.",\r
+"The date of conclusion of the legal transaction is not valid.",\r
+"The agreement conclusion date is in the future.",\r
+"The contract conclusion date is not valid.",\r
+"Brokerage agreement conclusion date",\r
+"The project end date is before the start date.",\r
 "Date: {0}",\r
+"Lending and brokerage in arranging loans (item 13 indent 8)",\r
+"DEP",\r
+"Deponovanje gotovog novca gdje je kao dokaz o porijeklu sredstava priložen isti isplatni nalog, a iznos deponovanog gotovog novca je značajno veći od iznosa naznačenog na isplatnom nalogu.",\r
+"Deponovanje gotovog novca kod više kreditnih institucija, gdje je kao dokaz o porijeklu novčanih sredstava priložen isti isplatni nalog, a iznos deponovanog novca je značajno veći od iznosa naznačenog na isplatnom nalogu.",\r
+"Deposit",\r
+"Deposit {0} {1} — brokerage agreement {2}{3}",\r
+"Deposit under brokerage agreement {0}",\r
+"Broker deposit (principals' funds)",\r
+"Broker deposit: principals' funds in the deposit account (received D, handed over C)",\r
+"Broker deposit: liability to principals for funds received",\r
+"The deposit is kept in EUR.",\r
+"Deposit account",\r
+"BROKER'S DEPOSIT ACCOUNT",\r
+"Broker's deposit account (principals' funds)",\r
+"The deposit account is entered with 18 digits (e.g. 510-0000000012345-67).",\r
+"Deposit accounts (principals' money)",\r
 "Detail",\r
+"A part from the code list is issued from the outlet's stock by the invoice from the order",\r
+"Part of the brokerage fee from the retained deposit (Law on Brokerage in Real Estate Sales and Leases, Art. 27 para. 3).",\r
+"Distribution channels (in person, remote, through a representative)",\r
+"Reporting entity's activity and scope of business",\r
+"Divisor",\r
+"partially",\r
+"partially upheld",\r
+"DKK",\r
+"Up to date",\r
 "The supplier has no open invoices; the payment of {0} EUR remains a prepayment until the invoice is entered.",\r
 "supplier {0}",\r
 "Supplier {0} has no invoices in company {1}.\\n\\nThe invoice will be entered in company {2}. Check that the invoice is issued to this company and not to another company on this computer.",\r
 "Suppliers: supplier card and payment entry",\r
+"Add document",\r
+"Add service from code list",\r
+"The rate surcharge must be between 0 and 20 percentage points.",\r
+"Rate surcharge for B2B (p.p.)",\r
+"added after the quote",\r
+"The lower limit for a cash transaction must be less than the upper limit.",\r
+"Reply supplement (added at the end, with today's date)",\r
+"Only a report to FOJ can be supplemented.",\r
+"Due as of",\r
+"Submitted",\r
+"submitted {0}",\r
+"submitted to FOJ",\r
+"Submitted to FOJ",\r
+"Submitted after the deadline ({0}).",\r
 "The sick-leave certificate and the IOPPD code for this leave are not prescribed and await the accountant's answer, so the program does not calculate these days as leave: an employee without a shift schedule has them in regular work, while for an employee on a shift schedule the hours of those days should be entered in the payroll as instructed by the accountant.",\r
+"Residence permit",\r
+"Permitted price increase (%)",\r
+"The permitted price increase must be between 0 and 100 %.",\r
+"Other public document",\r
+"Second reminder",\r
+"SECOND REMINDER",\r
+"Counterparty",\r
+"Other income under Art. 29 (dividend, capital gain, etc.)",\r
+"other person (external contractor)…",\r
+"Insurance company",\r
+"Country",\r
+"country",\r
+"Country (ISO)",\r
+"document issuing country",\r
+"Issuing country (ISO)",\r
+"The country of issue of the identity document has not been entered (ZSPNFT Art. 117 para. 1 item 3).",\r
+"The recipient's country is entered as an ISO code (e.g. DE, USA, IRL).",\r
+"Country of birth (ISO)",\r
+"The country of birth has not been entered (ZSPNFT Art. 117 para. 1 item 3).",\r
+"The country of the registered office has not been entered (ZSPNFT Art. 117 para. 1 {0}).",\r
+"Country of registered office or residence",\r
+"Countries and geographic areas",\r
+"Countries from the Ministry of Finance list",\r
+"Countries are entered as ISO codes (two or three letters), separated by commas.",\r
+"Citizenship (ISO)",\r
+"The citizenship has not been entered (ZSPNFT Art. 117 para. 1 item 3).",\r
+"The beneficial owner's citizenship is entered as an ISO code.",\r
+"owed",\r
+"Owed to supplier, payment term {0}.{1}.{2}.",\r
+"Owed to supplier: balance, card, open items and IOS",\r
+"Owed to supplier.",\r
+"owed, due {0}",\r
+"Longer retention at the request of FOJ or the supervisory authority",\r
+"Longer retention at the request of FOJ or the supervisory authority (ZSPNFT Art. 127 para. 3)",\r
+"duplicate record (the same source also recorded on another computer)",\r
+"e-mail",\r
+"by e-mail",\r
+"ECB",\r
+"ECB {0} (CBCG list not available)",\r
+"ECB: {0}",\r
 "screen",\r
+"Exclusive",\r
+"Exclusive brokerage",\r
+"Exclusive brokerage (Art. 31): the principal undertakes not to engage another broker for the duration of the agreement. WARNING TO THE PRINCIPAL: if, while this clause is in force, the principal concludes a legal transaction brokered by another broker, the principal must pay this broker the amount of the agreed brokerage fee as compensation for damages.",\r
+"Exclusive brokerage: the principal is specifically warned of the meaning and consequences of the clause (Art. 31 para. 3) — the warning is in the printed agreement.",\r
+"Electronic identification",\r
+"by e-mail",\r
+"ERacunNacin",\r
+"ERacunSaglasnost",\r
+"Entertainment, artistic or sports programme in Montenegro",\r
+"EUR. The advance is split according to the quote's VAT rates; the invoice date is the date the payment is received.",\r
+"EUR) · invoiced:",\r
 "EV",\r
+"Records",\r
+"The records have no entries. An entry is created when a brokerage agreement is saved.",\r
+"Brokerage records",\r
+"Brokerage records are kept permanently; brokerage agreements for ten years from conclusion.",\r
+"RECORDS OF BROKERAGE IN REAL ESTATE SALES AND LEASES",\r
+"Records of supervisory authority access to data; FOJ is notified within three business days of the inspection.",\r
+"Register of consumer complaints (Consumer Protection Law, \\"Sl. list CG\\" no. 12/26, Art. 27). The register is kept for at least two years.",\r
+"TIMESHEET",\r
+"RECORDS: {0}",\r
+"Records",\r
+"Records of special packages remain in the company database even when the package is not in the license. Viewing and export are always available; new entries are possible only with the package enabled.",\r
+"Records are kept for the statutory period even when the package is not in the license: viewing and export are always available",\r
+"Record hours",\r
+"Hours recorded",\r
+"Recorded:",\r
 "file changed",\r
+"invoice {0} ({1}) moved from costing sheet to expenses: {2}",\r
+"Invoice {0} was deleted on another computer, but here it is not a draft — it remains.",\r
+"Invoice {0} is already closed.",\r
+"Invoice {0} was not created from the timesheet.",\r
+"Invoice {0} is not in a foreign currency.",\r
 "Supplier invoice",\r
+"The invoice has items with 0 % VAT and no legal basis. Select the basis (zero rate Art. 25, exemption Art. 26/27 or supply outside Montenegro Art. 17 of the VAT Law).",\r
+"Invoice from timesheet ({0} entries).",\r
+"Invoice from order",\r
+"Invoice from work order {0}.",\r
+"Invoice from contract",\r
 "The invoice has been moved to expenses (Procurement and expenses) {0}.",\r
 "The invoice has been moved to expenses: {0} EUR excluding VAT, VAT {1} EUR, date {2} (Procurement and expenses). Costing sheet {3} has been deleted.",\r
+"Fee invoice",\r
+"Fee invoice under brokerage agreement {0}",\r
+"the invoice has no unpaid part with VAT",\r
+"The invoice has no unpaid portion with VAT — no adjustment is needed.",\r
+"Brokerage fee invoice",\r
+"The brokerage fee invoice is issued only after the legal transaction is concluded (Law on Brokerage, Art. 27 para. 1–2).",\r
+"The invoice is issued more than eight days after the deal was concluded ({0}); the VAT liability arises on the eighth day from the supply (VAT Law, Art. 18 para. 3).",\r
+"An invoice is created for a completed order (current: {0}).",\r
+"Fakturabilno",\r
+"Invoices from timesheets",\r
+"Fakture ne prate odgovarajuće prijemnice, otpremnice i druga dokumentacija iz čega se može steći utisak da je promet robe fiktivan.",\r
+"Overdue invoices with default interest (today",\r
+"invoices, pro forma invoices and quotes",\r
+"Invoiced hours cannot be changed",\r
+"Invoicing",\r
+"Invoiced excl. VAT",\r
+"Invoiced up to",\r
+"invoiced on another computer",\r
+"Hours invoiced",\r
+"Invoiced: {0}{1}",\r
+"billable",\r
+"Invoiced",\r
 "update feed: release without signature",\r
 "update feed: release without state",\r
 "update feed: release has an invalid format",\r
@@ -46,20 +547,133 @@ const e=`[\r
 "update feed: state expired",\r
 "update feed: state older than the last accepted one",\r
 "FFFFFFFF",\r
+"Branch",\r
+"Physical presence",\r
+"FOJ is notified of the inspection by {0} (ZSPNFT Art. 66 para. 12).",\r
+"Position",\r
+"Warranty on work performed: {0} from the date of collection.",\r
+"Warranty on work performed: {0} from collection.",\r
+"Warranty on work performed: {0}.",\r
+"Warranty on work (months)",\r
+"Warranty on work: a whole number of months from 0 to 120.",\r
+"garage",\r
+"GBP",\r
 "Generated: {0}",\r
 "General ledger of the month in balance (debit = credit)",\r
 "the general ledger is not kept in the program for this month",\r
+"Principal amount",\r
+"The year of receipt cannot be changed: the order number belongs to that year's sequence.",\r
+"The year of receipt cannot be changed: the complaint sequence number belongs to that year's register.",\r
+"Entry year",\r
+"The year of conclusion cannot be changed: the agreement number belongs to that year's sequence.",\r
+"annually",\r
+"annual update",\r
+"Annual update of the risk analysis",\r
+"Cash (paid immediately)",\r
+"Cash up to (EUR)",\r
+"Cash from (EUR)",\r
+"in cash",\r
+"Cash",\r
+"cash transaction {0} EUR (from {1} to {2} EUR)",\r
+"Cash",\r
+"City or municipality",\r
+"building land",\r
+"Hosting, SaaS and software access (at the accountant's discretion)",\r
+"HUF",\r
+"and para. 3",\r
+"Identification",\r
+"Client identification and identity verification, entry in the client register",\r
+"or fee amount excl. VAT",\r
+"ILS",\r
+"First and last name of the agent who handled the case",\r
+"The first and last name of the agent handling the case has not been entered (Rulebook on Brokerage Records 45/26, Art. 3 item 6).",\r
+"The client's first and last name has not been entered.",\r
+"The first and last name of the person who viewed the property has not been entered.",\r
+"First and last name of the authorised officer",\r
+"The consumer's first and last name has not been entered.",\r
+"Entrepreneur's first and last name",\r
+"The entrepreneur's first and last name has not been entered (ZSPNFT Art. 117 para. 1 item 2).",\r
+"Officer's first and last name",\r
+"The beneficial owner's first and last name has not been entered.",\r
+"Employee's first and last name",\r
+"Representative's first and last name",\r
+"First and last name, or company name",\r
+"First and last name or business name and address of the principal",\r
+"Indexation (%)",\r
+"The indexation (%) is not valid.",\r
+"Indicator",\r
+"Indicator {0} is on the reporting entity's list.",\r
+"Indicator {0} has been removed from the reporting entity's list.",\r
+"Indicator {0} is not on the indicator list.",\r
+"The indicator does not exist.",\r
+"No indicator from the list has been selected (ZSPNFT Art. 81).",\r
+"Indicators",\r
+"Indicators from the list (selected:",\r
+"Indicators:",\r
+"industrial building",\r
+"For information: revenue = invoices excl. VAT issued in the period; labour cost = hours in the period × employee hourly cost (employer cost from payroll ÷ monthly hours fund). Hours of external contractors and of employees without payroll have no cost (\\"Hours without cost\\" column).",\r
+"Foreign transactions and exchange rates",\r
+"The reporting entity's internal act on risk analysis (ZSPNFT Art. 12): identification and assessment of risk by client, client group, country and geographic area, business relationship, transaction, service and distribution channel, risk categories and risk mitigation measures. The analysis is updated at least once a year.",\r
+"Internal hours are not invoiced, but are included in reports and project cost",\r
+"Internal",\r
+"internal (not invoiced)",\r
+"Investment, trade and brokerage in real estate (item 13 indent 9)",\r
+"IPD",\r
+"Brokerage outcome",\r
+"The complaint outcome is unknown.",\r
+"The outcome is entered together with the trader's reply.",\r
+"The payment is not subject to withholding tax ({0}).",\r
+"Payment to recipient",\r
+"document valid until",\r
+"Adjust VAT",\r
+"Output VAT adjustment {0} % — uncollectible receivable (Art. 20a)",\r
+"Output VAT adjustment for the unpaid part of the invoice (",\r
+"VAT adjustment {0}",\r
+"VAT adjustment on invoice {0}{1} — {2}",\r
+"VAT adjustment",\r
+"VAT adjustment (uncollectible receivable)",\r
+"A VAT adjustment is possible only for a receivable under a lawsuit filed before bankruptcy proceedings were opened against the customer (VAT Law Art. 20a). Confirmation is required.",\r
+"A VAT adjustment is possible only for a receivable under a lawsuit. Record the lawsuit first.",\r
+"The VAT adjustment has been cancelled.",\r
+"The VAT adjustment has been recorded. It is included in the PR-PDV and KIF of the adjustment month.",\r
+"VAT adjustment of",\r
+"VAT adjustment for uncollectible receivable — invoice {0}",\r
+"The VAT adjustment for this invoice has already been made ({0}).",\r
+"Contract expiry {0}",\r
+"Retention period expired: clients",\r
+"expired on {0}",\r
+"The same indicator is already on the own list.",\r
+"expires",\r
+"Reminder history",\r
+"Market research",\r
+"From the client register (ZSPNFT)",\r
+"From the customer code list (optional)",\r
+"from the code list: name, code or barcode",\r
+"From retained deposit",\r
 "The selected transaction type applies only to outflows.",\r
 "The selected transaction type applies only to inflows.",\r
+"The selected hours create a draft standard invoice per customer, with a supply period from the first to the last day of work. Invoiced hours cannot be changed; cancelling or deleting the draft releases them.",\r
+"Issue quote",\r
+"FOR RENT",\r
 "issued",\r
+"Issue an advance invoice",\r
+"Sales invoices to foreign customers: revenue from sale of goods",\r
+"Sales invoices to foreign customers: revenue from services",\r
 "Outgoing",\r
 "Outgoing invoices ±",\r
+"Between businesses, the creditor is also entitled to recovery cost compensation of at least 40 € per late invoice (Law on Payment Deadlines for Monetary Obligations, Art. 7).",\r
 "Pending items changed: {0}.",\r
+"change without unlocking — {0}",\r
+"Change of client data: {0}",\r
 "Edit bank rule",\r
+"Edit time entry",\r
 "CHANGES AFTER CLOSING — year {0}",\r
+"Letting and brokerage in letting of real estate — rent of 10.000 € per month (item 13 indent 5)",\r
+"Advance amount incl. VAT (EUR)",\r
 "Amount to",\r
 "Calc. amount",\r
 "Calculation amount ±",\r
+"The fee amount is not set (agreed amount or percentage of the transaction price).",\r
 "Amount from",\r
 "Open invoice amount",\r
 "Daily takings amount",\r
@@ -67,65 +681,570 @@ const e=`[\r
 "The amount of {0} EUR is {1} times larger than the usual payment to this supplier (usual {2} EUR, largest earlier {3} EUR).",\r
 "amount {0}{1}",\r
 "The \\"from\\" amount is greater than the \\"to\\" amount.",\r
+"Amount as consented by the client: {0} € (permitted deviation up to {1} €).",\r
+"Quote amount incl. VAT:",\r
+"The amount is paid to account {0}, with reference number {1}.",\r
+"Transaction amount (EUR)",\r
+"The transaction amount in EUR must be greater than zero.",\r
+"Amount in EUR at the CBCG middle rate on {0} (1 EUR = {1} {2}): {3} EUR, of which VAT {4} EUR.",\r
+"Amount in EUR:",\r
+"Amount in currency",\r
+"The payment amount in currency {0} must be greater than zero.",\r
+"Amounts are excl. VAT; VAT has been charged on the invoice.",\r
+"Amounts for the ledgers and VAT return: amount in currency ÷ CBCG rate",\r
+"Calculate",\r
 "PDF creation was cancelled.",\r
 "Creating PDF… ({0} rows)",\r
 "Creating PDF… ({0} pages)",\r
+"Statement of open items",\r
 "Bank statements imported up to the end of the month",\r
+"Source (decision, Official Gazette)",\r
+"Source of assets and funds",\r
+"The payment source has not been specified.",\r
+"source of funds",\r
+"the sources did not respond",\r
+"Export of special records",\r
 "Exports (IOPPD, payslips, summary) use the saved amounts. The payroll run is closed and is not recalculated automatically; recalculation requires unlocking.",\r
 "Exports (IOPPD, payslips, summary) use the saved amounts. Run “Calculate all” before exporting.",\r
+"Executed",\r
 "Executive director: {0}",\r
+"Public office",\r
+"The entrepreneur's unique identification number (JMB) has not been entered (ZSPNFT Art. 117 para. 1 item 2).",\r
+"single account — there is no payroll, rent, service contract or withholding tax calculation in the general ledger for {0}/{1}{2}",\r
+"One-time price increase from the given date (period starting on that day or later)",\r
+"Jmb",\r
+"Entrepreneur's JMB",\r
+"JMB or PIB",\r
+"Representative's JMB/PIB",\r
+"JPY",\r
 "How the partner of the item was recognised",\r
+"The costing sheet from this invoice goes into this company's books, and input VAT into PR-PDV. Create the costing sheet?",\r
+"The costing sheet is in locked month {0}/{1}. The purchase invoice ledger and the VAT return do not change (the expense gets the same date and the same VAT); the trade ledger and stock for that month change. A reason is required and is recorded in the \\"Changes after closing\\" report.",\r
 "The costing sheet is in the locked month {0}/{1}. Moving to expenses changes the books of that month (trade ledger, stock): unlock the month (Settings → Period locking), move the invoice and lock the month again.",\r
+"The costing sheet is in a locked month. The purchase invoice ledger and the VAT return do not change; the trade ledger and stock for that month change. The reason is recorded in the \\"Changes after closing\\" report.",\r
 "The costing sheet has neither an invoice date nor a receipt date.",\r
+"The costing sheet was not created.",\r
 "A write-off costing sheet is not moved to expenses.",\r
+"KAM",\r
+"Interest",\r
+"Interest (other than default interest)",\r
+"Interest and reminders",\r
+"As a domestic customer (2020), revenue 6020 / 6120",\r
+"as an expense (amounts and VAT from the invoice, by rate). The costing sheet and invoice are deleted: the invoice is no longer in the trade ledger or in stock. The debt to the supplier remains (expense with the same payment term). Input VAT remains in the purchase invoice ledger of the same month. This action is possible only on the main computer.",\r
 "as an expense (amounts and VAT from the invoice, by rate). The costing sheet and the invoice are deleted: the invoice is no longer in the trade ledger, stock or the debt to the supplier. Input VAT remains in the purchase invoice book of the same month. This is possible only on the main computer, in an unlocked month.",\r
+"Deposit retained on",\r
+"Card (paid immediately)",\r
+"by card",\r
+"Payment delays",\r
+"PAYMENT DELAYS BY CUSTOMER",\r
+"cad. parcel {0}",\r
+"Cadastral municipality",\r
+"Cadastral parcel",\r
+"Risk categories and client classification criteria",\r
+"Kijent raskida ugovor o saradnji sa računovođom zbog zahtjeva za dodatnim objašnjenjem realizacije (ili najave realizacije) određenih transakcija.",\r
+"Client",\r
+"Client (first and last name or company name)",\r
+"The client (first and last name or company name) has not been entered.",\r
+"Client (click — delete personal data)",\r
+"Klijent (pravno lice) daje adresu koja predstavlja broj poštanskog faha za komunikaciju sa posrednikom ili je adresa na kojoj je taj klijent registrovan nepostojeća.",\r
+"Client {0} is in the client register (ZSPNFT): {1} — data is submitted to FOJ by {2}",\r
+"Klijent često mijenja adresu, adresu sjedišta ili na jednoj adresi je registrovano više pravnih lica.",\r
+"Klijent često mijenja osnivače i/ili stvarne vlasnike i/ili zakonske zastupnike.",\r
+"Klijent često mijenja računovođe.",\r
+"Klijent daje neadekvatno objašnjenje zbog čega u posljednjem trenutku mijenja imena lica koja koristi u vezi sa transakcijom.",\r
+"Klijent daje nejasna objašnjenja o izvoru prihoda ili gotovog novca koje koristi u poslovnim transakcijama.",\r
+"Klijent daje zajmove pravnim i fizičkim licima koje poslije otpisuje ili zatvara cesijama, kompenzacijama i sl.",\r
+"Klijent donosi veliki iznos gotovog novca sa namjerom da obavi transakcije.",\r
+"Klijent fakturiše usluge za koje se ne može sa sigurnošću potvrditi da su izvršene, odnosno vrši plaćanja za određenu vrstu usluge pravnim licima sa sjedištem na ofšor destinacijama, odnosno \\"poreskim rajevima\\".",\r
+"Klijent ima komplikovanu organizacionu strukturu koja nije efikasna niti ekonomski opravdana.",\r
+"Klijent ima složenu vlasničku strukturu iako vrsta i obim poslova koje obavlja ne zahtijevaju takvu strukturu.",\r
+"Klijent insistira na elektronskom zaključenju ugovora i elektronskom ispostavljanju kupoprodajnog naloga, a potiče iz države poznate po proizvodnji i prometu narkotika, visoko-rizične treće države i države sa takozvane \\"crne liste\\", odnosno države za koju se sumnja da podstiče terorističke aktivnosti i finansiranje terorizma, iako nije izvjesno da će usluga posredovanja biti izvršena.",\r
+"Klijent insistira na novim uslugama novčanog poslovanja, pri čemu postoji vjerovatnoća da ne mogu da se identifikuju realni tokovi novca ili učesnici plaćanja koji se do sada nijesu pojavljivali na tržištu kod posrednika ili se koriste različiti elektronski ili drugi kanali plaćanja.",\r
+"Klijent je \\"veoma pričljiv\\" u vezi sa temama koje se tiču pranja novca ili finansiranja terorizma.",\r
+"Klijent je državljanin države koja ne primjenjuje standarde za sprečavanje pranja novca i finansiranja terorizma.",\r
+"Klijent je lice koje nije registrovano kao stvarni vlasnik i koje nema funkciju u pravnom licu, a upravlja i donosi odluke.",\r
+"Did the client reject the quote or the price increase? The order is closed with the status \\"rejected\\".",\r
+"The client has been entered in the register.",\r
+"Klijent je, prema tvrdnjama medija, poznat javnosti kao lice koje je uključeno u vršenje nelegalnih privrednih (siva zona poslovanja) i/ili kriminalnih aktivnosti.",\r
+"Klijent koji je nedavno kupio nepokretnost, prodaje je za višestruko veću cijenu od kupovne, što ukazuje na povezana lica zbog fiktivnog transfera novca i skrivanja porijekla i raslojavanja.",\r
+"Klijent koji je poznat iz javnog života kupuje nekretnine u većim iznosima, čija vrijednost odstupa od njegovog pretpostavljenog imovnog stanja.",\r
+"Klijent koji kupuje nekretnine mlađe je životne dobi i vidljivo je da raspolaže luksuznim statusnim simbolima (skupocjeni automobili, motocikli, plovila, satovi i dr.).",\r
+"Klijent koji prema saznanjima ima izvore novca u inostranstvu ili van finansijskog sistema i želi da ugovori plaćanja u više manjih iznosa koristeći platne institucije za prenos novca.",\r
+"Klijent koji se interesuje za nekretninu, koju nije lično vidio, tu nekretninu kupuje preko posrednika (advokata, zastupnika, bliskih osoba i dr.), a postoje saznanja da klijent kupac obavlja razna poslovanja na ivici legalnosti (nezakonito).",\r
+"Klijent kupuje imovinu ili investira u nekretnine u kratkom vremenskom periodu i ne djeluje mnogo zainteresovan za lokaciju, stanje ili projektovane troškove popravke te imovine.",\r
+"Klijent kupuje imovinu, a naročito nekretnine, na neviđeno.",\r
+"Klijent kupuje polisu osiguranja za iznos koji nije srazmjeran prihodima klijenta.",\r
+"Klijent na uvid prilaže samo fotokopije ličnih isprava ili neodgovarajuće isprave.",\r
+"Klijent ne dostavlja računovodstvenu ispravu ili postoji sumnja u vjerodostojnost računovodstvene isprave da je istinita i da prikazuje poslovnu promjenu ili dostavljena računovodstvena isprava ne sadrži sve podatke potrebne za knjiženje u poslovnim knjigama, a klijent i dalje insistira da takva isprava bude proknjižena.",\r
+"Klijent ne pokazuje naročit interes za karakteristike nepokretnosti (kvalitet izrade, lokaciju, datum završetka i primopredaje), već po svaku cijenu želi da se izvrši usluga posredovanja prometa/zakupa nepokretnosti.",\r
+"The client does not exist.",\r
+"Klijent ne poznaje dobro svoj posao, iz čega se može zaključiti da ga uopšte ne obavlja ili ga obavlja u veoma ograničenom opsegu.",\r
+"Klijent ne želi da njegovo ime bude na bilo kojem dokumentu koji bi ga doveo u vezu sa datom poslovnom transakcijom.",\r
+"Klijent ne želi da se identifikuje u slučaju kupovine nekretnine gotovim novcem ili se identifikuje falsifikovanim podacima i ispravama.",\r
+"Klijent ne zna pouzdano gdje se nalazi njegova poslovna dokumentacija, uključujući i finansijsku, odnosno knjigovodstvenu dokumentaciju.",\r
+"Klijent nema zaposlenih ili nema poslovne prostorije što nije u skladu sa vrstom i obimom poslovanja.",\r
+"Klijent neuobičajeno dobro poznaje zakonske propise u vezi sa prijavljivanjem sumnjive transakcije, brzo potvrđuje posredniku da su novčana sredstva \\"čista\\" i da \\"nijesu oprana\\".",\r
+"No client selected.",\r
+"Klijent nudi novac, poklone, kao i druge neuobičajene pogodnosti kao protivuslugu za izvođenje očigledno neuobičajenog i sumnjivog posla.",\r
+"Klijent nudi visoku posredničku naknadu, sa ciljem potkupljivanja kako se ne bi preduzimale radnje i obaveze iz Zakona.",\r
+"Klijent obavlja djelatnost koja je u skladu sa Nacionalnom procjenom rizika od pranja novca i finansiranja terorizma označena kao visokorizična.",\r
+"Klijent obavlja transakcije u velikim iznosima koje odstupaju od uobičajenog poslovanja klijenta.",\r
+"Klijent ostvaruje značajne prilive sredstava od funkcionera, odnosno od člana uže porodice funkcionera ili bližeg saradnika funkcionera koji nijesu u skladu sa dostupnim podacima o prihodima funkcionera.",\r
+"Klijent plaća avans velikim iznosom gotovog novca, dok se ostatak finansira iz neuobičajenog izvora ili kreditne institucije iz oblasti u kojoj su male stope poreza na dobit ili u kojoj nema poreza na dobit (u daljem tekstu: ofšor destinacija).",\r
+"Klijent plaća za robu i usluge koje ne odgovaraju opisu njegove djelatnosti.",\r
+"Klijent pokazuje neočekivano veliko interesovanje za mehanizme i načine funkcionisanja sistema sprečavanja pranja novca i finansiranja terorizma.",\r
+"Klijent pokušava da dokaže svoj identitet na drugi način, a ne predajom lične isprave za identifikaciju.",\r
+"Klijent pokušava da se identifikuje sa ispravama koje nijesu lične isprave.",\r
+"Klijent pokušava uspostaviti dobre i prijateljske odnose sa zaposlenim kod posrednika, a prema javnim saznanjima potiče iz kriminalnog miljea.",\r
+"Klijent posluje sa neprofitnim ili humanitarnim organizacijama, za što ne postoji pravi ekonomski razlog.",\r
+"Klijent pregovara o obavljanju poslova po tržišnoj cijeni ili cijeni većoj od tražene, ali zahtijeva da u dokumentima bude navedena manja vrijednost, plaćajući razliku u cijeni \\"ispod tezge\\".",\r
+"The client collects a completed device (current: {0}). A device with a rejected quote is returned with the status \\"rejected\\".",\r
+"Klijent prijevremeno gotovinski otplaćuje kredit ili vrši povraćaj zajma ili pozajmice osnivača za likvidnost.",\r
+"Klijent prilaže samo kopije ličnih isprava ili pokušava da obavi identifikaciju sa drugim ispravama, koje nijesu lične isprave.",\r
+"Klijent prilikom uspostavljanja poslovnog odnosa izbjegava lično pojavljivanje ili uspostavlja poslovni odnos preko punomoćnika.",\r
+"Klijent prima zajmove i kredite, a novčana sredstva primljena po tom osnovu, odmah u istom ili sličnom iznosu, daje kao zajmove i kredite drugim licima ili ih koristi za osnivanje zavisnih pravnih lica.",\r
+"Klijent pruža sumnjive ili nejasne informacije.",\r
+"Klijent raspolaže imovinom velike vrijednosti (luksuzni automobili, plovila, stanovi, rezidencije i sl.) koja je izvan uobičajenih okvira poslovanja, odnosno ne može se povezati sa poslovanjem klijenta.",\r
+"Klijent samoinicijativno navodi na zaključak da su sredstva kojima raspolaže legalna.",\r
+"Klijent se izjašnjava da učestvuje u obavljanju nezakonitih poslova.",\r
+"Notify the client to collect the device",\r
+"Klijent se raspituje ili obavlja transakcije sa nekretninama za fizička i pravna lica, rezidente i nerezidente koji su iz ofšor destinacija ili za kompanije osnovane u ofšor destinacijama (u daljem tekstu: ofšor kompanija), kao i država poznatih po proizvodnji i/ili prometu narkotika, država u kojima se ne primjenjuju ili se nedovoljno primjenjuju mjere za sprečavanje i otkrivanje pranja novca i finansiranja terorizma i država sa tzv. crne liste, odnosno liste država za koje se sumnja da podstiču terorističke akte i finansiranje terorizma.",\r
+"Klijent se raspituje o neuobičajenim načinima plaćanja.",\r
+"Klijent se u sredstvima javnog informisanja dovodi u vezu sa terorizmom, finansiranjem terorizma, ekstremizmom, fundamentalizmom i vjerskim radikalizmom.",\r
+"Klijent traži da plaća u ratama kako bi izbjegao plaćanje iznosa gotovog novca koji podliježe izvještavanju u skladu sa Zakonom o sprečavanju pranja novca i finansiranja terorizma (u daljem tekstu: Zakon).",\r
+"Client is seeking advice",\r
+"The client is seeking advice (ZSPNFT Art. 66 para. 11) — {0}",\r
+"Klijent u posljednjem trenutku, pred realizaciju ugovora, mijenja ugovorne strane (dovodi novo lice i predstavlja ga kao fiktivno lice), ne pružajući objašnjenje za takvo postupanje, a poznat je po svojim nelegalnim aktivnostima.",\r
+"Klijent u suprotnosti sa poslovnom praksom traži da računovođa u svoje ime i za svoj račun obavi transakciju.",\r
+"Klijent u značajnoj mjeri posluje sa gotovim novcem iako to nije u skladu sa prirodom njegovog poslovanja.",\r
+"Klijent vrlo dobro poznaje pravila o obavještavanju o sumnjivim transakcijama i/ili klijent pokazuje neočekivano veliko interesovanje za prijavljivanje podataka po osnovu Zakona kao i za mehanizme i načine funkcionisanja sistema sprečavanja pranja novca i finansiranja terorizma.",\r
+"Klijent vrši dokapitalizaciju preduzeća bez ekonomski opravdanog razloga.",\r
+"Klijent vrši neuobičajene ili veoma složene transakcije, naročito krajem i početkom izvještajnog perioda ili vrši transakcije koje ne prati adekvatna dokumentacija.",\r
+"Klijent vrši neuobičajene transakcije, transakcije sa povezanim licima ili licima koja odstupaju od uobičajenih klijenata (plaćanje fizičkim licima, politički ili javno eksponiranim licima).",\r
+"Klijent vrši plaćanja za robu i usluge čiju je tržišnu vrijednost teško utvrditi.",\r
+"Klijent vrši transakcije u velikim iznosima koje uključuju poljoprivredna gazdinstva i privredne subjekte koji se bave trgovinom i otkupom sekundarnih sirovina, bez ekonomske opravdanosti.",\r
+"Klijent za kojeg postoji sumnja da je povezan sa terorističkim aktima i/ili se nalazi na konsolidovanoj listi Komiteta za sankcije na osnovu Rezolucije 1267 Savjeta bezbjednosti Ujedinjenih nacija, zainteresovan je za uspostavljanje poslovnih odnosa i ulaganje u nepokretnosti.",\r
+"Klijent zahtijeva da izvještaj o gotovinskoj transakciji ne bude sačinjen ili odbija da obavi transakciju nakon što sazna da je sačinjavanje izvještaja obavezno.",\r
+"Klijent zahtijeva da se transakcija izvrši hitno ili zahtijeva da se ona tretira kao povjerljiva.",\r
+"Klijent želi da kupi imovinu ili obavi posao u ime nekog drugog lica (poznanika ili srodnika, osim svog supružnika).",\r
+"Klijent želi da uvjeri računovođu da nije potrebno da popuni ili priloži neki od potrebnih dokumenata ili mu nije poznato gdje se čuva poslovna dokumentacija.",\r
+"Klijent zloupotrebljava otpis robe.",\r
+"Client: {0}",\r
+"Clients",\r
+"Clients and client groups (risk by client type)",\r
+"Clients with a retention period",\r
+"Klijentova knjigovodstvena dokumentacija je neažurirana, neadekvatna i/ili neuredna.",\r
+"Klijentova knjigovodstvena dokumentacija se često gubi, nestaje ili je uništena \\"višom silom\\".",\r
+"Klijentove lične isprave za identifikaciju su nove, odnosno nedavno izdate.",\r
+"Klijentovi neaktivni računi iznenada postaju aktivni i preko njih se vrše značajni transferi po obimu i učestalosti u odnosu na klijentov obim poslovanja.",\r
+"COMPLAINTS REGISTER",\r
+"Complaints register",\r
 "Posted on {0}.",\r
+"Credit notes (revenue reduction)",\r
+"A credit note (corrective invoice) is not entered as an expense. The credit note is entered through \\"New costing sheet (QR)\\" or manually in \\"Procurement and expenses\\".",\r
 "A credit note is not moved to expenses.",\r
+"CM {0}",\r
+"Kod klijenta je uočena pojava paralelne dokumentacije.",\r
+"Kod klijenta se primjećuju neuobičajeno veliki troškovi po osnovu plaćenih usluga u korist inostranih dobavljača.",\r
+"Exemption code (fiscal message)",\r
+"The exemption code is not in the fiscal service schema.",\r
+"Exemption code in the fiscal message (EX item, ExemptFromVAT group)",\r
+"For video-electronic identification a video and audio recording is kept (ZSPNFT Art. 117 para. 1 item 5); the recording path has not been entered.",\r
+"KIF column: \\"not subject\\" or \\"exempt\\".",\r
+"Sales invoice ledger column (KIF)",\r
+"Handed over to",\r
+"Consulting (advisory, legal, tax and accounting services)",\r
+"Foreign customer accounts",\r
+"Contact (address, telephone, e-mail)",\r
+"Contact (telephone, e-mail)",\r
+"Contact: {0}",\r
 "MONTH-END CLOSING CHECKLIST — {0}",\r
+"A copy of document {0} was created as draft {1}.{2}{3}",\r
+"Copy handed to the principal",\r
+"The copy of the sub-brokerage agreement was handed over after the three-day deadline ({0}).",\r
+"A copy of the sub-brokerage agreement is handed to the principal within three days (Art. 21 para. 4); the deadline expired on {0}",\r
+"Beneficiary",\r
+"KP, PRK, IR, IRN, MM, MMR",\r
+"KR",\r
+"Crypto-assets",\r
+"house",\r
 "customer {0}",\r
+"Customer is a natural person (consumer) — no recovery cost compensation",\r
+"Customer from the code list (optional)",\r
+"The customer paid the invoice amount in the foreign currency, and the bank credited EUR at its own rate. The payment closes the invoice, and the difference is posted as an exchange rate difference.",\r
+"The customer is a foreign taxpayer, but VAT has been charged on the invoice. The place of supply must be checked (Art. 17 para. 2).",\r
+"The customer has no recorded consent to electronic invoices (entered on the customer or when sending by e-mail).",\r
+"The customer has no recorded consent to receive electronic invoices. An invoice is delivered electronically with the customer's consent.",\r
+"The customer has no open overdue invoices for this reminder.",\r
+"Business customer",\r
+"Business customers and reminders",\r
+"The project customer does not exist.",\r
+"Customer with a country outside Montenegro entered",\r
+"Customer in code list (optional)",\r
+"Customers of {0} invoices have no recorded consent to electronic invoices.",\r
+"Foreign customers (2030), revenue 6030 / 6130",\r
+"For a business customer (PIB, not a natural person), recovery cost compensation is also charged per late invoice, without a reminder (Law on Payment Deadlines for Monetary Obligations, Art. 7). For a consumer, neither the compensation nor a reminder fee is charged (Consumer Protection Law, Art. 26).",\r
+"sale price",\r
+"The sale price or rent has not been entered.",\r
+"Sale price or rent",\r
+"Exchange rate",\r
+"Rate (manual)",\r
+"Rate (per 1 EUR)",\r
+"Exchange rate {0} ({1}).",\r
+"Exchange rate {0} for {1} was not fetched ({2}). Enter the rate manually: Settings → Foreign transactions and exchange rates → Exchange rate list.",\r
+"Exchange rate {0} for {1} is not in the exchange rate list and was not fetched: {2}",\r
+"Exchange rate {0} for {1}: {2} ({3}).",\r
+"CBCG rate",\r
+"The exchange rate has been deleted.",\r
+"The exchange rate has been saved.",\r
+"The exchange rate must be greater than zero (currency units per 1 EUR, e.g. 1,09680).",\r
+"The exchange rate must be greater than zero.",\r
+"Exchange rate on the liability date",\r
+"Exchange rate on inflow date",\r
+"The exchange rate was not deleted.",\r
+"The exchange rate has not been entered.",\r
+"Today's exchange rate is not in the exchange rate list; the copy carries the original's rate. Update the rate with the \\"Fetch rate\\" button.",\r
+"The exchange rate for this day is not in the exchange rate list: \\"Fetch rate\\" or enter it manually.",\r
+"Exchange rate list",\r
+"Exchange rate difference",\r
+"Exchange rate difference {0} on invoice {1} — {2}",\r
+"Exchange rate difference when closing invoices",\r
+"KVan",\r
 "la",\r
+"Person at the reporting entity",\r
+"Person who viewed the property",\r
+"Person who received the order",\r
+"The person to whom the money was handed over has not been entered.",\r
+"The person from whom the money was received has not been entered.",\r
+"Identity document",\r
+"The identity document expires on {0}",\r
+"The identity document expired on {0}. A valid document is required.",\r
+"Client identity documents expiring or expired: {0}",\r
+"the client's personal data is deleted; a record with the deletion date remains",\r
+"The client's personal data was deleted",\r
+"The client's personal data was deleted on {0} A new entry is not possible.",\r
+"The client's personal data was deleted on {0} after the retention period expired; the record cannot be changed.",\r
+"The client's personal data has been deleted; documentation cannot be added.",\r
+"The client's personal data has been deleted; the entry cannot be added.",\r
+"Personal data past the retention period: {0}",\r
+"personal data deleted",\r
+"Personal data has been deleted (records: {0} entries).{1}",\r
+"Personal data was already deleted on {0}",\r
+"The personal data in the training records has been deleted.",\r
+"in person",\r
+"in person (orally at the point of sale)",\r
+"Title deed",\r
+"Indicator list",\r
+"The indicator list has not been compiled (Indicator list tab).",\r
+"The indicator list has not been compiled.",\r
+"Reporting entity's indicator list not compiled",\r
+"Reporting entity's indicator list: indicators from the Rulebook on the indicator list (MUP, \\"Sl. list CG\\" 29/24) that the reporting entity applies, and its own indicators (Art. 83 — the list must be in the reporting entity's documentation). On the list:",\r
+"List valid on that day",\r
+"List published on that day",\r
+"List of territories with tax sovereignty published by the Ministry of Finance (ZPDPL Art. 29 para. 10) — ISO codes separated by commas",\r
+"Property location (place, street and number, cadastral parcel and cadastral municipality)",\r
+"Location: {0}",\r
 "The margin has been applied. Selling prices have been recalculated. {0}",\r
+"registration number / JMB",\r
+"Registration number / JMB",\r
+"The legal entity's registration number has not been entered (ZSPNFT Art. 117 para. 1 item 1).",\r
+"The entrepreneur's registration number has not been entered (ZSPNFT Art. 117 para. 1 item 2).",\r
+"ME",\r
 "Menstrual leave",\r
 "Menstrual leave (Art. 36a Health Insurance Law, up to 2 days per month)",\r
+"Client due diligence and monitoring measures",\r
+"Measures, actions and procedures for risk mitigation",\r
+"Month {0}/{1} is locked. The adjustment cannot be cancelled.",\r
+"Month {0}/{1} is locked. The adjustment is entered in an open month.",\r
+"Month {0}/{1} is locked. The write-off is recorded in an open month.",\r
+"Month {0}/{1} is locked. The calculation status cannot be changed.",\r
 "The month is ready for submission",\r
 "The month was not unlocked: a reason for unlocking is required.",\r
+"The VAT return month to which an invoice with a supply period belongs.",\r
 "Month locked (books submitted)",\r
+"months",\r
+"Monthly (successive) invoices are individual standard invoices (INVOICE) with a supply period.",\r
+"monthly",\r
+"MKD",\r
 "MO",\r
+"MUP 29/24",\r
+"n.Status IN ({0})",\r
 "On the holiday, the following employees work according to the shift schedule: {0}.",\r
+"The deposit under agreement {0} holds {1} EUR; more than was received cannot be handed over.",\r
+"on another computer",\r
+"Na fakturama dobavljača upisan je tekući račun fizičkog lica kao račun na koji treba izvršiti uplatu po osnovu fakturisane usluge/robe.",\r
+"On the invoice:",\r
+"VAT is not charged on default interest.",\r
+"The method (account or cash) has not been selected.",\r
+"identification method",\r
+"Identification method",\r
+"The client identification method has not been selected (ZSPNFT Art. 117 para. 1 item 4).",\r
+"The identification method is not on the list.",\r
+"Execution method",\r
+"Method by which the customer gave consent",\r
+"The payment method has already been entered.",\r
+"Fee payment method",\r
+"The payment method is not on the list.",\r
+"Submission method",\r
+"The method of submitting the complaint has not been selected.",\r
+"Consent method",\r
+"The client's consent method has not been selected.",\r
+"Consent method: written statement, e-mail or contract.",\r
+"The draft fee invoice has been created (Issued documents).",\r
+"The draft fee invoice is created in Issued documents; the invoice number goes into data item 14 of the records once the invoice is issued.",\r
+"Draft invoice for the brokerage fee (VAT 21 % when the property is in Montenegro — VAT Law, Art. 17a)",\r
+"Draft invoice with the order items; the work specification is attached to the invoice",\r
+"The draft calculation has been deleted.",\r
+"invoice drafts are created on the Contracts screen",\r
+"Supervisory authority",\r
+"at most five years after the basic period expires (\\"Retain until\\" field)",\r
+"Maximum days",\r
+"Maximum days overdue",\r
+"Fee excl. VAT",\r
+"The fee is invoiced {0}, {1}, on day {2} of the month. The invoice states the supply period.",\r
+"Recovery cost compensation (€)",\r
+"Recovery cost compensation (Art. 7)",\r
+"Recovery cost compensation (Law on Payment Deadlines for Monetary Obligations, Art. 7)",\r
+"The recovery cost compensation is at least 40 € (Law on Payment Deadlines for Monetary Obligations, Art. 7).",\r
+"Recovery cost compensation is calculated per late invoice, without a reminder (Law on Payment Deadlines for Monetary Obligations, \\"Sl. list CG\\" no. 113/24, Art. 7).",\r
+"Brokerage fee",\r
+"Brokerage fee — {0}, {1}{2}; brokerage agreement {3} of {4}",\r
+"Brokerage fee: {0}; payment method: {1}; payment deadline: {2}. The broker becomes entitled to the fee at the moment the legal transaction is concluded and does not request advance payment of the fee (Art. 27 para. 1–2). If within nine months after this agreement ends the principal concludes with a third party a legal transaction resulting from the broker's actions before the agreement ended, the broker is entitled to the fee (Art. 27 para. 6).",\r
+"Order {0} has been invoiced (invoice {1}) and cannot be deleted.",\r
+"Order {0} has been invoiced (invoice {1}); its items cannot be changed.",\r
+"Order {0} has been invoiced; only the collection can be changed.",\r
+"Order {0} has already been invoiced (invoice {1}).",\r
+"Order {0} is closed ({1}); its items cannot be changed.",\r
+"The order contains parts from the code list, but no outlet is selected: stock is kept per outlet, so the outlet must be entered on the order.",\r
+"The order is in progress.",\r
+"The order has been closed: the quote was rejected.",\r
+"The order has been completed.",\r
+"The order has no items for work performed, parts or material.",\r
+"The order has no items with an amount to invoice.",\r
+"The order has no items: consent is given for a quote with work, parts and material.",\r
 "VAT journal entry exists",\r
+"Expense entry: credit the cash desk (2430) for cash, or the current account (2410) for card.",\r
+"Principal",\r
+"The principal agrees that the broker may transfer the rights and obligations under this agreement to another broker by a sub-brokerage agreement (Art. 21){0}. A copy of the sub-brokerage agreement is handed to the principal within three days of its conclusion.",\r
+"The principal has not consented to sub-brokerage.",\r
+"The principal is not in the client register (ZSPNFT). A legal transaction of {0} EUR requires know-your-client measures{1}. The client is entered in Compliance (ZSPNFT) → Clients and selected on the brokerage agreement.",\r
+"The principal undertakes to inform the broker of all circumstances relevant to the brokerage, make the original documents on the property rights available for inspection and disclose registered and unregistered encumbrances, enable viewing of the property, pay the agreed fee upon conclusion of the legal transaction and inform the broker of changes within three business days (Art. 28).",\r
+"The principal is specifically warned of the meaning and consequences of the exclusive brokerage clause (Art. 31 para. 3); the warning is in the printed agreement.",\r
+"Collected in period",\r
+"Collection in foreign currency: negative exchange rate difference",\r
+"Collection in foreign currency: positive exchange rate difference",\r
+"Note (internal)",\r
+"Note (required for manual entry)",\r
+"The note can have at most 200 characters (Note field of the fiscal message).",\r
+"Note on the invoice",\r
+"Create draft invoice",\r
+"Create draft invoice (",\r
+"Create draft invoices (",\r
 "Create a bank rule from this item (description or payee account → type and partner)",\r
+"Create the invoice",\r
+"Draft invoice {0} has been created. The specification of work performed is attached to the invoice.",\r
+"Invoices created",\r
+"Draft invoices created: {0} ({1}).",\r
+"Draft invoices created: {0}{1}.",\r
+"Orders for temporary suspension of a transaction",\r
+"Date of change",\r
+"Continue",\r
+"The client name has not been entered.",\r
+"Name of the supervisory authority",\r
+"Training title",\r
+"Name of the municipality where the property is located",\r
 "Rule name",\r
+"Project name",\r
+"The project name has not been entered.",\r
 "Name of goods",\r
 "Name in description",\r
+"Service name *",\r
+"The service name is required.",\r
+"Name, or first and last name",\r
 "not applicable",\r
+"Not subject (seminars, engineering and architectural services, brokerage, databases and other services outside Art. 29)",\r
+"not subject (ZPDPL Art. 29b item 4)",\r
+"Not subject to VAT",\r
+"Not included in PR-PDV",\r
+"Uninvoiced hours",\r
+"UNINVOICED HOURS BY CUSTOMER AND PROJECT",\r
+"Uninvoiced",\r
+"negative",\r
+"Negative exchange rate difference {0} — {1}",\r
+"Negative exchange rate difference on invoice {0}",\r
 "invalid segment",\r
 "invalid request",\r
 "invalid length",\r
+"Some of the selected time entries do not exist.",\r
+"There are no active projects.",\r
+"There are no periods due for invoicing.",\r
+"There are no recorded clients. A client is entered before a business relationship is established or before a transaction (ZSPNFT Art. 117).",\r
+"There are no recorded properties or brokerage agreements.",\r
+"There are no recorded viewings.",\r
+"There are no recorded training sessions.",\r
+"There are no recorded complaints.",\r
+"There are no recorded projects.",\r
+"There are no recorded work orders.",\r
+"There are no recorded contracts.",\r
 "file not found",\r
+"There are no invoices created from timesheets.",\r
+"There are no invoices created from contracts.",\r
 "none",\r
+"There are no payments to non-residents in the year.",\r
+"There are no issued invoices in the selected period.",\r
+"There are no clients with a running retention period (business relationships are ongoing).",\r
+"There are no customers with overdue invoices for this reminder level.",\r
 "no VAT calculation entry for the month",\r
+"There are no uninvoiced hours.",\r
+"There are no properties for the selected filter.",\r
+"This customer has no unallocated payments.",\r
 "no payroll for the month",\r
+"no payroll",\r
+"There is no withholding tax calculated in the year.",\r
+"There is no data for the selected period.",\r
 "No matches",\r
+"There are no sent or saved reminders.",\r
 "No rules. A rule is created with the \\"New rule\\" button or from an item on the \\"Transactions\\" tab (\\"rule\\" button).",\r
+"There are no complaints for the selected filter.",\r
+"There are no reports.",\r
+"There are no projects for the selected filter.",\r
+"There are no work orders for the selected filter.",\r
 "no employees",\r
+"There is no available amount (the payment or the calculation is already closed).",\r
+"There are no saved interest calculations.",\r
 "no transactions in the month",\r
+"There are no brokerage agreements.",\r
+"There are no contracts for the selected filter.",\r
 "no incoming invoices in the month",\r
+"There are no default interest rates entered.",\r
+"There are no deposit entries.",\r
+"There are no time entries for the selected period.",\r
+"There are no entries in these records.",\r
+"There are no entries for the selected year.",\r
 "no imported statements",\r
+"Nenamjensko podizanje novčanih sredstava u strukturiranim iznosima, nakon što su novčana sredstva prenijeta.",\r
+"The uncollected part of the calculation is posted as a receivables write-off expense as of today",\r
+"Uncollectible receivable: write-off of the remaining receivable (accountant's action)",\r
+"Property",\r
+"Property {0}",\r
+"The property has a brokerage agreement and cannot be deleted. Withdraw the property from the offer by changing its status.",\r
+"The property has been updated.",\r
+"The property has been deleted.",\r
+"The property has been entered under code {0}.",\r
+"The property does not exist.",\r
+"No property selected.",\r
+"Properties",\r
+"Properties without a valid agreement:",\r
+"Properties without a valid agreement: {0}",\r
+"Unknown export.",\r
+"Unknown reminder delivery method.",\r
+"Unknown work order status.",\r
 "unknown message",\r
+"Customer's unallocated payments",\r
+"Unallocated",\r
+"Off-market",\r
+"Unusual",\r
+"Neuobičajena profitabilnost klijenta u poređenju sa drugim pravnim licima iz iste privredne grane.",\r
+"Unpaid withholding tax:",\r
+"It has not been marked whether the client is a resident or non-resident (ZSPNFT Art. 117 para. 1 {0}).",\r
+"Not fetched: {0} ({1})",\r
+"not entered for",\r
+"Not entered: {0}.",\r
+"not paid",\r
 "not locked",\r
+"not concluded — brokerage agreement expired {0}",\r
+"not concluded — brokerage agreement terminated {0}",\r
+"not concluded (brokerage in progress)",\r
+"No time entry selected.",\r
 "No pending item was changed.",\r
 "the saving thread is not responding",\r
 "the saving thread did not return the database",\r
 "saving thread: {0}",\r
 "the PDF thread failed",\r
+"The reminder level is 1, 2 or 3.",\r
+"risk level",\r
+"Risk level",\r
+"The risk level is not on the list.",\r
+"The lower treaty rate applies only with a certificate of residence certified by the competent authority of the other country (country, number and date of the certificate).",\r
+"Low",\r
+"NOK",\r
+"The new validity date must be after the current one.",\r
+"New client",\r
+"New viewing",\r
+"New complaint",\r
+"New work order",\r
+"New brokerage agreement",\r
+"New deposit entry",\r
+"New entry: {0}",\r
+"New property",\r
+"new payment (entered now)",\r
+"New service",\r
+"Principals' money (deposit, price) in the broker's deposit account is neither income nor money of the company. Total balance:",\r
+"Principal's money received into deposit",\r
+"Money handed over from deposit",\r
+"New agreement expiry date",\r
+"Novi ili budući klijent je poznat kao lice za koje postoje podaci da je uključen u vršenje nelegalnih aktivnosti ili je lice poznato po kriminalnim aktivnostima.",\r
 "New suggestion: {0} ({1}).",\r
+"New project",\r
+"New contract",\r
 "New bank rule",\r
+"e.g. 10,65",\r
+"e.g. 2,65",\r
+"e.g. Online shop development",\r
+"e.g. City Centre Office",\r
+"e.g. rate from the CBCG list, printed list",\r
+"e.g. Market 1_00015, 2026061400002, FA-2026-0004, F8471C7C…",\r
 "e.g. Bank fee",\r
 "e.g. account maintenance fee",\r
+"e.g. CBCG decision, \\"Sl. list CG\\" 01/27",\r
+"e.g. information system maintenance",\r
+"e.g. P 123/26",\r
+"e.g. charger, bag",\r
+"e.g. electricity bill entered as goods",\r
+"e.g. Treaty with Germany, Art. 12",\r
+"e.g. Gorenje W2 washing machine",\r
+"Records numbering: no free sequence number found.",\r
+"Agreement numbering: no free number found.",\r
+"Numbered register for the year (all pages numbered)",\r
+"Numbered book: all pages numbered, Registar posrednika entry number, place for signature",\r
 "All employees have been informed of this Decision; their salary and the taxes and contributions on it will be calculated, i.e. increased by {0} % under the employment contract for work {1} ({2}).",\r
+"Withholding tax liabilities — non-residents",\r
+"Viewings",\r
+"PROPERTY VIEWINGS",\r
+"The viewing has been deleted.",\r
+"The viewing has been recorded.",\r
+"The viewing does not exist.",\r
+"Property viewing",\r
+"Scope of rights",\r
 "The release of the new version has no publisher signature. The update was not downloaded.",\r
 "The release of the new version did not pass the publisher signature check. The update was not downloaded.",\r
 "The published version {0} is older than the previously published version {1}. The update was not downloaded.",\r
+"Outlet (optional)",\r
+"An outlet is the company's business premises: office, repair shop, showroom.",\r
+"An outlet is not required for a service company. It is entered when the company has business premises with a cash register (fiscal receipt) or keeps records per outlet.",\r
+"calculation {0}",\r
+"Calculation {0} — payments",\r
+"Calculation {0} has been issued.",\r
+"Calculation {0} has been written off.",\r
+"Calculation {0} has been cancelled.",\r
+"Calculation {0} has not been issued. A payment can be linked only to an issued calculation.",\r
+"Calculate up to date",\r
+"The calculation has been paid in full. No write-off is needed.",\r
+"Interest calculation",\r
+"Interest calculation {0} — {1}",\r
+"The interest calculation has been saved as a draft.",\r
+"The calculation does not exist.",\r
+"The withholding tax calculation has been deleted.",\r
+"The withholding tax calculation has been saved. {0}",\r
+"The withholding tax calculation does not exist.",\r
+"Pro rata calculation for {0} days of the period.",\r
+"A calculation with status \\"{0}\\" cannot change to status \\"{1}\\".",\r
+"Default interest calculation",\r
+"Default interest calculation {0} — {1}",\r
+"Default interest calculation: recovery cost compensation (B2B, 40 €)",\r
+"Default interest calculation: receivable from customer for interest and compensation (by customer)",\r
+"Default interest calculation: interest income",\r
+"Tax calculated",\r
 "Processing continues, in queue: {0}.",\r
 "Form: {0}",\r
 "Statement of reasons",\r
@@ -133,44 +1252,376 @@ const e=`[\r
 "VAT calculation posted in the general ledger",\r
 "Payroll and IOPPD",\r
 "Payroll locked (IOPPD)",\r
+"Explanation: why the data was not submitted before execution",\r
+"Deleted",\r
+"Delete the name and position of the employee in training record \\"{0}\\"? Deletion is permanent.",\r
+"Delete exchange rate {0} for {1}?",\r
+"Delete the personal data of client {0}, the beneficial owners, the documentation list and the personal data in the records? Deletion is permanent.",\r
+"Delete draft calculation {0}?",\r
+"Delete property {0}? Deletion is permanent.",\r
+"Delete the viewing of {0} ({1})? Deletion is permanent.",\r
+"Delete the withholding tax calculation?",\r
+"Delete reminder {0}?",\r
+"Delete the lawsuit details?",\r
 "Delete the rule \\"{0}\\"? Items previously classified by the rule remain as they are.",\r
+"Delete complaint {0}/{1}? Deletion is permanent.",\r
+"Delete project {0}?",\r
 "Delete invoice {0} ({1}, {2} EUR)? The debt to the supplier is reduced by this amount. Deletion is permanent.",\r
+"Delete work order {0}? Deletion is permanent.",\r
+"Delete the rate for {0}? Interest cannot be calculated for that half-year until the rate is entered again.",\r
+"Delete agreement {0} with its viewings and deposit? Deletion is permanent.",\r
+"Delete contract {0}?",\r
+"Delete entry {0} ({1} h, {2})?",\r
+"Delete the deposit entry of {0} EUR ({1}, {2})? Deletion is permanent.",\r
+"Delete personal data",\r
 "Delete invoice",\r
+"Training",\r
+"of {0} h budget",\r
+"from date",\r
+"Received from",\r
+"The five-year retention period runs from the end of the relationship (ZSPNFT Art. 127 para. 1)",\r
+"Of which after due date",\r
+"Only a quote or a price increase can be rejected (current: {0}).",\r
+"Odbijanje klijenta da da podatke koji se u praksi uobičajeno prikupljaju (lični podaci, adresa, zanimanje) i/ili postoje nedosljednosti u priloženoj dokumentaciji (datumi, potpisi i drugi podaci).",\r
+"Refusal to establish a relationship or carry out a transaction",\r
+"was rejected.",\r
+"Reply",\r
+"reply by {0}",\r
+"Trader's reply",\r
+"replied {0}{1}",\r
+"CBCG decision, \\"Sl. list CG\\" 01/24",\r
+"CBCG decision, \\"Sl. list CG\\" 01/25",\r
+"CBCG decision, \\"Sl. list CG\\" 05/26",\r
+"CBCG decision, \\"Sl. list CG\\" 65/24",\r
+"CBCG decision, \\"Sl. list CG\\" 68/25",\r
+"CBCG decision, \\"Sl. list CG\\" 95/26",\r
 "The Decision is publicly displayed at the entrance of the premises, for the purposes of the inspection services.",\r
+"Relationship from",\r
+"relationship ended",\r
+"Relationship ended",\r
+"Relationship established",\r
+"Appointed on",\r
+"The advertisement must contain the {0} of the property (Law on Brokerage, Art. 25 para. 1). Enter the {1} on the property.",\r
+"The advertisement contains the broker's name and the Registar posrednika entry number (Law on Brokerage, Art. 25 para. 1). The number is entered on the Broker details tab.",\r
+"advertising not allowed",\r
+"OK-{0}-{1}",\r
 "Then enter",\r
+"OP-{0}-{1}",\r
+"OP-{0}-%",\r
+"The indicator description has not been entered.",\r
+"Fault description or client's request",\r
+"The fault description or the client's request has not been entered.",\r
+"Complaint description",\r
+"The complaint description has not been entered.",\r
+"Work description",\r
+"Work description, part or material",\r
 "Description contains (separate several conditions with \\";\\")",\r
 "description contains \\"{0}\\"",\r
+"Request description",\r
+"The description of the client's request has not been entered.",\r
+"Payment reminder",\r
+"WARNING",\r
+"The reminder has been deleted.",\r
+"The reminder was delivered by post or in person",\r
+"A reminder must have a customer.",\r
+"The reminder does not exist.",\r
+"Final reminder before legal action",\r
+"FINAL REMINDER BEFORE LEGAL ACTION",\r
+"No fee is charged for a reminder. The overdue days for the proposal are set in Settings → Default interest and reminders.",\r
+"Payment reminders",\r
+"Equipment",\r
+"Accessories handed over with the device",\r
+"General indicators",\r
+"The broker's general terms of business form an integral part of this agreement (Art. 23). The principal is not obliged to enter into negotiations or conclude a legal transaction with a person found by the broker (Art. 29).",\r
+"The broker's general terms of business form an integral part of this agreement; the principal has been specifically informed of their content and binding nature (Art. 23).",\r
+"municipality {0}",\r
+"The municipality in which the property is located has not been selected.",\r
+"Organiser",\r
+"The sum insured per claim is less than 20.000 € (Law on Brokerage, Art. 8).",\r
+"The sum insured for all claims in a year is less than 60.000 € (Law on Brokerage, Art. 8).",\r
+"Professional liability insurance",\r
+"Broker's professional liability insurance expires",\r
+"Exempt supply",\r
+"Founder",\r
+"The basis \\"Supply outside Montenegro\\" (Art. 17) has been selected for a customer from Montenegro. The place of supply must be checked.",\r
+"Basis (earnest money, part of price, rent…)",\r
+"Art. 17 basis for a natural person: the place of supply of a service to a natural person is, as a rule, in Montenegro (Art. 17 para. 5).",\r
+"PEP basis",\r
+"Basis of acquisition",\r
+"Basis for 0 % VAT",\r
+"The basis for 0 % VAT is unknown.",\r
+"Basis for items with 0 % VAT (printed on the invoice)",\r
+"remains in the records; the cancellation is entered as a new entry with a reason.",\r
+"Other reporting entities under item 13 (forfaiting, construction, payment instruments — indents 1, 6, 7)",\r
+"The termination is recorded in the brokerage records; the entry is permanent. The nine-month period for the right to a fee runs from the termination date (Art. 27 para. 6). A terminated agreement cannot be extended.",\r
+"Termination of agreement",\r
+"The termination of the agreement has been recorded.",\r
+"Termination of brokerage agreement",\r
+"Notice period (days)",\r
+"The notice period (days) is not valid.",\r
+"notice period {0} days, {1} {2}",\r
+"The notice period is {0} days.",\r
 "Unlockings",\r
 "Unlockings (reason)",\r
+"Write-off of uncollected interest and compensation {0}",\r
+"Write-off of interest calculation {0} — {1}",\r
+"written off {0}",\r
+"Write off the uncollected part of calculation {0} ({1} EUR) as of today?",\r
+"Write off",\r
 "open company",\r
+"Open and overdue",\r
 "This computer is not the main one: the margin change stays only on it and is not transferred by the exchange (the next snapshot of the main computer will overwrite it). Margins are changed on the main computer.",\r
 "this device",\r
+"these lines",\r
 "These invoices are included in the supplier balance but not in the purchase ledger, the VAT return or the trade book (the costing sheet was deleted, the invoice remained). A decision is required: re-enter the costing sheet or delete the invoice.",\r
+"Authorised person and training",\r
+"Authorised person and deputy",\r
+"Authorised person and deputy not appointed",\r
+"The authorised person and deputy have been saved.",\r
+"The authorised person has not been entered (ZSPNFT Art. 14).",\r
+"Authorised person, deputy, professional training of employees",\r
+"this line",\r
+"Code {0} already exists.",\r
+"ISO country code (e.g. DE, USA, IRL)",\r
+"ISO code: ME, RS, DE …",\r
+"Contract code. The calculation and IOPPD code are the same; the standardised costs of a copyright contract are checked with the accountant (ZPDFL Art. 20 para. 2).",\r
+"Package \\"{0}\\" is not enabled for the company. Existing records are available for viewing and export (About the program → Export of special records); new entries are not possible.",\r
+"The package is enabled.",\r
+"The package is not enabled: records are available for viewing and export only.",\r
+"Parcel",\r
 "The partner was not recognised and is selected manually.",\r
+"flat fee",\r
 "Daily takings",\r
 "Daily takings ±",\r
+"The records PDF has been created: {0}",\r
+"The register PDF has been created: {0}",\r
+"The agreement PDF has been created: {0}",\r
+"PDO",\r
+"VAT {0} % {1} (tax base {2})",\r
+"VAT {0} % −{1}",\r
 "VAT checks (takings by rate, input rates)",\r
+"VAT month {0}/{1} is locked.",\r
+"VAT liability",\r
+"The VAT liability for an invoice from a contract arises on {0} (last day of the supply period) and belongs to locked month {1}. It can be issued after that month is unlocked.",\r
 "VAT return (PR-PDV)",\r
 "VAT: {0}",\r
+"Pep",\r
+"PEP",\r
+"Period {0} has already been invoiced.",\r
+"period {0}–{1} of contract {2} was invoiced with invoice {3}",\r
+"The period is not in the contract's invoicing schedule.",\r
+"The supply period of an invoice from a contract is set by the contract and cannot be changed. An invoice for another period is created on the Contracts screen.",\r
+"The supply period identifies the invoiced contract period and cannot be changed on the invoice.",\r
+"Periods from",\r
+"Contract periods",\r
+"periodic invoicing",\r
+"five years from the end of the business relationship, or from the occasional transaction carried out or refused",\r
 "Tax ID in description",\r
 "TIN: {0}{1}",\r
+"The PIN is not valid.",\r
+"PIN protection",\r
+"written statement",\r
+"written consent by e-mail or message",\r
+"written consent delivered in person",\r
+"in writing (by post or delivered in person)",\r
+"Plaćanje obaveza klijent učestalo vrši putem obveznica.",\r
+"Paid in cash.",\r
+"Paid by card.",\r
+"Invoicing schedule",\r
 "Employee payroll: monthly calculation and IOPPD",\r
 "payments were not posted automatically: the payee account is not among the supplier's known accounts —",\r
 "The payment of {0} EUR is greater than the open debt to the supplier ({1} EUR); the difference of {2} EUR remains a prepayment.",\r
+"PLN",\r
+"After the period expires",\r
+"after the retention period expired (ZSPNFT Art. 127 para. 5). The record cannot be changed.",\r
+"On expiry the contract is renewed for the same period; invoicing continues",\r
+"By client",\r
+"Per period incl. VAT",\r
+"Per period incl. VAT:",\r
+"By project",\r
+"by project and hourly rate",\r
+"By contract",\r
+"Under contract {0}{1}: {2}.{3}",\r
+"Invoices have been created under the contract. Deletion is not possible; the contract can be marked as terminated.",\r
+"by time entry",\r
+"By service",\r
 "during the usual working hours",\r
+"Start",\r
+"Start of business",\r
+"Initial list: countries for which FATF calls for action; supplemented according to the list published by FOJ",\r
+"Start work",\r
+"Data submitted to FOJ",\r
+"Data and records under ZSPNFT are kept for five years from the end of the business relationship or from the transaction carried out (Art. 127).",\r
+"Data from the title deed (property right, basis of acquisition, annotations, age of the building)",\r
+"The client data has been updated.",\r
+"Client and transaction data (ZSPNFT)",\r
+"Client data, transactions, documentation and reports",\r
+"Training data is kept for four years (ZSPNFT Art. 127 para. 4); deletion is possible from {0}",\r
+"The transaction data has not been entered (ZSPNFT Art. 117 para. 1 item 7).",\r
+"Transaction data must be submitted to FOJ by {0} (ZSPNFT Art. 66).",\r
 "The data on valid versions did not pass the publisher signature check. The update was not downloaded.",\r
 "The data on valid versions has expired, so updates cannot be verified at the moment. The check is repeated automatically.",\r
+"Broker details",\r
+"The broker details have been saved.",\r
+"Data is kept for five years (ZSPNFT Art. 127 para. 1{0}); deletion is possible from {1}",\r
+"Data is submitted electronically through the application of the financial intelligence unit, with a qualified electronic signature (ZSPNFT Art. 66 para. 13). This overview is used for data entry and remains in the reporting entity's documentation. Records: {0} ({1}).",\r
+"The data is submitted to FOJ by {0} ({1}).",\r
+"Data is submitted to FOJ before the transaction is carried out, together with the deadline within which the transaction is to be carried out. When this is not possible — no later than the next business day after execution, with an explanation.",\r
+"The data has already been deleted.",\r
+"The withholding tax settings have been saved.",\r
+"The setting has been saved.",\r
+"Default hourly rate for new time entries, excl. VAT",\r
+"Reminder for uncollected device (days)",\r
 "Match {0} of {1}",\r
+"Single entry",\r
+"Attempted transaction",\r
+"policy {0}",\r
+"Policy valid until",\r
+"Politically exposed person",\r
+"Politically exposed person: the risk level is not \\"high\\" (enhanced measures, ZSPNFT Art. 13).",\r
+"Politically exposed person: the basis is required",\r
+"Fields",\r
+"PR-PDV field",\r
+"PR-PDV field: not included, 13 or 14.",\r
+"agricultural land",\r
+"Half-year",\r
+"entry cancelled (error in the register)",\r
+"Cancel adjustment",\r
+"Cancel the VAT adjustment (e.g. the receivable has been collected)?",\r
 "Undo the posting and recognise the item again? The payment to the supplier is deleted and the transaction returns to \\"pending\\" with a new partner suggestion.",\r
 "Re-entry: scan the invoice QR code again (the invoice is linked to the new costing sheet). Deletion: the \\"Delete invoice\\" button, on the main computer; costing sheets and books are not changed.",\r
+"The quote has items with a VAT rate for which an advance invoice is not issued (advance: 21, 15 or 7 %). The advance is entered on the Advances and credit notes screen.",\r
+"quote issued",\r
+"The quote {0} {1} and mark the quote as accepted?",\r
+"The quote has been issued: {0} €{1}",\r
+"The quote has been cancelled.",\r
+"The quote has no customer. An advance invoice is issued to a customer.",\r
+"The quote has no items: enter work, parts and material with prices.",\r
+"Quote accepted {0}{1}.",\r
+"A quote is issued for a received order (current: {0}). For additional work after consent, a new consent is entered.",\r
+"A quote is issued for a received work order or for a work order awaiting consent to a price increase (now: {0}). For additional work after consent, a new consent is recorded.",\r
 "Tax books: closing checklist, locking, changes after closing",\r
 "Tax books: VAT return for the month",\r
 "TAXPAYER: {0}",\r
+"Withholding tax",\r
+"WITHHOLDING TAX — PAYMENTS TO NON-RESIDENTS",\r
+"Withholding tax — edit calculation",\r
+"Withholding tax — non-resident",\r
+"Withholding tax — non-residents",\r
+"Withholding tax {0} % — {1} ({2})",\r
+"Withholding tax {0} EUR ({1} % on gross {2} EUR); payment to recipient {3} EUR. Basis: {4}.",\r
+"Withholding tax from these records is calculated on payments to non-residents (country outside Montenegro).",\r
+"Withholding tax on payments to non-residents (ZPDPL Art. 29): tax liability; the supplier balance is reduced by the tax",\r
+"Withholding tax on a payment to a non-resident legal entity (ZPDPL Art. 29); calculated on the gross amount, date = invoice date (changed in the calculation)",\r
+"Withholding tax on a payment to a non-resident (ZPDPL Art. 29)",\r
+"Withholding tax has not been calculated: {0}",\r
+"Withholding tax is calculated and paid at the time of payment. The report on withholding tax paid (IOPPO) for",\r
+"Withholding tax is calculated on the gross payment amount and paid at the time of payment. The recipient receives the amount reduced by the tax.",\r
+"The deal was concluded more than nine months after the agreement ended ({0}); there is no right to a fee (Law on Brokerage, Art. 27 para. 6).",\r
+"The deal was concluded within nine months after the agreement ended (until {0}); the right to a fee exists if the deal resulted from the broker's actions before the agreement ended (Art. 27 para. 6).",\r
+"The deal has been concluded; the agreement ended with the conclusion of the legal transaction.",\r
+"deal concluded",\r
+"Deal concluded",\r
+"Special records",\r
+"Special records are determined by the company's license.",\r
+"Special license packages. Visible when the company's license includes them; data is not deleted when the package is not in the license.",\r
+"A sent reminder cannot be deleted (it remains in the customer's history).",\r
+"Invoices sent: {0}.{1}",\r
+"Sent by post",\r
+"After the eight-day deadline: {0}.",\r
+"Last reminder",\r
 "Last page",\r
+"last payroll {0}",\r
+"Business card of the customer company. Payment with a personal payment card is a cash payment and goes through the cash register.",\r
+"Poslovne transakcije klijenta nijesu u skladu sa njegovim prihodima i imovinom.",\r
+"Business relationship",\r
+"Poslovni odnos ili transakcija uključuje neprofitne ili humanitarne organizacije za šta ne postoji pravi ekonomski razlog.",\r
+"The business relationship is ongoing; the retention period starts when the relationship ends (ZSPNFT Art. 127 para. 1).",\r
+"business premises",\r
+"Brokers in real estate sales and leases",\r
+"The brokerage fee for a property in Montenegro is a supply in Montenegro and is subject to VAT even when the principal is a foreign person (VAT Law, Art. 17a para. 1). The basis \\"supply outside Montenegro\\" (Art. 17) does not apply.",\r
+"Brokerage fee, invoice issued and invoice number",\r
+"Posrednik ima saznanja da je klijent bio kažnjavan za neka krivična djela.",\r
+"The broker undertakes to seek and bring into contact with the principal a person for the purpose of concluding a legal transaction, inspect the ownership documents and warn the principal of registered rights, encumbrances, pre-emption rights and restrictions on transfer, present the property, enable viewing of the property, mediate in negotiations and inform the principal of all circumstances relevant to the legal transaction (Art. 20).",\r
+"Posrednik sumnja u istinitost navedene svrhe transakcije (npr. pomoć porodici, izdržavanje lica, pojmovi često korišćeni od strane ekstremista i terorista i sl.), naročito ako se radi o učestalim nalozima gdje se ne može utvrditi lična ili poslovna veza između učesnika transakcije.",\r
+"Broker: {0}, {1}, PIB {2}; Registar posrednika entry number: {3}{4}.",\r
+"Broker: {0}, Registar posrednika entry number: {1}",\r
+"Brokerage",\r
+"Brokerage (real estate)",\r
+"Real estate brokerage",\r
+"post",\r
+"Postal code",\r
+"Price achieved",\r
+"there are invoices",\r
+"Postoje podaci da je klijent možda umiješan u nezakonite aktivnosti.",\r
+"Postoje saznanja da klijent ima lošu reputaciju ili da postoji sumnja u izvore sredstava, da u svom poslovanju koristi virtuelne valute (npr. bitkoin ili lajtkoin) ili koristi alternativne kanale plaćanja (npr. havala, hundi), sa ciljem izbjegavanja redovnih finansijskih kanala.",\r
+"Postoji sumnja u stvarnu svrhu obavljene transakcije.",\r
+"Postoji veliki broj avansnih uplata, gdje do kraja obračunskog perioda nije došlo do realizacije usluge ili isporuke robe.",\r
+"Signature",\r
+"signed quote (both parties)",\r
+"Signed confirmation",\r
+"A signed viewing confirmation is proof of brokerage (Law on Brokerage, Art. 24) and cannot be deleted.",\r
+"Sub-broker",\r
+"Sub-brokerage",\r
+"Sub-brokerage is possible only with the principal's explicit consent (Law on Brokerage, Art. 21 para. 1).",\r
+"Receivables",\r
+"Receivables from foreign customers (customer with a country outside Montenegro): invoice, advance, credit note, collection",\r
+"Interest receivables",\r
+"receivables, IOS, reminders",\r
+"Receivable under lawsuit…",\r
+"Potrosac",\r
+"Consumer",\r
+"Consumer (first and last name)",\r
+"the consumer withdrew the complaint",\r
+"This confirmation is proof of the property viewing from the brokerage records (Law on Brokerage in Real Estate Sales and Leases, Art. 24).",\r
+"The viewing confirmation has been created: {0}",\r
+"Certificate of residence",\r
+"The certificate of residence was issued for country {0}, but the recipient is from {1}.",\r
+"The certificate of residence is dated {0}; check that it is valid for the year of payment.",\r
+"confirmation signed",\r
+"Certificate: country",\r
 "confirm",\r
+"I confirm that on {0}, through the brokerage of {1}, I viewed the property: {2}{3}, {4}.",\r
+"Trustee",\r
+"Area",\r
+"Area (m²)",\r
+"The area is mandatory (data item 10 of the brokerage records, Rulebook 45/26 Art. 3). The advertisement contains the area and layout of the property (Law on Brokerage, Art. 25 para. 1)",\r
+"Area m²",\r
+"The area cannot be negative.",\r
+"Property area",\r
+"The property area (m²) has not been entered. The area is a data item of the brokerage records (Rulebook 45/26, Art. 3 item 10) and a mandatory element of the advertisement (Law on Brokerage, Art. 25 para. 1).",\r
+"The area of property {0} has not been entered (Rulebook on Brokerage Records 45/26, Art. 3 item 10). The area is entered on the property.",\r
+"Area: {0} m²",\r
+"area",\r
+"area (m²)",\r
+"area (m²) and layout",\r
+"area and layout",\r
+"withdrawn from offer",\r
+"positive",\r
+"Positive exchange rate difference {0} — {1}",\r
+"Positive exchange rate difference on invoice {0}",\r
+"Know your client · ZSPNFT records · deadlines for reports to FOJ · risk analysis · indicator list",\r
+"Know your client, ZSPNFT records, reports to FOJ with deadlines, indicator list, risk analysis and retention periods.",\r
+"know your client, ZSPNFT records, reports to FOJ, risk analysis and indicator list",\r
+"PR PDV-2: field 13 — supply at the 0 % rate, field 14 — exempt supply",\r
+"PR-{0}-%",\r
+"Monitoring of client operations — transaction",\r
+"Written quote threshold (€, incl. VAT)",\r
+"The written quote threshold must be between 0 and 100.000 €.",\r
+"Thresholds and deadlines must be greater than zero.",\r
+"Rights and obligations (text for the brokerage agreement)",\r
+"Rights and obligations of the broker and the principal",\r
 "Bank rules",\r
 "Rules were not applied. {0}",\r
 "Rules applied: pending items changed: {0}.",\r
+"Rulebook on the detailed content, method of keeping and retention period of records of brokerage in real estate sales and leases (\\"Sl. list CG\\" no. 45/26), Art. 3–5. The entry sequence number is continuous; a change is entered as a new entry referring to the original entry. The records are kept permanently.",\r
+"Rulebook on Brokerage Records (\\"Sl. list CG\\" 45/26), Art. 3 items 6 and 10",\r
+"Rulebook on Brokerage Records (\\"Sl. list CG\\" 45/26), Art. 3–5",\r
+"Rulebook on Brokerage Records (\\"Sl. list CG\\" 45/26), Art. 4 — entry within eight days",\r
+"Rulebook on Brokerage Records (\\"Sl. list CG\\" 45/26), Art. 4 — entry within eight days of the conclusion of the agreement or of the change",\r
+"Rulebook on Brokerage Records (\\"Sl. list CG\\" 45/26), Art. 5 para. 1",\r
+"Rulebook on Brokerage Records (\\"Sl. list CG\\" 45/26), Art. 5 para. 2",\r
+"Rulebook on the list of indicators for identifying suspicious clients and transactions (\\"Sl. list CG\\" no. 29/24)",\r
 "rule",\r
 "The rule has been deleted.",\r
 "The rule has been saved.",\r
@@ -182,28 +1633,232 @@ const e=`[\r
 "A rule enters a supplier or a customer, not both.",\r
 "rule \\"{0}\\"",\r
 "Rule: {0}",\r
+"Legal transaction and fee",\r
+"The legal transaction was concluded before the brokerage agreement.",\r
+"Legal transaction under brokerage agreement {0}",\r
+"Legal transaction concluded {0}",\r
+"Legal transaction concluded / not concluded",\r
+"Legal entity",\r
+"Entitled to fee until",\r
+"Right to fee under agreement {0} (nine months after termination)",\r
+"Empty = project hourly rate",\r
 "Moving the invoice to expenses — costing sheet {0}",\r
 "Moved from costing sheet {0} (invoice entered as goods) {1}",\r
+"Residence or registered office",\r
+"Before legal action",\r
+"handed over",\r
+"handed over",\r
+"Handed over",\r
+"handed over (paid out) to a person on instruction",\r
+"Proposed rate = ECB rate + 8 p.p. The rate published by CBCG is the one that applies.",\r
+"Proposed rate:",\r
+"Subject (invoice, work order, product or service)",\r
+"The item (device or vehicle) has not been entered.",\r
+"Item (device, vehicle, model)",\r
+"Subject of brokerage: {0} property — {1}{2}{3}; location: {4}. {5}: {6} {7}. The price has been set so that it includes the brokerage fee (Art. 18 para. 3 of the Law).",\r
+"The subject of the contract has not been entered.",\r
+"Subject of the contract: {0}.",\r
+"Measure taken",\r
+"Overview for the IOPPO report —",\r
+"OVERVIEW FOR THE WITHHOLDING TAX REPORT (IOPPO)",\r
+"through the deposit account",\r
 "is moved to",\r
+"per invoice",\r
+"Per invoice: a cash invoice is paid immediately, a non-cash invoice is owed to the supplier until paid.",\r
+"Apply",\r
+"Reverse charge. Place of supply outside Montenegro (Art. 17 para. 2 ZPDV).",\r
+"Prenosi novčanih sredstava manjih iznosa u kojima su uključena ista lica preko drugih alternativnih sistema za prenos novca su učestali.",\r
 "recognised by a bank rule (Bank → Bank rules)",\r
+"end of relationship",\r
 "overtaken",\r
 "Previous page",\r
 "Previous match",\r
+"Search (number, client, item, serial number)",\r
+"Search (number, principal, location, agent)",\r
+"Search (number, subject, customer)",\r
+"Search (name, registration number, JMB)",\r
+"Search (code, location, parcel, owner)",\r
+"Search (consumer, subject, description)",\r
+"Search (code, name, customer)",\r
+"search indicators",\r
 "Search across all pages of the list (Enter = next match)",\r
+"Collected by (first and last name)",\r
+"Collected",\r
+"Fetched on: {0}.{1}",\r
+"Indicators taken from the Rulebook: {0}.",\r
+"Fetch or manual entry for one day",\r
+"The collection has been recorded.",\r
+"Fetch",\r
+"Fetch rate",\r
+"Load lists from the Rulebook (MUP 29/24)",\r
+"Fetch for period",\r
+"Complaint {0}/{1}",\r
+"Complaint {0}/{1} was also recorded on another computer; the entry here gets number {2}/{3}.",\r
+"Complaint {0}/{1} has been updated.",\r
+"Complaint {0}/{1} from another computer gets number {2}/{3} (the number is already taken here by an earlier entry).",\r
+"The complaint has been deleted.",\r
+"The complaint has been answered",\r
+"The complaint was answered on {0} The recorded data cannot be changed; the reply can only be supplemented (Consumer Protection Law, Art. 27).",\r
+"The complaint has been recorded under number {0}/{1}. Reply deadline: {2}.",\r
+"The complaint does not exist.",\r
+"A complaint is kept for at least two years (Consumer Protection Law, Art. 27); deletion is possible from {0}. An incorrect entry is closed with the outcome \\"entry cancelled\\".",\r
+"Unanswered complaints past the deadline (",\r
+"Consumer complaints, replies and reply deadlines",\r
+"Consumer complaints, replies and reply deadlines.",\r
+"Complaints in the Complaints register:",\r
+"Revenue",\r
+"Revenue excl. VAT",\r
+"Revenue excl. VAT in period:",\r
+"Revenue from sale of services on the foreign market",\r
+"REVENUE BY CLIENT",\r
+"REVENUE BY MONTH",\r
+"REVENUE BY PROJECT",\r
+"REVENUE BY CONTRACT",\r
+"REVENUE BY SERVICE AND ITEM",\r
+"accepted",\r
+"The accepted quote is signed by the repair shop and the client; one copy is given to the client ({0}).",\r
+"The report has been supplemented.",\r
+"The report has been submitted to FOJ and cannot be changed.",\r
+"Reports",\r
+"REPORTS TO FOJ",\r
+"Pending reports to FOJ:",\r
+"Pending reports to FOJ: {0}",\r
+"Device intake for repair · work order · written repair quote · specification with the invoice",\r
+"Device intake for repair, work orders, written repair quote and specification with the invoice.",\r
+"Priliv novčanih sredstava je nastao po osnovu ugovora o zajmu čiji je rok vraćanja istekao, a novčana sredstva koja su bila predmet ugovora o zajmu nijesu vraćena.",\r
+"Inflow from statement",\r
+"Attachment",\r
+"Attachment (signed contract, file path)",\r
+"Attachment (path to photos or documents)",\r
+"Recipient (non-resident legal entity)",\r
+"The payment recipient has not been entered.",\r
 "Apply rules to pending items",\r
+"The default interest rate published for each half-year by the Central Bank of Montenegro has been applied{0}. Interest accrues from the day after the due date; a payment reduces the principal from the payment date.",\r
 "Applied",\r
+"received from",\r
+"received",\r
+"Deposits received from principals",\r
+"received invoices today (EUR incl. VAT)",\r
+"received invoices today ·",\r
+"received invoices this month ·",\r
+"received from the principal or the other party",\r
+"Received: {0} {1}; CBCG middle rate on {2}: {3} {4} per 1 EUR",\r
+"Surtax (%)",\r
+"Surtax %",\r
+"The client's consent has been recorded.",\r
+"Consent to increase",\r
+"Consent to the increase has been recorded; the order is in progress again.",\r
+"Consent is entered for an order with a quote or for a price increase (current: {0}).",\r
+"Supervisory authority access to data",\r
+"The fee percentage is not valid.",\r
+"FOR SALE",\r
+"Sale price",\r
+"The sale price or rent is set so that it includes the brokerage fee (Law on Brokerage, Art. 18 para. 3). Check \\"Price includes the brokerage fee\\".",\r
+"Sale price or rent including the brokerage fee (Law on Brokerage, Art. 18 para. 3)",\r
+"Seller",\r
+"Agreement extension",\r
+"Agreement extension…",\r
+"Extend to date",\r
+"Extend agreement",\r
+"Project profitability",\r
+"PROJECT PROFITABILITY",\r
+"Project",\r
+"Project \\"{0}\\" has no customer.",\r
+"Project \\"{0}\\": {1} h recorded, budget {2} h.",\r
+"project {0}",\r
+"Project {0}",\r
+"project without customer",\r
+"The project has {0} time entries and cannot be deleted. A finished project is marked with the status \\"completed\\".",\r
+"The project has been deleted.",\r
+"The project has been saved.",\r
+"The project does not exist.",\r
+"The project is not active; hours are entered only for an active project.",\r
+"No project selected.",\r
+"A project with code {0} already exists.",\r
+"Projects",\r
+"Projects",\r
+"PROJECTS",\r
+"Projects and timesheets",\r
+"Projects by client · timesheets · invoice from recorded hours",\r
+"Projects by client, timesheets and invoicing based on recorded hours.",\r
+"turnover",\r
+"Trade in cultural goods, precious metals and precious stones (item 13 indent 12)",\r
+"Trade in motor vehicles (item 13 indent 10)",\r
+"Trade in vessels and aircraft (item 13 indent 11)",\r
+"Foreign transactions",\r
+"Supply outside Montenegro — not subject to VAT (additional column)",\r
+"Supply outside Montenegro (place of supply abroad)",\r
+"change",\r
+"change (first entry {0})",\r
+"change of data",\r
+"Changes to enter in the brokerage records:",\r
+"Changes to enter in the brokerage records: {0}",\r
+"Regulation",\r
+"Average delay (days)",\r
+"Simple interest at the CBCG rate for each half-year, 36.500 (leap year 36.600); a payment reduces the principal from the payment date. For a business customer, recovery cost compensation per late invoice is also charged.",\r
 "update check",\r
 "Check before payment",\r
 "Check before payment:\\n{0}",\r
 "Account check:",\r
+"check in the Register of Beneficial Owners",\r
+"Check in the Register of Beneficial Owners",\r
 "check that the certificates have been submitted",\r
 "First page",\r
 "Supplier's first invoice in this company",\r
 "First payment to this supplier. Before paying, check the supplier details and the payee account.",\r
 "First locking",\r
+"punomocnik",\r
+"attorney-in-fact",\r
+"Path to the signed contract (PDF) on this computer; the file is not transferred by data exchange",\r
+"File path (company folder {0})",\r
+"The path of the scanned document has not been entered.",\r
+"The QR code is not valid. The invoice IIC is missing.",\r
+"QRText",\r
+"invoice no. {0} of {1}",\r
+"invoice no. {0}{1}",\r
+"The invoice is addressed to a different customer. Entering it as an expense is possible only with explicit confirmation.",\r
+"Invoice issued through registered fiscal software: number and date for the records (data item 14)",\r
+"Invoice issued outside the program",\r
+"Invoice issued outside the program…",\r
+"The invoice has already been entered as a costing sheet (#{0}).",\r
+"The invoice has already been entered as an expense (Procurement and expenses, entry {0}).",\r
+"An invoice that is not for goods (electricity, water, telephone, fuel…) is moved to \\"Procurement and expenses\\"; the costing sheet is deleted (trade ledger and stock), the debt to the supplier remains as an expense, and input VAT remains in the same month.",\r
+"Fee invoice",\r
+"The fee invoice has been recorded.",\r
+"The invoice has no amounts (neither items nor totals by rate).",\r
+"invoice not issued",\r
+"An invoice paid by bank transfer is owed to the supplier until paid (balance, card, open items, due dates, IOS). An invoice paid in cash or by card is not included in the debt.",\r
+"An invoice in a foreign currency carries the currency code and exchange rate; the amounts in the message are in EUR.",\r
+"Invoice entered by QR code {0}",\r
+"Invoice for the brokerage fee under agreement {0}",\r
+"The invoice for the brokerage fee is issued only after the legal transaction is concluded (Law on Brokerage, Art. 27 para. 1–2).",\r
+"An invoice for goods goes into a costing sheet (stock, trade ledger). An invoice for electricity, telephone, rent, services etc. goes directly to expenses (Procurement and expenses), without a costing sheet and without an outlet.",\r
+"Accountants",\r
+"Work starts after the client's consent (current: {0}).",\r
+"Work order {0} — {1}",\r
+"Work order {0} — {1}{2}",\r
+"Work order {0} — {1}{2}.",\r
+"Work order {0} was also recorded on another computer; the order here gets number {1}.",\r
+"Work order {0} from another computer gets number {1} (the number is already taken here by an earlier order).",\r
+"The work order has been deleted.",\r
+"The work order has been saved.",\r
+"The work order does not exist.",\r
+"The work order was not saved.",\r
+"Work orders",\r
+"WORK ORDERS",\r
+"Work orders awaiting the client's written consent to a price increase: {0}",\r
+"No employee selected or entered.",\r
+"The employee is not in the employee records.",\r
 "Employees: {0} ({1}{2}).",\r
 "action",\r
+"Work, parts and material",\r
 "Write-off",\r
+"The difference between the payment ({0} EUR) and the open part of the invoice ({1} EUR) is more than {2} % and is not an exchange rate difference.",\r
+"Exchange rate difference",\r
+"Reason (required)",\r
+"reason for the relationship",\r
+"Reason for the relationship",\r
+"Reason for termination",\r
 "Reason for unlocking",\r
 "Reason for unlocking the month {0} {1} (entered in the \\"Changes after closing\\" report):",\r
 "company account {0}",\r
@@ -219,53 +1874,641 @@ const e=`[\r
 "Invoice {0} has been deleted. The debt to supplier {1} has been reduced by {2} EUR.",\r
 "Supplier invoices without a costing sheet",\r
 "Supplier invoices without a costing sheet: {0}, total {1} EUR.",\r
+"The reason for the business relationship is not on the list.",\r
+"The reason for the business relationship or transaction has not been selected (ZSPNFT Art. 117 para. 1 {0}).",\r
+"Cancellation reason",\r
+"The cancellation reason is required.",\r
+"Reasons for carrying out the transaction (explanation)",\r
+"Grounds for suspicion",\r
+"Grounds for suspicion (if any)",\r
+"The grounds for suspicion have not been entered (ZSPNFT Art. 117 para. 8).",\r
+"The grounds for suspicion have not been entered.",\r
 "No.",\r
 "No.",\r
+"Entry sequence number",\r
+"The entry sequence number is continuous. A change is entered as a new entry referring to the original entry; entries are not deleted or changed (the records are kept permanently).",\r
 "Rows {0}–{1} of {2}. Totals, export and printing cover all rows.",\r
+"Regular",\r
+"ECB reference rate for main refinancing operations (MRO) valid on the first day of the half-year",\r
+"CLIENT REGISTER (ZSPNFT Art. 117)",\r
+"Client register, Compliance (ZSPNFT) package: the principal's legal transaction is included in the threshold check for submitting data to FOJ (ZSPNFT Art. 66)",\r
+"PROPERTY REGISTER",\r
+"Property register · brokerage agreements · brokerage records · viewings · deposit account",\r
+"property register, brokerage agreements and records, deposit account",\r
+"Property register, brokerage agreements, brokerage records, viewings and deposit account.",\r
+"Registar posrednika",\r
+"Audit of financial statements",\r
+"Audit, accounting and tax advisory (item 13 indent 2)",\r
+"Resident",\r
+"Result",\r
 "the result is not an SQLite database",\r
+"Risk",\r
+"RN-{0}-{1}",\r
+"Goods (costing sheet)",\r
+"Deadline (business days)",\r
+"Retention period",\r
+"Retention period until",\r
+"Retention period expired",\r
+"Period expired",\r
+"Reminder deadline (days)",\r
+"The reminder deadline must be between 1 and 90 days.",\r
+"The execution deadline is not valid.",\r
+"Transaction execution deadline",\r
+"The payment term (days) is not valid.",\r
+"Payment term (due date)",\r
+"payment term (warning)",\r
+"The payment term is before the purchase date.",\r
+"Fee payment deadline",\r
+"The payment term is not a valid date.",\r
+"The reminder period for an uncollected device must be between 1 and 365 days.",\r
+"The quote validity period has expired",\r
+"Reply deadline",\r
+"the reply deadline expired on {0}",\r
+"Contract termination deadline {0}",\r
+"The payment deadline in the reminder must be between 1 and 90 days.",\r
+"Entry deadline",\r
+"The deadline for entry in the records expired on {0}",\r
+"The deadline for entry in the Registar posrednika has expired",\r
+"The deadline for entry in the Registar posrednika expired on {0} Brokerage without registration is not allowed (Law on Brokerage in Real Estate Sales and Leases, Art. 36); the entry number is entered on the Broker details tab.",\r
+"Deadline for high-risk country (days)",\r
+"Deadline: {0} ({1}).",\r
+"Retention periods",\r
+"RON",\r
+"ROUND({0} - {1}, 2)",\r
+"RSD",\r
+"RUB",\r
 "Manual confirmation",\r
 "Manual",\r
 "Invoice entered manually: {0}, {1} EUR (costing sheet {2}).",\r
+"Content of the invoice fiscal message",\r
+"The customer's consent to electronic invoices has been recorded.",\r
+"Consent to electronic invoices (date)",\r
+"Consent to sub-brokerage",\r
+"Balance per agreement",\r
+"Send date or period of supply (SupplyDateOrPeriod)",\r
+"Send tax period of a monthly invoice (TaxPeriod)",\r
+"Send invoice currency (Currency)",\r
+"unanswered only",\r
+"Pending reports only",\r
+"Services only",\r
+"Hours without cost",\r
+"hours by project and client",\r
+"Hours by employee",\r
+"HOURS BY EMPLOYEE AND MONTH",\r
+"The hours have been recorded.{0}",\r
+"The hours have been invoiced (invoice {0}) and cannot be changed. To change them, cancel the invoice or delete the draft.",\r
+"Hours up to and including",\r
+"Hourly rate",\r
+"Hourly rate (EUR, excl. VAT)",\r
+"Hourly rate (EUR)",\r
+"The hourly rate is not valid.",\r
+"Saznanje iz pouzdanih izvora (koji uključuju medije ili druge otvorene izvore podataka) koji ukazuju da je klijent uključen u neke nelegalne aktivnosti.",\r
+"Week (any day)",\r
+"The week has been saved: {0} new entries, {1} changed, {2} deleted.",\r
+"SEK",\r
+"Serial no. / registration",\r
+"Serial number / registration",\r
+"Repair shop: work orders",\r
+"code list (stock)",\r
+"Code \\"{0}\\" is already in use.",\r
+"Code (optional)",\r
+"activity code",\r
+"The registered office (address and city or municipality) has not been entered (ZSPNFT Art. 117 para. 1 {0}).",\r
+"Scanned documentation",\r
+"Delete the scans in the company folder manually: {0}",\r
+"Storage of and trade in cultural goods in ports and free zones (item 13 indent 13)",\r
+"Sending {0} invoices to customers by e-mail (SMTP).{1} Continue?",\r
+"Sending several invoices at once uses the SMTP server (Settings → E-mail); without it, invoices are sent one at a time (✉).",\r
 "Next page",\r
 "Next match",\r
+"Complex",\r
+"Complex and unusual transactions",\r
 "Shifts: absences and holidays (annual, sick, menstrual, paternity…)",\r
+"The direction (received or handed over) has not been selected.",\r
+"Save supplement",\r
+"Save changes",\r
+"Save rate",\r
+"Save calculation",\r
 "Save payment",\r
+"Save rate",\r
+"Save lawsuit",\r
+"Saved calculations",\r
 "The saved results of this payroll run come from an older rule (surtax deducted from the employee's net pay; the surtax is borne by the employer and does not reduce net pay).",\r
+"Own indicator",\r
+"Own indicator {0} has been added.",\r
+"Own indicator {0} from another computer gets code {1} (the code is already taken here).",\r
+"Reporting entity's own indicators",\r
+"Hours specification — invoice attachment",\r
+"The specification is issued together with the invoice for the service performed ({0} para. 4).",\r
+"LIST OF CLIENT CONTRACTS",\r
+"The list of high-risk third countries is empty.",\r
+"external contractor — no payroll",\r
+"Floor / number of floors",\r
+"Floor: {0}",\r
 "Ready for the next QR code.",\r
+"Medium",\r
+"CBCG middle rate on the inflow date: currency units per 1 EUR",\r
+"CBCG middle rate: currency units per 1 EUR (ZPDV Art. 23 para. 2)",\r
+"Middle rate of the Central Bank of Montenegro (currency units per 1 EUR). When the CBCG list is not available, the rate is taken from the ECB list for the last CBCG business day; without either source, the rate is entered manually with a note. A fetched rate is stored and not requested again.",\r
+"What is entered",\r
 "The state of the books at the first locking of the month (or found when upgrading to version 2.7.0) compared with today, and all unlockings with the reason.",\r
 "The state of the books at the first locking of the month compared with today, and all unlockings with the reason. For a month locked before version 2.7.0 the starting point is the state found at the first unlocking in 2.7.0.",\r
+"Condition at intake (damage, marks)",\r
 "State at the first locking and today; unlockings with the reason",\r
+"Account balance",\r
+"Agreement status:",\r
+"Age",\r
+"Age of the building",\r
+"RECEIVABLES AGEING",\r
+"The property status is unknown.",\r
+"Quote status",\r
+"The quote status has been saved.",\r
+"Quote status: sent, accepted or rejected.",\r
+"Project status: active, completed or suspended.",\r
+"Status is tracked only for quotes.",\r
+"Contract status: active, terminated or expired.",\r
+"Item \\"{0}\\": the price is not valid.",\r
+"Item \\"{0}\\": the quantity must be greater than zero.",\r
+"Item \\"{0}\\": VAT rate 21, 15, 7 or 0 %.",\r
+"Item \\"{0}\\": the VAT rate is 21, 15, 7 or 0 %.",\r
+"Item \\"{0}\\": the type is work, part or material.",\r
+"Items (price excl. VAT in",\r
+"Invoice items",\r
 "Items needing attention: {0}",\r
 "Pending items matching this rule:",\r
+"Rate — tax sovereignty (%)",\r
+"Rate (% per year)",\r
+"ECB rate (MRO, %)",\r
+"The rate has been deleted.",\r
+"Rate on date",\r
+"VAT rate: 21, 15, 7 or 0 %.",\r
+"Treaty rate (%)",\r
+"The rate under the double taxation treaty is not valid.",\r
+"The withholding tax rate is not valid.",\r
+"The rate is set for each half-year: the European Central Bank reference rate for main refinancing operations valid on the first day of the half-year, increased by 8 percentage points. It is published by the Central Bank of Montenegro on the first business day of the half-year. No calculation is made for a period without an entered rate.",\r
+"The rate for {0} has been saved.",\r
+"The rate for territories with tax sovereignty is not valid.",\r
+"CBCG default interest rate for {0} has not been entered",\r
+"The default interest rate must be greater than 0 and less than 100 %.",\r
+"The default interest rate is entered per half-year: from 01.01. or from 01.07.",\r
+"The default interest rate for the period from {0} has not been entered.",\r
+"Rates and countries",\r
+"Default interest rates",\r
+"Cancel calculation {0}? The period of this calculation can be calculated again.",\r
+"The cancellation entry has been recorded.",\r
+"A cancellation entry cannot be cancelled.",\r
+"cancellation of entry {0}",\r
+"Cancellation of entry {0}",\r
+"Cancel entry…",\r
 "Page {0} of {1}",\r
 "Page {0}/{1}",\r
+"Professional training and development of employees",\r
+"Professional training of employees",\r
+"Layout",\r
+"Layout: {0}",\r
+"Strukturirani depoziti (izvjesno je planski vršeno deponovanje gotovog novca u određenim iznosima, periodično, od strane različitih lica kako bi se izbjeglo lako uočavanje) koji se koriste kao garancija za kredit, deponovanje velikih iznosa novca koji su uplaćeni u istim velikim novčanim apoenima ili sitnim apoenima.",\r
+"beneficial owners",\r
+"Beneficial owners",\r
+"Beneficial owner",\r
+"The beneficial owner is a politically exposed person.",\r
+"Stvarni vlasnik klijenta je strano fizičko lice državljanin \\"poreskog raja\\", odnsono visoko-rizične treće države, dok se iz opšteg poslovanja stiče utisak da je stvarni vlasnik neko domaće fizičko lice.",\r
+"No beneficial owner has been entered.",\r
+"Beneficial owners",\r
+"Property right",\r
+"Sum per claim",\r
+"Sum per year",\r
+"Suspicious",\r
+"Suspicious transaction",\r
+"Suspicious transaction — {0}",\r
+"The suspicious transaction has been recorded; the data is submitted to FOJ by {0}",\r
+"A suspicious transaction is entered with the \\"Suspicious transaction\\" button (with grounds and indicators).",\r
 "Each item is checked from the data. A warning that is in order (e.g. an account without turnover) is confirmed manually; the confirmation records who confirmed it and when.",\r
+"All amendments to the contract are valid only in writing. The parties settle disputes amicably, failing which the competent court in Montenegro decides.",\r
 "all transactions are posted or classified",\r
+"All mandatory elements have been entered.",\r
+"all entries",\r
+"Purpose",\r
+"purpose of the relationship",\r
+"Purpose and intended nature of the relationship",\r
+"t.KljucRacuna NOT IN ({0})",\r
 "t.Status='ceka' AND t.Napomena LIKE ?",\r
+"TAX",\r
+"The indicator text from the Rulebook cannot be changed; the company adds its own indicator.",\r
+"Advertisement text",\r
+"Encumbrances",\r
+"Encumbrances and registered rights (note)",\r
+"The transaction kind is not on the list.",\r
 "Persistent settings are not available.",\r
+"transaction {0} EUR involves a high-risk third country ({1})",\r
+"Deposit account statement transaction",\r
+"The statement transaction is already linked to another deposit entry.",\r
+"The transaction has been entered (monitoring of client operations). There is no obligation to submit it to FOJ based on the amount.",\r
+"The transaction has been entered in the records of complex and unusual transactions.",\r
+"The transaction has been recorded. {0}",\r
+"The transaction has already been carried out",\r
+"Client transaction",\r
+"Transakcija koju klijent obavlja nije u skladu sa njegovom uobičajenom poslovnom praksom.",\r
+"The transaction is not carried out until the data is submitted to FOJ (ZSPNFT Art. 66 para. 6–7).",\r
+"The transaction is checked against the thresholds for submitting data to FOJ (reporting entity type and thresholds: Risk analysis tab). A suspicious transaction is entered on the Transactions and reports to FOJ tab.",\r
 "Bank transactions",\r
 "Bank transactions posted and classified",\r
+"Transakcije gdje klijent zahtijeva plaćanje koje se sastoji od više manjih uplata, koje u zbiru čine cijenu nepokretnosti (usitnjavanje), naročito ako se radi o nekretninama velike vrijednosti i ako postoje saznanja da su ugovorne strane povezane sa nelegalnim ili kriminalnim aktivnostima.",\r
+"Transactions and reports to FOJ",\r
+"Transakcije koje dolaze iz država koje se nalaze na \\"crnoj listi\\", koje ne primjenjuju propise iz oblasti sprečavanja pranja novca ili finansiranja terorizma i gdje postoji visok rizik od pranja novca, bez obzira na to da li klijent dolazi iz tih država.",\r
+"Transakcije sa pravnim licima čiji identitet stvarnih vlasnika je teško utvrditi.",\r
+"Transakcije za koje su zaposleni kod obveznika (u daljem tekstu: obveznik) na osnovu iskustva, znanja i informacija kojima raspolažu, ocijenili da nijesu u skladu sa uobičajenim aktivnostima klijenta",\r
 "Search all rows",\r
+"The trade ledger for {0} is closed and prepared for certification. Moving an invoice from {1}/{2} to expenses is not possible without undoing the ledger closing (Trade ledger → \\"Undo closing {3}\\").",\r
+"expense",\r
+"Cost „{0}\\"{1} of {2} for the same amount",\r
+"Expense \\"{0}\\"{1} of {2} for the same amount is recorded as paid in cash and has already been posted to the cash desk. The same payout is not entered again through the cash desk.",\r
+"Expense (no costing sheet)",\r
+"expense {0}",\r
+"Expense from \\"Procurement and expenses\\" with this supplier (invoice without a costing sheet)",\r
+"The expense from this invoice goes into this company's books, and input VAT into PR-PDV. Record the expense?",\r
+"The expense was entered before version 2.7.5 without a payment method and is not included in the debt to the supplier (balance, open items, IOS). The \\"debt\\" mark includes it in the debt; payments are linked on the Obligations screen.",\r
+"The expense has been recorded as owed to the supplier.",\r
+"Expense recorded: {0}, invoice {1}, {2} EUR.",\r
+"Cost already paid",\r
+"The expense has no supplier from the code list, so it is not owed to a supplier.",\r
+"The expense was not recorded: {0}",\r
+"The expense was not recorded.",\r
+"Expense paid in cash (cash desk)",\r
+"Expense paid by card (current account)",\r
+"Labour cost",\r
+"The expense is also posted as a cash desk payout. The same payout is not entered again in the cash desk.",\r
+"The expense is also posted as a payment from the current account. The card transaction on the statement is not classified as a supplier payment.",\r
+"expense of a foreign supplier",\r
+"Expense: {0}",\r
+"Costs of additional services (expressly agreed, Art. 27 para. 4): {0}.",\r
+"Costs of additional services (only if expressly agreed)",\r
+"Costs of additional services have not been agreed.",\r
+"TRY",\r
+"Market",\r
+"The lawsuit was filed before bankruptcy proceedings were opened against the customer (VAT Law Art. 20a).",\r
+"In EUR (VAT",\r
+"There are no complaints recorded in the year.",\r
 "There are no locked months in the year.",\r
+"U klijentovom poslovanju pojavljuju se velike i neobjašnjive oscilacije u prihodima i/ili rashodima, odnosno neuobičajeno i neobjašnjivo visoki prihodi u odnosu na rashode.",\r
+"in full",\r
+"Attached is advance invoice {0}.",\r
+"Attached is the statement of open items{0}. Please confirm that you agree with the stated balance or send your comments within 8 days.",\r
+"Attached is credit note {0}.",\r
+"Attached is default interest calculation {0} with a breakdown by invoice and period.",\r
+"Attached is payment reminder {0} for invoices past their payment term. Please settle the debt within the period stated in the reminder. If payment has already been made, please send us the payment details.",\r
+"in progress",\r
+"In instalments",\r
 "in balance",\r
+"on time",\r
+"within 8 days of the conclusion of the legal transaction",\r
+"The code list already contains item \\"{0}\\"{1}.",\r
+"Share %",\r
+"Ucestalost",\r
+"Frequency",\r
+"Invoicing frequency: monthly, quarterly or annually.",\r
+"Share",\r
+"Share (%)",\r
+"The beneficial owner's share is from 0 to 100 %.",\r
+"UG-{0}-{1}",\r
+"UG-{0}-%",\r
+"Treaty (country, article)",\r
+"contract {0}",\r
+"Contract {0}",\r
+"Agreement {0} has been deleted.",\r
+"Contract {0}, period {1}.",\r
+"Contract number {0} already exists.",\r
+"The contract has items with 0 % VAT. A basis must be selected (Art. 25, 26, 27 or 17 of the VAT Law); it is printed on the invoice.",\r
+"the contract expires",\r
+"the contract expires — renewal or new contract",\r
+"The agreement expired on {0} Termination is not possible: the agreement ended upon expiry of the term for which it was concluded (Law on Brokerage, Art. 19).",\r
+"The agreement has been updated.",\r
+"The contract has been deleted.",\r
+"The agreement has ended and cannot be extended; a new agreement must be concluded.",\r
+"The agreement has been extended.",\r
+"The agreement has been drawn up in two identical copies, one for each party.",\r
+"The contract has been saved.",\r
+"The agreement was already terminated on {0}",\r
+"A contract must have at least one item.",\r
+"A contract must have a customer.",\r
+"The agreement does not exist.",\r
+"The contract has no items.",\r
+"The contract is not active ({0}).",\r
+"service contract",\r
+"Double taxation treaty",\r
+"double taxation treaty, ZPDPL Art. 29a ({0} %)",\r
+"Brokerage agreement",\r
+"Brokerage agreement {0}",\r
+"Brokerage agreement {0} expires",\r
+"Brokerage agreement {0} was also concluded on another computer; the agreement here gets number {1}.",\r
+"Brokerage agreement {0} from another computer gets number {1} (the number is already taken here by an earlier agreement).",\r
+"Brokerage agreement {0}; deposit retained {1}",\r
+"Brokerage agreement and documents related to the agreement",\r
+"The brokerage agreement has been saved and entered in the records.",\r
+"Brokerage agreement providing for collection from the deposit",\r
+"The brokerage agreement does not contain the mandatory elements (Law on Brokerage, Art. 18 para. 2): {0}.",\r
+"No brokerage agreement selected.",\r
+"The brokerage agreement is kept for ten years from conclusion (Rulebook 45/26, Art. 5 para. 2); deletion is possible from {0}",\r
+"The agreement contains seven mandatory elements (Art. 18 para. 2).",\r
+"the contract is renewed automatically",\r
+"The agreement is concluded on {0} for a fixed term until {1} and may be extended (Art. 19).",\r
+"The agreement is valid until the entered date (Art. 19); the change is recorded in the brokerage records.",\r
+"Contract: notice period before expiry",\r
+"Contract: validity period",\r
+"agreed {0} {1}",\r
+"agreed {0} of the price",\r
+"Contracts and recurring invoices",\r
+"Contracts and recurring invoices → Invoicing schedule",\r
+"Agreements whose ten-year retention period has expired:",\r
+"Brokerage agreements",\r
+"BROKERAGE AGREEMENTS",\r
+"Client contracts · periodic invoicing (monthly, quarterly, annually) · contract validity periods",\r
+"Client contracts, periodic invoicing (monthly, quarterly, annually) and contract validity periods.",\r
+"Contracts: periods for invoicing — {0}",\r
+"Enabled manually, as the company needs. Data is not deleted when a record type is disabled.",\r
+"Remove item",\r
+"Remove \\"{0}\\" from the client's documentation list? The file remains in the folder.",\r
+"Total ({0})",\r
+"Total complaints: {0}. Replied: {1}. Without reply: {2}.",\r
+"total incl. VAT",\r
+"Total entries: {0}.",\r
 "Receipt (costing sheets)",\r
 "Incoming invoices have a calculation with items",\r
+"Street and number",\r
+"The role is not on the list.",\r
+"VAT reduced",\r
+"In advance",\r
+"in advance (period starting)",\r
+"Enter rate",\r
 "Enter in {0}",\r
+"enter the rate (Settings → Default interest and reminders)",\r
+"Brokerage records entry {0} was also created on another computer; the entry here gets sequence number {1}.",\r
+"Brokerage records entry {0} from another computer gets sequence number {1} (the number is already taken here by an earlier entry).",\r
+"Entry {0} is internal (not invoiced).",\r
+"Entry {0} has already been invoiced (invoice {1}).",\r
+"Entry {0} has already been cancelled.",\r
+"Entry {0} has no hourly rate.",\r
+"Deposit entry",\r
+"The deposit entry has been deleted.",\r
+"The deposit entry has been saved.",\r
+"The deposit entry has been saved. {0}.",\r
+"Records entry {0}",\r
+"The entry has been recorded.",\r
+"An entry is created with the \\"Supervisory authority inspection\\" button (Transactions and reports to FOJ tab).",\r
+"The entry is not awaiting submission to FOJ.",\r
+"The entry does not exist.",\r
+"The training entry does not exist.",\r
 "Payment to supplier entry",\r
+"Time entry",\r
+"The time entry has been updated.",\r
+"The time entry has been deleted.",\r
+"The time entry does not exist.",\r
+"Entries",\r
+"Entries without data item 6 (agent):",\r
+"Entries are created each time client data is entered or changed and when a transaction is recorded.",\r
+"Entries are created on the Transactions and reports to FOJ tab.",\r
+"UP-{0}-{1}",\r
 "Remembered payee account",\r
+"Record the client's complaint in the Complaints register, linked to this order",\r
+"Entry in the Registar posrednika",\r
+"Entry in the Registar posrednika: deadline",\r
+"agreement entry",\r
+"The recorded data cannot be changed; the reply can be supplemented and the consumer's contact details changed.",\r
+"The reminder has been recorded as sent by post.",\r
+"entered after the {0}-day deadline (change {1})",\r
+"Entered in the records: {0}.{1}",\r
+"Record submission to FOJ on {0}? Once recorded, the report can no longer be changed.",\r
+"Record termination of agreement {0} as of {1}?",\r
+"Record cancellation of entry {0}? The cancellation is a new permanent entry in the brokerage records.",\r
+"Record expense \\"{0}\\" as owed to the supplier (payment by bank transfer)?",\r
+"Record the concluded legal transaction under agreement {0}: {1}, price {2} EUR?",\r
+"Record submission",\r
+"Record as debt",\r
+"Record termination",\r
+"Record collection",\r
+"Record consent",\r
+"Enter changes in the records",\r
+"Record invoice",\r
+"Record consent today",\r
+"Record cancellation",\r
+"Record transaction",\r
+"Record expense",\r
+"Record concluded deal",\r
 "Enters",\r
+"Tax paid",\r
+"Payment received / payout",\r
+"The payment and the invoice belong to different customers.",\r
+"The payment and the interest calculation belong to different customers.",\r
+"The payment or invoice does not exist.",\r
+"The payment or interest calculation does not exist.",\r
+"The payment has been unlinked from the calculation.",\r
+"The payment is already recorded in the foreign currency; the exchange rate difference is calculated from the link.",\r
+"The payment is also linked to other invoices. The exchange rate difference is closed only for a payment that pays this invoice alone.",\r
+"The payment is also linked to an interest calculation.",\r
+"The payment has been linked to the interest calculation.",\r
+"Customer payment that paid the interest and compensation (closes the interest receivable)",\r
+"Payment dated {0} ({1}) linked to the interest calculation has not been received yet.",\r
+"Tax payment",\r
+"Payments, statement inflows, deposits and legal transactions of clients in the register are checked against the thresholds in Art. 66; when a threshold is reached, a report appears here with its deadline. Submission is made through the FOJ application with a qualified electronic signature; the program provides an overview of the data and records the submission date.",\r
+"Asset management for third parties (item 13 indent 4)",\r
+"The device has been received to diagnose the fault and repair it. For a repair worth more than {0} €, the client is given a written quote specifying work, materials and parts; the repair starts once the quote is accepted.",\r
+"Device collected{0}, in working order, with the accessories handed over.",\r
+"The device is collected upon presentation of this receipt. {0}.",\r
+"USD",\r
+"Compliance",\r
+"Compliance (ZSPNFT)",\r
+"Compliance → Risk analysis",\r
+"Compliance → Indicator list",\r
+"Compliance → Authorised person and training",\r
+"Compliance → Retention periods",\r
 "Condition",\r
+"service",\r
+"Service \\"{0}\\" has been added to the code list.",\r
+"Service / item",\r
+"Usluga DESC,",\r
+"A service has no stock and no stock reduction; no barcode is required. On a sales invoice it is posted to service revenue.",\r
+"A service has no stock and no stock reduction; on an invoice it is posted to service revenue.",\r
+"service of a foreign person",\r
+"Service to a foreign taxpayer with the place of supply outside Montenegro (VAT Law Art. 17 para. 2) — basis \\"Art. 17\\" on the invoice. The rules can be adjusted pending a reply from the Tax Administration; a locked month keeps the rules in effect at the time of locking.",\r
+"Services (IT, agencies, consulting, repair shops, rentals)",\r
+"Company formation, business and fiduciary services (item 13 indent 3)",\r
+"Services according to the timesheet for the period {0}. The hours specification is attached to the invoice.",\r
+"Hourly services — {0}, {1}",\r
+"Services, business relationships and transactions",\r
+"verbal (up to the written quote threshold)",\r
+"Establishing a business relationship",\r
+"adopted {0}",\r
+"Receivables under lawsuit and VAT adjustment",\r
+"The lawsuit and VAT adjustment are entered on the invoice (click the invoice in the list of open invoices).",\r
+"The lawsuit has been deleted.",\r
+"The lawsuit has been recorded.",\r
+"A lawsuit can be recorded only for an issued invoice.",\r
+"Under lawsuit",\r
+"Receivable under lawsuit and VAT adjustment",\r
 "Imported: {0}, {1} items, {2} EUR (summary, {3}).",\r
 "Imported: {0}, {1} items, {2} EUR.",\r
+"The inspection has been entered in the records. {0}",\r
+"supervisory authority inspection",\r
+"Supervisory authority inspection",\r
 "Doctor's certificates for menstrual leave for {0} (employees: {1})",\r
 "Import statements from mail",\r
+"A reply date is entered together with the reply.",\r
+"A specification of work performed, material and parts used is issued with the invoice.",\r
+"The currency is not valid.",\r
+"The currency is entered as a three-letter ISO 4217 code (e.g. USD, GBP, CHF).",\r
+"outside Montenegro",\r
+"valid",\r
+"Valid until (empty = indefinite)",\r
+"Valid on",\r
+"Already completed",\r
+"Veliki broj prenosa novčanih sredstava između nekoliko pravnih ili fizičkih lica koji se realizuju sistematski, po sumnjivim osnovima upotrebom računa samo kao prolaznih i tzv. escrow računa.",\r
 "Version {0} has been withdrawn. Waiting for the next version.",\r
+"video recording",\r
+"Video and audio recording (file path)",\r
+"Video-electronic identification",\r
+"Bank transfer (owed to supplier)",\r
+"by bank transfer to the broker's account",\r
+"Više transakcija kupoprodaje nepokretnosti koje vrši grupa fizičkih i/ili pravnih lica (nevladina, humanitarna, vjerska ili druga neprofitna organizacija) za koje se pretpostavlja da su umiješana u neke nedozvoljene radnje, a postoje sazanja da izvori novca za plaćanja potiču od nesrodnih lica.",\r
+"Several entries for the day — edit in the list of entries",\r
+"High",\r
+"High-risk country (EUR)",\r
+"High-risk third countries (ISO, separated by commas)",\r
+"Owner",\r
+"Owner / principal",\r
+"Vlasnik klijenta je firma ili fizičko lice registrovano u \\"poreskom raju\\", državi preko koje se obavlja promet narkoticima ili državi u kojoj nije pravno regulisana oblast sprečavanja pranja novca i finansiranja terorizma, dok se iz opšteg poslovanja stiče utisak da je pravi vlasnik neko domaće fizičko lice.",\r
+"Vlasnik klijenta je firma registrovana u \\"poreskom raju\\", državi koja se dovodi u vezu sa proizvodnjom i prometom narkoticima ili državi u kojoj nije pravno regulisana oblast sprečavanja pranja novca i finansiranja terorizma.",\r
+"return",\r
+"Restore default text",\r
+"Vrijednost ponuđene nepokretnosti je velika, a klijent daje nelogične odgovore o načinima plaćanja te nepokretnosti, odnosno raspituje se da se transakcije isključivo obave u gotovom novcu ili kombinovano sa nepouzdanim izvorima plaćanja.",\r
+"The repair value is {0} €, more than {1} €: a written quote specifying the work, materials and parts, signed by the service and the client, is required ({2} para. 1 and 3). Issue a quote for the increased amount or record consent by signing the quote.",\r
+"The repair value is {0} €, more than {1} €: before consent, a written quote specifying work, materials and parts is issued ({2} para. 1).",\r
+"The repair value exceeds",\r
+"The repair value exceeds {0} €: a written quote specifying work, materials and parts is required ({1} para. 1).",\r
+"Statutory values: a written quote for a repair worth more than 50,00 € incl. VAT; new written client consent for a price increase of more than 10 %. Change them only when the regulations change.",\r
+"Carrying out a transaction",\r
+"The item type has been saved.",\r
+"The document type has not been entered.",\r
+"The records type has not been selected.",\r
+"document type",\r
+"Client type",\r
+"The client type has not been selected.",\r
+"Property type",\r
+"The property type has not been selected.",\r
+"Type of reporting entity",\r
+"Reporting entity type and thresholds for submission to FOJ",\r
+"The reporting entity type has not been selected.",\r
+"Type of reporting entity: {0}. The list includes the indicators from the annex to the Rulebook ({1}) that the reporting entity applies and the reporting entity's own indicators (ZSPNFT Art. 83). The lists from Art. 82 and 83 are used to establish grounds for suspicion (Art. 81).",\r
+"The transaction type (sale or lease) has not been selected.",\r
+"Income type",\r
+"The income type has not been selected.",\r
 "Transaction type",\r
 "be performed {0}.",\r
+"The transaction type (cash, non-cash, crypto-assets) has not been selected.",\r
+"Entry type",\r
+"WHERE fd.DatumIzdavanja>=?",\r
+"WHERE kr.PlacID=?",\r
+"WHERE o.KupacID=?",\r
+"For quick entry select an employee; each row is a project, each column a day of the week.",\r
+"For the part of the fee from the retained deposit, the brokerage agreement providing for such collection and the date on which the principal retained the deposit are entered (Law on Brokerage, Art. 27 para. 3).",\r
+"A document in currency {0} requires an exchange rate (currency units per 1 EUR). The rate is fetched with the \\"Fetch rate\\" button or entered manually.",\r
+"to be invoiced",\r
+"To invoice",\r
+"To invoice (EUR)",\r
+"To invoice (hours)",\r
+"A VAT adjustment has been made for the invoice. The lawsuit date cannot be changed while the adjustment exists.",\r
+"A VAT adjustment has been made for the invoice. Cancel the adjustment first.",\r
+"For a natural person the JMB is entered, and for a person without a JMB the identity document number (ZSPNFT Art. 117 para. 1 item 3).",\r
+"Indexation requires the date from which it applies.",\r
+"There are two invoices for the same contract period: {0} and {1}. One is corrected by cancellation or a corrective invoice.",\r
+"There are no entries in the records for the selected period.",\r
+"There are no exchange rates entered for the selected period.",\r
+"For a suspicious transaction that has been carried out, enter an explanation of why the data was not submitted before execution (ZSPNFT Art. 66 para. 9).",\r
+"There is a report to FOJ for the client that has not been submitted; personal data is not deleted until the submission date is entered.",\r
+"There is no default interest to calculate for the customer up to",\r
+"There is no default interest to calculate for the customer up to {0}.",\r
+"For the identity document, the type, number and expiry date are entered (ZSPNFT Art. 117 para. 1 item 3).",\r
+"For the property location enter the street and number or the cadastral parcel.",\r
+"There is a complaint for order {0} in the Complaints register; the order cannot be deleted.",\r
+"There is no valid brokerage agreement for the property; advertising is not allowed (Law on Brokerage, Art. 25 para. 3).",\r
+"A customer payment is linked to the calculation. Before cancelling, unlink the payment (Collection → Interest and reminders).",\r
+"No payment is linked to the calculation.",\r
+"The deal has already been concluded for this agreement.",\r
+"For a politically exposed person the basis is entered: public office, immediate family member or close associate (ZSPNFT Art. 117 para. 1 item 3).",\r
+"For a repair over {0} €, the accepted quote is signed by the repair shop and the client; one copy is given to the client ({1} para. 3).",\r
+"A price increase of more than {0} % requires the client's prior written consent, given in person or by means of distance communication ({1} para. 2).",\r
+"For an entrepreneur, the first name, last name and JMB are entered (ZSPNFT Art. 117 para. 1 item 2).",\r
+"for the past period",\r
+"A manually entered exchange rate requires a note (source or reason).",\r
+"Consent to electronic invoices also requires the method by which consent was given.",\r
+"For items with 0 % VAT, {0} of the VAT Law applies ({1}).",\r
+"For the 0 % VAT rate a basis must be selected (Art. 25, 26, 27 or 17 of the VAT Law); it is printed on the invoice.",\r
+"For beneficial owner {0} (politically exposed person) the basis is entered.",\r
+"For each period due, a draft standard invoice with a supply period is created; the VAT liability arises on the last day of the period. The same period is not invoiced twice.",\r
+"A fee invoice {0} already exists for the agreement.",\r
+"There is a ZSPNFT record (report to FOJ) for the deposit entry; the entry cannot be deleted. A correction is recorded with a new deposit entry.",\r
+"An advance invoice has been issued for the payment. The exchange rate difference is not closed with this action.",\r
+"A payment in currency {0} requires the exchange rate on the inflow date or the inflow amount in EUR.",\r
+"Annotations",\r
+"Annotations",\r
 "Last time",\r
+"retain until",\r
+"Retain until",\r
+"The client's request has been recorded; FOJ is notified without delay (ZSPNFT Art. 66 para. 11).",\r
+"Requests to monitor the client's financial operations",\r
+"Interested party",\r
+"Concluded",\r
+"concluded ({0})",\r
+"The concluded deal has been recorded.",\r
+"The concluded deal is recorded in the brokerage records (data items 11–13); the entry is permanent and cannot be reversed. The fee invoice is issued only after the deal is concluded (Art. 27 para. 1–2).",\r
+"Concluded legal transaction",\r
+"up to and including {0}",\r
 "Law on Compulsory Health Insurance Art. 36a — the certificate is submitted to the employer by 30 January",\r
+"VAT Law Art. 18 para. 3 — when no invoice is issued, VAT is calculated eight days from the date of supply",\r
+"VAT Law Art. 20a",\r
+"VAT Law, Art. 31 para. 6",\r
+"VAT Law, Art. 31 para. 6: an electronic invoice is issued with the recipient's consent.",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 18 para. 2",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 19 — fixed-term agreement, may be extended",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 25 para. 3",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 25 para. 3 — advertisement only for a property with a brokerage agreement",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 26 and 34",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 27 para. 6",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 36 — brokerage without entry in the Registar posrednika is not allowed",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 36 and 41",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 41 (amendment \\"Sl. list CG\\" 114/26)",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 41 (amendment \\"Sl. list CG\\" 114/26) — application for entry within 24 months of the law entering into force",\r
+"Law on Brokerage in Real Estate Sales and Leases, Art. 8 — at least 20.000 € per claim and 60.000 € per year",\r
+"Law on Brokerage, Art. 18 para. 3 — the price is set so that it includes the brokerage fee",\r
+"Law on Brokerage, Art. 19 — without an entered date the agreement is valid for {0} months",\r
+"Law on Brokerage, Art. 20 item 2 — warning to the principal about registered rights and encumbrances",\r
+"Law on Brokerage, Art. 21 — sub-brokerage only with the principal's explicit consent",\r
+"Law on Brokerage, Art. 25: advertisement with the broker's name and Registar posrednika entry number, only with a valid agreement",\r
+"Law on Brokerage, Art. 27 para. 3 — part of the fee from the deposit retained by the principal because the other party failed to perform the contract",\r
+"Law on Brokerage, Art. 31 — the warning to the principal is printed in the agreement",\r
+"Law on Brokerage, Art. 34 — transactions on these accounts are not part of the company's cash flow and are not posted with a statement voucher",\r
+"Law on Brokerage, Art. 8 — at least 20.000 € per claim and 60.000 € for all claims in a year",\r
+"Law on Payment Deadlines for Monetary Obligations Art. 3 item 6 and Art. 6 para. 2 differ; by default the CBCG rate applies (0 p.p.). Change only on the accountant's instruction.",\r
+"Law on the Default Interest Rate (\\"Sl. list CG\\" 83/09, 75/18), Art. 3–6",\r
+"Law on the Default Interest Rate Art. 3–5 — ECB rate for main refinancing operations on the first day of the half-year + 8 p.p.; CBCG publishes it on the first business day of the half-year",\r
+"Law on the Default Interest Rate Art. 6; Law on Payment Deadlines for Monetary Obligations Art. 7",\r
+"Law on the Default Interest Rate Art. 6: simple interest, 36.500 (leap year 36.600), rate per half-year; Law on Payment Deadlines for Monetary Obligations Art. 7",\r
+"Consumer Protection Law (\\"Sl. list CG\\" 12/26), Art. 21",\r
+"Consumer Protection Law Art. 26",\r
 "of the Law on State and Other Holidays (Official Gazette of Montenegro nos. 27/07, 36/13, 3/23 and 30/23)",\r
+"legal representative",\r
+"Lease of movable and immovable property",\r
+"Rent",\r
+"Zakupnina u iznosu koji je značajno veći od zakupnine nekretnine približnih karakteristika na istoj ili sličnoj lokaciji, koja se unaprijed plaća za duži vremenski period, kad postoji sumnja u kriminalnu namjeru i fiktivnost ugovora.",\r
 "Goods inventory without negative balance (general ledger)",\r
+"Deputy",\r
+"record",\r
+"records",\r
+"Employee",\r
+"Employee (click — delete personal data)",\r
+"Why the transaction is complex or unusual",\r
+"Representative",\r
+"Default interest until {0}",\r
+"Default interest and reminders",\r
+"Default interest has been calculated by the simple (decursive) method on the principal due, without capitalising interest, for the calendar number of days: interest = principal × rate × days / 36.500, in a leap year / 36.600 (Law on the Default Interest Rate, \\"Sl. list CG\\" no. 83/09 and 75/18, Art. 6).",\r
 "Month-end closing",\r
 "{0}\\n\\nPost the payment?",\r
 "{0}\\n\\nSave the payment?",\r
@@ -4185,7 +6428,7 @@ null,\r
 "Paid",\r
 "more was paid than under the scheme; the difference is not added",\r
 "payout",\r
-"Payment",\r
+"Payout",\r
 "Payment to contractor",\r
 "the payout was adjusted to the agreed net amount (incentive)",\r
 "The payout has been deleted.",\r
@@ -4653,7 +6896,7 @@ null,\r
 "JIKR",\r
 "UoM",\r
 "Unit changed.",\r
-"JM neto",\r
+"Net quantity unit",\r
 "JMB",\r
 "JMB {0}",\r
 "JMBG",\r
@@ -5142,7 +7385,7 @@ null,\r
 "KOM",\r
 "Pieces",\r
 "Pieces {0}",\r
-"Komada u pakovanju",\r
+"Pieces per pack",\r
 "Limited partnership",\r
 "Assigned to",\r
 "Committee (names, separated by commas)",\r
@@ -5908,7 +8151,7 @@ null,\r
 "Maximum price",\r
 "The maximum price was taken from the CInMED report.",\r
 "The maximum retail price is {0}; the price at the registers is {1}.",\r
-"Najviša MP",\r
+"Max retail price",\r
 "Max retail ≈ wholesale ×",\r
 "Max retail ≈ wholesale × {0} × {1}",\r
 "Najviša VP",\r
@@ -10419,7 +12662,7 @@ null,\r
 "Utilities (electricity, water, phone, fuel)",\r
 "Mode",\r
 "Mode",\r
-"Režim FZO",\r
+"FZO regime",\r
 "The FZO mode is entered only for a medicine from the FZO List.",\r
 "Dispensing mode",\r
 "The dispensing mode (otc or rx) is required for a new medicine record.",\r
@@ -12244,7 +14487,7 @@ null,\r
 "paid to the municipality",\r
 "It is paid to the single account for tax and contributions {0}.",\r
 "payment received",\r
-"Payment",\r
+"Payment received",\r
 "UPLATA",\r
 "The payment of {0} EUR is larger than the cash takings of {1} EUR ({2}).{3} Does the payment also cover earlier days?",\r
 "The payment of {0} EUR covers fewer days than selected (cash without the last day is already {1} EUR). Select fewer takings records.",\r
@@ -13143,6 +15386,7 @@ null,\r
 "Close program",\r
 "Close allocation",\r
 "Close the application?",\r
+"Close invoice {0} with this payment? The difference of {1} EUR is posted as an exchange rate difference.",\r
 "Occupied barcodes",\r
 "Occupied barcodes (the barcode already belongs to another item)",\r
 "Occupied barcodes that the preview on computer \\"{0}\\" did not show: {1} — skipped (the barcode stays with the item that already has it).",\r
@@ -13159,12 +15403,20 @@ null,\r
 "Dependent purchase costs (added to purchase value)",\r
 "The dependent costs of this costing sheet have already been allocated to items. The cost can be changed after the allocation is cancelled; the allocation is then repeated.",\r
 "Dependent costs: estimate of a cost whose invoice has not arrived (deferral until the invoice is received)",\r
+"Only an order in progress can be completed (current: {0}).",\r
 "completed",\r
+"Completed devices not collected by the client ({0} days or more): {1}",\r
+"completed",\r
+"Completed",\r
 "Finish",\r
+"End (optional)",\r
+"completion",\r
 "Finish",\r
 "Finish and open Finance",\r
 "compressed",\r
+"Total of payments subject to tax, by recipient, income type and rate. The report is submitted electronically with a digital certificate.",\r
 "The sum of amounts by rates ({0}) does not equal the advance amount ({1}).",\r
+"The total exceeds the consented amount by more than",\r
 "Total deleted",\r
 "total credits {0} ≠ {1} from the statement",\r
 "The sum of payments ({0}) is not equal to the amount to be paid ({1}).",\r
@@ -13175,10 +15427,12 @@ null,\r
 "The sum of turnover by rates is {0}, but \\"UKUPAN POREZ → Promet\\" is {1}.",\r
 "The total is compared with the daily takings from the trade ledger in the same period.",\r
 "Total items",\r
+"The total of the items ({0} €) exceeds the issued quote ({1} €) by more than {2} %: issue a new quote.",\r
 "The sum of the items ({0} EUR) does not equal the invoice amount ({1} EUR). Difference: {2} EUR.",\r
 "The sum of the items equals the invoice amount.",\r
 "The sum of the rates ({0} / {1} / {2}) does not match UKUPAN POREZ. Verification against the image is required.",\r
 "The sum of all units equals PR-PDV for the same period: output VAT from takings, input from invoices. Takings without a separated VAT enter here only in turnover, not in VAT.",\r
+"The beneficial owners' shares total {0} %.",\r
 "total debits {0} ≠ {1} from the statement",\r
 "Summary expense voucher: {0}",\r
 "SUMMARY JOURNAL VOUCHER — GOODS EXPENSE",\r
@@ -13217,18 +15471,37 @@ null,\r
 "Cereals",\r
 "Cereals containing gluten",\r
 "ZK",\r
+"Značajni prenosi novčanih sredstava na račune na kojima nije bilo transakcija (neaktivni računi) koji su odmah praćeni povlačenjem sredstava, tj. podizanjem gotovog novca.",\r
 "emblem",\r
 "Emblem",\r
 "Emblem",\r
 "The emblem must be square (difference between sides up to 10 %).",\r
 "No emblem has been set.",\r
 "The zone has not been recognised yet.",\r
+"ZPDPL Art. 29 para. 1",\r
+"ZPDPL Art. 29 para. 1 item 2",\r
+"ZPDPL Art. 29 para. 1 item 2, Art. 29b item 1",\r
+"ZPDPL Art. 29 para. 1 item 2, Art. 29b item 2",\r
+"ZPDPL Art. 29 para. 1 item 2, Art. 29b item 4",\r
+"ZPDPL Art. 29 para. 1 item 2, Art. 29b item 5",\r
+"ZPDPL Art. 29 para. 1 item 2, Art. 29b item 6",\r
+"ZPDPL Art. 29 para. 3",\r
+"ZPDPL Art. 29 para. 4 ({0} %)",\r
+"ZPDPL Art. 29 para. 4 and 11",\r
+"ZPDPL Art. 29 para. 4: the tax is calculated and paid at the time the income is paid out, on the gross amount.",\r
+"ZPDPL Art. 29 para. 5",\r
+"ZPDPL Art. 29 para. 5 — territory with tax sovereignty ({0} %)",\r
+"ZPDPL Art. 29a para. 1–3",\r
+"ZPDPL Art. 29b — not expressly regulated",\r
+"ZPDPL Art. 29b item 4",\r
 "VAT Act Art. 18 para. 2–3: a supply is deemed made at the time the invoice is issued; if no invoice is issued, VAT is calculated eight days from the date of supply.",\r
 "VAT Act Art. 18 para. 3: if an invoice has not been issued, VAT is calculated eight days after the delivery date.",\r
 "VAT Act Art. 18 para. 4 (advance), Art. 20 para. 9 (credit note to a taxpayer customer); PPZPDV Art. 121 para. 4",\r
+"ZPDV Art. 18 para. 4 and Art. 31 para. 2: VAT on an advance is calculated on the date the payment is received",\r
 "VAT Act Art. 18 para. 4, Art. 20 para. 9, Art. 31 para. 2; VAT Act Implementing Rules Art. 76, Art. 121 para. 4",\r
 "VAT Act Art. 20 para. 9",\r
 "VAT Act Art. 20 para. 9: the customer notifies in writing that they have reduced the input VAT deduction",\r
+"ZPDV Art. 23 para. 2: CBCG middle rate on the date the tax liability arises. CBCG publishes the list \\"on day D\\", valid from the following day.",\r
 "VAT Act Art. 24a para. 1 pt. 1; Rulebook 117/24 Art. 2",\r
 "VAT Act Art. 24a para. 1 pt. 10; Rulebook Art. 13",\r
 "VAT Act Art. 24a para. 1 pt. 11; Rulebook Art. 14",\r
@@ -13240,10 +15513,49 @@ null,\r
 "VAT Act Art. 24a para. 2 pt. 3; Rulebook 117/24 Art. 18",\r
 "VAT Act Art. 25 — PR PDV-2 field 13.",\r
 "VAT Act Art. 26–27 — PR PDV-2 field 14.",\r
+"ZPDV Art. 32 para. 7; also goes into the Note field of the fiscal message (at most 200 characters)",\r
 "VAT Act Art. 37 para. 5: input VAT is not deducted for passenger cars and motorcycles, fuel, lubricants, parts and services for them, newly built residential buildings and entertainment. Such VAT goes into PR-PDV field 26 and into the cost (purchase value).",\r
 "VAT Act Art. 37 para. 6–7: VAT from the customs declaration is deducted in the period in which the declaration was received. Customs duty and excise duty are not VAT. The base and VAT are entered as stated on the declaration (suggestion: customs value + customs duty + excise duty).",\r
 "VAT Act Art. 71e: \\"The provisions of Article 24a paragraph 1 point 1) and Article 25 paragraph 1 point 12d) of this Act cease to apply on 31 December 2022.\\" Bread, flour and oil are not sold at 0 % since 01.01.2023. An item at 0 % without basis should be checked (rate or basis on the Items screen).",\r
 "ZR:{0}",\r
+"ZSPNFT Art. 116 para. 1 item 1",\r
+"ZSPNFT Art. 116 para. 1 item 2, Art. 117 para. 7",\r
+"ZSPNFT Art. 116 para. 1 item 3, Art. 117 para. 8",\r
+"ZSPNFT Art. 116 para. 1 item 4, Art. 117 para. 9",\r
+"ZSPNFT Art. 116 para. 1 item 5, Art. 117 para. 10",\r
+"ZSPNFT Art. 116 para. 1 item 6, Art. 117 para. 11; Art. 66 para. 12",\r
+"ZSPNFT Art. 116 para. 1 item 7, Art. 117 para. 12",\r
+"ZSPNFT Art. 116 para. 1 item 7, Art. 117 para. 12; retained for four years (Art. 127 para. 4)",\r
+"ZSPNFT Art. 117 para. 1 item 1–3",\r
+"ZSPNFT Art. 117 para. 1 item 1, 3, 4–6",\r
+"ZSPNFT Art. 117 para. 1 item 3 — identity document expiry date",\r
+"ZSPNFT Art. 117 para. 1 item 6 — scanned documentation; the file is kept in the company folder and is not transferred by data exchange",\r
+"ZSPNFT Art. 117 para. 11; Art. 66 para. 12",\r
+"ZSPNFT Art. 12",\r
+"ZSPNFT Art. 12 — at least once a year",\r
+"ZSPNFT Art. 12 — within 60 days of incorporation or start of business; updated at least once a year",\r
+"ZSPNFT Art. 127 — Compliance (ZSPNFT) package",\r
+"ZSPNFT Art. 127 para. 1–2",\r
+"ZSPNFT Art. 127 para. 3",\r
+"ZSPNFT Art. 127 para. 4",\r
+"ZSPNFT Art. 127 para. 5",\r
+"ZSPNFT Art. 127 para. 5 — personal data is deleted after the period expires",\r
+"ZSPNFT Art. 14 — authorised person in a management position",\r
+"ZSPNFT Art. 14 — authorised person in a management position and deputy",\r
+"ZSPNFT Art. 4 para. 2 item 13; Art. 66 para. 1–3",\r
+"ZSPNFT Art. 66 — electronic submission with a qualified electronic signature",\r
+"ZSPNFT Art. 66 para. 1 indent 1",\r
+"ZSPNFT Art. 66 para. 1 indent 2",\r
+"ZSPNFT Art. 66 para. 1–3",\r
+"ZSPNFT Art. 66 para. 11 — notify FOJ without delay",\r
+"ZSPNFT Art. 66 para. 12 — notify FOJ within three business days",\r
+"ZSPNFT Art. 66 para. 2",\r
+"ZSPNFT Art. 66 para. 3",\r
+"ZSPNFT Art. 66 para. 6–10",\r
+"ZSPNFT Art. 66 para. 6–10 — before execution, with the execution deadline",\r
+"ZSPNFT Art. 81 — indicator lists are used to establish grounds for suspicion",\r
+"ZSPNFT Art. 81–83",\r
+"ZSPNFT Art. 83 — the own indicator list must be in the reporting entity's documentation",\r
 "JOURNAL OF CORRECTIVE INVOICES",\r
 "Official I-RAČ form (15 columns, Rulebook on the application of the VAT Act, Art. 122):",\r
 "Official U-RAČ form (17 columns, Rulebook on the application of the VAT Act, Art. 123; date of receipt = date of registration; invoices from foreign suppliers for goods are not in it — import VAT goes by customs declaration to field 20):",\r
