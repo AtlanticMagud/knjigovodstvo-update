@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.3",
-  "datum": "2026-11-15",
-  "napomene": "Ispravke poslije kompletnog testa.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.3.zip",
-  "sha256": "278ab7dddd3146a14702f9a9fea6e6f7751dd56b1d377c9311ef717dd2503ebe",
-  "velicina": 1503153,
+  "verzija": "2.7.4",
+  "datum": "2026-11-19",
+  "napomene": "Podrška za nove module licence (Posredovanje, Usklađenost) i način poslovanja „Usluge\".",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.4.zip",
+  "sha256": "cde04dfd38130556ab31e2514678dddf66d636d6783029afa7d64857cba887e6",
+  "velicina": 1503321,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.7.3",
-  "sha256Android": "f5897dfcb4e3e6d8920a09ac5b890f2fb3d9865700065a265239ae1e1882202d"
+  "verzijaAndroid": "2.7.4",
+  "sha256Android": "a84589054382c8849329df34fa80290bcea8400988696b9c828905936bfed111"
 }
