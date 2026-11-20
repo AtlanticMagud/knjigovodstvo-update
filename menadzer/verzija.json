@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.2",
-  "datum": "2026-11-15",
-  "opis": "Ispravke poslije kompletne provjere programa.\n- Trošak rada i Rezultat po marketu: trošak rada magacina ulazi u „zajednički\", pa je zbir jednak obračunu plata.\n- Rezultat po marketu: RUC % se računa iz tačno tri mjeseca.\n- Dospijeća plaćanja: „već dospjelo\" je isto na spisku i na kartici dobavljača; račun bez datuma valute nije dospio.\n- Gubici i Rezultat: otpisi proknjiženi u Knjigovodstvu se prikazuju odvojeno.\n- Sef: u očekivano stanje ulazi i pazar dana prethodnog brojanja.\n- Prodaja po artiklu: otpis na kasi prije zaključenja smjene više ne briše prodaju tog dana.\n- Snimak Knjigovodstva koji stigne sam preuzima se bez zastoja ekrana.\n- Spiskovi Zadaci, Kvarovi i Narudžbe: do 2.000 redova, uz napomenu kad se granica dostigne.\n- Sitnije ispravke prikaza i prevoda.",
-  "paket": "menadzer-paket-2.7.2.json.gz",
-  "sha256": "af3655fb830e02e320dc16bf9f0d59be551879ed7e0cb004dd35b1ad52b509c6",
-  "velicina": 1959315,
+  "verzija": "2.7.3",
+  "datum": "2026-11-19",
+  "opis": "Podrška za nove module licence (Posredovanje, Usklađenost) i način poslovanja „Usluge\".\n- Licenca firme sa paketom „Agencija za nekretnine\" ili modulima Posredovanje i Usklađenost (ZSPNFT) prihvata se kao ispravna.\n- Način poslovanja „Usluge\", izabran u drugim programima firme, ostaje sačuvan i kad se izbor mijenja u Menadžeru.",
+  "paket": "menadzer-paket-2.7.3.json.gz",
+  "sha256": "2254728a266212612d12efaf02f56c75176fd9ed1d6064b756a27616e7d46bf2",
+  "velicina": 1960269,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "afc19bfe4a1c5ab412b27b601a4998eae034478494d659815f7300519ea7d966",
-  "apkVelicina": 25623993
+  "apkSha256": "3d30b2c7bdcf379f9f2dc334b72d2066a848685b38bb3b9fedf93d4930c1ef24",
+  "apkVelicina": 25624645
 }
