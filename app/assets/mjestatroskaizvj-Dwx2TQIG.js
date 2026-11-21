@@ -1,0 +1,19 @@
+import{ai as C,ab as g,s as O,aZ as m,aW as k,a_ as p,n as L}from"./index-BgPkWOLT.js";const s=o=>L(Number(o)||0);function P(o,r="s"){return o?o<0?{w:` AND ${r}.MjestoTroskaID IS NULL`,p:[]}:{w:` AND ${r}.MjestoTroskaID=?`,p:[o]}:{w:"",p:[]}}function z(o){var l;const r=P(o.mjestoTroskaID),E=`n.Status<>'storniran' AND s.Konto LIKE ?${r.w}`,u=[String(o.konto||"").trim()+"%",...r.p],t=C(o.od),a=s((l=g(`SELECT COALESCE(SUM(s.Duguje-s.Potrazuje),0) AS S FROM tblNalogStavke s JOIN tblNalozi n ON n.NalogID=s.NalogID WHERE ${E} AND n.Datum<?${t.w}`,[...u,o.od,...t.p]))==null?void 0:l.S),N=O(`SELECT n.Datum, n.Broj, n.Vrsta, n.NalogID, s.Konto, s.Duguje, s.Potrazuje, COALESCE(s.Opis, n.Opis) AS Opis, s.VezniDok,
+      d.Naziv AS Dobavljac, ku.Naziv AS Kupac, m.Naziv AS Market, mt.Naziv AS MjestoTroska
+    FROM tblNalogStavke s JOIN tblNalozi n ON n.NalogID=s.NalogID
+      LEFT JOIN tblDobavljaci d ON d.DobavljacID=s.DobavljacID LEFT JOIN tblKupci ku ON ku.KupacID=s.KupacID LEFT JOIN tblMarket m ON m.MarketID=s.MarketID
+      LEFT JOIN tblMjestaTroska mt ON mt.MjestoID=s.MjestoTroskaID
+    WHERE ${E} AND n.Datum>=? AND n.Datum<=?${m()} ORDER BY n.Datum, n.NalogID, s.Rbr`,[...u,o.od,o.doD,o.od]);let n=a,S=0,i=0;for(const D of N)S+=Number(D.Duguje),i+=Number(D.Potrazuje),n=s(n+Number(D.Duguje)-Number(D.Potrazuje)),D.Saldo=n;return{pocetno:a,redovi:N,ukupno:{d:s(S),p:s(i),saldo:n}}}function R(o,r,E,u,t=!0){const a=E==="klasa"?1:E==="grupa"?2:E==="sintetika"?3:99,N=a===99?"s.Konto":`substr(s.Konto,1,${a})`,n="(n.Datum<? OR (n.Vrsta='PS' AND n.Datum=?))",S=C(o),i=P(u),l=O(`SELECT ${N} AS Konto,
+      COALESCE(SUM(CASE WHEN ${n} THEN s.Duguje ELSE 0 END),0) AS PsD, COALESCE(SUM(CASE WHEN ${n} THEN s.Potrazuje ELSE 0 END),0) AS PsP,
+      COALESCE(SUM(CASE WHEN NOT ${n} THEN s.Duguje ELSE 0 END),0) AS PromD, COALESCE(SUM(CASE WHEN NOT ${n} THEN s.Potrazuje ELSE 0 END),0) AS PromP
+    FROM tblNalogStavke s JOIN tblNalozi n ON n.NalogID=s.NalogID WHERE n.Status<>'storniran' AND n.Datum<=?${i.w}${S.w}${m()} GROUP BY ${N} ORDER BY ${N}`,[o,o,o,o,o,o,o,o,r,...i.p,...S.p,o]),D=[];for(const e of l){const I=s(e.PsD),T=s(e.PsP),b=s(e.PromD),M=s(e.PromP),c=s(I+b),j=s(T+M),A=s(c-j);t&&Math.abs(c)<.005&&Math.abs(j)<.005||D.push({Konto:String(e.Konto),Naziv:k(String(e.Konto)),PsD:I,PsP:T,PromD:b,PromP:M,UkD:c,UkP:j,SaldoD:A>0?A:0,SaldoP:A<0?-A:0})}return D}function d(o,r){return O(`SELECT COALESCE(s.MjestoTroskaID,0) AS MT,
+      COALESCE(SUM(CASE WHEN substr(s.Konto,1,1)='6' THEN s.Potrazuje-s.Duguje ELSE 0 END),0) AS Pri,
+      COALESCE(SUM(CASE WHEN substr(s.Konto,1,1)='5' THEN s.Duguje-s.Potrazuje ELSE 0 END),0) AS Ras
+    FROM tblNalogStavke s JOIN tblNalozi n ON n.NalogID=s.NalogID
+    WHERE n.Status<>'storniran' AND n.Vrsta NOT IN ('ZK','PS') AND n.Datum>=? AND n.Datum<=? AND substr(s.Konto,1,1) IN ('5','6')
+    GROUP BY COALESCE(s.MjestoTroskaID,0)`,[o,r]).map(t=>{const a=Number(t.MT)||0,N=s(t.Pri),n=s(t.Ras);return{MjestoTroskaID:a,MjestoTroska:a?p(a)||`#${a}`:"(bez mjesta troška)",Prihodi:N,Rashodi:n,Rezultat:s(N-n)}}).sort((t,a)=>(t.MjestoTroskaID===0?1:0)-(a.MjestoTroskaID===0?1:0)||t.MjestoTroska.localeCompare(a.MjestoTroska))}function v(o,r,E){const u=P(E);return O(`SELECT substr(s.Konto,1,3) AS Konto,
+      COALESCE(SUM(CASE WHEN substr(s.Konto,1,1)='6' THEN s.Potrazuje-s.Duguje ELSE 0 END),0) AS Prihod,
+      COALESCE(SUM(CASE WHEN substr(s.Konto,1,1)='5' THEN s.Duguje-s.Potrazuje ELSE 0 END),0) AS Rashod
+    FROM tblNalogStavke s JOIN tblNalozi n ON n.NalogID=s.NalogID
+    WHERE n.Status<>'storniran' AND n.Vrsta NOT IN ('ZK','PS') AND n.Datum>=? AND n.Datum<=? AND substr(s.Konto,1,1) IN ('5','6')${u.w}
+    GROUP BY substr(s.Konto,1,3) ORDER BY substr(s.Konto,1,3) DESC`,[o,r,...u.p]).map(t=>({Konto:String(t.Konto),Naziv:k(String(t.Konto)),Prihod:s(t.Prihod),Rashod:s(t.Rashod)}))}export{v as bilansUspjehaMT,d as bilansUspjehaPoMT,R as brutoBilansMT,z as karticaKontaMT};
