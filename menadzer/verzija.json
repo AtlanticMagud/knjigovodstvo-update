@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.3",
-  "datum": "2026-11-19",
-  "opis": "Podrška za nove module licence (Posredovanje, Usklađenost) i način poslovanja „Usluge\".\n- Licenca firme sa paketom „Agencija za nekretnine\" ili modulima Posredovanje i Usklađenost (ZSPNFT) prihvata se kao ispravna.\n- Način poslovanja „Usluge\", izabran u drugim programima firme, ostaje sačuvan i kad se izbor mijenja u Menadžeru.",
-  "paket": "menadzer-paket-2.7.3.json.gz",
-  "sha256": "2254728a266212612d12efaf02f56c75176fd9ed1d6064b756a27616e7d46bf2",
-  "velicina": 1960269,
+  "verzija": "2.7.4",
+  "datum": "2026-11-21",
+  "opis": "Lanac kasa, veleprodaja, nabavka i analitika.\n- Kase lanca: kasiri i PIN-ovi, prava po ulozi, daljinska podešavanja i stanje robe za kase firme; odobrenje zahtjeva sa kase.\n- Veleprodaja: kupci-firme, cjenovnici i rabati, narudžbe kupaca (rezervacija, komisioniranje, isporuka), vozila na terenu; uloge komercijalista, vozač, magacioner i fakturista.\n- Nabavka: narudžba dobavljaču e-poštom sa PDF-om i potvrda dobavljača linkom; kontrola gubitaka.\n- Pošta firme: zakazani izvještaji i slanje izvještaja e-poštom.\n- Analitika: tabla vlasnika, troškovi, asortiman, kupci i potražnja.\n- Usluge: termini i radni nalozi servisa.\n- Ljudi i kvalitet: evidencija dolaska (na telefonu i lokacijom, uz saglasnost radnika), HACCP evidencije, kontrolna lista smjene.\n- Prikazi koji koriste podatke Knjigovodstva popunjavaju se kad ih Knjigovodstvo pošalje.",
+  "paket": "menadzer-paket-2.7.4.json.gz",
+  "sha256": "1e9f5e269815702695e482df73d4fae56e65d9d62028088674ea8191e353c05d",
+  "velicina": 2421885,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "3d30b2c7bdcf379f9f2dc334b72d2066a848685b38bb3b9fedf93d4930c1ef24",
-  "apkVelicina": 25624645
+  "apkSha256": "149bf3d6e9927280d043f0e47e34b9644e9e671dcfba3f38a5247014c94bbbe9",
+  "apkVelicina": 25936033
 }
