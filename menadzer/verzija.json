@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.4",
-  "datum": "2026-11-21",
-  "opis": "Lanac kasa, veleprodaja, nabavka i analitika.\n- Kase lanca: kasiri i PIN-ovi, prava po ulozi, daljinska podešavanja i stanje robe za kase firme; odobrenje zahtjeva sa kase.\n- Veleprodaja: kupci-firme, cjenovnici i rabati, narudžbe kupaca (rezervacija, komisioniranje, isporuka), vozila na terenu; uloge komercijalista, vozač, magacioner i fakturista.\n- Nabavka: narudžba dobavljaču e-poštom sa PDF-om i potvrda dobavljača linkom; kontrola gubitaka.\n- Pošta firme: zakazani izvještaji i slanje izvještaja e-poštom.\n- Analitika: tabla vlasnika, troškovi, asortiman, kupci i potražnja.\n- Usluge: termini i radni nalozi servisa.\n- Ljudi i kvalitet: evidencija dolaska (na telefonu i lokacijom, uz saglasnost radnika), HACCP evidencije, kontrolna lista smjene.\n- Prikazi koji koriste podatke Knjigovodstva popunjavaju se kad ih Knjigovodstvo pošalje.",
-  "paket": "menadzer-paket-2.7.4.json.gz",
-  "sha256": "1e9f5e269815702695e482df73d4fae56e65d9d62028088674ea8191e353c05d",
-  "velicina": 2421885,
+  "verzija": "2.7.5",
+  "datum": "2026-11-28",
+  "opis": "Brži i stabilniji rad na telefonu.\n- Snimanje baze na telefonu ide u dijelovima, bez zastoja ekrana; baza bez izmjena se ne snima ponovo.\n- Izlazak iz programa i povratak u program su brži; odjava čeka slanje unosa najviše 15 sekundi.\n- Osvježavanje ekrana novim podacima iz pozadine čeka da korisnik završi dodir ili unos.\n- Dugme „nazad\" zatvara otvoren prozor.\n- Prekinuto snimanje baze se pri sljedećem pokretanju vraća iz posljednjeg potpunog snimka.",
+  "paket": "menadzer-paket-2.7.5.json.gz",
+  "sha256": "38da1e4161f044715b021cf671adf7464af63597119067e65771394de94117c0",
+  "velicina": 2427251,
   "minLjuska": "1.4.1",
   "apk": "Menadzer.apk",
-  "apkSha256": "149bf3d6e9927280d043f0e47e34b9644e9e671dcfba3f38a5247014c94bbbe9",
-  "apkVelicina": 25936033
+  "apkSha256": "56d263afe5906522256e19bc3c9e987028e4015aec17529f9f8142c67be5364e",
+  "apkVelicina": 25938397
 }
