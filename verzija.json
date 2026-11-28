@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.8",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.8.zip",
+  "verzija": "2.7.10",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.10.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "953a63956c4ea6d68f6f8c4ca311300da08af226381970166c56dcf6b92250fe",
+  "sha256": "7a1b0504150c447fec997194deb08ff0080c3041475b24d6c5659757d47e3fef",
   "obavezno": false,
-  "napomene": "Početno stanje dobavljača: uz iznos se obavezno upisuje izvor (koja kartica dobavljača i od kog datuma). Stanje se uvijek snima na 01.01. tekuće godine (= saldo na 31.12. prethodne). Prije snimanja program objašnjava šta iznos znači (pozitivno = mi dugujemo, negativno = preplata) i upozorava kada iznos liči na zbir faktura umjesto na stanje, ili kada u evidenciji već postoje dokumenti iz prethodne godine.\nDobavljači: nov spisak „Početna stanja za provjeru\" — stanja sa pogrešnim datumom (dugme „Datum → 01.01.\") i stanja koja treba provjeriti na kartici dobavljača.\nUčitavanje kartice dobavljača: kada se početno stanje na kartici razlikuje od našeg (ili kartica nema početno stanje), program to odmah prikazuje.\nSporne stavke dobavljača: kada se nedostajuća faktura unese, sporna stavka se zatvara automatski, bez dugmeta „Riješeno\"; program prikazuje poruku da je završeno.\nJezik programa (en, ru, tr): prevodi novih poruka.\nVažno: ažuriranje stiže kao paket, bez nove instalacije.",
-  "datum": "2026-11-23",
-  "sha256Android": "8420ff59cfe5bbc59330e3d1b0d5549f2205138004b0ce7569202d3ff35b1164",
-  "verzijaPrethodna": "2.7.7",
+  "napomene": "Telefon (Android): snimanje baze više ne zaustavlja ekran. Upisuju se samo izmijenjeni dijelovi baze (obično nekoliko KB umjesto cijele baze), u pozadini, uz provjeru da je fajl na disku ispravan prije i poslije upisa. Promjena podešavanja, unos i izlaz iz programa na telefonu su zato bez zastoja.\nTelefon: kada se cijela baza ipak mora upisati (npr. preuzimanje baze glavnog računara), upis ide u dijelovima, pa ekran za to vrijeme odgovara.\nTelefon: ako je program ugašen tačno u trenutku zamjene fajla baze, pri sljedećem pokretanju baza se vraća iz potpunog privremenog fajla.\nGotov proizvod prodat na kasi knjiži se kao prihod od proizvoda (6121), bez razduženja robe i bez upisa u trgovačku knjigu.\nDecimalni zarez u popisu materijala, radnom nalogu i normativu; unos koji počinje nulom (npr. „0,5\") ostaje u polju.\nČitljivi statusi i datumi; jedinstvena provjera spremnosti za fiskalizaciju; brisanje sopstvenog šablona naloga.\nRaspored razgraničenja: UKUPNO bez početnog prenosa. Robno početno stanje u PD prati dopunsku raspodjelu.\nTabele Pregled agencije, Kompenzacije i Za potvrdu knjigovođe staju na ekran; „Odjavi se\" za korisnika ima svoj prevod.\nVažno: za telefon je potreban nov APK (Knjigovodstvo 2.7.10). Na računaru ažuriranje stiže kao paket, bez nove instalacije.",
+  "datum": "2026-11-28",
+  "sha256Android": "a588bacf259ae7ac0d8d726b95a24969181ecd9392a3116f201722b2bc8dfa5b",
+  "verzijaPrethodna": "2.7.8",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
