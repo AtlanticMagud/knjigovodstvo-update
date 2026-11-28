@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.10",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.10.zip",
+  "verzija": "2.7.11",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/paket-2.7.11.zip",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo.apk",
-  "sha256": "7a1b0504150c447fec997194deb08ff0080c3041475b24d6c5659757d47e3fef",
+  "sha256": "93958a3c60e3d032ee0a164f967bde25f5bb09b7df8a494e22a8e3baefbeb130",
   "obavezno": false,
-  "napomene": "Telefon (Android): snimanje baze više ne zaustavlja ekran. Upisuju se samo izmijenjeni dijelovi baze (obično nekoliko KB umjesto cijele baze), u pozadini, uz provjeru da je fajl na disku ispravan prije i poslije upisa. Promjena podešavanja, unos i izlaz iz programa na telefonu su zato bez zastoja.\nTelefon: kada se cijela baza ipak mora upisati (npr. preuzimanje baze glavnog računara), upis ide u dijelovima, pa ekran za to vrijeme odgovara.\nTelefon: ako je program ugašen tačno u trenutku zamjene fajla baze, pri sljedećem pokretanju baza se vraća iz potpunog privremenog fajla.\nGotov proizvod prodat na kasi knjiži se kao prihod od proizvoda (6121), bez razduženja robe i bez upisa u trgovačku knjigu.\nDecimalni zarez u popisu materijala, radnom nalogu i normativu; unos koji počinje nulom (npr. „0,5\") ostaje u polju.\nČitljivi statusi i datumi; jedinstvena provjera spremnosti za fiskalizaciju; brisanje sopstvenog šablona naloga.\nRaspored razgraničenja: UKUPNO bez početnog prenosa. Robno početno stanje u PD prati dopunsku raspodjelu.\nTabele Pregled agencije, Kompenzacije i Za potvrdu knjigovođe staju na ekran; „Odjavi se\" za korisnika ima svoj prevod.\nVažno: za telefon je potreban nov APK (Knjigovodstvo 2.7.10). Na računaru ažuriranje stiže kao paket, bez nove instalacije.",
+  "napomene": "Plate: novo dugme „Instrukcije za plaćanje\" (PDF i Excel), raspoređeno kao instrukcije knjigovođe. Prvo ide jedinstveni račun poreza i doprinosa (820-30000-74) kao JEDAN iznos: PIO 1 + nezaposlenost 1 + porez + doprinosi poslodavca + doprinos za invalide. Zatim prirez opštini (Budva 510-8178009-29), pa neto zarade na žiro račune radnika.\nPlate: ispod obračuna piše „Za uplatu\": koliko ide na jedinstveni račun (sa sastavom), koliko opštini za prirez i koliko radnicima. Radnici bez upisanog žiro računa su posebno navedeni.\nBanka: uplata dobavljaču koji je sa izvoda prepoznat samo po nazivu knjiži se sama kada iznos tačno zatvara jedan njegov neplaćeni račun (do 1 cent razlike). Račun primaoca se pri tome pamti, pa se sljedeće uplate tom dobavljaču knjiže odmah.\nDobavljači: nove kolone „Uplate sa izvoda koje čekaju\" i „Saldo poslije knjiženja\", upozorenje sa brojem i iznosom takvih uplata i dugme „Proknjiži sigurne\". Dobavljač više ne izgleda neplaćen samo zato što uplata sa izvoda još nije potvrđena.\nZa pregled i knjiženje: „Proknjiži sigurne\" obuhvata i uplate dobavljaču prepoznatom po nazivu kad iznos tačno zatvara jedan njegov račun.",
   "datum": "2026-11-28",
-  "sha256Android": "a588bacf259ae7ac0d8d726b95a24969181ecd9392a3116f201722b2bc8dfa5b",
-  "verzijaPrethodna": "2.7.8",
+  "sha256Android": "fac7d27e9576df2210b47c5f313d08fa0929343bd60c73e57f88a8b7d265f4a0",
+  "verzijaPrethodna": "2.7.10",
   "urlAndroidPrethodna": "https://atlanticmagud.github.io/knjigovodstvo-update/Knjigovodstvo-prethodna.apk"
 }
