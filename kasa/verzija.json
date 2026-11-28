@@ -1,12 +1,12 @@
 {
-  "verzija": "2.7.5",
-  "datum": "2026-11-21",
-  "napomene": "Veleprodaja, lanac kasa, usluge i uređaji.\n- Veleprodaja i prodaja na terenu: kupac-firma, cijene i rabati kupca, limit i blokada, A4 račun, zaliha vozila, povratna ambalaža, naplata duga.\n- Kasiri, prava i podešavanja iz Menadžera ili Knjigovodstva; odobrenje zahtjeva sa telefona; stanje robe na kasi.\n- Bezgotovinski račun kupcu-firmi izdaje korisnik sa pravom „Fiskalizacija računa\".\n- Arhiva računa, povrat robe po računu druge kase iste firme i povratak kase iz rezervne kopije.\n- Usluge: termini i radni nalozi servisa.\n- Ugostiteljstvo: dodaci jelu, kursevi, stanice štampe, ekran kuhinje, naplata sa telefona.\n- Fiskalni dokumenti: poklon-bon, gotovinski avans, ispravka računa u grešci, zbirni račun; popust i osnov oslobođenja na računu; provjera IKOF-a.\n- Uređaji: POS terminal banke, vaga, ekran kupca na tabletu, F-tasteri, štampači na Androidu.\n- Evidencija dolaska radnika i kontrolna lista smjene.\n- Na Windows kasi terminal, vaga, ekran kupca na tabletu i povratak iz kopije rade uz Setup 2.7.5.",
-  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.5.zip",
-  "sha256": "78667564e2cf10022d3bd3cf931da969e189edb23a664a7b8258213c497513f7",
-  "velicina": 1840455,
+  "verzija": "2.7.6",
+  "datum": "2026-11-28",
+  "napomene": "Fiskalizacija, rad bez interneta i Android.\n- Račun koji se odmah šalje Poreskoj ima vrijeme slanja jednako vremenu izdavanja (Poreska je inače odbijala račun, greška 11).\n- Računi izdati dok kasa nije imala internet šalju se, kad se veza vrati, sa oznakom naknadne dostave — svaki tačno jednom.\n- Telefon konobara: dok kasa potvrđuje naplatu, telefon prikazuje „čeka se potvrda kase\" umjesto greške.\n- Android: dugme „nazad\" spušta kasu u pozadinu; snimanje baze više ne zamrzava ekran (snima se kad kasa miruje, upisi su sačuvani).",
+  "url": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/kasa-2.7.6.zip",
+  "sha256": "1e6986261da52e90f7af5dc0f2b4dc430bc90ab3322b0a28fcc9ce8ca8eb5733",
+  "velicina": 1842136,
   "minSetup": "1.3.0",
   "urlAndroid": "https://atlanticmagud.github.io/knjigovodstvo-update/kasa/Kasa.apk",
-  "verzijaAndroid": "2.7.5",
-  "sha256Android": "bf1f49bebe75d2ffd177aa4cbe1354aa45bb10ae1200ad87d374b69423bde1b0"
+  "verzijaAndroid": "2.7.6",
+  "sha256Android": "53aba8b71d9843f0a3ed004b16d911fb75f92ed8717b98df53dc1cdfb7fa9d85"
 }
